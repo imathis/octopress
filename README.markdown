@@ -23,7 +23,7 @@ Setup is really simple.
   
 1. Download Octopress: <code>git clone git://github.com/imathis/octopress.git</code>
 2. Install dependencies (requires the bundler gem): <code>bundle install</code>
-3. Run <code>rake preview</code> to build the site and preview it in a local webserver.
+3. Run <code>bundle exec rake preview</code> to build the site and preview it in a local webserver.
 
 You'll want to change some settings, so check out the wiki for [Setup & Configurations](http://wiki.github.com/imathis/octopress/configuration).
 
