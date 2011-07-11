@@ -20,16 +20,18 @@ posts_dir   = "_posts"    # directory for blog files
 themes_dir  = ".themes"    # directory for blog files
 post_format = "markdown"  # file format for new posts when using the post rake task
 
-
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
   # copy theme into working Jekyll directories
   theme = args.theme || 'classic'
-  puts "## Copying "+theme+" theme into ./#{source_dir} ./sass and ./_plugins "
-  system "mkdir -p #{source_dir}; cp -R #{themes_dir}/"+theme+"/source/ #{source_dir}/"
-  system "mkdir -p sass; cp -R #{themes_dir}/"+theme+"/sass/ sass/"
-  system "mkdir -p _plugins; cp -R #{themes_dir}/"+theme+"/_plugins/ _plugins/"
-  system "mkdir -p #{source_dir}/#{posts_dir}";
+  puts "## Copying #{theme} theme into ./#{source_dir} ./sass and ./_plugins "  
+  mkdir_p source_dir
+  cp_r "#{themes_dir}/#{theme}/source/.", source_dir
+  mkdir_p "sass"
+  cp_r "#{themes_dir}/#{theme}/sass/.", "sass"
+  mkdir_p "_plugins"
+  cp_r "#{themes_dir}/#{theme}/_plugins/.", "_plugins"
+  mkdir_p "#{source_dir}/#{posts_dir}"
 end
 
 #######################
@@ -39,6 +41,7 @@ end
 desc "Generate jekyll site"
 task :generate do
   puts "## Generating Site with Jekyll"
+  mkdir_p public_dir
   system "jekyll"
 end
 
