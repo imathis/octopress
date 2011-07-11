@@ -41,6 +41,7 @@ end
 desc "Generate jekyll site"
 task :generate do
   puts "## Generating Site with Jekyll"
+  mkdir_p public_dir
   system "jekyll"
 end
 
