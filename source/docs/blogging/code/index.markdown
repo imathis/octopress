@@ -22,9 +22,13 @@ Octopress makes it way better. Here's how.
 All you need is the gist's id and you can easily embed it in your page. This actually downloads a cache of the gist and embeds it in a `<noscript>` tag for RSS
 readers and search engines, while still using Github's javascript gist embed code for browsers.
 
-    {{ "{% gist 996818" }} %}
+#### Syntax
 
-The output looks like this:
+    {{ "{% gist gist_id [filename]" }} %}
+
+#### Example
+
+    {{ "{% gist 996818" }} %}
 
 {% gist 996818 %}
 
@@ -38,19 +42,62 @@ Import files on your filesystem into any blog post as embedded code snippets wit
 In the `_config.yml` you can set your `code_dir` but the default is `source/downloads/code`. Simply put a file anywhere under that directory and
 use the following tag to embed it in a post.
 
+#### Syntax
+
+    {{ "{% include_code [title] url" }} %}
+
+#### Example 1
+
     {{ "{% include_code javascripts/test.js" }} %}
 
-    # or with optional title
+#### Example 2 (with optional title)
+
     {{ "{% include_code Testing include_code javascripts/test.js" }} %}
 
 This includes a file from `source/downloads/code/javascripts/test.js`. By default the `<figcaption>` will be the filename, but you can add a title before the filepath if you like.
-Here's what it looks like:
+
+#### Demo of Example 2
 
 {% include_code Testing include_code javascripts/test.js %}
 
 ## Inline Codeblocks
 You can also write blocks of code directly in your posts.
 
+#### Syntax
+
+    {{ "{% codeblock [title] [url] [link text]" }} %}
+
+#### Example 1
+
+    {{ "{% codeblock" }} %}
+    Awesome code snippet
+    {{ "{% endcodeblock" }} %}
+
 {% codeblock %}
-Awesome sauce Is Awesome.
+Awesome code snippet
 {% endcodeblock %}
+
+#### Example 2
+
+    # Including a file extension in the title enables highlighting
+    {{ "{% codeblock Time to be Awesome - awesome.rb" }} %}
+    puts "Awesome!" unless lame
+    {{ "{% endcodeblock" }} %}
+
+{% codeblock Time to be Awesome - awesome.rb %}
+puts "Awesome!" unless lame
+{% endcodeblock %}
+
+#### Example 3
+
+    # Add an optional URL to enable downloading or linking to source
+    {{ "{% codeblock Got pain? painreleif.sh http://example.com/painreleief.sh Download it!" }} %}
+    $ rm -rf ~/PAIN
+    {{ "{% endcodeblock" }} %}
+
+{% codeblock Javascript Array Syntax (array.js) https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array MDN Documentation %}
+var arr1 = new Array(arrayLength);
+var arr2 = new Array(element0, element1, ..., elementN);
+{% endcodeblock %}
+
+The last argument `link_text` is optional. You may want to link to a source for download file, or documentation on some other site.
