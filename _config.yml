@@ -2,17 +2,17 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
+url: http://octopress.org
+title: Octopress
 subtitle: A blogging framework for hackers.
-author: Your Name
+author: Brandon Mathis
 simple_search: http://google.com/search
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: brandon@imathis.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -38,7 +38,7 @@ recent_posts: 5 # Posts in the sidebar Recent Posts section
 # ----------------------- #
 
 # Twitter
-twitter_user:
+twitter_user: octopress
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
@@ -51,14 +51,14 @@ google_plus_one_size: medium
 
 # Pinboard
 pinboard_user:
-pinboard_count: 3
+pinboard_count: 4
 
 # Delicious
 delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: octopress
 
 # Google Analytics
 google_analytics_tracking_id:

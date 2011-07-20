@@ -1,2 +1,76 @@
-// This File is imported last, and will override other styles in the cascade
-// Add styles here to make changes without digging in too much
+@include font-face("Bebas-Neue", font-files("bebasneue-web.woff", woff, "bebasneue-web.ttf", truetype, "bebasneue-web.svg#BebasNeueRegular", svg), $eot: "bebasneue-web.eot" );
+
+body > header h1 {
+  font-family: "Bebas-Neue", serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+body > header {
+  font-size: .7em;
+  hgroup {
+    text-align: center;
+    position: relative;
+    padding: .5em 0;
+    margin: 0 auto;
+  }
+  h1 {
+    text-shadow: rgba(#000, .8) 0 0 8px;
+    font-size: 7em;
+    line-height: .8em;
+    position: relative;
+    padding-bottom: 1.75em;
+    margin: 0;
+    a:hover { color: #fff; }
+    &:after {
+      content: "";
+      position: absolute; left: 0; right: 0; top: .1em;
+      height: image-height('logo.png');
+      @include replace-text('logo.png');
+    }
+  }
+  h2 {
+    font-size: 1.6em;
+    position: relative; top: .4em;
+  }
+  @media only screen and (min-width: 400px) {
+    font-size: .82em;
+    hgroup {
+      left: -3.7em;
+      width: 22em;
+    }
+    h1 { padding-bottom: 0;
+      &:after {
+        position: absolute; top: -.15em; right: -.8em; left: auto;
+        width: 1.6em;
+        height: 1.6em;
+        @include background-size(100%);
+      }
+    }
+    h2 {
+      margin: 0 0 .3em;
+      @extend .sans;
+      font-size: 1.2em;
+      color: $subtitle-color;
+      position: relative; left: -1.6em; top: 0;
+      text-shadow: $header-bg 0 1px 1px;
+    }
+  }
+  @media only screen and (min-width: 480px) {
+    font-size: .98em;
+    h2 { top: .4em; }
+  }
+  @media only screen and (min-width: 768px) {
+    padding: 2em 0 1.5;
+    font-size: 1.2em;
+    hgroup { padding: 0 0 1em; }
+  }
+  @media only screen and (min-width: 990px) {
+    font-size: 1.1em;
+    h1:after {
+      width: image-width('logo.png');
+      height: image-height('logo.png');
+    }
+  }
+}
+
