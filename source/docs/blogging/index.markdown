@@ -75,3 +75,5 @@ Like with the new post task, the default file extension is `markdown` but you ca
     ---
 
 The title is derived from the filename so you'll likely want to change that. This is very similar to the post yaml except it doesn't include categories, and you can toggle sharing and comments or remove the footer altogehter. If you don't want to show a date on your page, just remove it from the yaml.
+
+[Next, Sharing Code Snippets &raquo;](/docs/blogging/code)
