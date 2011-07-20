@@ -4,7 +4,8 @@ $nav-bg: desaturate(lighten(#8fc17a, 18), 5);
 $sidebar-bg: desaturate(#eceff5, 8);
 $sidebar-link-color: saturate(#526f9a, 10);
 $sidebar-link-color-hover: darken(#7ab662, 9);
-$pre-bg: darken($header-bg, 2);
+//$pre-bg: darken($header-bg, 2);
+//$base03: $pre-bg;
 
 //To use the light Solarized highlighting theme uncomment this block
 //$base03: $base3;
