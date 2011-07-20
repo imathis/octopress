@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div>
+<article>
+  <header>
+    <h1 class="entry-title">{{ page.title | titlecase }}</h1>
+    {% if page.date %}<p class="meta">{% include post/date.html %}</p>{% endif %}
+  </header>
+  {{ content | smart_quotes }}
+  {% unless page.footer == false %}
+    <footer>
+      {% if page.date %}<p class="meta">{% include post/date.html %}</p>{% endif %}
+      {% unless page.sharing == false %}
+        {% include post/sharing.html %}
+      {% endunless %}
+    </footer>
+  {% endunless %}
+</article>
+{% if site.disqus_short_name and page.comments == true %}
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread">{% include post/disqus_thread.html %}</div>
+  </section>
+{% endif %}
+</div>
