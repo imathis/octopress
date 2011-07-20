@@ -3,7 +3,6 @@ layout: page
 title: Configuring Octopress
 date: July 19 2011
 sidebar: false
-comments: false
 footer: false
 ---
 

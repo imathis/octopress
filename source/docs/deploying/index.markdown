@@ -3,7 +3,6 @@ layout: page
 title: Deploying Octopress
 date: July 18 2011
 sidebar: false
-comments: false
 footer: false
 ---
 
