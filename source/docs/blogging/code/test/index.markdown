@@ -2,6 +2,7 @@
 layout: page
 title: Syntax Highlighting Test
 footer: false
+sidebar: false
 ---
 
 {% include_code javascripts/test.js %}
