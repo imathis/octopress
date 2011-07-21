@@ -17,14 +17,14 @@ Jekyll at its core is a text transformation engine. The concept behind the syste
 - [Initial setup](/docs/setup)
 - [Deploying Octopress](/docs/deploying)
 - [Basic Configuration](/docs/configuring)
-- [Updating](/docs/updating)
 
 ## Using Octopress
 - [Blogging Basics](/docs/blogging)
 - [Sharing Code Snippets](/docs/blogging/code)
 - [Syntax Highlighting Test](/docs/blogging/code/test)
-- [Blogging With Plugins](/docs/blogging/plugins)
-- [Theming & Customization](/docs/theming)
+- TODO [Blogging With Plugins](/docs/blogging/plugins)
+- TODO [Theming & Customization](/docs/theming)
+- TODO [Updating](/docs/updating)
 
 ## Octopress Plugins - Usage & Examples
 - Code Block
