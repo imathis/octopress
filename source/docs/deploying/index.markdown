@@ -6,7 +6,7 @@ sidebar: false
 footer: false
 ---
 
-[&laquo; Previous, Octopress Setup](/docs/setup)
+[&laquo; Previous, Configuring Octopress](/docs/configuring)
 
 ### Deploying with Rsync via SSH
 
@@ -80,4 +80,4 @@ Here's an example for deploying the Octopress website to Github Project Pages:
 
 For more info on deploying a Jekyll Blog, checkout [Jekyll's deployment wiki page](https://github.com/mojombo/jekyll/wiki/Deployment).
 
-[Next, Configuring Octopress &raquo;](/docs/configuring)
+[Next, Blogging With Octopress &raquo;](/docs/blogging)
