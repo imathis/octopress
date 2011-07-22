@@ -6,12 +6,12 @@
 </ul>
 <form action="{{ site.simple_search }}" method="get">
   <fieldset role="site-search">
-    <input type="hidden" name="q" value="site:{{ site.url | search_url }}" />
+    <input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
 <ul role=main-navigation>
-  <li><a href="{{ site.root }}/">Blog</a></li>
-  <li><a href="{{ site.root }}/docs">Documentation</a></li>
+  <li><a href="{{ root_url }}/">Blog</a></li>
+  <li><a href="{{ root_url }}/docs">Documentation</a></li>
   <li><a href="http://github.com/imathis/octopress">Source</a></li>
 </ul>
