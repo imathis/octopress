@@ -7,7 +7,13 @@ comments: false
 footer: false
 ---
 
-Jekyll has some conventions for blog post file names which are a bit of a pain to manage manually, so Octopress ships with a rake task to make that easier.
+Octopress offers some rake tasks to create post and pages preloaded with metadata and according to Jekyll's naming conventions.
+
+## Blog Posts
+Blog posts must be stored in the `source/_posts` directory and named according to Jekyll's naming conventions: `YYYY-MM-DD-post-title.markdown`. The name of the file is
+used as the slug for the url, and the date helps with file distinction and determines the sorting order for post loops.
+
+Octopress provides a rake task to create new blog posts with the right naming conventions, with sensible yaml metadata.
 
 #### Syntax
 
@@ -38,23 +44,9 @@ which tells Jekyll how to processes posts and pages.
     ---
 
 Here you can turn comments off and or categories to your post. If you are working on a multi-author blog, you can add `author: Your Name` to the
-metadata for proper attribution on a post.
+metadata for proper attribution on a post. If you are working on a draft, you can add `published: false` to prevent it from being posted when you generate your blog.
 
-### Generate & Preview
-
-    rake generate   # Generates posts and pages into the public directory
-    rake watch      # Watches source/ and sass/ for changes and regenerates
-    rake preview    # Watches, and mounts a webserver at http://localhost:4000
-
-Jekyll's built in WEBrick server is handy, but if you're a [POW](http://pow.cx) user, you can set it up to work with Octopress like this.
-
-    cd ~/.pow
-    ln -s /path/to/octopress
-    cd -
-
-Now that you're setup with POW, you'll just run `rake watch` and load up `http://octopress.dev` instead.
-
-### Pages
+## New Pages
 
 You can add pages anywhere in your blog source directory and they'll be parsed by Jekyll. The URL will correspond directly to the filepath, so `about.markdown` will become `site.com/about.html`. If you prefer the URL `site.com/about/` you'll want to create the page as `about/index.markdown`.
 Octopress has a rake task for creating new pages easily.
@@ -79,5 +71,19 @@ Like with the new post task, the default file extension is `markdown` but you ca
     ---
 
 The title is derived from the filename so you'll likely want to change that. This is very similar to the post yaml except it doesn't include categories, and you can toggle sharing and comments or remove the footer altogehter. If you don't want to show a date on your page, just remove it from the yaml.
+
+## Generate & Preview
+
+    rake generate   # Generates posts and pages into the public directory
+    rake watch      # Watches source/ and sass/ for changes and regenerates
+    rake preview    # Watches, and mounts a webserver at http://localhost:4000
+
+Jekyll's built in WEBrick server is handy, but if you're a [POW](http://pow.cx) user, you can set it up to work with Octopress like this.
+
+    cd ~/.pow
+    ln -s /path/to/octopress
+    cd -
+
+Now that you're setup with POW, you'll just run `rake watch` and load up `http://octopress.dev` instead.
 
 [Next, Sharing Code Snippets &raquo;](/docs/blogging/code)
