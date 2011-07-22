@@ -7,34 +7,38 @@ comments: false
 footer: false
 ---
 
-Create your first post.
+Jekyll has some conventions for blog post file names which are a bit of a pain to manage manually, so Octopress ships with a rake task to make that easier.
 
-    rake new_post["hello world"]
+#### Syntax
 
-This will put a new post with a name like like `2011-07-3-hello-world.markdown` in the `source/_posts` directory.
-The filename will determine your url, and depending on your [permalink settings](https://github.com/mojombo/jekyll/wiki/Permalinks) your url may end up looking like this
-`site.com/blog/20011/07/03/hello-world/index.html`.
+  rake new_post["title"]
 
-New post expects a title and attempts to strip out undesirable url characters when creating the filename.
+`new_post` expects a naturally written title and strips out undesirable url characters when creating the filename.
+The default file extension for new posts is `markdown` but you can configure that in the `Rakefile`.
+
+#### Example
 
     rake new_post["Zombie Ninjas Attack: A survivor's retrospective"]
+
     # Creates the file
     source/_posts/2011-07-03-zombie-ninjas-attack-a-survivors-retrospective.markdown
 
-The default file extension for new posts is `markdown` but you can configure that in the `Rakefile`.
-Open up your post in a text editor and you'll see a block of [yaml front matter](https://github.com/mojombo/jekyll/wiki/yaml-front-matter)
+The filename will determine your url. With the default [permalink settings](https://github.com/mojombo/jekyll/wiki/Permalinks) the url would be something like
+`http://site.com/blog/20011/07/03/zombie-ninjas-attack-a-survivors-retrospective/index.html`.
+
+Open a post in a text editor and you'll see a block of [yaml front matter](https://github.com/mojombo/jekyll/wiki/yaml-front-matter)
 which tells Jekyll how to processes posts and pages.
 
     ---
     layout: post
-    title: "Hello World"
+    title: "Zombie Ninjas Attack: A survivor's retrospective"
     date: 2011-07-03 5:59
     comments: true
     categories:
     ---
 
-If you like, you can turn comments off, add categories for your post. Beneath the yaml block, go ahead and type up a sample post, or use some [inspired filler](http://baconipsum.com/).
-After you've saved that post you'll want to generate your blog.
+Here you can turn comments off and or categories to your post. If you are working on a multi-author blog, you can add `author: Your Name` to the
+metadata for proper attribution on a post.
 
 ### Generate & Preview
 
@@ -42,7 +46,7 @@ After you've saved that post you'll want to generate your blog.
     rake watch      # Watches source/ and sass/ for changes and regenerates
     rake preview    # Watches, and mounts a webserver at http://localhost:4000
 
-Jekyll's built in webbrick server is handy, but if you're a [POW](http://pow.cx) user, you can set it up to work with Octopress like this.
+Jekyll's built in WEBrick server is handy, but if you're a [POW](http://pow.cx) user, you can set it up to work with Octopress like this.
 
     cd ~/.pow
     ln -s /path/to/octopress
@@ -55,19 +59,19 @@ Now that you're setup with POW, you'll just run `rake watch` and load up `http:/
 You can add pages anywhere in your blog source directory and they'll be parsed by Jekyll. The URL will correspond directly to the filepath, so `about.markdown` will become `site.com/about.html`. If you prefer the URL `site.com/about/` you'll want to create the page as `about/index.markdown`.
 Octopress has a rake task for creating new pages easily.
 
-    rake new_page[awesome]
+    rake new_page[super-awesome]
     # creates
-    /source/awesome/index.markdown
+    /source/super-awesome/index.markdown
 
-    rake new_page[awesome/page.html]
+    rake new_page[super-awesome/page.html]
     # creates
-    /source/awesome/page.html
+    /source/super-awesome/page.html
 
 Like with the new post task, the default file extension is `markdown` but you can configure that in the `Rakefile`. A freshly generated page might look like this:
 
     ---
     layout: page
-    title: "Awesome"
+    title: "Super Awesome"
     date: 2011-07-03 5:59
     comments: true
     sharing: true

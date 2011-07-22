@@ -6,7 +6,7 @@ sidebar: false
 footer: false
 ---
 
-[&laquo; Previous, Deploying Octopress](/docs/deploy)
+[&laquo; Previous, Octopress Setup](/docs/setup)
 
 I've tried to keep configuring Octopress fairly simple and you'll probably only ever change the `Rakefile` and the `_config.yml`.
 Here's a list of files for configuring Octopress.
@@ -23,19 +23,19 @@ Configurations in the `Rakefile` are mostly related to deployment and you probab
 ## Blog Configuration
 
 In the `_config.yml` there are three sections for configuring your Octopress Blog.
-**Spoiler:** You'll probably only change `url`, `title`, `subtitle` and `author` and enable some 3rd party services.
+**Spoiler:** You must change `url`, and you'll probably change `title`, `subtitle` and `author` and enable some 3rd party services.
 
 ### Main Configs
 
 {% codeblock %}
-url:                # For rewriting URLs for RSS, etc
+url:                # For rewriting urls for RSS, etc
 title:              # Used in the header and title tags
 
 subtitle:           # A description used in the header
 author:             # Your name, for RSS, Copyright, Metadata
 simple_search:      # Search engine for simple site search
-subscribe_rss:      # URL for your blog's feed, defauts to /atom.xml
-subscribe_email:    # URL to subscribe by email (service required)
+subscribe_rss:      # Url for your blog's feed, defauts to /atom.xml
+subscribe_email:    # Url to subscribe by email (service required)
 email:              # Email address for the RSS feed if you want it.
 {% endcodeblock %}
 
@@ -47,7 +47,7 @@ These configurations are used by Jekyll and Plugins. If you're not familiar with
 
 {% codeblock %}
 root:             # Mapping for relative urls (default: /)
-port:             # Port to mount Jekyll's webbrick server
+port:             # Port to mount Jekyll's WEBrick server
 permalink:        # Permalink structure for blog posts
 source:           # Directory for site source files
 destination:      # Directory for generated site files
@@ -61,9 +61,9 @@ recent_posts:     # Number of recent posts to appear in the sidebar
 
 If you want to change the way permalinks are written for your blog posts, see [Jekyll's permalink docs](https://github.com/mojombo/jekyll/wiki/Permalinks).
 
-**Note:** Jekyll has a `baseurl` config which adds a redirect for Jekyll's webbrick server for shallow subdirectory support.
-Octopress uses the `root` configuration and offers a rake task `set_root_dir[/some/directory]` to update configs and move exported files to the subdirectory [(see Deploying Octopress)](/docs/deploying).
-In other words, don't use `baseurl` use `root`.
+**Note:** Jekyll has a `baseurl` config which adds a redirect for Jekyll's WEBrick server for subdirectory support. This works fine if you want
+to use the WEBrick server, but for any other web service you have to add support for the redirect. Instead, Octopress uses the `root` config and offers a rake task
+`set_root_dir[/some/directory]` which moves the output directory into a subdirectory and updates configurations. [(see Deploying Octopress)](/docs/deploying).
 
 ### 3rd Party Settings
 These third party integrations are already set up for you. Simply fill in the configurations and they'll be added to your site.
@@ -75,4 +75,6 @@ These third party integrations are already set up for you. Simply fill in the co
 - **Disqus Comments** - Add your disqus short name to enable disqus comments on your site.
 - **Google Analytics** - Add your tracking id to enable Google Analytics tracking for your site.
 
-[Next, Blogging With Octopress &raquo;](/docs/blogging)
+The Octopress layouts read these configurations and only include the javascript and html necessary for the enabled services.
+
+[Next, Deploying Octopress &raquo;](/docs/deploying)

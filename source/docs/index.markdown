@@ -14,15 +14,15 @@ Jekyll at its core is a text transformation engine. The concept behind the syste
 {% endblockquote %}
 
 ## Getting Started
-- [Initial setup](/docs/setup)
-- [Deploying Octopress](/docs/deploying)
-- [Basic Configuration](/docs/configuring)
+- [Initial setup](/docs/setup) - Get source and install dependencies
+- [Basic Configuration](/docs/configuring) - A descriptive list of configurations
+- [Deploying Octopress](/docs/deploying) - Simple deploy instructions for Rsync and Github pages
 
 ## Using Octopress
 - [Blogging Basics](/docs/blogging)
 - [Sharing Code Snippets](/docs/blogging/code)
 - [Syntax Highlighting Test](/docs/blogging/code/test)
-- TODO [Blogging With Plugins](/docs/blogging/plugins)
+- [Blogging With Plugins](/docs/blogging/plugins)
 - TODO [Theming & Customization](/docs/theming)
 - TODO [Updating](/docs/updating)
 
@@ -30,7 +30,7 @@ Jekyll at its core is a text transformation engine. The concept behind the syste
 - Code Block
 - Include Code
 - Gist Tag
-- Include Partial
+- Render Partial
 - Figure Tag
 - Blockquote
 - Pullquote
@@ -38,6 +38,6 @@ Jekyll at its core is a text transformation engine. The concept behind the syste
 - Sitemap Generator
 - Category Generator
 - Compass Compiler
-- Haml Convertor
+- Haml Converter
 - Pygments Cache
 - Titlecase
