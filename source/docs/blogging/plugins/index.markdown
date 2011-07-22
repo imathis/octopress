@@ -12,10 +12,9 @@ footer: false
 Give a man a fish, he'll have food for a day. Teach a man to fish, and he'll always come to you with his fishing problems.
 {% endblockquote %}
 
-[Examples & documentation &raquo;](/docs/plugins/blockquotes/)
+[Examples & documentation &raquo;](/docs/plugins/blockquote/)
 
 ## Pull quote
-
 Octopress offers a CSS3 only technique for pull quotes, based on the technique by [Maykel Loomans](http://miekd.com/articles/pull-quotes-with-html5-and-css/).
 
 {% pullquote %}
@@ -23,4 +22,35 @@ When writing longform posts, I find it helpful to include pull quotes to help re
 It is important to note that {" pull quotes are merely visual in presentation and should not appear twice in the text. "} That is why it a CSS only technique for styling pull quotes is preferable. Octopress includes a handy pull quote plugin to make this easy for you.
 {% endpullquote %}
 
-[Examples & documentation &raquo;](/docs/plugins/blockquotes/)
+[Examples & documentation &raquo;](/docs/plugins/pullquote/)
+
+## Code Blocks
+Write blocks of code directly in your posts and optionally add titles and links.
+
+{% codeblock Javascript Array Syntax (array.js) https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array MDN Documentation %}
+var arr1 = new Array(arrayLength);
+var arr2 = new Array(element0, element1, ..., elementN);
+{% endcodeblock %}
+
+[Examples & documentation &raquo;](/docs/plugins/codeblock/)
+
+## Gist Tag
+Easily embed gists in your posts or pages.
+
+    {{ "{% gist 996818" }} %}
+
+[Examples & documentation &raquo;](/docs/plugins/gist-tag/)
+
+## Include Code
+Import files on your filesystem into any blog post as embedded code snippets with syntax highlighting and a download link.
+
+{% include_code Testing include_code javascripts/test.js %}
+
+[Examples & documentation &raquo;](/docs/plugins/include-code/)
+
+## Render Partial
+Import files on your file system into any blog post or page. For example, to embed this page in another post I'd use the following code.
+
+    {{ "{% render_partial docs/blogging/plugins/index.markdown" }} %}
+
+[Examples & documentation &raquo;](/docs/plugins/render-partials/)

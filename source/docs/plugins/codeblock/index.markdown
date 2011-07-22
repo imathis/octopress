@@ -6,7 +6,7 @@ sidebar: false
 footer: false
 ---
 
-With this plugin you can write blocks of code directly in your posts and optionally add titles or links.
+With this plugin you can write blocks of code directly in your posts and optionally add titles and links.
 
 #### Syntax
 
