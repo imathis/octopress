@@ -6,7 +6,6 @@ sidebar: false
 footer: false
 ---
 
-
 [Create a new repository](https://github.com/repositories/new) for your website then
 open up a terminal and follow along. If you plan to host your site on [Github Pages](http://pages.github.com) for a user or organization, make sure the
 repository is named `your_username.github.com` or `your_organization.github.com`.
@@ -39,5 +38,8 @@ Install the default Octopress theme,
     rake install
 
 and you should be all set up to begin blogging with Octopress.
+
+**Note:** If you already have a blog, check out [Jekyll's Migration page](https://github.com/mojombo/jekyll/wiki/blog-migrations) to help you get your content formatted for Jekyll blogging.
+
 
 [Next, Deploying Octopress &raquo;](/docs/deploying)
