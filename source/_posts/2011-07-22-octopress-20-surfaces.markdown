@@ -4,7 +4,6 @@ title: "Octopress 2.0 Surfaces"
 date: 2011-07-22 14:44
 comments: true
 categories: release
-published: false
 ---
 
 Octopress is a framework designed for Jekyll, the static blogging engine powering Github Pages. So what is Jekyll?
