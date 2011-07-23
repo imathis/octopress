@@ -42,4 +42,4 @@ and you should be all set up to begin blogging with Octopress.
 **Note:** If you already have a blog, check out [Jekyll's Migration page](https://github.com/mojombo/jekyll/wiki/blog-migrations) to help you get your content formatted for Jekyll blogging.
 
 
-[Next, Deploying Octopress &raquo;](/docs/deploying)
+[Next, Deploying Octopress &raquo;](/docs/configuring)

@@ -9,11 +9,12 @@ footer: false
 
 Octopress ships with the following plugins. Many have been written specially for Octopress, but some have been selected from the Jekyll community with various changes and improvements.
 
+- [HTML5 Video Tag](/docs/plugins/video-tag) - *easily post images with class names and titles*
 - [Code Block](/docs/plugins/codeblock) - *for easy inline code sharing*
 - [Include Code](/docs/plugins/include-code) - *embed code from your filesystem*
 - [Gist Tag](/docs/plugins/gist-tag) - *automatically downloads and embeds Github gists*
-- [Render Partial](/docs/plugins/render-partial) - *insert any file into another post or page*
 - [Image Tag](/docs/plugins/image-tag) - *easily post images with class names and titles*
+- [Render Partial](/docs/plugins/render-partial) - *insert any file into another post or page*
 - [Blockquote](/docs/plugins/blockquote) - *generate beautiful, semantic block quotes*
 - [Pullquote](/docs/plugins/pullquote) - *generate CSS only pull quotes &mdash; no duplicate data, no javascript*
 - [Category Generator](/docs/plugins/category-generator) - *generates archive pages for each blog category*

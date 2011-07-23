@@ -36,3 +36,6 @@ Check out the [test page](/docs/blogging/code/test) to see the results.
 
 ## Inline Code Blocks
 {% render_partial docs/plugins/codeblock/index.markdown %}
+
+Also, see [Blogging with Plugins](/docs/blogging/plugins) and [The Octopress plugins page](/docs/plugins)
+

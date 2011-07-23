@@ -6,7 +6,7 @@ sidebar: false
 footer: false
 ---
 
-If you like Markdown's simple syntax for images, you'll love the simplicity of the Octopress image tag.
+If you like Markdown's syntax for images, you'll love the simplicity of the Octopress image tag.
 
 #### Syntax
 
@@ -27,4 +27,6 @@ Aliquip nulla do tempor, ball tip dolore anim esse strip steak nisi nostrud. Tri
 
 Brisket quis velit bresaola. Pork loin pork chop beef duis. Short loin fugiat officia short ribs magna. Ullamco eu proident jerky, fugiat chuck nostrud ham rump meatloaf eiusmod adipisicing. Qui et reprehenderit, magna biltong consequat short ribs pancetta. Tail tenderloin sausage, hamburger corned beef drumstick ad. Eu labore enim velit.
 
-Filler text courtesy of [Bacon Ipsum](http://baconipsum.com).
+Filler text courtesy of [Bacon Ipsum](http://baconipsum.com), Images courtesy of [Place Kitten](http://placekitten.com).
+
+[&laquo; Plugins page](/docs/plugins)

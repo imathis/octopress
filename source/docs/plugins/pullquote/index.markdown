@@ -23,3 +23,5 @@ It is important to note that {" pull quotes are merely visual in presentation an
 
 **Inspect the source** and you'll see the pulled content appears in the data-pullquote attribute of the paragraph. The pull quote effect is created
 entirely with CSS, and is supported by all modern browsers as well as IE8 and up.
+
+[&laquo; Plugins page](/docs/plugins)
