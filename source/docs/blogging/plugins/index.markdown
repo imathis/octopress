@@ -9,6 +9,18 @@ footer: false
 There are [other plugins](/docs/plugins) for octopress, but here's an overview of the ones you'll be likely to use while blogging.
 This is mainly a description and demo, so be sure to follow the links beneath each section for examples and documentation.
 
+## Excerpt Filter
+
+When writing a post, you can add an HTML comment `<!--more-->` to split the post for an excerpt. Only the first section of the post, before the comment,
+will show up on the blog index.
+
+This filter is used in `source/_includes/article.html`
+
+## Image Tag
+This plugin makes it easy to insert images in a post, with optional class names, alt and title attributes.
+
+[Examples & documentation &raquo;](/docs/plugins/image-tag/)
+
 ## Block quote
 
 {% blockquote @AustinTaylor https://twitter.com/austintaylor/status/73136957617750016 %}

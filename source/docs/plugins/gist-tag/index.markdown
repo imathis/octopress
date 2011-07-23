@@ -24,3 +24,4 @@ If you have a gist with multiple files, you can include files one at a time by a
     {{ "{% gist 1059334 svg_bullets.rb" }} %}
     {{ "{% gist 1059334 usage.scss" }} %}
 
+This plugin was developed by [Brandon Tilly](http://brandontilley.com/2011/01/31/gist-tag-for-jekyll.html) but I have fixed some bugs and made some improvements to it for Octopress.

@@ -14,19 +14,19 @@ the documentation and if you have trouble, [I'll be happy to help](http://convor
 ## Getting Started
 If you're using bundler and rvm, this should be a breeze.
 
-- [Initial setup](/docs/setup) - Get source and install dependencies
-- [Basic Configuration](/docs/configuring) - Enable third party services and personalize your blog
-- [Deploying Octopress](/docs/deploying) - Simple deploy instructions for Rsync and Github pages
+- [Initial setup](/docs/setup) - *get source and install dependencies*
+- [Basic Configuration](/docs/configuring) - *enable third party services and personalize your blog*
+- [Deploying Octopress](/docs/deploying) - *simple deploy instructions for Rsync and Github pages*
 
 ## Using Octopress
 Your blog should be awesome. This should help.
 
-- [Blogging Basics](/docs/blogging) - How to create blog posts and pages
-- [Sharing Code Snippets](/docs/blogging/code) - Share code snippets with ease
-- [Syntax Highlighting Test](/docs/blogging/code/test) - Language highlighting tests
-- [Blogging With Plugins](/docs/blogging/plugins) - Overview of plugins for blogging
-- TODO [Theming & Customization](/docs/theming) - Guide to making changes to your Octopress theme
-- TODO [Updating](/docs/updating) - A guide to help you stay up to date
+- [Blogging Basics](/docs/blogging) - *how to create blog posts and pages*
+- [Sharing Code Snippets](/docs/blogging/code) - *share code snippets with ease*
+- [Syntax Highlighting Test](/docs/blogging/code/test) - *language highlighting tests*
+- [Blogging With Plugins](/docs/blogging/plugins) - *overview of plugins for blogging*
+- TODO [Theming & Customization](/docs/theming) - *guide to making changes to your Octopress theme*
+- TODO [Updating](/docs/updating) - *a guide to help you stay up to date*
 
 ## Octopress Plugins - Usage & Examples
 {% render_partial docs/plugins/index.markdown %}

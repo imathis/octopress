@@ -2,9 +2,8 @@
 layout: page
 title: "Pullquote"
 date: 2011-07-22 09:15
-comments: true
-sharing: true
-footer: true
+sidebar: false
+footer: false
 ---
 
 Octopress offers a CSS only technique for pull quotes, based on the technique by [Maykel Loomans](http://miekd.com/articles/pull-quotes-with-html5-and-css/).
@@ -22,5 +21,5 @@ When writing longform posts, I find it helpful to include pull quotes to help re
 It is important to note that {" pull quotes are merely visual in presentation and should not appear twice in the text. "} That is why it a CSS only technique for styling pull quotes is preferable. Octopress includes a handy pull quote plugin to make this easy for you.
 {% endpullquote %}
 
-Inspect the source and you'll see the pulled content appears in the data-pullquote attribute of the paragraph. The pull quote effect is created
+**Inspect the source** and you'll see the pulled content appears in the data-pullquote attribute of the paragraph. The pull quote effect is created
 entirely with CSS, and is supported by all modern browsers as well as IE8 and up.
