@@ -1,4 +1,4 @@
-li { em { color: mix($text-color-light, $text-color); }}
+article li { em { color: mix($text-color-light, $text-color); }}
 
 @include font-face("Bebas-Neue", font-files("bebasneue-web.woff", woff, "bebasneue-web.ttf", truetype, "bebasneue-web.svg#BebasNeueRegular", svg), $eot: "bebasneue-web.eot" );
 
