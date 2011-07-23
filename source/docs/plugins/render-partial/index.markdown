@@ -26,3 +26,5 @@ beginning of the file name, or put it in a directory that begins with an undersc
 Any post or page could import this file like this:
 
     {{ "{% render_partial documentation/TOC.markdown" }} %}
+
+[&laquo; Plugins page](/docs/plugins)

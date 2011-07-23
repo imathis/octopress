@@ -9,12 +9,11 @@ footer: false
 There are [other plugins](/docs/plugins) for octopress, but here's an overview of the ones you'll be likely to use while blogging.
 This is mainly a description and demo, so be sure to follow the links beneath each section for examples and documentation.
 
-## Excerpt Filter
+## HTML5 Video Tag
+This plugin makes it easy to insert mp4 encoded HTML5 videos in a post. Octopress ships with javascripts which
+detect mp4 video support ([using Modernizr](http://modernizr.com)) and automatically offer a flash player fallback.
 
-When writing a post, you can add an HTML comment `<!--more-->` to split the post for an excerpt. Only the first section of the post, before the comment,
-will show up on the blog index.
-
-This filter is used in `source/_includes/article.html`
+[Examples & documentation &raquo;](/docs/plugins/video-tag/)
 
 ## Image Tag
 This plugin makes it easy to insert images in a post, with optional class names, alt and title attributes.
@@ -69,3 +68,12 @@ Import files on your file system into any blog post or page. For example, to emb
     {{ "{% render_partial docs/blogging/plugins/index.markdown" }} %}
 
 [Examples & documentation &raquo;](/docs/plugins/render-partials/)
+
+Also see the [Octopress Plugin page](/docs/plugins) for more plugins.
+
+## Excerpt Filter
+When writing a post, you can add an HTML comment `<!--more-->` to split the post for an excerpt. Only the first section of the post, before the comment,
+will show up on the blog index.
+
+This filter is used in `source/_includes/article.html`
+

@@ -80,4 +80,4 @@ Here's an example for deploying the Octopress website to Github Project Pages:
 
 For more info on deploying a Jekyll Blog, checkout [Jekyll's deployment wiki page](https://github.com/mojombo/jekyll/wiki/Deployment).
 
-[Next, Blogging With Octopress &raquo;](/docs/blogging)
+[Next, Theming & Customization &raquo;](/docs/theming)
