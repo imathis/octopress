@@ -10,7 +10,7 @@ If you like Markdown's simple syntax for images, you'll love the simplicity of t
 
 #### Syntax
 
-    {{ "{% img [class names] /path/to/image" [title text] }} %}
+    {{ "{% img [class names] /path/to/image [title text]" }} %}
 
 ## Examples
 
