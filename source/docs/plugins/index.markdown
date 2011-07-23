@@ -19,6 +19,7 @@ Octopress ships with the following plugins. Many have been written specially for
 - [Category Generator](/docs/plugins/category-generator) - *generates archive pages for each blog category*
 
 The following filters are used by Octopress, and are documented as necessary in their source.
+
 - Octopress filters - *liquid filters built just for Octopress*
 - Sitemap Generator - *generates an SEO friendly sitemap.xml*
 - Compass Compiler - *forces Jekyll to compile Compass on each load*
