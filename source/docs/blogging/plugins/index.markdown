@@ -6,6 +6,9 @@ sidebar: false
 footer: false
 ---
 
+There are [other plugins](/docs/plugins) for octopress, but here's an overview of the ones you'll be likely to use while blogging.
+This is mainly a description and demo, so be sure to follow the links beneath each section for examples and documentation.
+
 ## Block quote
 
 {% blockquote @AustinTaylor https://twitter.com/austintaylor/status/73136957617750016 %}
@@ -15,7 +18,7 @@ Give a man a fish, he'll have food for a day. Teach a man to fish, and he'll alw
 [Examples & documentation &raquo;](/docs/plugins/blockquote/)
 
 ## Pull quote
-Octopress offers a CSS3 only technique for pull quotes, based on the technique by [Maykel Loomans](http://miekd.com/articles/pull-quotes-with-html5-and-css/).
+Octopress offers a CSS only technique for pull quotes, based on the technique by [Maykel Loomans](http://miekd.com/articles/pull-quotes-with-html5-and-css/).
 
 {% pullquote %}
 When writing longform posts, I find it helpful to include pull quotes to help readers easily identify the topics covered in each section. Some prefer to break things up with lots of headings, and while this seems to be a trend it doesn't work so well for long form prose.

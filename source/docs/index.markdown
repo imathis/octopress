@@ -13,12 +13,14 @@ the documentation and if you have trouble, [I'll be happy to help](http://convor
 
 ## Getting Started
 If you're using bundler and rvm, this should be a breeze.
+
 - [Initial setup](/docs/setup) - Get source and install dependencies
 - [Basic Configuration](/docs/configuring) - Enable third party services and personalize your blog
 - [Deploying Octopress](/docs/deploying) - Simple deploy instructions for Rsync and Github pages
 
 ## Using Octopress
 Your blog should be awesome. This should help.
+
 - [Blogging Basics](/docs/blogging) - How to create blog posts and pages
 - [Sharing Code Snippets](/docs/blogging/code) - Share code snippets with ease
 - [Syntax Highlighting Test](/docs/blogging/code/test) - Language highlighting tests
