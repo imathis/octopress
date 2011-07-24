@@ -6,8 +6,6 @@ sidebar: false
 footer: false
 ---
 
-[&laquo; Previous, Deploying Octopress](/docs/deploying)
-
 I hope to eventually release more themes, but for now Octopress ships with a single theme comprised of layouts, partials, pages, javascripts, and
 Sass stylesheets located in `.themes/classic/source` and `.themes/classic/sass`.
 When you install the Octopress theme, these directories are copied into `/source` and `/sass`. You are free to make any changes you like,
@@ -87,4 +85,4 @@ customizations be taken care of [with configuration](/docs/configuring).
 If you study the layouts and partials, you'll see that there's a lot of conditional markup. Logic in the view is lamentable, but a necessary
 side effect of simple static site generation.
 
-[Next, Updating Your Blog &raquo;](/docs/updating)
+Also see [Updating Your Blog &raquo;](/docs/updating)

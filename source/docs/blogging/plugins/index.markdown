@@ -69,11 +69,10 @@ Import files on your file system into any blog post or page. For example, to emb
 
 [Examples & documentation &raquo;](/docs/plugins/render-partials/)
 
-Also see the [Octopress Plugin page](/docs/plugins) for more plugins.
-
 ## Excerpt Filter
 When writing a post, you can add an HTML comment `<!--more-->` to split the post for an excerpt. Only the first section of the post, before the comment,
 will show up on the blog index.
 
 This filter is used in `source/_includes/article.html`
 
+Also see the [Octopress Plugin page](/docs/plugins) for more plugins.

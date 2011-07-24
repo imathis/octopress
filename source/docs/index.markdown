@@ -17,8 +17,6 @@ This section will help you get set up, and explain how to configure Octopress fo
 - [Initial setup](/docs/setup) - *get source and install dependencies*
 - [Basic Configuration](/docs/configuring) - *enable third party services and personalize your blog*
 - [Deploying Octopress](/docs/deploying) - *simple deploy instructions for Rsync and Github pages*
-- [Theming & Customization](/docs/theming) - *guide to making changes to your Octopress theme*
-- [Updating Octopress](/docs/updating) - *a guide to help you stay current with Octopress*
 
 ## Using Octopress
 Your blog should be awesome. This should help.
@@ -27,6 +25,8 @@ Your blog should be awesome. This should help.
 - [Sharing Code Snippets](/docs/blogging/code) - *share code snippets with ease*
 - [Syntax Highlighting Test](/docs/blogging/code/test) - *language highlighting tests*
 - [Blogging With Plugins](/docs/blogging/plugins) - *overview of plugins for blogging*
+- [Theming & Customization](/docs/theming) - *guide to making changes to your Octopress theme*
+- [Updating Octopress](/docs/updating) - *a guide to help you stay current with Octopress*
 
 ## Octopress Plugins - Usage & Examples
 {% render_partial docs/plugins/index.markdown %}
