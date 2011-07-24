@@ -7,8 +7,6 @@ comments: false
 footer: false
 ---
 
-[&laquo; Previous, Updating Octopress](/docs/updating)
-
 Octopress offers some rake tasks to create post and pages preloaded with metadata and according to Jekyll's naming conventions.
 
 ## Blog Posts
@@ -88,4 +86,4 @@ Jekyll's built in WEBrick server is handy, but if you're a [POW](http://pow.cx) 
 
 Now that you're setup with POW, you'll just run `rake watch` and load up `http://octopress.dev` instead.
 
-Also, see [Sharing Code Snippets](/docs/blogging/code) and [Blogging with Plugins](/docs/blogging/plugins)
+Also see [Sharing Code Snippets](/docs/blogging/code) and [Blogging with Plugins](/docs/blogging/plugins)
