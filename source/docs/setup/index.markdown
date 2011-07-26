@@ -20,7 +20,7 @@ repository is named `your_username.github.com` or `your_organization.github.com`
 
     # Next, if you're using Github user or organization pages,
     # Create a source branch and push to origin source.
-    git branch source
+    git checkout -b source
     git push origin source
 
 
