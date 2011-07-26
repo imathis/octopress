@@ -32,8 +32,7 @@ sidebar: false
 
 {% gist 996818 %}
 
-<h3 class="filename">syntax_test.php</h3>
-{% highlight php %}
+{% codeblock Testing PHP (syntax_test.php) %}
 <?php
 require_once($GLOBALS['g_campsiteDir']. "/$ADMIN_DIR/country/common.php");
 require_once($GLOBALS['g_campsiteDir']. "/classes/SimplePager.php");
@@ -63,11 +62,35 @@ echo camp_html_breadcrumbs($crumbs);
         <td><a href="add.php"><?php putGS("Add new"); ?></a></td>
     </tr>
 </table>
-{% endhighlight %}
+{% endcodeblock %}
+
+{% codeblock Testing Objective C (Cocoa1AppDelegate.m) %}
+
+#import "Cocoa1AppDelegate.h"
+
+@implementation Cocoa1AppDelegate
+
+@synthesize window,siteUrl,pageContents;
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+    // Insert code here to initialize your application
+    model = [[Cocoa1Model alloc] init];
+}
+
+- (IBAction)getSiteContents:(id)sender {
+    [model setPageUrl:[siteUrl stringValue]];
+    NSString* reply = [model getUrlAsString];
+    NSLog(@"pageSrc: %@", reply);
+    [pageContents setString:reply];
+    [[[pageContents textStorage] mutableString] appendString:reply];
+}
+
+@end
+{% endcodeblock %}
 
 
-<h3 class="filename">syntax_test.hs</h3>
-{% highlight hs %}
+{% codeblock Testing Haskel (syntax_test.hs) %}
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
@@ -109,10 +132,9 @@ sass :: Compiler Resource String
 sass = getResourceString >>> unixFilter "sass" ["-s", "--scss"]
                          >>> arr compressCss
 
-{% endhighlight %}
+{% endcodeblock %}
 
-<h3 class="filename">syntax_test.sh</h3>
-{% highlight sh %}
+{% codeblock Testing Bash (syntax_test.sh) %}
 #!/bin/bash
 
 cd $ROOT_DIR
@@ -140,10 +162,9 @@ case "$PLATFORM" in
         fi
     ;;
 
-{% endhighlight %}
+{% endcodeblock %}
 
-<h3 class="filename">syntax_test.py</h3>
-{% highlight py %}
+{% codeblock Testing Python (syntax_test.py) %}
 # test python (sample from offlineimap)
 
 class ExitNotifyThread(Thread):
@@ -212,10 +233,9 @@ class ExitNotifyThread(Thread):
         set."""
         return self.exitmessage
 
-{% endhighlight %}
+{% endcodeblock %}
 
-<h3 class="filename">syntax_test.pl</h3>
-{% highlight perl %}
+{% codeblock Testing Perl (syntax_test.pl) %}
 #!perl -w
 
 # Time-stamp: <2002/04/06, 13:12:13 (EST), maverick, csvformat.pl>
@@ -250,10 +270,9 @@ while(<F>)
 }
 close F;
 
-{% endhighlight %}
+{% endcodeblock %}
 
-<h3 class="filename">syntax_test.java</h3>
-{% highlight java %}
+{% codeblock Test Java (syntax_test.java) %}
 import java.util.Map;
 import java.util.TreeSet;
 
@@ -270,10 +289,9 @@ public class GetEnv {
       System.out.printf("%s = %s\n", k, env.get(k));
     }
   }    }
-{% endhighlight %}
+{% endcodeblock %}
 
-<h3 class="filename">syntax_test.c</h3>
-{% highlight c %}
+{% codeblock Test C (syntax_test.c) %}
 #define UNICODE
 #include <windows.h>
 
@@ -301,4 +319,4 @@ int main(int argc, char **argv) {
   return 0;
 }
 
-{% endhighlight %}
+{% endcodeblock %}
