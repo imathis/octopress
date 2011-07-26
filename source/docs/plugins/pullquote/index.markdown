@@ -10,10 +10,10 @@ Octopress offers a CSS only technique for pull quotes, based on the technique by
 
 #### Syntax
 
-    {{ "{% pullqote" }} %}
+    {{ "{% pullquote" }} %}
     Surround your paragraph with the pull quote tags. Then when you come to
     the text you want to pull, {" surround it like this "} and that's all there is to it.
-    {{ "{% endpullqote" }} %}
+    {{ "{% endpullquote" }} %}
 
 Here's a more realistic example of how you might use a pull quote.
 {% pullquote %}
