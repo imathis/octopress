@@ -10,8 +10,9 @@ footer: false
 Octopress ships with the following plugins. Many have been written specially for Octopress, but some have been selected from the Jekyll community with various changes and improvements.
 
 - [HTML5 Video Tag](/docs/plugins/video-tag) - *easily post images with class names and titles*
-- [Code Block](/docs/plugins/codeblock) - *for easy inline code sharing*
-- [Include Code](/docs/plugins/include-code) - *embed code from your filesystem*
+- [Github Style codeblock](/docs/plugins/github-style-codeblock) - *for simple lightweight code sharing*
+- [Code Block](/docs/plugins/codeblock) - *for sharing code with titles and links*
+- [Include Code](/docs/plugins/include-code) - *embed code from your filesystem with a download link*
 - [Gist Tag](/docs/plugins/gist-tag) - *automatically downloads and embeds Github gists*
 - [Image Tag](/docs/plugins/image-tag) - *easily post images with class names and titles*
 - [Render Partial](/docs/plugins/render-partial) - *insert any file into another post or page*
@@ -25,7 +26,7 @@ The following filters are used by Octopress, and are documented as necessary in 
 - Sitemap Generator - *generates an SEO friendly sitemap.xml*
 - Compass Compiler - *forces Jekyll to compile Compass on each load*
 - Haml Converter - *allows .haml pages to be processed by Jekyll*
-- Pygments Cache - *caches code snippets to speed up Jekyll processing*
+- Pygments Code - *converts code snippets to highlighted code and caches to speed up Jekyll processing*
 - Titlecase - *required by several plugins to automatically generate proper title captalization*
 
 [Octopress plugins source](https://github.com/imathis/octopress/tree/master/plugins)
