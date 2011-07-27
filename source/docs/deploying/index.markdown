@@ -22,7 +22,7 @@ Now if you run `rake deploy` in your terminal, your `public` directory will be s
 
 To setup deployment, you'll want to clone your target repository into the `_deploy` directory in your Octopress project.
 If you're using Github project pages, clone the repository for that project, eg `git@github.com:username/project.git`.
-If you're using Github user or organization pages, clone the repository `git@github.com:usernem/username.github.com.git`.
+If you're using Github user or organization pages, clone the repository `git@github.com:username/username.github.com.git`.
 
     # For Github project pages:
     git clone git@github.com:username/project.git _deploy
