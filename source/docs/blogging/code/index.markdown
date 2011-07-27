@@ -28,6 +28,9 @@ them to the Vim rendered versions.
 
 Check out the [test page](/docs/blogging/code/test) to see the results.
 
+## Github Style Code Blocks
+{% render_partial docs/plugins/github-style-codeblock/index.markdown %}
+
 ## Gist Embedding
 {% render_partial docs/plugins/gist-tag/index.markdown %}
 
