@@ -27,11 +27,8 @@ repository is named `your_username.github.com` or `your_organization.github.com`
 Next, setup an [RVM](http://beginrescueend.com/) and install dependencies.
 
     rvm rvmrc trust
+    rvm reload
     bundle install
-
-    # Install pygments (for syntax highlighing)
-    sudo easy_install pip
-    sudo pip install pygments
 
 Install the default Octopress theme,
 
