@@ -24,9 +24,16 @@
   <script src="{{ root_url }}/javascripts/modernizr-2.0.js"></script>
   <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
   <script src="{{ root_url }}/javascripts/octopress.js" type="text/javascript"></script>
-  <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
-  <link href="{{ root_url }}/atom.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml"/>
+  
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  {% if site.subscribe_rss == 'atom.xml' %}
+    <link href="{{ root_url }}/atom.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml"/>
+  {% else %}
+    <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml"/>
+  {% endif %}
+
   {% include google_analytics.html %}
   {% include google_plus_one.html %}
   {% include twitter_sharing.html %}
