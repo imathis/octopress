@@ -21,8 +21,14 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       if markup =~ /(\S.*\s+)?(https?:\/\/|\/)(\S+)(\s+.+)?/i
         @class = $1
+        if @class:
+          @class.strip!
+        end
         @img = $2 + $3
         @title = $4
+        if @title:
+          @title.strip!
+        end
       end
       super
     end
