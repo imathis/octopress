@@ -10,8 +10,8 @@ footer: false
 Octopress offers some rake tasks to create post and pages preloaded with metadata and according to Jekyll's naming conventions.
 
 ## Blog Posts
-Blog posts must be stored in the `source/_posts` directory and named according to Jekyll's naming conventions: `YYYY-MM-DD-post-title.markdown`. The name of the file is
-used as the slug for the url, and the date helps with file distinction and determines the sorting order for post loops.
+Blog posts must be stored in the `source/_posts` directory and named according to Jekyll's naming conventions: `YYYY-MM-DD-post-title.markdown`. The name of the file will be used
+as the url slug, and the date helps with file distinction and determines the sorting order for post loops.
 
 Octopress provides a rake task to create new blog posts with the right naming conventions, with sensible yaml metadata.
 
