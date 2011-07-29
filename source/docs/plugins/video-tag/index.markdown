@@ -13,7 +13,10 @@ detect mp4 video support ([using Modernizr](http://modernizr.com)) and automatic
 
     {{ "{% video url/to/video [width height] [url/to/poster]" }} %}
 
-#### Demo
+#### Example
+
+    {{ "{% video http://s3.imathis.com/video/zero-to-fancy-buttons.mp4 640 320 http://s3.imathis.com/video/zero-to-fancy-buttons.png" }} %}
+
 
 {% video http://s3.imathis.com/video/zero-to-fancy-buttons.mp4 640 320 http://s3.imathis.com/video/zero-to-fancy-buttons.png %}
 

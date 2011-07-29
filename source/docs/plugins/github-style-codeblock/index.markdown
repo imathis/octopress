@@ -12,19 +12,23 @@ for your code snippets, and then finish your code block with three more back tic
 
 #### Syntax
 
-    ``` language
-        code snippet
-    ```
+{% codeblock %}
+``` language
+    code snippet
+```
+{% endcodeblock %}
 
-### Example
+#### Example
 
-    ``` ruby
-        class Fixnum
-          def prime?
-            ('1' * self) !~ /^1?$|^(11+?)\1+$/
-          end
-        end
-    ```
+{% codeblock %}
+``` ruby
+    class Fixnum
+      def prime?
+        ('1' * self) !~ /^1?$|^(11+?)\1+$/
+      end
+    end
+```
+{% endcodeblock %}
 
 ``` ruby
     class Fixnum
@@ -35,4 +39,4 @@ for your code snippets, and then finish your code block with three more back tic
 ```
 
 This is a nice, lightweight way to add a highlighted code snippet. For features like titles and links you'll want to look
-at the `codeblock` or `include_code` liquid tags.
+at the [codeblock](/docs/plugins/code-block/) or [include_code](/docs/plugins/include-code/) liquid tags.
