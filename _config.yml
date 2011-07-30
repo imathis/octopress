@@ -40,7 +40,7 @@ default_asides: [asides/recent_posts.html, asides/twitter.html, asides/delicious
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
-# blog_index_asides:
+blog_index_asides: [asides/twitter.html, asides/delicious.html, asides/pinboard.html]
 # post_asides:
 # page_asides:
 
