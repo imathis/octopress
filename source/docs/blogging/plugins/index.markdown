@@ -67,7 +67,7 @@ Import files on your file system into any blog post or page. For example, to emb
 
     {{ "{% render_partial docs/blogging/plugins/index.markdown" }} %}
 
-[Examples & documentation &raquo;](/docs/plugins/render-partials/)
+[Examples & documentation &raquo;](/docs/plugins/render-partial/)
 
 ## Excerpt Filter
 When writing a post, you can add an HTML comment `<!--more-->` to split the post for an excerpt. Only the first section of the post, before the comment,
