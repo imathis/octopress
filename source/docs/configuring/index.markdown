@@ -65,7 +65,7 @@ If you want to change the way permalinks are written for your blog posts, see [J
 to use the WEBrick server, but for any other web service you have to add support for the redirect. Instead, Octopress uses the `root` config and offers a rake task
 `set_root_dir[/some/directory]` which moves the output directory into a subdirectory and updates configurations. [(see Deploying Octopress)](/docs/deploying).
 
-### 3rd Party Settings
+<h3 id="third_party">3rd Party Settings</h3>
 These third party integrations are already set up for you. Simply fill in the configurations and they'll be added to your site.
 
 - **Twitter** - Setup a sidebar twitter feed, follow button, and tweet button (for sharing posts and pages).
