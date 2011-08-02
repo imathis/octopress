@@ -6,7 +6,7 @@ sidebar: false
 footer: false
 ---
 
-[&laquo; Previous, Theming & Customization](/docs/theming)
+[&laquo; Previous, Theming & Customization](/docs/theme/)
 
 In the open source world, version control generally takes care of staying current with the latest releases, but once you've begun to customize your code,
 merging in updates isn't always what you want. As a result I've come up with the following pattern for Octopress:

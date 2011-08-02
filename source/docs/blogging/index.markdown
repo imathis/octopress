@@ -17,17 +17,19 @@ Octopress provides a rake task to create new blog posts with the right naming co
 
 #### Syntax
 
-  rake new_post["title"]
+``` sh
+    rake new_post["title"]
+```
 
 `new_post` expects a naturally written title and strips out undesirable url characters when creating the filename.
 The default file extension for new posts is `markdown` but you can configure that in the `Rakefile`.
 
 #### Example
 
+``` sh
     rake new_post["Zombie Ninjas Attack: A survivor's retrospective"]
-
-    # Creates the file
-    source/_posts/2011-07-03-zombie-ninjas-attack-a-survivors-retrospective.markdown
+    # Creates source/_posts/2011-07-03-zombie-ninjas-attack-a-survivors-retrospective.markdown
+```
 
 The filename will determine your url. With the default [permalink settings](https://github.com/mojombo/jekyll/wiki/Permalinks) the url would be something like
 `http://site.com/blog/20011/07/03/zombie-ninjas-attack-a-survivors-retrospective/index.html`.
@@ -35,6 +37,7 @@ The filename will determine your url. With the default [permalink settings](http
 Open a post in a text editor and you'll see a block of [yaml front matter](https://github.com/mojombo/jekyll/wiki/yaml-front-matter)
 which tells Jekyll how to processes posts and pages.
 
+``` yaml
     ---
     layout: post
     title: "Zombie Ninjas Attack: A survivor's retrospective"
@@ -42,25 +45,43 @@ which tells Jekyll how to processes posts and pages.
     comments: true
     categories:
     ---
+```
 
 Here you can turn comments off and or categories to your post. If you are working on a multi-author blog, you can add `author: Your Name` to the
 metadata for proper attribution on a post. If you are working on a draft, you can add `published: false` to prevent it from being posted when you generate your blog.
+
+You can add a single category or multiple categories like this.
+
+``` yaml
+    # One category
+    categories: Sass
+
+    # Multiple categories example 1
+    categories: [CSS3, Sass, Media Queries]
+
+    # Multiple categories example 2
+    categories:
+    - CSS3
+    - Sass
+    - Media Queries
+```
 
 ## New Pages
 
 You can add pages anywhere in your blog source directory and they'll be parsed by Jekyll. The URL will correspond directly to the filepath, so `about.markdown` will become `site.com/about.html`. If you prefer the URL `site.com/about/` you'll want to create the page as `about/index.markdown`.
 Octopress has a rake task for creating new pages easily.
 
+``` sh
     rake new_page[super-awesome]
-    # creates
-    /source/super-awesome/index.markdown
+    # creates /source/super-awesome/index.markdown
 
     rake new_page[super-awesome/page.html]
-    # creates
-    /source/super-awesome/page.html
+    # creates /source/super-awesome/page.html
+```
 
-Like with the new post task, the default file extension is `markdown` but you can configure that in the `Rakefile`. A freshly generated page might look like this:
+Like with the new post task, the default file extension is `markdown` but you can configure that in the `Rakefile`. A freshly generated page might look like this.
 
+``` yaml
     ---
     layout: page
     title: "Super Awesome"
@@ -69,20 +90,24 @@ Like with the new post task, the default file extension is `markdown` but you ca
     sharing: true
     footer: true
     ---
+```
 
 The title is derived from the filename so you'll likely want to change that. This is very similar to the post yaml except it doesn't include categories, and you can toggle sharing and comments or remove the footer altogehter. If you don't want to show a date on your page, just remove it from the yaml.
 
 ## Generate & Preview
-
+``` sh
     rake generate   # Generates posts and pages into the public directory
     rake watch      # Watches source/ and sass/ for changes and regenerates
     rake preview    # Watches, and mounts a webserver at http://localhost:4000
+```
 
 Jekyll's built in WEBrick server is handy, but if you're a [POW](http://pow.cx) user, you can set it up to work with Octopress like this.
 
+``` sh
     cd ~/.pow
     ln -s /path/to/octopress
     cd -
+```
 
 Now that you're setup with POW, you'll just run `rake watch` and load up `http://octopress.dev` instead.
 
