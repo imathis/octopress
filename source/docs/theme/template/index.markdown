@@ -1,11 +1,30 @@
+---
+layout: page
+title: "Theming &amp; Customization"
+date: 2011-08-01 21:16
+sidebar: false
+footer: false
+---
+
 Shortly after the 2.0 release Octopress added the `source/_includes/custom` directory. If you don't have this, you'll want to [update](/docs/updating) because it's really nice.
 
     source/
       _includes/    # Main layout partials
-        custom/     # <- Customize head, navigation, footer, and sidebar here
+        custom/     # <- Customize head, header, navigation, footer, and sidebar here
         asides/     # Theme sidebar partials
         post/       # post metadata, sharing & comment partials
       _layouts/     # layouts for pages, posts & category archives
+
+## Changing the &lt;HEAD&gt;
+
+If you want to add to the `<HEAD>`take a look at `/source/_includes/custom/head.html`.
+
+{% codeblock &lt;HEAD&gt; (source/_includes/custom/head.html) %}
+{% render_partial ../.themes/classic/source/_includes/custom/head.html raw %}
+{% endcodeblock %}
+
+Here you can easily change or remove the [Google Webfonts](http://google.com/webfonts), insert javascripts, etc.
+
 
 ### Changing the sidebar
 Octopress integrates with some [3rd party services](/docs/configuring/#third_party) like Twitter, Pinboard and Delicious which appear in the sidebar.
@@ -36,19 +55,21 @@ post_asides:        [custom/asides/about.html, asides/recent_posts.html, asides/
 
 In the configuration above I've added the about page to the blog index and post pages. Since `page_asides` isn't being set, it will inherit from the default list.
 
-### Changing the &lt;HEAD&gt;
+## Changing the Header, Navigation & Footer
 
-If you want to add to the `<HEAD>`take a look at `/source/_includes/custom/head.html`.
+These are sections of the site that are most likely to be customized. You can edit each in `/source/_includes/custom/` and your changes will be preserved across updates.
 
-{% codeblock &lt;HEAD&gt; (source/_includes/custom/head.html) %}
-{% render_partial ../.themes/classic/source/_includes/custom/head.html raw %}
+### Changing the Header
+
+The header title and subtitle should be configured in the `_config.yml` If you want to make other changes to the header, edit `/source/_includes/custom/header.html` which looks like this:
+
+{% codeblock Header (source/_includes/custom/header.html) %}
+{% render_partial ../.themes/classic/source/_includes/custom/header.html raw %}
 {% endcodeblock %}
-
-Here you can easily change or remove the [Google Webfonts](http://google.com/webfonts), insert javascripts, etc.
 
 ### Changing the Navigation
 
-As soon as you add pages to your site, you'll want to put them in the main navigation. The links come from `/source/_includes/custom/navigation.html` which looks like this:
+To change or add links to the main navigation, edit `/source/_includes/custom/navigation.html` which looks like this:
 
 {% codeblock Navigation (source/_includes/custom/navigation.html) %}
 {% render_partial ../.themes/classic/source/_includes/custom/navigation.html raw %}
@@ -65,4 +86,4 @@ You can customize the footer in `source/_includes/custom/footer.html` which look
 {% render_partial ../.themes/classic/source/_includes/custom/footer.html raw %}
 {% endcodeblock %}
 
-Change this however you like, but if you're cool, you'll leave the Octopress link in there.
+Change this however you like, but be cool and keep the Octopress link in there.
