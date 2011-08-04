@@ -29,7 +29,7 @@ code_dir: downloads/code
 category_dir: blog/categories
 category_title_prefix: "Category: "
 markdown: rdiscount
-pygments: false
+pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 10 # Posts per page on the blog index
 recent_posts: 5 # Posts in the sidebar Recent Posts section
