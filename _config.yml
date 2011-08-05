@@ -72,3 +72,8 @@ disqus_short_name:
 
 # Google Analytics
 google_analytics_tracking_id:
+
+# Readability
+readability_basic_buttons: true
+readability_all_buttons: false
+
