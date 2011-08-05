@@ -2,9 +2,11 @@ $blockquote: $type-border !default;
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
 
 // Fonts
-.heading { font-family: "Caudex", "Georgia", "Helvetica Neue", Arial, sans-serif; }
-.sans { font-family: "Muli", "Helvetica Neue", Arial, sans-serif; }
-.serif { font-family: "Caudex", Georgia, Times, "Times New Roman", serif; }
+.heading {
+  font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif;
+}
+.sans { font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif; }
+.serif { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; }
 .mono { font-family: $mono; }
 
 body > header h1 {
@@ -18,7 +20,7 @@ body > header h1 {
 body {
   line-height: 1.5em;
   color: $text-color;
-  @extend .sans;
+  @extend .serif;
 }
 h1 {
   font-size: 2.2em;
