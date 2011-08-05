@@ -1,0 +1,27 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Thanks JJ
+date: "2003-11-14"
+categories: life
+---
+<a href="http://blueyak.org/" title="blueyak.org">JJ</a> sent me an instant message today letting me know that some of my tags were showing. One of the dangers of copy-paste coding had reared its ugly head. I had an extra "/&gt;" embedded in the individual archive template. And I also had some residue from a previous-next navigation scheme that I had only partially removed.
+
+After getting these gaffs cleaned up I took the time to modularize the primary pages of the site. The header, left and right side, and footer sections of the page are now coded once and reused.
+
+I also correct a CSS problem that was preventing the left side border from displaying properly when the content was anything other than standard "paragraph" text. By moving the border definition to a new CSS element I was able to strip it from all the normal HTML tags. Now they work regardless of where they are used.
+
+I've added a category summary page that lists all posting categories, and a count of entries for each. On my to-do list is creation of a page that will list the entry titles (as a hypertext link) for each category. Maybe over the weekend.
+
+For the most part I think design is complete. I may tweak the fonts here or there over time, but on the whole I am very pleased with site now. I have tested it in
+<ul>
+<li class="il">Safari 1.0</li>
+<li class="il">Mozilla Firebird 0.7</li>
+<li class="il">Camino 0.7</li>
+<li class="il">IE 5.2 Mac</li>
+<li class="il">IE 5.5 Win</li>
+<li class="il">Mozilla Firebird 0.7 Win</li>
+<li class="il">Opera 7 for Windows</li>
+</ul>
+If you find any problems, please use the e-mail link on the right to let me know.

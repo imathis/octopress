@@ -1,0 +1,11 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Pi Day
+date: 2007-3-14
+categories: nerdliness
+---
+<a href="http://3.141592653589793238462643383279502884197169399375105820974944592.com/index1.html" title="Pi to a Million places">Happy Pi Day</a>!
+
+More <a href="http://www.piday.org/" title="Piday.org">Pi goodness</a>.

@@ -1,0 +1,11 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Nekko
+date: 2008-6-9
+categories: family
+---
+<img src="http://zanshin.net/images/nekko_20080609.jpg" alt="Nekko" width="400" height="300" />
+
+Nekko (1997 - 2008)

@@ -1,0 +1,21 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-08-29
+date: 2008-8-29
+categories: social issues
+---
+<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://gen5.info/q/2008/08/27/what-do-you-do-when-youve-caught-an-exception/">Generation 5 » What do you do when you’ve caught an exception?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/programming">programming</a> <a href="http://delicious.com/zanshin/tips">tips</a> <a href="http://delicious.com/zanshin/exceptions">exceptions</a> <a href="http://delicious.com/zanshin/error">error</a> <a href="http://delicious.com/zanshin/toread">toread</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://damieng.com/blog/2008/08/01/ten-commandments-for-developers">Ten commandments for developers » DamienG</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/development">development</a> <a href="http://delicious.com/zanshin/programming">programming</a> <a href="http://delicious.com/zanshin/design">design</a> <a href="http://delicious.com/zanshin/usability">usability</a> <a href="http://delicious.com/zanshin/ui">ui</a> <a href="http://delicious.com/zanshin/commandments">commandments</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://mathworld.wolfram.com/ReuleauxTriangle.html">Reuleaux Triangle -- from Wolfram MathWorld</a></div>
+                <div class="delicious-extended">A bit to drill square holes</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/interesting">interesting</a> <a href="http://delicious.com/zanshin/mathematics">mathematics</a> <a href="http://delicious.com/zanshin/triangle">triangle</a> <a href="http://delicious.com/zanshin/reuleaux">reuleaux</a> <a href="http://delicious.com/zanshin/drill">drill</a> <a href="http://delicious.com/zanshin/engineering">engineering</a> <a href="http://delicious.com/zanshin/geometry">geometry</a>)</div>
+            </li></ul>

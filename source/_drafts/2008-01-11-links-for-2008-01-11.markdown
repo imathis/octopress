@@ -1,0 +1,14 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-01-11
+date: 2008-1-11
+categories: links
+---
+<ul class="delicious">
+	<li>
+		<div class="delicious-link"><a href="http://www.smashingmagazine.com/2008/01/08/100-excellent-free-high-quality-wordpress-themes/">100 Excellent Free WordPress Themes | Developer's Toolbox | Smashing Magazine</a></div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/wordpress">wordpress</a> <a href="http://del.icio.us/zanshin/themes">themes</a> <a href="http://del.icio.us/zanshin/blog">blog</a> <a href="http://del.icio.us/zanshin/css">css</a> <a href="http://del.icio.us/zanshin/freeware">freeware</a>)</div>
+	</li>
+</ul>

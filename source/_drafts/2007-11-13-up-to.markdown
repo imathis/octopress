@@ -1,0 +1,27 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Up To
+date: "2007-11-13"
+categories: random
+---
+A few things that I've been up to lately.
+
+<strong>planning</strong>
+
+A move from my current hosting provider to <a href="http://bluehost.com" title="Blue Host">Blue Host</a>, and a conversion from MT 2.661 to Wordpress.  I've been at <a href="http://pair.com" title="Pair Networks">Pair</a> forever and I have no complaints other than the price.  Recently Sibylle was researching hosting providers for the new MAMTA site and through her I discovered that I am paying quite a bit more for my site on a monthly basis than I need.  I also discovered that the latest release of <a href="http://wordpress.org" title="Wordpress">Wordpress</a> has a vastly improved MT import facility, so now I just need to take the plunge and convert already.
+
+<strong>wanting</strong>
+
+A new hard drive for my ThinkPad laptop.  The current drive, the original equipment 80 GB drive is nearly full, so there's no easy way to add a new partition for Ubuntu on it.  A new drive (perhaps bigger) not only creates the space for a Linux install, it keeps the XP setup untouched <em>just in case</em>.
+
+<strong>seriously considering</strong>
+
+Making chili this weekend.  The weather has been cold for a couple of weeks now, and I haven't had a pot of spicy hot chili in too long.
+
+<strong>researching</strong>
+
+Eye exams.  While my laser adjusted eyes are okay for 90 percent of the things I do, there are times and situations where I strain to be able to see.  My frustration level is almost to the point of obsession, so it's time to get some professional advice.  I'll be scheduling a complete exam as soon as possible so I'll know for certain what my vision is or isn't.
+
+<strong>NB</strong>: I got the idea for this catch-all category, "up to," from a posting over at <a href="http://notmyself.com" title="Not Myself">notmyself.com</a>.

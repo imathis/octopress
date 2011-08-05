@@ -1,0 +1,17 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Waiting
+date: "2007-10-28"
+categories: nerdliness
+---
+I have been a big fan of Google Mail, also known as GMail, ever since it was introduced.  I was fortunate enough to snag an invitation early on in the beta cycles so I've been using it for over three years now.  Recently I detailed how I am using GMail to aggregate all my mail accounts in to one umbrella account, and then how I use an IMAP account on my domain to access all my mail from multiple machines.  The only thing that would improve my email configuration would be IMAP access to my GMail accounts.
+
+Last week Google announced a roll-out of IMAP access to Google mail accounts.  Labels in GMail will become folders in your IMAP client of choice, flagging items will add a star in GMail.  You can even synchronize trash, sent, and drafts folders with some adjustments to your account settings.
+
+Now I am eagerly awaiting the addition of IMAP to my primary GMail account.  In a bit of irony, I just created a new GMail account last week so I could segregate a high-volume email list from my inbox.  Tha new account was upgraded to IMAP almost as soon as the Google announcement was published.  My primary account is still waiting that upgrade.
+
+I feel like one of those impatient people waiting in an elevator lobby, repeatedly smacking the call button, secretly hoping that the elevator will come faster if it knows someone is in a hurry.  I keep checking the settings page on my account hoping that Google will realize that I am ready and waiting to convert my access from a combination of POP3 and forwarding to IMAP all the way.
+
+Time to go smack the call button again.

@@ -1,0 +1,14 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-01-14
+date: 2008-1-14
+categories: links
+---
+<ul class="delicious">
+	<li>
+		<div class="delicious-link"><a href="http://betterexplained.com/articles/a-visual-guide-to-simple-compound-and-continuous-interest-rates/">A Visual Guide to Simple, Compound and Continuous Interest Rates | BetterExplained</a></div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/money">money</a> <a href="http://del.icio.us/zanshin/finance">finance</a> <a href="http://del.icio.us/zanshin/howto">howto</a>)</div>
+	</li>
+</ul>

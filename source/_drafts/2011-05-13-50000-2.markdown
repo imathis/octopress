@@ -1,0 +1,11 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: "50,000"
+date: 2011-5-13
+categories: life
+---
+Early this morning my little website out here on the long tail of the power curve that is the Internet passed 50,000 unique visits since December 2005. That's when I started using <a title="Mint" href="http://haveamint.com">Mint</a> to track activity on my site full time. Compared to the major websites and weblogs 50,000 unique visits in a little over five years is truly a small number. I suspect sites like <a href="http://daringfireball.net/" title="Daring Fireball">Daring Fireball</a> or <a href="http://kottke.org/" title="Kottke">Kottke</a> generate more than double that <em>per day</em>. Still for me, 50,000 is a huge number.
+
+Thank you to every one who has ever visited zanshin.net.

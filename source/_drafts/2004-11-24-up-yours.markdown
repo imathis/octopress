@@ -1,0 +1,17 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Up Yours
+date: "2004-11-24"
+categories: nerdliness
+---
+Dear Spammer(s),
+
+Okay. You win this round. I've been forced to remove comments from my sites because I am sick and tired of spending an increasing amount of time everyday removing your vile spew from my site. So now no one can comment here at all.
+
+Fuck you very much.
+
+However, all is not lost. I'm in the process of switching the back end of this site, and my <a href="http://andifyoudidknow.com" title="And If You Did Know.com">wife's</a> site to Expression Engine. Which has a membership feature that will require proof of humanness before comments can be left.
+
+Sometimes technology is a a good thing.

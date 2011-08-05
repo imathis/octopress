@@ -1,0 +1,14 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-09-26
+date: 2008-9-26
+categories: links
+---
+<ul class="delicious">
+	<li>
+<div class="delicious-link"><a href="http://tumblr.zanshin.net/post/51725461/new-hovis-advert-in-full-hd-stereo-sept-2008">How commercials ought to be</a></div>
+<div class="delicious-extended">Enthralling.</div>
+<div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/television">television</a> <a href="http://delicious.com/zanshin/commercial">commercial</a> <a href="http://delicious.com/zanshin/ad">ad</a> <a href="http://delicious.com/zanshin/howto">howto</a> <a href="http://delicious.com/zanshin/humor">humor</a> <a href="http://delicious.com/zanshin/towatch">towatch</a>)</div></li>
+</ul>

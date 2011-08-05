@@ -1,0 +1,14 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-01-13
+date: 2008-1-13
+categories: links
+---
+<ul class="delicious">
+	<li>
+		<div class="delicious-link"><a href="http://www.misterbg.org/AppleProductCycle/">The Apple Product Cycle</a></div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/apple">apple</a> <a href="http://del.icio.us/zanshin/humor">humor</a> <a href="http://del.icio.us/zanshin/mac">mac</a> <a href="http://del.icio.us/zanshin/geek">geek</a>)</div>
+	</li>
+</ul>

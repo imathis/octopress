@@ -1,0 +1,13 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Up Trend
+date: 2008-1-3
+categories: nerdliness
+---
+My site lives on the long tail of the Internet.  The long tail, in this case, is a reference to a power curve.  Unlike a Bell curve, a power curve is what happens when a very few things have most of what is being charted, while a great many things have very little of what is being charted.
+
+Web sites on the Internet are a prime example of a power curve.  There are a few sites that garner most of the visits, and millions of sites that get little or no traffic.  For the most part I am OK with zanshin.net languishing on the thin end of the power curve.  The site exists primarily for my enjoyment.  Still, I am not above tracking my visitors and wondering what causes a surge in my daily count.
+
+It would seem, on the surface, that switching to <a href="http://wordpress.com" title="Wordpress">Wordpress</a> has gently nudged my site one infinitesimal notch towards the meaty end of the curve.  Most days I see 10 to 15 browser views of my site.  The last two days, the first two days of my back-end being Wordpress, have seen 26 and 22 (so far) visits.  Hmm.  Only another <a href="http://daringfireball.net/feeds/sponsors/" title="A million per month">39,978 per day</a> and the site will support me financially. 

@@ -1,0 +1,30 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-01-09
+date: 2008-1-9
+categories: links
+---
+<ul class="delicious">
+	<li>
+		<div class="delicious-link"><a href="http://www.blueflavor.com/blog/development/getting_started_with_rails.php">Getting Started with Rails | Blue Flavor</a></div>
+		<div class="delicious-extended">Time to learn a new language.</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/programming">programming</a> <a href="http://del.icio.us/zanshin/ruby">ruby</a> <a href="http://del.icio.us/zanshin/rails">rails</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://www.domainnamenews.com/featured/domain-registrar-network-solutions-front-running-on-whois-searches/1359">   Domain Registrar Network Solutions Front Running On Whois Searches » Domain Name News</a></div>
+		<div class="delicious-extended">Why I'm not a registrant here any more.</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/domain">domain</a> <a href="http://del.icio.us/zanshin/ethics">ethics</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://www.cs.cmu.edu/~harchol/gradschooltalk.pdf">How to get a Ph.D</a></div>
+		<div class="delicious-extended">More work than I want to do...</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/phd">phd</a> <a href="http://del.icio.us/zanshin/gradschool">gradschool</a> <a href="http://del.icio.us/zanshin/cs">cs</a> <a href="http://del.icio.us/zanshin/research">research</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://www.flickr.com/photos/secondscout/2179215293/">Tube & Field Study on Flickr - Photo Sharing!</a></div>
+		<div class="delicious-extended">So now I need some florescent light tubes...</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/science">science</a> <a href="http://del.icio.us/zanshin/photography">photography</a> <a href="http://del.icio.us/zanshin/nerdliness">nerdliness</a>)</div>
+	</li>
+</ul>

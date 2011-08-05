@@ -1,0 +1,24 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-09-24
+date: 2008-9-24
+categories: links
+---
+<ul class="delicious">
+	<li>
+<div class="delicious-link"><a href="http://pigsandfishes.com/filks/mikefilk/progelves.html">P&amp;F: The Programmer and the Elves: a Fairy Tale</a></div>
+<div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/humor">humor</a> <a href="http://delicious.com/zanshin/fortran">fortran</a> <a href="http://delicious.com/zanshin/programming">programming</a> <a href="http://delicious.com/zanshin/funny">funny</a> <a href="http://delicious.com/zanshin/coding">coding</a> <a href="http://delicious.com/zanshin/wisdom">wisdom</a> <a href="http://delicious.com/zanshin/tales">tales</a>)</div></li>
+	<li>
+<div class="delicious-link"><a href="http://www.schneier.com/blog/archives/2008/09/the_two_classes.html">Schneier on Security: The Two Classes of Airport Contraband</a></div>
+<div class="delicious-extended">I'm still not convinced that anything we've done in the last 7 years would stop another 9-11 style event.</div>
+<div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/airport">airport</a> <a href="http://delicious.com/zanshin/security">security</a> <a href="http://delicious.com/zanshin/tsa">tsa</a> <a href="http://delicious.com/zanshin/schneier">schneier</a> <a href="http://delicious.com/zanshin/interesting">interesting</a> <a href="http://delicious.com/zanshin/toread">toread</a>)</div></li>
+	<li>
+<div class="delicious-link"><a href="http://www.techoozie.com/10-books-that-will-substitute-a-computer-science-degree/">10 Books that will Substitute A Computer Science Degree | Techoozie</a></div>
+<div class="delicious-extended">Ok.  I've heard of some of these.</div>
+<div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/toread">toread</a> <a href="http://delicious.com/zanshin/programming">programming</a> <a href="http://delicious.com/zanshin/reference">reference</a> <a href="http://delicious.com/zanshin/list">list</a> <a href="http://delicious.com/zanshin/books">books</a>)</div></li>
+	<li>
+<div class="delicious-link"><a href="http://sidsavara.com/personal-productivity/the-price-of-my-dreams-60-a-week">The Price of my Dreams - $60 a Week — SidSavara.com</a></div>
+<div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/interesting">interesting</a> <a href="http://delicious.com/zanshin/productivity">productivity</a> <a href="http://delicious.com/zanshin/gtd">gtd</a> <a href="http://delicious.com/zanshin/craigslist">craigslist</a> <a href="http://delicious.com/zanshin/outsourcing">outsourcing</a> <a href="http://delicious.com/zanshin/lifehacks">lifehacks</a>)</div></li>
+</ul>

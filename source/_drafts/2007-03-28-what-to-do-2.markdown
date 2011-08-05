@@ -1,0 +1,17 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: What To Do
+date: 2007-3-28
+categories: life
+---
+One of the <a href="http://linkedin.com" title="LinkedIn">networking sites</a> I participate in works on the six degrees of separation concept. You contact people you know and add them to your network; they in turn contact their acquaintances, who in turn contact their. The number of people you know plus their contacts, and the third generation of contacts is a surprisingly big number. With only 37 contacts on my list I have a total network size of 1.3 million people.
+
+While I haven't fully leveraged the site or the potential of all those contacts, I do keep my profile there up-to-date. The old adage about it not always being what you know, but who you know is firmly in mind here. The site provides for introductions between you and your contact's contacts as well as a job search feature allowing you to locate potential employment opportunities at the companies where these friends of friends work.
+
+Recently I have gotten a couple of "cold call" emails from people I've never heard of at my work email address. Both are recruiters who are looking to work with me, and both were found on the fringes of my 3rd generation network. What is obvious to me is that they are trolling the network from their end and guessing at email addresses. I say guessing since my work email address hasn't been given to anyone, least of all the networking site.
+
+On the surface it should be okay to get emails from people you don't know but who have something (potentially) of interest to you. However, I find that I am put off by their method. What is the point of the introduction system on the site (the introduction being conducted by someone you know, through someone they know) if over-eager achievers are going to do an end run around the process? The orderly, programmer in me wants to retaliate via the network's customer support service, and an email to their employing agency. The pragmatic, you get more bees with honey than vinegar part of me says to politely respond asking that they use the established mechanism for an introduction.
+
+I'll probably just ignore them, Few of these cold call initiated recruiting relationships ever bear fruit anyway.

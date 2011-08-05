@@ -1,0 +1,11 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: WOMD
+date: 2003-3-25
+categories: life
+---
+<a href="http://www.coxar.pwp.blueyonder.co.uk/" target="_blank">This</a> is good.
+
+<strong>Updated: (3.29.2003 @ 3:30 p)</strong> It appears that the original page is either gone, or not always accessable. Therefore you can see the page, in PDF format, by clicking <a href="http://www.zanshin.net/womd.pdf">here</a> instead.

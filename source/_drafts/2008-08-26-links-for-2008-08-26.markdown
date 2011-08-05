@@ -1,0 +1,17 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-08-26
+date: 2008-8-26
+categories: social issues
+---
+<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://gedblog.com/2008/08/25/100-reasons-why-mccain-wont-be-president-of-the-united-states/">gedblog  » Blog Archive   » 100 Reasons Why McCain Won’t Be President of the United States</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/politics">politics</a> <a href="http://delicious.com/zanshin/list">list</a> <a href="http://delicious.com/zanshin/johnmccain">johnmccain</a> <a href="http://delicious.com/zanshin/2008election">2008election</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://blog.uncommons.org/2008/08/24/a-java-syntax-quirk/">New Adventures in Software » A Java Syntax Quirk</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/java">java</a> <a href="http://delicious.com/zanshin/puzzle">puzzle</a> <a href="http://delicious.com/zanshin/syntax">syntax</a> <a href="http://delicious.com/zanshin/humor">humor</a> <a href="http://delicious.com/zanshin/programming">programming</a>)</div>
+            </li></ul>

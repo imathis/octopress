@@ -1,0 +1,14 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-01-20
+date: 2008-1-20
+categories: links
+---
+<ul class="delicious">
+	<li>
+		<div class="delicious-link"><a href="http://wpcandy.com/looking-for-wordpress-jobs/">Looking for Wordpress jobs</a></div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/jobs">jobs</a> <a href="http://del.icio.us/zanshin/wordpress">wordpress</a>)</div>
+	</li>
+</ul>

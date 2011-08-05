@@ -1,0 +1,43 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-01-04
+date: 2008-1-4
+categories: links
+---
+<ul class="delicious">
+	<li>
+		<div class="delicious-link"><a href="http://www.douglaskarr.com/2007/02/03/more-delicious-fun/">How to Post Del.icio.us Links Directly to WordPress | The Marketing Technology Blog</a></div>
+		<div class="delicious-extended">How I got this to appear here.</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/blogging">blogging</a> <a href="http://del.icio.us/zanshin/wordpress">wordpress</a> <a href="http://del.icio.us/zanshin/del.icio.us">del.icio.us</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://www.republicoftea.com/templates/detail.asp?navID=1754">The REPUBLIC of TEA - Exquisite Green Tea, Red Tea, White Tea, Black Tea, Oolong Tea and More.</a></div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/tea">tea</a> <a href="http://del.icio.us/zanshin/mugs">mugs</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://www.simpleweather.com/">Local Weather conditions and weather forecasts for US and international weather - SimpleWeather.com</a></div>
+		<div class="delicious-extended">Excellent weather site</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/weather">weather</a> <a href="http://del.icio.us/zanshin/tools">tools</a> <a href="http://del.icio.us/zanshin/simple">simple</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://www.flickr.com/help/guestpass/">Flickr: Help: Guest Pass</a></div>
+		<div class="delicious-extended">From the I-Did-Not-Know-This Department</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/flickr">flickr</a> <a href="http://del.icio.us/zanshin/photos">photos</a> <a href="http://del.icio.us/zanshin/howto">howto</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://www.thinkgeek.com/stuff/41/snuznluz.shtml">ThinkGeek :: SnūzNLūz - Wifi Donation Alarm Clock</a></div>
+		<div class="delicious-extended">Hit the snooze button to donate money.</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/funny">funny</a> <a href="http://del.icio.us/zanshin/gadgets">gadgets</a> <a href="http://del.icio.us/zanshin/clock">clock</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://www.motionmountain.net/">Motion Mountain - The Adventure of Physics : The Free Physics Textbook</a></div>
+		<div class="delicious-extended">Why wasn't my physics textbook like this?</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/physics">physics</a> <a href="http://del.icio.us/zanshin/science">science</a> <a href="http://del.icio.us/zanshin/free">free</a> <a href="http://del.icio.us/zanshin/books">books</a> <a href="http://del.icio.us/zanshin/e-learning">e-learning</a> <a href="http://del.icio.us/zanshin/eBook">eBook</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://www.viemu.com/a-why-vi-vim.html">Why, oh WHY, do those #?@! nutheads use vi?</a></div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/vi">vi</a> <a href="http://del.icio.us/zanshin/editor">editor</a> <a href="http://del.icio.us/zanshin/software">software</a> <a href="http://del.icio.us/zanshin/ide">ide</a>)</div>
+	</li>
+</ul>

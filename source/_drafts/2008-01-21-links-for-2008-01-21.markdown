@@ -1,0 +1,14 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-01-21
+date: 2008-1-21
+categories: links
+---
+<ul class="delicious">
+	<li>
+		<div class="delicious-link"><a href="http://www.embedded.com/columns/technicalinsights/205604461?printable=true">Embedded Systems Design - Embedded.com</a></div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/development">development</a> <a href="http://del.icio.us/zanshin/programming">programming</a> <a href="http://del.icio.us/zanshin/statistics">statistics</a> <a href="http://del.icio.us/zanshin/loc">loc</a>)</div>
+	</li>
+</ul>

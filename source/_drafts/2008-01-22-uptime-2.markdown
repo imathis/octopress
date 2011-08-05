@@ -1,0 +1,17 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Uptime
+date: 2008-1-22
+categories: life
+---
+The uptime command, in the UNIX world, displays how long a particular machine has been "up" or running.  Recently I have been applying that term to my daily lower back exercises.  After reading a getting things done article that talked about Jerry Seinfeld, I have been working on better uptime for my exercises.
+
+I'll explain.
+
+Jerry said he gets things done by getting a large year-at-a-glance calendar, and by putting a mark on each consecutive day he works on new material.  He said that seeing a continuous string of marks is a powerful motivator for not breaking the chain.  When I first read this I thought to myself, "it is so simple it would probably work."
+
+I weigh myself every day, and record the weight on a chart on our bureau in the bedroom.  At night I do my exercises in that room, and I've started putting a little plus sign next to the date on my chart, to indicate a successful completion of my exercises for the day.  A chain of one or two pluses is easy to break.  Longer chains are much harder to ignore.
+
+Presently I'm at 16 days in a row.  Knowing that a miss now would mean starting all over again at 1 is a surprisingly powerful motivator.  To use the UNIX term, I've got a 16 day uptime.

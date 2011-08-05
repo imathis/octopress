@@ -1,0 +1,19 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: 3D Vision
+date: 2006-4-6
+categories: life
+---
+Now that I have eyes that see at two non-intersecting focal lengths I've discovered a neat (if strange) visual trick. Those of you without mono-vision will just have to image the effect. For the rest of you here's how to see your very own 3D images without the colored paper glasses.
+
+1. Put your hand in front of the distance eye.
+2. Stare at the hand and allow your focus to become fixed (i.e., staring at nothing)
+3. The hand will appear to be a 3D image superimposed on the back ground.
+
+Cool. Strange, but cool.
+
+What I think is happening is that my brain is seeing both the in focus background from the distance eye, and the in focus hand from the near eye and overlaying the two images. When I was a child I was fascinated by an optical illusion using a cardboard paper towel or toilet paper tube. Put the tube in front of one eye and your hand against the tube, in front of the other eye. With both eyes open it will appear like there is a hole in your hand. Your brain is overlaying the two images.
+
+My little 3D trick is like that, only without the tube.

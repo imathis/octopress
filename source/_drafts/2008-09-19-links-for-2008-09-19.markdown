@@ -1,0 +1,17 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-09-19
+date: 2008-9-19
+categories: social issues
+---
+<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.25hoursaday.com/weblog/2008/09/19/TheProblemWithEveryImplementationOfAForgotYourPasswordFeatureIveSeenOnline.aspx">Dare Obasanjo aka Carnage4Life - The Problem with Every Implementation of a &quot;Forgot Your Password?&quot; Feature I&#039;ve Seen Online</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/security">security</a> <a href="http://delicious.com/zanshin/palin">palin</a> <a href="http://delicious.com/zanshin/password">password</a> <a href="http://delicious.com/zanshin/hacking">hacking</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://bits.blogs.nytimes.com/2008/09/18/how-wall-streets-quants-lied-to-their-computers/">How Wall Street Lied to Its Computers - Bits Blog - NYTimes.com</a></div>
+                <div class="delicious-extended">Reminds me of the first computer acronym I learned: GIGO.  Garbage In, Garbage Out</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/wsj">wsj</a> <a href="http://delicious.com/zanshin/toread">toread</a> <a href="http://delicious.com/zanshin/business">business</a> <a href="http://delicious.com/zanshin/economics">economics</a> <a href="http://delicious.com/zanshin/economy">economy</a> <a href="http://delicious.com/zanshin/risk">risk</a> <a href="http://delicious.com/zanshin/news">news</a>)</div>
+            </li></ul>

@@ -1,0 +1,17 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: links for 2008-08-22
+date: 2008-8-22
+categories: social issues
+---
+<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.wired.com/politics/security/commentary/securitymatters/2006/05/70886">The Eternal Value of Privacy</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/toread">toread</a> <a href="http://delicious.com/zanshin/security">security</a> <a href="http://delicious.com/zanshin/privacy">privacy</a> <a href="http://delicious.com/zanshin/surveillance">surveillance</a> <a href="http://delicious.com/zanshin/freedom">freedom</a> <a href="http://delicious.com/zanshin/identity">identity</a> <a href="http://delicious.com/zanshin/schneier">schneier</a> <a href="http://delicious.com/zanshin/society">society</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://kk.org/kk/2008/08/very-longterm-backup.php">Long Term backup</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/toread">toread</a> <a href="http://delicious.com/zanshin/interesting">interesting</a> <a href="http://delicious.com/zanshin/history">history</a> <a href="http://delicious.com/zanshin/technology">technology</a> <a href="http://delicious.com/zanshin/storage">storage</a> <a href="http://delicious.com/zanshin/backup">backup</a> <a href="http://delicious.com/zanshin/kevinkelly">kevinkelly</a>)</div>
+            </li></ul>

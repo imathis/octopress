@@ -1,0 +1,9 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Don't Blame Me
+date: 2004-11-2
+categories: life
+---
+I voted for John Kerry.

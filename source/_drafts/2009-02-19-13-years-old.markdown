@@ -1,0 +1,11 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: 13 Years Old
+date: 2009-2-19
+categories: life
+---
+Zanshin.net will be thirteen years old tomorrow. I know that when I first got the domain I never imagined I would still be actively hosting a web site more than a decade later. The oldest blog postings go back to December 1999, so I've been archiving my life for almost a decade here.
+
+Happy Birthday, Zanshin, and many happy returns.

@@ -1,0 +1,13 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Meebo
+date: 2006-11-6
+categories: nerdliness
+---
+I've been a regular user of instant message chat since ICQ first became available (my ICQ id has only 6 digits). With AOL, MSN, Yahoo!, and now Google all offering semi-proprietary chat clients I have accounts on each service. Running five different chat clients is cumbersome and somehow not elegant.
+
+For years, when I was primarily using Windows on my personal machines and at work, I used <a href="http://www.ceruleanstudios.com/" title="Trillian">Trillian</a> as an all-in-one solution to multiple chat services. Upon switching to Apple and the Mac OS nearly four years ago, I started hunting around for a multi-protocol client once again. At first I was using <a href="http://www.proteusx.org/" title="Proteus">Proteus</a>, but I soon switched to <a href="http://adiumx.com" title="Adium">Adium</a>.
+
+Changing employment engagements to a client with restricted Internet access, I once again needed a new solution. Enter <a href="http://www.meebo.com" title="Meebo">Meebo</a>. A web-based multi-protocol chat client, meebo has rapidly replaced all my other clients, regardless of operating system. I get the same look and feel on any machine, on any OS. Better still, using the "load page in sidebar" feature of Firefox, I can have <a href="http://www.meebo.com" title="Meebo">Meebo</a> up an running along side my regular browsing - I don't even have to switch to a new window or tab to continue a converstation. Each new release of <a href="http://www.meebo.com" title="Meebo">Meebo</a> brings more desktop client features to the mix as well. If you haven't tried it yet, and you are a fan of more than one chat service, I high recommend <a href="http://www.meebo.com" title="Meebo">Meebo</a>.

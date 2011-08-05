@@ -1,0 +1,9 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Clever
+date: 2004-1-30
+categories: nerdliness
+---
+For those of you who are aware of, or follow, the whole SCO/Linux mess, <a href="http://www.linuxstolescocode.com/" title="Linux Stole SCO Code">Cannot find Stolen SCO Code in Linux</a> will provide a chuckle.

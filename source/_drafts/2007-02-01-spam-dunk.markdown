@@ -1,0 +1,13 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Spam Dunk
+date: 2007-2-1
+categories: life
+---
+In the last couple of weeks the amount of trackback spam my site has been subject to has skyrocketed. In all the time I've been using MoveableType to manage the site I've only had a handful of trackback pings that were spam. In the last ten days I've had hundreds at a time.
+
+Not wanting to open every single entry to undo the 'allow trackback pings' option I did an end run around the bastards. Since I don't display the pings, and since I don't want them at all anymore (no one has ever legitimately linked to me via the mechanism) I simply renamed the CGI script. Now the script-kiddies mindless robot code no longer sees my site as vulnerable.
+
+I'll wait a few days before I relax my vigilance, but I think this ultimate measure will end the problem once and for all. I just wish I'd thought of it sooner.

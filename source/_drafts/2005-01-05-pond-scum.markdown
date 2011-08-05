@@ -1,0 +1,17 @@
+--- 
+layout: post
+author: Mark
+comments: "false"
+title: Pond Scum
+date: 2005-1-5
+categories: life
+---
+Recently I added a beefed up <a href="http://www.zanshin.net/blogs/000525.html" title="htaccess">htaccess</a> file to my site to give me another tool to fight the pond scum defacing it with referer spam. Initially it was a few lines of code borrowed from examples I found.
+
+In less than a month it has grown significantly. There are over 100 Rewrite conditions to display a "403 Forbidden" error page to bogus referer attempts. And there are 40 odd IP addresses that are banned explicitly.
+
+I realize that fighting spam is for all intents and purposes a losing battle. The pond scum spewing forth the spam have automated tools and no conscience. For them it isn't a personal thing; that the script they downloaded effectively visits their electronic graffiti on my site has nothing to do with me. Still it offends me that my bandwidth (and therefore my money) is being used to promote their filth. I expect that my htaccess file will continue to grow.
+
+I could take down the referer pages altogether, but that would deprive me of the ego stroking I get from seeing the counters grow everyday. It would also feel like giving up to the bullies that are abusing my pages.
+
+And it gives me something to joust at; a windmill to tilt.
