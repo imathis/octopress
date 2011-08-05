@@ -33,6 +33,7 @@ task :install, :theme do |t, args|
   cp_r "#{themes_dir}/#{theme}/sass/.", "sass"
   mkdir_p "#{source_dir}/#{posts_dir}"
   mkdir_p public_dir
+  mkdir_p "#{source_dir}/plugins"
 end
 
 #######################
