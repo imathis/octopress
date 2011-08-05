@@ -1,5 +1,17 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
 
+// use my preferred fonts
+.heading { font-family: "Caudex", "Georgia", "Helvetica Neue", Arial, sans-serif; }
+.sans { font-family: "Muli", "Helvetica Neue", Arial, sans-serif; }
+.serif { font-family: "Caudex", Georgia, Times, "Times New Roman", serif; }
+
+// use the sans variety for the body of the page
+body {
+  line-height: 1.5em;
+  color: $text-color;
+  @extend .sans;
+}
+
 // let's have a background image in the header
-#headerimage { background-image: image_url("shoreline.png"); background-position: -55px 0; height: 306px; }
+hgroup { background-image: image_url("shoreline.png"); background-position: -55px 0; height: 306px; }
