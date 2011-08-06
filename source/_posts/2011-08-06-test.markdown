@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Test"
+date: 2011-08-06 14:09
+comments: true
+categories: 
+link: true
+---
+[Example](http://example.com "Example") &rarr;  
+This is an example of a link.
