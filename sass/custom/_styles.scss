@@ -7,11 +7,10 @@
 .serif { font-family: "Caudex", Georgia, Times, "Times New Roman", serif; }
 
 // use the sans variety for the body of the page
-body {
-  line-height: 1.5em;
-  color: $text-color;
-  @extend .sans;
-}
+body { @extend .sans; }
 
 // let's have a background image in the header
-hgroup { background-image: image_url("shoreline.png"); background-position: -55px 0; height: 306px; }
+body > header { padding: 0; background-image: image_url("shoreline.png"); background-position: 0 0; height: 191px; }
+
+// set a better color to contrast with the header image
+// body > header h1, h2 { color: #000 }
