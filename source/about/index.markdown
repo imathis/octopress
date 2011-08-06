@@ -6,11 +6,13 @@ comments: false
 sharing: true
 footer: true
 ---
+Hello, and welcome. My name is Mark Nichols, and [zanshin.net](http://zanshin.net "zanshin.net") has been my online home since 1996. I live in Manhattan Kansas with my wife, [Sibylle](http://sibyllekuder.com "Elfenbein Klaviermusik"), our cats, Taz and Bootstrap, a pair of seven foot Kawai grand pianos, a [violoncello](http://cello.zanshin.net "Solfège"), and numerous computers. I've been a nerd since before being a nerd was popular.
+
 I was born in Brooklyn, New York and raised in Decatur, Illinois. I have a Bachelor’s Degree from Illinois State University in Applied Computer Science, and I work as the Integration Services Coordinator for the [Office of Mediated Education](http://www.ksu.edu/ome "Office of Mediated Education") at [Kansas State University](http://www.ksu.edu "Kansas State University") in Manhattan Kansas. Previously I have lived and worked in Illinois, Indiana, Washington, and South Carolina.
 
-I am married as a result of using eHarmony. [Sibylle](http://sibyllekuder.com "Elfenbein Klaviermusik") and I are exploring the world as partners, lovers, companions, best friends, and now husband and wife. We are finding that two lives shared are truly greater than the sum of the individuals involved.
+Sibylle and I met and married as a result of using eHarmony. We are exploring the world as partners, lovers, companions, best friends, and husband and wife, and are finding that two lives shared are truly greater than the sum of the individuals involved. Together we share a WordPress.com site, called [Sibylle and Mark](http://sibylleandmark.wordpress.com "Sibylle and Mark"). 
 
-I have been writing online since 1999, and have had this site since 1996. Sibylle and I share a WordPress.com site, called [Sibylle and Mark](http://sibylleandmark.wordpress.com "Sibylle and Mark"). [Solfège](http://cello.zanshin.net "solfege") is my blog about learning to play the violoncello. 
+[Solfège](http://cello.zanshin.net "solfege") is my blog about learning to play the violoncello. 
 
 I have:
 
