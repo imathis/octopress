@@ -3,8 +3,7 @@ layout: post
 title: "Fully Baked"
 date: 2011-07-31 21:33
 comments: true
-categories: 
-author: Mark
+categories: "this site"
 ---
 For some time now I have been less enthusiastic about using WordPress for my primary website. WordPress is fantastic; it does an amazing job of making blogging easy, and it was a good follow on to the MoveableType system I had before. However I want to fiddle with the bits and bytes more, and I'm not at all interested in learning PHP or the template system.
 
