@@ -1,0 +1,20 @@
+{% unless page.no_header %}
+  <header>
+    {% if index %}
+      <h1 class="link-title"><a href="{{ root_url }}{{ post.url }}">{{ post.title | titlecase }}</a></h1>
+    {% else %}
+      <h1 class="link-title">{{ page.title | titlecase }}</h1>
+    {% endif %}
+    {% unless page.meta == false %}
+      <p class="meta">{% include post/date.html %}</p>
+    {% endunless %}
+  </header>
+{% endunless %}
+{% if index %}
+  <div class="link-content">{{ content | excerpt }}</div>
+  <footer>
+    <a rel="full-article" href="{{ root_url }}{{ post.url }}">Permanent link &rarr;</a>
+  </footer>
+{% else %}
+<div class="link-content">{{ content }}</div>
+{% endif %}
