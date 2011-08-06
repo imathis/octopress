@@ -1,0 +1,4 @@
+RewriteEngine On
+ RewriteCond %{HTTP_REFERER} !^$
+ RewriteCond %{HTTP_REFERER} !^http://(www.)?zanshin.net(/)?.*$ [NC]
+ RewriteRule .*.(gif|jpg|jpeg|png)$ - [F,NC]
