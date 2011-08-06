@@ -13,4 +13,4 @@ body { @extend .sans; }
 body > header { padding: 0; background-image: image_url("shoreline.png"); background-position: 0 0; height: 191px; }
 
 // set a better color to contrast with the header image
-// body > header h1, h2 { color: #000 }
+body > header h1 > a { color: crimson }
