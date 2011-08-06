@@ -3,7 +3,7 @@ layout: post
 title: "Test"
 date: 2011-08-06 14:09
 comments: true
-categories: 
+categories: link
 link: true
 ---
 [Example](http://example.com "Example") &rarr;  

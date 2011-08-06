@@ -3,7 +3,7 @@ layout: post
 title: "Google"
 date: 2011-08-06 14:08
 comments: true
-categories: 
+categories: link
 link: true
 ---
 [Google](http://google.com "Google") &rarr;  
