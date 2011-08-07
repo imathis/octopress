@@ -1,0 +1,11 @@
+--- 
+layout: post
+comments: false
+title: Ranking
+date: 2004-8-29
+link: false
+categories: nerdliness
+---
+In the past few days I have been setting up and configuring a new statistics page for zanshin.net from <a href="http://shortstat.shauninman.com/" title="Shaun Inman">Shaun Inman</a>. In the course of testing the page I had occasion to visit several of the larger search engines to search for myself. On <a href="http://a9.com" title="Amazon's a9">a9.com</a>, <a href="http://altavista.com" title="altavista.com">altavista.com</a>, <a href="http://lycos.com" title="lycos.com">lycos.com</a>, <a href="http://alltheweb.com" title="alltheweb.com">alltheweb.com</a>, and of course <a href="http://google.com" title="google.com">google.com</a>, putting in "mark nichols" results in zanshin.net being listed as the first site, or first non-sponsored site.
+
+I'm just saying.

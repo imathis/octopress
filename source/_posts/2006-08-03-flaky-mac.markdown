@@ -1,0 +1,17 @@
+--- 
+layout: post
+comments: false
+title: Flaky Mac
+date: 2006-8-3
+link: false
+categories: life
+---
+About a week or so ago the wireless connection to the iMac computer started acting flaky. It has never made the connection on its own after being restarted or rebooted. I always have to click the WiFi icon and select my network to get it started. Once connected though, it was always rock solid.
+
+Lately it only stays connected for a few minutes, and it is never connected after being woken up from sleep. Clicking on the WiFi icon reveals no connection information at all. I've been able to memorize my 26-character hex key simply due to repeatedly having to enter it. Both of the other wirelessly connected computers (and the Tivo for that matter) are working fine.
+
+Since my Macintoshes are now nearly four years old, they only support the original Airport card from Apple. The one that isn't MADE anymore. The Airport card that is currently in the iMac was purchased on eBay for the low, low price of $135. Roughly double the LIST price when Apple was selling them. Supply and demand sucks when the supply is finite.
+
+(Note... the blasted connection has dropped again. I'll have to copy this to the clip board and post it later when the computer is online again.)
+
+So I went back to eBay and ordered another Airport card (this time only $90!) and I am hoping that it solves the problem. If it doesn't I'll either have to go downtown and stump the Geniuses at the Apple store, or rearrange the apartment to put the iMac where an Ethernet cord can reach it from the router.

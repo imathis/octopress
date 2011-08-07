@@ -1,0 +1,15 @@
+--- 
+layout: post
+comments: false
+title: 30,000+
+date: 2005-3-19
+link: false
+categories: nerdliness
+---
+My statistics page tells me that <a href="zanshin.net" title="Zanshin.net">zanshin.net</a> has been viewed just over 30,000 times since late September. I'm averaging about 5,000 page views a month.
+
+That's pretty cool.
+
+What it doesn't account for is the number of "page views" that are the result of referrer spambots. Even using the "rel=nofollow" tag convention subscribed to by all the major search engines hasn't slowed the steady attempts to use my site for their slimy purposes.
+
+Still 30,000 page views is 30,000 page views.

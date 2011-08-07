@@ -1,0 +1,9 @@
+--- 
+layout: post
+comments: false
+title: Word Nerd
+date: 2006-12-6
+link: false
+categories: elsewhere
+---
+<a href="http://wordie.org" title="Wordie">Wordie</a> is like <a href="http:/flickr.com" title="Flickr">Flickr</a> for words, but without pictures. Or at least that's the tag line on their home page. As I grow older I am more and more fascinated by language and the hidden intracacies of words. My humble <a href="http://wordie.org/people/zanshin" title="my words">list</a> is presented for your consideration.

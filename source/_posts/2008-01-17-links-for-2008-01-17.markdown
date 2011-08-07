@@ -1,0 +1,24 @@
+--- 
+layout: post
+comments: false
+title: links for 2008-01-17
+date: 2008-1-17
+link: true
+categories: links
+---
+<ul class="delicious">
+	<li>
+		<div class="delicious-link"><a href="http://www.onedigitallife.com/2008/01/16/90-minute-macworld-keynote-in-60-seconds/">one digital life  » Blog Archive   » 90 Minute Macworld Keynote in 60 Seconds</a></div>
+		<div class="delicious-extended">Better and better and better</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/humor">humor</a> <a href="http://del.icio.us/zanshin/macintosh">macintosh</a> <a href="http://del.icio.us/zanshin/jobs">jobs</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://kb.iu.edu/data/abnd.html">In Unix, what do some obscurely named commands stand for? - Knowledge Base</a></div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/unix">unix</a> <a href="http://del.icio.us/zanshin/linux">linux</a> <a href="http://del.icio.us/zanshin/reference">reference</a> <a href="http://del.icio.us/zanshin/trivia">trivia</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://idlewords.com/2008/01/the_second_world.htm">The Second World</a></div>
+		<div class="delicious-extended">Finally, a working definition of the Second World.</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/sociology">sociology</a> <a href="http://del.icio.us/zanshin/toread">toread</a> <a href="http://del.icio.us/zanshin/travel">travel</a>)</div>
+	</li>
+</ul>

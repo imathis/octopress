@@ -1,0 +1,16 @@
+--- 
+layout: post
+comments: false
+title: OSx86
+date: 2005-8-16
+link: false
+categories: life
+---
+Forget running Mac OS X on any old Intel processor. I managed to sneak into Apple's R&amp;D Lab and make off with a soon to be released G5 Powerbook!
+
+See:
+<img src="http://zanshin.net/images/4GHz.jpg" />
+
+Actually I followed <a href="http://www.macosxhints.com/article.php?story=20050809204632497" title="Easily Change Mac OS X CPU Type">this</a> Mac OS X Hint.
+
+Kinda makes you wonder about the veracity of all these Mac OS X running on x86 machines, doesn't it.

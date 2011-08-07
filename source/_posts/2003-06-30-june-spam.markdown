@@ -1,0 +1,15 @@
+--- 
+layout: post
+comments: false
+title: June Spam
+date: 2003-6-30
+link: false
+categories: nerdliness
+---
+In a previous version of this site I used to have a counter showing the number of spam I'd received since January 1st each year. I grew tired of having to update it every few days and took it off the menu on this site design.
+
+However, I am still keeping track of my inbox, and I am getting spam in record numbers. In the 30 days of June I got 5,859 pieces of mail I consider spam. This brings my yearly total for 2003 to 31,859.
+
+I'm averaging 5309 spams a month, or 176 spams a day this year. In 2002 I only received 25,569 spams total, or an average of 2,130 spams per month and 70 per day.
+
+It seems to me that the number I get jumps to a new level every so often. I've been holding steady at the 170 mark for a while now. I expect that to increase to 240-250 any day now. I'm not sure what causes the sudden increase, but I am aware of it when it happens.

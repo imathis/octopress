@@ -1,0 +1,13 @@
+--- 
+layout: post
+comments: false
+title: 8,400,000,000 Miles To Home
+date: 2003-11-5
+link: false
+categories: nerdliness
+---
+<a href="http://www.cnn.com">CNN</a> is <a href="http://www.cnn.com/2003/TECH/space/11/05/voyager.solar.boundary.ap/index.html">reporting</a> that Voyager 1 has left the solar system.
+
+Well not completely. But it is believed to be in the region of the <a href="http://en.wikipedia.org/wiki/Heliopause"><i>heliopause</i></a>. With another 17 years or so of power on-board scientists should get a chance to discover what's out there.
+
+Can you imagine that a man made object is now traveling at 1,000,000 miles per day and is 90 times farther away from us than the sun? Incredible.

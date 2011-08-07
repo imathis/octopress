@@ -1,0 +1,11 @@
+--- 
+layout: post
+comments: false
+title: Aelios
+date: 2011-5-23
+link: true
+categories: links
+---
+<a title="Aelious Weather application" href="http://aeliosapp.com/">Aelious Weather App</a> →<br />
+
+This is simply one of the most beautiful applications I've ever seen. It is only the second iPad application I've bought in six months of iPad use. Interfaces like this one (watch the video on their site) will change the way we use computers. Simply stunning.

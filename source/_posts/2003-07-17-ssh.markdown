@@ -1,0 +1,46 @@
+--- 
+layout: post
+comments: false
+title: ssh!
+date: 2003-7-17
+link: false
+categories: nerdliness
+---
+Recently I have been experimenting with <strong>ssh</strong> and <strong>port forwarding</strong>. Many people today have access to the internet while they are at work. This access usually comes at the price of privacy. The data packets that comprise their activities, be they web surfing or instant message chatting, are monitored and tracked. More than a few companies aggressively pursue violations of whatever access policy is in place.
+
+While I am not trying to escape the boundaries placed on my access at my current engagement, I am interested in keeping my business private. A friend of mine, JJ, showed me how.
+
+<strong>ssh</strong>, or secure shell is a tool at allows you to access a remote server over an encrypted connection. Someone monitoring the connection will know it exists but in all likelihood they won't be able to read the actual data passing over the connection as it will be encrypted. Just using ssh is not terribly hard or exciting. Command line access is useful and very powerful, but rarely sexy.
+
+<strong>Port forwarding</strong> is a feature of ssh. Using port forwarding it is possible to map ports on your machine to those of another, remote machine. In my case, I wanted to map to the web proxy ports of a machine that sits outside the firewall (and therefore beyond control) of my client. Once the mapping was established I would be able to use the internet just as before, only  now my activities would be masked by encryption, and it would appear as if I had just visited a single site, that of the remote server.
+
+Here is what I had to do to accomplish this admittedly nerdy goal:
+Since my laptop isn't running the necessary client software to login to the client's network I first had to establish a connection to a machine that was authenticated to the network. In this case that connected machine is running Windows NT 4.0 Workstation. I downloaded and installed an open ssh server for NT, on my NT workstation. This allowed me to open port 22 to ssh connections.
+
+Next I downloaded and installed SSH Tunnel Manager, a Mac OS X ssh and port forwarding client, much like puTTY for Windows. Configuring a connection to my NT server consisted of entering my NT domain user ID, and the IP address of my NT workstation. Once I established that connections could be made I moved onto created a tunnel, mapping the local (laptop) port 8080 to localhost:8080 on the remote (NT) machine. While this may seem counter-intuitive at first it makes sense when you look closely. Once the ssh <i>connection</i> is made to the remote server, the tunnel needs to access localhost. This really means 127.0.0.1 on the <i>remote</i> machine. As a command line this would look like this:
+
+<strong>ssh -l userid -L8080:localhost:8080 192.168.85.76</strong>
+
+In other words, securely connect to some remote host (192.168.85.76) as useid, and create a port forwarding from port 8080 here, to port 8080 there (-L8080:localhost:8080).
+
+At this point I have a secure, encrypted connection between my laptop and my NT server, and a port forwarding tunnel through this connection that maps any request on my laptop for port 8080 to port 8080 on the remote server. My laptop can now 'see' a machine on the in-house network at my client.
+
+Next I downloaded and installed <strong>puTTY</strong>, a secure shell and port forwarding utility for Windows NT, on my NT workstation. This time the connection would be from NT to a Linux server outside the firewall. <i>That</i> machine in turn has a connection to the internet and allows secure connections to a proxy server called <strong>squid</strong>. This time I mapped my NT machine's port 8080 to the Linux machine's port 3128 ~ the port exposed by the squid proxy server.
+
+Again, the command line would look something like:
+
+<strong>ssh -l userid -L8080:localhost:3128 www.remotehost.com</strong>
+
+Now I have two connections.
+
+The first is between a Powerbook running Mac OS X (10.2.6) and a Dell Optiplex running Windows NT 4.0, and a secure shell server (opensshd). This connection is made via ssh and includes a port forward from 8080 on the Powerbook to port 8080 on the NT machine.
+
+The second connection is between the Dell, running NT 4.0 and a generic PC running Red Hat Linux 8.0. This connection is made via ssh and includes a port forward from local port 8080 to the exposed squid proxy port, 3128.
+
+Changing my proxy information in the Network panel of System Preferences to map all HTTP and Secure Web requests to localhost:8080 I am now able to access the Internet via this daisy chain connection. All inter-machine communication is encrypted.
+
+There are some difficulties. Imagine that! Several of my favorite daily applications, namely the chat clients, want to use a HTTPS proxy. Currently the remote Linux server that is my target doesn't have an open HTTPS port for me to forward requests through. Any https request that can travel through the HTTP port works fine, but those that want a HTTPS connection don't.
+
+Was all this worth the time and effort? As a learning exercise most definitely. My understanding of proxies and secure shell is vastly increased. As a practical day-to-day thing, not really. However, I am now going to set up a Linux machine in my home, and equip it to act as my remote host. This will give me access to my home network over a secure connection, from anywhere I can plug in my laptop.
+
+<strong>Update:</strong> I have written a new piece on ssh over <a href="http://www.zanshin.net/blogs/000290.html">here</a>.

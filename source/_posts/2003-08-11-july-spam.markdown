@@ -1,0 +1,13 @@
+--- 
+layout: post
+comments: false
+title: July Spam
+date: 2003-8-11
+link: false
+categories: nerdliness
+---
+I finally got around to deleting my accumulated spam from the month of July. Last month I did this on the 1st, and a few more pieces dated in June trickled in after the purge.
+
+I received 5,924 pieces of mail I consider to be spam in July. That's an average of 191 spams a day. At this rate I'll get on the order of 69,750 spams for the year.
+
+My current total for the year is 37,785 spams. If I only had a nickel for everyone...

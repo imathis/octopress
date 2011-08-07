@@ -1,0 +1,24 @@
+--- 
+layout: post
+comments: false
+title: Sigh...
+date: 2007-3-23
+link: false
+categories: elsewhere
+---
+<div style="float: right; margin-left: 10px; margin-bottom: 10px;">
+<a href="http://www.flickr.com/photos/simplebitsdan/429265591/" title="photo sharing"><img src="http://farm1.static.flickr.com/158/429265591_95b06804a4_m.jpg" alt="" style="border: solid 2px #000000;" /></a>
+<br />
+<span style="font-size: 0.9em; margin-top: 0px;">
+<a href="http://www.flickr.com/photos/simplebitsdan/429265591/">Sigh...</a>
+<br />
+Originally uploaded by <a href="http://www.flickr.com/people/simplebitsdan/">simplebitsdan</a>.
+</span>
+</div>
+<p>
+An absolutely fascinating thread about intellectual property rights, copyrights, trademarks, and theft of design work can be found over on Flickr. <br />
+<br />
+What started as a well-known and respected designer posting a screen capture of a thinly disguised copy of his logo being sold by another site has evolved into a huge thread about copyrights and intellectual property. It is well worth a (lengthy) read. The 43000 (and climbing) view count in just a couple of days shows just how powerful the Internet can be at leveling the playing field. <br />
+<br />
+Click on the image to join in the discourse.
+<br clear="all" /></p>

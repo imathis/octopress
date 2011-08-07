@@ -1,0 +1,17 @@
+--- 
+layout: post
+comments: false
+title: Culled
+date: 2007-7-6
+link: false
+categories: nerdliness
+---
+For the past several years I've been actively reading numerous blogs on a near daily basis.  At first it was just a handful of sites that I liked for one reason or another.  Over time links these sites had led me to other sites, and so on.  Being moderately organized I keep all the blog URL in a folder on my Bookmarks bar in Firefox so when I want to see what everyone has to say I can just right-click and select "Open All in Tabs."
+
+Unfortunately the list has grown and grown until there are some 220 entries in the blogs folder.  Firefox is capable of opening all of these sites more or less simultaneously.  Selecting "Open All in Tabs" results in 100% processor use and a jump in memory allocated but it does eventually work.  Trying to consume 220 sites, however, doesn't work.  Not all of them change on a daily basis, and trying to find the new signal amongst all the unchanged noise made the experience less and less enjoyable.
+
+(Yes, I know about RSS and have at various times employed a RSS reader.  However, I much prefer to read a site as formated for the web.  As much as I enjoy the content I enjoy the look and feel a site employs.)
+
+In an effort to make my daily read list more manageable I went through all 220 sites yesterday and culled out the ones I really like.  Sites that hadn't been updated in the past six months were left behind, as were those that no longer scratched the aesthetic itch that originally caused them to be included in my list.  In the end I reduced the list to a mere 75 sites.  The full list still has it's folder, and once in a while I'll load it just to see if any of the "b-side" sites merit a return to the "a-list."
+
+You can see my "a-list," and all my other bookmarks over on <a href="http://del.icio.us" title="del.icio.us">del.icio.us</a>; at <a href="http://del.icio.us/zanshin" title="my del.icio.us links">my del.icio.us</a>.

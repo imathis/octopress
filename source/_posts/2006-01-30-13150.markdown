@@ -1,0 +1,33 @@
+--- 
+layout: post
+comments: false
+title: $13,150
+date: 2006-1-30
+link: false
+categories: nerdliness
+---
+The first home computer I ever owed was a Laser 128; a clone of the venerable Apple II. I don't remember doing much with this machine, although I am sure I did use it. My parents gave it to me as a gift one year for Christmas in the late 1980s. Since that time I have purchased eight computers of my own, totally roughly $13,150.
+
+#1 - Gateway 486SX/33
+I believe this machine cost around $3000 in 1993 when I bought it. Not only did I save up for months to buy it, I built a wooden teachers style desk to place it upon. It had a 170MB (yes megabyte) hard drive and 4 MB of RAM. I later added a modem and upgraded the hard drive to 400 MB. While it came with Windows 3.1 I promptly wiped the hard drive and installed IBM OS/2 2.1 as that was the OS I was using at work at the time.
+
+#2 - Gateway P5-90
+The second computer I bought had a gigabyte hard drive and 16 MB of RAM. I still have this computer, and it still runs, albeit slowly. The RAM has been pushed to 48 MB, and a second hard drive of 6 GB capacity was added also.
+
+#3 - ASUS 600 MHz Celeron
+The next computer I owed was one I built myself using parts from MWave and directions from my buddies at work. Totaling about $800 in parts this machine was a huge step up in power and performace for me. It had a 600 MHz Celeron processor, 512 MB of RAM, 32MB video RAM, Ethernet, and a 20 GB hard drive. Later I would transfer the guts of this machine to a new purple case for Michele to use as her primary computer.
+
+#4 - ThinkPad 380ED
+The first laptop I owned was acquired by being in the right place at the right time. The company I was working for at the time had written the machine off after it quit working following a bath in spilled Coke. The IBM service tech indicated a new system board would be required at $1100 so the company wrote it off and was going to throw it away. I took it home and discovered it booted perfectly off a floppy - the system board was fine; only the hard drive was gummed up. $90 for a new 3GB hard drive it was working perfectly again. Michele used this 166MHz MMX machine with 80 MB of RAM for several years as her primary computer.
+
+#5 - ASUS 1GZ Celeron
+Deciding to build a second computer, I build a 1GHz, 512MB RAM, 30GB hard drive machine and gave the 600 MHz machine to Michele. The 600 MHZ machine, which had been quite noisy in my metal case was dead quiet in her new purple plastic case. The new 1GHz machine cost about $600, and was even nosier in the metal case. Go figure.
+
+#6 - 17" iMac G4
+#7 - 15.2" Powerbook G4
+After months of talking about it and exploring the demo machines at the local Apple reseller I was ready to switch to Macintosh. Repeated virus problem with Michele's machine and her dawning understanding the the Mac wouldn't suffer the same problems convinced her to switch as well. So three years ago this month we bought two Apples on the same day. Hers was a 17" iMac G4 with an 800MHz PPC processor, 256 MB RAM, a DVD/CD burner, and 80 GB of hard drive. My Powerbook had an 867 MHz processor, 256 MB of RAM and a 40GB hard drive. Both machines have been upgraded to 768 MB of RAM, and I replaced the 40 GB laptop drive with a new 100GB drive this past fall. The total for these two machines was about $4100.
+
+#8 - Lenovo ThinkPad Z60m
+Sitting at the freight terminal in Lenexa KS (about 5 miles from my apartment) is my newest computer, a 1.86 GHz, 512MB RAM, 80GB hard drive laptop with a DVD/CD burner. The machine made it from China to Kansas in less than 24 hours, and has been sitting just out of my reach for the past 48 hours or so. I've already ordered aftermarket memory for it; I'll replace the 512 with 2 1GB arrays giving it 2 GB total. Thanks to working with several IBMers I was able to order this machine at a 20% discount through the Employee Friends and Family purchase program for a low $1350.
+
+This will give me a total of seven working computers at home, plus two Tivos (a Series 1 and a Series 2) and a Palm m515. Yes, that's right, ten working computers in one apartment. Overkill? Perhaps. But never dull.

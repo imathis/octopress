@@ -1,0 +1,15 @@
+--- 
+layout: post
+comments: false
+title: Apollo 8
+date: "2008-12-24"
+link: false
+categories: life
+---
+Forty years ago today, Apollo 8 was circling the Moon.  This iconic picture was taken.  The first Earthrise viewed by humans.
+
+ 
+
+[caption id="" align="aligncenter" width="400" caption="NASA Apollo 8, December 24, 1968"]<img title="Earth Rise" src="http://zanshin.net/images/NASA-Apollo8-Dec24-Earthrise_sm.jpg" alt="NASA Apollo 8, December 24, 1968" width="400" height="400" />[/caption]
+
+Here is the <a title="Apollo 8 Christmas Eve broadcast" href="http://nssdc.gsfc.nasa.gov/planetary/lunar/apollo8_xmas.html" target="_blank">Apollo 8 Christmas Eve broadcast</a>.

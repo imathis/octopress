@@ -1,0 +1,11 @@
+--- 
+layout: post
+comments: false
+title: Wow
+date: 2007-2-14
+link: false
+categories: elsewhere
+---
+The best waste of time on the Internet these days is <a href="http://www.kottke.org/06/10/line-rider" title="Line Rider">Line Rider</a>. The video below is the best Line Rider video I've seen.  Wow.
+
+<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/cW44BpXpjYw"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/cW44BpXpjYw" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350"></embed></object>

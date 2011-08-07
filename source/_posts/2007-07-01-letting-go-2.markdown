@@ -1,0 +1,15 @@
+--- 
+layout: post
+comments: false
+title: Letting Go
+date: 2007-7-1
+link: false
+categories: nerdliness
+---
+Seven years ago this month I created a new domain, one for my professional self.  At the time I was engaged in negotiations for a contract that would set me up as an independent consultant.  I would be working for myself rather than a company.  Being hugely enamored of the entire web experience I wanted to have a domain for my doing-business-as name; I actually developed the doing-business-as name as a result of which domain names were available.  In the end, <a href="http://partitionsoftware.com" title="Partition Software">Partition Software</a> was created.  Using <i>partition</i> in the name was a play on words as the primary development platform I was working with at the time allowed distributed software to be created and partitioned across many servers with ease.
+
+To be honest I never really did very much with the site.  I changed the layout once or twice and added my resume to it, but I didn't really need it for my business.  It was primarily a vanity thing; it gave me an email address for professional matters.  Domain based emails being a magnet for spam, I get for more junk mail there now than I ever got real mail.
+
+The site registration expires later this month and I am strongly considering letting it go.  I don't need the domain any more; if I were to have a professional site I'd want to call it something different to begin with.  Being a bit of a pack rat it is hard to let go of anything so I find myself looking for excuses to keep the site.  The technology I was using in 2000 is now defunct, so the name <i>partition software</i> is no longer really meaningful either.
+
+I suppose it'll be like the house I moved out of in 2004, I'll never go back to that site simply because I won't want to see the "Buy This Domain" site that will appear there almost immediately after my registration expires.  Being an independent consultant was a rite of passage (in more ways than one) for me, and the name Partition Software, will always be important to me.  But I am not currently an independent consultant, and were I to be again in the future there is another name that I would choose.

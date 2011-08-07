@@ -1,0 +1,11 @@
+--- 
+layout: post
+comments: false
+title: It Works!
+date: 2007-6-21
+link: false
+categories: elsewhere
+---
+I had heard stories of washing a gunky keyboard in the dishwasher, and even read a posting or three by people who had purportedly used this method to restore a keyboard to like-new (or at least closer to new) status.  But until today I was a bit skeptical of the whole idea.  In my mind the delicate circuitry of the keyboard wouldn't stand a chance against an environment harsh enough to get three day old dried chili of my bowls.
+
+The fine folks over at <a href="http://coudal.com/" title="Coudal Partners">Coudal Partners</a> have done an <a href="http://coudal.com/keywasher.php" title="Keywasher">experiment</a>, and made a film of their results.  Well worth a click through to watch.

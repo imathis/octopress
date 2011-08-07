@@ -1,0 +1,19 @@
+--- 
+layout: post
+comments: false
+title: COBOL
+date: 2007-3-19
+link: false
+categories: life
+---
+In the winter of 1979 I talked my way into a community college course on COBOL. At the time I was a senior in high school and, having had the Basic programming course the high school offered I was hungry for more. The father of one of my  friends was teaching a course in COBOL (COmmon Business Oriented Language) and when I learned of it I was ready to go.
+
+After four years of college I started work as a programmer working in COBOL. From 1983 until 1992 I was a COBOL programmer. I worked on IMS and CICS applications. I developed new programs and maintained a mountain of legacy code. With the appearance of 4th generation languages (4GL) such as Powerbuilder I saw that the IT industry was going to shift away from mainframe based solutions and incorporate the PC platform. I made the paradigm shift to Powerbuilder, and transitioned away from COBOL.
+
+Later in the decade I shifted from Powerbuilder to Forte, an object oriented distributed application platform. This second paradigm shift was critical to my career's continued success. Object oriented development, especially in the Java realm, was taking the IT world by storm. When Sun Microsystems purchased Forte the hand-writing was on the wall - time for another paradigm shift. In the past few years I have re-tooled myself with Java and all its associated baggage.
+
+Each of these shifts was deliberate and calculated. There are many trajectories a career in information technology can take; I wanted mine to move towards architecture (what used to be called analysis) and the best architecture positions seem to follow the prevailing development technology. For the past ten years the dominate development language has been Java.
+
+I have been pleased with my ability to keep up with the ever changing technology landscape. Determination, some skill, and a lot of hard work has kept me moving forward, adding new valuable skills to my resume. Recently I switched jobs as I had found a position that I felt would continue my path towards enterprise architecture. Imagine then, my upset at having the project I joined halted, canceled, so that aging COBOL based applications and systems could be documented and patched. Fifteen years after making the conscious, deliberate decision to leave COBOL and strike out with new, unknown technologies, I find myself mired in COBOL once again.
+
+The trajectory of my career has at the least flattened out, and at worse taken a bit of a nose dive.

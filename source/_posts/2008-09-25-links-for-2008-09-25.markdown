@@ -1,0 +1,14 @@
+--- 
+layout: post
+comments: false
+title: links for 2008-09-25
+date: 2008-9-25
+link: true
+categories: links
+---
+<ul class="delicious">
+	<li>
+<div class="delicious-link"><a href="http://www.youtube.com/watch?v=9hnrZrlxjI0">YouTube - Palin's experience in just 12 minutes</a></div>
+<div class="delicious-extended">You need to watch this.  Sarah Palin is the least experienced candidate for VP. Ever.</div>
+<div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/politics">politics</a> <a href="http://delicious.com/zanshin/video">video</a> <a href="http://delicious.com/zanshin/lessing">lessing</a>)</div></li>
+</ul>

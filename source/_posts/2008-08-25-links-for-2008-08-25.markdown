@@ -1,0 +1,25 @@
+--- 
+layout: post
+comments: false
+title: links for 2008-08-25
+date: 2008-8-25
+link: false
+categories: social issues
+---
+<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://sethgodin.typepad.com/seths_blog/2008/08/more-vs-enough.html">Seth&#039;s Blog: More vs. enough</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/society">society</a> <a href="http://delicious.com/zanshin/marketing">marketing</a> <a href="http://delicious.com/zanshin/quality">quality</a> <a href="http://delicious.com/zanshin/sethgodin">sethgodin</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.coderholic.com/free-python-programming-books/">Coderholic  » Blog Archive   » 10 Free Python Programming Books</a></div>
+                <div class="delicious-extended">Free books!</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/toread">toread</a> <a href="http://delicious.com/zanshin/development">development</a> <a href="http://delicious.com/zanshin/python">python</a> <a href="http://delicious.com/zanshin/django">django</a> <a href="http://delicious.com/zanshin/documentation">documentation</a> <a href="http://delicious.com/zanshin/books">books</a> <a href="http://delicious.com/zanshin/computer">computer</a> <a href="http://delicious.com/zanshin/free">free</a> <a href="http://delicious.com/zanshin/programming">programming</a> <a href="http://delicious.com/zanshin/library">library</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.linuxscrew.com/2007/10/11/7-must-read-linux-tutorials/">7 &quot;must read&quot; Linux tutorials | Linux Screw</a></div>
+                <div class="delicious-extended">Putting the &quot;i&quot; in Linux</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/toread">toread</a> <a href="http://delicious.com/zanshin/linux">linux</a> <a href="http://delicious.com/zanshin/unix">unix</a> <a href="http://delicious.com/zanshin/reference">reference</a> <a href="http://delicious.com/zanshin/shell">shell</a> <a href="http://delicious.com/zanshin/bash">bash</a> <a href="http://delicious.com/zanshin/list">list</a> <a href="http://delicious.com/zanshin/os">os</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.pomonahistorical.org/12times.htm">Folding Paper in Half Twelve Times</a></div>
+                <div class="delicious-extended">Two to the twelfth power is 4096 layers.</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/howto">howto</a> <a href="http://delicious.com/zanshin/geek">geek</a> <a href="http://delicious.com/zanshin/interesting">interesting</a> <a href="http://delicious.com/zanshin/paperfolding">paperfolding</a> <a href="http://delicious.com/zanshin/mathematics">mathematics</a> <a href="http://delicious.com/zanshin/research">research</a> <a href="http://delicious.com/zanshin/puzzles">puzzles</a> <a href="http://delicious.com/zanshin/geometry">geometry</a>)</div>
+            </li></ul>

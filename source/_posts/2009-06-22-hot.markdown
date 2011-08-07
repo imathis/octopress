@@ -1,0 +1,11 @@
+--- 
+layout: post
+comments: false
+title: Hot
+date: 2009-6-22
+link: false
+categories: nerdliness
+---
+The forecast for this week is hot. Hot. And still more hot.
+<img alt="" src="http://zanshin.net/images/hot.jpg" title="Hot" class="aligncenter" width="266" height="163" />
+
