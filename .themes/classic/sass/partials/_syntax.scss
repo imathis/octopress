@@ -85,7 +85,7 @@ h3.filename {
   + pre { @include border-top-radius(0px); }
 }
 
-p code {
+@mixin inline-code {
   @extend .mono;
   display: inline-block;
   white-space: no-wrap;
@@ -97,6 +97,14 @@ p code {
   @include border-radius(.4em);
   padding: 0 .3em;
   margin: -1px 0;
+}
+
+p code {
+  @include inline-code;
+}
+
+li code {
+  @include inline-code
 }
 
 .pre-code {
