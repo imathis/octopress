@@ -16,3 +16,6 @@ body > header { padding: 0; background-image: image_url("shoreline.png"); backgr
 // alter how the page header h1 and h2 appear
 body > header > hgroup > h1 { margin-left: 55px; }
 body > header > hgroup > h2 { margin-left: 55px; font-size: small; }
+
+// lets center any table we encounter
+table { margin-left: auto; margin-right: auto; }
