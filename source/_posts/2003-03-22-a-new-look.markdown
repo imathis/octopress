@@ -1,0 +1,9 @@
+--- 
+layout: post
+comments: "false"
+title: A New Look
+date: 2003-3-22
+link: "false"
+categories: life
+---
+I have cleaned up the presentation a bit. I haven't checked it out on all browsers yet. It does work on Safari, Camino, and IE for Mac.  If you are using something else and it doesn't come off smoothly let me know and I'll see what I can do to patch the CSS.

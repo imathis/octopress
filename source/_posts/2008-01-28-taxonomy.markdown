@@ -1,0 +1,33 @@
+--- 
+layout: post
+comments: "false"
+title: Taxonomy
+date: 2008-1-28
+link: "false"
+categories: life
+---
+In the seven or so years that I used <a href="http://www.movabletype.org/" title="MovableType.org">Moveable Type</a> as my content management system I managed to create 42 categories.  Some were catch-all groupings that ended up holding dozens or even hundreds of postings.  Others held just a handful or entries, or, in some cases, only one entry.
+
+Switching to <a href="http://wordpress.org" title="Wordpress">Wordpress</a> allowed me to add tags to my entries; something my antiquated version (2.661) of Moveable Type didn't allow.  As long as I was migrating all 1330 entries, I decided it was time to revamp the category hierarchy, and put some forethought into what tags I wanted to use.
+
+Some of the old categories have gone away, becoming tags within other categories.  Several new categories have been created, usually to group together several previous categories.  The new taxonomy is still evolving; but for now there are only 11 categories.  On the other hand I already have more than 200 tags.  It will take some time for me to visit all the postings and tag them, or reassign them to there new categorical home, but I think it will be worthwhile as entries will be easier to find.
+
+Without further ado then, here are the new categories:
+<ul>
+	<li>Diversions</li>
+	<li>Elsewhere</li>
+	<li>Family</li>
+	<li>Health</li>
+	<li>Life</li>
+	<li>Meme</li>
+	<li>Nerdliness</li>
+	<li>Photography</li>
+	<li>Random</li>
+	<li>Relationships</li>
+	<li> Social issues</li>
+</ul>
+Converting from the old category to the new is relatively easy, if a bit tedious.  I simply delete the old category, causing all of its entries to revert to the default (uncategorized) category.  Using Wordpress' filter feature I am able to view the uncategorized entries and assign them a new category (or two or three) and apply some tags.
+
+While I have completed this process for about two-thirds of all the categories, I still have some of the larger categories (in terms of entry numbers) to visit.  I've also been updating my htaccess file as I go, ensuring that visits to the old category archives properly forward to either the new category archive or the tag archive.
+
+You can select a category from the drop-down list in the side bar, or you can see all the <a href="http://zanshin.net/tags/" title="Tags">tags</a> on their page.

@@ -1,0 +1,21 @@
+--- 
+layout: post
+comments: "false"
+title: links for 2008-08-30
+date: 2008-8-30
+link: "false"
+categories: social issues
+---
+<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.juixe.com/techknow/index.php/2008/08/17/favorite-programming-quotes/">Selected Computer Quotes</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/toread">toread</a> <a href="http://delicious.com/zanshin/programming">programming</a> <a href="http://delicious.com/zanshin/geek">geek</a> <a href="http://delicious.com/zanshin/humor">humor</a> <a href="http://delicious.com/zanshin/software">software</a> <a href="http://delicious.com/zanshin/coding">coding</a> <a href="http://delicious.com/zanshin/list">list</a> <a href="http://delicious.com/zanshin/nerd">nerd</a> <a href="http://delicious.com/zanshin/quotes">quotes</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://gojko.net/2008/08/29/how-many-points-are-there-in-a-five-point-star/">Gojko Adzic  » How many points are there in a five-point star?</a></div>
+                <div class="delicious-extended">Why, 10, of course.</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/interesting">interesting</a> <a href="http://delicious.com/zanshin/design">design</a> <a href="http://delicious.com/zanshin/communication">communication</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://dearadobe.com/top_rated.php">Dear Adobe</a></div>
+                <div class="delicious-extended">The people are speaking, Adobe, are you listening?</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/adobe">adobe</a> <a href="http://delicious.com/zanshin/feedback">feedback</a> <a href="http://delicious.com/zanshin/humor">humor</a> <a href="http://delicious.com/zanshin/design">design</a> <a href="http://delicious.com/zanshin/software">software</a> <a href="http://delicious.com/zanshin/business">business</a>)</div>
+            </li></ul>

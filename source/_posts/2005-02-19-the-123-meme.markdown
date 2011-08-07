@@ -1,0 +1,26 @@
+--- 
+layout: post
+comments: "false"
+title: The 123 Meme
+date: 2005-2-19
+link: "false"
+categories: meme
+---
+<strong>Ned knew that she and a young man had been courting, and he believed her tears must have resulted from something he had said or done.</strong>
+
+from <i>The Devil in the White City</i> by Erik Larson
+
+My desk is littered with books, so it was difficult to select the one that was "next" to me. This one was closest and on top of the pile. If you care to play along, here are the instructions:
+
+<ol>
+<li class="il">Grab the nearest book.</li>
+
+<li class="il">Open the book to page 123.</li>
+
+<li class="il">Find the fifth sentence.</li>
+
+<li class="il">Post the text of the sentence in your journal along with these instructions.</li>
+
+<li class="il">Don't search around and look for the "coolest" book you can find. Do what's actually next to you.</li>
+</ol>
+

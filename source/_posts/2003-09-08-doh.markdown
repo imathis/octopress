@@ -1,0 +1,19 @@
+--- 
+layout: post
+comments: "false"
+title: D'Oh!
+date: 2003-9-8
+link: "false"
+categories: life
+---
+Today while I was reviewing our bank statement online I noticed a charge from my former hosting company. I thought I had cancelled the last account I had there when I transferred my business domain to my current host. I was therefore upset about the $19.95 charge I was seeing in the register.
+
+I called the company, and after spending a glorious 35 minutes on hold, was connected with "Brad". Brad was able to figure out that I had been billed an extra month on the business domain, but that was $24.95. He couldn't find anything that resembled the $19.95 charge I was seeing. He suggestion was to call my bank and try to have the charge stopped at that end.
+
+So I called the bank, credit union actually. The hold time there was less than 10 seconds, but they weren't any help at all. It seems that debt card transactions are beyond the bank's purview.  The unhelpful woman there suggested I call the company who was billing me. This was the last straw in a contentious relationship with the credit union that has stretched back almost three years now. We were already planning on taking our business elsewhere with the arrival of the next paycheck, having the bank refuse to help me with this matter just cinched it. I told the woman that I was very unhappy with the lack of help or support, especially since I was a member of the credit union, and that with the arrival of my next check she could expect us to close this account forever. She said to have a nice day and hung up.
+
+After having and setting aside several retaliation fantasies I decided to call the hosting company one more time. The new guy was much sharper and used the credit card number to track any charges. None were found. Then I remembered that once upon a time we started to setup a web site for my wife. I thought I had cancelled it long ago. I knew that the domain registration had expired. When I asked him about that domain, bingo! He found a $19.95 charge to my wife's debit card number, which bills to the same checking account. D'Oh!
+
+The account has been cancelled for certain this time. Hopefully I've remembered all the domains I've played with over the years and cancelled all the inactive ones.
+
+We are still going to leave the bank. Even though it wasn't their problem I expected to get better service and support. Rude customer service just isn't tolerable in this day and age.

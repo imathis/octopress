@@ -1,0 +1,28 @@
+--- 
+layout: post
+comments: "false"
+title: CFL
+date: 2008-3-20
+link: "false"
+categories: life
+---
+On 19 December 2007, United States President George W. Bush signed the Energy Independence and Security Act of 2007. Among other provisions, that law sets efficiency standards for electric lights that will see the incandescent light bulb phased off the US market beginning in 2012. (via <a href="http://en.wikipedia.org/wiki/Compact_fluorescent_lamp" title="Government encouraged adoption of CFLs">Wikipedia</a>)  This means that in just four years we will start to see the end of the incandescent light bulb, and the rise of the CFL or Compact Fluorescent Lamp, as its replacement.
+
+You have probably already seen CFLs in your local store; they are the curly, improbable looking light bulbs that tout energy savings and years worth of use to offset their increased initial cost.  The idea behind the legislation is using CFL will save energy costs in the long term.  Again, from the Wikipedia article:
+<blockquote>For a given light output, CFLs use between one fifth and one quarter of the power of an equivalent incandescent lamp. For example, lighting accounted for approximately 9% of household electricity usage in the United States in 2001, so widespread use of CFLs could save most of this, for a total energy saving of about 7% from household usage.</blockquote>
+Of course nothing is free, and the hidden cost of CFLs appears to be the need for mercury vapor inside the bulb.  Mercury is toxic and poses a real health hazard (emphasis added):
+<blockquote>Broken fluorescent lamps inside a house or an office do pose an environmental hazard beyond that of broken glass, especially to infants, young children, and expectant mothers. Like other fluorescent lamps, broken CFLs release mercury vapors, and require special handling to clean up. The EPA warns against vacuuming, suggesting instead that individuals vacate the room and open windows for fifteen minutes to allow any mercury vapor to air out, then clean up the breakage while wearing protective gloves, and use double plastic bags for all broken pieces. They also suggest using duct tape to pick up small pieces. Special handling upon breakage is currently not printed on the packaging of household CFL bulbs in many countries. <strong>It is important to note that the amount of mercury released by one bulb exceeds even the most lenient state level for acute exposure. [...] Broken CFLs are an immediate health hazard due to the evaporation of mercury into the atmosphere.
+</strong></blockquote>
+Sibylle and I decided to try some of these bulbs in our home as we have a couple of lights that are nearly always on, and incandescent bulbs burned out too fast.  The CFL casts a cooler, or bluer, light; we both needed some time to stop noticing the difference in the light's quality.  They also "warm up" rather than turn on instantly.  When you flick the wall switch there is a second or so pause before the light is fully illuminated.
+
+The light at the top of the stairs worked well enough that we bought several more for other areas of the house, including one for the ceiling fixture in the basement near the washer and dryer.  A bulb that work crews in our home managed to break yesterday.
+
+The management company for our property is upgrading all the units; new doors, new bathroom vanity and sink, new kitchen countertops and sink, new bathroom and kitchen floors, and a new furnace.  We've had various teams working in our townhouse each of the past three days.  Until last evening we felt that they were doing everything they could to minimize their effect on our lives and our home.  Around 9:30 pm, Sibylle went to the basement to transfer some laundry from the washer to the dryer and discovered the broken CFL.  There is glass and powder from the bulb on the floor, our clothes, and the stocking-as-filter at the end of the dryer vent hose.
+
+In the greater scheme of things a single broken light bulb doesn't seem like it ought to be a big deal.  However, after several days of constant noise and construction, dirt and disarray, and a general feeling of not being in control in our own home, after all of that, a small accident was more than either of us wanted to deal with.  That it involved a potentially hazardous material only compounded the issue.
+
+Both of us were upset that the crew didn't see fit to notify us of the damage, and that they made no apparent attempt to clean up the mess.  Knowing that the clear up isn't as simple as "just sweeping up the pieces," we called the property management and spoke with the on-call maintenance man.  As a result of that call we are meeting this morning with building maintenance and the head of the construction crew on site.
+
+We have perhaps two more days of intrusion into our home; baseboards needs to be reinstalled, the furnace needs installation, and the new screen door needs to be hung.  After that we can start to put things away again, we can start to reclaim control over our space and our home again.
+
+As for CFL bulbs I have mixed feelings.  I am all for lowering our impact on the environment, and if using these bulbs will help, then they are a good idea.  However, if they pose such a health risk that there are <a href="http://www.energystar.gov/ia/partners/promotions/change_light/downloads/Fact_Sheet_Mercury.pdf" title="Mercury Fact Sheet">special clean up instructions</a>, then perhaps we need to find a better way to reduce our energy needs.

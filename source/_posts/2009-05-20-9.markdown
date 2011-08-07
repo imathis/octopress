@@ -1,0 +1,9 @@
+--- 
+layout: post
+comments: "false"
+title: "9"
+date: 2009-5-20
+link: "false"
+categories: life
+---
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/5IQcMeNh7Hc&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/5IQcMeNh7Hc&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>

@@ -1,0 +1,16 @@
+--- 
+layout: post
+comments: "false"
+title: links for 2008-09-23
+date: 2008-9-23
+link: "true"
+categories: links
+---
+<ul class="delicious">
+	<li>
+<div class="delicious-link"><a href="http://www.washingtonpost.com/wp-dyn/content/article/2008/09/20/AR2008092001763.html">Hiding in Plain Sight - washingtonpost.com</a></div>
+<div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/election2008">election2008</a> <a href="http://delicious.com/zanshin/johnmccain">johnmccain</a> <a href="http://delicious.com/zanshin/sarahpalin">sarahpalin</a> <a href="http://delicious.com/zanshin/politics">politics</a> <a href="http://delicious.com/zanshin/toread">toread</a>)</div></li>
+	<li>
+<div class="delicious-link"><a href="http://www.nytimes.com/2008/09/22/opinion/22krugman.html?partner=rssuserland">Op-Ed Columnist - Cash for Trash - Op-Ed - NYTimes.com</a></div>
+<div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/krugman">krugman</a> <a href="http://delicious.com/zanshin/nyt">nyt</a> <a href="http://delicious.com/zanshin/economy">economy</a> <a href="http://delicious.com/zanshin/bailout">bailout</a> <a href="http://delicious.com/zanshin/bad_idea">bad_idea</a> <a href="http://delicious.com/zanshin/toread">toread</a>)</div></li>
+</ul>

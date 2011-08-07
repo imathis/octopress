@@ -1,0 +1,25 @@
+--- 
+layout: post
+comments: "false"
+title: links for 2008-01-08
+date: 2008-1-8
+link: "true"
+categories: links
+---
+<ul class="delicious">
+	<li>
+		<div class="delicious-link"><a href="http://ds9a.nl/amazing-dna/index.html">DNA seen through the eyes of a coder</a></div>
+		<div class="delicious-extended">You are not expected to understand this.</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/programming">programming</a> <a href="http://del.icio.us/zanshin/dna">dna</a> <a href="http://del.icio.us/zanshin/science">science</a> <a href="http://del.icio.us/zanshin/software">software</a> <a href="http://del.icio.us/zanshin/code">code</a> <a href="http://del.icio.us/zanshin/computer">computer</a> <a href="http://del.icio.us/zanshin/development">development</a> <a href="http://del.icio.us/zanshin/toread">toread</a> <a href="http://del.icio.us/zanshin/genetics">genetics</a> <a href="http://del.icio.us/zanshin/algorithms">algorithms</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://shimmer.sourceforge.net/">shimmer</a></div>
+		<div class="delicious-extended">My fascination with ssh continues.</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/security">security</a> <a href="http://del.icio.us/zanshin/ssh">ssh</a> <a href="http://del.icio.us/zanshin/ports">ports</a> <a href="http://del.icio.us/zanshin/unix">unix</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://www.ambrosiasw.com/forums/?showtopic=34059">Ambrosia Times: Bitwise Operator: The Plain Truth About Piracy - Ambrosia Software Web Board</a></div>
+		<div class="delicious-extended">Thou shall not steal</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/piracy">piracy</a> <a href="http://del.icio.us/zanshin/software">software</a> <a href="http://del.icio.us/zanshin/programming">programming</a> <a href="http://del.icio.us/zanshin/society">society</a> <a href="http://del.icio.us/zanshin/toread">toread</a>)</div>
+	</li>
+</ul>

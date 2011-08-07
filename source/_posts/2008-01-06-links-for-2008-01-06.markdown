@@ -1,0 +1,20 @@
+--- 
+layout: post
+comments: "false"
+title: links for 2008-01-06
+date: 2008-1-6
+link: "true"
+categories: links
+---
+<ul class="delicious">
+	<li>
+		<div class="delicious-link"><a href="http://keybr.com/">keybr.com - Typing at the speed of thought!</a></div>
+		<div class="delicious-extended">Learn to touch type</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/typing">typing</a> <a href="http://del.icio.us/zanshin/keyboard">keyboard</a> <a href="http://del.icio.us/zanshin/tutorial">tutorial</a> <a href="http://del.icio.us/zanshin/e-learning">e-learning</a>)</div>
+	</li>
+	<li>
+		<div class="delicious-link"><a href="http://www.schloss-elmau.de/english/elmau_menue/index/index_hotel.html">The Schloss Elmau Experience. Grand yet casual.</a></div>
+		<div class="delicious-extended">Oh. My. God.</div>
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zanshin/travel">travel</a> <a href="http://del.icio.us/zanshin/europe">europe</a> <a href="http://del.icio.us/zanshin/hotel">hotel</a> <a href="http://del.icio.us/zanshin/world-class">world-class</a>)</div>
+	</li>
+</ul>

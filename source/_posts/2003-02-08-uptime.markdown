@@ -1,0 +1,18 @@
+--- 
+layout: post
+comments: "false"
+title: Uptime
+date: 2003-2-8
+link: "false"
+categories: nerdliness
+---
+One of the things I like best about my new powerbook G4 is the operating system  it comes with: Mac OS X. Being based on the FreeBDS flavor of Unix gives it incredible stability. My laptop has been to work with me and back everyday, and to my parents one weekend. I have not turned it off and on in over 16 days.
+
+<div align="center">
+<img src="http://www.zanshin.net/images/uptime.jpg" border="0" alt="16 days, 13 hours, 3 minutes"></div>
+
+The problem is Safari, the new beta release browser from Apple. I'm hooked on it and and it won't run now. It starts and then immediately "unexpectedly ends." Phooey. I've tried re-installing it, and restarting my machine, all to no avail. I am left with re-booting as a last resort. This means my 16 day uptime run is over.
+
+I'll just have to start again.
+
+UPDATED (8:39 p): I re-booted and Safari is working once again. Also Proteus, which had gone flaky on me is working smoothly again as well. Uptime 10 minutes and counting.

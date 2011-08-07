@@ -1,0 +1,13 @@
+--- 
+layout: post
+comments: "false"
+title: links for 2008-08-24
+date: 2008-8-24
+link: "false"
+categories: social issues
+---
+<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.alternet.org/rights/95351?page=entire">At JFK Airport, Denying Basic Rights Is Just Another Day at the Office | Rights and Liberties | AlterNet</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/security">security</a> <a href="http://delicious.com/zanshin/humanrights">humanrights</a> <a href="http://delicious.com/zanshin/immigration">immigration</a> <a href="http://delicious.com/zanshin/rights">rights</a> <a href="http://delicious.com/zanshin/dhs">dhs</a>)</div>
+            </li></ul>

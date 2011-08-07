@@ -1,0 +1,13 @@
+--- 
+layout: post
+comments: "false"
+title: Tumblr
+date: "2007-12-20"
+link: "false"
+categories: nerdliness
+---
+There is a new type of weblog available, called a <i>tumblr</i> or tumble blog.  You can set one up in just a couple of minutes by visiting the <a href="http://tumblr.com" title="tumblr">tumblr home page</a>.  I did yesterday, and already I've got several <a href="http://zanshin.tumblr.com" title="remaining mind">postings</a>.
+
+Rather than leave the choices up to you, tumblr has specific posting types (links, video, audio, quotes, pictures, text, or chat) that you can add content through.  There's even a handy bookmark that you can use to popup a window while visiting a site you want to reference on your tumble blog. Just click the bookmark, and then add your note to the captured content and click save.  The stock templates are decent as well.  You could have a blog up and running, for free, in less than 5 minutes.
+
+Read more about it here: <a href="http://lifehacker.com/software/web-publishing/geek-to-live--instant-no+overhead-blog-with-tumblr-244915.php" title="Instant No Overhead Blogging with Tumblr">Geek to Live</a>.

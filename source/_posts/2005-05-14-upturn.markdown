@@ -1,0 +1,15 @@
+--- 
+layout: post
+comments: "false"
+title: Upturn
+date: 2005-5-14
+link: "false"
+categories: life
+---
+Recently I updated my resumes on <a href="http://monster.com" title="monster.com">Monster</a> and <a href="http://dice.com" title="dice.com">Dice</a>. I had been very active on these two sites last spring during the 100 days I was out of work, but I had ignored them entirely since starting here in July 2004.
+
+Imagine my surprise when within hours of posting an updated resume on Dice I stated getting emails and phone calls. The number of contacts only increased when I updated my profile on Monster. It would appear that the technical job market has taken a turn for the better. A year ago I could get a phone call to save my life, now I'm having to fend them off by letting the voice mail take some calls.
+
+Of course it could be that my resume is more buzz-word compliant these days. I've added J2EE, and its associated complimentary technologies in a major way since going to work here. But I think the market as a whole is healthier than it was 12 months ago.
+
+I'm not really looking for a change in employment right now. But it is nice to take the temperature of the local tech market waters and find it inviting.

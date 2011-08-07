@@ -1,0 +1,19 @@
+--- 
+layout: post
+comments: "false"
+title: Hot Water
+date: 2004-6-5
+link: "false"
+categories: life
+---
+Having a gas heater for our pool adds about 4 or 5 weeks to each end of the swimming season here in central Illinois. We opened the pool in late April this year, and have been swimming in it since the beginning of <a href="http://www.zanshin.net/blogs/000430.html" title="First Swim">May</a>. If the past couple of years are any indication, we should still be swimming in late September or early October.
+
+That is as long as the heater is working properly. Last weekend we noticed that the water temperature seemed to be going down every day rather and maintaining our preferred 88 degrees. Going over to the heater and adjusting the thermostat upwards did not cause it to kick on in the expected manner. Uh oh.
+
+We spent the week trying various remedies and experiments to isolate the problem and fix it. After much hunting around we were able to identify the fuse-able link, and to determine that it hadn't fused. Harder to identify was the location of the flow pressure switch, a device that measures the water flow and only allows heating when the water is moving.
+
+In the end a good friend, Brad, came by and showed us where the flow pressure switch was located. More importantly he figured out that it wasn't the likely culprit. After testing the electrical circuit he was ready to declare the main circuit board as the problem. However, flipping the unit's rocker switch from side to side he managed to get the unit running again.
+
+My first impression the day we discovered the heater wasn't working was that the switch, which has three positions (Off, heat setting one, and heat setting two), was some how messed up. It felt mushy on heat setting one, and apparently didn't work on heat setting two. Brad was far more forceful in switching it repeatedly than I, and he managed to make it work. So, while the contact for side 1 are obviously no good any more, it is working through side 2, and we are once again heating the pool water.
+
+The water temperature was 84 degrees and climbing at 9 this morning, and with a forecast high of low 80s today, we are looking forward to being in hot water once again.

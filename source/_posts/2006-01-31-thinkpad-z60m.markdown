@@ -1,0 +1,13 @@
+--- 
+layout: post
+comments: "false"
+title: ThinkPad Z60m
+date: 2006-1-31
+link: "false"
+categories: nerdliness
+---
+After three years of only using Windows machines at work, I once again have a Wintel box on my desk. I had grown frustrated with the issue my two towers were having with the development software I wanted to run. While still good computers they are now a little long in the tooth. The newer one is 5 years old, and the older one almost 7.
+
+So I saved my money and got a new <a href="http://www-131.ibm.com/webapp/wcs/stores/servlet/ProductDisplay?productId=4611686018425101482&amp;storeId=10000001&amp;langId=-1&amp;categoryId=4611686018425011252&amp;dualCurrId=1000073&amp;catalogId=-840" title="ThinkPad Z60m">ThinkPad Z60m</a> notebook computer. Two things really sold me on this particular machine, the widescreen (and a nice 1680x1050 resolution) and the Friends and Family discount I got through a work mate employed by IBM. (Thanks CN!)
+
+This post also marks some thing new for zanshin.net - pictures on <a href="http://flickr.com" title="Flickr">Flickr</a>. Check out the <a href="http://flickr.com/photos/zanshin/sets/72057594057460183/" title="OOBE">out of box experience</a>.

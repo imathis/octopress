@@ -1,0 +1,14 @@
+--- 
+layout: post
+comments: "false"
+title: links for 2008-08-20
+date: 2008-8-20
+link: "true"
+categories: links
+---
+<ul class="delicious">
+	<li>
+<div class="delicious-link"><a href="http://tomayko.com/writings/rest-to-my-wife">How I Explained REST to My Wife</a></div>
+<div class="delicious-extended">Now I get it...</div>
+<div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/toread">toread</a> <a href="http://delicious.com/zanshin/rest">rest</a> <a href="http://delicious.com/zanshin/webservices">webservices</a> <a href="http://delicious.com/zanshin/restful">restful</a> <a href="http://delicious.com/zanshin/programming">programming</a> <a href="http://delicious.com/zanshin/web">web</a> <a href="http://delicious.com/zanshin/howto">howto</a> <a href="http://delicious.com/zanshin/tutorial">tutorial</a> <a href="http://delicious.com/zanshin/internet">internet</a> <a href="http://delicious.com/zanshin/http">http</a>)</div></li>
+</ul>

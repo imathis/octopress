@@ -1,0 +1,20 @@
+--- 
+layout: post
+comments: "false"
+title: 404 Errors
+date: "2002-11-11"
+link: "false"
+categories: nerdliness
+---
+I ran across these error pages as examples of a, er, better way of doing it.
+
+First: <a href="http://gaeb.teatime.com/notfound.html">gaeb.teattime.com/notfound.html</a>
+Nice graphics, no more useful than the original 404 message, but nicer to receive.
+
+Second: <a href="http://cold-dead-fish.com/404.asp">cold-dead-fish.com/404.asp</a>
+Direct, and to the point. If you aren't thick skinned you have no business surfing the 'net anyway.
+
+Finally: <a href="http://mcsquared.com/error1.htm">mcsquared.com/error1.htm </a>
+Fantastic. A sense of whimsy and humor. An excellent waste of time, resources, and bandwidth.
+
+

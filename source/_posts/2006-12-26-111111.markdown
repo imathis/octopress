@@ -1,0 +1,18 @@
+--- 
+layout: post
+comments: "false"
+title: "111111"
+date: "2006-12-26"
+link: "false"
+categories: nerdliness
+---
+
+<p style="float: right; margin-left: 10px; margin-bottom: 10px"> <a href="http://www.flickr.com/photos/zanshin/334220121/" title="photo sharing"><img src="http://farm1.static.flickr.com/128/334220121_bd3f63e8eb_m.jpg" style="border: 2px solid #000000" /></a></p>
+<span style="font-size: 0.7em; margin-top: 0px">
+<a href="http://www.flickr.com/photos/zanshin/334220121/">111111</a></span>
+
+In the word of binary numbers, this would be known as "high values" i.e., the largest value this register could hold. Were that the case here, the next number would have been "low values" or all zeroes. Sadly, that event won't happen for another 888,889 miles.
+
+While I most likely won't see that happy event, at the rate I'm going I'll see all 2s within the next three years.
+
+<br clear="all" />

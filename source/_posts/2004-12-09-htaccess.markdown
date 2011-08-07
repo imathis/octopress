@@ -1,0 +1,15 @@
+--- 
+layout: post
+comments: "false"
+title: .htaccess
+date: 2004-12-9
+link: "false"
+categories: life
+---
+With the help of this <a href="http://www.spywareinfo.com" title="Spywareinfo">Spywareinfo</a> <a href="http://www.spywareinfo.com/articles/referer_spam/" title="Referer Spam">article</a> about referer spam, and <a href="http://www.joemaller.com" title="Joe Maller">Joe Maller</a>'s <a href="http://www.joemaller.com/htaccess.txt" title="blacklist">blacklist</a> I have hopefully put an end to the increasing number of referer spam my site and my <a href="http://andifyoudidknow.com" title="And If You Did Know">wife's</a> site experience everyday.
+
+The Spywareinfo <a href="http://www.spywareinfo.com/articles/referer_spam/" title="Referer Spam">article</a> explains it all much better than I could. I would only add the suggestion to backup any <cite>.htaccess</cite> file you find before altering it, just in case. An earlier, less informed, attempt on my part to lock out the spammers actually resulted in my site being unavailable to anyone in any format. Oops.
+
+This now brings to 3 (or 4, depending upon how you count) measures I'm taking to rid my sites of electronic graffiti. I'm using "deny" rules in my .htaccess file to ban IP addresses from accessing my site, I've added "rewrite" rules to block specific referers and specific types of referers, and I'm using <a href="http://astrogibs.com/eric/archives/technology/botwhack_10.html" title="Bot Whack">BotWhack</a> from Eric Goldberg to filter unwanted entries from my <a href="http://textism.com/tools/refer/" title="Referer">Referer</a> list.
+
+Even with all of these tools in place I know that I'll continue to get referer spam. My hope is to move my site out of the "low hanging fruit" category so that fewer opportunistic referer spam tools find me.

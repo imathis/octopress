@@ -1,0 +1,25 @@
+--- 
+layout: post
+comments: "false"
+title: links for 2008-09-21
+date: 2008-9-21
+link: "false"
+categories: social issues
+---
+<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://en.wikipedia.org/wiki/Grasshopper_escapement">Grasshopper escapement - Wikipedia, the free encyclopedia</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/wikipedia">wikipedia</a> <a href="http://delicious.com/zanshin/animation">animation</a> <a href="http://delicious.com/zanshin/clock">clock</a> <a href="http://delicious.com/zanshin/escapement">escapement</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://ac360.blogs.cnn.com/2008/09/19/former-secretaries-of-state-to-next-president-get-over-it-get-real-be-smart/">Anderson Cooper 360:   Blog Archive -  Former Secretaries of State to next President:  Get over it. Get real. Be smart « - Blogs from CNN.com</a></div>
+                <div class="delicious-extended">Thank you, thank you, thank you.</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/politics">politics</a> <a href="http://delicious.com/zanshin/ideas">ideas</a> <a href="http://delicious.com/zanshin/toread">toread</a> <a href="http://delicious.com/zanshin/election2008">election2008</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.bunkbeds.net/velociraptor/">How Long Could You Survive Chained to a Bunk Bed with a Velociraptor?</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/humor">humor</a> <a href="http://delicious.com/zanshin/funny">funny</a> <a href="http://delicious.com/zanshin/velociraptor">velociraptor</a> <a href="http://delicious.com/zanshin/tweetmarks">tweetmarks</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://krugman.blogs.nytimes.com/2008/09/19/mccain-on-banking-and-health/">McCain on banking and health - Paul Krugman - Op-Ed Columnist  - New York Times Blog</a></div>
+                <div class="delicious-extended">Vote for Obama. Please.</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/johnmccain">johnmccain</a> <a href="http://delicious.com/zanshin/obama">obama</a> <a href="http://delicious.com/zanshin/finance">finance</a> <a href="http://delicious.com/zanshin/healthcare">healthcare</a> <a href="http://delicious.com/zanshin/election2008">election2008</a>)</div>
+            </li></ul>

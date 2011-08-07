@@ -1,0 +1,21 @@
+--- 
+layout: post
+comments: "false"
+title: links for 2008-09-22
+date: 2008-9-22
+link: "false"
+categories: social issues
+---
+<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.boingboing.net/2008/09/19/microsofts-im-a-pc-a.html">Microsoft’s “I’m a PC” Ads - made on a Mac - Boing Boing</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/mac">mac</a> <a href="http://delicious.com/zanshin/humor">humor</a> <a href="http://delicious.com/zanshin/apple">apple</a> <a href="http://delicious.com/zanshin/windows">windows</a> <a href="http://delicious.com/zanshin/microsoft">microsoft</a> <a href="http://delicious.com/zanshin/television">television</a> <a href="http://delicious.com/zanshin/ads">ads</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.nakedcapitalism.com/2008/09/why-you-should-hate-treasury-bailout.html">naked capitalism: Why You Should Hate the Treasury Bailout Proposal</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/toread">toread</a> <a href="http://delicious.com/zanshin/interesting">interesting</a> <a href="http://delicious.com/zanshin/politics">politics</a> <a href="http://delicious.com/zanshin/economy">economy</a> <a href="http://delicious.com/zanshin/bailout">bailout</a> <a href="http://delicious.com/zanshin/subprime">subprime</a> <a href="http://delicious.com/zanshin/credit_crisis">credit_crisis</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://wirednewyork.com/forum/showthread.php?t=5010">New York in Black and White - Wired New York Forum</a></div>
+                <div class="delicious-extended">Very impressive collection of black and white photos of New York City, going back to the late 1800s.</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/interesting">interesting</a> <a href="http://delicious.com/zanshin/history">history</a> <a href="http://delicious.com/zanshin/nyc">nyc</a> <a href="http://delicious.com/zanshin/photo">photo</a> <a href="http://delicious.com/zanshin/gallery">gallery</a> <a href="http://delicious.com/zanshin/urban">urban</a> <a href="http://delicious.com/zanshin/tosee">tosee</a>)</div>
+            </li></ul>

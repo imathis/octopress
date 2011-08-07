@@ -1,0 +1,33 @@
+--- 
+layout: post
+comments: "false"
+title: links for 2008-08-21
+date: 2008-8-21
+link: "false"
+categories: social issues
+---
+<ul class="delicious"><li>
+                <div class="delicious-link"><a href="http://www.military.com/opinion/0,15202,164859_1,00.html">Why I Will Not Vote for John McCain</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/johnmccain">johnmccain</a> <a href="http://delicious.com/zanshin/politics">politics</a> <a href="http://delicious.com/zanshin/opinion">opinion</a> <a href="http://delicious.com/zanshin/2008election">2008election</a> <a href="http://delicious.com/zanshin/vietnam">vietnam</a> <a href="http://delicious.com/zanshin/toread">toread</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.cnn.com/2008/POLITICS/08/18/cafferty.mccain/index.html">Commentary: Is McCain another George W. Bush? - CNN.com</a></div>
+                <div class="delicious-extended">In a word - yes.  Be afraid.</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/cnn">cnn</a> <a href="http://delicious.com/zanshin/johnmccain">johnmccain</a> <a href="http://delicious.com/zanshin/politics">politics</a> <a href="http://delicious.com/zanshin/opinion">opinion</a> <a href="http://delicious.com/zanshin/president">president</a> <a href="http://delicious.com/zanshin/2008election">2008election</a> <a href="http://delicious.com/zanshin/toread">toread</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://andrewsullivan.theatlantic.com/the_daily_dish/2008/08/was-mccain-tort.html">The Daily Dish | By Andrew Sullivan</a></div>
+                <div class="delicious-extended">Violence begets more violence, and torture, it seems, begets more torture.</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/history">history</a> <a href="http://delicious.com/zanshin/johnmccain">johnmccain</a> <a href="http://delicious.com/zanshin/vietnam">vietnam</a> <a href="http://delicious.com/zanshin/hypocrisy">hypocrisy</a> <a href="http://delicious.com/zanshin/torture">torture</a> <a href="http://delicious.com/zanshin/bush">bush</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://philip.greenspun.com/humor/eecs-difference-explained">EE versus CS</a></div>
+                <div class="delicious-extended">Once upon a time...</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/engineering">engineering</a> <a href="http://delicious.com/zanshin/programming">programming</a> <a href="http://delicious.com/zanshin/science">science</a> <a href="http://delicious.com/zanshin/funny">funny</a> <a href="http://delicious.com/zanshin/humor">humor</a> <a href="http://delicious.com/zanshin/geek">geek</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.wesg.ca/2008/06/automatically-update-your-computers-uptime-on-your-website/">Automatically update your computer’s uptime on your website | wesg</a></div>
+                
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/bash">bash</a> <a href="http://delicious.com/zanshin/uptime">uptime</a> <a href="http://delicious.com/zanshin/script">script</a> <a href="http://delicious.com/zanshin/interesting">interesting</a>)</div>
+            </li><li>
+                <div class="delicious-link"><a href="http://www.governmentsecurity.org/articles/DefaultLoginsandPasswordsforNetworkedDevices.php">Default Logins and Passwords for Networked Devices</a></div>
+                <div class="delicious-extended">For when you want to &quot;borrow&quot; your neighbor&#039;s router</div>
+                <div class="delicious-tags">(tags: <a href="http://delicious.com/zanshin/reference">reference</a> <a href="http://delicious.com/zanshin/list">list</a> <a href="http://delicious.com/zanshin/wifi">wifi</a> <a href="http://delicious.com/zanshin/passwords">passwords</a> <a href="http://delicious.com/zanshin/default">default</a> <a href="http://delicious.com/zanshin/wireless">wireless</a> <a href="http://delicious.com/zanshin/useful">useful</a> <a href="http://delicious.com/zanshin/hack">hack</a>)</div>
+            </li></ul>

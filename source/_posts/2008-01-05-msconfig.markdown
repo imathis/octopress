@@ -1,0 +1,25 @@
+--- 
+layout: post
+comments: "false"
+title: msconfig
+date: 2008-1-5
+link: "false"
+categories: life
+---
+Recently I read about <a href="http://www.codinghorror.com/blog/archives/000923.html" title="Speeding Up Your PC's Boot Time">speeding up boot times on Windows PC's</a>.  The gist of the article was that there are two sources of contention for your processor, startup items and anti-virus/spyware software.
+
+<strong>Startup Items</strong>
+
+Most Windows-based computers sold today come with a plethora of pre-installed software, much of which is already configured and ready to use.  And we, as happy owners of a new computer, add our own software favorites soon after.  Any of these programs may offer to "start automatically" when you log in or sign in to your computer.    Every time you agree to this option you add to the CPU load when your computer boots, and you increase the amount of time a boot will take.
+
+Unless you absolutely need a piece of software running the instant your machine boots, there is no reason to have it start automatically at boot time.  Following the direction in the Coding Horror article mentioned above, you can use the configuration utility "msconfig" to disable as many or all startup items as you want.
+
+On my 1.87 Ghz ThinkPad Z60m I disabled all startup items, reducing my reboot time from 8 minutes and 19 seconds to 3 minutes and 40 seconds.  A savings of 4 minutes and 39 seconds or 55% faster boot time.
+
+Fifty-five percent faster.
+
+<strong>Anti-Virus</strong>
+
+In order for anti-virus software to be effective, it must be running all the time.  It must be aware of all the processes on your computer and interact with them at a very low level in the operating system stack.  While this provides the protection we all want and need, it can reduce the speed of your computer dramatically.  The <a href="http://www.codinghorror.com/blog/archives/000803.html" title="Choosing Anti-Anti-Virus Software">Choosing Anti-Anti-virus software article</a> suggests that we can avoid the necessity of anti-virus software at all if only we run as a non-administrator on our XP or Vista systems.  By default your user account as administrator rights to your computer.  This means any process your start (or that you appear to start) can do pretty much what ever it wants in terms of altering the system.  By running as a normal user we would effectively prevent malware from doing harm to our computers.  Of course, we would have to log in as the admin account in order to make changes to our system or install some programs.
+
+Personally I haven't taken this step yet.  I am intrigued by the idea of not having to run anti-virus software on my machine 100% of the time.  Perhaps after the next full backup of my computer I'll setup a new user account and try life without a net.
