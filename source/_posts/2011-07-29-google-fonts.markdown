@@ -1,6 +1,6 @@
 --- 
 layout: post
-comments: false
+comments: true
 title: Google Fonts
 date: 2011-7-29
 link: false
