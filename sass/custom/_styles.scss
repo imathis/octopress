@@ -8,9 +8,11 @@
 
 // use the sans variety for the body of the page
 body { @extend .sans; }
+p { @extend .sans }
 
 // let's have a background image in the header
 body > header { padding: 0; background-image: image_url("shoreline.png"); background-position: 0 0; height: 191px; }
 
-// set a better color to contrast with the header image
-body > header h1 > a { color: crimson }
+// alter how the page header h1 and h2 appear
+body > header > hgroup > h1 { margin-left: 55px; }
+body > header > hgroup > h2 { margin-left: 55px; font-size: small; }
