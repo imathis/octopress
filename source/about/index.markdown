@@ -8,7 +8,7 @@ footer: true
 ---
 Hello, and welcome. My name is Mark Nichols, and [zanshin.net](http://zanshin.net "zanshin.net") has been my online home since 1996. I live in Manhattan Kansas with my wife, [Sibylle](http://sibyllekuder.com "Elfenbein Klaviermusik"), our cats, Taz and Bootstrap, a pair of seven foot Kawai grand pianos, a [violoncello](http://cello.zanshin.net "Solfège"), and numerous computers. I've been a nerd since before being a nerd was popular.
 
-I was born in Brooklyn, New York and raised in Decatur, Illinois. I have a Bachelor’s Degree from Illinois State University in Applied Computer Science, and I work as the Integration Services Coordinator for the [Office of Mediated Education](http://www.ksu.edu/ome "Office of Mediated Education") at [Kansas State University](http://www.ksu.edu "Kansas State University") in Manhattan Kansas. Previously I have lived and worked in Illinois, Indiana, Washington, and South Carolina.
+I was born in Brooklyn, New York and raised in Decatur, Illinois. I have a Bachelor’s Degree from Illinois State University in Applied Computer Science, and I work as the Integration Services Coordinator for the [Office of Mediated Education](http://www.ksu.edu/ome "Office of Mediated Education") at [Kansas State University](http://www.ksu.edu "Kansas State University")	. Previously I have lived and worked in Illinois, Indiana, Washington, and South Carolina.
 
 Sibylle and I met and married as a result of using eHarmony. We are exploring the world as partners, lovers, companions, best friends, and husband and wife, and are finding that two lives shared are truly greater than the sum of the individuals involved. Together we share a WordPress.com site, called [Sibylle and Mark](http://sibylleandmark.wordpress.com "Sibylle and Mark"). 
 
@@ -50,4 +50,4 @@ The snippets of myself exposed on this site are only part of the the whole. Whil
 
 Policies
 --------
-Zanshin.net uses cookies to track your name and email address when you post a comment.  The information is stored on your computer only, and is not shared with anyone by me.  All comments are subject to approval, and may be edited or removed at any time without any notice.  All postings are copyrighted by me, and may  not be reproduced without prior, written permission. A complete [policy description](http://zanshin.net/policy "Policies") is available.
+Zanshin.net uses cookies to track your name and email address when you post a comment.  The information is stored on your computer only, and is not shared with anyone by me.  All comments are subject to approval, and may be edited or removed at any time without any notice.  All postings are copyrighted by me, and may  not be reproduced without prior, written permission. A complete [policy description]({{ root_url }}/policies "Policies") is available.
