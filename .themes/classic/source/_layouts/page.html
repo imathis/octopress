@@ -4,13 +4,13 @@ layout: default
 
 <div>
 <article>
-  <header>
+	  <header role="banner">
     <h1 class="entry-title">{{ page.title | titlecase }}</h1>
     {% if page.date %}<p class="meta">{% include post/date.html %}</p>{% endif %}
   </header>
   {{ content }}
   {% unless page.footer == false %}
-    <footer>
+    <footer role="contentinfo">
       {% if page.date or page.author %}<p class="meta">
         {% if page.author %}{% include post/author.html %}{% endif %}
         {% include post/date.html %}
