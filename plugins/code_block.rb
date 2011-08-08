@@ -79,15 +79,12 @@ module Jekyll
       if @filetype
         @filetype = 'objc' if @filetype == 'm'
         @filetype = 'perl' if @filetype == 'pl'
+        @filetype = 'yaml' if @filetype == 'yml'
         source += " #{highlight(code, @filetype)}</figure></div>"
       else
         source += "<pre><code>" + code.lstrip.rstrip.gsub(/</,'&lt;') + "</code></pre></figure></div>"
       end
       source = source + context['pygments_suffix'] if context['pygments_suffix']
-      partial = Liquid::Template.parse(source)
-      context.stack do
-        partial.render(context)
-      end
     end
   end
 end

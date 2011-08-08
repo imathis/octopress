@@ -55,14 +55,11 @@ module Jekyll
         @filetype = file.extname.sub('.','')
         @filetype = 'objc' if @filetype == 'm'
         @filetype = 'perl' if @filetype == 'pl'
+        @filetype = 'yaml' if @filetype == 'yml'
         title = @title ? "#{@title} (#{file.basename})" : file.basename
         url = "#{context.registers[:site].config['url']}/#{code_dir}/#{@file}"
         source = "<div><figure role=code><figcaption><span>#{title}</span> <a href='#{url}'>download</a></figcaption>\n"
         source += " #{highlight(code, @filetype)}</figure></div>"
-        partial = Liquid::Template.parse(source)
-        context.stack do
-          partial.render(context)
-        end
       end
     end
   end
