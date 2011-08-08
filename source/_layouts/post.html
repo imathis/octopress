@@ -5,11 +5,7 @@ single: true
 
 <div>
 <article class="hentry">
-  {% if post.link %}
-    {% include link.html %}
-  {% else %}
-    {% include article.html %}
-  {% endif %}
+  {% include article.html %}
   <footer>
     <p class="meta">
       {% include post/author.html %}
