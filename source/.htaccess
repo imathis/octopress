@@ -1,7 +1,7 @@
 # 20110808 - updated htaccess file for octopress/jekyll site
 RewriteEngine on
 
-# 20110808 - redirect /YYYY/MM/DD/title-slug/ to http://zanshin.net/blob/YYYY/MM/DD/title-slug/
+# 20110808 - redirect /YYYY/MM/DD/title-slug/ to http://zanshin.net/blog/YYYY/MM/DD/title-slug/
 Redirect 301 /([0-9][0-9][0-9][0-9])/([0-9][0-9])/([0-9][0-9])/([^/]+)/ http://zanshin.net/blog/$1/$2/$3/$4/
 
 # 20110808 - commenting out specific deny clauses for now. may add back in later if (as) needed
