@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Shiny"
+date: 2011-08-09 13:15
+comments: true
+categories: nerdliness
+link: false
+---
+For the past several years my site has been produced by using a self-hosted instance of [WordPress](http://wordpress.org "WordPress"). WordPress is a wonderful tool, with hundreds of themes to choose from, dozens of plugins to add functionality with, and a massive community to draw support from. After converting [zanshin.net](http://zanshin.net "Zanshin.net") to WordPress in December 2007 I started accumulating self-hosted and [WordPress.com](http://wordpress.com "WordPress.com") hosted sites. Currently I have or maintain six WordPress sites.
+
+However I was ready for something different for this, my primary site. I wanted to fiddle with the look and feel without having to delve into the templates and PHP code that is the backbone of WordPress. I wanted something closer to the early days of this site when I hand rolled all the pages and used FTP to publish the results. In the past few months I've been reading more and more about "baked websites", where baking means your site is served from a set of static pages rather than being assembled in a template after a flurry of database calls. 
+
+Brent Simmons wrote [A plea for baked weblogs](http://inessential.com/2011/03/16/a_plea_for_baked_weblogs) back in March 2011 where he talks about one of the biggest downsides to dynamically constructed websites, that of your site being overrun by enormous numbers of requests. Should you be fortunate enough (or unfortunate enough, depending on your view) to be linked to by a site with huge visitor volume, your MySQL database behind WordPress could become swamped resulting in your site being unavailable to anyone. Brent follows up with a second posting, [More on baked blogs](http://inessential.com/2011/03/17/more_on_baked_blogs) where he lists several sites that are baked, and some of the tools used to create a static site.
+
+One of the tools in particular caught my eye, [Jekyll](http://jekyllrb.com "Jekyll"). While I was fascinated by the idea I wasn't quite prepared to abandon what I knew for something with much less of a safety net. Paul Stamatiou wrote a lengthy and very detailed [How To: WordPress to Jekyll](http://paulstamatiou.com/how-to-wordpress-to-jekyll) posting that convinced me that Jekyll, or something like it, was what I wanted for my site.
+
+About three weeks ago there was a link on [Hacker News](http://news.ycombinator.com "Hacker News") about a new blogging framework for hackers called [Octopress](http://octopress.org "Octopress"). Octopress is a framework around Jekyll. It does some of the low-level grunt work for you, and simplifies the process of getting everything setup and working. After downloading and installing Octopress and playing around with it for a couple of hours ten days ago, I decided to take the plunge. Over the last ten days I've created the site you are reading right now, complete with the now nearly 13 year archive of entries, in Octopress. There are still a few rough spots that need ironing out (font sizes being the biggest wrinkle), but I am very pleased with this next iteration in the life of [Zanshin.net](http://zanshin.net "Zanshin.net").
+
+What started out as a hand rolled site in 1996 became a weblog in late 1999, and hand rolling morphed into Blogger and then MoveableType followed by WordPress and now (basically) hand rolling again. 
+
+Over the next couple of days I hope to put together a posting or two about the process I used to get from WordPress to Octopress, and some of the tools I used along the way.
