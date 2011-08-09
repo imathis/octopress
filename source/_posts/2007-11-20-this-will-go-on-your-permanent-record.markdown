@@ -2,7 +2,7 @@
 layout: post
 title: This Will Go On Your Permanent Record
 date: "2007-11-20"
-comments: false
+comments: true
 categories: life
 link: false
 ---

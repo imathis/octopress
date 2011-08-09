@@ -2,7 +2,7 @@
 layout: post
 title: Realizations
 date: 2002-8-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Civility Lost
 date: 2004-4-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

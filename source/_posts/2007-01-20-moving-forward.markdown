@@ -2,7 +2,7 @@
 layout: post
 title: Moving Forward
 date: 2007-1-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

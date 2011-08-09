@@ -2,7 +2,7 @@
 layout: post
 title: A Feeling Of Control
 date: 2006-3-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

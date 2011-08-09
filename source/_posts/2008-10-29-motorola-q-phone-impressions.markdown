@@ -2,7 +2,7 @@
 layout: post
 title: Motorola Q Phone Impressions
 date: "2008-10-29"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Cannot Start Microsoft Outlook
 date: 2011-2-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

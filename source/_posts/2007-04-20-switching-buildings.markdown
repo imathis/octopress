@@ -2,7 +2,7 @@
 layout: post
 title: Switching Buildings
 date: 2007-4-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

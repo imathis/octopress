@@ -2,7 +2,7 @@
 layout: post
 title: Ranking
 date: 2004-8-29
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

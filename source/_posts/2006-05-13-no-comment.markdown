@@ -2,7 +2,7 @@
 layout: post
 title: No Comment
 date: 2006-5-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

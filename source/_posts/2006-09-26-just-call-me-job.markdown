@@ -2,7 +2,7 @@
 layout: post
 title: Just Call Me Job
 date: 2006-9-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

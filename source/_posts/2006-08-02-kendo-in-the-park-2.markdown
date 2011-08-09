@@ -2,7 +2,7 @@
 layout: post
 title: Kendo in the Park
 date: 2006-8-2
-comments: false
+comments: true
 categories: health
 link: false
 ---

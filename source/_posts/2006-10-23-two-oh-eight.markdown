@@ -2,7 +2,7 @@
 layout: post
 title: Two-oh-eight
 date: "2006-10-23"
-comments: false
+comments: true
 categories: health
 link: false
 ---

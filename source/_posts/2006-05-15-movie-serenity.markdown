@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Serenity"
 date: 2006-5-15
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

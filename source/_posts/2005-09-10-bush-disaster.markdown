@@ -2,7 +2,7 @@
 layout: post
 title: Bush Disaster
 date: 2005-9-10
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

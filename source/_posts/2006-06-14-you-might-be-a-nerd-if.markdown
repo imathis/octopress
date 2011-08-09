@@ -2,7 +2,7 @@
 layout: post
 title: You Might Be A Nerd If...
 date: 2006-6-14
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

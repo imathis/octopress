@@ -2,7 +2,7 @@
 layout: post
 title: Faith
 date: 2004-3-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

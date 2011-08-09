@@ -2,7 +2,7 @@
 layout: post
 title: Slippery Slope
 date: 2004-3-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: A Weighty Matter
 date: 2007-6-14
-comments: false
+comments: true
 categories: health
 link: false
 ---

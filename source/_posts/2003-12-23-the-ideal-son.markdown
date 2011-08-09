@@ -2,7 +2,7 @@
 layout: post
 title: The Ideal Son
 date: "2003-12-23"
-comments: false
+comments: true
 categories: life
 link: false
 ---

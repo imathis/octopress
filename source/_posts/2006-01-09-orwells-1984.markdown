@@ -2,7 +2,7 @@
 layout: post
 title: Orwell's 1984
 date: 2006-1-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

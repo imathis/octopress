@@ -2,7 +2,7 @@
 layout: post
 title: Let Them Eat Cake
 date: 2006-7-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

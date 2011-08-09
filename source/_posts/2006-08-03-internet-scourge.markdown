@@ -2,7 +2,7 @@
 layout: post
 title: Internet Scourge
 date: 2006-8-3
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

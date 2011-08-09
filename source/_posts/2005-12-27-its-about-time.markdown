@@ -2,7 +2,7 @@
 layout: post
 title: It's About Time...
 date: "2005-12-27"
-comments: false
+comments: true
 categories: life
 link: false
 ---

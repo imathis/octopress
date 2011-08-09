@@ -2,7 +2,7 @@
 layout: post
 title: Nekko's Physical
 date: 2008-3-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Into The Rabbit Hole
 date: 2004-5-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

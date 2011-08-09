@@ -2,7 +2,7 @@
 layout: post
 title: Site redesign
 date: 2003-11-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

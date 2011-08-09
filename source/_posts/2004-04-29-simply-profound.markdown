@@ -2,7 +2,7 @@
 layout: post
 title: Simply Profound
 date: 2004-4-29
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

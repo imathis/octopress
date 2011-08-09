@@ -2,7 +2,7 @@
 layout: post
 title: Friday Five
 date: 2002-8-10
-comments: false
+comments: true
 categories: meme
 link: false
 ---

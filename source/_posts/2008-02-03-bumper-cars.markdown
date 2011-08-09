@@ -2,7 +2,7 @@
 layout: post
 title: Bumper Cars
 date: 2008-2-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

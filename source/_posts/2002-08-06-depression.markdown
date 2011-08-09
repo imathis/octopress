@@ -2,7 +2,7 @@
 layout: post
 title: Depression
 date: 2002-8-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

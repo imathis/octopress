@@ -2,7 +2,7 @@
 layout: post
 title: Four is Better Than Two
 date: 2007-4-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

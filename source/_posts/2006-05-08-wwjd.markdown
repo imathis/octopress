@@ -2,7 +2,7 @@
 layout: post
 title: WWJD
 date: 2006-5-8
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Mother's Day
 date: 2002-5-12
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

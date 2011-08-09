@@ -2,7 +2,7 @@
 layout: post
 title: Floods Are Heartbreaking
 date: 2011-5-20
-comments: false
+comments: true
 categories: links
 link: true
 ---

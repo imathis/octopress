@@ -2,7 +2,7 @@
 layout: post
 title: ssh!
 date: 2003-7-17
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

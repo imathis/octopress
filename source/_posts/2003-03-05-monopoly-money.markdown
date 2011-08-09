@@ -2,7 +2,7 @@
 layout: post
 title: Monopoly Money
 date: 2003-3-5
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

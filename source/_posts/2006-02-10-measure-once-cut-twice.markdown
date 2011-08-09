@@ -2,7 +2,7 @@
 layout: post
 title: Measure Once, Cut Twice
 date: 2006-2-10
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

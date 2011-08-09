@@ -2,7 +2,7 @@
 layout: post
 title: Expressing Anger
 date: 2003-9-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

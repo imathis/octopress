@@ -2,7 +2,7 @@
 layout: post
 title: Simple Minded
 date: 2002-6-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

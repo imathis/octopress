@@ -2,7 +2,7 @@
 layout: post
 title: Domino Theory of Interior Decorating
 date: "2003-10-14"
-comments: false
+comments: true
 categories: life
 link: false
 ---

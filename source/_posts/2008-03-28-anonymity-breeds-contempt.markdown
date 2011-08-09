@@ -2,7 +2,7 @@
 layout: post
 title: Anonymity Breeds Contempt
 date: 2008-3-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

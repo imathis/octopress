@@ -2,7 +2,7 @@
 layout: post
 title: Minor Site Maintenance
 date: 2007-7-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

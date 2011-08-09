@@ -2,7 +2,7 @@
 layout: post
 title: Riding Inside versus Riding Outside
 date: 2011-3-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

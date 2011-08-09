@@ -2,7 +2,7 @@
 layout: post
 title: Crash Test Dummy
 date: "2005-11-28"
-comments: false
+comments: true
 categories: life
 link: false
 ---

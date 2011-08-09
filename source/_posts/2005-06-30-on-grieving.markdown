@@ -2,7 +2,7 @@
 layout: post
 title: On grieving
 date: 2005-6-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

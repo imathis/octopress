@@ -2,7 +2,7 @@
 layout: post
 title: "The Power of Assertiveness "
 date: 2008-9-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

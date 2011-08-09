@@ -2,7 +2,7 @@
 layout: post
 title: Posse Comitatus
 date: 2005-9-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

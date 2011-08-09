@@ -2,7 +2,7 @@
 layout: post
 title: Five Days of Christmas
 date: "2003-12-29"
-comments: false
+comments: true
 categories: life
 link: false
 ---

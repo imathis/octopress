@@ -2,7 +2,7 @@
 layout: post
 title: A Matter of Hours
 date: 2006-5-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

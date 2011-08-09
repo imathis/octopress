@@ -2,7 +2,7 @@
 layout: post
 title: Leaving Home
 date: 2006-6-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

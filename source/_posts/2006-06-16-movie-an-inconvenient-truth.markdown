@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: An Inconvenient Truth"
 date: 2006-6-16
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

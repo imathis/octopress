@@ -2,7 +2,7 @@
 layout: post
 title: Our Goofy Cat Nekko
 date: 2001-5-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

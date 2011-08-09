@@ -2,7 +2,7 @@
 layout: post
 title: Moon
 date: 2009-4-13
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

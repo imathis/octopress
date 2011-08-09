@@ -2,7 +2,7 @@
 layout: post
 title: Family Ties
 date: 2006-3-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

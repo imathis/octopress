@@ -2,7 +2,7 @@
 layout: post
 title: Valuation
 date: 2004-11-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

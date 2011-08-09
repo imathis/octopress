@@ -2,7 +2,7 @@
 layout: post
 title: By The Way,
 date: "2005-12-11"
-comments: false
+comments: true
 categories: life
 link: false
 ---

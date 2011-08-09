@@ -2,7 +2,7 @@
 layout: post
 title: I Want to Ride My Bicycle
 date: 2011-1-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Domino Effect
 date: 2003-8-8
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

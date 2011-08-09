@@ -2,7 +2,7 @@
 layout: post
 title: That Was Quick
 date: 2008-1-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

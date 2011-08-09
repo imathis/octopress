@@ -2,7 +2,7 @@
 layout: post
 title: Programming Master Class
 date: 2008-3-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Insulin Yes, Pills Not So Much
 date: 2006-10-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

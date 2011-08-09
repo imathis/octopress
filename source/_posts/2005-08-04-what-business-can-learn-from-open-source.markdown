@@ -2,7 +2,7 @@
 layout: post
 title: What Business Can Learn From Open Source
 date: 2005-8-4
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

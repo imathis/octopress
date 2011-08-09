@@ -2,7 +2,7 @@
 layout: post
 title: On Playing Music
 date: 2008-5-17
-comments: false
+comments: true
 categories: life
 link: false
 ---

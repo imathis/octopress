@@ -2,7 +2,7 @@
 layout: post
 title: Forty-Three
 date: 2004-5-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

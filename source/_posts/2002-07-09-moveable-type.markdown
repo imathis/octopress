@@ -2,7 +2,7 @@
 layout: post
 title: Moveable Type
 date: 2002-7-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

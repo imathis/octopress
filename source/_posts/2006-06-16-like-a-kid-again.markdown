@@ -2,7 +2,7 @@
 layout: post
 title: Like A Kid Again
 date: 2006-6-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

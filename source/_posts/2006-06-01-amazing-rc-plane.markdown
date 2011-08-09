@@ -2,7 +2,7 @@
 layout: post
 title: Amazing R/C Plane
 date: 2006-6-1
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

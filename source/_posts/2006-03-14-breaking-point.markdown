@@ -2,7 +2,7 @@
 layout: post
 title: Breaking Point
 date: 2006-3-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

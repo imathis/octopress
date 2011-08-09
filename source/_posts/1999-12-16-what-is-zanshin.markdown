@@ -2,7 +2,7 @@
 layout: post
 title: What is Zanshin?
 date: "1999-12-16"
-comments: false
+comments: true
 categories: life
 link: false
 ---

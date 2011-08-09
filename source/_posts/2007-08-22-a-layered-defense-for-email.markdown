@@ -2,7 +2,7 @@
 layout: post
 title: A Layered Defense for Email
 date: 2007-8-22
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

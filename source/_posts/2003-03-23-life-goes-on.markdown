@@ -2,7 +2,7 @@
 layout: post
 title: Life Goes On
 date: 2003-3-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

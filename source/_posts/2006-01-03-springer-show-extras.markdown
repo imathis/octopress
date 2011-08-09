@@ -2,7 +2,7 @@
 layout: post
 title: Springer Show Extras
 date: 2006-1-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

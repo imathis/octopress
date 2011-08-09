@@ -2,7 +2,7 @@
 layout: post
 title: The Cruelity of Spam
 date: 2005-11-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

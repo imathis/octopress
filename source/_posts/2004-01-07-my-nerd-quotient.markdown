@@ -2,7 +2,7 @@
 layout: post
 title: My Nerd Quotient
 date: 2004-1-7
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

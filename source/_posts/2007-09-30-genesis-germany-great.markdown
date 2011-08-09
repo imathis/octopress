@@ -2,7 +2,7 @@
 layout: post
 title: Genesis + Germany = Great
 date: 2007-9-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

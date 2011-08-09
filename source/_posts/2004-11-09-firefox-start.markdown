@@ -2,7 +2,7 @@
 layout: post
 title: Firefox Start
 date: 2004-11-9
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

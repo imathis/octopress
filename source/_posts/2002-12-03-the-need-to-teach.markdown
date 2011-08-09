@@ -2,7 +2,7 @@
 layout: post
 title: The Need To Teach
 date: 2002-12-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

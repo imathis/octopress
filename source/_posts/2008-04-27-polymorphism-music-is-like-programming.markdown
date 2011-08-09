@@ -2,7 +2,7 @@
 layout: post
 title: "Polymorphism: Music is Like Programming"
 date: 2008-4-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

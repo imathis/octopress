@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Echo Park"
 date: "2006-10-28"
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

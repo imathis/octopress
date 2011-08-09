@@ -2,7 +2,7 @@
 layout: post
 title: Two Thirty And Counting
 date: 2006-8-6
-comments: false
+comments: true
 categories: health
 link: false
 ---

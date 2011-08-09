@@ -2,7 +2,7 @@
 layout: post
 title: Posing With The Moon
 date: 2011-6-3
-comments: false
+comments: true
 categories: links
 link: true
 ---

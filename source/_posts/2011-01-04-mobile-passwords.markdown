@@ -2,7 +2,7 @@
 layout: post
 title: Mobile Passwords
 date: 2011-1-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

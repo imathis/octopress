@@ -2,7 +2,7 @@
 layout: post
 title: Things They Don't Tell You
 date: 2007-3-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

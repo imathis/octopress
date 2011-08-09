@@ -2,7 +2,7 @@
 layout: post
 title: Obama Democratic Nomination Speech
 date: 2008-8-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

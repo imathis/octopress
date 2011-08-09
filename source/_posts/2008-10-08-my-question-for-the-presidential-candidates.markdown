@@ -2,7 +2,7 @@
 layout: post
 title: My Question for the Presidential Candidates
 date: 2008-10-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

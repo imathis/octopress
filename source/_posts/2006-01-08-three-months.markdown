@@ -2,7 +2,7 @@
 layout: post
 title: Three Months
 date: 2006-1-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

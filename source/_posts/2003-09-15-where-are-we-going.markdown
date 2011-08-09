@@ -2,7 +2,7 @@
 layout: post
 title: Where Are We Going?
 date: 2003-9-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

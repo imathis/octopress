@@ -2,7 +2,7 @@
 layout: post
 title: Under Pressure
 date: 2006-2-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: How To Read a High-Volume Mail List
 date: 2010-6-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

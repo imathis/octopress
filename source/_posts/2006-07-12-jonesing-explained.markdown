@@ -2,7 +2,7 @@
 layout: post
 title: Jonesing Explained
 date: 2006-7-12
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

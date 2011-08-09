@@ -2,7 +2,7 @@
 layout: post
 title: Hodge Podge
 date: 2004-8-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

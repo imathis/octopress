@@ -2,7 +2,7 @@
 layout: post
 title: Civics Test
 date: "2008-11-26"
-comments: false
+comments: true
 categories: life
 link: false
 ---

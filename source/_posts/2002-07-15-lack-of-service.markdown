@@ -2,7 +2,7 @@
 layout: post
 title: Lack of Service
 date: 2002-7-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: My Year In Cities, 2006 Edition
 date: "2006-12-24"
-comments: false
+comments: true
 categories: meme
 link: false
 ---

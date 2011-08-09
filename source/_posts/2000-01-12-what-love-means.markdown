@@ -2,7 +2,7 @@
 layout: post
 title: What Love Means
 date: 2000-1-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

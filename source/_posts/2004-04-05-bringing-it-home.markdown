@@ -2,7 +2,7 @@
 layout: post
 title: Bringing It Home
 date: 2004-4-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

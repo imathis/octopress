@@ -2,7 +2,7 @@
 layout: post
 title: Software Development Meme
 date: 2008-7-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

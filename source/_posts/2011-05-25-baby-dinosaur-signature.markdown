@@ -2,7 +2,7 @@
 layout: post
 title: Baby Dinosaur Signature
 date: 2011-5-25
-comments: false
+comments: true
 categories: links
 link: true
 ---

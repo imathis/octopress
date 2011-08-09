@@ -2,7 +2,7 @@
 layout: post
 title: Stupid is As Stupid Does
 date: 2002-5-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

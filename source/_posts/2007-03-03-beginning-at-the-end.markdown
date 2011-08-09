@@ -2,7 +2,7 @@
 layout: post
 title: Beginning at the End
 date: 2007-3-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

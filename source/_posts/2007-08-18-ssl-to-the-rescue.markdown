@@ -2,7 +2,7 @@
 layout: post
 title: SSL To The Rescue
 date: 2007-8-18
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

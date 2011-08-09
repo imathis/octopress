@@ -2,7 +2,7 @@
 layout: post
 title: CPU Frequency
 date: 2003-11-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

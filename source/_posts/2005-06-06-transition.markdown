@@ -2,7 +2,7 @@
 layout: post
 title: Transition
 date: 2005-6-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

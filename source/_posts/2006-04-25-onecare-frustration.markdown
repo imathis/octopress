@@ -2,7 +2,7 @@
 layout: post
 title: OneCare Frustration
 date: 2006-4-25
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

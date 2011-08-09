@@ -2,7 +2,7 @@
 layout: post
 title: Next Steps
 date: 2006-7-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

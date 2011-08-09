@@ -2,7 +2,7 @@
 layout: post
 title: My God! It's full of stars.
 date: 2007-7-26
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

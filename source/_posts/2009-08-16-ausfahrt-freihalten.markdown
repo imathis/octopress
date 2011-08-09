@@ -2,7 +2,7 @@
 layout: post
 title: Ausfahrt Freihalten!
 date: 2009-8-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

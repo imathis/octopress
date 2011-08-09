@@ -2,7 +2,7 @@
 layout: post
 title: Divisible By Nine
 date: "2007-11-22"
-comments: false
+comments: true
 categories: life
 link: false
 ---

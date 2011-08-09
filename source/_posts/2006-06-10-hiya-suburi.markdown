@@ -2,7 +2,7 @@
 layout: post
 title: Hiya Suburi
 date: 2006-6-10
-comments: false
+comments: true
 categories: health
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Blue Monday
 date: 2001-3-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

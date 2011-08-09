@@ -2,7 +2,7 @@
 layout: post
 title: How NOT to Install Pepper Updates for Mint
 date: 2010-2-25
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

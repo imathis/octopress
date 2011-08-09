@@ -2,7 +2,7 @@
 layout: post
 title: Ballot Cast
 date: 2008-11-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

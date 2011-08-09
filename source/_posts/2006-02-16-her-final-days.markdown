@@ -2,7 +2,7 @@
 layout: post
 title: Her Final Days
 date: 2006-2-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: iPhone eReader
 date: 2008-7-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

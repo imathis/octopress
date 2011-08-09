@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Last of the Dogmen"
 date: 2006-9-11
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

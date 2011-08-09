@@ -2,7 +2,7 @@
 layout: post
 title: "\"Not Responsible For Damage - Stay Back 500 Feet\""
 date: "2005-11-20"
-comments: false
+comments: true
 categories: life
 link: false
 ---

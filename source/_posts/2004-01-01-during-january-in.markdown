@@ -2,7 +2,7 @@
 layout: post
 title: During January in...
 date: 2004-1-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Crowded Voting Booth
 date: "2008-10-24"
-comments: false
+comments: true
 categories: life
 link: false
 ---

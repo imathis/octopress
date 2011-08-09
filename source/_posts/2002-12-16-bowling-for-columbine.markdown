@@ -2,7 +2,7 @@
 layout: post
 title: Bowling For Columbine
 date: "2002-12-16"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Open Doors
 date: 2004-6-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

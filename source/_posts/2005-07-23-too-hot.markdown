@@ -2,7 +2,7 @@
 layout: post
 title: Too Hot
 date: 2005-7-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

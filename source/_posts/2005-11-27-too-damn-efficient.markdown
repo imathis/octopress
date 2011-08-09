@@ -2,7 +2,7 @@
 layout: post
 title: Too Damn Efficient
 date: "2005-11-27"
-comments: false
+comments: true
 categories: life
 link: false
 ---

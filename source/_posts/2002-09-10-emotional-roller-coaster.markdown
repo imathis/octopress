@@ -2,7 +2,7 @@
 layout: post
 title: Emotional Roller Coaster
 date: 2002-9-10
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

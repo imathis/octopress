@@ -2,7 +2,7 @@
 layout: post
 title: This Ain't Your Father's Buick
 date: 2006-6-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Sunday Evening
 date: 2007-9-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

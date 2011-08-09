@@ -2,7 +2,7 @@
 layout: post
 title: Lost. Found. Lost Again. Perhaps.
 date: 2008-8-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

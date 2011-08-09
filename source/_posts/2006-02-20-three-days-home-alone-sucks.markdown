@@ -2,7 +2,7 @@
 layout: post
 title: Three Days Home Alone Sucks
 date: 2006-2-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

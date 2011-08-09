@@ -2,7 +2,7 @@
 layout: post
 title: Feeling Like A Bully
 date: 2007-8-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

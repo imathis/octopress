@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Gladiator"
 date: 2006-3-27
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

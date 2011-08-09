@@ -2,7 +2,7 @@
 layout: post
 title: iTunes Play Stats
 date: 2004-4-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

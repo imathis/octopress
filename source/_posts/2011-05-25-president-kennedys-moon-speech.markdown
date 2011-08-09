@@ -2,7 +2,7 @@
 layout: post
 title: President Kennedy's Moon Speech
 date: 2011-5-25
-comments: false
+comments: true
 categories: links
 link: true
 ---

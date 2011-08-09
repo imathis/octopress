@@ -2,7 +2,7 @@
 layout: post
 title: This Changes Everything
 date: 2007-7-26
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: How Very Rude
 date: 2001-8-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

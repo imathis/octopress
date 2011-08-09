@@ -2,7 +2,7 @@
 layout: post
 title: Account Security
 date: 2010-3-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

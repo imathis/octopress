@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Die Hard"
 date: 2006-3-27
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

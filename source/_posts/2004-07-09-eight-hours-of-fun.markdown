@@ -2,7 +2,7 @@
 layout: post
 title: Eight Hours of Fun
 date: 2004-7-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

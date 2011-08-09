@@ -2,7 +2,7 @@
 layout: post
 title: The Classics
 date: 2007-3-22
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

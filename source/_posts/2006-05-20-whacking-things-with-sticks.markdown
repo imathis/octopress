@@ -2,7 +2,7 @@
 layout: post
 title: Whacking Things With Sticks
 date: 2006-5-20
-comments: false
+comments: true
 categories: health
 link: false
 ---

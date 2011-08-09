@@ -2,7 +2,7 @@
 layout: post
 title: The Switch Is On
 date: 2003-1-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

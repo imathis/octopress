@@ -2,7 +2,7 @@
 layout: post
 title: Eighteen hundred and eighty
 date: 2006-9-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Memory Card Infected
 date: 2007-9-30
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

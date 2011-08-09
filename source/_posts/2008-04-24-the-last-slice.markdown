@@ -2,7 +2,7 @@
 layout: post
 title: The Last Slice
 date: 2008-4-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

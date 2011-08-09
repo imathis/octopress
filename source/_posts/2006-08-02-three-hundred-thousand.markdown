@@ -2,7 +2,7 @@
 layout: post
 title: Three Hundred Thousand
 date: 2006-8-2
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: On vacation
 date: 2008-9-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Lexus vs. Sleep Inn
 date: 2004-5-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

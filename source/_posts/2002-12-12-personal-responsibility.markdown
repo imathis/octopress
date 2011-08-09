@@ -2,7 +2,7 @@
 layout: post
 title: Personal Responsibility
 date: "2002-12-12"
-comments: false
+comments: true
 categories: life
 link: false
 ---

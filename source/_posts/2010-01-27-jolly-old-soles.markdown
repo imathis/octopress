@@ -2,7 +2,7 @@
 layout: post
 title: Jolly Old Soles
 date: 2010-1-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

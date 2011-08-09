@@ -2,7 +2,7 @@
 layout: post
 title: "50,000"
 date: 2011-5-13
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

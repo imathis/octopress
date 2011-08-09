@@ -2,7 +2,7 @@
 layout: post
 title: Movie Ocean's Eleven
 date: "2006-11-11"
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

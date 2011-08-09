@@ -2,7 +2,7 @@
 layout: post
 title: I Just About Died...
 date: 2006-6-12
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

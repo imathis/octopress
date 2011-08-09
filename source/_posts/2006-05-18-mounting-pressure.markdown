@@ -2,7 +2,7 @@
 layout: post
 title: Mounting Pressure
 date: 2006-5-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

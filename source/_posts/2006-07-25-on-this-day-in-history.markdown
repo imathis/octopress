@@ -2,7 +2,7 @@
 layout: post
 title: On This Day In History
 date: 2006-7-25
-comments: false
+comments: true
 categories: family
 link: false
 ---

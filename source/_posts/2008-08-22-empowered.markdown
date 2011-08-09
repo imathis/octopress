@@ -2,7 +2,7 @@
 layout: post
 title: Empowered
 date: 2008-8-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Travel Books
 date: 2010-1-29
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

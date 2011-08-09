@@ -2,7 +2,7 @@
 layout: post
 title: It Might Get Loud
 date: 2010-3-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Putting a New Groove On
 date: 2004-1-22
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

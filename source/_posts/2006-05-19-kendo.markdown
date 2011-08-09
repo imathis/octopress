@@ -2,7 +2,7 @@
 layout: post
 title: Kendo
 date: 2006-5-19
-comments: false
+comments: true
 categories: health
 link: false
 ---

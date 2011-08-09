@@ -2,7 +2,7 @@
 layout: post
 title: False Positive
 date: 2009-7-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

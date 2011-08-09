@@ -2,7 +2,7 @@
 layout: post
 title: Sea of Boxes
 date: 2004-7-17
-comments: false
+comments: true
 categories: life
 link: false
 ---

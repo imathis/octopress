@@ -2,7 +2,7 @@
 layout: post
 title: I'm Gonna Need New Business Cards
 date: "2008-12-17"
-comments: false
+comments: true
 categories: life
 link: false
 ---

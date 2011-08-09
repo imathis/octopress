@@ -2,7 +2,7 @@
 layout: post
 title: No More Monkey
 date: 2004-1-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

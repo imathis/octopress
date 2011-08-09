@@ -2,7 +2,7 @@
 layout: post
 title: Fears
 date: 2006-8-22
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

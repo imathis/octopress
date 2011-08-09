@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Hard Rain"
 date: 2006-6-29
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

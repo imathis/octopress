@@ -2,7 +2,7 @@
 layout: post
 title: Dominos Falling
 date: 2003-4-8
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

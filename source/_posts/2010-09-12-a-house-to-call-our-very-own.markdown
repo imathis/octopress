@@ -2,7 +2,7 @@
 layout: post
 title: A House to Call Our Very Own
 date: 2010-9-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

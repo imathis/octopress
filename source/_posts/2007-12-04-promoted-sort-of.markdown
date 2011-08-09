@@ -2,7 +2,7 @@
 layout: post
 title: Promoted, Sort Of
 date: 2007-12-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

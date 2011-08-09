@@ -2,7 +2,7 @@
 layout: post
 title: Building Blocks
 date: 2008-7-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

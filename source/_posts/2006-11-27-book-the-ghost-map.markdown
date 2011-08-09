@@ -2,7 +2,7 @@
 layout: post
 title: "Book: The Ghost Map"
 date: "2006-11-27"
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

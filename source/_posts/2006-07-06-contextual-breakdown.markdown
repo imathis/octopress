@@ -2,7 +2,7 @@
 layout: post
 title: Contextual Breakdown
 date: 2006-7-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

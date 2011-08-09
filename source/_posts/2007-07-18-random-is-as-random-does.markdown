@@ -2,7 +2,7 @@
 layout: post
 title: Random Is As Random Does
 date: 2007-7-18
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

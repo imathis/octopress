@@ -2,7 +2,7 @@
 layout: post
 title: More Accountability
 date: 2003-4-1
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Financial Roller Coaster with Emotional Payout
 date: 2003-8-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

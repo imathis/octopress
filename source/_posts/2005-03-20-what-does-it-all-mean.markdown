@@ -2,7 +2,7 @@
 layout: post
 title: What Does It All Mean?
 date: 2005-3-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

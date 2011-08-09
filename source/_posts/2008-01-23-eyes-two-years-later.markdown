@@ -2,7 +2,7 @@
 layout: post
 title: Eyes, Two Years Later
 date: 2008-1-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

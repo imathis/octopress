@@ -2,7 +2,7 @@
 layout: post
 title: Thoughts on Commuting
 date: "2008-12-24"
-comments: false
+comments: true
 categories: life
 link: false
 ---

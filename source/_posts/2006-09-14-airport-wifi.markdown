@@ -2,7 +2,7 @@
 layout: post
 title: Airport WiFi
 date: 2006-9-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

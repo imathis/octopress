@@ -2,7 +2,7 @@
 layout: post
 title: Fog of War
 date: 2004-6-7
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

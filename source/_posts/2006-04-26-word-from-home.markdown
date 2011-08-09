@@ -2,7 +2,7 @@
 layout: post
 title: Word from Home
 date: 2006-4-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

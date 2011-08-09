@@ -2,7 +2,7 @@
 layout: post
 title: Chicken Little
 date: 2003-4-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

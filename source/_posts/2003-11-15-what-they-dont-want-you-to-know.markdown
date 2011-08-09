@@ -2,7 +2,7 @@
 layout: post
 title: What They Don't Want You To Know
 date: "2003-11-15"
-comments: false
+comments: true
 categories: life
 link: false
 ---

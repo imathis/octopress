@@ -2,7 +2,7 @@
 layout: post
 title: Workin' The Holiday
 date: 2006-1-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: The Hacker's Manifesto
 date: 2008-7-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

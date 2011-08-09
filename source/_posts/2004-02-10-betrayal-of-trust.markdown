@@ -2,7 +2,7 @@
 layout: post
 title: Betrayal of Trust
 date: 2004-2-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

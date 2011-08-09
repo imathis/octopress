@@ -2,7 +2,7 @@
 layout: post
 title: Painless
 date: 2005-4-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

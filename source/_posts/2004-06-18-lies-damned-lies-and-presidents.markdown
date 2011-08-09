@@ -2,7 +2,7 @@
 layout: post
 title: Lies, Damned Lies, and Presidents
 date: 2004-6-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

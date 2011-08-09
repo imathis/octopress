@@ -2,7 +2,7 @@
 layout: post
 title: Unwritten Rules
 date: 2008-7-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

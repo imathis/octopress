@@ -2,7 +2,7 @@
 layout: post
 title: Outer Limits
 date: "2005-11-13"
-comments: false
+comments: true
 categories: life
 link: false
 ---

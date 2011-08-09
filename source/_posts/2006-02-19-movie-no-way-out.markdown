@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: No Way Out"
 date: 2006-2-19
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Inside Iraq
 date: 2007-7-26
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

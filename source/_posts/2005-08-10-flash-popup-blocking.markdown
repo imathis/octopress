@@ -2,7 +2,7 @@
 layout: post
 title: Flash Popup Blocking
 date: 2005-8-10
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

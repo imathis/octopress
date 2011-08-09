@@ -2,7 +2,7 @@
 layout: post
 title: OpenCourseWare
 date: "2007-11-27"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

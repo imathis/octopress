@@ -2,7 +2,7 @@
 layout: post
 title: Where Do We Want To Live Today?
 date: 2004-1-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

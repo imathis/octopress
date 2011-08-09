@@ -2,7 +2,7 @@
 layout: post
 title: Flickr Upload Via Command Line
 date: 2009-4-17
-comments: false
+comments: true
 categories: life
 link: false
 ---

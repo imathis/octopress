@@ -2,7 +2,7 @@
 layout: post
 title: Consulting versus Employment
 date: 2008-4-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

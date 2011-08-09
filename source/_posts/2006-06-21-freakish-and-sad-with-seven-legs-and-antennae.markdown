@@ -2,7 +2,7 @@
 layout: post
 title: Freakish and Sad, With Seven Legs and Antennae
 date: 2006-6-21
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

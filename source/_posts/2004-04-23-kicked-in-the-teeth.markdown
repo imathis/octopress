@@ -2,7 +2,7 @@
 layout: post
 title: Kicked In The Teeth
 date: 2004-4-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

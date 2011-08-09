@@ -2,7 +2,7 @@
 layout: post
 title: Molly Ivins, Dies at 62
 date: 2007-1-31
-comments: false
+comments: true
 categories: life
 link: false
 ---

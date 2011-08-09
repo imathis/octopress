@@ -2,7 +2,7 @@
 layout: post
 title: Christmas Alone
 date: "2005-12-25"
-comments: false
+comments: true
 categories: life
 link: false
 ---

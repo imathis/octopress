@@ -2,7 +2,7 @@
 layout: post
 title: Wait Six Months
 date: 2005-12-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

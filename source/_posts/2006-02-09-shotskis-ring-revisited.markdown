@@ -2,7 +2,7 @@
 layout: post
 title: Shotski's Ring, Revisited
 date: 2006-2-9
-comments: false
+comments: true
 categories: health
 link: false
 ---

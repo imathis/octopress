@@ -2,7 +2,7 @@
 layout: post
 title: Father Knows Best
 date: 2007-1-31
-comments: false
+comments: true
 categories: life
 link: false
 ---

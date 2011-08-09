@@ -2,7 +2,7 @@
 layout: post
 title: Camino Revisited
 date: 2003-9-8
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Applause "
 date: 2009-5-8
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

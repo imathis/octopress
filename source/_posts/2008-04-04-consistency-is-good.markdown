@@ -2,7 +2,7 @@
 layout: post
 title: Consistency Is Good
 date: 2008-4-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

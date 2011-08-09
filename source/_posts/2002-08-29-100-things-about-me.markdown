@@ -2,7 +2,7 @@
 layout: post
 title: 100 Things About Me
 date: 2002-8-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

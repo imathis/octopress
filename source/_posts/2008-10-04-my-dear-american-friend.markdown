@@ -2,7 +2,7 @@
 layout: post
 title: My Dear American Friend
 date: 2008-10-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

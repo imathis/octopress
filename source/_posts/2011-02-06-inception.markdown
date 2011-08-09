@@ -2,7 +2,7 @@
 layout: post
 title: Inception
 date: 2011-2-6
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

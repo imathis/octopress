@@ -2,7 +2,7 @@
 layout: post
 title: No More iPad Envy
 date: 2011-1-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Mean Time To Failure
 date: 2004-12-6
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

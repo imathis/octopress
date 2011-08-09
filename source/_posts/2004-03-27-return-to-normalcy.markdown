@@ -2,7 +2,7 @@
 layout: post
 title: Return to Normalcy
 date: 2004-3-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

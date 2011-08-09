@@ -2,7 +2,7 @@
 layout: post
 title: Mirror Mirror
 date: 2006-4-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

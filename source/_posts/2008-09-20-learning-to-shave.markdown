@@ -2,7 +2,7 @@
 layout: post
 title: Learning to Shave
 date: 2008-9-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

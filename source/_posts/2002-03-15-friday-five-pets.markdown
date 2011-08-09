@@ -2,7 +2,7 @@
 layout: post
 title: "Friday Five: Pets"
 date: 2002-3-15
-comments: false
+comments: true
 categories: meme
 link: false
 ---

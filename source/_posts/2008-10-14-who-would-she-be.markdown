@@ -2,7 +2,7 @@
 layout: post
 title: Who Would She Be?
 date: "2008-10-14"
-comments: false
+comments: true
 categories: life
 link: false
 ---

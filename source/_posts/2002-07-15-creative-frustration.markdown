@@ -2,7 +2,7 @@
 layout: post
 title: Creative Frustration
 date: 2002-7-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

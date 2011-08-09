@@ -2,7 +2,7 @@
 layout: post
 title: Up Yours
 date: "2004-11-24"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

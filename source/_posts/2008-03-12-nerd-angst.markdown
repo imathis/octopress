@@ -2,7 +2,7 @@
 layout: post
 title: Nerd Angst
 date: 2008-3-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

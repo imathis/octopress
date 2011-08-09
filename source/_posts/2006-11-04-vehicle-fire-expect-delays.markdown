@@ -2,7 +2,7 @@
 layout: post
 title: Vehicle Fire, Expect Delays
 date: 2006-11-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

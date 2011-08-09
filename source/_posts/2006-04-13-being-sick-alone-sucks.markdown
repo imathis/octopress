@@ -2,7 +2,7 @@
 layout: post
 title: Being Sick Alone Sucks
 date: 2006-4-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Love Is All You Need
 date: 2006-12-4
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

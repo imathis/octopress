@@ -2,7 +2,7 @@
 layout: post
 title: And the Truth Shall Set Us Free
 date: 2003-5-23
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Resume Revisited
 date: 2004-2-17
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

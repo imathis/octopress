@@ -2,7 +2,7 @@
 layout: post
 title: The Lost Joy of Travel
 date: 2001-9-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

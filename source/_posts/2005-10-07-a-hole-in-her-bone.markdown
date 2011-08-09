@@ -2,7 +2,7 @@
 layout: post
 title: A hole in her bone
 date: 2005-10-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

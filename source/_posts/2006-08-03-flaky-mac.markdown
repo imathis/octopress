@@ -2,7 +2,7 @@
 layout: post
 title: Flaky Mac
 date: 2006-8-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

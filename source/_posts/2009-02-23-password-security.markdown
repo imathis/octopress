@@ -2,7 +2,7 @@
 layout: post
 title: Password Security
 date: 2009-2-23
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

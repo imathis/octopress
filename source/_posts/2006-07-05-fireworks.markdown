@@ -2,7 +2,7 @@
 layout: post
 title: Fireworks
 date: 2006-7-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

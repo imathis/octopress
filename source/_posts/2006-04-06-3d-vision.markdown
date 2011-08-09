@@ -2,7 +2,7 @@
 layout: post
 title: 3D Vision
 date: 2006-4-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

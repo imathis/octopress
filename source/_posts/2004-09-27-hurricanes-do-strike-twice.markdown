@@ -2,7 +2,7 @@
 layout: post
 title: Hurricanes Do Strike Twice
 date: 2004-9-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Der Osterspaziergang
 date: 2007-4-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

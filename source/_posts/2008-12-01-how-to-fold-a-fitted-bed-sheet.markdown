@@ -2,7 +2,7 @@
 layout: post
 title: How To Fold a Fitted Bed Sheet
 date: 2008-12-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

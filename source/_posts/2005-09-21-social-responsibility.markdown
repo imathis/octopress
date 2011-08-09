@@ -2,7 +2,7 @@
 layout: post
 title: Social Responsibility
 date: 2005-9-21
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

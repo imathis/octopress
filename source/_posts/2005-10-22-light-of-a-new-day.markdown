@@ -2,7 +2,7 @@
 layout: post
 title: Light of a New Day
 date: "2005-10-22"
-comments: false
+comments: true
 categories: life
 link: false
 ---

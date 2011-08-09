@@ -2,7 +2,7 @@
 layout: post
 title: Show of Hands
 date: "2005-12-25"
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

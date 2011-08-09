@@ -2,7 +2,7 @@
 layout: post
 title: Modem Mania
 date: 2006-4-11
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Summer of Moving
 date: 2007-8-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

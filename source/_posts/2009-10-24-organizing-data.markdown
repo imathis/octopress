@@ -2,7 +2,7 @@
 layout: post
 title: Organizing Data
 date: "2009-10-24"
-comments: false
+comments: true
 categories: life
 link: false
 ---

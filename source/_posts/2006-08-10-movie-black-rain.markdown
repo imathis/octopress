@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Black Rain"
 date: 2006-8-10
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

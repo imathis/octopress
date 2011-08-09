@@ -2,7 +2,7 @@
 layout: post
 title: STS-107, Space Shuttle Columbia, February 1, 2003
 date: 2003-2-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

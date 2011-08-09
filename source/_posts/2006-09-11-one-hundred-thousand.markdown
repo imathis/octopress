@@ -2,7 +2,7 @@
 layout: post
 title: One Hundred Thousand
 date: 2006-9-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

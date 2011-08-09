@@ -2,7 +2,7 @@
 layout: post
 title: Purgatory
 date: "2004-12-17"
-comments: false
+comments: true
 categories: life
 link: false
 ---

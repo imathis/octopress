@@ -2,7 +2,7 @@
 layout: post
 title: A Funny Thing Happened On the Way Home From Lunch
 date: 2005-1-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

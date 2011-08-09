@@ -2,7 +2,7 @@
 layout: post
 title: Negative Growth
 date: 2006-4-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

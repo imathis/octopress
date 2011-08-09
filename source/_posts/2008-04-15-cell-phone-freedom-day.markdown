@@ -2,7 +2,7 @@
 layout: post
 title: Cell Phone Freedom Day
 date: 2008-4-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

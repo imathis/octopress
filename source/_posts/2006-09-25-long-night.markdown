@@ -2,7 +2,7 @@
 layout: post
 title: Long Night
 date: 2006-9-25
-comments: false
+comments: true
 categories: family
 link: false
 ---

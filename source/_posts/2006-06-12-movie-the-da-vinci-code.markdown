@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: The Da Vinci Code"
 date: 2006-6-12
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

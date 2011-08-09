@@ -2,7 +2,7 @@
 layout: post
 title: links for 2008-09-20
 date: 2008-9-20
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

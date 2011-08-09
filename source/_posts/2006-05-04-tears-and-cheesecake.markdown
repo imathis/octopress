@@ -2,7 +2,7 @@
 layout: post
 title: Tears and Cheesecake
 date: 2006-5-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

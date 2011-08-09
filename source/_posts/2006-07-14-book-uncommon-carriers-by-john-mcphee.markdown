@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Uncommon Carriers by John McPhee"
 date: 2006-7-14
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

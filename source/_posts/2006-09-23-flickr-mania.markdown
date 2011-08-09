@@ -2,7 +2,7 @@
 layout: post
 title: Flickr Mania
 date: 2006-9-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

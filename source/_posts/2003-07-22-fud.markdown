@@ -2,7 +2,7 @@
 layout: post
 title: FUD
 date: 2003-7-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Interview Game
 date: 2004-9-12
-comments: false
+comments: true
 categories: meme
 link: false
 ---

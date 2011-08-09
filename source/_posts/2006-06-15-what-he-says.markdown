@@ -2,7 +2,7 @@
 layout: post
 title: What He Says
 date: 2006-6-15
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

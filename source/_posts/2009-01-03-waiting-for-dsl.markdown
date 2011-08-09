@@ -2,7 +2,7 @@
 layout: post
 title: Waiting For DSL
 date: 2009-1-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

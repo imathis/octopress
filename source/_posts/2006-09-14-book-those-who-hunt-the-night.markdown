@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Those Who Hunt The Night"
 date: 2006-9-14
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: I Miss My Mom
 date: 2007-5-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

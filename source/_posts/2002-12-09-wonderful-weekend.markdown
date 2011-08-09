@@ -2,7 +2,7 @@
 layout: post
 title: Wonderful Weekend
 date: 2002-12-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Bottomless Pit
 date: "2003-11-10"
-comments: false
+comments: true
 categories: life
 link: false
 ---

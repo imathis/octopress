@@ -2,7 +2,7 @@
 layout: post
 title: Spam is the Devil
 date: 2005-8-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

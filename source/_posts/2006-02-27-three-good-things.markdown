@@ -2,7 +2,7 @@
 layout: post
 title: Three Good Things
 date: 2006-2-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

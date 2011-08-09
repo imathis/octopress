@@ -2,7 +2,7 @@
 layout: post
 title: COBOL
 date: 2007-3-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

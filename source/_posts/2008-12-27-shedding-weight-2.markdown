@@ -2,7 +2,7 @@
 layout: post
 title: Shedding Weight
 date: "2008-12-27"
-comments: false
+comments: true
 categories: life
 link: false
 ---

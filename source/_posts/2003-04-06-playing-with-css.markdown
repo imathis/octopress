@@ -2,7 +2,7 @@
 layout: post
 title: Playing with CSS
 date: 2003-4-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

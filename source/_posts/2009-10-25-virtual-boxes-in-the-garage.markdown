@@ -2,7 +2,7 @@
 layout: post
 title: Virtual Boxes in the Garage
 date: "2009-10-25"
-comments: false
+comments: true
 categories: life
 link: false
 ---

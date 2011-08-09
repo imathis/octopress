@@ -2,7 +2,7 @@
 layout: post
 title: The Perfect Weekend
 date: 2003-4-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

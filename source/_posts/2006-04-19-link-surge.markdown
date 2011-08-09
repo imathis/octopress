@@ -2,7 +2,7 @@
 layout: post
 title: Link Surge
 date: 2006-4-19
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

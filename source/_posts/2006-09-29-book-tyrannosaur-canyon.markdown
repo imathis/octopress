@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Tyrannosaur Canyon"
 date: 2006-9-29
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

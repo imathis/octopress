@@ -2,7 +2,7 @@
 layout: post
 title: EV-DO Rocks
 date: 2007-2-14
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

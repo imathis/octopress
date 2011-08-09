@@ -2,7 +2,7 @@
 layout: post
 title: A Short To Do List
 date: 2011-2-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

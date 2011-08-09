@@ -2,7 +2,7 @@
 layout: post
 title: Recent Movies
 date: 2005-8-8
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

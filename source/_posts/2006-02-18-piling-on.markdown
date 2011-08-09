@@ -2,7 +2,7 @@
 layout: post
 title: Piling On
 date: 2006-2-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Konza Prairie
 date: 2007-3-15
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

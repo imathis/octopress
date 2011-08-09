@@ -2,7 +2,7 @@
 layout: post
 title: Shake Your Booty
 date: 2006-11-7
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Auto-pilot
 date: 2006-6-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

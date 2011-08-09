@@ -2,7 +2,7 @@
 layout: post
 title: Season Pass
 date: 2005-8-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

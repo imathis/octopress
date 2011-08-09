@@ -2,7 +2,7 @@
 layout: post
 title: Crisis of Faith
 date: 2003-6-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

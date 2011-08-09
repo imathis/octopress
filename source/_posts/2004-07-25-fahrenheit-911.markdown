@@ -2,7 +2,7 @@
 layout: post
 title: Fahrenheit 9/11
 date: 2004-7-25
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

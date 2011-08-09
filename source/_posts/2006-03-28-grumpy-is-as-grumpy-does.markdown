@@ -2,7 +2,7 @@
 layout: post
 title: Grumpy Is As Grumpy Does
 date: 2006-3-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

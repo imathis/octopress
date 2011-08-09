@@ -2,7 +2,7 @@
 layout: post
 title: Escrow Scam
 date: 2003-1-27
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

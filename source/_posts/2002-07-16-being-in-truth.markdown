@@ -2,7 +2,7 @@
 layout: post
 title: Being In Truth
 date: 2002-7-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

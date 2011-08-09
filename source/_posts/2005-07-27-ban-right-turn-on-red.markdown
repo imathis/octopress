@@ -2,7 +2,7 @@
 layout: post
 title: Ban Right Turn on Red
 date: 2005-7-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

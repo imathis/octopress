@@ -2,7 +2,7 @@
 layout: post
 title: Page 23
 date: 2004-4-19
-comments: false
+comments: true
 categories: meme
 link: false
 ---

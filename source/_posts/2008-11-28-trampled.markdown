@@ -2,7 +2,7 @@
 layout: post
 title: Trampled
 date: "2008-11-28"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: The Books on My Desk
 date: 2005-11-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

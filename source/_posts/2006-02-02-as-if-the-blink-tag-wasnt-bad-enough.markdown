@@ -2,7 +2,7 @@
 layout: post
 title: As If The <Blink> Tag Wasn't Bad Enough
 date: 2006-2-2
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

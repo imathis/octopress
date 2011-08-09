@@ -2,7 +2,7 @@
 layout: post
 title: A Vacation, Not A Trip
 date: 2003-10-6
-comments: false
+comments: true
 categories: health
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Laser Surgery, Round Two
 date: 2006-6-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

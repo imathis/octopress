@@ -2,7 +2,7 @@
 layout: post
 title: Quality of Life
 date: "2005-10-10"
-comments: false
+comments: true
 categories: life
 link: false
 ---

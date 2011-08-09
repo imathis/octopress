@@ -2,7 +2,7 @@
 layout: post
 title: Signal to Noise
 date: 2003-1-1
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

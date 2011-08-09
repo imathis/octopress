@@ -2,7 +2,7 @@
 layout: post
 title: Not So Fast
 date: 2010-5-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

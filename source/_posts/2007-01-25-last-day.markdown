@@ -2,7 +2,7 @@
 layout: post
 title: Last Day
 date: 2007-1-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

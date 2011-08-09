@@ -2,7 +2,7 @@
 layout: post
 title: Regarding the House I Grew Up In
 date: 2005-6-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Book:  Cathedral "
 date: "2006-11-28"
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

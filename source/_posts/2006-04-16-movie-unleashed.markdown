@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Unleashed"
 date: 2006-4-16
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

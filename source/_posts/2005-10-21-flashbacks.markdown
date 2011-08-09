@@ -2,7 +2,7 @@
 layout: post
 title: Flashbacks
 date: "2005-10-21"
-comments: false
+comments: true
 categories: life
 link: false
 ---

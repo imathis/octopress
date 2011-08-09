@@ -2,7 +2,7 @@
 layout: post
 title: Christmas on the High Seas
 date: "2002-12-24"
-comments: false
+comments: true
 categories: life
 link: false
 ---

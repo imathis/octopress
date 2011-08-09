@@ -2,7 +2,7 @@
 layout: post
 title: Something Money Can't Buy
 date: "2002-10-23"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Gay Marriage Poll Gets Annulled
 date: 2004-1-22
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

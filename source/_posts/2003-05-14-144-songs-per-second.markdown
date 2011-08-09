@@ -2,7 +2,7 @@
 layout: post
 title: 1.44 Songs Per Second
 date: 2003-5-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

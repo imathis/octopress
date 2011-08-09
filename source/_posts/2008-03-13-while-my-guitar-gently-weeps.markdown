@@ -2,7 +2,7 @@
 layout: post
 title: While My Guitar Gently Weeps
 date: 2008-3-13
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: I Love Maps
 date: 2005-2-25
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

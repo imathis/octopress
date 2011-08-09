@@ -2,7 +2,7 @@
 layout: post
 title: President Barack Obama's Inauguration Speech
 date: 2009-1-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

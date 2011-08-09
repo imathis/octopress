@@ -2,7 +2,7 @@
 layout: post
 title: Place Names
 date: "2007-10-29"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

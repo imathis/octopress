@@ -2,7 +2,7 @@
 layout: post
 title: Wordpress 2.5 Fixes Safari/TinyMCE Bug
 date: 2008-3-31
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

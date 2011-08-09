@@ -2,7 +2,7 @@
 layout: post
 title: Crossroads
 date: 2004-5-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

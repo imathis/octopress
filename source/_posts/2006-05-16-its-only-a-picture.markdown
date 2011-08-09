@@ -2,7 +2,7 @@
 layout: post
 title: It's Only A Picture
 date: 2006-5-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

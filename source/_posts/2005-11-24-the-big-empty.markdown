@@ -2,7 +2,7 @@
 layout: post
 title: The Big Empty
 date: "2005-11-24"
-comments: false
+comments: true
 categories: life
 link: false
 ---

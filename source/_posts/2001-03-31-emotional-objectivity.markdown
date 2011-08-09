@@ -2,7 +2,7 @@
 layout: post
 title: Emotional Objectivity
 date: 2001-3-31
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Book: The Hunt For Red October"
 date: "2006-11-16"
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

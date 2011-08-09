@@ -2,7 +2,7 @@
 layout: post
 title: The Lexus Link System Is ... Gone
 date: 2006-7-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

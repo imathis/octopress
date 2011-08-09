@@ -2,7 +2,7 @@
 layout: post
 title: Priceless
 date: 2002-6-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

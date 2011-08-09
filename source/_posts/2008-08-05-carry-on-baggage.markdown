@@ -2,7 +2,7 @@
 layout: post
 title: Carry On Baggage
 date: 2008-8-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Easiest. Upgrades. Ever.
 date: 2004-1-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Today Illinois, Tomorrow Kansas
 date: 2004-6-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

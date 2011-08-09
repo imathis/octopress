@@ -2,7 +2,7 @@
 layout: post
 title: Hanging By A Thread
 date: 2007-9-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

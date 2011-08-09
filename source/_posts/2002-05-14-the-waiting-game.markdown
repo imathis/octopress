@@ -2,7 +2,7 @@
 layout: post
 title: The Waiting Game
 date: 2002-5-14
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

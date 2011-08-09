@@ -2,7 +2,7 @@
 layout: post
 title: Null Space
 date: 2006-5-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

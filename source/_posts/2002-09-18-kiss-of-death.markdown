@@ -2,7 +2,7 @@
 layout: post
 title: Kiss of Death
 date: 2002-9-18
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

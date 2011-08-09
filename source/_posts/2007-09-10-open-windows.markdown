@@ -2,7 +2,7 @@
 layout: post
 title: Open Windows
 date: 2007-9-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

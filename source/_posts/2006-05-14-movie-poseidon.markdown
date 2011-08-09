@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Poseidon"
 date: 2006-5-14
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

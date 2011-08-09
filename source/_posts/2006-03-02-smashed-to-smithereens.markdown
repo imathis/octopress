@@ -2,7 +2,7 @@
 layout: post
 title: Smashed To Smithereens
 date: 2006-3-2
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

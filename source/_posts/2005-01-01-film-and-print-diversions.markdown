@@ -2,7 +2,7 @@
 layout: post
 title: Film and Print Diversions
 date: 2005-1-1
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

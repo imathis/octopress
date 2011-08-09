@@ -2,7 +2,7 @@
 layout: post
 title: True Size of Africa
 date: 2011-6-13
-comments: false
+comments: true
 categories: links
 link: true
 ---

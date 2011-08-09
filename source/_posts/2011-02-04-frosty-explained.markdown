@@ -2,7 +2,7 @@
 layout: post
 title: Frosty Explained
 date: 2011-2-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

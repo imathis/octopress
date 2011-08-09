@@ -2,7 +2,7 @@
 layout: post
 title: Bottoming Out
 date: "2005-12-10"
-comments: false
+comments: true
 categories: life
 link: false
 ---

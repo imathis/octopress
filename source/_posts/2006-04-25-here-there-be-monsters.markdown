@@ -2,7 +2,7 @@
 layout: post
 title: Here There Be Monsters
 date: 2006-4-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

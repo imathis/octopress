@@ -2,7 +2,7 @@
 layout: post
 title: Outlook Rule to Delay Sending Mail
 date: 2008-2-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

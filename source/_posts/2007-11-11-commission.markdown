@@ -2,7 +2,7 @@
 layout: post
 title: Commission
 date: "2007-11-11"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Configuring Apple Mail for GMail IMAP Access
 date: 2007-11-4
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

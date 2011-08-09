@@ -2,7 +2,7 @@
 layout: post
 title: Unitarian Jihad
 date: 2011-6-6
-comments: false
+comments: true
 categories: links
 link: true
 ---

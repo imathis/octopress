@@ -2,7 +2,7 @@
 layout: post
 title: Four Things
 date: 2006-1-29
-comments: false
+comments: true
 categories: meme
 link: false
 ---

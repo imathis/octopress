@@ -2,7 +2,7 @@
 layout: post
 title: Book The Twelfth Card
 date: 2006-5-11
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

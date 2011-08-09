@@ -2,7 +2,7 @@
 layout: post
 title: Yet Another Reason Not To Support G. W.
 date: 2003-11-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Antsy in the Night
 date: "2005-10-29"
-comments: false
+comments: true
 categories: life
 link: false
 ---

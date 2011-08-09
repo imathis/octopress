@@ -2,7 +2,7 @@
 layout: post
 title: Copy All Subdirectory Contents to New Directory
 date: 2007-4-6
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

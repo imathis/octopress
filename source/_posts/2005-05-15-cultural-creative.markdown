@@ -2,7 +2,7 @@
 layout: post
 title: Cultural Creative
 date: 2005-5-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

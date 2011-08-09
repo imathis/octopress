@@ -2,7 +2,7 @@
 layout: post
 title: The Onus Is On Us Now
 date: "2008-11-12"
-comments: false
+comments: true
 categories: life
 link: false
 ---

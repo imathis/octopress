@@ -2,7 +2,7 @@
 layout: post
 title: Learning Cello
 date: "2009-11-12"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Charles
 date: "2008-10-31"
-comments: false
+comments: true
 categories: life
 link: false
 ---

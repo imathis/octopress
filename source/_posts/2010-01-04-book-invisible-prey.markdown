@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Invisible Prey"
 date: 2010-1-4
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

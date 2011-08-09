@@ -2,7 +2,7 @@
 layout: post
 title: "Book: The Lost Symbol"
 date: 2010-1-17
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

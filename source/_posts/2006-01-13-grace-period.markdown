@@ -2,7 +2,7 @@
 layout: post
 title: Grace Period
 date: 2006-1-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

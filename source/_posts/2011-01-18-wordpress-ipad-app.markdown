@@ -2,7 +2,7 @@
 layout: post
 title: WordPress iPad App
 date: 2011-1-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

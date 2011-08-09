@@ -2,7 +2,7 @@
 layout: post
 title: Merry Christmas
 date: "2007-12-22"
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

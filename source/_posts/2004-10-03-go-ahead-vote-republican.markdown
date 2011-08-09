@@ -2,7 +2,7 @@
 layout: post
 title: Go Ahead, Vote Republican
 date: 2004-10-3
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

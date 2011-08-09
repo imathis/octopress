@@ -2,7 +2,7 @@
 layout: post
 title: Chords are Polymorphic
 date: 2009-3-5
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: An "A+" in Customer Service
 date: 2004-1-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

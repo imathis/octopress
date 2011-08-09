@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Dead Watch"
 date: 2006-6-10
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

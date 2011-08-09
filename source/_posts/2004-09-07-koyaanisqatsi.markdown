@@ -2,7 +2,7 @@
 layout: post
 title: Koyaanisqatsi
 date: 2004-9-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

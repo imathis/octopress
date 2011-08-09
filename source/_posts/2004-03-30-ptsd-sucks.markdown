@@ -2,7 +2,7 @@
 layout: post
 title: PTSD sucks
 date: 2004-3-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

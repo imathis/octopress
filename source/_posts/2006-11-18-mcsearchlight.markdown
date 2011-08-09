@@ -2,7 +2,7 @@
 layout: post
 title: McSearchlight
 date: "2006-11-18"
-comments: false
+comments: true
 categories: life
 link: false
 ---

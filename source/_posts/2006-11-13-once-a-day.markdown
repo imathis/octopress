@@ -2,7 +2,7 @@
 layout: post
 title: Once A Day
 date: "2006-11-13"
-comments: false
+comments: true
 categories: life
 link: false
 ---

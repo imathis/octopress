@@ -2,7 +2,7 @@
 layout: post
 title: Birthday Lunch
 date: 2006-6-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

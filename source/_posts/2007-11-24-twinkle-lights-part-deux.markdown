@@ -2,7 +2,7 @@
 layout: post
 title: Twinkle Lights, Part Deux
 date: "2007-11-24"
-comments: false
+comments: true
 categories: life
 link: false
 ---

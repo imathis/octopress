@@ -2,7 +2,7 @@
 layout: post
 title: Closing, If Not Closure
 date: 2005-4-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

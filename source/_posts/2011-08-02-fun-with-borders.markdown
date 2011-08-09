@@ -2,7 +2,7 @@
 layout: post
 title: Fun With Borders
 date: 2011-8-2
-comments: false
+comments: true
 categories: links
 link: true
 ---

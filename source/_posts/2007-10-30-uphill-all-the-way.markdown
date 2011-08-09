@@ -2,7 +2,7 @@
 layout: post
 title: Uphill All The Way
 date: "2007-10-30"
-comments: false
+comments: true
 categories: life
 link: false
 ---

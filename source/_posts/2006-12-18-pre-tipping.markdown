@@ -2,7 +2,7 @@
 layout: post
 title: Pre-Tipping
 date: "2006-12-18"
-comments: false
+comments: true
 categories: life
 link: false
 ---

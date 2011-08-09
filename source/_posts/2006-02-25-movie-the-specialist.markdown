@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: The Specialist"
 date: 2006-2-25
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

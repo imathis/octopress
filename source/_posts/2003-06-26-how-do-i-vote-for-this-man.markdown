@@ -2,7 +2,7 @@
 layout: post
 title: How Do I Vote For This Man?
 date: 2003-6-26
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

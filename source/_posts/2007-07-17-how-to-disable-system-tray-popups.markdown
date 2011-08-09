@@ -2,7 +2,7 @@
 layout: post
 title: How to Disable System Tray Popups
 date: 2007-7-17
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

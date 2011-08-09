@@ -2,7 +2,7 @@
 layout: post
 title: Eats, Shoots & Leaves
 date: 2008-4-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

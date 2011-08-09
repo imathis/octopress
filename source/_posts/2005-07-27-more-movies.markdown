@@ -2,7 +2,7 @@
 layout: post
 title: More Movies
 date: 2005-7-27
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

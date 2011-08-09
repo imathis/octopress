@@ -2,7 +2,7 @@
 layout: post
 title: The Joy of Software
 date: 2007-1-21
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

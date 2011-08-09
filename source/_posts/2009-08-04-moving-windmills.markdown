@@ -2,7 +2,7 @@
 layout: post
 title: Moving Windmills
 date: 2009-8-4
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Coming Soon
 date: 2002-10-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

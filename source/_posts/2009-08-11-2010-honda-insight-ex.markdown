@@ -2,7 +2,7 @@
 layout: post
 title: 2010 Honda Insight EX
 date: 2009-8-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

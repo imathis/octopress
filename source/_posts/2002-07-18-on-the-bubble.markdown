@@ -2,7 +2,7 @@
 layout: post
 title: On the Bubble
 date: 2002-7-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

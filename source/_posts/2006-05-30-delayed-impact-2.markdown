@@ -2,7 +2,7 @@
 layout: post
 title: Delayed Impact
 date: 2006-5-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

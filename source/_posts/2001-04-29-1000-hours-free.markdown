@@ -2,7 +2,7 @@
 layout: post
 title: 1000 Hours Free!
 date: 2001-4-29
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

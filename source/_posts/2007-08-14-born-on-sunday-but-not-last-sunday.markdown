@@ -2,7 +2,7 @@
 layout: post
 title: Born on Sunday, But Not Last Sunday
 date: 2007-8-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

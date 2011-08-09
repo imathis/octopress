@@ -2,7 +2,7 @@
 layout: post
 title: Brittle
 date: 2006-5-31
-comments: false
+comments: true
 categories: life
 link: false
 ---

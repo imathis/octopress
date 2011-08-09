@@ -2,7 +2,7 @@
 layout: post
 title: Failing Grade
 date: 2008-5-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

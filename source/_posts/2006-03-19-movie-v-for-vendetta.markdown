@@ -2,7 +2,7 @@
 layout: post
 title: Movie V for Vendetta
 date: 2006-3-19
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

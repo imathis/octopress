@@ -2,7 +2,7 @@
 layout: post
 title: This Can't Be Good
 date: 2007-8-22
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

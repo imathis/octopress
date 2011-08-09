@@ -2,7 +2,7 @@
 layout: post
 title: I Can See Clearly, Sorta
 date: 2006-3-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

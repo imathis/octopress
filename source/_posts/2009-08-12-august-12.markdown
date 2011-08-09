@@ -2,7 +2,7 @@
 layout: post
 title: August 12
 date: 2009-8-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

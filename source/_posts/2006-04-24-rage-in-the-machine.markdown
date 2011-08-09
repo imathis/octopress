@@ -2,7 +2,7 @@
 layout: post
 title: Rage In The Machine
 date: 2006-4-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

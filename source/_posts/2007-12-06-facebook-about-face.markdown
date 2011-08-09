@@ -2,7 +2,7 @@
 layout: post
 title: Facebook About Face
 date: 2007-12-6
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

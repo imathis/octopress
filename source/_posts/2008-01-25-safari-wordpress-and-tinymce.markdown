@@ -2,7 +2,7 @@
 layout: post
 title: Safari, Wordpress, and TinyMCE
 date: 2008-1-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

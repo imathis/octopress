@@ -2,7 +2,7 @@
 layout: post
 title: Made in the USA
 date: 2011-5-18
-comments: false
+comments: true
 categories: links
 link: true
 ---

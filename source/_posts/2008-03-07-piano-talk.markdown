@@ -2,7 +2,7 @@
 layout: post
 title: Piano Talk
 date: 2008-3-7
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

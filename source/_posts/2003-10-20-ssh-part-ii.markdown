@@ -2,7 +2,7 @@
 layout: post
 title: ssh, part II
 date: "2003-10-20"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

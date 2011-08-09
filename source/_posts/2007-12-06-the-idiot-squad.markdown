@@ -2,7 +2,7 @@
 layout: post
 title: The Idiot Squad
 date: 2007-12-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

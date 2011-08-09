@@ -2,7 +2,7 @@
 layout: post
 title: Lasik Surgery Fine Print
 date: 2008-3-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

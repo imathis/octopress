@@ -2,7 +2,7 @@
 layout: post
 title: Karma Laden
 date: 2007-9-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

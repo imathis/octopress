@@ -2,7 +2,7 @@
 layout: post
 title: Moving Towards My Emotional Center
 date: 2003-6-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

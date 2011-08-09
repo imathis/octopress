@@ -2,7 +2,7 @@
 layout: post
 title: Ditty Ditto
 date: 2005-9-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

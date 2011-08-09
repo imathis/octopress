@@ -2,7 +2,7 @@
 layout: post
 title: Eclipse Ganymede on Ubuntu
 date: 2008-7-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Little Things That Bug Me
 date: "2002-10-24"
-comments: false
+comments: true
 categories: random
 link: false
 ---

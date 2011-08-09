@@ -2,7 +2,7 @@
 layout: post
 title: Life's End
 date: "2003-11-26"
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

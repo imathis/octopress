@@ -2,7 +2,7 @@
 layout: post
 title: The Triangle
 date: 2011-7-11
-comments: false
+comments: true
 categories: links
 link: true
 ---

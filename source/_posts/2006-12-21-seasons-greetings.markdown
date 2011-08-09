@@ -2,7 +2,7 @@
 layout: post
 title: Seasons Greetings!
 date: "2006-12-21"
-comments: false
+comments: true
 categories: life
 link: false
 ---

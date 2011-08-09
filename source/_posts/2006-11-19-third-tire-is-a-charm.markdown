@@ -2,7 +2,7 @@
 layout: post
 title: Third Tire is a Charm
 date: "2006-11-19"
-comments: false
+comments: true
 categories: life
 link: false
 ---

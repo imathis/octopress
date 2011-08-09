@@ -2,7 +2,7 @@
 layout: post
 title: Too Many Books
 date: "2007-10-25"
-comments: false
+comments: true
 categories: life
 link: false
 ---

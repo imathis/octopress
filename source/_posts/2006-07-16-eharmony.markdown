@@ -2,7 +2,7 @@
 layout: post
 title: eHarmony
 date: 2006-7-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

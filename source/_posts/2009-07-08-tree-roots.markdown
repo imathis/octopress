@@ -2,7 +2,7 @@
 layout: post
 title: Tree Roots
 date: 2009-7-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Android
 date: 2010-5-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

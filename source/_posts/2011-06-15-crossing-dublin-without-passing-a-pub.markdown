@@ -2,7 +2,7 @@
 layout: post
 title: Crossing Dublin Without Passing a Pub
 date: 2011-6-15
-comments: false
+comments: true
 categories: links
 link: true
 ---

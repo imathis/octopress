@@ -2,7 +2,7 @@
 layout: post
 title: "Wi-Fi: $9.95... Wired: free"
 date: 2006-1-19
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

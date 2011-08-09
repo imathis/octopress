@@ -2,7 +2,7 @@
 layout: post
 title: Frosty
 date: 2011-2-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

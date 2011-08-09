@@ -2,7 +2,7 @@
 layout: post
 title: Installing PostgreSQL on Mac 10.6 (Snow Leopard)
 date: 2009-9-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

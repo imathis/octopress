@@ -2,7 +2,7 @@
 layout: post
 title: A Place For Lunch
 date: 2010-1-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

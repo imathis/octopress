@@ -2,7 +2,7 @@
 layout: post
 title: Walking Directions from the Shire to Mordor
 date: 2003-9-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

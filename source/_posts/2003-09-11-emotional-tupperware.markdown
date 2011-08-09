@@ -2,7 +2,7 @@
 layout: post
 title: Emotional Tupperware
 date: 2003-9-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

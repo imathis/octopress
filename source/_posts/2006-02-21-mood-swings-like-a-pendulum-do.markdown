@@ -2,7 +2,7 @@
 layout: post
 title: Mood Swings Like A Pendulum Do
 date: 2006-2-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

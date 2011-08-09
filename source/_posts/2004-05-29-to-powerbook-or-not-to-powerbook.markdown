@@ -2,7 +2,7 @@
 layout: post
 title: To Powerbook or not to Powerbook
 date: 2004-5-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

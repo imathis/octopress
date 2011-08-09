@@ -2,7 +2,7 @@
 layout: post
 title: Oh, The Places I've Been
 date: 2004-1-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

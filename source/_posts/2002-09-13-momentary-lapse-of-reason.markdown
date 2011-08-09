@@ -2,7 +2,7 @@
 layout: post
 title: Momentary Lapse of Reason
 date: 2002-9-13
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

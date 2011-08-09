@@ -2,7 +2,7 @@
 layout: post
 title: Dr. William H. Cosby, Jr.
 date: 2002-5-11
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Brain Food
 date: 2009-1-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Shedding  Weight
 date: 2007-8-8
-comments: false
+comments: true
 categories: health
 link: false
 ---

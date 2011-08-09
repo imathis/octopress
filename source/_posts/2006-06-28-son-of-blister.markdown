@@ -2,7 +2,7 @@
 layout: post
 title: Son of Blister
 date: 2006-6-28
-comments: false
+comments: true
 categories: health
 link: false
 ---

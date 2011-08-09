@@ -2,7 +2,7 @@
 layout: post
 title: Off The Team
 date: 2008-8-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

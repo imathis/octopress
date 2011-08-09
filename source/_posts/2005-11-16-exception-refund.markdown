@@ -2,7 +2,7 @@
 layout: post
 title: Exception Refund
 date: "2005-11-16"
-comments: false
+comments: true
 categories: life
 link: false
 ---

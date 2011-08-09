@@ -2,7 +2,7 @@
 layout: post
 title: A Call From Home
 date: 2006-3-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

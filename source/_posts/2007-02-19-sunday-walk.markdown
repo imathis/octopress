@@ -2,7 +2,7 @@
 layout: post
 title: Sunday Walk
 date: 2007-2-19
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

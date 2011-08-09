@@ -2,7 +2,7 @@
 layout: post
 title: Masking errors
 date: 2004-1-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

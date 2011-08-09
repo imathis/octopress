@@ -2,7 +2,7 @@
 layout: post
 title: The Mouse BT
 date: 2005-1-30
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

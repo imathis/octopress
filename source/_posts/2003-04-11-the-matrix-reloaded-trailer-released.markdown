@@ -2,7 +2,7 @@
 layout: post
 title: The Matrix Reloaded Trailer Released
 date: 2003-4-11
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

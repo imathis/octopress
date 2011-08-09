@@ -2,7 +2,7 @@
 layout: post
 title: NaBloPoMo
 date: 2006-11-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Fun with Datetime
 date: 2004-4-4
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

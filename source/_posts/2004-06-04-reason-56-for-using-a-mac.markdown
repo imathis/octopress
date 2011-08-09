@@ -2,7 +2,7 @@
 layout: post
 title: "Reason #56 For Using A Mac"
 date: 2004-6-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

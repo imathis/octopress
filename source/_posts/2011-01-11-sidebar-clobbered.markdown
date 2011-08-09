@@ -2,7 +2,7 @@
 layout: post
 title: Sidebar Clobbered
 date: 2011-1-11
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

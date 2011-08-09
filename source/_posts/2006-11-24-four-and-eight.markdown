@@ -2,7 +2,7 @@
 layout: post
 title: Four and Eight
 date: "2006-11-24"
-comments: false
+comments: true
 categories: life
 link: false
 ---

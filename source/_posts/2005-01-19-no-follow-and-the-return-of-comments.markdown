@@ -2,7 +2,7 @@
 layout: post
 title: No Follow and the Return of Comments
 date: 2005-1-19
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: CPU Frequency III
 date: 2004-1-20
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

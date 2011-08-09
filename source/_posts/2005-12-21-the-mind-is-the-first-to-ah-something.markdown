@@ -2,7 +2,7 @@
 layout: post
 title: The Mind Is the First To ... ah ... Something
 date: "2005-12-21"
-comments: false
+comments: true
 categories: life
 link: false
 ---

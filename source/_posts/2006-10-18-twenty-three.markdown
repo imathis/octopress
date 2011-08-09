@@ -2,7 +2,7 @@
 layout: post
 title: Twenty-Three
 date: "2006-10-18"
-comments: false
+comments: true
 categories: life
 link: false
 ---

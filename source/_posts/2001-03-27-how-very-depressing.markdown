@@ -2,7 +2,7 @@
 layout: post
 title: How Very Depressing
 date: 2001-3-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Loft in Name Only
 date: 2008-4-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

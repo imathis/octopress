@@ -2,7 +2,7 @@
 layout: post
 title: Endorsement
 date: 2008-10-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

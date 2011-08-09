@@ -2,7 +2,7 @@
 layout: post
 title: Spunky Dog
 date: 2001-9-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

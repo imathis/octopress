@@ -2,7 +2,7 @@
 layout: post
 title: First Swim
 date: 2004-5-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Windows Restore
 date: 2011-2-25
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

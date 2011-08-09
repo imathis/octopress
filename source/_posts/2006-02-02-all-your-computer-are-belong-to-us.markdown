@@ -2,7 +2,7 @@
 layout: post
 title: All Your Computer Are Belong To Us
 date: 2006-2-2
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

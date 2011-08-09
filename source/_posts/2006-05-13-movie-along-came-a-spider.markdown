@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Along Came A Spider"
 date: 2006-5-13
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

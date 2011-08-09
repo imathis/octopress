@@ -2,7 +2,7 @@
 layout: post
 title: Missing Nekko
 date: 2008-6-12
-comments: false
+comments: true
 categories: family
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Man plans, God laughs
 date: 2004-12-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

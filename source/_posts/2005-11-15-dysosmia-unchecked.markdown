@@ -2,7 +2,7 @@
 layout: post
 title: Dysosmia Unchecked
 date: "2005-11-15"
-comments: false
+comments: true
 categories: life
 link: false
 ---

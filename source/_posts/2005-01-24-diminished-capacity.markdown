@@ -2,7 +2,7 @@
 layout: post
 title: Diminished Capacity
 date: 2005-1-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

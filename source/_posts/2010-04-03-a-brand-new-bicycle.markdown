@@ -2,7 +2,7 @@
 layout: post
 title: A Brand New Bicycle
 date: 2010-4-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

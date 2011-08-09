@@ -2,7 +2,7 @@
 layout: post
 title: 24/7/52
 date: 2007-11-2
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

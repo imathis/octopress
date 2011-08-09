@@ -2,7 +2,7 @@
 layout: post
 title: Ballistic Ice
 date: 2005-6-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

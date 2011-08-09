@@ -2,7 +2,7 @@
 layout: post
 title: George Carlin
 date: 2008-6-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Aging Smells
 date: 2005-8-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Default Mode
 date: 2003-7-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

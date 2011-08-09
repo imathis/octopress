@@ -2,7 +2,7 @@
 layout: post
 title: Patient, I Am Not
 date: 2006-3-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

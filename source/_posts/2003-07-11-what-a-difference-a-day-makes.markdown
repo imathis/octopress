@@ -2,7 +2,7 @@
 layout: post
 title: What A Difference A Day Makes
 date: 2003-7-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

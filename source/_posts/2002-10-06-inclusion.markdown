@@ -2,7 +2,7 @@
 layout: post
 title: Inclusion
 date: 2002-10-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: In the Beginning...
 date: 2003-6-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

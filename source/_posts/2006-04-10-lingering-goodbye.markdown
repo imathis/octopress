@@ -2,7 +2,7 @@
 layout: post
 title: Lingering Goodbye
 date: 2006-4-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

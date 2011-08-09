@@ -2,7 +2,7 @@
 layout: post
 title: Victim Mentality
 date: 2005-2-7
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

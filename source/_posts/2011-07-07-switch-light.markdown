@@ -2,7 +2,7 @@
 layout: post
 title: Switch Light
 date: 2011-7-7
-comments: false
+comments: true
 categories: links
 link: true
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Stumbling Towards Normalcy
 date: 2006-2-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

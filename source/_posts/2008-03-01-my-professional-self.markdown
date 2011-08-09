@@ -2,7 +2,7 @@
 layout: post
 title: My Professional Self
 date: 2008-3-1
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

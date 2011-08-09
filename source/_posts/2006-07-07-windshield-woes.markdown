@@ -2,7 +2,7 @@
 layout: post
 title: Windshield Woes
 date: 2006-7-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

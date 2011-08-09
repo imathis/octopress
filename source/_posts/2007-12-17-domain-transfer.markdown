@@ -2,7 +2,7 @@
 layout: post
 title: Domain Transfer
 date: "2007-12-17"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

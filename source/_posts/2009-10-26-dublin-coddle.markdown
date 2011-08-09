@@ -2,7 +2,7 @@
 layout: post
 title: Dublin Coddle
 date: "2009-10-26"
-comments: false
+comments: true
 categories: life
 link: false
 ---

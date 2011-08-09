@@ -2,7 +2,7 @@
 layout: post
 title: Minus Seven and a Half
 date: "2009-11-16"
-comments: false
+comments: true
 categories: life
 link: false
 ---

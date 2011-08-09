@@ -2,7 +2,7 @@
 layout: post
 title: Getting Into The Groove
 date: 2006-6-14
-comments: false
+comments: true
 categories: health
 link: false
 ---

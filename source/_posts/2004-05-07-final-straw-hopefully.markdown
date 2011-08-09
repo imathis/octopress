@@ -2,7 +2,7 @@
 layout: post
 title: Final Straw, Hopefully
 date: 2004-5-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

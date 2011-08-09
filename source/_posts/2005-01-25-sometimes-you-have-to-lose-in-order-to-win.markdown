@@ -2,7 +2,7 @@
 layout: post
 title: Sometimes, You have to Lose in Order to Win
 date: 2005-1-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

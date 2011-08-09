@@ -2,7 +2,7 @@
 layout: post
 title: Almost Over
 date: 2004-6-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

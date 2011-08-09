@@ -2,7 +2,7 @@
 layout: post
 title: See Something or Say Something
 date: 2011-7-14
-comments: false
+comments: true
 categories: links
 link: true
 ---

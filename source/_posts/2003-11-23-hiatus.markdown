@@ -2,7 +2,7 @@
 layout: post
 title: Hiatus
 date: "2003-11-23"
-comments: false
+comments: true
 categories: life
 link: false
 ---

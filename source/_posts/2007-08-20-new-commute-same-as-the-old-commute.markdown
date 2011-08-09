@@ -2,7 +2,7 @@
 layout: post
 title: New Commute, Same As The Old Commute
 date: 2007-8-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

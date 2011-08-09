@@ -2,7 +2,7 @@
 layout: post
 title: Winter Cold
 date: 2003-1-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

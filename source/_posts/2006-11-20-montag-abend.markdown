@@ -2,7 +2,7 @@
 layout: post
 title: Montag Abend
 date: "2006-11-20"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Changing Landscape
 date: 2011-1-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

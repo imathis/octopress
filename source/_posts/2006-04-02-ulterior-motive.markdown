@@ -2,7 +2,7 @@
 layout: post
 title: Ulterior Motive
 date: 2006-4-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

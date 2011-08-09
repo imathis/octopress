@@ -2,7 +2,7 @@
 layout: post
 title: New Digs
 date: "2006-12-27"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

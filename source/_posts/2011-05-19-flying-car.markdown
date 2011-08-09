@@ -2,7 +2,7 @@
 layout: post
 title: Flying Car
 date: 2011-5-19
-comments: false
+comments: true
 categories: links
 link: true
 ---

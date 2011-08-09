@@ -2,7 +2,7 @@
 layout: post
 title: Growing Garlic
 date: 2007-4-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Nothing really
 date: 2002-8-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

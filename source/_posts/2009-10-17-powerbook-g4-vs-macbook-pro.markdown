@@ -2,7 +2,7 @@
 layout: post
 title: "PowerBook G4 vs. MacBook Pro "
 date: "2009-10-17"
-comments: false
+comments: true
 categories: life
 link: false
 ---

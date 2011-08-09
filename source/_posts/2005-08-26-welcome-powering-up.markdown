@@ -2,7 +2,7 @@
 layout: post
 title: Welcome. Powering up...
 date: 2005-8-26
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Last Hope Lost
 date: 2006-5-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Well Of Despair
 date: 2006-1-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

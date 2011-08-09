@@ -2,7 +2,7 @@
 layout: post
 title: Site Migration
 date: 2007-12-1
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

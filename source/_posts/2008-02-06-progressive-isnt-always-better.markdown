@@ -2,7 +2,7 @@
 layout: post
 title: Progressive Isn't Always Better
 date: 2008-2-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

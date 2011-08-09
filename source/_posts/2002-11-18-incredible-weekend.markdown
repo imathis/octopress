@@ -2,7 +2,7 @@
 layout: post
 title: Incredible Weekend
 date: "2002-11-18"
-comments: false
+comments: true
 categories: life
 link: false
 ---

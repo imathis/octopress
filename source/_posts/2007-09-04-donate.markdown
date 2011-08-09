@@ -2,7 +2,7 @@
 layout: post
 title: Donate
 date: 2007-9-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

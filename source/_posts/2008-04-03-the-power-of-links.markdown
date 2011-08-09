@@ -2,7 +2,7 @@
 layout: post
 title: The Power of Links
 date: 2008-4-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Overland Park News
 date: 2004-7-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

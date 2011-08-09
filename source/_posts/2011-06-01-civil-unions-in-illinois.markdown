@@ -2,7 +2,7 @@
 layout: post
 title: Civil Unions in Illinois
 date: 2011-6-1
-comments: false
+comments: true
 categories: links
 link: true
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Categories Formatted
 date: "2006-11-25"
-comments: false
+comments: true
 categories: life
 link: false
 ---

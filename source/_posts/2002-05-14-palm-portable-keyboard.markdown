@@ -2,7 +2,7 @@
 layout: post
 title: Palm Portable Keyboard
 date: 2002-5-14
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

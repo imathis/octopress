@@ -2,7 +2,7 @@
 layout: post
 title: Using rsync to Update Wordpress
 date: 2008-4-28
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

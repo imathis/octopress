@@ -2,7 +2,7 @@
 layout: post
 title: Spam Dunk
 date: 2007-2-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

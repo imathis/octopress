@@ -2,7 +2,7 @@
 layout: post
 title: Customer Service Is The New Black
 date: 2008-4-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Sudden Prey"
 date: 2010-1-11
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

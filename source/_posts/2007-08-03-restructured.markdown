@@ -2,7 +2,7 @@
 layout: post
 title: Restructured
 date: 2007-8-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Happy Birthday Zanshin
 date: 2006-2-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

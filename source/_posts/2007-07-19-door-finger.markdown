@@ -2,7 +2,7 @@
 layout: post
 title: Door + Finger = @#!$*!
 date: 2007-7-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

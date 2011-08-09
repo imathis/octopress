@@ -2,7 +2,7 @@
 layout: post
 title: Making The Grade
 date: 2008-2-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

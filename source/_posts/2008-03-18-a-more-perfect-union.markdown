@@ -2,7 +2,7 @@
 layout: post
 title: A More Perfect Union
 date: 2008-3-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

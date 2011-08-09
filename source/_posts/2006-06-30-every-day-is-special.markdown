@@ -2,7 +2,7 @@
 layout: post
 title: Every Day Is Special
 date: 2006-6-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

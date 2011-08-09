@@ -2,7 +2,7 @@
 layout: post
 title: Caller ID
 date: 2005-8-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

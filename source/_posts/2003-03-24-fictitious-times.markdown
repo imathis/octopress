@@ -2,7 +2,7 @@
 layout: post
 title: Fictitious Times
 date: 2003-3-24
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

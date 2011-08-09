@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Snow Blind"
 date: 2006-8-28
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

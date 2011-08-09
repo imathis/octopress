@@ -2,7 +2,7 @@
 layout: post
 title: Presidents, Past and Future
 date: 2008-11-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Book: The Hard Way"
 date: 2006-5-17
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

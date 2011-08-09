@@ -2,7 +2,7 @@
 layout: post
 title: No Truck = No TV
 date: 2003-10-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

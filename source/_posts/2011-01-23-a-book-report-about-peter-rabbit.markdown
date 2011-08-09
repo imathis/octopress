@@ -2,7 +2,7 @@
 layout: post
 title: A Book Report About Peter Rabbit
 date: 2011-1-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

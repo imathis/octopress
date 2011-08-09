@@ -2,7 +2,7 @@
 layout: post
 title: Tissue Issue
 date: "2006-12-11"
-comments: false
+comments: true
 categories: life
 link: false
 ---

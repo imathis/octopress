@@ -2,7 +2,7 @@
 layout: post
 title: James Earl Jones Does the Alphabet
 date: 2009-4-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: St. Crispian's Day Speech
 date: 2008-11-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Velcro at 94X Magnification
 date: 2006-7-10
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

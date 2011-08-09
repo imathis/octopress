@@ -2,7 +2,7 @@
 layout: post
 title: Mac OS X 10.6.4 Update Fails
 date: 2010-6-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

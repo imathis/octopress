@@ -2,7 +2,7 @@
 layout: post
 title: The Unbearable Weight of Being
 date: 2004-12-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

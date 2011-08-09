@@ -2,7 +2,7 @@
 layout: post
 title: Declaration of Conscience
 date: 2003-3-25
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Acronym vs. Initialization
 date: 2007-3-14
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

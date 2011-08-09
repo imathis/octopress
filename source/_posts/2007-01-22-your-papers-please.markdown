@@ -2,7 +2,7 @@
 layout: post
 title: Your Papers Please
 date: 2007-1-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

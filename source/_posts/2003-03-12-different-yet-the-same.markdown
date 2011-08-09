@@ -2,7 +2,7 @@
 layout: post
 title: Different Yet the Same
 date: 2003-3-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

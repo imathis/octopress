@@ -2,7 +2,7 @@
 layout: post
 title: Weekend Movies
 date: 2005-7-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

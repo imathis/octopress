@@ -2,7 +2,7 @@
 layout: post
 title: Police State
 date: 2001-3-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

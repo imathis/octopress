@@ -2,7 +2,7 @@
 layout: post
 title: Two Speeches
 date: 2008-11-5
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

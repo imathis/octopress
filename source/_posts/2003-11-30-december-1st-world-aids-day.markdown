@@ -2,7 +2,7 @@
 layout: post
 title: December 1st ~ World AIDS Day
 date: "2003-11-30"
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

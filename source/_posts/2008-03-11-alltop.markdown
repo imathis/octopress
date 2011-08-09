@@ -2,7 +2,7 @@
 layout: post
 title: Alltop
 date: 2008-3-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

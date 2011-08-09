@@ -2,7 +2,7 @@
 layout: post
 title: A Day of Cooking
 date: 2003-11-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: I Feel Defeated
 date: 2006-5-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

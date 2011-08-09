@@ -2,7 +2,7 @@
 layout: post
 title: Seedlessness
 date: 2005-4-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

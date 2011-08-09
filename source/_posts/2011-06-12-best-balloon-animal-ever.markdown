@@ -2,7 +2,7 @@
 layout: post
 title: Best Balloon Animal. Ever.
 date: 2011-6-12
-comments: false
+comments: true
 categories: links
 link: true
 ---

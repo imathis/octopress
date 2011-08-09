@@ -2,7 +2,7 @@
 layout: post
 title: Holding My Tongue
 date: "2005-11-14"
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

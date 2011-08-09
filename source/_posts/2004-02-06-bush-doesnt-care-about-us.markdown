@@ -2,7 +2,7 @@
 layout: post
 title: Bush Doesn't Care About Us
 date: 2004-2-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

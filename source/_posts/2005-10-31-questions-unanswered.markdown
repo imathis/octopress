@@ -2,7 +2,7 @@
 layout: post
 title: Questions Unanswered
 date: "2005-10-31"
-comments: false
+comments: true
 categories: life
 link: false
 ---

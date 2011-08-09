@@ -2,7 +2,7 @@
 layout: post
 title: Quiet Thoughts and Memories
 date: 2006-4-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

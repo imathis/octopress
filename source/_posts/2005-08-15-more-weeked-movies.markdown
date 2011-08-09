@@ -2,7 +2,7 @@
 layout: post
 title: More Weeked Movies
 date: 2005-8-15
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: War on Terror
 date: 2005-7-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

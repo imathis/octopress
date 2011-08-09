@@ -2,7 +2,7 @@
 layout: post
 title: Vacation Malaise
 date: 2006-9-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

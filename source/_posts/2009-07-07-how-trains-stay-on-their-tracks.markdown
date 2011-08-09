@@ -2,7 +2,7 @@
 layout: post
 title: How Trains Stay on Their Tracks
 date: 2009-7-7
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

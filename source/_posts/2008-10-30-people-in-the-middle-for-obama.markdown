@@ -2,7 +2,7 @@
 layout: post
 title: People In The Middle for Obama
 date: "2008-10-30"
-comments: false
+comments: true
 categories: life
 link: false
 ---

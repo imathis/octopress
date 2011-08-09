@@ -2,7 +2,7 @@
 layout: post
 title: Yes I Am A Nerd
 date: 2007-4-9
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

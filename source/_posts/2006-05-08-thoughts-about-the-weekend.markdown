@@ -2,7 +2,7 @@
 layout: post
 title: Thoughts About the Weekend
 date: 2006-5-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

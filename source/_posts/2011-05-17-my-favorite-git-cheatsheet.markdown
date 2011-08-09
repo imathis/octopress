@@ -2,7 +2,7 @@
 layout: post
 title: My Favorite Git Cheatsheet
 date: 2011-5-17
-comments: false
+comments: true
 categories: links
 link: true
 ---

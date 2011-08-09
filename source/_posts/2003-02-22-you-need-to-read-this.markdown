@@ -2,7 +2,7 @@
 layout: post
 title: You Need To Read This
 date: 2003-2-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: After The Storm
 date: 2006-3-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

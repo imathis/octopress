@@ -2,7 +2,7 @@
 layout: post
 title: "Music: Evanescence Fallen"
 date: 2006-2-13
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

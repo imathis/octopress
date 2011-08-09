@@ -2,7 +2,7 @@
 layout: post
 title: TRON Legacy
 date: 2010-3-9
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

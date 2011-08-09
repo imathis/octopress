@@ -2,7 +2,7 @@
 layout: post
 title: Bush in 30 Seconds
 date: 2004-1-5
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

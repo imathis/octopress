@@ -2,7 +2,7 @@
 layout: post
 title: Humble Pie
 date: 2011-1-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Signs of Autumn
 date: 2007-11-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

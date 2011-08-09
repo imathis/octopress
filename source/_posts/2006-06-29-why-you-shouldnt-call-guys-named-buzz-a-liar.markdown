@@ -2,7 +2,7 @@
 layout: post
 title: Why You Shouldn't Call Guys Named "Buzz" A Liar
 date: 2006-6-29
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

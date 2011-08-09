@@ -2,7 +2,7 @@
 layout: post
 title: Fifty Years - Fifty Events
 date: 2011-5-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

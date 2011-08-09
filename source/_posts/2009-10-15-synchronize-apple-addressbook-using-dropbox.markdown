@@ -2,7 +2,7 @@
 layout: post
 title: Synchronize Apple AddressBook Using Dropbox
 date: "2009-10-15"
-comments: false
+comments: true
 categories: life
 link: false
 ---

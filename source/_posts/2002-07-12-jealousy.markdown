@@ -2,7 +2,7 @@
 layout: post
 title: Jealousy
 date: 2002-7-12
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

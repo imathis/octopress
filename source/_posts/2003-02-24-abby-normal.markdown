@@ -2,7 +2,7 @@
 layout: post
 title: Abby Normal
 date: 2003-2-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

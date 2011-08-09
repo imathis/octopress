@@ -2,7 +2,7 @@
 layout: post
 title: Geek Test
 date: 2002-3-2
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

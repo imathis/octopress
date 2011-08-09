@@ -2,7 +2,7 @@
 layout: post
 title: iMainframe
 date: 2003-6-10
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

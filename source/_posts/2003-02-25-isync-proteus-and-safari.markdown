@@ -2,7 +2,7 @@
 layout: post
 title: iSync, Proteus, and Safari
 date: 2003-2-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

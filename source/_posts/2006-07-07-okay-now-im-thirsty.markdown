@@ -2,7 +2,7 @@
 layout: post
 title: Okay, Now I'm Thirsty
 date: 2006-7-7
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

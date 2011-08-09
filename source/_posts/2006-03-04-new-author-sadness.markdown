@@ -2,7 +2,7 @@
 layout: post
 title: New Author Sadness
 date: 2006-3-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

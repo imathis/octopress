@@ -2,7 +2,7 @@
 layout: post
 title: Peanuts and Cracker Jacks
 date: 2007-4-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Cinderella Man"
 date: 2006-5-1
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

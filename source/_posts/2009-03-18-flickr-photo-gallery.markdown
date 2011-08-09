@@ -2,7 +2,7 @@
 layout: post
 title: Flickr Photo Gallery
 date: 2009-3-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

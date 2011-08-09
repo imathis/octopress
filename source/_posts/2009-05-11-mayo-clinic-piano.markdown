@@ -2,7 +2,7 @@
 layout: post
 title: Mayo Clinic Piano
 date: 2009-5-11
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

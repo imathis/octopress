@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Bridget Jone's Diary"
 date: "2006-10-18"
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

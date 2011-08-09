@@ -2,7 +2,7 @@
 layout: post
 title: WTF
 date: 2006-7-3
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Pond Scum
 date: 2005-1-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

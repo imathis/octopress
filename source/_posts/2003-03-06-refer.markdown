@@ -2,7 +2,7 @@
 layout: post
 title: Refer
 date: 2003-3-6
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

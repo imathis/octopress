@@ -2,7 +2,7 @@
 layout: post
 title: Forward, Not Reply
 date: "2006-12-11"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

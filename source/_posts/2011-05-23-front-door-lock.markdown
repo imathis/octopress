@@ -2,7 +2,7 @@
 layout: post
 title: Front Door Lock
 date: 2011-5-23
-comments: false
+comments: true
 categories: links
 link: true
 ---

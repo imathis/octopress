@@ -2,7 +2,7 @@
 layout: post
 title: It Is Not A Contest
 date: 2007-7-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

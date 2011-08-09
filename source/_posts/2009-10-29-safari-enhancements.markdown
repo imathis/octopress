@@ -2,7 +2,7 @@
 layout: post
 title: Safari Enhancements
 date: "2009-10-29"
-comments: false
+comments: true
 categories: life
 link: false
 ---

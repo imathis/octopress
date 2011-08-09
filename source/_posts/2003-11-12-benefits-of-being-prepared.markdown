@@ -2,7 +2,7 @@
 layout: post
 title: Benefits of Being Prepared
 date: "2003-11-12"
-comments: false
+comments: true
 categories: life
 link: false
 ---

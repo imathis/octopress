@@ -2,7 +2,7 @@
 layout: post
 title: The Cable Guy, Part II
 date: 2006-10-6
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

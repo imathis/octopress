@@ -2,7 +2,7 @@
 layout: post
 title: Random, And Not Repetitive
 date: 2008-4-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

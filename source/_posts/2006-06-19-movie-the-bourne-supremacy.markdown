@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: The Bourne Supremacy"
 date: 2006-6-19
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

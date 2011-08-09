@@ -2,7 +2,7 @@
 layout: post
 title: The Enemy That is Me
 date: 2003-4-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: PlasticWrap Theme for Bluebird
 date: 2009-4-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

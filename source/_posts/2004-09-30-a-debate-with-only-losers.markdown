@@ -2,7 +2,7 @@
 layout: post
 title: A Debate with Only Losers
 date: 2004-9-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

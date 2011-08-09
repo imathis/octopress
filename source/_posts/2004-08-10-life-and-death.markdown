@@ -2,7 +2,7 @@
 layout: post
 title: Life and Death
 date: 2004-8-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

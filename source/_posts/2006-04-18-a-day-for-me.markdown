@@ -2,7 +2,7 @@
 layout: post
 title: A Day For Me
 date: 2006-4-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

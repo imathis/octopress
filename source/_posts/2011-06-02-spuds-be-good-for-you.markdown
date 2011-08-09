@@ -2,7 +2,7 @@
 layout: post
 title: Spuds Be Good For You
 date: 2011-6-2
-comments: false
+comments: true
 categories: links
 link: true
 ---

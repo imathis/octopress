@@ -2,7 +2,7 @@
 layout: post
 title: A Hint of Spring
 date: 2011-2-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

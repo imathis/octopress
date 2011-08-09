@@ -2,7 +2,7 @@
 layout: post
 title: Bought and Paid For
 date: 2009-7-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

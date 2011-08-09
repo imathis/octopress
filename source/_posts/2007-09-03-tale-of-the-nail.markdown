@@ -2,7 +2,7 @@
 layout: post
 title: Tale of the Nail
 date: 2007-9-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

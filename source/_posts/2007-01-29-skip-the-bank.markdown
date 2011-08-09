@@ -2,7 +2,7 @@
 layout: post
 title: Skip The Bank
 date: 2007-1-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: This Just In From MarsEdit
 date: "2004-12-12"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

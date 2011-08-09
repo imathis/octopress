@@ -2,7 +2,7 @@
 layout: post
 title: Remote Access
 date: 2008-1-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Software I Didn't Know I Had
 date: 2007-2-22
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Coming Home
 date: 2006-9-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

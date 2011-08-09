@@ -2,7 +2,7 @@
 layout: post
 title: Holy Crap!
 date: 2007-3-23
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

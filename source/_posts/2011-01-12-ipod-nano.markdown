@@ -2,7 +2,7 @@
 layout: post
 title: iPod Nano
 date: 2011-1-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

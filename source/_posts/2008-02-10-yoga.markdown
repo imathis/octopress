@@ -2,7 +2,7 @@
 layout: post
 title: Yoga
 date: 2008-2-10
-comments: false
+comments: true
 categories: health
 link: false
 ---

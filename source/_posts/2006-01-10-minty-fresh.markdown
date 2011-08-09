@@ -2,7 +2,7 @@
 layout: post
 title: Minty Fresh
 date: 2006-1-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

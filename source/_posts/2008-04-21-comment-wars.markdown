@@ -2,7 +2,7 @@
 layout: post
 title: Comment Wars
 date: 2008-4-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

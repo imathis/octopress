@@ -2,7 +2,7 @@
 layout: post
 title: Now With Daily Publishing
 date: 2011-2-1
-comments: false
+comments: true
 categories: random
 link: false
 ---

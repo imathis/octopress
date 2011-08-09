@@ -2,7 +2,7 @@
 layout: post
 title: Now Let's Bailout the Home Owners
 date: 2008-10-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

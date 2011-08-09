@@ -2,7 +2,7 @@
 layout: post
 title: A Few Thoughts About Dying
 date: 2001-1-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

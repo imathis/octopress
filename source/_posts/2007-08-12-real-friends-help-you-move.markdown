@@ -2,7 +2,7 @@
 layout: post
 title: Real Friends Help You Move
 date: 2007-8-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

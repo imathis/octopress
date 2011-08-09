@@ -2,7 +2,7 @@
 layout: post
 title: Are you there?
 date: 2001-9-22
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

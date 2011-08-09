@@ -2,7 +2,7 @@
 layout: post
 title: Fun With Statistics
 date: 2004-9-11
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

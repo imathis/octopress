@@ -2,7 +2,7 @@
 layout: post
 title: Love That Paper Tape
 date: 2006-7-24
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

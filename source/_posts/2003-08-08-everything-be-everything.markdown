@@ -2,7 +2,7 @@
 layout: post
 title: Everything be everything
 date: 2003-8-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

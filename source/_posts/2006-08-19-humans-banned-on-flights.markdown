@@ -2,7 +2,7 @@
 layout: post
 title: Humans Banned on Flights
 date: 2006-8-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

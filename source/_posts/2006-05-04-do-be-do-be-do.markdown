@@ -2,7 +2,7 @@
 layout: post
 title: Do Be Do Be Do
 date: 2006-5-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

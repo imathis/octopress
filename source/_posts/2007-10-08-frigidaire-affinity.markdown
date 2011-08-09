@@ -2,7 +2,7 @@
 layout: post
 title: Frigidaire Affinity
 date: 2007-10-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

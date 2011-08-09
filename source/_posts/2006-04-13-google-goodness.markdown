@@ -2,7 +2,7 @@
 layout: post
 title: Google Goodness
 date: 2006-4-13
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

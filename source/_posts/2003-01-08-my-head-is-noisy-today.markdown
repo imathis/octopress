@@ -2,7 +2,7 @@
 layout: post
 title: My Head is Noisy Today
 date: 2003-1-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Today I Lost My Job
 date: 2000-5-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

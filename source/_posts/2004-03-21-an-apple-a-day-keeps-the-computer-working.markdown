@@ -2,7 +2,7 @@
 layout: post
 title: An Apple a Day Keeps the Computer Working
 date: 2004-3-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

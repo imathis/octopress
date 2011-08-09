@@ -2,7 +2,7 @@
 layout: post
 title: The Flattening Curve
 date: "2006-12-12"
-comments: false
+comments: true
 categories: health
 link: false
 ---

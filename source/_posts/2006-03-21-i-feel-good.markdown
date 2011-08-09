@@ -2,7 +2,7 @@
 layout: post
 title: I Feel Good
 date: 2006-3-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

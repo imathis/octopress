@@ -2,7 +2,7 @@
 layout: post
 title: No, Kittens ARE Not Covered In The Warranty
 date: 2006-6-29
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Horizontal Navigation Bar
 date: 2004-1-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

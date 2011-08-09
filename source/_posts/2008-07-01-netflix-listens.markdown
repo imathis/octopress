@@ -2,7 +2,7 @@
 layout: post
 title: Netflix Listens
 date: 2008-7-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

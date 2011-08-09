@@ -2,7 +2,7 @@
 layout: post
 title: Using Synergy Over a Secure Connection
 date: "2009-12-10"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Indifference
 date: 2006-3-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

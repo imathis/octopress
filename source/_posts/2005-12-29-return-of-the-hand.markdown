@@ -2,7 +2,7 @@
 layout: post
 title: Return of "The Hand"
 date: "2005-12-29"
-comments: false
+comments: true
 categories: life
 link: false
 ---

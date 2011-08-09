@@ -2,7 +2,7 @@
 layout: post
 title: Stairway to Heaven - Rodrigo y Gabriela
 date: 2009-3-17
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

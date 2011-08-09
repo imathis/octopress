@@ -2,7 +2,7 @@
 layout: post
 title: links for 2008-01-21
 date: 2008-1-21
-comments: false
+comments: true
 categories: links
 link: true
 ---

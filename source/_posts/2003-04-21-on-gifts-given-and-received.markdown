@@ -2,7 +2,7 @@
 layout: post
 title: "On Gifts: Given and Received"
 date: 2003-4-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

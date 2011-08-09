@@ -2,7 +2,7 @@
 layout: post
 title: 950 Words
 date: 2005-11-6
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

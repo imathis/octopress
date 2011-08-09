@@ -2,7 +2,7 @@
 layout: post
 title: Indecision
 date: 2002-9-15
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

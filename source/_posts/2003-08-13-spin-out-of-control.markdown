@@ -2,7 +2,7 @@
 layout: post
 title: Spin Out of Control
 date: 2003-8-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

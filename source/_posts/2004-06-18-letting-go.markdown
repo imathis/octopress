@@ -2,7 +2,7 @@
 layout: post
 title: Letting Go
 date: 2004-6-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

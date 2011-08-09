@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Dead Run"
 date: 2006-3-20
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

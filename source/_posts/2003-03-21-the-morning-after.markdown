@@ -2,7 +2,7 @@
 layout: post
 title: The Morning After
 date: 2003-3-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

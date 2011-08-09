@@ -2,7 +2,7 @@
 layout: post
 title: Laser Eyes, One Year Later
 date: 2007-5-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

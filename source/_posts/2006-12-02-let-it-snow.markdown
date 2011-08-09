@@ -2,7 +2,7 @@
 layout: post
 title: Let It Snow
 date: 2006-12-2
-comments: false
+comments: true
 categories: photography
 link: false
 ---

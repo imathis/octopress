@@ -2,7 +2,7 @@
 layout: post
 title: Adobe Reader Ads
 date: 2006-3-16
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "OS X Ware: PDF Browser"
 date: "2003-11-18"
-comments: false
+comments: true
 categories: life
 link: false
 ---

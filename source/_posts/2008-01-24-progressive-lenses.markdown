@@ -2,7 +2,7 @@
 layout: post
 title: Progressive Lenses
 date: 2008-1-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

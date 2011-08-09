@@ -2,7 +2,7 @@
 layout: post
 title: Seen One, Seen 'Em All
 date: "2007-10-17"
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

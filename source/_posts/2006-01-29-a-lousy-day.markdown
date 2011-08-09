@@ -2,7 +2,7 @@
 layout: post
 title: A Lousy Day
 date: 2006-1-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

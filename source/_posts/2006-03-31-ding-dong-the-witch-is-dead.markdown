@@ -2,7 +2,7 @@
 layout: post
 title: Ding Dong The Witch Is Dead
 date: 2006-3-31
-comments: false
+comments: true
 categories: life
 link: false
 ---

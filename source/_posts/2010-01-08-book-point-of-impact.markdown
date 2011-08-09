@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Point of Impact"
 date: 2010-1-8
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

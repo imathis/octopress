@@ -2,7 +2,7 @@
 layout: post
 title: This is Just Sad
 date: "2002-12-10"
-comments: false
+comments: true
 categories: life
 link: false
 ---

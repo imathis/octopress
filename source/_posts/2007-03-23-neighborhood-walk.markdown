@@ -2,7 +2,7 @@
 layout: post
 title: Neighborhood Walk
 date: 2007-3-23
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

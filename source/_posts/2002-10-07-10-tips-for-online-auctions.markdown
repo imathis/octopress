@@ -2,7 +2,7 @@
 layout: post
 title: 10 Tips for Online Auctions
 date: 2002-10-7
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

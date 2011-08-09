@@ -2,7 +2,7 @@
 layout: post
 title: Which Fish?
 date: 2011-7-21
-comments: false
+comments: true
 categories: links
 link: true
 ---

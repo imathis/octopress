@@ -2,7 +2,7 @@
 layout: post
 title: Basically Not Here
 date: 2007-9-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

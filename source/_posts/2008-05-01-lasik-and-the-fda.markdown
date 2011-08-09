@@ -2,7 +2,7 @@
 layout: post
 title: LASIK and the FDA
 date: 2008-5-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

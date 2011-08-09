@@ -2,7 +2,7 @@
 layout: post
 title: Dealing With My Addiction
 date: 2003-4-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

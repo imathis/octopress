@@ -2,7 +2,7 @@
 layout: post
 title: Open book tests
 date: 2004-1-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

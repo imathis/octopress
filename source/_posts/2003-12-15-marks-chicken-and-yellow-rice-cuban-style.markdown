@@ -2,7 +2,7 @@
 layout: post
 title: Mark's Chicken and Yellow Rice ~ Cuban Style
 date: "2003-12-15"
-comments: false
+comments: true
 categories: life
 link: false
 ---

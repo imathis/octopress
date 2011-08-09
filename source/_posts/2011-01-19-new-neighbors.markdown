@@ -2,7 +2,7 @@
 layout: post
 title: New Neighbors
 date: 2011-1-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

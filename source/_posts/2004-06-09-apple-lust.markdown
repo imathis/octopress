@@ -2,7 +2,7 @@
 layout: post
 title: Apple Lust
 date: 2004-6-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: iPhone Giveaway
 date: 2007-8-30
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

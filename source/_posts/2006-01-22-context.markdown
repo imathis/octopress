@@ -2,7 +2,7 @@
 layout: post
 title: Context
 date: 2006-1-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

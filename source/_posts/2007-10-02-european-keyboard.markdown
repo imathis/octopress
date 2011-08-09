@@ -2,7 +2,7 @@
 layout: post
 title: European Keyboard
 date: 2007-10-2
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

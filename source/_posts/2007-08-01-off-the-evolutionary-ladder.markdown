@@ -2,7 +2,7 @@
 layout: post
 title: Off The Evolutionary Ladder
 date: 2007-8-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

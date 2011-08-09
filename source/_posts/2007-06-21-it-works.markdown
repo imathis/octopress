@@ -2,7 +2,7 @@
 layout: post
 title: It Works!
 date: 2007-6-21
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Yes, Virginia, There Is A Santa Claus
 date: "2007-12-24"
-comments: false
+comments: true
 categories: life
 link: false
 ---

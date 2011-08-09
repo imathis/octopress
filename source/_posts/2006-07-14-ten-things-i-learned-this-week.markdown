@@ -2,7 +2,7 @@
 layout: post
 title: Ten Things I Learned This Week
 date: 2006-7-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

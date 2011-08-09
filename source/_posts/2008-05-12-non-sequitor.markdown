@@ -2,7 +2,7 @@
 layout: post
 title: Non Sequitor
 date: 2008-5-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

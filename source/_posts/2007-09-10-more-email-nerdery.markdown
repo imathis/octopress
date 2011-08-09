@@ -2,7 +2,7 @@
 layout: post
 title: More Email Nerdery
 date: 2007-9-10
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

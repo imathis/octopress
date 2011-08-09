@@ -2,7 +2,7 @@
 layout: post
 title: Insulin Shock
 date: 2008-5-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

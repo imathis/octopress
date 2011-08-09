@@ -2,7 +2,7 @@
 layout: post
 title: Sibelius Simplify Notation Plugin Solves Latency Issues
 date: 2008-5-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Binary Time
 date: 2008-2-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

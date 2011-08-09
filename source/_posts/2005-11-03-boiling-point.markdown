@@ -2,7 +2,7 @@
 layout: post
 title: Boiling Point
 date: 2005-11-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

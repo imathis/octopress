@@ -2,7 +2,7 @@
 layout: post
 title: Revolution is Not an AOL Keyword
 date: 2003-4-21
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

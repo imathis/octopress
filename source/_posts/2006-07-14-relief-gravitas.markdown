@@ -2,7 +2,7 @@
 layout: post
 title: Relief Gravitas
 date: 2006-7-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

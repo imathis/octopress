@@ -2,7 +2,7 @@
 layout: post
 title: Groin Pull
 date: 2006-8-21
-comments: false
+comments: true
 categories: health
 link: false
 ---

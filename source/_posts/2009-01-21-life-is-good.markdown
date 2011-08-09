@@ -2,7 +2,7 @@
 layout: post
 title: Life is Good
 date: 2009-1-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

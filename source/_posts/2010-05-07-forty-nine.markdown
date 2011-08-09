@@ -2,7 +2,7 @@
 layout: post
 title: Forty-nine
 date: 2010-5-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

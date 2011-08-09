@@ -2,7 +2,7 @@
 layout: post
 title: List Compulsion
 date: 2000-1-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: How To Turn Snap Shots Off
 date: 2008-3-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

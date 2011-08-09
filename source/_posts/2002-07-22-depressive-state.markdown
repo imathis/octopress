@@ -2,7 +2,7 @@
 layout: post
 title: Depressive State
 date: 2002-7-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

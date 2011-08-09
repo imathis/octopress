@@ -2,7 +2,7 @@
 layout: post
 title: The Attention Span of a Gnat
 date: "2005-10-19"
-comments: false
+comments: true
 categories: life
 link: false
 ---

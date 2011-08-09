@@ -2,7 +2,7 @@
 layout: post
 title: Rejection
 date: 2003-1-6
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Refer madness
 date: 2003-7-28
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

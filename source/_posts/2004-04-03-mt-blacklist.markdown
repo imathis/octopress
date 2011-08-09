@@ -2,7 +2,7 @@
 layout: post
 title: MT-Blacklist
 date: 2004-4-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

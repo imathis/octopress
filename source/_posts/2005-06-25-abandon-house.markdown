@@ -2,7 +2,7 @@
 layout: post
 title: Abandon House
 date: 2005-6-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

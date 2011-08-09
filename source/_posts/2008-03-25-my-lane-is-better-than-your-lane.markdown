@@ -2,7 +2,7 @@
 layout: post
 title: My Lane Is Better Than Your Lane
 date: 2008-3-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

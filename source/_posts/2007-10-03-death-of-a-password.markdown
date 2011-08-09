@@ -2,7 +2,7 @@
 layout: post
 title: Death of a Password
 date: 2007-10-3
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Deleting "Un-deleteable" Google Calendar Events
 date: 2009-3-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

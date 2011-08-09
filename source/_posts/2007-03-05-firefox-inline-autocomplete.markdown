@@ -2,7 +2,7 @@
 layout: post
 title: Firefox Inline Autocomplete
 date: 2007-3-5
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

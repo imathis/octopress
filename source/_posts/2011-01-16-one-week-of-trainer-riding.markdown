@@ -2,7 +2,7 @@
 layout: post
 title: One Week of Trainer Riding
 date: 2011-1-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

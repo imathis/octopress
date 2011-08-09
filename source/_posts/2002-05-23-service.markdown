@@ -2,7 +2,7 @@
 layout: post
 title: Service
 date: 2002-5-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

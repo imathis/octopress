@@ -2,7 +2,7 @@
 layout: post
 title: Bureaucratic Two-Step
 date: 2006-9-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

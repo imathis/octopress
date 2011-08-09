@@ -2,7 +2,7 @@
 layout: post
 title: Too Many Movies
 date: 2006-1-2
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

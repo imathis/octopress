@@ -2,7 +2,7 @@
 layout: post
 title: First Walk of 2007
 date: 2007-1-1
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

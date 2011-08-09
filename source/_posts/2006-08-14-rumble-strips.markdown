@@ -2,7 +2,7 @@
 layout: post
 title: Rumble Strips
 date: 2006-8-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

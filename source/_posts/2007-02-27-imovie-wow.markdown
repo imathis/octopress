@@ -2,7 +2,7 @@
 layout: post
 title: iMovie Wow
 date: 2007-2-27
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

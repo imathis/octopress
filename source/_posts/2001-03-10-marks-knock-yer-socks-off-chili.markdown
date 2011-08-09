@@ -2,7 +2,7 @@
 layout: post
 title: Mark's Knock-Yer-Socks-Off Chili
 date: 2001-3-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

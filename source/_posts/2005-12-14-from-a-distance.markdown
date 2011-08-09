@@ -2,7 +2,7 @@
 layout: post
 title: From A Distance
 date: "2005-12-14"
-comments: false
+comments: true
 categories: life
 link: false
 ---

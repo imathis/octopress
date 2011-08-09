@@ -2,7 +2,7 @@
 layout: post
 title: Spoon
 date: 2005-5-19
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

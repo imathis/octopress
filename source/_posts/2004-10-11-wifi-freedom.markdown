@@ -2,7 +2,7 @@
 layout: post
 title: WiFi Freedom
 date: "2004-10-11"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

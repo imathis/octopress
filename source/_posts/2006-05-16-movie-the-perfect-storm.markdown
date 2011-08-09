@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: The Perfect Storm"
 date: 2006-5-16
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

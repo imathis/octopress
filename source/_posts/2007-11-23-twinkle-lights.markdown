@@ -2,7 +2,7 @@
 layout: post
 title: Twinkle Lights
 date: "2007-11-23"
-comments: false
+comments: true
 categories: life
 link: false
 ---

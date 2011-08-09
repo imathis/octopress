@@ -2,7 +2,7 @@
 layout: post
 title: Close Old Posts
 date: 2008-8-12
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

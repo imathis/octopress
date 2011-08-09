@@ -2,7 +2,7 @@
 layout: post
 title: A Drink of Water
 date: 2002-9-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

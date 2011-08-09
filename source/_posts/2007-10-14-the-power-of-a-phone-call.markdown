@@ -2,7 +2,7 @@
 layout: post
 title: The Power of A Phone Call
 date: "2007-10-14"
-comments: false
+comments: true
 categories: life
 link: false
 ---

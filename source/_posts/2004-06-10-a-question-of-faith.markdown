@@ -2,7 +2,7 @@
 layout: post
 title: A Question of Faith
 date: 2004-6-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

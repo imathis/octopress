@@ -2,7 +2,7 @@
 layout: post
 title: Finding Neverland
 date: "2004-12-19"
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

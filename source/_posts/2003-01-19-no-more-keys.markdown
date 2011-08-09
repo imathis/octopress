@@ -2,7 +2,7 @@
 layout: post
 title: No more keys
 date: 2003-1-19
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

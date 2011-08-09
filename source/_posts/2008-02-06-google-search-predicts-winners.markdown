@@ -2,7 +2,7 @@
 layout: post
 title: Google Search Predicts Winners
 date: 2008-2-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

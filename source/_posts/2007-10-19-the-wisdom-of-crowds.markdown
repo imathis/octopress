@@ -2,7 +2,7 @@
 layout: post
 title: The Wisdom of Crowds
 date: "2007-10-19"
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

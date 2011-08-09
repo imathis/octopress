@@ -2,7 +2,7 @@
 layout: post
 title: Currently Reading
 date: 2007-11-6
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

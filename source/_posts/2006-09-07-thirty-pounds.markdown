@@ -2,7 +2,7 @@
 layout: post
 title: Thirty Pounds
 date: 2006-9-7
-comments: false
+comments: true
 categories: health
 link: false
 ---

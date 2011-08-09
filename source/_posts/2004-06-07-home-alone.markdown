@@ -2,7 +2,7 @@
 layout: post
 title: Home Alone
 date: 2004-6-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Tivo Feature Request
 date: 2006-4-1
-comments: false
+comments: true
 categories: random
 link: false
 ---

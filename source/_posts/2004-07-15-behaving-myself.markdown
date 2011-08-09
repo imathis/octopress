@@ -2,7 +2,7 @@
 layout: post
 title: Behaving Myself
 date: 2004-7-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

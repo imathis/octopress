@@ -2,7 +2,7 @@
 layout: post
 title: A Refreshing Change
 date: 2006-2-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

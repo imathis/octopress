@@ -2,7 +2,7 @@
 layout: post
 title: Eternal or Everlasting?
 date: 2004-4-24
-comments: false
+comments: true
 categories: random
 link: false
 ---

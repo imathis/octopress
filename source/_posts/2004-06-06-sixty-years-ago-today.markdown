@@ -2,7 +2,7 @@
 layout: post
 title: Sixty Years Ago Today
 date: 2004-6-6
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

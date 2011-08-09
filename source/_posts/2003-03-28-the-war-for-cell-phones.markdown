@@ -2,7 +2,7 @@
 layout: post
 title: The War for Cell Phones
 date: 2003-3-28
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

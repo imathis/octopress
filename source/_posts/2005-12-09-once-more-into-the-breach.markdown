@@ -2,7 +2,7 @@
 layout: post
 title: Once More Into The Breach
 date: 2005-12-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Convert Mercurial to Git
 date: 2011-5-17
-comments: false
+comments: true
 categories: links
 link: true
 ---

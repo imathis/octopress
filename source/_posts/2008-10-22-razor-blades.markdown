@@ -2,7 +2,7 @@
 layout: post
 title: Razor Blades
 date: "2008-10-22"
-comments: false
+comments: true
 categories: life
 link: false
 ---

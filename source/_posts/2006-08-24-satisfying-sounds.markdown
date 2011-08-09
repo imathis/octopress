@@ -2,7 +2,7 @@
 layout: post
 title: Satisfying Sounds
 date: 2006-8-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

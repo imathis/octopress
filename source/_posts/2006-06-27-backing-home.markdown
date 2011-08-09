@@ -2,7 +2,7 @@
 layout: post
 title: Backing Home
 date: 2006-6-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

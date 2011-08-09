@@ -2,7 +2,7 @@
 layout: post
 title: Imagine Waiting 416 Days
 date: 2009-6-17
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Exhausted
 date: "2005-11-15"
-comments: false
+comments: true
 categories: life
 link: false
 ---

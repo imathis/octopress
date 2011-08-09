@@ -2,7 +2,7 @@
 layout: post
 title: Emotional Reset
 date: "2002-11-19"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Trepidation
 date: 2006-1-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

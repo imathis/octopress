@@ -2,7 +2,7 @@
 layout: post
 title: Installing MyEclipse
 date: "2009-11-14"
-comments: false
+comments: true
 categories: life
 link: false
 ---

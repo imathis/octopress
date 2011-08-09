@@ -2,7 +2,7 @@
 layout: post
 title: New Rule - No Phone Calls From Work
 date: 2005-9-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

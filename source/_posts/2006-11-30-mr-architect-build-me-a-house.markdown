@@ -2,7 +2,7 @@
 layout: post
 title: Mr. Architect, Build Me A House
 date: "2006-11-30"
-comments: false
+comments: true
 categories: life
 link: false
 ---

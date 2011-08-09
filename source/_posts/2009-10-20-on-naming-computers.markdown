@@ -2,7 +2,7 @@
 layout: post
 title: On Naming Computers
 date: "2009-10-20"
-comments: false
+comments: true
 categories: life
 link: false
 ---

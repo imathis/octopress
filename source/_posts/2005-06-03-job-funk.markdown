@@ -2,7 +2,7 @@
 layout: post
 title: Job Funk
 date: 2005-6-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

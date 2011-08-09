@@ -2,7 +2,7 @@
 layout: post
 title: Traveling to Illinois
 date: "2006-11-22"
-comments: false
+comments: true
 categories: life
 link: false
 ---

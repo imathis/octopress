@@ -2,7 +2,7 @@
 layout: post
 title: 5am Salmon
 date: 2002-5-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

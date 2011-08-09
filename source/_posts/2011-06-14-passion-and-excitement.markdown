@@ -2,7 +2,7 @@
 layout: post
 title: Passion and Excitement
 date: 2011-6-14
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

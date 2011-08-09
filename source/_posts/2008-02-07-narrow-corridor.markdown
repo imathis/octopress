@@ -2,7 +2,7 @@
 layout: post
 title: Narrow Corridor
 date: 2008-2-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: An Open Letter to the Senate
 date: 2005-7-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Sparring with a Stick
 date: 2006-8-9
-comments: false
+comments: true
 categories: health
 link: false
 ---

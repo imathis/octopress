@@ -2,7 +2,7 @@
 layout: post
 title: Wooden Floors
 date: 2007-8-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

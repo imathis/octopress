@@ -2,7 +2,7 @@
 layout: post
 title: Memory Test
 date: 2005-5-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

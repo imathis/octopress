@@ -2,7 +2,7 @@
 layout: post
 title: How I Spent My Summer
 date: 2008-8-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

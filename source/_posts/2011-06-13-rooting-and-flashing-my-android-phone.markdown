@@ -2,7 +2,7 @@
 layout: post
 title: Rooting and Flashing my Android Phone
 date: 2011-6-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

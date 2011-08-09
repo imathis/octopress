@@ -2,7 +2,7 @@
 layout: post
 title: Conditioned
 date: 2007-2-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

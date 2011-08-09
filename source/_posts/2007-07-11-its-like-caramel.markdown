@@ -2,7 +2,7 @@
 layout: post
 title: It's Like Caramel
 date: 2007-7-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

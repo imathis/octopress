@@ -2,7 +2,7 @@
 layout: post
 title: Making Changes
 date: 2006-6-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

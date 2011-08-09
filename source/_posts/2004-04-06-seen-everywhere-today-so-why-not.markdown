@@ -2,7 +2,7 @@
 layout: post
 title: Seen everywhere today, so why not . . .
 date: 2004-4-6
-comments: false
+comments: true
 categories: meme
 link: false
 ---

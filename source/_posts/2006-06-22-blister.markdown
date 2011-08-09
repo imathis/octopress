@@ -2,7 +2,7 @@
 layout: post
 title: Blister
 date: 2006-6-22
-comments: false
+comments: true
 categories: health
 link: false
 ---

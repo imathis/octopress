@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Band of Brothers"
 date: 2006-6-14
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "OS X: Address book vs. Palm OS 4 Address"
 date: 2003-3-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

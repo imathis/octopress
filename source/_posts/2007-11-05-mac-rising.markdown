@@ -2,7 +2,7 @@
 layout: post
 title: Mac Rising
 date: 2007-11-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

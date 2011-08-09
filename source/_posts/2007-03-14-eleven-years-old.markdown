@@ -2,7 +2,7 @@
 layout: post
 title: Eleven Years Old
 date: 2007-3-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

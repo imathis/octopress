@@ -2,7 +2,7 @@
 layout: post
 title: Vending Stupidness
 date: 2006-4-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

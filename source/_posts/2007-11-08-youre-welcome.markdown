@@ -2,7 +2,7 @@
 layout: post
 title: You're Welcome
 date: 2007-11-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

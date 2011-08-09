@@ -2,7 +2,7 @@
 layout: post
 title: So Close and Yet So Far Away
 date: 2004-4-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

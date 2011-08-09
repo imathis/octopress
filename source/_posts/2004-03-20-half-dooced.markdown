@@ -2,7 +2,7 @@
 layout: post
 title: Half Dooced
 date: 2004-3-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

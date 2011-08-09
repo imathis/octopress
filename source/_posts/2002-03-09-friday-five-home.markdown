@@ -2,7 +2,7 @@
 layout: post
 title: "Friday Five: Home"
 date: 2002-3-9
-comments: false
+comments: true
 categories: meme
 link: false
 ---

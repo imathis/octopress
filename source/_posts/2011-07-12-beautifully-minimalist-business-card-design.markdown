@@ -2,7 +2,7 @@
 layout: post
 title: Beautifully Minimalist Business Card Design
 date: 2011-7-12
-comments: false
+comments: true
 categories: links
 link: true
 ---

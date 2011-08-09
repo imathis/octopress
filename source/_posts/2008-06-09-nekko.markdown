@@ -2,7 +2,7 @@
 layout: post
 title: Nekko
 date: 2008-6-9
-comments: false
+comments: true
 categories: family
 link: false
 ---

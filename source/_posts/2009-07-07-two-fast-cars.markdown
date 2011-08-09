@@ -2,7 +2,7 @@
 layout: post
 title: Two Fast Cars
 date: 2009-7-7
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

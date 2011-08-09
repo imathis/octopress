@@ -2,7 +2,7 @@
 layout: post
 title: Plain Paper vs. Lined
 date: 2008-7-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

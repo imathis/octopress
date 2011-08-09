@@ -2,7 +2,7 @@
 layout: post
 title: High Speed Internet
 date: 2007-9-14
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

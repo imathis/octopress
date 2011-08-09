@@ -2,7 +2,7 @@
 layout: post
 title: Grief is Physical
 date: "2005-10-14"
-comments: false
+comments: true
 categories: life
 link: false
 ---

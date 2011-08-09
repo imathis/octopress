@@ -2,7 +2,7 @@
 layout: post
 title: Pinned
 date: 2007-7-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

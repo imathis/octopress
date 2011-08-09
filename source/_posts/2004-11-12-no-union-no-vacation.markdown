@@ -2,7 +2,7 @@
 layout: post
 title: No Union = No Vacation
 date: "2004-11-12"
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

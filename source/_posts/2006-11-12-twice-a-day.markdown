@@ -2,7 +2,7 @@
 layout: post
 title: Twice A Day
 date: "2006-11-12"
-comments: false
+comments: true
 categories: life
 link: false
 ---

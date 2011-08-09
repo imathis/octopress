@@ -2,7 +2,7 @@
 layout: post
 title: Things That Go Splat
 date: "2005-11-10"
-comments: false
+comments: true
 categories: health
 link: false
 ---

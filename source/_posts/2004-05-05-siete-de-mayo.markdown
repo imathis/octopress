@@ -2,7 +2,7 @@
 layout: post
 title: Siete de Mayo
 date: 2004-5-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

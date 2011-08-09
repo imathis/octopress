@@ -2,7 +2,7 @@
 layout: post
 title: Random Bits
 date: 2006-1-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

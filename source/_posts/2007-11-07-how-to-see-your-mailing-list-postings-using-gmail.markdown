@@ -2,7 +2,7 @@
 layout: post
 title: How to See Your Mailing List Postings Using Gmail
 date: 2007-11-7
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

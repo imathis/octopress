@@ -2,7 +2,7 @@
 layout: post
 title: A Good Day
 date: 2004-4-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

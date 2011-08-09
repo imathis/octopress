@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Inside Man"
 date: 2006-4-1
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

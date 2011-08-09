@@ -2,7 +2,7 @@
 layout: post
 title: Apple PowerBook G4
 date: 2002-5-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

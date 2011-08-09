@@ -2,7 +2,7 @@
 layout: post
 title: Rude Neighbors
 date: 2011-2-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

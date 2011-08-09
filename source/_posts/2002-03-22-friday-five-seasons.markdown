@@ -2,7 +2,7 @@
 layout: post
 title: "Friday Five: Seasons"
 date: 2002-3-22
-comments: false
+comments: true
 categories: meme
 link: false
 ---

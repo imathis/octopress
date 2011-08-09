@@ -2,7 +2,7 @@
 layout: post
 title: The Unbearable Heaviness of Grief
 date: 2006-3-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

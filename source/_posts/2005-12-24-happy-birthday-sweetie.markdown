@@ -2,7 +2,7 @@
 layout: post
 title: Happy Birthday Sweetie
 date: "2005-12-24"
-comments: false
+comments: true
 categories: life
 link: false
 ---

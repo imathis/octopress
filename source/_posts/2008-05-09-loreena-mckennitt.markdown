@@ -2,7 +2,7 @@
 layout: post
 title: Loreena McKennitt
 date: 2008-5-9
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

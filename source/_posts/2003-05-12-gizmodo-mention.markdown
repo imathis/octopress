@@ -2,7 +2,7 @@
 layout: post
 title: Gizmodo Mention
 date: 2003-5-12
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

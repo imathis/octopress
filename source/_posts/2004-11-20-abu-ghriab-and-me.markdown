@@ -2,7 +2,7 @@
 layout: post
 title: Abu Ghriab and Me
 date: "2004-11-20"
-comments: false
+comments: true
 categories: life
 link: false
 ---

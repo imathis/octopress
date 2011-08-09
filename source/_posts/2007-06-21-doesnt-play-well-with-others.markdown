@@ -2,7 +2,7 @@
 layout: post
 title: Doesn't Play Well With Others
 date: 2007-6-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

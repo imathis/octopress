@@ -2,7 +2,7 @@
 layout: post
 title: Frustration
 date: "2005-11-19"
-comments: false
+comments: true
 categories: life
 link: false
 ---

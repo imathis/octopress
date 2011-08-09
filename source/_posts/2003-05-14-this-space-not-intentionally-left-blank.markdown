@@ -2,7 +2,7 @@
 layout: post
 title: This Space Not Intentionally Left Blank
 date: 2003-5-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

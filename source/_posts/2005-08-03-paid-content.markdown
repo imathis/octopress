@@ -2,7 +2,7 @@
 layout: post
 title: Paid Content
 date: 2005-8-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

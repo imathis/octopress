@@ -2,7 +2,7 @@
 layout: post
 title: 12MM X 10MM
 date: 2002-5-13
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

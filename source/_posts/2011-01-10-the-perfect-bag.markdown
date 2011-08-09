@@ -2,7 +2,7 @@
 layout: post
 title: The Perfect Bag
 date: 2011-1-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

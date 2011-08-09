@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Fargo"
 date: 2006-5-23
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

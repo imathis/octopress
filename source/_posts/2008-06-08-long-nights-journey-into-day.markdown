@@ -2,7 +2,7 @@
 layout: post
 title: Long Night's Journey Into Day
 date: 2008-6-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

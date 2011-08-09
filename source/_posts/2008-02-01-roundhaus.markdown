@@ -2,7 +2,7 @@
 layout: post
 title: Roundhaus
 date: 2008-2-1
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

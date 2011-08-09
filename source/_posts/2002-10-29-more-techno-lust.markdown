@@ -2,7 +2,7 @@
 layout: post
 title: More Techno Lust
 date: "2002-10-29"
-comments: false
+comments: true
 categories: life
 link: false
 ---

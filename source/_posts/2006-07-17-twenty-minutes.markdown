@@ -2,7 +2,7 @@
 layout: post
 title: Twenty Minutes
 date: 2006-7-17
-comments: false
+comments: true
 categories: life
 link: false
 ---

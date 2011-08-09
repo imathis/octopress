@@ -2,7 +2,7 @@
 layout: post
 title: "Cautious Optimism "
 date: 2008-5-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

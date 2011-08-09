@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Emergence"
 date: 2006-2-18
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

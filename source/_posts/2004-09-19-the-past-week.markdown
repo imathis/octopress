@@ -2,7 +2,7 @@
 layout: post
 title: The Past Week
 date: 2004-9-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Mr. Blandings Builds His Dream House"
 date: 2006-11-5
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

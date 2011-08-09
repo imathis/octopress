@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Heat Lightning"
 date: 2010-1-2
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

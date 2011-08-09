@@ -2,7 +2,7 @@
 layout: post
 title: Google Rocks
 date: 2006-6-7
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

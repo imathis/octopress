@@ -2,7 +2,7 @@
 layout: post
 title: New Direction
 date: 2005-1-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

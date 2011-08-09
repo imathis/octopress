@@ -2,7 +2,7 @@
 layout: post
 title: "And Now A Word From Our Sponsor: Envy"
 date: 2006-6-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Huevos Rancheros, Szechwan Beef Stir Fry and Carrot Cake
 date: 2004-9-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

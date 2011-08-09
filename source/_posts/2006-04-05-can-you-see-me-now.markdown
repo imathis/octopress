@@ -2,7 +2,7 @@
 layout: post
 title: Can You See Me Now?
 date: 2006-4-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

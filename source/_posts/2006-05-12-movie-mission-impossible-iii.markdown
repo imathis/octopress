@@ -2,7 +2,7 @@
 layout: post
 title: Movie Mission Impossible III
 date: 2006-5-12
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

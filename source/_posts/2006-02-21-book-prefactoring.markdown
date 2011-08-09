@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Prefactoring"
 date: 2006-2-21
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Installing Tchibo Internet Stick on Mac OS X
 date: 2010-5-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

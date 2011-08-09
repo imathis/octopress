@@ -2,7 +2,7 @@
 layout: post
 title: Two-Thirty AM Phone Call
 date: 2005-6-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

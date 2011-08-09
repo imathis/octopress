@@ -2,7 +2,7 @@
 layout: post
 title: Isolated
 date: 2006-4-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

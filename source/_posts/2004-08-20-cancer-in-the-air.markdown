@@ -2,7 +2,7 @@
 layout: post
 title: Cancer in the Air
 date: 2004-8-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

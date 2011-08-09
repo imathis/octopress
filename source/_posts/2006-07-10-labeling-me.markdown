@@ -2,7 +2,7 @@
 layout: post
 title: Labeling Me
 date: 2006-7-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

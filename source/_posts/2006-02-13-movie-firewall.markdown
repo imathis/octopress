@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Firewall"
 date: 2006-2-13
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

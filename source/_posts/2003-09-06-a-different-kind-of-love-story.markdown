@@ -2,7 +2,7 @@
 layout: post
 title: A Different Kind of Love Story
 date: 2003-9-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

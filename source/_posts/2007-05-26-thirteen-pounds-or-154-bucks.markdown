@@ -2,7 +2,7 @@
 layout: post
 title: Thirteen Pounds or 154 Bucks
 date: 2007-5-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

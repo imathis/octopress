@@ -2,7 +2,7 @@
 layout: post
 title: "25,001"
 date: "2008-10-31"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

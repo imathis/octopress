@@ -2,7 +2,7 @@
 layout: post
 title: What If Microsoft Designed the iPod?
 date: 2006-4-14
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

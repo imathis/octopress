@@ -2,7 +2,7 @@
 layout: post
 title: Refactoring
 date: 2007-2-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

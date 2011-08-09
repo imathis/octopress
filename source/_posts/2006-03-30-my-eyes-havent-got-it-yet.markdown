@@ -2,7 +2,7 @@
 layout: post
 title: My Eyes Haven't Got It (Yet)
 date: 2006-3-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

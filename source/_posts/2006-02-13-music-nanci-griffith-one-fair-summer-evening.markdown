@@ -2,7 +2,7 @@
 layout: post
 title: "Music: Nanci Griffith One Fair Summer Evening"
 date: 2006-2-13
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

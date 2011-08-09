@@ -2,7 +2,7 @@
 layout: post
 title: Ebb and Flow
 date: 2005-10-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

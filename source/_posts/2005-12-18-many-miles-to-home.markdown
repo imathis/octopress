@@ -2,7 +2,7 @@
 layout: post
 title: Many Miles To Home
 date: "2005-12-18"
-comments: false
+comments: true
 categories: life
 link: false
 ---

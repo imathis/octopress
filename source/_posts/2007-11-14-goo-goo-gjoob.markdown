@@ -2,7 +2,7 @@
 layout: post
 title: Goo Goo G'joob
 date: "2007-11-14"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: 0x30 Things About Me
 date: 2009-5-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

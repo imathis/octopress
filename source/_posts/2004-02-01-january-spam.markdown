@@ -2,7 +2,7 @@
 layout: post
 title: January Spam
 date: 2004-2-1
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

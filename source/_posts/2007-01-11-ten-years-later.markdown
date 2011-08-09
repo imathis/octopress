@@ -2,7 +2,7 @@
 layout: post
 title: Ten Years Later
 date: 2007-1-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

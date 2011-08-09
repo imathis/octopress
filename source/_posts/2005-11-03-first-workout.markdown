@@ -2,7 +2,7 @@
 layout: post
 title: First Workout
 date: 2005-11-3
-comments: false
+comments: true
 categories: health
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Google Maps Voting Information
 date: "2008-10-29"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: This and that
 date: 2002-7-25
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Windshield, Take Three
 date: 2006-6-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

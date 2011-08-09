@@ -2,7 +2,7 @@
 layout: post
 title: FedEx Planes Avoiding a Thunderstorm
 date: 2006-5-11
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

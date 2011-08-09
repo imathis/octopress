@@ -2,7 +2,7 @@
 layout: post
 title: Tiger, tiger burning bright
 date: "2005-11-22"
-comments: false
+comments: true
 categories: life
 link: false
 ---

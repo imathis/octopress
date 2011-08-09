@@ -2,7 +2,7 @@
 layout: post
 title: How Camera Lenses Are Made
 date: 2008-1-25
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

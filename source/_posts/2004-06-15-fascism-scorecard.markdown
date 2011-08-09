@@ -2,7 +2,7 @@
 layout: post
 title: Fascism Scorecard
 date: 2004-6-15
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

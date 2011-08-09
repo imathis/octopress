@@ -2,7 +2,7 @@
 layout: post
 title: Vote For Chili
 date: 2008-1-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

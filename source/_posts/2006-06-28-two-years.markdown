@@ -2,7 +2,7 @@
 layout: post
 title: Two Years
 date: 2006-6-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Two-Fifty-Nine Nine
 date: 2005-8-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

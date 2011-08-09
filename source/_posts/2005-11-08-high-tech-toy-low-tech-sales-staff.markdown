@@ -2,7 +2,7 @@
 layout: post
 title: High Tech Toy, Low Tech Sales Staff
 date: 2005-11-8
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: No Place to Vent
 date: 2005-11-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

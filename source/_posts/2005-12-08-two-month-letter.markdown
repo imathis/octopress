@@ -2,7 +2,7 @@
 layout: post
 title: Two Month Letter
 date: 2005-12-8
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

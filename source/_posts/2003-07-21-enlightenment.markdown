@@ -2,7 +2,7 @@
 layout: post
 title: Enlightenment
 date: 2003-7-21
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

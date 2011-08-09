@@ -2,7 +2,7 @@
 layout: post
 title: How Difficult Can This Be?
 date: 2008-3-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

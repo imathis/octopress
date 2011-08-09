@@ -2,7 +2,7 @@
 layout: post
 title: Of Butterflys
 date: "2005-10-14"
-comments: false
+comments: true
 categories: life
 link: false
 ---

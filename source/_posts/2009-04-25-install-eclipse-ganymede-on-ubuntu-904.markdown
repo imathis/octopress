@@ -2,7 +2,7 @@
 layout: post
 title: Install Eclipse Ganymede on Ubuntu 9.04
 date: 2009-4-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

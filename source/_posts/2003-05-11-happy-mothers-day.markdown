@@ -2,7 +2,7 @@
 layout: post
 title: Happy Mother's Day
 date: 2003-5-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

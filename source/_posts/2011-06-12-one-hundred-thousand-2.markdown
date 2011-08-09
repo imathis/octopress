@@ -2,7 +2,7 @@
 layout: post
 title: One Hundred Thousand
 date: 2011-6-12
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: I'm A Big Dopey
 date: 2003-2-28
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

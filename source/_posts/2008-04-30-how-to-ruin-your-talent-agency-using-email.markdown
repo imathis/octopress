@@ -2,7 +2,7 @@
 layout: post
 title: How To Ruin Your 'Talent' Agency Using Email
 date: 2008-4-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

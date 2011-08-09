@@ -2,7 +2,7 @@
 layout: post
 title: Be Careful What You Wish For
 date: 2006-8-2
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

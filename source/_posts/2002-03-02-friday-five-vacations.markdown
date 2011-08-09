@@ -2,7 +2,7 @@
 layout: post
 title: "Friday Five: Vacations"
 date: 2002-3-2
-comments: false
+comments: true
 categories: meme
 link: false
 ---

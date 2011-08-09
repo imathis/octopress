@@ -2,7 +2,7 @@
 layout: post
 title: Johnny Carson
 date: 2005-1-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

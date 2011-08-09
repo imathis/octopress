@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Bicentennial Man"
 date: 2006-11-9
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

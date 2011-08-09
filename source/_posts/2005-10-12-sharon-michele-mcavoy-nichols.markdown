@@ -2,7 +2,7 @@
 layout: post
 title: Sharon Michele McAvoy Nichols
 date: "2005-10-12"
-comments: false
+comments: true
 categories: family
 link: false
 ---

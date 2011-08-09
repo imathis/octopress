@@ -2,7 +2,7 @@
 layout: post
 title: A Little Faith
 date: 2004-4-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

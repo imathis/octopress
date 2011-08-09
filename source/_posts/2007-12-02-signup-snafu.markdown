@@ -2,7 +2,7 @@
 layout: post
 title: Signup Snafu
 date: 2007-12-2
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

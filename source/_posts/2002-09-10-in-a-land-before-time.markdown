@@ -2,7 +2,7 @@
 layout: post
 title: In a land before time
 date: 2002-9-10
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

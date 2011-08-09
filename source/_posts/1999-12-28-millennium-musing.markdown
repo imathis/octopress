@@ -2,7 +2,7 @@
 layout: post
 title: Millennium Musing
 date: "1999-12-28"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

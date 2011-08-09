@@ -2,7 +2,7 @@
 layout: post
 title: This is Just Wrong
 date: 2003-8-26
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

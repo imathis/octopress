@@ -2,7 +2,7 @@
 layout: post
 title: Electronic Pay Statement
 date: 2008-4-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

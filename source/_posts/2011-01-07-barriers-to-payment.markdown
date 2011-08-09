@@ -2,7 +2,7 @@
 layout: post
 title: Barriers to Payment
 date: 2011-1-7
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Music: Johnny Cash American IV: The Man Comes Around"
 date: 2006-3-7
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

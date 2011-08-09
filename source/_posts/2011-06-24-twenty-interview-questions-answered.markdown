@@ -2,7 +2,7 @@
 layout: post
 title: Twenty Interview Questions Answered
 date: 2011-6-24
-comments: false
+comments: true
 categories: links
 link: true
 ---

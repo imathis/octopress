@@ -2,7 +2,7 @@
 layout: post
 title: Tear for Michele
 date: "2005-11-29"
-comments: false
+comments: true
 categories: life
 link: false
 ---

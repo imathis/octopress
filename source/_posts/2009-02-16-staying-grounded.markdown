@@ -2,7 +2,7 @@
 layout: post
 title: Staying Grounded
 date: 2009-2-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

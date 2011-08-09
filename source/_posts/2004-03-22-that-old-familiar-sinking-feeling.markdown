@@ -2,7 +2,7 @@
 layout: post
 title: That Old Familiar (Sinking) Feeling
 date: 2004-3-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Hoisin Chicken
 date: "2008-12-29"
-comments: false
+comments: true
 categories: life
 link: false
 ---

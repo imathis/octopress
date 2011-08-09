@@ -2,7 +2,7 @@
 layout: post
 title: 72 Cents
 date: 2007-9-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

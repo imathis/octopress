@@ -2,7 +2,7 @@
 layout: post
 title: Marketing Propaganda != Customer Service
 date: 2006-5-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

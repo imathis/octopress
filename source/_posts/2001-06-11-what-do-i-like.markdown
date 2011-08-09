@@ -2,7 +2,7 @@
 layout: post
 title: What do I Like?
 date: 2001-6-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

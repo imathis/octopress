@@ -2,7 +2,7 @@
 layout: post
 title: "Book: City of Bones"
 date: 2006-6-22
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Survivor Disgrace
 date: 2004-3-5
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

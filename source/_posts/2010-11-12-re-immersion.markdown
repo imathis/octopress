@@ -2,7 +2,7 @@
 layout: post
 title: Re-immersion
 date: "2010-11-12"
-comments: false
+comments: true
 categories: life
 link: false
 ---

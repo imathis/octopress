@@ -2,7 +2,7 @@
 layout: post
 title: $1968
 date: 2007-8-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

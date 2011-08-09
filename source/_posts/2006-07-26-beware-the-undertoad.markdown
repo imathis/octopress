@@ -2,7 +2,7 @@
 layout: post
 title: Beware the Undertoad
 date: 2006-7-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

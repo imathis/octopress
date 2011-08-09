@@ -2,7 +2,7 @@
 layout: post
 title: Out of the Blue
 date: "2005-12-12"
-comments: false
+comments: true
 categories: life
 link: false
 ---

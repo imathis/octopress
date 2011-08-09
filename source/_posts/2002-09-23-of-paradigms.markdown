@@ -2,7 +2,7 @@
 layout: post
 title: Of Paradigms
 date: 2002-9-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

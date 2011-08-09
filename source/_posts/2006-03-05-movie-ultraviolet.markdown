@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Ultraviolet"
 date: 2006-3-5
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

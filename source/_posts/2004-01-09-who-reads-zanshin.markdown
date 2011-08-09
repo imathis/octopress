@@ -2,7 +2,7 @@
 layout: post
 title: Who reads Zanshin?
 date: 2004-1-9
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

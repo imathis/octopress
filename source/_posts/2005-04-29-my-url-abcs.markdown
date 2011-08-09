@@ -2,7 +2,7 @@
 layout: post
 title: My URL ABCs
 date: 2005-4-29
-comments: false
+comments: true
 categories: meme
 link: false
 ---

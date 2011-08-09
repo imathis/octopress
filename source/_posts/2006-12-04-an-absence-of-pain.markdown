@@ -2,7 +2,7 @@
 layout: post
 title: An Absence of Pain
 date: 2006-12-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

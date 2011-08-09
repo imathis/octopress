@@ -2,7 +2,7 @@
 layout: post
 title: Tai Chi
 date: 2007-6-6
-comments: false
+comments: true
 categories: health
 link: false
 ---

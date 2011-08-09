@@ -2,7 +2,7 @@
 layout: post
 title: Digitally Sign Documents Using Preview
 date: 2011-7-27
-comments: false
+comments: true
 categories: links
 link: true
 ---

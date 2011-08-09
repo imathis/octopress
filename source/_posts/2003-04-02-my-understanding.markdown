@@ -2,7 +2,7 @@
 layout: post
 title: My Understanding
 date: 2003-4-2
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

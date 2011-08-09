@@ -2,7 +2,7 @@
 layout: post
 title: Through the Looking Glass
 date: 2004-2-24
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Linky Bits
 date: 2011-5-17
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Bullying Is Not 'Part of Growing Up'
 date: 2008-3-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

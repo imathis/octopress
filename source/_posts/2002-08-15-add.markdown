@@ -2,7 +2,7 @@
 layout: post
 title: ADD
 date: 2002-8-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

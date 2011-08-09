@@ -2,7 +2,7 @@
 layout: post
 title: New, Not Perfect
 date: 2011-1-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

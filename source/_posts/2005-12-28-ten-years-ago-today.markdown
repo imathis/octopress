@@ -2,7 +2,7 @@
 layout: post
 title: Ten Years Ago Today
 date: "2005-12-28"
-comments: false
+comments: true
 categories: life
 link: false
 ---

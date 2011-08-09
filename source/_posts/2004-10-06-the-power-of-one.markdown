@@ -2,7 +2,7 @@
 layout: post
 title: The Power of One
 date: 2004-10-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

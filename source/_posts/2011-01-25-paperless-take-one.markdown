@@ -2,7 +2,7 @@
 layout: post
 title: Paperless Take One
 date: 2011-1-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

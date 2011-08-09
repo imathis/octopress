@@ -2,7 +2,7 @@
 layout: post
 title: A Likeness of Myself
 date: 2007-7-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

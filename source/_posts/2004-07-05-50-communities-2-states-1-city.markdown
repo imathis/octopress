@@ -2,7 +2,7 @@
 layout: post
 title: 50 Communities, 2 States, 1 City
 date: 2004-7-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

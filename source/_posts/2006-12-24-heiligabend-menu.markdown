@@ -2,7 +2,7 @@
 layout: post
 title: "Heiligabend Men\xC3\xBC"
 date: "2006-12-24"
-comments: false
+comments: true
 categories: life
 link: false
 ---

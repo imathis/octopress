@@ -2,7 +2,7 @@
 layout: post
 title: New Iron
 date: 2011-2-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

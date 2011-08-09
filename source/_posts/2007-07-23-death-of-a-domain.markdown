@@ -2,7 +2,7 @@
 layout: post
 title: Death of a Domain
 date: 2007-7-23
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

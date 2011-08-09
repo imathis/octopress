@@ -2,7 +2,7 @@
 layout: post
 title: Turn Your Head and Cough
 date: 2007-5-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

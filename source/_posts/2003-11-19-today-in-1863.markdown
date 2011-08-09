@@ -2,7 +2,7 @@
 layout: post
 title: Today, in 1863
 date: "2003-11-19"
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

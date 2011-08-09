@@ -2,7 +2,7 @@
 layout: post
 title: 2003, The Year in Spam
 date: 2004-1-5
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

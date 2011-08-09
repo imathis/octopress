@@ -2,7 +2,7 @@
 layout: post
 title: Programming Language Typing
 date: 2008-8-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

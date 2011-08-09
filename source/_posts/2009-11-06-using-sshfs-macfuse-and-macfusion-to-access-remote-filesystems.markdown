@@ -2,7 +2,7 @@
 layout: post
 title: Using SSHFS, MacFUSE, and Macfusion to Access Remote Filesystems
 date: 2009-11-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Too Good For Lowe's or Home Depot
 date: "2008-12-30"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Reindeer Games
 date: 2006-11-8
-comments: false
+comments: true
 categories: health
 link: false
 ---

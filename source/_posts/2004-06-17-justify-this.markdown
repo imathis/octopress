@@ -2,7 +2,7 @@
 layout: post
 title: Justify This
 date: 2004-6-17
-comments: false
+comments: true
 categories: life
 link: false
 ---

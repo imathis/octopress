@@ -2,7 +2,7 @@
 layout: post
 title: Karmic Debt
 date: 2001-3-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

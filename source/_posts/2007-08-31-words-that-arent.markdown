@@ -2,7 +2,7 @@
 layout: post
 title: Words That Aren't
 date: 2007-8-31
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

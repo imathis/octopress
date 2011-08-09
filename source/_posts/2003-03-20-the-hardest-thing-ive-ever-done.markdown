@@ -2,7 +2,7 @@
 layout: post
 title: The Hardest Thing I've Ever Done
 date: 2003-3-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

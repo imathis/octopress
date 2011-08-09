@@ -2,7 +2,7 @@
 layout: post
 title: Two Month Review
 date: 2006-3-31
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Head Music
 date: 2004-9-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

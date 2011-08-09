@@ -2,7 +2,7 @@
 layout: post
 title: Coming Down
 date: 2006-1-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

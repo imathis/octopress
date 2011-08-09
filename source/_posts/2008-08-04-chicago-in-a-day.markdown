@@ -2,7 +2,7 @@
 layout: post
 title: Chicago In A Day
 date: 2008-8-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

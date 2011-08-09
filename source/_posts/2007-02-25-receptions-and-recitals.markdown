@@ -2,7 +2,7 @@
 layout: post
 title: Receptions and Recitals
 date: 2007-2-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

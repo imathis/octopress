@@ -2,7 +2,7 @@
 layout: post
 title: Name Dropping
 date: 2003-4-2
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Up For Three Weeks
 date: 2003-8-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

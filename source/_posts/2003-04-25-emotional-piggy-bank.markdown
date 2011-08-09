@@ -2,7 +2,7 @@
 layout: post
 title: Emotional Piggy Bank
 date: 2003-4-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

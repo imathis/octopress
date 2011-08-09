@@ -2,7 +2,7 @@
 layout: post
 title: Focus vs. Control
 date: 2001-3-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

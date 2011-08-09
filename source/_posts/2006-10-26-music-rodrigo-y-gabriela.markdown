@@ -2,7 +2,7 @@
 layout: post
 title: "Music: Rodrigo y Gabriela"
 date: "2006-10-26"
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

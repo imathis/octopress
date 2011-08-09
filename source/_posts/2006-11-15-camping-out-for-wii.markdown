@@ -2,7 +2,7 @@
 layout: post
 title: Camping Out For Wii
 date: "2006-11-15"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: 1000 Cubic Feet
 date: 2004-7-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

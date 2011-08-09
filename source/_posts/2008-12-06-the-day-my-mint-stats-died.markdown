@@ -2,7 +2,7 @@
 layout: post
 title: The Day My Mint Stats Died
 date: 2008-12-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

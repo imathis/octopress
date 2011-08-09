@@ -2,7 +2,7 @@
 layout: post
 title: Over The Cubical Wall
 date: 2007-4-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

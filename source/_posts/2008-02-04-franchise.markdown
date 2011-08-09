@@ -2,7 +2,7 @@
 layout: post
 title: Franchise
 date: 2008-2-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

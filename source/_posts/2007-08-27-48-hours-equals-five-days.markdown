@@ -2,7 +2,7 @@
 layout: post
 title: 48 Hours Equals Five Days
 date: 2007-8-27
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

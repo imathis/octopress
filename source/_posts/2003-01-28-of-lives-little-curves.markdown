@@ -2,7 +2,7 @@
 layout: post
 title: Of Live's Little Curves
 date: 2003-1-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

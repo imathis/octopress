@@ -2,7 +2,7 @@
 layout: post
 title: Recon-silly-ation
 date: 2006-2-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

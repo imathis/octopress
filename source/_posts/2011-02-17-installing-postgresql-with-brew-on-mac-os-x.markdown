@@ -2,7 +2,7 @@
 layout: post
 title: Installing PostgreSQL with brew on Mac OS X
 date: 2011-2-17
-comments: false
+comments: true
 categories: life
 link: false
 ---

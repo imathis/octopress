@@ -2,7 +2,7 @@
 layout: post
 title: Father Son
 date: 2006-8-29
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

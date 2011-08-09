@@ -2,7 +2,7 @@
 layout: post
 title: Right-Brained
 date: "2007-10-11"
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

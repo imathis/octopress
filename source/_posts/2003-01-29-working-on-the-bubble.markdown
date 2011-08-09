@@ -2,7 +2,7 @@
 layout: post
 title: Working on the Bubble
 date: 2003-1-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

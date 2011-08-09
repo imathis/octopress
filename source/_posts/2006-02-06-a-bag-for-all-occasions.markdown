@@ -2,7 +2,7 @@
 layout: post
 title: A Bag For All Occasions
 date: 2006-2-6
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

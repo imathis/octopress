@@ -2,7 +2,7 @@
 layout: post
 title: WiFi Wilderness
 date: 2006-9-21
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

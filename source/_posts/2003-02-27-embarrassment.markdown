@@ -2,7 +2,7 @@
 layout: post
 title: Embarrassment
 date: 2003-2-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

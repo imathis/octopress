@@ -2,7 +2,7 @@
 layout: post
 title: Completing the First Step
 date: 2000-4-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

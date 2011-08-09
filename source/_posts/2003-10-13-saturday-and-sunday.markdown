@@ -2,7 +2,7 @@
 layout: post
 title: Saturday and Sunday
 date: "2003-10-13"
-comments: false
+comments: true
 categories: life
 link: false
 ---

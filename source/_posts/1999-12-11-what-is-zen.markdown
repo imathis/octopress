@@ -2,7 +2,7 @@
 layout: post
 title: What is Zen?
 date: "1999-12-11"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Ten Questions about My HTC Droid Incedible
 date: 2010-6-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

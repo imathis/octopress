@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Hidden Prey"
 date: 2010-1-3
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

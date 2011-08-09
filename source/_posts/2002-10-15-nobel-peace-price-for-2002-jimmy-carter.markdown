@@ -2,7 +2,7 @@
 layout: post
 title: Nobel Peace Price for 2002 ~ Jimmy Carter
 date: "2002-10-15"
-comments: false
+comments: true
 categories: life
 link: false
 ---

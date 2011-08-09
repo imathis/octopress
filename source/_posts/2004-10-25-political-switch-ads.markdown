@@ -2,7 +2,7 @@
 layout: post
 title: Political Switch Ads
 date: "2004-10-25"
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Music: Led Zeppelin How The West Was Won"
 date: 2006-6-6
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

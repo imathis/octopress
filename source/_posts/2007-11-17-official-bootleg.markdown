@@ -2,7 +2,7 @@
 layout: post
 title: Official Bootleg
 date: "2007-11-17"
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

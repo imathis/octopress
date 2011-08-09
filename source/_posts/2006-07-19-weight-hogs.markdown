@@ -2,7 +2,7 @@
 layout: post
 title: Weight Hogs
 date: 2006-7-19
-comments: false
+comments: true
 categories: health
 link: false
 ---

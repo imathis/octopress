@@ -2,7 +2,7 @@
 layout: post
 title: In The Last Year
 date: "2006-10-10"
-comments: false
+comments: true
 categories: life
 link: false
 ---

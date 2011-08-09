@@ -2,7 +2,7 @@
 layout: post
 title: Spam, spam, spam
 date: 2006-5-17
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

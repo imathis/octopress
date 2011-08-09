@@ -2,7 +2,7 @@
 layout: post
 title: To Go or Not To Go
 date: "2000-12-22"
-comments: false
+comments: true
 categories: life
 link: false
 ---

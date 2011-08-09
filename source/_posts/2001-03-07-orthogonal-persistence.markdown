@@ -2,7 +2,7 @@
 layout: post
 title: Orthogonal Persistence
 date: 2001-3-7
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

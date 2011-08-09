@@ -2,7 +2,7 @@
 layout: post
 title: Opus blooms again
 date: 2003-9-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

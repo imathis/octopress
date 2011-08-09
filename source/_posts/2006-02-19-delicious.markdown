@@ -2,7 +2,7 @@
 layout: post
 title: del.icio.us
 date: 2006-2-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

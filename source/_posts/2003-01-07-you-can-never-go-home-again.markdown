@@ -2,7 +2,7 @@
 layout: post
 title: You Can Never Go Home Again
 date: 2003-1-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

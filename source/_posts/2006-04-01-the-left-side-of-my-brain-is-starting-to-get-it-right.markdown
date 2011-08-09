@@ -2,7 +2,7 @@
 layout: post
 title: The Left Side of My Brain Is Starting to Get It Right
 date: 2006-4-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

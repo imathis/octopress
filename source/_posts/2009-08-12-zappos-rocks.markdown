@@ -2,7 +2,7 @@
 layout: post
 title: Zappos Rocks
 date: 2009-8-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

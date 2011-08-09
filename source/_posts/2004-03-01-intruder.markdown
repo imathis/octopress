@@ -2,7 +2,7 @@
 layout: post
 title: Intruder
 date: 2004-3-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

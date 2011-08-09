@@ -2,7 +2,7 @@
 layout: post
 title: Powerbook G4 Review
 date: 2008-2-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: 10 CDs - 970 Tracks
 date: "2008-10-13"
-comments: false
+comments: true
 categories: life
 link: false
 ---

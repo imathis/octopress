@@ -2,7 +2,7 @@
 layout: post
 title: As Good As We Can Be
 date: 2009-10-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

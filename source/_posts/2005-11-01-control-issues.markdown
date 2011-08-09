@@ -2,7 +2,7 @@
 layout: post
 title: Control Issues
 date: 2005-11-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

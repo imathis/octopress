@@ -2,7 +2,7 @@
 layout: post
 title: The Perfect Meal
 date: 2002-11-7
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Same Signal, More Noise
 date: 2003-1-5
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

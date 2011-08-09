@@ -2,7 +2,7 @@
 layout: post
 title: Rough Day at Black Rock
 date: 2006-2-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

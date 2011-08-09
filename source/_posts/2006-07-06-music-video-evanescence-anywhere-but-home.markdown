@@ -2,7 +2,7 @@
 layout: post
 title: "Music Video: Evanescence Anywhere But Home"
 date: 2006-7-6
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

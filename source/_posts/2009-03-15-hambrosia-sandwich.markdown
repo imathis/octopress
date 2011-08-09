@@ -2,7 +2,7 @@
 layout: post
 title: Hambrosia Sandwich
 date: 2009-3-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

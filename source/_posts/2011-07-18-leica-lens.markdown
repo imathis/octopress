@@ -2,7 +2,7 @@
 layout: post
 title: Leica Lens
 date: 2011-7-18
-comments: false
+comments: true
 categories: links
 link: true
 ---

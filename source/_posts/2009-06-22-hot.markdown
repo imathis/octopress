@@ -2,7 +2,7 @@
 layout: post
 title: Hot
 date: 2009-6-22
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

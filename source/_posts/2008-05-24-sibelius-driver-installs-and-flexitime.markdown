@@ -2,7 +2,7 @@
 layout: post
 title: Sibelius, Driver Installs, and Flexitime
 date: 2008-5-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

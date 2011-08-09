@@ -2,7 +2,7 @@
 layout: post
 title: Countering a Wave of Hate
 date: 2003-4-20
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: When It Rains
 date: 2005-3-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

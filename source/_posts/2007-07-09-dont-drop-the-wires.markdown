@@ -2,7 +2,7 @@
 layout: post
 title: Don't Drop The Wires
 date: 2007-7-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

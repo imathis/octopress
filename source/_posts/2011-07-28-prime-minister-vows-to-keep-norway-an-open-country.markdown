@@ -2,7 +2,7 @@
 layout: post
 title: Prime Minister Vows to Keep Norway an Open Country
 date: 2011-7-28
-comments: false
+comments: true
 categories: links
 link: true
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Living Under Fascism
 date: "2004-12-11"
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

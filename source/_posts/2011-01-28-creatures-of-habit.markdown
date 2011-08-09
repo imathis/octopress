@@ -2,7 +2,7 @@
 layout: post
 title: Creatures of Habit
 date: 2011-1-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

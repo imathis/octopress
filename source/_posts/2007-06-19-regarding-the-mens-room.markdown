@@ -2,7 +2,7 @@
 layout: post
 title: Regarding the Men's Room
 date: 2007-6-19
-comments: false
+comments: true
 categories: random
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Crescent Halos
 date: 2006-4-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

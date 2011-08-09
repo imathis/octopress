@@ -2,7 +2,7 @@
 layout: post
 title: Home For The Holiday
 date: "2007-11-21"
-comments: false
+comments: true
 categories: life
 link: false
 ---

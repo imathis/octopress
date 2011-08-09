@@ -2,7 +2,7 @@
 layout: post
 title: A Million Five
 date: 2008-1-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

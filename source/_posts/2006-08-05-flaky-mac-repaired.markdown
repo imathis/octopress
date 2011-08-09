@@ -2,7 +2,7 @@
 layout: post
 title: Flaky Mac Repaired
 date: 2006-8-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

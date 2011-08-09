@@ -2,7 +2,7 @@
 layout: post
 title: Joseph Daniel McAvoy
 date: "2004-10-31"
-comments: false
+comments: true
 categories: life
 link: false
 ---

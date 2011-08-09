@@ -2,7 +2,7 @@
 layout: post
 title: Quiet Weekend
 date: 2007-10-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Random Notes on My Desk
 date: 2005-8-6
-comments: false
+comments: true
 categories: meme
 link: false
 ---

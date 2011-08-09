@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Eragon"
 date: 2006-7-24
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

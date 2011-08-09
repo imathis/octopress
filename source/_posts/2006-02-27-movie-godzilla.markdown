@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Godzilla"
 date: 2006-2-27
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

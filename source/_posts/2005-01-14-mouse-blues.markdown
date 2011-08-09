@@ -2,7 +2,7 @@
 layout: post
 title: Mouse Blues
 date: 2005-1-14
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

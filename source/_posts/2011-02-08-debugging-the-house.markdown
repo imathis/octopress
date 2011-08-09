@@ -2,7 +2,7 @@
 layout: post
 title: Debugging the House
 date: 2011-2-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

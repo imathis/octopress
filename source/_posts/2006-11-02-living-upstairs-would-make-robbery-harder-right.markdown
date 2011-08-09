@@ -2,7 +2,7 @@
 layout: post
 title: Living Upstairs Would Make Robbery Harder, Right?
 date: 2006-11-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

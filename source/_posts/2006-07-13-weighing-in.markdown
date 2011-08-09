@@ -2,7 +2,7 @@
 layout: post
 title: Weighing In
 date: 2006-7-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

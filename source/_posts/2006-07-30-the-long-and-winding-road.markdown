@@ -2,7 +2,7 @@
 layout: post
 title: The Long And Winding Road
 date: 2006-7-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

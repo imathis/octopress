@@ -2,7 +2,7 @@
 layout: post
 title: Professional Geek
 date: 2003-5-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

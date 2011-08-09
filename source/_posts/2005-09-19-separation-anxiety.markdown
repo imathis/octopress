@@ -2,7 +2,7 @@
 layout: post
 title: Separation Anxiety
 date: 2005-9-19
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

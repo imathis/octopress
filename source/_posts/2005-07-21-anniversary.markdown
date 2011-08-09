@@ -2,7 +2,7 @@
 layout: post
 title: Anniversary
 date: 2005-7-21
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

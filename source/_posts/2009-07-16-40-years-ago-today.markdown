@@ -2,7 +2,7 @@
 layout: post
 title: 40 Years Ago Today
 date: 2009-7-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

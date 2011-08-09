@@ -2,7 +2,7 @@
 layout: post
 title: Appliance Versus Persona
 date: 2011-1-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Pay No Attention To The Man Behind the Curtain
 date: 2008-9-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

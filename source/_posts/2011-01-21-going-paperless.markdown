@@ -2,7 +2,7 @@
 layout: post
 title: Going Paperless
 date: 2011-1-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

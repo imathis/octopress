@@ -2,7 +2,7 @@
 layout: post
 title: State of Denial
 date: 2006-5-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

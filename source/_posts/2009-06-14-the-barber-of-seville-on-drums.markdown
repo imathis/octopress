@@ -2,7 +2,7 @@
 layout: post
 title: The Barber of Seville. On Drums.
 date: 2009-6-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

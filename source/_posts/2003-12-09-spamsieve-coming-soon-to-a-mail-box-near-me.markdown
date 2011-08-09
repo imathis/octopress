@@ -2,7 +2,7 @@
 layout: post
 title: "SpamSieve: Coming Soon To A Mail Box Near Me"
 date: 2003-12-9
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

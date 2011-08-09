@@ -2,7 +2,7 @@
 layout: post
 title: The Neverending Move
 date: 2007-8-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

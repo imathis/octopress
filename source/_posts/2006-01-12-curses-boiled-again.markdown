@@ -2,7 +2,7 @@
 layout: post
 title: Curses! Boiled Again
 date: 2006-1-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

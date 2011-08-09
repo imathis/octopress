@@ -2,7 +2,7 @@
 layout: post
 title: Full Entry RSS Feed
 date: 2004-1-17
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

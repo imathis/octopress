@@ -2,7 +2,7 @@
 layout: post
 title: Two Fingers, Not Two Buttons
 date: 2005-1-31
-comments: false
+comments: true
 categories: life
 link: false
 ---

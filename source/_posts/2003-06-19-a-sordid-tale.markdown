@@ -2,7 +2,7 @@
 layout: post
 title: A Sordid Tale
 date: 2003-6-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

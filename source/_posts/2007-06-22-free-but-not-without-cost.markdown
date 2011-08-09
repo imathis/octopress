@@ -2,7 +2,7 @@
 layout: post
 title: Free, But Not Without Cost
 date: 2007-6-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

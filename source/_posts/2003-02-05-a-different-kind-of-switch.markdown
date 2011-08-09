@@ -2,7 +2,7 @@
 layout: post
 title: A Different Kind of Switch
 date: 2003-2-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

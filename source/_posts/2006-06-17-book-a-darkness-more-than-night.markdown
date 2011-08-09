@@ -2,7 +2,7 @@
 layout: post
 title: "Book: A Darkness More Than Night"
 date: 2006-6-17
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

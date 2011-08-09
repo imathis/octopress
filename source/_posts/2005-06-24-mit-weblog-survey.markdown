@@ -2,7 +2,7 @@
 layout: post
 title: MIT Weblog Survey
 date: 2005-6-24
-comments: false
+comments: true
 categories: meme
 link: false
 ---

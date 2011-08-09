@@ -2,7 +2,7 @@
 layout: post
 title: WOMD
 date: 2003-3-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

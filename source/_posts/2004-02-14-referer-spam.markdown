@@ -2,7 +2,7 @@
 layout: post
 title: Referer Spam
 date: 2004-2-14
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

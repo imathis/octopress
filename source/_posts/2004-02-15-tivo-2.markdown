@@ -2,7 +2,7 @@
 layout: post
 title: Tivo 2
 date: 2004-2-15
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

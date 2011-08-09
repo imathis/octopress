@@ -2,7 +2,7 @@
 layout: post
 title: Homeowner
 date: 2011-1-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Personal Property Worksheet
 date: "2006-11-14"
-comments: false
+comments: true
 categories: life
 link: false
 ---

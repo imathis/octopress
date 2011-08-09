@@ -2,7 +2,7 @@
 layout: post
 title: The Switch Continues
 date: 2003-1-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

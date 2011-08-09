@@ -2,7 +2,7 @@
 layout: post
 title: Facebook Farewell, Part II
 date: 2007-12-3
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

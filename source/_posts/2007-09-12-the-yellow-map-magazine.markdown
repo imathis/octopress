@@ -2,7 +2,7 @@
 layout: post
 title: The Yellow Map Magazine
 date: 2007-9-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

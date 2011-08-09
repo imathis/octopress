@@ -2,7 +2,7 @@
 layout: post
 title: Auto (Re) Dial
 date: 2008-7-23
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

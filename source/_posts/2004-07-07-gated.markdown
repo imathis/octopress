@@ -2,7 +2,7 @@
 layout: post
 title: Gated
 date: 2004-7-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

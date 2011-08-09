@@ -2,7 +2,7 @@
 layout: post
 title: Information Hiding
 date: 2006-7-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

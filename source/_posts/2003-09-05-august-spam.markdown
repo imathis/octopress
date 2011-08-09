@@ -2,7 +2,7 @@
 layout: post
 title: August Spam
 date: 2003-9-5
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

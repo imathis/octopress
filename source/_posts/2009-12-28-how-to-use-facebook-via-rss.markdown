@@ -2,7 +2,7 @@
 layout: post
 title: How to Use Facebook Via RSS
 date: "2009-12-28"
-comments: false
+comments: true
 categories: life
 link: false
 ---

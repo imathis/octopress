@@ -2,7 +2,7 @@
 layout: post
 title: Windows XP Professional
 date: 2002-11-3
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

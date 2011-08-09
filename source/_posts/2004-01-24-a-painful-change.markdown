@@ -2,7 +2,7 @@
 layout: post
 title: A Painful Change
 date: 2004-1-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: What is at stake
 date: 2003-9-14
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

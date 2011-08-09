@@ -2,7 +2,7 @@
 layout: post
 title: Brother, Can You Spare a Job
 date: 2003-7-15
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

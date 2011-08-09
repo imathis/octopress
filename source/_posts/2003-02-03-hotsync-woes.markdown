@@ -2,7 +2,7 @@
 layout: post
 title: HotSync Woes
 date: 2003-2-3
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

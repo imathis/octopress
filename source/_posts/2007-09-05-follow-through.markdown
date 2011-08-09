@@ -2,7 +2,7 @@
 layout: post
 title: Follow Through
 date: 2007-9-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

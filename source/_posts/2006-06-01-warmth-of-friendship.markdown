@@ -2,7 +2,7 @@
 layout: post
 title: Warmth of Friendship
 date: 2006-6-1
-comments: false
+comments: true
 categories: family
 link: false
 ---

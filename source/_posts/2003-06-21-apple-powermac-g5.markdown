@@ -2,7 +2,7 @@
 layout: post
 title: Apple PowerMac G5
 date: 2003-6-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

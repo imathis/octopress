@@ -2,7 +2,7 @@
 layout: post
 title: Pfannkuchen
 date: 2007-11-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

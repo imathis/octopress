@@ -2,7 +2,7 @@
 layout: post
 title: All your Sanity are belong to us!
 date: 2003-8-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

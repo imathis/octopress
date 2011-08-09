@@ -2,7 +2,7 @@
 layout: post
 title: Floating Cannonball
 date: 2009-4-6
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

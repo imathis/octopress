@@ -2,7 +2,7 @@
 layout: post
 title: I've been Banned from /.
 date: "2003-11-29"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

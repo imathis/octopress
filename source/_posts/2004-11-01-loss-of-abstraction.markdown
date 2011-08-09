@@ -2,7 +2,7 @@
 layout: post
 title: Loss of Abstraction
 date: 2004-11-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

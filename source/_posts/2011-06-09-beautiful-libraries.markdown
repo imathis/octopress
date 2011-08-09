@@ -2,7 +2,7 @@
 layout: post
 title: Beautiful Libraries
 date: 2011-6-9
-comments: false
+comments: true
 categories: links
 link: true
 ---

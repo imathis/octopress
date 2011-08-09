@@ -2,7 +2,7 @@
 layout: post
 title: Prescriptions Aren't Forever
 date: 2008-3-25
-comments: false
+comments: true
 categories: family
 link: false
 ---

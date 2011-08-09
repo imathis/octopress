@@ -2,7 +2,7 @@
 layout: post
 title: In The Sock Drawer
 date: 2007-8-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

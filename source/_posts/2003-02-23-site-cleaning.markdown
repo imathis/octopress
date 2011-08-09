@@ -2,7 +2,7 @@
 layout: post
 title: Site cleaning
 date: 2003-2-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

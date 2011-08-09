@@ -2,7 +2,7 @@
 layout: post
 title: .htaccess
 date: 2004-12-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

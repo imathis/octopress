@@ -2,7 +2,7 @@
 layout: post
 title: Feeling Better
 date: 2006-6-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

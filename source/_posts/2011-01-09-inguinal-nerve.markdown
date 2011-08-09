@@ -2,7 +2,7 @@
 layout: post
 title: Inguinal Nerve
 date: 2011-1-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

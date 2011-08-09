@@ -2,7 +2,7 @@
 layout: post
 title: "Book: The Dogs of Riga"
 date: 2006-6-7
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

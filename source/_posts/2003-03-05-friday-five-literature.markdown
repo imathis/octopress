@@ -2,7 +2,7 @@
 layout: post
 title: "Friday Five: Literature"
 date: 2003-3-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

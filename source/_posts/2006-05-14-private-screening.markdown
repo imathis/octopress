@@ -2,7 +2,7 @@
 layout: post
 title: Private Screening
 date: 2006-5-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

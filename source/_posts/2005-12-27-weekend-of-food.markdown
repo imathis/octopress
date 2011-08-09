@@ -2,7 +2,7 @@
 layout: post
 title: Weekend of Food
 date: "2005-12-27"
-comments: false
+comments: true
 categories: life
 link: false
 ---

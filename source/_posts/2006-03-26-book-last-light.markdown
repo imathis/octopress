@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Last Light"
 date: 2006-3-26
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

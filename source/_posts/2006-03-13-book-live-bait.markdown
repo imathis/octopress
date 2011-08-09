@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Live Bait"
 date: 2006-3-13
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

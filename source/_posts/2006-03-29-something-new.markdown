@@ -2,7 +2,7 @@
 layout: post
 title: Something New
 date: 2006-3-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

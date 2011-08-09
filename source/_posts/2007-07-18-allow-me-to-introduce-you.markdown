@@ -2,7 +2,7 @@
 layout: post
 title: Allow Me To Introduce You
 date: 2007-7-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

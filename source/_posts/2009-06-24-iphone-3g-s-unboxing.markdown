@@ -2,7 +2,7 @@
 layout: post
 title: "iPhone 3G S Unboxing "
 date: 2009-6-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Lack of Visits
 date: "2007-11-26"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: A Love of Movies
 date: "2005-10-24"
-comments: false
+comments: true
 categories: life
 link: false
 ---

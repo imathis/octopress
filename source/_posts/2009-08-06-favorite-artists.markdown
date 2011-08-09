@@ -2,7 +2,7 @@
 layout: post
 title: Favorite Artists
 date: 2009-8-6
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

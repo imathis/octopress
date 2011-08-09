@@ -2,7 +2,7 @@
 layout: post
 title: Lighthouse
 date: 2004-8-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

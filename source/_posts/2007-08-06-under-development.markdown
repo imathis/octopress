@@ -2,7 +2,7 @@
 layout: post
 title: Under Development
 date: 2007-8-6
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

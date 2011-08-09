@@ -2,7 +2,7 @@
 layout: post
 title: Giant Auto II Magnetic Trainer
 date: 2011-1-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

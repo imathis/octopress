@@ -2,7 +2,7 @@
 layout: post
 title: Backing Up Your Delicious Bookmarks
 date: 2009-1-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

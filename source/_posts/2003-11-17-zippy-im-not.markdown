@@ -2,7 +2,7 @@
 layout: post
 title: Zippy I'm Not
 date: "2003-11-17"
-comments: false
+comments: true
 categories: life
 link: false
 ---

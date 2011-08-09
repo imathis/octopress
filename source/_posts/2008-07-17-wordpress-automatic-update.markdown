@@ -2,7 +2,7 @@
 layout: post
 title: Wordpress Automatic Update
 date: 2008-7-17
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

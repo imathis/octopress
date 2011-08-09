@@ -2,7 +2,7 @@
 layout: post
 title: A New Christmas
 date: "2000-12-27"
-comments: false
+comments: true
 categories: life
 link: false
 ---

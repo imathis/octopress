@@ -2,7 +2,7 @@
 layout: post
 title: Get A Mac Ads
 date: 2006-5-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

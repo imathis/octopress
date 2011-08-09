@@ -2,7 +2,7 @@
 layout: post
 title: Pseudo Digital Clock
 date: "2002-11-13"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

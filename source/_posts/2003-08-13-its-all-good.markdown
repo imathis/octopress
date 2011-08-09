@@ -2,7 +2,7 @@
 layout: post
 title: It's All Good
 date: 2003-8-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

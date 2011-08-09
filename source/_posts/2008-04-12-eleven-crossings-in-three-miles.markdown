@@ -2,7 +2,7 @@
 layout: post
 title: Eleven Crossings in Three Miles
 date: 2008-4-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

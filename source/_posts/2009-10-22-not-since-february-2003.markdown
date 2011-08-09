@@ -2,7 +2,7 @@
 layout: post
 title: Not Since February 2003
 date: "2009-10-22"
-comments: false
+comments: true
 categories: life
 link: false
 ---

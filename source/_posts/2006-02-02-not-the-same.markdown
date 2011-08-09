@@ -2,7 +2,7 @@
 layout: post
 title: Not The Same
 date: 2006-2-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

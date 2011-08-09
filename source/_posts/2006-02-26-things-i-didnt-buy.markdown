@@ -2,7 +2,7 @@
 layout: post
 title: Things I Didn't Buy
 date: 2006-2-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

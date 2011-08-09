@@ -2,7 +2,7 @@
 layout: post
 title: Roller-coaster Week
 date: 2008-6-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

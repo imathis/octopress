@@ -2,7 +2,7 @@
 layout: post
 title: New Trip Paradigm
 date: "2002-12-19"
-comments: false
+comments: true
 categories: life
 link: false
 ---

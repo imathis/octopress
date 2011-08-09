@@ -2,7 +2,7 @@
 layout: post
 title: New Growth In Spring
 date: 2002-5-10
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

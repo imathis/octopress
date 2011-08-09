@@ -2,7 +2,7 @@
 layout: post
 title: Shotski's Ring
 date: "2003-11-29"
-comments: false
+comments: true
 categories: health
 link: false
 ---

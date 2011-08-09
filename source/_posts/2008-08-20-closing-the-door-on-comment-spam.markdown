@@ -2,7 +2,7 @@
 layout: post
 title: Closing the Door on Comment Spam
 date: 2008-8-20
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

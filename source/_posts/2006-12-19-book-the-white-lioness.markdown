@@ -2,7 +2,7 @@
 layout: post
 title: "Book: The White Lioness"
 date: "2006-12-19"
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

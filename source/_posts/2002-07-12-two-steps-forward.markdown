@@ -2,7 +2,7 @@
 layout: post
 title: Two Steps Forward
 date: 2002-7-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Now What?
 date: 2006-4-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

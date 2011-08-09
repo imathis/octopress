@@ -2,7 +2,7 @@
 layout: post
 title: Amazing Weekend
 date: 2002-7-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

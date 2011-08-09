@@ -2,7 +2,7 @@
 layout: post
 title: The G. O. P. Debate
 date: 2011-6-15
-comments: false
+comments: true
 categories: links
 link: true
 ---

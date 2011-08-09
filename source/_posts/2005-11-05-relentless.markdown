@@ -2,7 +2,7 @@
 layout: post
 title: Relentless
 date: 2005-11-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

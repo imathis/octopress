@@ -2,7 +2,7 @@
 layout: post
 title: Fear Based Living
 date: 2007-4-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

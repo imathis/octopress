@@ -2,7 +2,7 @@
 layout: post
 title: Back From The Edge
 date: 2004-3-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

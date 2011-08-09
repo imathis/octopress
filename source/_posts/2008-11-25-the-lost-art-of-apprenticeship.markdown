@@ -2,7 +2,7 @@
 layout: post
 title: "The Lost Art of Apprenticeship "
 date: "2008-11-25"
-comments: false
+comments: true
 categories: life
 link: false
 ---

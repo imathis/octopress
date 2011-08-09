@@ -2,7 +2,7 @@
 layout: post
 title: The IMAX Experience
 date: 2005-6-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

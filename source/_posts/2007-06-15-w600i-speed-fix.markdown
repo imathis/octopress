@@ -2,7 +2,7 @@
 layout: post
 title: w600i Speed Fix
 date: 2007-6-15
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

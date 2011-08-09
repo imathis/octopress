@@ -2,7 +2,7 @@
 layout: post
 title: Blind As A Bat
 date: 2003-5-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

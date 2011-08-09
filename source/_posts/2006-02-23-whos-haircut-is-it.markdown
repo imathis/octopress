@@ -2,7 +2,7 @@
 layout: post
 title: Who's Haircut Is It?
 date: 2006-2-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

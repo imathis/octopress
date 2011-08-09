@@ -2,7 +2,7 @@
 layout: post
 title: Consumer Rights
 date: 2003-10-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

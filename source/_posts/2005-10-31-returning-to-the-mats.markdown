@@ -2,7 +2,7 @@
 layout: post
 title: Returning to the Mats
 date: "2005-10-31"
-comments: false
+comments: true
 categories: health
 link: false
 ---

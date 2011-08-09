@@ -2,7 +2,7 @@
 layout: post
 title: Tar and mysqldump Are Your Friends
 date: 2007-12-5
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

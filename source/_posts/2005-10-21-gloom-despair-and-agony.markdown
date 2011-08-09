@@ -2,7 +2,7 @@
 layout: post
 title: Gloom, Despair, and Agony
 date: "2005-10-21"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Sigularly Disappointing
 date: 2007-4-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

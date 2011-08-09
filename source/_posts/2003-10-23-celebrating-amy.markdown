@@ -2,7 +2,7 @@
 layout: post
 title: Celebrating Amy
 date: "2003-10-23"
-comments: false
+comments: true
 categories: life
 link: false
 ---

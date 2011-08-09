@@ -2,7 +2,7 @@
 layout: post
 title: Book of Corporate Life
 date: "2003-11-13"
-comments: false
+comments: true
 categories: life
 link: false
 ---

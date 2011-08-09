@@ -2,7 +2,7 @@
 layout: post
 title: Lifting Again
 date: 2006-9-11
-comments: false
+comments: true
 categories: health
 link: false
 ---

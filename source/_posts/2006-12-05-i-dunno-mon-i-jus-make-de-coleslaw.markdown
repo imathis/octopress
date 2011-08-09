@@ -2,7 +2,7 @@
 layout: post
 title: I Dunno Mon, I Jus' Make De Coleslaw
 date: 2006-12-5
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

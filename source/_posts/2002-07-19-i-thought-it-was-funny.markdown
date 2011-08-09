@@ -2,7 +2,7 @@
 layout: post
 title: I thought it was funny...
 date: 2002-7-19
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

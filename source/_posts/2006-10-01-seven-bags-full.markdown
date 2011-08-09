@@ -2,7 +2,7 @@
 layout: post
 title: Seven Bags Full
 date: 2006-10-1
-comments: false
+comments: true
 categories: health
 link: false
 ---

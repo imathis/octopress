@@ -2,7 +2,7 @@
 layout: post
 title: Suggestions, please
 date: 2009-9-28
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

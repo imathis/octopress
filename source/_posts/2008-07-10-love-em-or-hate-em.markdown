@@ -2,7 +2,7 @@
 layout: post
 title: Love 'Em or Hate 'Em
 date: 2008-7-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

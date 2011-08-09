@@ -2,7 +2,7 @@
 layout: post
 title: Bachmann's Waterloo
 date: 2011-6-29
-comments: false
+comments: true
 categories: links
 link: true
 ---

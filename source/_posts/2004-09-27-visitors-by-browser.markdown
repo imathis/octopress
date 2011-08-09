@@ -2,7 +2,7 @@
 layout: post
 title: Visitors by Browser
 date: 2004-9-27
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Foot in Mouth Disease
 date: "2002-11-18"
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

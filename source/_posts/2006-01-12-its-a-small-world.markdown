@@ -2,7 +2,7 @@
 layout: post
 title: It's A Small World
 date: 2006-1-12
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

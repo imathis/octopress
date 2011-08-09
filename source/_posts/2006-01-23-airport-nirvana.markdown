@@ -2,7 +2,7 @@
 layout: post
 title: Airport Nirvana
 date: 2006-1-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

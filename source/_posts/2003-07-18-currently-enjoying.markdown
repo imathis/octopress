@@ -2,7 +2,7 @@
 layout: post
 title: Currently Enjoying...
 date: 2003-7-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

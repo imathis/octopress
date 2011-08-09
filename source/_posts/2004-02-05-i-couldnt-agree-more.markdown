@@ -2,7 +2,7 @@
 layout: post
 title: I Couldn't Agree More
 date: 2004-2-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: How Do You Spell Relief?
 date: 2003-9-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

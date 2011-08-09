@@ -2,7 +2,7 @@
 layout: post
 title: Seven years
 date: 2004-2-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

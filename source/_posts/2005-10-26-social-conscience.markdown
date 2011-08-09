@@ -2,7 +2,7 @@
 layout: post
 title: Social Conscience
 date: "2005-10-26"
-comments: false
+comments: true
 categories: life
 link: false
 ---

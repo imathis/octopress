@@ -2,7 +2,7 @@
 layout: post
 title: Tis The Season
 date: 2003-12-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

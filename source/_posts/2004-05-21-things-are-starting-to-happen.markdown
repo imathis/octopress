@@ -2,7 +2,7 @@
 layout: post
 title: Things are starting to happen
 date: 2004-5-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

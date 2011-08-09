@@ -2,7 +2,7 @@
 layout: post
 title: Attention to Detail
 date: "2006-12-21"
-comments: false
+comments: true
 categories: life
 link: false
 ---

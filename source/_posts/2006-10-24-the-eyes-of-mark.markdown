@@ -2,7 +2,7 @@
 layout: post
 title: The Eyes of Mark
 date: "2006-10-24"
-comments: false
+comments: true
 categories: life
 link: false
 ---

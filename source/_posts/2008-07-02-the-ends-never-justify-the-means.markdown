@@ -2,7 +2,7 @@
 layout: post
 title: The Ends Never Justify The Means
 date: 2008-7-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

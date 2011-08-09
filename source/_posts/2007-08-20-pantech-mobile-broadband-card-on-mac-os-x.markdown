@@ -2,7 +2,7 @@
 layout: post
 title: Pantech Mobile Broadband Card on Mac OS X
 date: 2007-8-20
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Drop, Drop, Rinse, Repeat
 date: 2006-3-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

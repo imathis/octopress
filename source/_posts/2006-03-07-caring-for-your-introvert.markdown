@@ -2,7 +2,7 @@
 layout: post
 title: Caring For Your Introvert
 date: 2006-3-7
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

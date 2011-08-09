@@ -2,7 +2,7 @@
 layout: post
 title: Camouflage Powerbook
 date: 2005-8-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

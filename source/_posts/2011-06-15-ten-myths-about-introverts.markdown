@@ -2,7 +2,7 @@
 layout: post
 title: Ten Myths About Introverts
 date: 2011-6-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

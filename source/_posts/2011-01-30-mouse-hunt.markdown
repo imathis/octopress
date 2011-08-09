@@ -2,7 +2,7 @@
 layout: post
 title: Mouse Hunt
 date: 2011-1-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

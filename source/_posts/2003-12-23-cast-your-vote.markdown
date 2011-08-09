@@ -2,7 +2,7 @@
 layout: post
 title: Cast Your Vote
 date: "2003-12-23"
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

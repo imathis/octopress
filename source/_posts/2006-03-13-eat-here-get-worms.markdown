@@ -2,7 +2,7 @@
 layout: post
 title: Eat Here Get Worms
 date: 2006-3-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

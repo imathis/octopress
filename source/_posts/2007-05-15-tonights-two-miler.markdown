@@ -2,7 +2,7 @@
 layout: post
 title: Tonight's Two Miler
 date: 2007-5-15
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

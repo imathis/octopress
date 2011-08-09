@@ -2,7 +2,7 @@
 layout: post
 title: To Tip or Not To Tip
 date: 2010-8-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: 865, 14, 5000
 date: 2004-4-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

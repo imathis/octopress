@@ -2,7 +2,7 @@
 layout: post
 title: New Host, New Site
 date: 2007-12-8
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Giving Thanks
 date: "2002-11-26"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Powerless
 date: "2005-12-22"
-comments: false
+comments: true
 categories: life
 link: false
 ---

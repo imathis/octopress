@@ -2,7 +2,7 @@
 layout: post
 title: Reluctance
 date: "2002-11-13"
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Sixteen Exercises a Day
 date: 2007-6-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

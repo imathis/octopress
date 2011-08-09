@@ -2,7 +2,7 @@
 layout: post
 title: Books on my desk
 date: "2003-12-19"
-comments: false
+comments: true
 categories: life
 link: false
 ---

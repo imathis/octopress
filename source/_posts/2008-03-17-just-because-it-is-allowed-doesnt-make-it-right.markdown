@@ -2,7 +2,7 @@
 layout: post
 title: Just Because It Is Allowed Doesn't Make It Right
 date: 2008-3-17
-comments: false
+comments: true
 categories: life
 link: false
 ---

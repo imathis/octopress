@@ -2,7 +2,7 @@
 layout: post
 title: Courage
 date: 2002-8-8
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

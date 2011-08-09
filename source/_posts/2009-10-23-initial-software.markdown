@@ -2,7 +2,7 @@
 layout: post
 title: "Initial Software "
 date: "2009-10-23"
-comments: false
+comments: true
 categories: life
 link: false
 ---

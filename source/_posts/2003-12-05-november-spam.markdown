@@ -2,7 +2,7 @@
 layout: post
 title: November Spam
 date: 2003-12-5
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

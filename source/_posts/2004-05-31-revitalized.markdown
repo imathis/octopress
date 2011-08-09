@@ -2,7 +2,7 @@
 layout: post
 title: Revitalized
 date: 2004-5-31
-comments: false
+comments: true
 categories: life
 link: false
 ---

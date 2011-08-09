@@ -2,7 +2,7 @@
 layout: post
 title: Menu bar meme
 date: 2003-10-9
-comments: false
+comments: true
 categories: meme
 link: false
 ---

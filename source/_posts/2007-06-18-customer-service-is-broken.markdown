@@ -2,7 +2,7 @@
 layout: post
 title: Customer Service is Broken
 date: 2007-6-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

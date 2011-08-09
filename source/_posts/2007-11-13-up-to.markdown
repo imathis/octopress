@@ -2,7 +2,7 @@
 layout: post
 title: Up To
 date: "2007-11-13"
-comments: false
+comments: true
 categories: random
 link: false
 ---

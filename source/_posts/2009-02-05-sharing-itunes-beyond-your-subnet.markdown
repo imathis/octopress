@@ -2,7 +2,7 @@
 layout: post
 title: Sharing iTunes Beyond Your Subnet
 date: 2009-2-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

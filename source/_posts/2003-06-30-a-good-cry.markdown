@@ -2,7 +2,7 @@
 layout: post
 title: A Good Cry
 date: 2003-6-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

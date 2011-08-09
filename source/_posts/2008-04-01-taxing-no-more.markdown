@@ -2,7 +2,7 @@
 layout: post
 title: Taxing No More
 date: 2008-4-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: The Power of A Smile
 date: "2007-11-19"
-comments: false
+comments: true
 categories: life
 link: false
 ---

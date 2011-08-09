@@ -2,7 +2,7 @@
 layout: post
 title: Windshield, Part Whatever
 date: 2006-7-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: An Apple A Day...
 date: 2003-6-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

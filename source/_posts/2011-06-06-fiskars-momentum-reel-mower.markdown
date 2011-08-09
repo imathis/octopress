@@ -2,7 +2,7 @@
 layout: post
 title: Fiskars Momentum Reel Mower
 date: 2011-6-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

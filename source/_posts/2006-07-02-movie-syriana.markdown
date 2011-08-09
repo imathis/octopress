@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Syriana"
 date: 2006-7-2
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

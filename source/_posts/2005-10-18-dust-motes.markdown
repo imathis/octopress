@@ -2,7 +2,7 @@
 layout: post
 title: Dust Motes
 date: "2005-10-18"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Creative Commons
 date: 2003-2-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

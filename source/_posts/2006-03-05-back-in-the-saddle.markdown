@@ -2,7 +2,7 @@
 layout: post
 title: Back In The Saddle
 date: 2006-3-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

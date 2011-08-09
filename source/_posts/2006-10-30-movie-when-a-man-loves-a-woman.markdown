@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: When A Man Loves A Woman"
 date: "2006-10-30"
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

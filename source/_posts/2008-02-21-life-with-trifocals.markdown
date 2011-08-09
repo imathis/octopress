@@ -2,7 +2,7 @@
 layout: post
 title: Life With Trifocals
 date: 2008-2-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

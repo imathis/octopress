@@ -2,7 +2,7 @@
 layout: post
 title: Using jQuery to Create iGoogle Style Drag-and-Drop
 date: "2008-11-12"
-comments: false
+comments: true
 categories: life
 link: false
 ---

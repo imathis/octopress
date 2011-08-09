@@ -2,7 +2,7 @@
 layout: post
 title: Best. Television. Ever.
 date: 2006-7-27
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

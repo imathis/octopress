@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Labyrinth"
 date: 2006-4-29
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

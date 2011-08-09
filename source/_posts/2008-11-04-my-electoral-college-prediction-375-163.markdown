@@ -2,7 +2,7 @@
 layout: post
 title: "My Electoral College Prediction: 375-163"
 date: 2008-11-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

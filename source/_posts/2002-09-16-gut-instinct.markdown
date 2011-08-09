@@ -2,7 +2,7 @@
 layout: post
 title: Gut Instinct
 date: 2002-9-16
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

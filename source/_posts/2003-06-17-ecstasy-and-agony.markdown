@@ -2,7 +2,7 @@
 layout: post
 title: Ecstasy and Agony
 date: 2003-6-17
-comments: false
+comments: true
 categories: life
 link: false
 ---

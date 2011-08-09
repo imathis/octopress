@@ -2,7 +2,7 @@
 layout: post
 title: The Hardest Part
 date: "2005-12-12"
-comments: false
+comments: true
 categories: life
 link: false
 ---

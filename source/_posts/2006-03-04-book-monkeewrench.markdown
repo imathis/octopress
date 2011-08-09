@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Monkeewrench"
 date: 2006-3-4
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Wobble
 date: "2006-10-30"
-comments: false
+comments: true
 categories: life
 link: false
 ---

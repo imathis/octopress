@@ -2,7 +2,7 @@
 layout: post
 title: Light Reading
 date: 2005-12-1
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

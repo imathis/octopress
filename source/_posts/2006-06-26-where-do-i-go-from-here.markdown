@@ -2,7 +2,7 @@
 layout: post
 title: Where Do I Go From Here?
 date: 2006-6-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

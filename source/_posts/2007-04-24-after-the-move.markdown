@@ -2,7 +2,7 @@
 layout: post
 title: After the Move
 date: 2007-4-24
-comments: false
+comments: true
 categories: life
 link: false
 ---

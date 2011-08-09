@@ -2,7 +2,7 @@
 layout: post
 title: Feeling ADD
 date: 2002-10-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

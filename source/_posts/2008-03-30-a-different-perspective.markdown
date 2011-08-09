@@ -2,7 +2,7 @@
 layout: post
 title: A Different Perspective
 date: 2008-3-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

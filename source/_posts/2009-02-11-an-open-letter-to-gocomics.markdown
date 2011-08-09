@@ -2,7 +2,7 @@
 layout: post
 title: An Open Letter To GoComics
 date: 2009-2-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

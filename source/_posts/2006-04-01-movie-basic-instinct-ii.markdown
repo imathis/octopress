@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Basic Instinct II"
 date: 2006-4-1
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

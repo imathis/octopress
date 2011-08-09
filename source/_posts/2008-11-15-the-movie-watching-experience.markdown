@@ -2,7 +2,7 @@
 layout: post
 title: The Movie Watching Experience
 date: "2008-11-15"
-comments: false
+comments: true
 categories: life
 link: false
 ---

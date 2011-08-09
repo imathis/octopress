@@ -2,7 +2,7 @@
 layout: post
 title: High-Def STS-125 Launch
 date: 2009-5-11
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

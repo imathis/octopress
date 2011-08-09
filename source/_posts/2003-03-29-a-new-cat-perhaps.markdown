@@ -2,7 +2,7 @@
 layout: post
 title: A New Cat, Perhaps?
 date: 2003-3-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

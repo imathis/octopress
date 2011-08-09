@@ -2,7 +2,7 @@
 layout: post
 title: Same View, New Perspective
 date: 2004-2-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

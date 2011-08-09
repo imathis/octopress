@@ -2,7 +2,7 @@
 layout: post
 title: Helen Riley Nichols
 date: 2006-5-28
-comments: false
+comments: true
 categories: family
 link: false
 ---

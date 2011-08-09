@@ -2,7 +2,7 @@
 layout: post
 title: Where to Turn?
 date: "2005-11-17"
-comments: false
+comments: true
 categories: life
 link: false
 ---

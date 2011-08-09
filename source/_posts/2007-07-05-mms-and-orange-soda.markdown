@@ -2,7 +2,7 @@
 layout: post
 title: M&Ms and Orange Soda
 date: 2007-7-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

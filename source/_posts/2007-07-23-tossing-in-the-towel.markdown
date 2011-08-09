@@ -2,7 +2,7 @@
 layout: post
 title: Tossing in The Towel
 date: 2007-7-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

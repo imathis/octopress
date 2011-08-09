@@ -2,7 +2,7 @@
 layout: post
 title: You Never Forget
 date: 2009-5-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: iPad Disappeared from iTunes and How to Fix
 date: 2011-3-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Terminal Tweaks
 date: "2009-10-30"
-comments: false
+comments: true
 categories: life
 link: false
 ---

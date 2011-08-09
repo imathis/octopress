@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Behind Enemy Lines"
 date: 2006-2-26
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

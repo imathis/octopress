@@ -2,7 +2,7 @@
 layout: post
 title: Resume Update and Trackback Spam
 date: "2006-11-17"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

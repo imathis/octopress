@@ -2,7 +2,7 @@
 layout: post
 title: Living Among Cats
 date: 2007-5-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

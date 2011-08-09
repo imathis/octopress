@@ -2,7 +2,7 @@
 layout: post
 title: Total Waste of Time
 date: 2003-2-18
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

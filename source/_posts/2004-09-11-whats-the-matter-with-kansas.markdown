@@ -2,7 +2,7 @@
 layout: post
 title: What's The Matter With Kansas?
 date: 2004-9-11
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

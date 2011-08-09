@@ -2,7 +2,7 @@
 layout: post
 title: Inching Along
 date: 2006-8-22
-comments: false
+comments: true
 categories: health
 link: false
 ---

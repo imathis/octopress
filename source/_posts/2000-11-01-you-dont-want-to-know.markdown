@@ -2,7 +2,7 @@
 layout: post
 title: You Don't Want to Know
 date: 2000-11-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

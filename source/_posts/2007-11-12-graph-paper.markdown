@@ -2,7 +2,7 @@
 layout: post
 title: Graph Paper
 date: "2007-11-12"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

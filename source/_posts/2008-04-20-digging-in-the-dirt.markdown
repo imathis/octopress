@@ -2,7 +2,7 @@
 layout: post
 title: Digging in the Dirt
 date: 2008-4-20
-comments: false
+comments: true
 categories: family
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: USB 2.0 is Way Faster
 date: 2009-11-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

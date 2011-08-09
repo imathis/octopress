@@ -2,7 +2,7 @@
 layout: post
 title: Rewriting History
 date: 2003-3-4
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

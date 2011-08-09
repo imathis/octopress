@@ -2,7 +2,7 @@
 layout: post
 title: 128 Hours Later
 date: 2005-8-30
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

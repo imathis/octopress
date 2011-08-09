@@ -2,7 +2,7 @@
 layout: post
 title: Facebook Farewell
 date: 2007-12-2
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

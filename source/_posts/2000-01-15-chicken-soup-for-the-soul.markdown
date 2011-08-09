@@ -2,7 +2,7 @@
 layout: post
 title: Chicken Soup for the Soul
 date: 2000-1-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

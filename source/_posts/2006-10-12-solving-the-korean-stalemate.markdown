@@ -2,7 +2,7 @@
 layout: post
 title: Solving the Korean Stalemate
 date: "2006-10-12"
-comments: false
+comments: true
 categories: life
 link: false
 ---

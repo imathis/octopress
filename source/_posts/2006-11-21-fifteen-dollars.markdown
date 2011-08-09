@@ -2,7 +2,7 @@
 layout: post
 title: Fifteen Dollars
 date: "2006-11-21"
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: An Evening At Home
 date: 2005-12-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

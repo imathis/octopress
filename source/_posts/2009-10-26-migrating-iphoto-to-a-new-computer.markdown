@@ -2,7 +2,7 @@
 layout: post
 title: Migrating iPhoto to A New Computer
 date: "2009-10-26"
-comments: false
+comments: true
 categories: life
 link: false
 ---

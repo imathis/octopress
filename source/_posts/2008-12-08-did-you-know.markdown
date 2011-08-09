@@ -2,7 +2,7 @@
 layout: post
 title: Did You Know?
 date: 2008-12-8
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

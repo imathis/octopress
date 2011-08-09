@@ -2,7 +2,7 @@
 layout: post
 title: Beauty in Destruction
 date: 2011-6-9
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

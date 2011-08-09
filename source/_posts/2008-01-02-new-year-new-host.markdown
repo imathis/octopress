@@ -2,7 +2,7 @@
 layout: post
 title: New Year, New Host
 date: 2008-1-2
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

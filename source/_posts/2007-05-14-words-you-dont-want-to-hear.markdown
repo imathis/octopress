@@ -2,7 +2,7 @@
 layout: post
 title: Words You Don't Want To Hear
 date: 2007-5-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

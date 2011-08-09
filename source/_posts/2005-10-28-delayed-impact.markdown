@@ -2,7 +2,7 @@
 layout: post
 title: Delayed Impact
 date: "2005-10-28"
-comments: false
+comments: true
 categories: life
 link: false
 ---

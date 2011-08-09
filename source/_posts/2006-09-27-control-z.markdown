@@ -2,7 +2,7 @@
 layout: post
 title: Control-Z
 date: 2006-9-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

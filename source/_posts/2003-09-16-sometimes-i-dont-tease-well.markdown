@@ -2,7 +2,7 @@
 layout: post
 title: Sometimes I Don't Tease Well
 date: 2003-9-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

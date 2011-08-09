@@ -2,7 +2,7 @@
 layout: post
 title: A Tale of Two Cards
 date: 2007-2-13
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

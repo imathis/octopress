@@ -2,7 +2,7 @@
 layout: post
 title: Exception Refund, Part II
 date: "2005-12-20"
-comments: false
+comments: true
 categories: life
 link: false
 ---

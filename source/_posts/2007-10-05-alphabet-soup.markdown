@@ -2,7 +2,7 @@
 layout: post
 title: Alphabet Soup
 date: 2007-10-5
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

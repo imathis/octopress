@@ -2,7 +2,7 @@
 layout: post
 title: The Evolution of Dance
 date: 2006-5-10
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

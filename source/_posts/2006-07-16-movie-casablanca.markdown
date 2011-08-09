@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: Casablanca"
 date: 2006-7-16
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

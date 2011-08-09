@@ -2,7 +2,7 @@
 layout: post
 title: Zone Alarm Blocks Internet After Hibernation
 date: "2007-10-11"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

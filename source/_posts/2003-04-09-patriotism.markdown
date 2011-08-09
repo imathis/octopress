@@ -2,7 +2,7 @@
 layout: post
 title: Patriotism
 date: 2003-4-9
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

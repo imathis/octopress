@@ -2,7 +2,7 @@
 layout: post
 title: How Cold Is It?
 date: 2004-1-31
-comments: false
+comments: true
 categories: life
 link: false
 ---

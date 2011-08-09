@@ -2,7 +2,7 @@
 layout: post
 title: Lies, Damn Lies, and Statistics
 date: 2005-9-11
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

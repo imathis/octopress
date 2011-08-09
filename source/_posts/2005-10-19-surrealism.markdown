@@ -2,7 +2,7 @@
 layout: post
 title: Surrealism
 date: "2005-10-19"
-comments: false
+comments: true
 categories: life
 link: false
 ---

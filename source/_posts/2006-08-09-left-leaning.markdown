@@ -2,7 +2,7 @@
 layout: post
 title: Left Leaning
 date: 2006-8-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Hoisted on his own petard
 date: 2003-6-20
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

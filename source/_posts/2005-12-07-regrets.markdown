@@ -2,7 +2,7 @@
 layout: post
 title: Regrets
 date: 2005-12-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

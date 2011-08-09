@@ -2,7 +2,7 @@
 layout: post
 title: Virus Safe, If Not Virus Free
 date: 2005-9-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

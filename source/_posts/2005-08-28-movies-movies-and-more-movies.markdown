@@ -2,7 +2,7 @@
 layout: post
 title: Movies, Movies, and More Movies
 date: 2005-8-28
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

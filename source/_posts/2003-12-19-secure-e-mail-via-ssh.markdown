@@ -2,7 +2,7 @@
 layout: post
 title: Secure E-Mail via ssh
 date: "2003-12-19"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

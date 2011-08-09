@@ -2,7 +2,7 @@
 layout: post
 title: Seventeen
 date: 2006-7-31
-comments: false
+comments: true
 categories: health
 link: false
 ---

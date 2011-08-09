@@ -2,7 +2,7 @@
 layout: post
 title: Apple Manifesto
 date: "2003-11-21"
-comments: false
+comments: true
 categories: life
 link: false
 ---

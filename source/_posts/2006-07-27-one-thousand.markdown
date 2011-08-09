@@ -2,7 +2,7 @@
 layout: post
 title: One Thousand
 date: 2006-7-27
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: A New Look
 date: 2003-3-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

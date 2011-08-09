@@ -2,7 +2,7 @@
 layout: post
 title: A Brand New Car. Sorta
 date: 2007-6-13
-comments: false
+comments: true
 categories: life
 link: false
 ---

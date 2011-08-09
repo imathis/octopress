@@ -2,7 +2,7 @@
 layout: post
 title: Mucking Around
 date: 2002-7-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

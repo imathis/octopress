@@ -2,7 +2,7 @@
 layout: post
 title: Car Hockey
 date: "2006-11-29"
-comments: false
+comments: true
 categories: life
 link: false
 ---

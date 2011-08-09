@@ -2,7 +2,7 @@
 layout: post
 title: Paralyzed
 date: 2002-9-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

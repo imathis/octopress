@@ -2,7 +2,7 @@
 layout: post
 title: Just a Typical Thursday
 date: 2010-8-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

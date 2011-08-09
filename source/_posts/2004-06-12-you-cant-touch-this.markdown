@@ -2,7 +2,7 @@
 layout: post
 title: You Can't Touch This
 date: 2004-6-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

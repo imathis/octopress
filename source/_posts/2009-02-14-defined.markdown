@@ -2,7 +2,7 @@
 layout: post
 title: Defined
 date: 2009-2-14
-comments: false
+comments: true
 categories: family
 link: false
 ---

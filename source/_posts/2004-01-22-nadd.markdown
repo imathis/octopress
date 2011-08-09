@@ -2,7 +2,7 @@
 layout: post
 title: N.A.D.D.
 date: 2004-1-22
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

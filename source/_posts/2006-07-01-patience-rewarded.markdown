@@ -2,7 +2,7 @@
 layout: post
 title: Patience Rewarded
 date: 2006-7-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

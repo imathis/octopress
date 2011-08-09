@@ -2,7 +2,7 @@
 layout: post
 title: Pins and Needles
 date: 2006-1-25
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

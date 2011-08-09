@@ -2,7 +2,7 @@
 layout: post
 title: Whoa. I have seen the Revolution
 date: "2003-11-11"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

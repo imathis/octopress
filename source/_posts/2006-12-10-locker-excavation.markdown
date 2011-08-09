@@ -2,7 +2,7 @@
 layout: post
 title: Locker Excavation
 date: "2006-12-10"
-comments: false
+comments: true
 categories: life
 link: false
 ---

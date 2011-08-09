@@ -2,7 +2,7 @@
 layout: post
 title: Of Investments, Emotional and Otherwise
 date: 2003-3-3
-comments: false
+comments: true
 categories: life
 link: false
 ---

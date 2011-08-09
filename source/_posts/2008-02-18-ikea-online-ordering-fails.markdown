@@ -2,7 +2,7 @@
 layout: post
 title: IKEA Online Ordering Fails
 date: 2008-2-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Yay
 date: 2007-8-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

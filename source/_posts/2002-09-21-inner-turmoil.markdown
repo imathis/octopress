@@ -2,7 +2,7 @@
 layout: post
 title: Inner Turmoil
 date: 2002-9-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

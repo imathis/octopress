@@ -2,7 +2,7 @@
 layout: post
 title: Alphabet Meme
 date: 2006-4-27
-comments: false
+comments: true
 categories: meme
 link: false
 ---

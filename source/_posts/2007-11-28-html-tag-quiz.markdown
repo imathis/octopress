@@ -2,7 +2,7 @@
 layout: post
 title: HTML Tag Quiz
 date: "2007-11-28"
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

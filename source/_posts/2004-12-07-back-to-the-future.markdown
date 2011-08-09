@@ -2,7 +2,7 @@
 layout: post
 title: Back to the Future
 date: 2004-12-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

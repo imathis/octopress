@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: A History of Violence"
 date: 2006-7-6
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

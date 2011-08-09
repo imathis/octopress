@@ -2,7 +2,7 @@
 layout: post
 title: The Hernia That Wasn't
 date: 2004-3-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Pez-heads
 date: 2003-9-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

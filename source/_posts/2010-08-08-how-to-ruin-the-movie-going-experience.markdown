@@ -2,7 +2,7 @@
 layout: post
 title: How to Ruin the Movie Going Experience
 date: 2010-8-8
-comments: false
+comments: true
 categories: random
 link: false
 ---

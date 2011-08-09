@@ -2,7 +2,7 @@
 layout: post
 title: Perils of Profiling
 date: 2010-4-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

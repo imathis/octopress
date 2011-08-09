@@ -2,7 +2,7 @@
 layout: post
 title: Blame is NOT the Answer
 date: 2005-9-7
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

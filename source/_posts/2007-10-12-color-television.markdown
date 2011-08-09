@@ -2,7 +2,7 @@
 layout: post
 title: Color Television
 date: "2007-10-12"
-comments: false
+comments: true
 categories: life
 link: false
 ---

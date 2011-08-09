@@ -2,7 +2,7 @@
 layout: post
 title: Emotional Toll
 date: 2003-6-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

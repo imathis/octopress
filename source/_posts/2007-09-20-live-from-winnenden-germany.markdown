@@ -2,7 +2,7 @@
 layout: post
 title: Live From Winnenden Germany
 date: 2007-9-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

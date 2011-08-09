@@ -2,7 +2,7 @@
 layout: post
 title: Travelogue
 date: 2003-1-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

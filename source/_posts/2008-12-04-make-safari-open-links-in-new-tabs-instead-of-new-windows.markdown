@@ -2,7 +2,7 @@
 layout: post
 title: Make Safari Open Links in New Tabs Instead of New Windows
 date: 2008-12-4
-comments: false
+comments: true
 categories: life
 link: false
 ---

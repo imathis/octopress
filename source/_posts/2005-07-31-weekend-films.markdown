@@ -2,7 +2,7 @@
 layout: post
 title: Weekend Films
 date: 2005-7-31
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: A Weighty Oops
 date: 2006-8-15
-comments: false
+comments: true
 categories: health
 link: false
 ---

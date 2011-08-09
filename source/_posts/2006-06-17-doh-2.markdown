@@ -2,7 +2,7 @@
 layout: post
 title: D'oh!
 date: 2006-6-17
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Yes. We. Did.
 date: 2008-11-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

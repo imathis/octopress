@@ -2,7 +2,7 @@
 layout: post
 title: Big Dopey, Part II
 date: "2005-11-10"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

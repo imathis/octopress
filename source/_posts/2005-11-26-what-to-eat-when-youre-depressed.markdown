@@ -2,7 +2,7 @@
 layout: post
 title: What to Eat When You're Depressed
 date: "2005-11-26"
-comments: false
+comments: true
 categories: life
 link: false
 ---

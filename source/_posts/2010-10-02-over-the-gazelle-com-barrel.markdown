@@ -2,7 +2,7 @@
 layout: post
 title: Over the Gazelle.com Barrel
 date: 2010-10-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

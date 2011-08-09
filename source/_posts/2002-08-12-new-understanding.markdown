@@ -2,7 +2,7 @@
 layout: post
 title: New Understanding
 date: 2002-8-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

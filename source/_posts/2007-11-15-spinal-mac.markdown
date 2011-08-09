@@ -2,7 +2,7 @@
 layout: post
 title: Spinal Mac
 date: "2007-11-15"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

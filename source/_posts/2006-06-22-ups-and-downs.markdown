@@ -2,7 +2,7 @@
 layout: post
 title: Ups and Downs
 date: 2006-6-22
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Job Searching
 date: 2003-5-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

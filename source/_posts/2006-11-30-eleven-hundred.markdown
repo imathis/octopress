@@ -2,7 +2,7 @@
 layout: post
 title: Eleven Hundred
 date: "2006-11-30"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

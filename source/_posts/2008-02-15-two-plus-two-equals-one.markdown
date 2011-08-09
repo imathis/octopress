@@ -2,7 +2,7 @@
 layout: post
 title: Two Plus Two Equals One
 date: 2008-2-15
-comments: false
+comments: true
 categories: life
 link: false
 ---

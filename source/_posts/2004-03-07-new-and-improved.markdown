@@ -2,7 +2,7 @@
 layout: post
 title: New and Improved
 date: 2004-3-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

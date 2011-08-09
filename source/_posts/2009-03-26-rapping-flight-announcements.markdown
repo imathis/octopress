@@ -2,7 +2,7 @@
 layout: post
 title: Rapping Flight Announcements
 date: 2009-3-26
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

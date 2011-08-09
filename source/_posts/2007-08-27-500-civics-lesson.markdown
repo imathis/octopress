@@ -2,7 +2,7 @@
 layout: post
 title: $500 Civics Lesson
 date: 2007-8-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

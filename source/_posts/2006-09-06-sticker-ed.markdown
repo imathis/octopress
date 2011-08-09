@@ -2,7 +2,7 @@
 layout: post
 title: Sticker-ed
 date: 2006-9-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

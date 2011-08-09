@@ -2,7 +2,7 @@
 layout: post
 title: Absolutely Nothing
 date: "2004-12-20"
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

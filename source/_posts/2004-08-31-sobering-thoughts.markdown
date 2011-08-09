@@ -2,7 +2,7 @@
 layout: post
 title: Sobering Thoughts
 date: 2004-8-31
-comments: false
+comments: true
 categories: life
 link: false
 ---

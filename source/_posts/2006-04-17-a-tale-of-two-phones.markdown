@@ -2,7 +2,7 @@
 layout: post
 title: A Tale Of Two Phones
 date: 2006-4-17
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Public Hygiene
 date: 2006-3-3
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

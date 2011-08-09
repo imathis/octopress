@@ -2,7 +2,7 @@
 layout: post
 title: Mono no aware
 date: 2005-7-11
-comments: false
+comments: true
 categories: life
 link: false
 ---

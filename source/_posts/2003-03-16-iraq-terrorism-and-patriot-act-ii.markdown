@@ -2,7 +2,7 @@
 layout: post
 title: Iraq, Terrorism, and Patriot Act II
 date: 2003-3-16
-comments: false
+comments: true
 categories: life
 link: false
 ---

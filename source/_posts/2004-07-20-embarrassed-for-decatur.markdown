@@ -2,7 +2,7 @@
 layout: post
 title: Embarrassed for Decatur
 date: 2004-7-20
-comments: false
+comments: true
 categories: random
 link: false
 ---

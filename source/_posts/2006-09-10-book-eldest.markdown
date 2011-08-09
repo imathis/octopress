@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Eldest"
 date: 2006-9-10
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

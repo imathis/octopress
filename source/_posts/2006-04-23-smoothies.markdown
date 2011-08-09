@@ -2,7 +2,7 @@
 layout: post
 title: Smoothies
 date: 2006-4-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Car Allowance Rebate System
 date: 2009-8-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: A Sense of Humor
 date: 2009-8-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

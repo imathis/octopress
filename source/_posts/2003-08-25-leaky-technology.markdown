@@ -2,7 +2,7 @@
 layout: post
 title: Leaky Technology
 date: 2003-8-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

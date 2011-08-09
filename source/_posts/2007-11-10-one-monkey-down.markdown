@@ -2,7 +2,7 @@
 layout: post
 title: One Monkey Down
 date: "2007-11-10"
-comments: false
+comments: true
 categories: life
 link: false
 ---

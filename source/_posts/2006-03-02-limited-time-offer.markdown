@@ -2,7 +2,7 @@
 layout: post
 title: Limited Time Offer
 date: 2006-3-2
-comments: false
+comments: true
 categories: life
 link: false
 ---

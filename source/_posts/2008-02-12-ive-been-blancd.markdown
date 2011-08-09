@@ -2,7 +2,7 @@
 layout: post
 title: I've Been Blanc'd
 date: 2008-2-12
-comments: false
+comments: true
 categories: life
 link: false
 ---

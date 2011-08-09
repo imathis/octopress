@@ -2,7 +2,7 @@
 layout: post
 title: "Book: Hannibal Rising"
 date: "2006-12-14"
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: The Beatles
 date: 2008-3-9
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

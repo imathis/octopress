@@ -2,7 +2,7 @@
 layout: post
 title: AKA Arthritis
 date: 2007-5-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

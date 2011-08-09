@@ -2,7 +2,7 @@
 layout: post
 title: Alice's Restaurant
 date: 2004-6-14
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

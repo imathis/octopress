@@ -2,7 +2,7 @@
 layout: post
 title: Blackberry Touch
 date: 2009-3-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

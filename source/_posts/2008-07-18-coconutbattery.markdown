@@ -2,7 +2,7 @@
 layout: post
 title: coconutBattery
 date: 2008-7-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

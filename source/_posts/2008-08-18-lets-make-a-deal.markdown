@@ -2,7 +2,7 @@
 layout: post
 title: Let's Make A Deal
 date: 2008-8-18
-comments: false
+comments: true
 categories: life
 link: false
 ---

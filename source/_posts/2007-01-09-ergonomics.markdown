@@ -2,7 +2,7 @@
 layout: post
 title: Ergonomics
 date: 2007-1-9
-comments: false
+comments: true
 categories: life
 link: false
 ---

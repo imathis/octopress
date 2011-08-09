@@ -2,7 +2,7 @@
 layout: post
 title: Weight and Finger Update
 date: "2007-11-30"
-comments: false
+comments: true
 categories: life
 link: false
 ---

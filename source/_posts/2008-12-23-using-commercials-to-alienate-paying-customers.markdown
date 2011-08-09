@@ -2,7 +2,7 @@
 layout: post
 title: Using Commercials to Alienate Paying Customers
 date: "2008-12-23"
-comments: false
+comments: true
 categories: life
 link: false
 ---

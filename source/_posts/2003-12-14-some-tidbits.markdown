@@ -2,7 +2,7 @@
 layout: post
 title: Some Tidbits
 date: "2003-12-14"
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

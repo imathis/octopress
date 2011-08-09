@@ -2,7 +2,7 @@
 layout: post
 title: Milestone and MacWorld
 date: 2004-1-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

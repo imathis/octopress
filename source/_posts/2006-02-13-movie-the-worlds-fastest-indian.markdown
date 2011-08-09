@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: The World's Fastest Indian"
 date: 2006-2-13
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

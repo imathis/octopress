@@ -2,7 +2,7 @@
 layout: post
 title: First Interface
 date: 2010-3-29
-comments: false
+comments: true
 categories: life
 link: false
 ---

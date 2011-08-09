@@ -2,7 +2,7 @@
 layout: post
 title: Reality
 date: 2005-10-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

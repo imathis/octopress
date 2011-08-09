@@ -2,7 +2,7 @@
 layout: post
 title: Customer Service
 date: "2004-12-18"
-comments: false
+comments: true
 categories: life
 link: false
 ---

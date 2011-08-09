@@ -2,7 +2,7 @@
 layout: post
 title: RSS versus Live
 date: 2009-3-26
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

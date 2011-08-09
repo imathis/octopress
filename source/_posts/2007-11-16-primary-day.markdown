@@ -2,7 +2,7 @@
 layout: post
 title: Primary Day
 date: "2007-11-16"
-comments: false
+comments: true
 categories: life
 link: false
 ---

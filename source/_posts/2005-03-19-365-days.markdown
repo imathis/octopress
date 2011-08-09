@@ -2,7 +2,7 @@
 layout: post
 title: 365 Days
 date: 2005-3-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

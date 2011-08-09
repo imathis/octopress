@@ -2,7 +2,7 @@
 layout: post
 title: "Dutch Net Neutrality "
 date: 2011-6-23
-comments: false
+comments: true
 categories: links
 link: true
 ---

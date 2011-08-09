@@ -2,7 +2,7 @@
 layout: post
 title: Responsibility
 date: "2006-11-26"
-comments: false
+comments: true
 categories: life
 link: false
 ---

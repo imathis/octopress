@@ -2,7 +2,7 @@
 layout: post
 title: Once More Time
 date: 2007-3-8
-comments: false
+comments: true
 categories: health
 link: false
 ---

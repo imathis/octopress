@@ -2,7 +2,7 @@
 layout: post
 title: Vehicles I Have Owned
 date: 2001-3-19
-comments: false
+comments: true
 categories: life
 link: false
 ---

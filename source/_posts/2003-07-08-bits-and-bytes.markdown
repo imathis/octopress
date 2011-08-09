@@ -2,7 +2,7 @@
 layout: post
 title: Bits and Bytes
 date: 2003-7-8
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

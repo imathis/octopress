@@ -2,7 +2,7 @@
 layout: post
 title: Take a Pill
 date: 2006-8-7
-comments: false
+comments: true
 categories: health
 link: false
 ---

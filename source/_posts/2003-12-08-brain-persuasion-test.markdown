@@ -2,7 +2,7 @@
 layout: post
 title: Brain Persuasion Test
 date: 2003-12-8
-comments: false
+comments: true
 categories: life
 link: false
 ---

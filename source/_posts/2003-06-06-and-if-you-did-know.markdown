@@ -2,7 +2,7 @@
 layout: post
 title: And If You Did Know
 date: 2003-6-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

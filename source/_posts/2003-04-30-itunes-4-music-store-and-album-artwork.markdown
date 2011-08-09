@@ -2,7 +2,7 @@
 layout: post
 title: iTunes 4, Music Store, and Album Artwork
 date: 2003-4-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

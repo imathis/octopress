@@ -2,7 +2,7 @@
 layout: post
 title: The Real Problem is Violence Aganst Women
 date: 2004-2-8
-comments: false
+comments: true
 categories: social issues
 link: false
 ---

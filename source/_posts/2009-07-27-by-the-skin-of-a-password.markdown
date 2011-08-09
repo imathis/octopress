@@ -2,7 +2,7 @@
 layout: post
 title: By The Skin of a Password
 date: 2009-7-27
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Tough Decisions
 date: 2006-5-23
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: For My Valentine
 date: 2000-2-14
-comments: false
+comments: true
 categories: relationships
 link: false
 ---

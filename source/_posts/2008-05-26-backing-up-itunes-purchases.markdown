@@ -2,7 +2,7 @@
 layout: post
 title: Backing up iTunes Purchases
 date: 2008-5-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

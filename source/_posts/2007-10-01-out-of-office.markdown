@@ -2,7 +2,7 @@
 layout: post
 title: Out Of Office
 date: 2007-10-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

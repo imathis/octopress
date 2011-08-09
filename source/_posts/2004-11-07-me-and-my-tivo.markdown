@@ -2,7 +2,7 @@
 layout: post
 title: Me and my Tivo
 date: 2004-11-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

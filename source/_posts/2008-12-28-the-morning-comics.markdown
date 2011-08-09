@@ -2,7 +2,7 @@
 layout: post
 title: The Morning Comics
 date: "2008-12-28"
-comments: false
+comments: true
 categories: life
 link: false
 ---

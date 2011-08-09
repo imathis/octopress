@@ -2,7 +2,7 @@
 layout: post
 title: Saturn V Launch
 date: 2009-4-30
-comments: false
+comments: true
 categories: elsewhere
 link: false
 ---

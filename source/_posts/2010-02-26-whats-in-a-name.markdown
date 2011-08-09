@@ -2,7 +2,7 @@
 layout: post
 title: What's In A Name?
 date: 2010-2-26
-comments: false
+comments: true
 categories: life
 link: false
 ---

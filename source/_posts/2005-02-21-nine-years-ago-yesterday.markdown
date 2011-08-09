@@ -2,7 +2,7 @@
 layout: post
 title: Nine Years Ago Yesterday
 date: 2005-2-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Resolution For the New Year
 date: 2006-1-7
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

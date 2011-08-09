@@ -2,7 +2,7 @@
 layout: post
 title: 46 Things About Me
 date: 2007-5-7
-comments: false
+comments: true
 categories: life
 link: false
 ---

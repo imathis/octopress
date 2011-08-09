@@ -2,7 +2,7 @@
 layout: post
 title: "Movie: 61*"
 date: 2006-4-17
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

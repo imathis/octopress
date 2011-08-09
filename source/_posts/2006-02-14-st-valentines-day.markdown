@@ -2,7 +2,7 @@
 layout: post
 title: St. Valentine's Day
 date: 2006-2-14
-comments: false
+comments: true
 categories: life
 link: false
 ---

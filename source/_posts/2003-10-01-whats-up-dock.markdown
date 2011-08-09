@@ -2,7 +2,7 @@
 layout: post
 title: What's Up, Dock
 date: 2003-10-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

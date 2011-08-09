@@ -2,7 +2,7 @@
 layout: post
 title: Browse Like It's 1995
 date: 2003-7-25
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

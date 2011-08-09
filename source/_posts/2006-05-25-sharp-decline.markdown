@@ -2,7 +2,7 @@
 layout: post
 title: Sharp Decline
 date: 2006-5-25
-comments: false
+comments: true
 categories: life
 link: false
 ---

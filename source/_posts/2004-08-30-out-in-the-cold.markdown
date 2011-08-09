@@ -2,7 +2,7 @@
 layout: post
 title: Out in the Cold
 date: 2004-8-30
-comments: false
+comments: true
 categories: life
 link: false
 ---

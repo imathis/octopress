@@ -2,7 +2,7 @@
 layout: post
 title: At The End Of The Day
 date: 2006-2-6
-comments: false
+comments: true
 categories: life
 link: false
 ---

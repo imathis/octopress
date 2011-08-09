@@ -2,7 +2,7 @@
 layout: post
 title: Managing ssh keys
 date: 2009-10-9
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

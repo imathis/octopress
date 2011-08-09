@@ -2,7 +2,7 @@
 layout: post
 title: Eleven People
 date: 2007-6-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

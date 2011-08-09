@@ -2,7 +2,7 @@
 layout: post
 title: The Cable Guy
 date: 2006-10-5
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

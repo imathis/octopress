@@ -2,7 +2,7 @@
 layout: post
 title: Tilt Shift Video
 date: 2009-5-5
-comments: false
+comments: true
 categories: diversions
 link: false
 ---

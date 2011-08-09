@@ -2,7 +2,7 @@
 layout: post
 title: You're In My Space
 date: "2005-11-12"
-comments: false
+comments: true
 categories: life
 link: false
 ---

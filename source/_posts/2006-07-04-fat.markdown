@@ -2,7 +2,7 @@
 layout: post
 title: Fat
 date: 2006-7-4
-comments: false
+comments: true
 categories: health
 link: false
 ---

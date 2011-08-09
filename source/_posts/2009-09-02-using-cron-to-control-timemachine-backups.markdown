@@ -2,7 +2,7 @@
 layout: post
 title: Using CRON to Control TimeMachine Backups
 date: 2009-9-2
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

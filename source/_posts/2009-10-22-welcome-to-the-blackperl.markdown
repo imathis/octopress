@@ -2,7 +2,7 @@
 layout: post
 title: Welcome to the BlackPerl
 date: "2009-10-22"
-comments: false
+comments: true
 categories: life
 link: false
 ---

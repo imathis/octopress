@@ -2,7 +2,7 @@
 layout: post
 title: i(Multi-Protocol)Chat
 date: 2003-9-9
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

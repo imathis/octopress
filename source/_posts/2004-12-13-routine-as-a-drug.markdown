@@ -2,7 +2,7 @@
 layout: post
 title: Routine as a Drug
 date: "2004-12-13"
-comments: false
+comments: true
 categories: life
 link: false
 ---

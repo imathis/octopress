@@ -2,7 +2,7 @@
 layout: post
 title: Tangential
 date: 2007-4-17
-comments: false
+comments: true
 categories: nerdliness
 link: false
 ---

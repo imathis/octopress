@@ -2,7 +2,7 @@
 layout: post
 title: New Math
 date: 2003-1-10
-comments: false
+comments: true
 categories: life
 link: false
 ---

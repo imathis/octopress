@@ -2,7 +2,7 @@
 layout: post
 title: my immortal
 date: 2006-2-28
-comments: false
+comments: true
 categories: life
 link: false
 ---

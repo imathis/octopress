@@ -2,7 +2,7 @@
 layout: post
 title: Replacement Value
 date: "2006-11-10"
-comments: false
+comments: true
 categories: random
 link: false
 ---

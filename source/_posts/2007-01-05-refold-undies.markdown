@@ -2,7 +2,7 @@
 layout: post
 title: Refold Undies
 date: 2007-1-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

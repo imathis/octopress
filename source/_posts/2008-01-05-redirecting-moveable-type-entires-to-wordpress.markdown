@@ -2,7 +2,7 @@
 layout: post
 title: Redirecting Moveable Type Entires to Wordpress
 date: 2008-1-5
-comments: false
+comments: true
 categories: life
 link: false
 ---

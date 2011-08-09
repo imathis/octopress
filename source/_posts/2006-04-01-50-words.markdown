@@ -2,7 +2,7 @@
 layout: post
 title: 50 Words
 date: 2006-4-1
-comments: false
+comments: true
 categories: life
 link: false
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Deleting Email Accounts
 date: 2009-9-21
-comments: false
+comments: true
 categories: life
 link: false
 ---

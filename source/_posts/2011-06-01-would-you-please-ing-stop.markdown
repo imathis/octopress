@@ -2,7 +2,7 @@
 layout: post
 title: Would You Please @&*$ing Stop
 date: 2011-6-1
-comments: false
+comments: true
 categories: links
 link: true
 ---

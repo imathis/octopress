@@ -2,7 +2,7 @@
 layout: post
 title: Abby Normal McAvoy Nichols
 date: 2003-3-20
-comments: false
+comments: true
 categories: life
 link: false
 ---

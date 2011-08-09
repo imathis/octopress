@@ -2,7 +2,7 @@
 layout: post
 title: A Travel PC
 date: 2008-7-24
-comments: false
+comments: true
 categories: life
 link: false
 ---
