@@ -1,0 +1,2664 @@
+<?php
+require('wp-config.php');
+header('Content-type: text/plain');
+?>
+Redirect Permanent /blogs/001398.html http://www.zanshin.net/2007/12/29/
+   <?php echo sanitize_title("Moving"); ?>
+Redirect Permanent /blogs/001397.html http://www.zanshin.net/2007/12/24/
+   <?php echo sanitize_title("Yes, Virginia, There Is A Santa Claus"); ?>
+Redirect Permanent /blogs/001396.html http://www.zanshin.net/2007/12/22/
+   <?php echo sanitize_title("Merry Christmas"); ?>
+Redirect Permanent /blogs/001395.html http://www.zanshin.net/2007/12/20/
+   <?php echo sanitize_title("Tumblr"); ?>
+Redirect Permanent /blogs/001394.html http://www.zanshin.net/2007/12/17/
+   <?php echo sanitize_title("Domain Transfer"); ?>
+Redirect Permanent /blogs/001393.html http://www.zanshin.net/2007/12/08/
+   <?php echo sanitize_title("New Host, New Site"); ?>
+Redirect Permanent /blogs/001392.html http://www.zanshin.net/2007/12/06/
+   <?php echo sanitize_title("The Idiot Squad"); ?>
+Redirect Permanent /blogs/001391.html http://www.zanshin.net/2007/12/06/
+   <?php echo sanitize_title("Facebook About Face"); ?>
+Redirect Permanent /blogs/001390.html http://www.zanshin.net/2007/12/05/
+   <?php echo sanitize_title("Tar and mysqldump Are Your Friends"); ?>
+Redirect Permanent /blogs/001387.html http://www.zanshin.net/2007/12/04/
+   <?php echo sanitize_title("Mute Embarrassment"); ?>
+Redirect Permanent /blogs/001386.html http://www.zanshin.net/2007/12/04/
+   <?php echo sanitize_title("Promoted, Sort Of"); ?>
+Redirect Permanent /blogs/001385.html http://www.zanshin.net/2007/12/03/
+   <?php echo sanitize_title("Facebook Farewell, Part II"); ?>
+Redirect Permanent /blogs/001384.html http://www.zanshin.net/2007/12/02/
+   <?php echo sanitize_title("Signup Snafu"); ?>
+Redirect Permanent /blogs/001383.html http://www.zanshin.net/2007/12/02/
+   <?php echo sanitize_title("Facebook Farewell"); ?>
+Redirect Permanent /blogs/001382.html http://www.zanshin.net/2007/12/01/
+   <?php echo sanitize_title("Site Migration"); ?>
+Redirect Permanent /blogs/001381.html http://www.zanshin.net/2007/12/01/
+   <?php echo sanitize_title("Carryout"); ?>
+Redirect Permanent /blogs/001380.html http://www.zanshin.net/2007/11/30/
+   <?php echo sanitize_title("Weight and Finger Update"); ?>
+Redirect Permanent /blogs/001379.html http://www.zanshin.net/2007/11/29/
+   <?php echo sanitize_title("Two To Go"); ?>
+Redirect Permanent /blogs/001378.html http://www.zanshin.net/2007/11/28/
+   <?php echo sanitize_title("Hoarded"); ?>
+Redirect Permanent /blogs/001377.html http://www.zanshin.net/2007/11/28/
+   <?php echo sanitize_title("HTML Tag Quiz"); ?>
+Redirect Permanent /blogs/001376.html http://www.zanshin.net/2007/11/27/
+   <?php echo sanitize_title("OpenCourseWare"); ?>
+Redirect Permanent /blogs/001375.html http://www.zanshin.net/2007/11/26/
+   <?php echo sanitize_title("Lack of Visits"); ?>
+Redirect Permanent /blogs/001374.html http://www.zanshin.net/2007/11/25/
+   <?php echo sanitize_title("Up To"); ?>
+Redirect Permanent /blogs/001373.html http://www.zanshin.net/2007/11/24/
+   <?php echo sanitize_title("Twinkle Lights, Part Deux"); ?>
+Redirect Permanent /blogs/001372.html http://www.zanshin.net/2007/11/23/
+   <?php echo sanitize_title("Twinkle Lights"); ?>
+Redirect Permanent /blogs/001371.html http://www.zanshin.net/2007/11/22/
+   <?php echo sanitize_title("Divisible By Nine"); ?>
+Redirect Permanent /blogs/001370.html http://www.zanshin.net/2007/11/21/
+   <?php echo sanitize_title("Home For The Holiday"); ?>
+Redirect Permanent /blogs/001369.html http://www.zanshin.net/2007/11/20/
+   <?php echo sanitize_title("This Will Go On Your Permanent Record"); ?>
+Redirect Permanent /blogs/001368.html http://www.zanshin.net/2007/11/19/
+   <?php echo sanitize_title("The Power of A Smile"); ?>
+Redirect Permanent /blogs/001367.html http://www.zanshin.net/2007/11/18/
+   <?php echo sanitize_title("770"); ?>
+Redirect Permanent /blogs/001366.html http://www.zanshin.net/2007/11/17/
+   <?php echo sanitize_title("Official Bootleg"); ?>
+Redirect Permanent /blogs/001365.html http://www.zanshin.net/2007/11/16/
+   <?php echo sanitize_title("Primary Day"); ?>
+Redirect Permanent /blogs/001364.html http://www.zanshin.net/2007/11/15/
+   <?php echo sanitize_title("Spinal Mac"); ?>
+Redirect Permanent /blogs/001362.html http://www.zanshin.net/2007/11/14/
+   <?php echo sanitize_title("Goo Goo G'joob"); ?>
+Redirect Permanent /blogs/001361.html http://www.zanshin.net/2007/11/13/
+   <?php echo sanitize_title("Up To"); ?>
+Redirect Permanent /blogs/001360.html http://www.zanshin.net/2007/11/12/
+   <?php echo sanitize_title("Graph Paper"); ?>
+Redirect Permanent /blogs/001359.html http://www.zanshin.net/2007/11/11/
+   <?php echo sanitize_title("Commission "); ?>
+Redirect Permanent /blogs/001358.html http://www.zanshin.net/2007/11/10/
+   <?php echo sanitize_title("One Monkey Down"); ?>
+Redirect Permanent /blogs/001357.html http://www.zanshin.net/2007/11/09/
+   <?php echo sanitize_title("Moon Video"); ?>
+Redirect Permanent /blogs/001356.html http://www.zanshin.net/2007/11/08/
+   <?php echo sanitize_title("You're Welcome"); ?>
+Redirect Permanent /blogs/001355.html http://www.zanshin.net/2007/11/07/
+   <?php echo sanitize_title("How to See Your Mailing List Postings Using Gmail"); ?>
+Redirect Permanent /blogs/001354.html http://www.zanshin.net/2007/11/06/
+   <?php echo sanitize_title("Currently Reading"); ?>
+Redirect Permanent /blogs/001353.html http://www.zanshin.net/2007/11/05/
+   <?php echo sanitize_title("Mac Rising"); ?>
+Redirect Permanent /blogs/001352.html http://www.zanshin.net/2007/11/04/
+   <?php echo sanitize_title("Configuring Apple Mail for GMail IMAP Access"); ?>
+Redirect Permanent /blogs/001351.html http://www.zanshin.net/2007/11/03/
+   <?php echo sanitize_title("Pfannkuchen"); ?>
+Redirect Permanent /blogs/001350.html http://www.zanshin.net/2007/11/02/
+   <?php echo sanitize_title("24/7/52"); ?>
+Redirect Permanent /blogs/001349.html http://www.zanshin.net/2007/11/01/
+   <?php echo sanitize_title("Signs of Autumn"); ?>
+Redirect Permanent /blogs/001348.html http://www.zanshin.net/2007/10/30/
+   <?php echo sanitize_title("Uphill All The Way"); ?>
+Redirect Permanent /blogs/001347.html http://www.zanshin.net/2007/10/29/
+   <?php echo sanitize_title("Place Names"); ?>
+Redirect Permanent /blogs/001346.html http://www.zanshin.net/2007/10/28/
+   <?php echo sanitize_title("Waiting"); ?>
+Redirect Permanent /blogs/001345.html http://www.zanshin.net/2007/10/25/
+   <?php echo sanitize_title("Too Many Books"); ?>
+Redirect Permanent /blogs/001344.html http://www.zanshin.net/2007/10/19/
+   <?php echo sanitize_title("The Wisdom of Crowds"); ?>
+Redirect Permanent /blogs/001343.html http://www.zanshin.net/2007/10/17/
+   <?php echo sanitize_title("Seen One, Seen 'Em All"); ?>
+Redirect Permanent /blogs/001342.html http://www.zanshin.net/2007/10/14/
+   <?php echo sanitize_title("The Power of A Phone Call"); ?>
+Redirect Permanent /blogs/001341.html http://www.zanshin.net/2007/10/12/
+   <?php echo sanitize_title("Color Television"); ?>
+Redirect Permanent /blogs/001340.html http://www.zanshin.net/2007/10/11/
+   <?php echo sanitize_title("Right-Brained"); ?>
+Redirect Permanent /blogs/001339.html http://www.zanshin.net/2007/10/11/
+   <?php echo sanitize_title("Zone Alarm Blocks Internet After Hibernation"); ?>
+Redirect Permanent /blogs/001338.html http://www.zanshin.net/2007/10/08/
+   <?php echo sanitize_title("Frigidaire Affinity"); ?>
+Redirect Permanent /blogs/001337.html http://www.zanshin.net/2007/10/08/
+   <?php echo sanitize_title("Quiet Weekend"); ?>
+Redirect Permanent /blogs/001336.html http://www.zanshin.net/2007/10/05/
+   <?php echo sanitize_title("Alphabet Soup"); ?>
+Redirect Permanent /blogs/001335.html http://www.zanshin.net/2007/10/03/
+   <?php echo sanitize_title("Death of a Password"); ?>
+Redirect Permanent /blogs/001334.html http://www.zanshin.net/2007/10/02/
+   <?php echo sanitize_title("European Keyboard"); ?>
+Redirect Permanent /blogs/001333.html http://www.zanshin.net/2007/10/01/
+   <?php echo sanitize_title("Out Of Office"); ?>
+Redirect Permanent /blogs/001332.html http://www.zanshin.net/2007/09/30/
+   <?php echo sanitize_title("Memory Card Infected"); ?>
+Redirect Permanent /blogs/001331.html http://www.zanshin.net/2007/09/30/
+   <?php echo sanitize_title("Genesis + Germany = Great"); ?>
+Redirect Permanent /blogs/001330.html http://www.zanshin.net/2007/09/20/
+   <?php echo sanitize_title("Live From Winnenden Germany"); ?>
+Redirect Permanent /blogs/001329.html http://www.zanshin.net/2007/09/15/
+   <?php echo sanitize_title("Seat Tray Ads"); ?>
+Redirect Permanent /blogs/001328.html http://www.zanshin.net/2007/09/14/
+   <?php echo sanitize_title("Basically Not Here"); ?>
+Redirect Permanent /blogs/001327.html http://www.zanshin.net/2007/09/14/
+   <?php echo sanitize_title("High Speed Internet"); ?>
+Redirect Permanent /blogs/001326.html http://www.zanshin.net/2007/09/12/
+   <?php echo sanitize_title("The Yellow Map Magazine"); ?>
+Redirect Permanent /blogs/001325.html http://www.zanshin.net/2007/09/12/
+   <?php echo sanitize_title("Whistle Stop"); ?>
+Redirect Permanent /blogs/001324.html http://www.zanshin.net/2007/09/11/
+   <?php echo sanitize_title("72 Cents"); ?>
+Redirect Permanent /blogs/001323.html http://www.zanshin.net/2007/09/10/
+   <?php echo sanitize_title("More Email Nerdery"); ?>
+Redirect Permanent /blogs/001322.html http://www.zanshin.net/2007/09/10/
+   <?php echo sanitize_title("Open Windows"); ?>
+Redirect Permanent /blogs/001321.html http://www.zanshin.net/2007/09/09/
+   <?php echo sanitize_title("Sunday Evening"); ?>
+Redirect Permanent /blogs/001320.html http://www.zanshin.net/2007/09/07/
+   <?php echo sanitize_title("Karma Laden"); ?>
+Redirect Permanent /blogs/001319.html http://www.zanshin.net/2007/09/05/
+   <?php echo sanitize_title("Follow Through"); ?>
+Redirect Permanent /blogs/001318.html http://www.zanshin.net/2007/09/04/
+   <?php echo sanitize_title("Donate"); ?>
+Redirect Permanent /blogs/001317.html http://www.zanshin.net/2007/09/03/
+   <?php echo sanitize_title("Tale of the Nail"); ?>
+Redirect Permanent /blogs/001316.html http://www.zanshin.net/2007/09/02/
+   <?php echo sanitize_title("Hanging By A Thread"); ?>
+Redirect Permanent /blogs/001315.html http://www.zanshin.net/2007/08/31/
+   <?php echo sanitize_title("Words That Aren't"); ?>
+Redirect Permanent /blogs/001314.html http://www.zanshin.net/2007/08/30/
+   <?php echo sanitize_title("Summer of Moving"); ?>
+Redirect Permanent /blogs/001313.html http://www.zanshin.net/2007/08/30/
+   <?php echo sanitize_title("iPhone Giveaway"); ?>
+Redirect Permanent /blogs/001312.html http://www.zanshin.net/2007/08/27/
+   <?php echo sanitize_title("$500 Civics Lesson"); ?>
+Redirect Permanent /blogs/001311.html http://www.zanshin.net/2007/08/27/
+   <?php echo sanitize_title("48 Hours Equals Five Days"); ?>
+Redirect Permanent /blogs/001310.html http://www.zanshin.net/2007/08/22/
+   <?php echo sanitize_title("This Can't Be Good"); ?>
+Redirect Permanent /blogs/001309.html http://www.zanshin.net/2007/08/22/
+   <?php echo sanitize_title("A Layered Defense for Email"); ?>
+Redirect Permanent /blogs/001308.html http://www.zanshin.net/2007/08/22/
+   <?php echo sanitize_title("Feeling Like A Bully"); ?>
+Redirect Permanent /blogs/001307.html http://www.zanshin.net/2007/08/20/
+   <?php echo sanitize_title("Pantech Mobile Broadband Card on Mac OS X"); ?>
+Redirect Permanent /blogs/001306.html http://www.zanshin.net/2007/08/20/
+   <?php echo sanitize_title("New Commute, Same As The Old Commute"); ?>
+Redirect Permanent /blogs/001305.html http://www.zanshin.net/2007/08/19/
+   <?php echo sanitize_title("Fifty-Five"); ?>
+Redirect Permanent /blogs/001304.html http://www.zanshin.net/2007/08/18/
+   <?php echo sanitize_title("SSL To The Rescue"); ?>
+Redirect Permanent /blogs/001303.html http://www.zanshin.net/2007/08/14/
+   <?php echo sanitize_title("$1968"); ?>
+Redirect Permanent /blogs/001302.html http://www.zanshin.net/2007/08/14/
+   <?php echo sanitize_title("Born on Sunday, But Not Last Sunday"); ?>
+Redirect Permanent /blogs/001301.html http://www.zanshin.net/2007/08/12/
+   <?php echo sanitize_title("Real Friends Help You Move"); ?>
+Redirect Permanent /blogs/001300.html http://www.zanshin.net/2007/08/10/
+   <?php echo sanitize_title("In The Sock Drawer"); ?>
+Redirect Permanent /blogs/001298.html http://www.zanshin.net/2007/08/09/
+   <?php echo sanitize_title("The Neverending Move"); ?>
+Redirect Permanent /blogs/001297.html http://www.zanshin.net/2007/08/08/
+   <?php echo sanitize_title("Shedding  Weight"); ?>
+Redirect Permanent /blogs/001296.html http://www.zanshin.net/2007/08/07/
+   <?php echo sanitize_title("Yay"); ?>
+Redirect Permanent /blogs/001295.html http://www.zanshin.net/2007/08/06/
+   <?php echo sanitize_title("Under Development"); ?>
+Redirect Permanent /blogs/001294.html http://www.zanshin.net/2007/08/03/
+   <?php echo sanitize_title("Restructured"); ?>
+Redirect Permanent /blogs/001293.html http://www.zanshin.net/2007/08/02/
+   <?php echo sanitize_title("More Minor Site Maintenance"); ?>
+Redirect Permanent /blogs/001292.html http://www.zanshin.net/2007/08/02/
+   <?php echo sanitize_title("Wooden Floors"); ?>
+Redirect Permanent /blogs/001291.html http://www.zanshin.net/2007/08/01/
+   <?php echo sanitize_title("Off The Evolutionary Ladder"); ?>
+Redirect Permanent /blogs/001290.html http://www.zanshin.net/2007/07/30/
+   <?php echo sanitize_title("Minor Site Maintenance"); ?>
+Redirect Permanent /blogs/001289.html http://www.zanshin.net/2007/07/26/
+   <?php echo sanitize_title("Inside Iraq"); ?>
+Redirect Permanent /blogs/001288.html http://www.zanshin.net/2007/07/26/
+   <?php echo sanitize_title("My God! It's full of stars."); ?>
+Redirect Permanent /blogs/001287.html http://www.zanshin.net/2007/07/26/
+   <?php echo sanitize_title("This Changes Everything"); ?>
+Redirect Permanent /blogs/001286.html http://www.zanshin.net/2007/07/24/
+   <?php echo sanitize_title("A Likeness of Myself"); ?>
+Redirect Permanent /blogs/001285.html http://www.zanshin.net/2007/07/23/
+   <?php echo sanitize_title("Tossing in The Towel"); ?>
+Redirect Permanent /blogs/001284.html http://www.zanshin.net/2007/07/23/
+   <?php echo sanitize_title("Death of a Domain"); ?>
+Redirect Permanent /blogs/001283.html http://www.zanshin.net/2007/07/21/
+   <?php echo sanitize_title("Pinned"); ?>
+Redirect Permanent /blogs/001282.html http://www.zanshin.net/2007/07/20/
+   <?php echo sanitize_title("It Is Not A Contest"); ?>
+Redirect Permanent /blogs/001281.html http://www.zanshin.net/2007/07/19/
+   <?php echo sanitize_title("Door + Finger = @#!$*!"); ?>
+Redirect Permanent /blogs/001280.html http://www.zanshin.net/2007/07/18/
+   <?php echo sanitize_title("Random Is As Random Does"); ?>
+Redirect Permanent /blogs/001279.html http://www.zanshin.net/2007/07/18/
+   <?php echo sanitize_title("Allow Me To Introduce You"); ?>
+Redirect Permanent /blogs/001278.html http://www.zanshin.net/2007/07/17/
+   <?php echo sanitize_title("How to Disable System Tray Popups"); ?>
+Redirect Permanent /blogs/001277.html http://www.zanshin.net/2007/07/17/
+   <?php echo sanitize_title("Blinders"); ?>
+Redirect Permanent /blogs/001276.html http://www.zanshin.net/2007/07/16/
+   <?php echo sanitize_title("Treasure Hunt"); ?>
+Redirect Permanent /blogs/001275.html http://www.zanshin.net/2007/07/11/
+   <?php echo sanitize_title("It's Like Caramel"); ?>
+Redirect Permanent /blogs/001274.html http://www.zanshin.net/2007/07/11/
+   <?php echo sanitize_title("The Parking Lady"); ?>
+Redirect Permanent /blogs/001273.html http://www.zanshin.net/2007/07/10/
+   <?php echo sanitize_title("OK"); ?>
+Redirect Permanent /blogs/001272.html http://www.zanshin.net/2007/07/09/
+   <?php echo sanitize_title("Don't Drop The Wires"); ?>
+Redirect Permanent /blogs/001271.html http://www.zanshin.net/2007/07/06/
+   <?php echo sanitize_title("Culled"); ?>
+Redirect Permanent /blogs/001270.html http://www.zanshin.net/2007/07/05/
+   <?php echo sanitize_title("M&Ms and Orange Soda"); ?>
+Redirect Permanent /blogs/001269.html http://www.zanshin.net/2007/07/01/
+   <?php echo sanitize_title("Letting Go"); ?>
+Redirect Permanent /blogs/001268.html http://www.zanshin.net/2007/06/28/
+   <?php echo sanitize_title("Bathroom Etiquette"); ?>
+Redirect Permanent /blogs/001267.html http://www.zanshin.net/2007/06/22/
+   <?php echo sanitize_title("Free, But Not Without Cost"); ?>
+Redirect Permanent /blogs/001266.html http://www.zanshin.net/2007/06/21/
+   <?php echo sanitize_title("It Works!"); ?>
+Redirect Permanent /blogs/001265.html http://www.zanshin.net/2007/06/21/
+   <?php echo sanitize_title("Doesn't Play Well With Others"); ?>
+Redirect Permanent /blogs/001264.html http://www.zanshin.net/2007/06/19/
+   <?php echo sanitize_title("Regarding the Men's Room"); ?>
+Redirect Permanent /blogs/001263.html http://www.zanshin.net/2007/06/18/
+   <?php echo sanitize_title("Customer Service is Broken"); ?>
+Redirect Permanent /blogs/001262.html http://www.zanshin.net/2007/06/15/
+   <?php echo sanitize_title("w600i Speed Fix"); ?>
+Redirect Permanent /blogs/001261.html http://www.zanshin.net/2007/06/14/
+   <?php echo sanitize_title("A Weighty Matter"); ?>
+Redirect Permanent /blogs/001260.html http://www.zanshin.net/2007/06/13/
+   <?php echo sanitize_title("A Brand New Car. Sorta"); ?>
+Redirect Permanent /blogs/001259.html http://www.zanshin.net/2007/06/10/
+   <?php echo sanitize_title("Eleven People"); ?>
+Redirect Permanent /blogs/001258.html http://www.zanshin.net/2007/06/08/
+   <?php echo sanitize_title("72 Cubic MM"); ?>
+Redirect Permanent /blogs/001257.html http://www.zanshin.net/2007/06/06/
+   <?php echo sanitize_title("Tai Chi"); ?>
+Redirect Permanent /blogs/001256.html http://www.zanshin.net/2007/06/04/
+   <?php echo sanitize_title("Sixteen Exercises a Day "); ?>
+Redirect Permanent /blogs/001255.html http://www.zanshin.net/2007/05/29/
+   <?php echo sanitize_title("Furniture Shuffle"); ?>
+Redirect Permanent /blogs/001254.html http://www.zanshin.net/2007/05/28/
+   <?php echo sanitize_title("Living Among Cats"); ?>
+Redirect Permanent /blogs/001253.html http://www.zanshin.net/2007/05/26/
+   <?php echo sanitize_title("Thirteen Pounds or 154 Bucks"); ?>
+Redirect Permanent /blogs/001252.html http://www.zanshin.net/2007/05/24/
+   <?php echo sanitize_title("I Miss My Mom"); ?>
+Redirect Permanent /blogs/001251.html http://www.zanshin.net/2007/05/22/
+   <?php echo sanitize_title("Podcasts"); ?>
+Redirect Permanent /blogs/001250.html http://www.zanshin.net/2007/05/18/
+   <?php echo sanitize_title("AKA Arthritis "); ?>
+Redirect Permanent /blogs/001249.html http://www.zanshin.net/2007/05/15/
+   <?php echo sanitize_title("Tonight's Two Miler"); ?>
+Redirect Permanent /blogs/001248.html http://www.zanshin.net/2007/05/14/
+   <?php echo sanitize_title("Tonight's Walk"); ?>
+Redirect Permanent /blogs/001247.html http://www.zanshin.net/2007/05/14/
+   <?php echo sanitize_title("Words You Don't Want To Hear"); ?>
+Redirect Permanent /blogs/001246.html http://www.zanshin.net/2007/05/14/
+   <?php echo sanitize_title("Size 38"); ?>
+Redirect Permanent /blogs/001245.html http://www.zanshin.net/2007/05/10/
+   <?php echo sanitize_title("Turn Your Head and Cough"); ?>
+Redirect Permanent /blogs/001244.html http://www.zanshin.net/2007/05/08/
+   <?php echo sanitize_title("PlacesLivedException"); ?>
+Redirect Permanent /blogs/001243.html http://www.zanshin.net/2007/05/07/
+   <?php echo sanitize_title("46 Things About Me"); ?>
+Redirect Permanent /blogs/001242.html http://www.zanshin.net/2007/05/03/
+   <?php echo sanitize_title("Laser Eyes, One Year Later"); ?>
+Redirect Permanent /blogs/001241.html http://www.zanshin.net/2007/04/27/
+   <?php echo sanitize_title("What Not To Do"); ?>
+Redirect Permanent /blogs/001240.html http://www.zanshin.net/2007/04/26/
+   <?php echo sanitize_title("Sigularly Disappointing"); ?>
+Redirect Permanent /blogs/001239.html http://www.zanshin.net/2007/04/25/
+   <?php echo sanitize_title("Peanuts and Cracker Jacks"); ?>
+Redirect Permanent /blogs/001238.html http://www.zanshin.net/2007/04/24/
+   <?php echo sanitize_title("After the Move"); ?>
+Redirect Permanent /blogs/001237.html http://www.zanshin.net/2007/04/20/
+   <?php echo sanitize_title("Switching Buildings"); ?>
+Redirect Permanent /blogs/001236.html http://www.zanshin.net/2007/04/18/
+   <?php echo sanitize_title("The $50.34 Stamp"); ?>
+Redirect Permanent /blogs/001235.html http://www.zanshin.net/2007/04/17/
+   <?php echo sanitize_title("Tangential"); ?>
+Redirect Permanent /blogs/001234.html http://www.zanshin.net/2007/04/15/
+   <?php echo sanitize_title("Growing Garlic"); ?>
+Redirect Permanent /blogs/001233.html http://www.zanshin.net/2007/04/13/
+   <?php echo sanitize_title("Winning Streak"); ?>
+Redirect Permanent /blogs/001232.html http://www.zanshin.net/2007/04/11/
+   <?php echo sanitize_title("Over The Cubical Wall"); ?>
+Redirect Permanent /blogs/001231.html http://www.zanshin.net/2007/04/10/
+   <?php echo sanitize_title("Five Under Two Hundred"); ?>
+Redirect Permanent /blogs/001230.html http://www.zanshin.net/2007/04/09/
+   <?php echo sanitize_title("Yes I Am A Nerd"); ?>
+Redirect Permanent /blogs/001229.html http://www.zanshin.net/2007/04/09/
+   <?php echo sanitize_title("Typographic Spacing"); ?>
+Redirect Permanent /blogs/001228.html http://www.zanshin.net/2007/04/06/
+   <?php echo sanitize_title("Der Osterspaziergang"); ?>
+Redirect Permanent /blogs/001227.html http://www.zanshin.net/2007/04/06/
+   <?php echo sanitize_title("Copy All Subdirectory Contents to New Directory"); ?>
+Redirect Permanent /blogs/001226.html http://www.zanshin.net/2007/04/05/
+   <?php echo sanitize_title("Fear Based Living"); ?>
+Redirect Permanent /blogs/001225.html http://www.zanshin.net/2007/04/05/
+   <?php echo sanitize_title("Four is Better Than Two"); ?>
+Redirect Permanent /blogs/001224.html http://www.zanshin.net/2007/03/28/
+   <?php echo sanitize_title("What To Do"); ?>
+Redirect Permanent /blogs/001223.html http://www.zanshin.net/2007/03/23/
+   <?php echo sanitize_title("Holy Crap!"); ?>
+Redirect Permanent /blogs/001222.html http://www.zanshin.net/2007/03/23/
+   <?php echo sanitize_title("Sigh..."); ?>
+Redirect Permanent /blogs/001221.html http://www.zanshin.net/2007/03/23/
+   <?php echo sanitize_title("Neighborhood Walk"); ?>
+Redirect Permanent /blogs/001220.html http://www.zanshin.net/2007/03/22/
+   <?php echo sanitize_title("The Classics"); ?>
+Redirect Permanent /blogs/001219.html http://www.zanshin.net/2007/03/20/
+   <?php echo sanitize_title("Spray Paint"); ?>
+Redirect Permanent /blogs/001218.html http://www.zanshin.net/2007/03/19/
+   <?php echo sanitize_title("COBOL"); ?>
+Redirect Permanent /blogs/001217.html http://www.zanshin.net/2007/03/17/
+   <?php echo sanitize_title("No Nukes"); ?>
+Redirect Permanent /blogs/001216.html http://www.zanshin.net/2007/03/15/
+   <?php echo sanitize_title("Konza Prairie"); ?>
+Redirect Permanent /blogs/001215.html http://www.zanshin.net/2007/03/14/
+   <?php echo sanitize_title("Acronym vs. Initialization"); ?>
+Redirect Permanent /blogs/001214.html http://www.zanshin.net/2007/03/14/
+   <?php echo sanitize_title("Eleven Years Old"); ?>
+Redirect Permanent /blogs/001213.html http://www.zanshin.net/2007/03/14/
+   <?php echo sanitize_title("Pi Day"); ?>
+Redirect Permanent /blogs/001212.html http://www.zanshin.net/2007/03/13/
+   <?php echo sanitize_title("Time Warp"); ?>
+Redirect Permanent /blogs/001211.html http://www.zanshin.net/2007/03/09/
+   <?php echo sanitize_title("Rank"); ?>
+Redirect Permanent /blogs/001210.html http://www.zanshin.net/2007/03/08/
+   <?php echo sanitize_title("Once More Time"); ?>
+Redirect Permanent /blogs/001209.html http://www.zanshin.net/2007/03/05/
+   <?php echo sanitize_title("Firefox Inline Autocomplete"); ?>
+Redirect Permanent /blogs/001208.html http://www.zanshin.net/2007/03/03/
+   <?php echo sanitize_title("Beginning at the End"); ?>
+Redirect Permanent /blogs/001207.html http://www.zanshin.net/2007/03/02/
+   <?php echo sanitize_title("Things They Don't Tell You"); ?>
+Redirect Permanent /blogs/001206.html http://www.zanshin.net/2007/02/28/
+   <?php echo sanitize_title("Refactoring"); ?>
+Redirect Permanent /blogs/001205.html http://www.zanshin.net/2007/02/27/
+   <?php echo sanitize_title("iMovie Wow"); ?>
+Redirect Permanent /blogs/001204.html http://www.zanshin.net/2007/02/26/
+   <?php echo sanitize_title("Hello"); ?>
+Redirect Permanent /blogs/001203.html http://www.zanshin.net/2007/02/25/
+   <?php echo sanitize_title("Receptions and Recitals "); ?>
+Redirect Permanent /blogs/001202.html http://www.zanshin.net/2007/02/22/
+   <?php echo sanitize_title("Software I Didn't Know I Had"); ?>
+Redirect Permanent /blogs/001201.html http://www.zanshin.net/2007/02/20/
+   <?php echo sanitize_title("Conditioned"); ?>
+Redirect Permanent /blogs/001200.html http://www.zanshin.net/2007/02/19/
+   <?php echo sanitize_title("Sunday Walk"); ?>
+Redirect Permanent /blogs/001199.html http://www.zanshin.net/2007/02/14/
+   <?php echo sanitize_title("Wow"); ?>
+Redirect Permanent /blogs/001198.html http://www.zanshin.net/2007/02/14/
+   <?php echo sanitize_title("EV-DO Rocks"); ?>
+Redirect Permanent /blogs/001197.html http://www.zanshin.net/2007/02/13/
+   <?php echo sanitize_title("A Tale of Two Cards"); ?>
+Redirect Permanent /blogs/001196.html http://www.zanshin.net/2007/02/08/
+   <?php echo sanitize_title("611"); ?>
+Redirect Permanent /blogs/001195.html http://www.zanshin.net/2007/02/04/
+   <?php echo sanitize_title("One Ninety Nine"); ?>
+Redirect Permanent /blogs/001194.html http://www.zanshin.net/2007/02/01/
+   <?php echo sanitize_title("Spam Dunk"); ?>
+Redirect Permanent /blogs/001193.html http://www.zanshin.net/2007/01/31/
+   <?php echo sanitize_title("Molly Ivins, Dies at 62"); ?>
+Redirect Permanent /blogs/001192.html http://www.zanshin.net/2007/01/31/
+   <?php echo sanitize_title("Father Knows Best"); ?>
+Redirect Permanent /blogs/001191.html http://www.zanshin.net/2007/01/29/
+   <?php echo sanitize_title("Skip The Bank"); ?>
+Redirect Permanent /blogs/001190.html http://www.zanshin.net/2007/01/25/
+   <?php echo sanitize_title("Last Day"); ?>
+Redirect Permanent /blogs/001189.html http://www.zanshin.net/2007/01/23/
+   <?php echo sanitize_title("Omen"); ?>
+Redirect Permanent /blogs/001188.html http://www.zanshin.net/2007/01/22/
+   <?php echo sanitize_title("Your Papers Please"); ?>
+Redirect Permanent /blogs/001187.html http://www.zanshin.net/2007/01/21/
+   <?php echo sanitize_title("The Joy of Software"); ?>
+Redirect Permanent /blogs/001186.html http://www.zanshin.net/2007/01/20/
+   <?php echo sanitize_title("Moving Forward"); ?>
+Redirect Permanent /blogs/001185.html http://www.zanshin.net/2007/01/11/
+   <?php echo sanitize_title("Ten Years Later"); ?>
+Redirect Permanent /blogs/001184.html http://www.zanshin.net/2007/01/09/
+   <?php echo sanitize_title("Ergonomics"); ?>
+Redirect Permanent /blogs/001183.html http://www.zanshin.net/2007/01/05/
+   <?php echo sanitize_title("Refold Undies"); ?>
+Redirect Permanent /blogs/001182.html http://www.zanshin.net/2007/01/01/
+   <?php echo sanitize_title("First Walk of 2007"); ?>
+Redirect Permanent /blogs/001181.html http://www.zanshin.net/2006/12/31/
+   <?php echo sanitize_title("Lower Back Pain Relieved "); ?>
+Redirect Permanent /blogs/001180.html http://www.zanshin.net/2006/12/27/
+   <?php echo sanitize_title("New Digs"); ?>
+Redirect Permanent /blogs/001179.html http://www.zanshin.net/2006/12/26/
+   <?php echo sanitize_title("111111"); ?>
+Redirect Permanent /blogs/001178.html http://www.zanshin.net/2006/12/24/
+   <?php echo sanitize_title("My Year In Cities, 2006 Edition"); ?>
+Redirect Permanent /blogs/001177.html http://www.zanshin.net/2006/12/24/
+   <?php echo sanitize_title("Heiligabend Menü"); ?>
+Redirect Permanent /blogs/001175.html http://www.zanshin.net/2006/12/21/
+   <?php echo sanitize_title("Seasons Greetings!"); ?>
+Redirect Permanent /blogs/001174.html http://www.zanshin.net/2006/12/21/
+   <?php echo sanitize_title("Attention to Detail"); ?>
+Redirect Permanent /blogs/001173.html http://www.zanshin.net/2006/12/19/
+   <?php echo sanitize_title("Book: <i>The White Lioness</i>"); ?>
+Redirect Permanent /blogs/001172.html http://www.zanshin.net/2006/12/19/
+   <?php echo sanitize_title("Customer Service"); ?>
+Redirect Permanent /blogs/001171.html http://www.zanshin.net/2006/12/18/
+   <?php echo sanitize_title("Pre-Tipping"); ?>
+Redirect Permanent /blogs/001170.html http://www.zanshin.net/2006/12/14/
+   <?php echo sanitize_title("Book: <i>Hannibal Rising</i>"); ?>
+Redirect Permanent /blogs/001169.html http://www.zanshin.net/2006/12/12/
+   <?php echo sanitize_title("The Flattening Curve"); ?>
+Redirect Permanent /blogs/001168.html http://www.zanshin.net/2006/12/11/
+   <?php echo sanitize_title("Tissue Issue"); ?>
+Redirect Permanent /blogs/001167.html http://www.zanshin.net/2006/12/11/
+   <?php echo sanitize_title("Forward, Not Reply"); ?>
+Redirect Permanent /blogs/001166.html http://www.zanshin.net/2006/12/10/
+   <?php echo sanitize_title("Locker Excavation"); ?>
+Redirect Permanent /blogs/001165.html http://www.zanshin.net/2006/12/07/
+   <?php echo sanitize_title("Infamy"); ?>
+Redirect Permanent /blogs/001164.html http://www.zanshin.net/2006/12/06/
+   <?php echo sanitize_title("Word Nerd"); ?>
+Redirect Permanent /blogs/001163.html http://www.zanshin.net/2006/12/05/
+   <?php echo sanitize_title("Music: <i>Ovo</i>"); ?>
+Redirect Permanent /blogs/001162.html http://www.zanshin.net/2006/12/05/
+   <?php echo sanitize_title("I Dunno Mon, I Jus' Make De Coleslaw"); ?>
+Redirect Permanent /blogs/001161.html http://www.zanshin.net/2006/12/04/
+   <?php echo sanitize_title("Love Is All You Need"); ?>
+Redirect Permanent /blogs/001160.html http://www.zanshin.net/2006/12/04/
+   <?php echo sanitize_title("An Absence of Pain"); ?>
+Redirect Permanent /blogs/001159.html http://www.zanshin.net/2006/12/02/
+   <?php echo sanitize_title("Let It Snow"); ?>
+Redirect Permanent /blogs/001155.html http://www.zanshin.net/2006/11/30/
+   <?php echo sanitize_title("Mr. Architect, Build Me A House"); ?>
+Redirect Permanent /blogs/001154.html http://www.zanshin.net/2006/11/30/
+   <?php echo sanitize_title("Eleven Hundred"); ?>
+Redirect Permanent /blogs/001153.html http://www.zanshin.net/2006/11/29/
+   <?php echo sanitize_title("Car Hockey"); ?>
+Redirect Permanent /blogs/001152.html http://www.zanshin.net/2006/11/29/
+   <?php echo sanitize_title("<i>Hurt</i> "); ?>
+Redirect Permanent /blogs/001151.html http://www.zanshin.net/2006/11/28/
+   <?php echo sanitize_title("Book: <i> Cathedral </i>"); ?>
+Redirect Permanent /blogs/001150.html http://www.zanshin.net/2006/11/27/
+   <?php echo sanitize_title("Book: <i>The Ghost Map</i>"); ?>
+Redirect Permanent /blogs/001149.html http://www.zanshin.net/2006/11/26/
+   <?php echo sanitize_title("Responsibility"); ?>
+Redirect Permanent /blogs/001148.html http://www.zanshin.net/2006/11/25/
+   <?php echo sanitize_title("Categories Formatted "); ?>
+Redirect Permanent /blogs/001147.html http://www.zanshin.net/2006/11/24/
+   <?php echo sanitize_title("Four and Eight"); ?>
+Redirect Permanent /blogs/001146.html http://www.zanshin.net/2006/11/23/
+   <?php echo sanitize_title("Thankful"); ?>
+Redirect Permanent /blogs/001145.html http://www.zanshin.net/2006/11/22/
+   <?php echo sanitize_title("Traveling to Illinois"); ?>
+Redirect Permanent /blogs/001144.html http://www.zanshin.net/2006/11/21/
+   <?php echo sanitize_title("Fifteen Dollars"); ?>
+Redirect Permanent /blogs/001143.html http://www.zanshin.net/2006/11/20/
+   <?php echo sanitize_title("Montag Abend"); ?>
+Redirect Permanent /blogs/001142.html http://www.zanshin.net/2006/11/19/
+   <?php echo sanitize_title("Third Tire is a Charm"); ?>
+Redirect Permanent /blogs/001141.html http://www.zanshin.net/2006/11/18/
+   <?php echo sanitize_title("McSearchlight"); ?>
+Redirect Permanent /blogs/001140.html http://www.zanshin.net/2006/11/17/
+   <?php echo sanitize_title("Resume Update and Trackback Spam"); ?>
+Redirect Permanent /blogs/001139.html http://www.zanshin.net/2006/11/17/
+   <?php echo sanitize_title("Tired"); ?>
+Redirect Permanent /blogs/001138.html http://www.zanshin.net/2006/11/16/
+   <?php echo sanitize_title("Book: <i>The Hunt For Red October</i>"); ?>
+Redirect Permanent /blogs/001137.html http://www.zanshin.net/2006/11/15/
+   <?php echo sanitize_title("Camping Out For Wii"); ?>
+Redirect Permanent /blogs/001136.html http://www.zanshin.net/2006/11/14/
+   <?php echo sanitize_title("Personal Property Worksheet"); ?>
+Redirect Permanent /blogs/001135.html http://www.zanshin.net/2006/11/13/
+   <?php echo sanitize_title("Once A Day"); ?>
+Redirect Permanent /blogs/001134.html http://www.zanshin.net/2006/11/12/
+   <?php echo sanitize_title("Twice A Day"); ?>
+Redirect Permanent /blogs/001133.html http://www.zanshin.net/2006/11/11/
+   <?php echo sanitize_title("Movie <i>Ocean's Eleven</i>"); ?>
+Redirect Permanent /blogs/001132.html http://www.zanshin.net/2006/11/10/
+   <?php echo sanitize_title("Replacement Value"); ?>
+Redirect Permanent /blogs/001131.html http://www.zanshin.net/2006/11/09/
+   <?php echo sanitize_title("Movie: <i>Bicentennial Man</i>"); ?>
+Redirect Permanent /blogs/001130.html http://www.zanshin.net/2006/11/08/
+   <?php echo sanitize_title("Reindeer Games"); ?>
+Redirect Permanent /blogs/001129.html http://www.zanshin.net/2006/11/07/
+   <?php echo sanitize_title("Shake Your Booty"); ?>
+Redirect Permanent /blogs/001128.html http://www.zanshin.net/2006/11/06/
+   <?php echo sanitize_title("Meebo"); ?>
+Redirect Permanent /blogs/001127.html http://www.zanshin.net/2006/11/05/
+   <?php echo sanitize_title("Movie: <i>Mr. Blandings Builds His Dream House</i>"); ?>
+Redirect Permanent /blogs/001126.html http://www.zanshin.net/2006/11/04/
+   <?php echo sanitize_title("Vehicle Fire, Expect Delays"); ?>
+Redirect Permanent /blogs/001125.html http://www.zanshin.net/2006/11/03/
+   <?php echo sanitize_title("Ambush Love"); ?>
+Redirect Permanent /blogs/001124.html http://www.zanshin.net/2006/11/02/
+   <?php echo sanitize_title("Living Upstairs Would Make Robbery Harder, Right?"); ?>
+Redirect Permanent /blogs/001123.html http://www.zanshin.net/2006/11/01/
+   <?php echo sanitize_title("Robbed"); ?>
+Redirect Permanent /blogs/001122.html http://www.zanshin.net/2006/11/01/
+   <?php echo sanitize_title("NaBloPoMo"); ?>
+Redirect Permanent /blogs/001121.html http://www.zanshin.net/2006/10/30/
+   <?php echo sanitize_title("Movie: <i>When A Man Loves A Woman</i>"); ?>
+Redirect Permanent /blogs/001120.html http://www.zanshin.net/2006/10/30/
+   <?php echo sanitize_title("Wobble"); ?>
+Redirect Permanent /blogs/001119.html http://www.zanshin.net/2006/10/28/
+   <?php echo sanitize_title("Book: <i>Echo Park</i>"); ?>
+Redirect Permanent /blogs/001118.html http://www.zanshin.net/2006/10/26/
+   <?php echo sanitize_title("Music: <i>Rodrigo y Gabriela</i>"); ?>
+Redirect Permanent /blogs/001117.html http://www.zanshin.net/2006/10/24/
+   <?php echo sanitize_title("The Eyes of Mark"); ?>
+Redirect Permanent /blogs/001116.html http://www.zanshin.net/2006/10/23/
+   <?php echo sanitize_title("Two-oh-eight"); ?>
+Redirect Permanent /blogs/001115.html http://www.zanshin.net/2006/10/18/
+   <?php echo sanitize_title("Twenty-Three"); ?>
+Redirect Permanent /blogs/001114.html http://www.zanshin.net/2006/10/18/
+   <?php echo sanitize_title("Movie: <i>Bridget Jone's Diary</i>"); ?>
+Redirect Permanent /blogs/001113.html http://www.zanshin.net/2006/10/13/
+   <?php echo sanitize_title("A Free Tire"); ?>
+Redirect Permanent /blogs/001112.html http://www.zanshin.net/2006/10/12/
+   <?php echo sanitize_title("Solving the Korean Stalemate"); ?>
+Redirect Permanent /blogs/001111.html http://www.zanshin.net/2006/10/10/
+   <?php echo sanitize_title("In The Last Year"); ?>
+Redirect Permanent /blogs/001110.html http://www.zanshin.net/2006/10/06/
+   <?php echo sanitize_title("The Cable Guy, Part II"); ?>
+Redirect Permanent /blogs/001109.html http://www.zanshin.net/2006/10/05/
+   <?php echo sanitize_title("The Cable Guy"); ?>
+Redirect Permanent /blogs/001108.html http://www.zanshin.net/2006/10/03/
+   <?php echo sanitize_title("Insulin Yes, Pills Not So Much"); ?>
+Redirect Permanent /blogs/001107.html http://www.zanshin.net/2006/10/01/
+   <?php echo sanitize_title("Seven Bags Full"); ?>
+Redirect Permanent /blogs/001106.html http://www.zanshin.net/2006/09/29/
+   <?php echo sanitize_title("Book: <i>Tyrannosaur Canyon</i>"); ?>
+Redirect Permanent /blogs/001105.html http://www.zanshin.net/2006/09/29/
+   <?php echo sanitize_title("Eighteen hundred and eighty"); ?>
+Redirect Permanent /blogs/001104.html http://www.zanshin.net/2006/09/28/
+   <?php echo sanitize_title("Coming Home"); ?>
+Redirect Permanent /blogs/001103.html http://www.zanshin.net/2006/09/27/
+   <?php echo sanitize_title("Control-Z"); ?>
+Redirect Permanent /blogs/001102.html http://www.zanshin.net/2006/09/27/
+   <?php echo sanitize_title("What To Do"); ?>
+Redirect Permanent /blogs/001101.html http://www.zanshin.net/2006/09/26/
+   <?php echo sanitize_title("My Week Thus Far"); ?>
+Redirect Permanent /blogs/001100.html http://www.zanshin.net/2006/09/26/
+   <?php echo sanitize_title("Just Call Me Job"); ?>
+Redirect Permanent /blogs/001099.html http://www.zanshin.net/2006/09/25/
+   <?php echo sanitize_title("Long Night"); ?>
+Redirect Permanent /blogs/001098.html http://www.zanshin.net/2006/09/23/
+   <?php echo sanitize_title("Flickr Mania"); ?>
+Redirect Permanent /blogs/001097.html http://www.zanshin.net/2006/09/23/
+   <?php echo sanitize_title("Eight Days Away"); ?>
+Redirect Permanent /blogs/001096.html http://www.zanshin.net/2006/09/21/
+   <?php echo sanitize_title("WiFi Wilderness"); ?>
+Redirect Permanent /blogs/001095.html http://www.zanshin.net/2006/09/20/
+   <?php echo sanitize_title("Oregon"); ?>
+Redirect Permanent /blogs/001094.html http://www.zanshin.net/2006/09/14/
+   <?php echo sanitize_title("Airport WiFi"); ?>
+Redirect Permanent /blogs/001093.html http://www.zanshin.net/2006/09/14/
+   <?php echo sanitize_title("Book: <i>Those Who Hunt The Night</i>"); ?>
+Redirect Permanent /blogs/001092.html http://www.zanshin.net/2006/09/12/
+   <?php echo sanitize_title("Vacation Malaise"); ?>
+Redirect Permanent /blogs/001091.html http://www.zanshin.net/2006/09/11/
+   <?php echo sanitize_title("One Hundred Thousand"); ?>
+Redirect Permanent /blogs/001090.html http://www.zanshin.net/2006/09/11/
+   <?php echo sanitize_title("Lifting Again"); ?>
+Redirect Permanent /blogs/001089.html http://www.zanshin.net/2006/09/11/
+   <?php echo sanitize_title("Movie: <i>Last of the Dogmen</i>"); ?>
+Redirect Permanent /blogs/001088.html http://www.zanshin.net/2006/09/10/
+   <?php echo sanitize_title("Book: <i>Eldest</i>"); ?>
+Redirect Permanent /blogs/001087.html http://www.zanshin.net/2006/09/07/
+   <?php echo sanitize_title("Thirty Pounds"); ?>
+Redirect Permanent /blogs/001086.html http://www.zanshin.net/2006/09/06/
+   <?php echo sanitize_title("Sticker-ed"); ?>
+Redirect Permanent /blogs/001085.html http://www.zanshin.net/2006/09/04/
+   <?php echo sanitize_title("Bureaucratic Two-Step"); ?>
+Redirect Permanent /blogs/001084.html http://www.zanshin.net/2006/08/29/
+   <?php echo sanitize_title("Father Son"); ?>
+Redirect Permanent /blogs/001083.html http://www.zanshin.net/2006/08/28/
+   <?php echo sanitize_title("Book: <i>Snow Blind</i>"); ?>
+Redirect Permanent /blogs/001082.html http://www.zanshin.net/2006/08/24/
+   <?php echo sanitize_title("Satisfying Sounds"); ?>
+Redirect Permanent /blogs/001081.html http://www.zanshin.net/2006/08/22/
+   <?php echo sanitize_title("The Dash"); ?>
+Redirect Permanent /blogs/001080.html http://www.zanshin.net/2006/08/22/
+   <?php echo sanitize_title("Inching Along"); ?>
+Redirect Permanent /blogs/001079.html http://www.zanshin.net/2006/08/22/
+   <?php echo sanitize_title("Fears"); ?>
+Redirect Permanent /blogs/001078.html http://www.zanshin.net/2006/08/21/
+   <?php echo sanitize_title("Groin Pull"); ?>
+Redirect Permanent /blogs/001077.html http://www.zanshin.net/2006/08/19/
+   <?php echo sanitize_title("Humans Banned on Flights"); ?>
+Redirect Permanent /blogs/001076.html http://www.zanshin.net/2006/08/19/
+   <?php echo sanitize_title("Weekend in Illinois"); ?>
+Redirect Permanent /blogs/001075.html http://www.zanshin.net/2006/08/15/
+   <?php echo sanitize_title("Twenty-Twenty"); ?>
+Redirect Permanent /blogs/001074.html http://www.zanshin.net/2006/08/15/
+   <?php echo sanitize_title("A Weighty Oops"); ?>
+Redirect Permanent /blogs/001073.html http://www.zanshin.net/2006/08/14/
+   <?php echo sanitize_title("Rumble Strips"); ?>
+Redirect Permanent /blogs/001072.html http://www.zanshin.net/2006/08/10/
+   <?php echo sanitize_title("Place of Recognition"); ?>
+Redirect Permanent /blogs/001071.html http://www.zanshin.net/2006/08/10/
+   <?php echo sanitize_title("Movie: <i>Pirates of the Caribbean</i>"); ?>
+Redirect Permanent /blogs/001070.html http://www.zanshin.net/2006/08/10/
+   <?php echo sanitize_title("Movie: <i>Black Rain</i>"); ?>
+Redirect Permanent /blogs/001069.html http://www.zanshin.net/2006/08/09/
+   <?php echo sanitize_title("Sparring with a Stick"); ?>
+Redirect Permanent /blogs/001068.html http://www.zanshin.net/2006/08/09/
+   <?php echo sanitize_title("Left Leaning"); ?>
+Redirect Permanent /blogs/001066.html http://www.zanshin.net/2006/08/07/
+   <?php echo sanitize_title("Take a Pill"); ?>
+Redirect Permanent /blogs/001065.html http://www.zanshin.net/2006/08/06/
+   <?php echo sanitize_title("Two Thirty And Counting"); ?>
+Redirect Permanent /blogs/001064.html http://www.zanshin.net/2006/08/05/
+   <?php echo sanitize_title("Flaky Mac Repaired"); ?>
+Redirect Permanent /blogs/001063.html http://www.zanshin.net/2006/08/03/
+   <?php echo sanitize_title("Internet Scourge"); ?>
+Redirect Permanent /blogs/001062.html http://www.zanshin.net/2006/08/03/
+   <?php echo sanitize_title("Flaky Mac"); ?>
+Redirect Permanent /blogs/001061.html http://www.zanshin.net/2006/08/02/
+   <?php echo sanitize_title("Kendo in the Park"); ?>
+Redirect Permanent /blogs/001060.html http://www.zanshin.net/2006/08/02/
+   <?php echo sanitize_title("Three Hundred Thousand"); ?>
+Redirect Permanent /blogs/001059.html http://www.zanshin.net/2006/08/02/
+   <?php echo sanitize_title("Be Careful What You Wish For"); ?>
+Redirect Permanent /blogs/001058.html http://www.zanshin.net/2006/07/31/
+   <?php echo sanitize_title("LIVE<b>STRONG</b>"); ?>
+Redirect Permanent /blogs/001057.html http://www.zanshin.net/2006/07/31/
+   <?php echo sanitize_title("Seventeen"); ?>
+Redirect Permanent /blogs/001056.html http://www.zanshin.net/2006/07/30/
+   <?php echo sanitize_title("The Long And Winding Road"); ?>
+Redirect Permanent /blogs/001055.html http://www.zanshin.net/2006/07/30/
+   <?php echo sanitize_title("Full Disclosure"); ?>
+Redirect Permanent /blogs/001053.html http://www.zanshin.net/2006/07/27/
+   <?php echo sanitize_title("One Thousand"); ?>
+Redirect Permanent /blogs/001052.html http://www.zanshin.net/2006/07/27/
+   <?php echo sanitize_title("Best. Television. Ever."); ?>
+Redirect Permanent /blogs/001051.html http://www.zanshin.net/2006/07/26/
+   <?php echo sanitize_title("Beware the Undertoad"); ?>
+Redirect Permanent /blogs/001050.html http://www.zanshin.net/2006/07/25/
+   <?php echo sanitize_title("On This Day In History"); ?>
+Redirect Permanent /blogs/001049.html http://www.zanshin.net/2006/07/25/
+   <?php echo sanitize_title("Tattoo"); ?>
+Redirect Permanent /blogs/001048.html http://www.zanshin.net/2006/07/24/
+   <?php echo sanitize_title("Software Process"); ?>
+Redirect Permanent /blogs/001047.html http://www.zanshin.net/2006/07/24/
+   <?php echo sanitize_title("Book: <i>Eragon</i>"); ?>
+Redirect Permanent /blogs/001046.html http://www.zanshin.net/2006/07/24/
+   <?php echo sanitize_title("Love That Paper Tape"); ?>
+Redirect Permanent /blogs/001045.html http://www.zanshin.net/2006/07/20/
+   <?php echo sanitize_title("Facing Down Uncertainty"); ?>
+Redirect Permanent /blogs/001044.html http://www.zanshin.net/2006/07/20/
+   <?php echo sanitize_title("Self Segmentation"); ?>
+Redirect Permanent /blogs/001043.html http://www.zanshin.net/2006/07/19/
+   <?php echo sanitize_title("Weight Hogs"); ?>
+Redirect Permanent /blogs/001042.html http://www.zanshin.net/2006/07/18/
+   <?php echo sanitize_title("The Lexus Link System Is ... Gone"); ?>
+Redirect Permanent /blogs/001041.html http://www.zanshin.net/2006/07/17/
+   <?php echo sanitize_title("Twenty Minutes"); ?>
+Redirect Permanent /blogs/001040.html http://www.zanshin.net/2006/07/16/
+   <?php echo sanitize_title("Practice, Practice, Practice"); ?>
+Redirect Permanent /blogs/001039.html http://www.zanshin.net/2006/07/16/
+   <?php echo sanitize_title("Movie: <i>Casablanca</i>"); ?>
+Redirect Permanent /blogs/001038.html http://www.zanshin.net/2006/07/16/
+   <?php echo sanitize_title("eHarmony"); ?>
+Redirect Permanent /blogs/001037.html http://www.zanshin.net/2006/07/15/
+   <?php echo sanitize_title("Four Tons"); ?>
+Redirect Permanent /blogs/001036.html http://www.zanshin.net/2006/07/14/
+   <?php echo sanitize_title("Relief Gravitas"); ?>
+Redirect Permanent /blogs/001035.html http://www.zanshin.net/2006/07/14/
+   <?php echo sanitize_title("Ten Things I Learned This Week"); ?>
+Redirect Permanent /blogs/001034.html http://www.zanshin.net/2006/07/14/
+   <?php echo sanitize_title("Book: <i>Uncommon Carriers</i> by John McPhee"); ?>
+Redirect Permanent /blogs/001033.html http://www.zanshin.net/2006/07/13/
+   <?php echo sanitize_title("Weighing In"); ?>
+Redirect Permanent /blogs/001032.html http://www.zanshin.net/2006/07/12/
+   <?php echo sanitize_title("Jonesing Explained"); ?>
+Redirect Permanent /blogs/001031.html http://www.zanshin.net/2006/07/12/
+   <?php echo sanitize_title("Information Hiding"); ?>
+Redirect Permanent /blogs/001030.html http://www.zanshin.net/2006/07/12/
+   <?php echo sanitize_title("planet Fitness"); ?>
+Redirect Permanent /blogs/001029.html http://www.zanshin.net/2006/07/10/
+   <?php echo sanitize_title("Labeling Me"); ?>
+Redirect Permanent /blogs/001028.html http://www.zanshin.net/2006/07/10/
+   <?php echo sanitize_title("Five Times Is A Charm"); ?>
+Redirect Permanent /blogs/001027.html http://www.zanshin.net/2006/07/10/
+   <?php echo sanitize_title("Velcro at 94X Magnification"); ?>
+Redirect Permanent /blogs/001026.html http://www.zanshin.net/2006/07/09/
+   <?php echo sanitize_title("Next Steps"); ?>
+Redirect Permanent /blogs/001025.html http://www.zanshin.net/2006/07/08/
+   <?php echo sanitize_title("Ten"); ?>
+Redirect Permanent /blogs/001024.html http://www.zanshin.net/2006/07/07/
+   <?php echo sanitize_title("Okay, Now I'm Thirsty"); ?>
+Redirect Permanent /blogs/001023.html http://www.zanshin.net/2006/07/07/
+   <?php echo sanitize_title("Among The English"); ?>
+Redirect Permanent /blogs/001022.html http://www.zanshin.net/2006/07/07/
+   <?php echo sanitize_title("Windshield Woes"); ?>
+Redirect Permanent /blogs/001021.html http://www.zanshin.net/2006/07/06/
+   <?php echo sanitize_title("Contextual Breakdown"); ?>
+Redirect Permanent /blogs/001020.html http://www.zanshin.net/2006/07/06/
+   <?php echo sanitize_title("Movie: <i>A History of Violence</i>"); ?>
+Redirect Permanent /blogs/001019.html http://www.zanshin.net/2006/07/06/
+   <?php echo sanitize_title("Music Video: Evanescence <i>Anywhere But Home</i>"); ?>
+Redirect Permanent /blogs/001018.html http://www.zanshin.net/2006/07/05/
+   <?php echo sanitize_title("Windshield From Hell"); ?>
+Redirect Permanent /blogs/001017.html http://www.zanshin.net/2006/07/05/
+   <?php echo sanitize_title("Fireworks"); ?>
+Redirect Permanent /blogs/001016.html http://www.zanshin.net/2006/07/04/
+   <?php echo sanitize_title("Fat"); ?>
+Redirect Permanent /blogs/001015.html http://www.zanshin.net/2006/07/04/
+   <?php echo sanitize_title("Let Them Eat Cake"); ?>
+Redirect Permanent /blogs/001014.html http://www.zanshin.net/2006/07/03/
+   <?php echo sanitize_title("WTF"); ?>
+Redirect Permanent /blogs/001013.html http://www.zanshin.net/2006/07/03/
+   <?php echo sanitize_title("Party Down"); ?>
+Redirect Permanent /blogs/001012.html http://www.zanshin.net/2006/07/02/
+   <?php echo sanitize_title("Movie: <i>Syriana</i>"); ?>
+Redirect Permanent /blogs/001011.html http://www.zanshin.net/2006/07/02/
+   <?php echo sanitize_title("Mono Vision"); ?>
+Redirect Permanent /blogs/001010.html http://www.zanshin.net/2006/07/01/
+   <?php echo sanitize_title("Patience Rewarded"); ?>
+Redirect Permanent /blogs/001009.html http://www.zanshin.net/2006/07/01/
+   <?php echo sanitize_title("Windshield, Part Whatever"); ?>
+Redirect Permanent /blogs/001008.html http://www.zanshin.net/2006/07/01/
+   <?php echo sanitize_title("I Can See"); ?>
+Redirect Permanent /blogs/001007.html http://www.zanshin.net/2006/06/30/
+   <?php echo sanitize_title("Every Day Is Special"); ?>
+Redirect Permanent /blogs/001006.html http://www.zanshin.net/2006/06/30/
+   <?php echo sanitize_title("Disturbed"); ?>
+Redirect Permanent /blogs/001005.html http://www.zanshin.net/2006/06/29/
+   <?php echo sanitize_title("Windshield, Take Three"); ?>
+Redirect Permanent /blogs/001004.html http://www.zanshin.net/2006/06/29/
+   <?php echo sanitize_title("No, Kittens ARE Not Covered In The Warranty"); ?>
+Redirect Permanent /blogs/001003.html http://www.zanshin.net/2006/06/29/
+   <?php echo sanitize_title("Windshield, Round Two"); ?>
+Redirect Permanent /blogs/001002.html http://www.zanshin.net/2006/06/29/
+   <?php echo sanitize_title("Why You Shouldn't Call Guys Named "Buzz" A Liar"); ?>
+Redirect Permanent /blogs/001001.html http://www.zanshin.net/2006/06/29/
+   <?php echo sanitize_title("Book: <i>Hard Rain</i>"); ?>
+Redirect Permanent /blogs/001000.html http://www.zanshin.net/2006/06/28/
+   <?php echo sanitize_title("Son of Blister"); ?>
+Redirect Permanent /blogs/000999.html http://www.zanshin.net/2006/06/28/
+   <?php echo sanitize_title("Two Years"); ?>
+Redirect Permanent /blogs/000998.html http://www.zanshin.net/2006/06/28/
+   <?php echo sanitize_title("Life Outside The Cave"); ?>
+Redirect Permanent /blogs/000997.html http://www.zanshin.net/2006/06/27/
+   <?php echo sanitize_title("Backing Home"); ?>
+Redirect Permanent /blogs/000996.html http://www.zanshin.net/2006/06/26/
+   <?php echo sanitize_title("This Ain't Your Father's Buick"); ?>
+Redirect Permanent /blogs/000995.html http://www.zanshin.net/2006/06/26/
+   <?php echo sanitize_title("Enhancement"); ?>
+Redirect Permanent /blogs/000994.html http://www.zanshin.net/2006/06/26/
+   <?php echo sanitize_title("Where Do I Go From Here?"); ?>
+Redirect Permanent /blogs/000993.html http://www.zanshin.net/2006/06/25/
+   <?php echo sanitize_title("Feeling Better"); ?>
+Redirect Permanent /blogs/000992.html http://www.zanshin.net/2006/06/22/
+   <?php echo sanitize_title("Ups and Downs"); ?>
+Redirect Permanent /blogs/000991.html http://www.zanshin.net/2006/06/22/
+   <?php echo sanitize_title("Book: <i>City of Bones</i>"); ?>
+Redirect Permanent /blogs/000990.html http://www.zanshin.net/2006/06/22/
+   <?php echo sanitize_title("Blister"); ?>
+Redirect Permanent /blogs/000989.html http://www.zanshin.net/2006/06/21/
+   <?php echo sanitize_title("Freakish and Sad, With Seven Legs and Antennae"); ?>
+Redirect Permanent /blogs/000988.html http://www.zanshin.net/2006/06/20/
+   <?php echo sanitize_title("My So Called Life"); ?>
+Redirect Permanent /blogs/000987.html http://www.zanshin.net/2006/06/19/
+   <?php echo sanitize_title("Movie: <i><a href="http://imdb.com/title/tt0372183/" title="The Bourne Supremacy">The Bourne Supremacy</a></i>"); ?>
+Redirect Permanent /blogs/000986.html http://www.zanshin.net/2006/06/19/
+   <?php echo sanitize_title("Book: <i>Rain Fall</i>"); ?>
+Redirect Permanent /blogs/000985.html http://www.zanshin.net/2006/06/19/
+   <?php echo sanitize_title("Movie: <i>The Bourne Identity</i>"); ?>
+Redirect Permanent /blogs/000984.html http://www.zanshin.net/2006/06/19/
+   <?php echo sanitize_title("Birthday Lunch"); ?>
+Redirect Permanent /blogs/000983.html http://www.zanshin.net/2006/06/18/
+   <?php echo sanitize_title("Burned"); ?>
+Redirect Permanent /blogs/000982.html http://www.zanshin.net/2006/06/17/
+   <?php echo sanitize_title("Two Rings"); ?>
+Redirect Permanent /blogs/000981.html http://www.zanshin.net/2006/06/17/
+   <?php echo sanitize_title("D'oh!"); ?>
+Redirect Permanent /blogs/000980.html http://www.zanshin.net/2006/06/17/
+   <?php echo sanitize_title("Kendo In The Park"); ?>
+Redirect Permanent /blogs/000979.html http://www.zanshin.net/2006/06/17/
+   <?php echo sanitize_title("Book: <i>A Darkness More Than Night</i>"); ?>
+Redirect Permanent /blogs/000978.html http://www.zanshin.net/2006/06/16/
+   <?php echo sanitize_title("Movie: <i>An Inconvenient Truth</i>"); ?>
+Redirect Permanent /blogs/000977.html http://www.zanshin.net/2006/06/16/
+   <?php echo sanitize_title(" Like A Kid Again"); ?>
+Redirect Permanent /blogs/000976.html http://www.zanshin.net/2006/06/15/
+   <?php echo sanitize_title("What He Says"); ?>
+Redirect Permanent /blogs/000975.html http://www.zanshin.net/2006/06/15/
+   <?php echo sanitize_title("Making Changes"); ?>
+Redirect Permanent /blogs/000974.html http://www.zanshin.net/2006/06/14/
+   <?php echo sanitize_title("Movie: <i>Band of Brothers</i>"); ?>
+Redirect Permanent /blogs/000973.html http://www.zanshin.net/2006/06/14/
+   <?php echo sanitize_title("Getting Into The Groove"); ?>
+Redirect Permanent /blogs/000972.html http://www.zanshin.net/2006/06/14/
+   <?php echo sanitize_title("You Might Be A Nerd If..."); ?>
+Redirect Permanent /blogs/000971.html http://www.zanshin.net/2006/06/14/
+   <?php echo sanitize_title("Release"); ?>
+Redirect Permanent /blogs/000970.html http://www.zanshin.net/2006/06/12/
+   <?php echo sanitize_title("I Just About Died..."); ?>
+Redirect Permanent /blogs/000969.html http://www.zanshin.net/2006/06/12/
+   <?php echo sanitize_title("The "What If" Question"); ?>
+Redirect Permanent /blogs/000968.html http://www.zanshin.net/2006/06/12/
+   <?php echo sanitize_title("Movie: <i>The Da Vinci Code</i>"); ?>
+Redirect Permanent /blogs/000967.html http://www.zanshin.net/2006/06/11/
+   <?php echo sanitize_title("4:00 am Rudeness"); ?>
+Redirect Permanent /blogs/000966.html http://www.zanshin.net/2006/06/10/
+   <?php echo sanitize_title("Hiya Suburi"); ?>
+Redirect Permanent /blogs/000965.html http://www.zanshin.net/2006/06/10/
+   <?php echo sanitize_title("Book: <i>Dead Watch</i>"); ?>
+Redirect Permanent /blogs/000964.html http://www.zanshin.net/2006/06/10/
+   <?php echo sanitize_title("Book: <i>Cryptonomicon</i>"); ?>
+Redirect Permanent /blogs/000963.html http://www.zanshin.net/2006/06/10/
+   <?php echo sanitize_title("And Now A Word From Our Sponsor: Envy"); ?>
+Redirect Permanent /blogs/000962.html http://www.zanshin.net/2006/06/08/
+   <?php echo sanitize_title("108 degrees"); ?>
+Redirect Permanent /blogs/000961.html http://www.zanshin.net/2006/06/08/
+   <?php echo sanitize_title("A Year Ago"); ?>
+Redirect Permanent /blogs/000960.html http://www.zanshin.net/2006/06/08/
+   <?php echo sanitize_title("Boobs"); ?>
+Redirect Permanent /blogs/000959.html http://www.zanshin.net/2006/06/08/
+   <?php echo sanitize_title("Crash and Burn"); ?>
+Redirect Permanent /blogs/000958.html http://www.zanshin.net/2006/06/07/
+   <?php echo sanitize_title("Book: <i>The Dogs of Riga</i>"); ?>
+Redirect Permanent /blogs/000957.html http://www.zanshin.net/2006/06/07/
+   <?php echo sanitize_title("Google Rocks"); ?>
+Redirect Permanent /blogs/000956.html http://www.zanshin.net/2006/06/07/
+   <?php echo sanitize_title("Laser Surgery, Round Two"); ?>
+Redirect Permanent /blogs/000955.html http://www.zanshin.net/2006/06/06/
+   <?php echo sanitize_title("Music: Led Zeppelin <i>How The West Was Won</i>"); ?>
+Redirect Permanent /blogs/000954.html http://www.zanshin.net/2006/06/05/
+   <?php echo sanitize_title("Hair Ball"); ?>
+Redirect Permanent /blogs/000953.html http://www.zanshin.net/2006/06/05/
+   <?php echo sanitize_title("Book: <i><a href="http://www.ereader.com/product/detail/21858?book=One_Drop_of_Blood:_A_Novel" title="One Drop of Blood">One Drop of Blood</a></i>"); ?>
+Redirect Permanent /blogs/000952.html http://www.zanshin.net/2006/06/05/
+   <?php echo sanitize_title("Leaving Home"); ?>
+Redirect Permanent /blogs/000951.html http://www.zanshin.net/2006/06/04/
+   <?php echo sanitize_title("Laid To Rest"); ?>
+Redirect Permanent /blogs/000950.html http://www.zanshin.net/2006/06/04/
+   <?php echo sanitize_title("Mom's Eulogy"); ?>
+Redirect Permanent /blogs/000949.html http://www.zanshin.net/2006/06/01/
+   <?php echo sanitize_title("All To Real"); ?>
+Redirect Permanent /blogs/000948.html http://www.zanshin.net/2006/06/01/
+   <?php echo sanitize_title("Warmth of Friendship"); ?>
+Redirect Permanent /blogs/000947.html http://www.zanshin.net/2006/06/01/
+   <?php echo sanitize_title("Amazing R/C Plane"); ?>
+Redirect Permanent /blogs/000946.html http://www.zanshin.net/2006/06/01/
+   <?php echo sanitize_title("Auto-pilot"); ?>
+Redirect Permanent /blogs/000945.html http://www.zanshin.net/2006/05/31/
+   <?php echo sanitize_title("Brittle"); ?>
+Redirect Permanent /blogs/000944.html http://www.zanshin.net/2006/05/30/
+   <?php echo sanitize_title("Delayed Impact"); ?>
+Redirect Permanent /blogs/000943.html http://www.zanshin.net/2006/05/29/
+   <?php echo sanitize_title("Mom"); ?>
+Redirect Permanent /blogs/000942.html http://www.zanshin.net/2006/05/28/
+   <?php echo sanitize_title("Helen Riley Nichols"); ?>
+Redirect Permanent /blogs/000941.html http://www.zanshin.net/2006/05/28/
+   <?php echo sanitize_title("A Matter of Hours"); ?>
+Redirect Permanent /blogs/000940.html http://www.zanshin.net/2006/05/25/
+   <?php echo sanitize_title("Sharp Decline"); ?>
+Redirect Permanent /blogs/000939.html http://www.zanshin.net/2006/05/25/
+   <?php echo sanitize_title("Sun Block"); ?>
+Redirect Permanent /blogs/000938.html http://www.zanshin.net/2006/05/24/
+   <?php echo sanitize_title("Null Space"); ?>
+Redirect Permanent /blogs/000937.html http://www.zanshin.net/2006/05/23/
+   <?php echo sanitize_title("Tough Decisions"); ?>
+Redirect Permanent /blogs/000936.html http://www.zanshin.net/2006/05/23/
+   <?php echo sanitize_title("Movie: <i>Fargo</i>"); ?>
+Redirect Permanent /blogs/000935.html http://www.zanshin.net/2006/05/22/
+   <?php echo sanitize_title("A Pretty Underpass"); ?>
+Redirect Permanent /blogs/000934.html http://www.zanshin.net/2006/05/22/
+   <?php echo sanitize_title("Movie: <i><a href="http://imdb.com/title/tt0314353/" title="Tears of the Sun">Tears of the Sun</a></i>"); ?>
+Redirect Permanent /blogs/000933.html http://www.zanshin.net/2006/05/21/
+   <?php echo sanitize_title("Movie: <i>Predator II</i>"); ?>
+Redirect Permanent /blogs/000932.html http://www.zanshin.net/2006/05/21/
+   <?php echo sanitize_title("Movie: <i><a href="http://imdb.com/title/tt0093773/" title="Predator">Predator</a></i>"); ?>
+Redirect Permanent /blogs/000931.html http://www.zanshin.net/2006/05/21/
+   <?php echo sanitize_title("Book: <i>The Last Templar</i>"); ?>
+Redirect Permanent /blogs/000930.html http://www.zanshin.net/2006/05/21/
+   <?php echo sanitize_title("TTOW"); ?>
+Redirect Permanent /blogs/000929.html http://www.zanshin.net/2006/05/20/
+   <?php echo sanitize_title("Whacking Things With Sticks"); ?>
+Redirect Permanent /blogs/000928.html http://www.zanshin.net/2006/05/20/
+   <?php echo sanitize_title("State of Denial"); ?>
+Redirect Permanent /blogs/000927.html http://www.zanshin.net/2006/05/19/
+   <?php echo sanitize_title("Kendo"); ?>
+Redirect Permanent /blogs/000926.html http://www.zanshin.net/2006/05/18/
+   <?php echo sanitize_title("Mounting Pressure"); ?>
+Redirect Permanent /blogs/000925.html http://www.zanshin.net/2006/05/17/
+   <?php echo sanitize_title("Spam, spam, spam"); ?>
+Redirect Permanent /blogs/000924.html http://www.zanshin.net/2006/05/17/
+   <?php echo sanitize_title("Book: <i>The Hard Way</i>"); ?>
+Redirect Permanent /blogs/000923.html http://www.zanshin.net/2006/05/16/
+   <?php echo sanitize_title("It's Only A Picture"); ?>
+Redirect Permanent /blogs/000922.html http://www.zanshin.net/2006/05/16/
+   <?php echo sanitize_title("Movie: <i>Mr. & Mrs. Smith</i>"); ?>
+Redirect Permanent /blogs/000921.html http://www.zanshin.net/2006/05/16/
+   <?php echo sanitize_title("Movie: <i><a href="http://imdb.com/title/tt0177971/" title="The Perfect Storm">The Perfect Storm</a></i>"); ?>
+Redirect Permanent /blogs/000920.html http://www.zanshin.net/2006/05/15/
+   <?php echo sanitize_title("Movie: <i>Serenity</i>"); ?>
+Redirect Permanent /blogs/000919.html http://www.zanshin.net/2006/05/15/
+   <?php echo sanitize_title("Bushed"); ?>
+Redirect Permanent /blogs/000918.html http://www.zanshin.net/2006/05/14/
+   <?php echo sanitize_title("Movie: <i><a href="http://imdb.com/title/tt0409182/" title="Poseidon">Poseidon</a></i>"); ?>
+Redirect Permanent /blogs/000917.html http://www.zanshin.net/2006/05/14/
+   <?php echo sanitize_title("Private Screening"); ?>
+Redirect Permanent /blogs/000916.html http://www.zanshin.net/2006/05/13/
+   <?php echo sanitize_title("No Comment"); ?>
+Redirect Permanent /blogs/000915.html http://www.zanshin.net/2006/05/13/
+   <?php echo sanitize_title("Book: <i>Faceless Killers</i>"); ?>
+Redirect Permanent /blogs/000914.html http://www.zanshin.net/2006/05/13/
+   <?php echo sanitize_title("Movie: <i>Along Came A Spider</i>"); ?>
+Redirect Permanent /blogs/000913.html http://www.zanshin.net/2006/05/13/
+   <?php echo sanitize_title("Movie: <i><a href="http://imdb.com/title/tt0443632/" title="The Sentinel">The Sentinel</a></i>"); ?>
+Redirect Permanent /blogs/000912.html http://www.zanshin.net/2006/05/13/
+   <?php echo sanitize_title("Pre-Approved"); ?>
+Redirect Permanent /blogs/000911.html http://www.zanshin.net/2006/05/12/
+   <?php echo sanitize_title("Dreaming"); ?>
+Redirect Permanent /blogs/000910.html http://www.zanshin.net/2006/05/12/
+   <?php echo sanitize_title("Movie <i><a href="http://imdb.com/title/tt0317919/" title="Mission Impossible III">Mission Impossible III</a></i>"); ?>
+Redirect Permanent /blogs/000909.html http://www.zanshin.net/2006/05/11/
+   <?php echo sanitize_title("I Feel Defeated"); ?>
+Redirect Permanent /blogs/000908.html http://www.zanshin.net/2006/05/11/
+   <?php echo sanitize_title("Book <i>The Twelfth Card</i>"); ?>
+Redirect Permanent /blogs/000907.html http://www.zanshin.net/2006/05/11/
+   <?php echo sanitize_title("FedEx Planes Avoiding a Thunderstorm"); ?>
+Redirect Permanent /blogs/000906.html http://www.zanshin.net/2006/05/10/
+   <?php echo sanitize_title("The Evolution of Dance"); ?>
+Redirect Permanent /blogs/000905.html http://www.zanshin.net/2006/05/10/
+   <?php echo sanitize_title("Marketing Propaganda != Customer Service"); ?>
+Redirect Permanent /blogs/000904.html http://www.zanshin.net/2006/05/10/
+   <?php echo sanitize_title("Book: <i><a href="http://ereader.com/product/detail/21533?book=Gone" title="Gone">Gone</a></i>"); ?>
+Redirect Permanent /blogs/000903.html http://www.zanshin.net/2006/05/09/
+   <?php echo sanitize_title("Good Night"); ?>
+Redirect Permanent /blogs/000902.html http://www.zanshin.net/2006/05/09/
+   <?php echo sanitize_title("Last Hope Lost"); ?>
+Redirect Permanent /blogs/000901.html http://www.zanshin.net/2006/05/09/
+   <?php echo sanitize_title("Foreign Body"); ?>
+Redirect Permanent /blogs/000900.html http://www.zanshin.net/2006/05/09/
+   <?php echo sanitize_title("Tired All The Time"); ?>
+Redirect Permanent /blogs/000899.html http://www.zanshin.net/2006/05/08/
+   <?php echo sanitize_title("WWJD"); ?>
+Redirect Permanent /blogs/000898.html http://www.zanshin.net/2006/05/08/
+   <?php echo sanitize_title("Thoughts About the Weekend"); ?>
+Redirect Permanent /blogs/000897.html http://www.zanshin.net/2006/05/07/
+   <?php echo sanitize_title("Depression"); ?>
+Redirect Permanent /blogs/000896.html http://www.zanshin.net/2006/05/04/
+   <?php echo sanitize_title("Do Be Do Be Do"); ?>
+Redirect Permanent /blogs/000895.html http://www.zanshin.net/2006/05/04/
+   <?php echo sanitize_title("Tears and Cheesecake"); ?>
+Redirect Permanent /blogs/000894.html http://www.zanshin.net/2006/05/03/
+   <?php echo sanitize_title("A Question of Faith"); ?>
+Redirect Permanent /blogs/000893.html http://www.zanshin.net/2006/05/02/
+   <?php echo sanitize_title("ra-tion-al-ize"); ?>
+Redirect Permanent /blogs/000892.html http://www.zanshin.net/2006/05/02/
+   <?php echo sanitize_title("Get A Mac Ads"); ?>
+Redirect Permanent /blogs/000891.html http://www.zanshin.net/2006/05/01/
+   <?php echo sanitize_title("Movie: <i>Cinderella Man</i>"); ?>
+Redirect Permanent /blogs/000890.html http://www.zanshin.net/2006/04/30/
+   <?php echo sanitize_title("Now What?"); ?>
+Redirect Permanent /blogs/000889.html http://www.zanshin.net/2006/04/29/
+   <?php echo sanitize_title("Book: <i>Labyrinth</i>"); ?>
+Redirect Permanent /blogs/000888.html http://www.zanshin.net/2006/04/27/
+   <?php echo sanitize_title("What If I Don't Have A Birthday?"); ?>
+Redirect Permanent /blogs/000887.html http://www.zanshin.net/2006/04/27/
+   <?php echo sanitize_title("Alphabet Meme"); ?>
+Redirect Permanent /blogs/000886.html http://www.zanshin.net/2006/04/26/
+   <?php echo sanitize_title("Incensed"); ?>
+Redirect Permanent /blogs/000885.html http://www.zanshin.net/2006/04/26/
+   <?php echo sanitize_title("Naner-naner"); ?>
+Redirect Permanent /blogs/000884.html http://www.zanshin.net/2006/04/26/
+   <?php echo sanitize_title("Show Me Your Buttons, I Dare You"); ?>
+Redirect Permanent /blogs/000883.html http://www.zanshin.net/2006/04/26/
+   <?php echo sanitize_title("Word from Home"); ?>
+Redirect Permanent /blogs/000882.html http://www.zanshin.net/2006/04/26/
+   <?php echo sanitize_title("Zombie"); ?>
+Redirect Permanent /blogs/000881.html http://www.zanshin.net/2006/04/25/
+   <?php echo sanitize_title("Beware the Eyes of March"); ?>
+Redirect Permanent /blogs/000880.html http://www.zanshin.net/2006/04/25/
+   <?php echo sanitize_title("Here There Be Monsters"); ?>
+Redirect Permanent /blogs/000879.html http://www.zanshin.net/2006/04/25/
+   <?php echo sanitize_title("OneCare Frustration"); ?>
+Redirect Permanent /blogs/000878.html http://www.zanshin.net/2006/04/24/
+   <?php echo sanitize_title("Rage In The Machine"); ?>
+Redirect Permanent /blogs/000877.html http://www.zanshin.net/2006/04/23/
+   <?php echo sanitize_title("Smoothies"); ?>
+Redirect Permanent /blogs/000876.html http://www.zanshin.net/2006/04/21/
+   <?php echo sanitize_title("Mirror Mirror"); ?>
+Redirect Permanent /blogs/000875.html http://www.zanshin.net/2006/04/21/
+   <?php echo sanitize_title("Finite Number"); ?>
+Redirect Permanent /blogs/000874.html http://www.zanshin.net/2006/04/21/
+   <?php echo sanitize_title("Crescent Halos"); ?>
+Redirect Permanent /blogs/000873.html http://www.zanshin.net/2006/04/19/
+   <?php echo sanitize_title("Link Surge"); ?>
+Redirect Permanent /blogs/000872.html http://www.zanshin.net/2006/04/18/
+   <?php echo sanitize_title("A Day For Me"); ?>
+Redirect Permanent /blogs/000871.html http://www.zanshin.net/2006/04/17/
+   <?php echo sanitize_title("A Tale Of Two Phones"); ?>
+Redirect Permanent /blogs/000870.html http://www.zanshin.net/2006/04/17/
+   <?php echo sanitize_title("Movie: <i>61*</i>"); ?>
+Redirect Permanent /blogs/000869.html http://www.zanshin.net/2006/04/16/
+   <?php echo sanitize_title("Isolated"); ?>
+Redirect Permanent /blogs/000868.html http://www.zanshin.net/2006/04/16/
+   <?php echo sanitize_title("Quiet Thoughts and Memories"); ?>
+Redirect Permanent /blogs/000867.html http://www.zanshin.net/2006/04/16/
+   <?php echo sanitize_title("Movie: <i>Unleashed</i>"); ?>
+Redirect Permanent /blogs/000866.html http://www.zanshin.net/2006/04/14/
+   <?php echo sanitize_title("What If Microsoft Designed the iPod?"); ?>
+Redirect Permanent /blogs/000865.html http://www.zanshin.net/2006/04/13/
+   <?php echo sanitize_title("Enormity"); ?>
+Redirect Permanent /blogs/000864.html http://www.zanshin.net/2006/04/13/
+   <?php echo sanitize_title("Google Goodness"); ?>
+Redirect Permanent /blogs/000863.html http://www.zanshin.net/2006/04/13/
+   <?php echo sanitize_title("Being Sick Alone Sucks"); ?>
+Redirect Permanent /blogs/000862.html http://www.zanshin.net/2006/04/11/
+   <?php echo sanitize_title("Modem Mania"); ?>
+Redirect Permanent /blogs/000861.html http://www.zanshin.net/2006/04/11/
+   <?php echo sanitize_title("Wound Field DC Motor"); ?>
+Redirect Permanent /blogs/000860.html http://www.zanshin.net/2006/04/11/
+   <?php echo sanitize_title("2:00 pm to 5:00 pm"); ?>
+Redirect Permanent /blogs/000859.html http://www.zanshin.net/2006/04/10/
+   <?php echo sanitize_title("Lingering Goodbye"); ?>
+Redirect Permanent /blogs/000858.html http://www.zanshin.net/2006/04/10/
+   <?php echo sanitize_title("A Place of Acceptance"); ?>
+Redirect Permanent /blogs/000857.html http://www.zanshin.net/2006/04/06/
+   <?php echo sanitize_title("3D Vision"); ?>
+Redirect Permanent /blogs/000856.html http://www.zanshin.net/2006/04/05/
+   <?php echo sanitize_title("Can You See Me Now?"); ?>
+Redirect Permanent /blogs/000855.html http://www.zanshin.net/2006/04/04/
+   <?php echo sanitize_title("Vending Stupidness"); ?>
+Redirect Permanent /blogs/000854.html http://www.zanshin.net/2006/04/02/
+   <?php echo sanitize_title("Negative Growth"); ?>
+Redirect Permanent /blogs/000853.html http://www.zanshin.net/2006/04/02/
+   <?php echo sanitize_title("Ulterior Motive"); ?>
+Redirect Permanent /blogs/000852.html http://www.zanshin.net/2006/04/01/
+   <?php echo sanitize_title("50 Words"); ?>
+Redirect Permanent /blogs/000851.html http://www.zanshin.net/2006/04/01/
+   <?php echo sanitize_title("Tivo Feature Request"); ?>
+Redirect Permanent /blogs/000850.html http://www.zanshin.net/2006/04/01/
+   <?php echo sanitize_title("Movie: <i>Basic Instinct II</i>"); ?>
+Redirect Permanent /blogs/000849.html http://www.zanshin.net/2006/04/01/
+   <?php echo sanitize_title("Movie: <i>Inside Man</i>"); ?>
+Redirect Permanent /blogs/000848.html http://www.zanshin.net/2006/04/01/
+   <?php echo sanitize_title("Book: <i>Company Man</i>"); ?>
+Redirect Permanent /blogs/000847.html http://www.zanshin.net/2006/04/01/
+   <?php echo sanitize_title("The Left Side of My Brain Is Starting to Get It Right"); ?>
+Redirect Permanent /blogs/000846.html http://www.zanshin.net/2006/03/31/
+   <?php echo sanitize_title("Ding Dong The Witch Is Dead"); ?>
+Redirect Permanent /blogs/000845.html http://www.zanshin.net/2006/03/31/
+   <?php echo sanitize_title("We Interrupt Dinner To Bring You This Storm"); ?>
+Redirect Permanent /blogs/000844.html http://www.zanshin.net/2006/03/31/
+   <?php echo sanitize_title("Two Month Review"); ?>
+Redirect Permanent /blogs/000843.html http://www.zanshin.net/2006/03/30/
+   <?php echo sanitize_title("My Eyes Haven't Got It (Yet)"); ?>
+Redirect Permanent /blogs/000842.html http://www.zanshin.net/2006/03/29/
+   <?php echo sanitize_title("Something New"); ?>
+Redirect Permanent /blogs/000841.html http://www.zanshin.net/2006/03/29/
+   <?php echo sanitize_title("Radio Daze"); ?>
+Redirect Permanent /blogs/000840.html http://www.zanshin.net/2006/03/28/
+   <?php echo sanitize_title("Grumpy Is As Grumpy Does"); ?>
+Redirect Permanent /blogs/000839.html http://www.zanshin.net/2006/03/27/
+   <?php echo sanitize_title("Movie: <i>Gladiator</i>"); ?>
+Redirect Permanent /blogs/000838.html http://www.zanshin.net/2006/03/27/
+   <?php echo sanitize_title("Movie: <i>Die Hard</i>"); ?>
+Redirect Permanent /blogs/000837.html http://www.zanshin.net/2006/03/26/
+   <?php echo sanitize_title("Book: <i>Last Light</i>"); ?>
+Redirect Permanent /blogs/000836.html http://www.zanshin.net/2006/03/26/
+   <?php echo sanitize_title("Patient, I Am Not"); ?>
+Redirect Permanent /blogs/000835.html http://www.zanshin.net/2006/03/24/
+   <?php echo sanitize_title("Drop, Drop, Rinse, Repeat"); ?>
+Redirect Permanent /blogs/000834.html http://www.zanshin.net/2006/03/24/
+   <?php echo sanitize_title("I Can See Clearly, Sorta"); ?>
+Redirect Permanent /blogs/000833.html http://www.zanshin.net/2006/03/23/
+   <?php echo sanitize_title("A Call From Home"); ?>
+Redirect Permanent /blogs/000832.html http://www.zanshin.net/2006/03/23/
+   <?php echo sanitize_title("Bionic Eyes"); ?>
+Redirect Permanent /blogs/000831.html http://www.zanshin.net/2006/03/21/
+   <?php echo sanitize_title("I Feel Good"); ?>
+Redirect Permanent /blogs/000830.html http://www.zanshin.net/2006/03/21/
+   <?php echo sanitize_title("Cried Out"); ?>
+Redirect Permanent /blogs/000829.html http://www.zanshin.net/2006/03/20/
+   <?php echo sanitize_title("After The Storm"); ?>
+Redirect Permanent /blogs/000827.html http://www.zanshin.net/2006/03/20/
+   <?php echo sanitize_title("Book: <i>Dead Run</i>"); ?>
+Redirect Permanent /blogs/000826.html http://www.zanshin.net/2006/03/20/
+   <?php echo sanitize_title("Pissed Off"); ?>
+Redirect Permanent /blogs/000825.html http://www.zanshin.net/2006/03/19/
+   <?php echo sanitize_title("Movie: <i>16 Blocks</i>"); ?>
+Redirect Permanent /blogs/000824.html http://www.zanshin.net/2006/03/19/
+   <?php echo sanitize_title("Movie <i>V for Vendetta</i>"); ?>
+Redirect Permanent /blogs/000823.html http://www.zanshin.net/2006/03/18/
+   <?php echo sanitize_title("The Unbearable Heaviness of Grief"); ?>
+Redirect Permanent /blogs/000822.html http://www.zanshin.net/2006/03/16/
+   <?php echo sanitize_title("Adobe Reader Ads"); ?>
+Redirect Permanent /blogs/000821.html http://www.zanshin.net/2006/03/15/
+   <?php echo sanitize_title("Indifference"); ?>
+Redirect Permanent /blogs/000820.html http://www.zanshin.net/2006/03/15/
+   <?php echo sanitize_title("3,150,983"); ?>
+Redirect Permanent /blogs/000819.html http://www.zanshin.net/2006/03/14/
+   <?php echo sanitize_title("Breaking Point"); ?>
+Redirect Permanent /blogs/000818.html http://www.zanshin.net/2006/03/13/
+   <?php echo sanitize_title("Amazing"); ?>
+Redirect Permanent /blogs/000817.html http://www.zanshin.net/2006/03/13/
+   <?php echo sanitize_title("Eat Here Get Worms"); ?>
+Redirect Permanent /blogs/000816.html http://www.zanshin.net/2006/03/13/
+   <?php echo sanitize_title("Family Ties"); ?>
+Redirect Permanent /blogs/000815.html http://www.zanshin.net/2006/03/13/
+   <?php echo sanitize_title("Audio Book: <i>Search</i>"); ?>
+Redirect Permanent /blogs/000814.html http://www.zanshin.net/2006/03/13/
+   <?php echo sanitize_title("Book: <i>Live Bait</i>"); ?>
+Redirect Permanent /blogs/000813.html http://www.zanshin.net/2006/03/08/
+   <?php echo sanitize_title("Seething"); ?>
+Redirect Permanent /blogs/000812.html http://www.zanshin.net/2006/03/07/
+   <?php echo sanitize_title("Caring For Your Introvert"); ?>
+Redirect Permanent /blogs/000811.html http://www.zanshin.net/2006/03/07/
+   <?php echo sanitize_title("Music: Johnny Cash <i>American IV: The Man Comes Around</i>"); ?>
+Redirect Permanent /blogs/000810.html http://www.zanshin.net/2006/03/05/
+   <?php echo sanitize_title("Trailers"); ?>
+Redirect Permanent /blogs/000809.html http://www.zanshin.net/2006/03/05/
+   <?php echo sanitize_title("Movie: <i>Ultraviolet</i>"); ?>
+Redirect Permanent /blogs/000808.html http://www.zanshin.net/2006/03/05/
+   <?php echo sanitize_title("Back In The Saddle"); ?>
+Redirect Permanent /blogs/000807.html http://www.zanshin.net/2006/03/04/
+   <?php echo sanitize_title("Book: <i>Monkeewrench</i>"); ?>
+Redirect Permanent /blogs/000806.html http://www.zanshin.net/2006/03/04/
+   <?php echo sanitize_title("New Author Sadness"); ?>
+Redirect Permanent /blogs/000805.html http://www.zanshin.net/2006/03/03/
+   <?php echo sanitize_title("Public Hygiene"); ?>
+Redirect Permanent /blogs/000804.html http://www.zanshin.net/2006/03/02/
+   <?php echo sanitize_title("Smashed To Smithereens"); ?>
+Redirect Permanent /blogs/000803.html http://www.zanshin.net/2006/03/02/
+   <?php echo sanitize_title("Limited Time Offer"); ?>
+Redirect Permanent /blogs/000802.html http://www.zanshin.net/2006/03/01/
+   <?php echo sanitize_title("A Feeling Of Control"); ?>
+Redirect Permanent /blogs/000801.html http://www.zanshin.net/2006/02/28/
+   <?php echo sanitize_title("my immortal"); ?>
+Redirect Permanent /blogs/000800.html http://www.zanshin.net/2006/02/27/
+   <?php echo sanitize_title("Three Good Things"); ?>
+Redirect Permanent /blogs/000799.html http://www.zanshin.net/2006/02/27/
+   <?php echo sanitize_title("Under Pressure"); ?>
+Redirect Permanent /blogs/000798.html http://www.zanshin.net/2006/02/27/
+   <?php echo sanitize_title("Movie: <i>Godzilla</i>"); ?>
+Redirect Permanent /blogs/000797.html http://www.zanshin.net/2006/02/26/
+   <?php echo sanitize_title("Things I Didn't Buy"); ?>
+Redirect Permanent /blogs/000796.html http://www.zanshin.net/2006/02/26/
+   <?php echo sanitize_title("Searching For Closure "); ?>
+Redirect Permanent /blogs/000795.html http://www.zanshin.net/2006/02/26/
+   <?php echo sanitize_title("Movie: <i>Behind Enemy Lines</i>"); ?>
+Redirect Permanent /blogs/000794.html http://www.zanshin.net/2006/02/25/
+   <?php echo sanitize_title("Movie: <i>The Jackal</i>"); ?>
+Redirect Permanent /blogs/000793.html http://www.zanshin.net/2006/02/25/
+   <?php echo sanitize_title("Movie: <i>The Specialist</i>"); ?>
+Redirect Permanent /blogs/000792.html http://www.zanshin.net/2006/02/24/
+   <?php echo sanitize_title("Laser Tag"); ?>
+Redirect Permanent /blogs/000791.html http://www.zanshin.net/2006/02/23/
+   <?php echo sanitize_title("Who's Haircut Is It?"); ?>
+Redirect Permanent /blogs/000790.html http://www.zanshin.net/2006/02/22/
+   <?php echo sanitize_title("And So It Goes..."); ?>
+Redirect Permanent /blogs/000789.html http://www.zanshin.net/2006/02/22/
+   <?php echo sanitize_title("Recon-silly-ation"); ?>
+Redirect Permanent /blogs/000788.html http://www.zanshin.net/2006/02/21/
+   <?php echo sanitize_title("Movie: <i>Secondhand Lions</i>"); ?>
+Redirect Permanent /blogs/000787.html http://www.zanshin.net/2006/02/21/
+   <?php echo sanitize_title("Book: <i>Prefactoring</i>"); ?>
+Redirect Permanent /blogs/000786.html http://www.zanshin.net/2006/02/21/
+   <?php echo sanitize_title("Mood Swings Like A Pendulum Do"); ?>
+Redirect Permanent /blogs/000785.html http://www.zanshin.net/2006/02/20/
+   <?php echo sanitize_title("Three Days Home Alone Sucks"); ?>
+Redirect Permanent /blogs/000784.html http://www.zanshin.net/2006/02/19/
+   <?php echo sanitize_title("Happy Birthday Zanshin"); ?>
+Redirect Permanent /blogs/000783.html http://www.zanshin.net/2006/02/19/
+   <?php echo sanitize_title("Movie: <i>The Thomas Crown Affair</i>"); ?>
+Redirect Permanent /blogs/000782.html http://www.zanshin.net/2006/02/19/
+   <?php echo sanitize_title("Movie: <i>No Way Out</i>"); ?>
+Redirect Permanent /blogs/000781.html http://www.zanshin.net/2006/02/19/
+   <?php echo sanitize_title("Movie: <i>The Presidio</i>"); ?>
+Redirect Permanent /blogs/000780.html http://www.zanshin.net/2006/02/19/
+   <?php echo sanitize_title("del.icio.us"); ?>
+Redirect Permanent /blogs/000779.html http://www.zanshin.net/2006/02/18/
+   <?php echo sanitize_title("Envy"); ?>
+Redirect Permanent /blogs/000778.html http://www.zanshin.net/2006/02/18/
+   <?php echo sanitize_title("Piling On"); ?>
+Redirect Permanent /blogs/000777.html http://www.zanshin.net/2006/02/18/
+   <?php echo sanitize_title("Book: <i>Emergence</i>"); ?>
+Redirect Permanent /blogs/000776.html http://www.zanshin.net/2006/02/16/
+   <?php echo sanitize_title("Her Final Days"); ?>
+Redirect Permanent /blogs/000775.html http://www.zanshin.net/2006/02/15/
+   <?php echo sanitize_title("Stumbling Towards Normalcy"); ?>
+Redirect Permanent /blogs/000774.html http://www.zanshin.net/2006/02/14/
+   <?php echo sanitize_title("St. Valentine's Day"); ?>
+Redirect Permanent /blogs/000773.html http://www.zanshin.net/2006/02/13/
+   <?php echo sanitize_title("Music: Nanci Griffith <i>One Fair Summer Evening</i>"); ?>
+Redirect Permanent /blogs/000772.html http://www.zanshin.net/2006/02/13/
+   <?php echo sanitize_title("Posting Record"); ?>
+Redirect Permanent /blogs/000771.html http://www.zanshin.net/2006/02/13/
+   <?php echo sanitize_title("Music: Evanescence <i>Fallen</i>"); ?>
+Redirect Permanent /blogs/000770.html http://www.zanshin.net/2006/02/13/
+   <?php echo sanitize_title("Diversions"); ?>
+Redirect Permanent /blogs/000769.html http://www.zanshin.net/2006/02/13/
+   <?php echo sanitize_title("Book: <i>Blink! The Power of Thinking Without Thinking</i>"); ?>
+Redirect Permanent /blogs/000768.html http://www.zanshin.net/2006/02/13/
+   <?php echo sanitize_title("Movie: <i>The World's Fastest Indian</i>"); ?>
+Redirect Permanent /blogs/000767.html http://www.zanshin.net/2006/02/13/
+   <?php echo sanitize_title("Movie: <i>Firewall</i>"); ?>
+Redirect Permanent /blogs/000766.html http://www.zanshin.net/2006/02/10/
+   <?php echo sanitize_title("Measure Once, Cut Twice"); ?>
+Redirect Permanent /blogs/000765.html http://www.zanshin.net/2006/02/09/
+   <?php echo sanitize_title("Shotski's Ring, Revisited"); ?>
+Redirect Permanent /blogs/000764.html http://www.zanshin.net/2006/02/08/
+   <?php echo sanitize_title("Rough Day at Black Rock"); ?>
+Redirect Permanent /blogs/000763.html http://www.zanshin.net/2006/02/06/
+   <?php echo sanitize_title("At The End Of The Day"); ?>
+Redirect Permanent /blogs/000762.html http://www.zanshin.net/2006/02/06/
+   <?php echo sanitize_title("A Bag For All Occasions"); ?>
+Redirect Permanent /blogs/000761.html http://www.zanshin.net/2006/02/04/
+   <?php echo sanitize_title("A Refreshing Change"); ?>
+Redirect Permanent /blogs/000760.html http://www.zanshin.net/2006/02/02/
+   <?php echo sanitize_title("Not The Same"); ?>
+Redirect Permanent /blogs/000759.html http://www.zanshin.net/2006/02/02/
+   <?php echo sanitize_title("As If The &lt;Blink&gt; Tag Wasn't Bad Enough"); ?>
+Redirect Permanent /blogs/000758.html http://www.zanshin.net/2006/02/02/
+   <?php echo sanitize_title("All Your Computer Are Belong To Us"); ?>
+Redirect Permanent /blogs/000757.html http://www.zanshin.net/2006/01/31/
+   <?php echo sanitize_title("ThinkPad Z60m"); ?>
+Redirect Permanent /blogs/000756.html http://www.zanshin.net/2006/01/30/
+   <?php echo sanitize_title("$13,150"); ?>
+Redirect Permanent /blogs/000755.html http://www.zanshin.net/2006/01/30/
+   <?php echo sanitize_title("Marathon"); ?>
+Redirect Permanent /blogs/000754.html http://www.zanshin.net/2006/01/29/
+   <?php echo sanitize_title("Four Things"); ?>
+Redirect Permanent /blogs/000753.html http://www.zanshin.net/2006/01/29/
+   <?php echo sanitize_title("A Lousy Day"); ?>
+Redirect Permanent /blogs/000752.html http://www.zanshin.net/2006/01/27/
+   <?php echo sanitize_title("Customer Abuse"); ?>
+Redirect Permanent /blogs/000751.html http://www.zanshin.net/2006/01/25/
+   <?php echo sanitize_title("Well Of Despair "); ?>
+Redirect Permanent /blogs/000750.html http://www.zanshin.net/2006/01/25/
+   <?php echo sanitize_title("Pins and Needles"); ?>
+Redirect Permanent /blogs/000748.html http://www.zanshin.net/2006/01/24/
+   <?php echo sanitize_title("Boundaries"); ?>
+Redirect Permanent /blogs/000747.html http://www.zanshin.net/2006/01/23/
+   <?php echo sanitize_title("Airport Nirvana"); ?>
+Redirect Permanent /blogs/000746.html http://www.zanshin.net/2006/01/22/
+   <?php echo sanitize_title("Context"); ?>
+Redirect Permanent /blogs/000745.html http://www.zanshin.net/2006/01/19/
+   <?php echo sanitize_title("Wi-Fi: $9.95... Wired: free"); ?>
+Redirect Permanent /blogs/000744.html http://www.zanshin.net/2006/01/19/
+   <?php echo sanitize_title("Vacation"); ?>
+Redirect Permanent /blogs/000743.html http://www.zanshin.net/2006/01/18/
+   <?php echo sanitize_title("OPFD"); ?>
+Redirect Permanent /blogs/000742.html http://www.zanshin.net/2006/01/16/
+   <?php echo sanitize_title("Coming Down"); ?>
+Redirect Permanent /blogs/000741.html http://www.zanshin.net/2006/01/16/
+   <?php echo sanitize_title("Anger"); ?>
+Redirect Permanent /blogs/000740.html http://www.zanshin.net/2006/01/16/
+   <?php echo sanitize_title("Workin' The Holiday"); ?>
+Redirect Permanent /blogs/000739.html http://www.zanshin.net/2006/01/13/
+   <?php echo sanitize_title("Grace Period"); ?>
+Redirect Permanent /blogs/000738.html http://www.zanshin.net/2006/01/13/
+   <?php echo sanitize_title("Random Bits"); ?>
+Redirect Permanent /blogs/000737.html http://www.zanshin.net/2006/01/12/
+   <?php echo sanitize_title("Curses! Boiled Again"); ?>
+Redirect Permanent /blogs/000736.html http://www.zanshin.net/2006/01/12/
+   <?php echo sanitize_title("It's A Small World"); ?>
+Redirect Permanent /blogs/000735.html http://www.zanshin.net/2006/01/11/
+   <?php echo sanitize_title("Trepidation"); ?>
+Redirect Permanent /blogs/000734.html http://www.zanshin.net/2006/01/11/
+   <?php echo sanitize_title("Dreaming While I Sleep"); ?>
+Redirect Permanent /blogs/000733.html http://www.zanshin.net/2006/01/10/
+   <?php echo sanitize_title("Minty Fresh"); ?>
+Redirect Permanent /blogs/000732.html http://www.zanshin.net/2006/01/10/
+   <?php echo sanitize_title("Only $50 More"); ?>
+Redirect Permanent /blogs/000731.html http://www.zanshin.net/2006/01/09/
+   <?php echo sanitize_title("Orwell's 1984"); ?>
+Redirect Permanent /blogs/000730.html http://www.zanshin.net/2006/01/08/
+   <?php echo sanitize_title("Three Months"); ?>
+Redirect Permanent /blogs/000729.html http://www.zanshin.net/2006/01/07/
+   <?php echo sanitize_title("Resolution For the New Year"); ?>
+Redirect Permanent /blogs/000728.html http://www.zanshin.net/2006/01/04/
+   <?php echo sanitize_title("Jay. Oh. Bee."); ?>
+Redirect Permanent /blogs/000727.html http://www.zanshin.net/2006/01/03/
+   <?php echo sanitize_title("Springer Show Extras"); ?>
+Redirect Permanent /blogs/000726.html http://www.zanshin.net/2006/01/02/
+   <?php echo sanitize_title("Too Many Movies"); ?>
+Redirect Permanent /blogs/000725.html http://www.zanshin.net/2006/01/01/
+   <?php echo sanitize_title("The Weight of the Hours"); ?>
+Redirect Permanent /blogs/000724.html http://www.zanshin.net/2005/12/31/
+   <?php echo sanitize_title("Two Rings"); ?>
+Redirect Permanent /blogs/000723.html http://www.zanshin.net/2005/12/31/
+   <?php echo sanitize_title("Goodwill"); ?>
+Redirect Permanent /blogs/000722.html http://www.zanshin.net/2005/12/29/
+   <?php echo sanitize_title("Return of "The Hand""); ?>
+Redirect Permanent /blogs/000721.html http://www.zanshin.net/2005/12/28/
+   <?php echo sanitize_title("Ten Years Ago Today"); ?>
+Redirect Permanent /blogs/000720.html http://www.zanshin.net/2005/12/27/
+   <?php echo sanitize_title("Weekend of Food"); ?>
+Redirect Permanent /blogs/000719.html http://www.zanshin.net/2005/12/27/
+   <?php echo sanitize_title("It's About Time..."); ?>
+Redirect Permanent /blogs/000718.html http://www.zanshin.net/2005/12/25/
+   <?php echo sanitize_title("Show of Hands"); ?>
+Redirect Permanent /blogs/000717.html http://www.zanshin.net/2005/12/25/
+   <?php echo sanitize_title("Christmas Alone"); ?>
+Redirect Permanent /blogs/000716.html http://www.zanshin.net/2005/12/24/
+   <?php echo sanitize_title("Happy Birthday Sweetie"); ?>
+Redirect Permanent /blogs/000715.html http://www.zanshin.net/2005/12/22/
+   <?php echo sanitize_title("Powerless"); ?>
+Redirect Permanent /blogs/000714.html http://www.zanshin.net/2005/12/21/
+   <?php echo sanitize_title("Meltdown"); ?>
+Redirect Permanent /blogs/000713.html http://www.zanshin.net/2005/12/21/
+   <?php echo sanitize_title("The Mind Is the First To ... ah ... Something"); ?>
+Redirect Permanent /blogs/000712.html http://www.zanshin.net/2005/12/20/
+   <?php echo sanitize_title("Exception Refund, Part II"); ?>
+Redirect Permanent /blogs/000711.html http://www.zanshin.net/2005/12/20/
+   <?php echo sanitize_title("Christmas"); ?>
+Redirect Permanent /blogs/000710.html http://www.zanshin.net/2005/12/18/
+   <?php echo sanitize_title("Many Miles To Home"); ?>
+Redirect Permanent /blogs/000709.html http://www.zanshin.net/2005/12/14/
+   <?php echo sanitize_title("From A Distance"); ?>
+Redirect Permanent /blogs/000708.html http://www.zanshin.net/2005/12/12/
+   <?php echo sanitize_title("Out of the Blue"); ?>
+Redirect Permanent /blogs/000707.html http://www.zanshin.net/2005/12/12/
+   <?php echo sanitize_title("The Hardest Part"); ?>
+Redirect Permanent /blogs/000706.html http://www.zanshin.net/2005/12/11/
+   <?php echo sanitize_title("By The Way,"); ?>
+Redirect Permanent /blogs/000705.html http://www.zanshin.net/2005/12/11/
+   <?php echo sanitize_title("Napping 101"); ?>
+Redirect Permanent /blogs/000704.html http://www.zanshin.net/2005/12/10/
+   <?php echo sanitize_title("Bottoming Out"); ?>
+Redirect Permanent /blogs/000703.html http://www.zanshin.net/2005/12/09/
+   <?php echo sanitize_title("Once More Into The Breach"); ?>
+Redirect Permanent /blogs/000702.html http://www.zanshin.net/2005/12/08/
+   <?php echo sanitize_title("Two Month Letter"); ?>
+Redirect Permanent /blogs/000701.html http://www.zanshin.net/2005/12/07/
+   <?php echo sanitize_title("Regrets"); ?>
+Redirect Permanent /blogs/000700.html http://www.zanshin.net/2005/12/07/
+   <?php echo sanitize_title("Cool Mint"); ?>
+Redirect Permanent /blogs/000699.html http://www.zanshin.net/2005/12/06/
+   <?php echo sanitize_title("An Evening At Home"); ?>
+Redirect Permanent /blogs/000698.html http://www.zanshin.net/2005/12/05/
+   <?php echo sanitize_title("Connection Quotient"); ?>
+Redirect Permanent /blogs/000697.html http://www.zanshin.net/2005/12/03/
+   <?php echo sanitize_title("Wait Six Months"); ?>
+Redirect Permanent /blogs/000696.html http://www.zanshin.net/2005/12/02/
+   <?php echo sanitize_title("Sounds of Silence"); ?>
+Redirect Permanent /blogs/000695.html http://www.zanshin.net/2005/12/01/
+   <?php echo sanitize_title("Light Reading"); ?>
+Redirect Permanent /blogs/000694.html http://www.zanshin.net/2005/11/29/
+   <?php echo sanitize_title("Tear for Michele"); ?>
+Redirect Permanent /blogs/000693.html http://www.zanshin.net/2005/11/28/
+   <?php echo sanitize_title("Crash Test Dummy"); ?>
+Redirect Permanent /blogs/000692.html http://www.zanshin.net/2005/11/27/
+   <?php echo sanitize_title("Too Damn Efficient"); ?>
+Redirect Permanent /blogs/000691.html http://www.zanshin.net/2005/11/26/
+   <?php echo sanitize_title("What to Eat When You're Depressed"); ?>
+Redirect Permanent /blogs/000690.html http://www.zanshin.net/2005/11/24/
+   <?php echo sanitize_title("The Big Empty"); ?>
+Redirect Permanent /blogs/000689.html http://www.zanshin.net/2005/11/22/
+   <?php echo sanitize_title("Laundry"); ?>
+Redirect Permanent /blogs/000688.html http://www.zanshin.net/2005/11/22/
+   <?php echo sanitize_title("Tiger, tiger burning bright"); ?>
+Redirect Permanent /blogs/000687.html http://www.zanshin.net/2005/11/20/
+   <?php echo sanitize_title(""Not Responsible For Damage - Stay Back 500 Feet""); ?>
+Redirect Permanent /blogs/000686.html http://www.zanshin.net/2005/11/20/
+   <?php echo sanitize_title("How Are You Doing?"); ?>
+Redirect Permanent /blogs/000685.html http://www.zanshin.net/2005/11/19/
+   <?php echo sanitize_title("Frustration"); ?>
+Redirect Permanent /blogs/000684.html http://www.zanshin.net/2005/11/17/
+   <?php echo sanitize_title("Where to Turn?"); ?>
+Redirect Permanent /blogs/000683.html http://www.zanshin.net/2005/11/16/
+   <?php echo sanitize_title("Exception Refund"); ?>
+Redirect Permanent /blogs/000682.html http://www.zanshin.net/2005/11/15/
+   <?php echo sanitize_title("Exhausted"); ?>
+Redirect Permanent /blogs/000681.html http://www.zanshin.net/2005/11/15/
+   <?php echo sanitize_title("I Grieve"); ?>
+Redirect Permanent /blogs/000680.html http://www.zanshin.net/2005/11/15/
+   <?php echo sanitize_title("Dysosmia Unchecked"); ?>
+Redirect Permanent /blogs/000679.html http://www.zanshin.net/2005/11/14/
+   <?php echo sanitize_title("Holding My Tongue"); ?>
+Redirect Permanent /blogs/000678.html http://www.zanshin.net/2005/11/14/
+   <?php echo sanitize_title("OS Medley"); ?>
+Redirect Permanent /blogs/000677.html http://www.zanshin.net/2005/11/13/
+   <?php echo sanitize_title("Outer Limits"); ?>
+Redirect Permanent /blogs/000676.html http://www.zanshin.net/2005/11/12/
+   <?php echo sanitize_title("You're In My Space"); ?>
+Redirect Permanent /blogs/000675.html http://www.zanshin.net/2005/11/10/
+   <?php echo sanitize_title("Things That Go Splat"); ?>
+Redirect Permanent /blogs/000674.html http://www.zanshin.net/2005/11/10/
+   <?php echo sanitize_title("Big Dopey, Part II"); ?>
+Redirect Permanent /blogs/000673.html http://www.zanshin.net/2005/11/08/
+   <?php echo sanitize_title("High Tech Toy, Low Tech Sales Staff"); ?>
+Redirect Permanent /blogs/000672.html http://www.zanshin.net/2005/11/07/
+   <?php echo sanitize_title("No Place to Vent"); ?>
+Redirect Permanent /blogs/000671.html http://www.zanshin.net/2005/11/06/
+   <?php echo sanitize_title("The Cruelity of Spam"); ?>
+Redirect Permanent /blogs/000670.html http://www.zanshin.net/2005/11/06/
+   <?php echo sanitize_title("950 Words"); ?>
+Redirect Permanent /blogs/000669.html http://www.zanshin.net/2005/11/05/
+   <?php echo sanitize_title("Relentless"); ?>
+Redirect Permanent /blogs/000668.html http://www.zanshin.net/2005/11/04/
+   <?php echo sanitize_title("The Books on My Desk"); ?>
+Redirect Permanent /blogs/000667.html http://www.zanshin.net/2005/11/03/
+   <?php echo sanitize_title("First Workout"); ?>
+Redirect Permanent /blogs/000666.html http://www.zanshin.net/2005/11/03/
+   <?php echo sanitize_title("With This Ring..."); ?>
+Redirect Permanent /blogs/000665.html http://www.zanshin.net/2005/11/03/
+   <?php echo sanitize_title("Boiling Point"); ?>
+Redirect Permanent /blogs/000664.html http://www.zanshin.net/2005/11/02/
+   <?php echo sanitize_title("Fleeting"); ?>
+Redirect Permanent /blogs/000663.html http://www.zanshin.net/2005/11/02/
+   <?php echo sanitize_title("Nine Hours Later"); ?>
+Redirect Permanent /blogs/000662.html http://www.zanshin.net/2005/11/01/
+   <?php echo sanitize_title("Control Issues"); ?>
+Redirect Permanent /blogs/000661.html http://www.zanshin.net/2005/11/01/
+   <?php echo sanitize_title("Arch Nemesis"); ?>
+Redirect Permanent /blogs/000660.html http://www.zanshin.net/2005/10/31/
+   <?php echo sanitize_title("Returning to the Mats"); ?>
+Redirect Permanent /blogs/000659.html http://www.zanshin.net/2005/10/31/
+   <?php echo sanitize_title("Questions Unanswered"); ?>
+Redirect Permanent /blogs/000658.html http://www.zanshin.net/2005/10/31/
+   <?php echo sanitize_title("The Cost of Being Obsolete"); ?>
+Redirect Permanent /blogs/000657.html http://www.zanshin.net/2005/10/31/
+   <?php echo sanitize_title("Monday"); ?>
+Redirect Permanent /blogs/000656.html http://www.zanshin.net/2005/10/29/
+   <?php echo sanitize_title("Antsy in the Night"); ?>
+Redirect Permanent /blogs/000655.html http://www.zanshin.net/2005/10/29/
+   <?php echo sanitize_title("Home Alone"); ?>
+Redirect Permanent /blogs/000654.html http://www.zanshin.net/2005/10/28/
+   <?php echo sanitize_title("Delayed Impact"); ?>
+Redirect Permanent /blogs/000653.html http://www.zanshin.net/2005/10/26/
+   <?php echo sanitize_title("Inside Out"); ?>
+Redirect Permanent /blogs/000652.html http://www.zanshin.net/2005/10/26/
+   <?php echo sanitize_title("Social Conscience"); ?>
+Redirect Permanent /blogs/000651.html http://www.zanshin.net/2005/10/24/
+   <?php echo sanitize_title("Functional, But Not Creative"); ?>
+Redirect Permanent /blogs/000650.html http://www.zanshin.net/2005/10/24/
+   <?php echo sanitize_title("A Love of Movies"); ?>
+Redirect Permanent /blogs/000649.html http://www.zanshin.net/2005/10/22/
+   <?php echo sanitize_title("Light of a New Day"); ?>
+Redirect Permanent /blogs/000648.html http://www.zanshin.net/2005/10/21/
+   <?php echo sanitize_title("Gloom, Despair, and Agony"); ?>
+Redirect Permanent /blogs/000647.html http://www.zanshin.net/2005/10/21/
+   <?php echo sanitize_title("Flashbacks"); ?>
+Redirect Permanent /blogs/000646.html http://www.zanshin.net/2005/10/19/
+   <?php echo sanitize_title("Surrealism"); ?>
+Redirect Permanent /blogs/000645.html http://www.zanshin.net/2005/10/19/
+   <?php echo sanitize_title("The Attention Span of a Gnat"); ?>
+Redirect Permanent /blogs/000644.html http://www.zanshin.net/2005/10/18/
+   <?php echo sanitize_title("Dust Motes"); ?>
+Redirect Permanent /blogs/000643.html http://www.zanshin.net/2005/10/16/
+   <?php echo sanitize_title("H. A. L. T."); ?>
+Redirect Permanent /blogs/000642.html http://www.zanshin.net/2005/10/14/
+   <?php echo sanitize_title("Grief is Physical"); ?>
+Redirect Permanent /blogs/000641.html http://www.zanshin.net/2005/10/14/
+   <?php echo sanitize_title("Of Butterflys "); ?>
+Redirect Permanent /blogs/000639.html http://www.zanshin.net/2005/10/14/
+   <?php echo sanitize_title("Eulogy for Michele M. Nichols"); ?>
+Redirect Permanent /blogs/000640.html http://www.zanshin.net/2005/10/14/
+   <?php echo sanitize_title("I've Lost Myself"); ?>
+Redirect Permanent /blogs/000638.html http://www.zanshin.net/2005/10/12/
+   <?php echo sanitize_title("Sharon Michele McAvoy Nichols"); ?>
+Redirect Permanent /blogs/000637.html http://www.zanshin.net/2005/10/10/
+   <?php echo sanitize_title("Quality of Life"); ?>
+Redirect Permanent /blogs/000636.html http://www.zanshin.net/2005/10/09/
+   <?php echo sanitize_title("Ebb and Flow"); ?>
+Redirect Permanent /blogs/000635.html http://www.zanshin.net/2005/10/08/
+   <?php echo sanitize_title("Reality"); ?>
+Redirect Permanent /blogs/000634.html http://www.zanshin.net/2005/10/07/
+   <?php echo sanitize_title("A hole in her bone"); ?>
+Redirect Permanent /blogs/000633.html http://www.zanshin.net/2005/09/23/
+   <?php echo sanitize_title("Posse Comitatus"); ?>
+Redirect Permanent /blogs/000632.html http://www.zanshin.net/2005/09/21/
+   <?php echo sanitize_title("Ditty Ditto"); ?>
+Redirect Permanent /blogs/000631.html http://www.zanshin.net/2005/09/21/
+   <?php echo sanitize_title("Social Responsibility"); ?>
+Redirect Permanent /blogs/000630.html http://www.zanshin.net/2005/09/19/
+   <?php echo sanitize_title("Separation Anxiety"); ?>
+Redirect Permanent /blogs/000629.html http://www.zanshin.net/2005/09/11/
+   <?php echo sanitize_title("Lies, Damn Lies, and Statistics"); ?>
+Redirect Permanent /blogs/000627.html http://www.zanshin.net/2005/09/10/
+   <?php echo sanitize_title("Bush Disaster"); ?>
+Redirect Permanent /blogs/000628.html http://www.zanshin.net/2005/09/10/
+   <?php echo sanitize_title("Virus Safe, If Not Virus Free"); ?>
+Redirect Permanent /blogs/000626.html http://www.markhnichols.com/zanshin.net/2005/09/10/
+   <?php echo sanitize_title("Ten Mac Apps"); ?>
+Redirect Permanent /blogs/000625.html http://www.zanshin.net/2005/09/07/
+   <?php echo sanitize_title("Blame is NOT the Answer"); ?>
+Redirect Permanent /blogs/000624.html http://www.zanshin.net/2005/09/01/
+   <?php echo sanitize_title("New Rule - No Phone Calls From Work"); ?>
+Redirect Permanent /blogs/000623.html http://www.zanshin.net/2005/08/30/
+   <?php echo sanitize_title("128 Hours Later"); ?>
+Redirect Permanent /blogs/000622.html http://www.zanshin.net/2005/08/28/
+   <?php echo sanitize_title("Movies, Movies, and More Movies"); ?>
+Redirect Permanent /blogs/000621.html http://www.zanshin.net/2005/08/26/
+   <?php echo sanitize_title("Welcome. Powering up..."); ?>
+Redirect Permanent /blogs/000620.html http://www.zanshin.net/2005/08/16/
+   <?php echo sanitize_title("OSx86"); ?>
+Redirect Permanent /blogs/000619.html http://www.zanshin.net/2005/08/15/
+   <?php echo sanitize_title("More Weeked Movies"); ?>
+Redirect Permanent /blogs/000617.html http://www.zanshin.net/2005/08/13/
+   <?php echo sanitize_title("Season Pass"); ?>
+Redirect Permanent /blogs/000616.html http://www.zanshin.net/2005/08/12/
+   <?php echo sanitize_title("Two-Fifty-Nine Nine"); ?>
+Redirect Permanent /blogs/000615.html http://www.zanshin.net/2005/08/10/
+   <?php echo sanitize_title("Spam is the Devil"); ?>
+Redirect Permanent /blogs/000614.html http://www.zanshin.net/2005/08/10/
+   <?php echo sanitize_title("Flash Popup Blocking"); ?>
+Redirect Permanent /blogs/000613.html http://www.zanshin.net/2005/08/08/
+   <?php echo sanitize_title("Camouflage Powerbook"); ?>
+Redirect Permanent /blogs/000612.html http://www.zanshin.net/2005/08/08/
+   <?php echo sanitize_title("Recent Movies"); ?>
+Redirect Permanent /blogs/000611.html http://www.zanshin.net/2005/08/06/
+   <?php echo sanitize_title("Random Notes on My Desk"); ?>
+Redirect Permanent /blogs/000610.html http://www.zanshin.net/2005/08/04/
+   <?php echo sanitize_title("What Business Can Learn From Open Source"); ?>
+Redirect Permanent /blogs/000609.html http://www.zanshin.net/2005/08/03/
+   <?php echo sanitize_title("MCL"); ?>
+Redirect Permanent /blogs/000608.html http://www.zanshin.net/2005/08/03/
+   <?php echo sanitize_title("Paid Content"); ?>
+Redirect Permanent /blogs/000607.html http://www.zanshin.net/2005/08/02/
+   <?php echo sanitize_title("Caller ID"); ?>
+Redirect Permanent /blogs/000606.html http://www.zanshin.net/2005/08/02/
+   <?php echo sanitize_title("MightyMouse"); ?>
+Redirect Permanent /blogs/000605.html http://www.zanshin.net/2005/08/02/
+   <?php echo sanitize_title("Aging Smells"); ?>
+Redirect Permanent /blogs/000604.html http://www.zanshin.net/2005/07/31/
+   <?php echo sanitize_title("Weekend Films"); ?>
+Redirect Permanent /blogs/000602.html http://www.zanshin.net/2005/07/27/
+   <?php echo sanitize_title("More Movies"); ?>
+Redirect Permanent /blogs/000601.html http://www.zanshin.net/2005/07/27/
+   <?php echo sanitize_title("Ban Right Turn on Red"); ?>
+Redirect Permanent /blogs/000600.html http://www.zanshin.net/2005/07/23/
+   <?php echo sanitize_title("Too Hot"); ?>
+Redirect Permanent /blogs/000599.html http://www.zanshin.net/2005/07/21/
+   <?php echo sanitize_title("War on Terror"); ?>
+Redirect Permanent /blogs/000598.html http://www.zanshin.net/2005/07/21/
+   <?php echo sanitize_title("Anniversary"); ?>
+Redirect Permanent /blogs/000597.html http://www.zanshin.net/2005/07/19/
+   <?php echo sanitize_title("Summer of Smut"); ?>
+Redirect Permanent /blogs/000595.html http://www.zanshin.net/2005/07/11/
+   <?php echo sanitize_title("<i>Mono no aware</i>"); ?>
+Redirect Permanent /blogs/000594.html http://www.zanshin.net/2005/07/05/
+   <?php echo sanitize_title("Weekend Movies"); ?>
+Redirect Permanent /blogs/000592.html http://www.zanshin.net/2005/07/02/
+   <?php echo sanitize_title("An Open Letter to the Senate"); ?>
+Redirect Permanent /blogs/000591.html http://www.zanshin.net/2005/06/30/
+   <?php echo sanitize_title("On grieving"); ?>
+Redirect Permanent /blogs/000590.html http://www.zanshin.net/2005/06/27/
+   <?php echo sanitize_title("The IMAX Experience"); ?>
+Redirect Permanent /blogs/000589.html http://www.zanshin.net/2005/06/25/
+   <?php echo sanitize_title("Abandon House"); ?>
+Redirect Permanent /blogs/000588.html http://www.zanshin.net/2005/06/24/
+   <?php echo sanitize_title("MIT Weblog Survey"); ?>
+Redirect Permanent /blogs/000587.html http://www.zanshin.net/2005/06/21/
+   <?php echo sanitize_title("Depression"); ?>
+Redirect Permanent /blogs/000586.html http://www.zanshin.net/2005/06/16/
+   <?php echo sanitize_title("Regarding the House I Grew Up In"); ?>
+Redirect Permanent /blogs/000585.html http://www.zanshin.net/2005/06/16/
+   <?php echo sanitize_title("Perspective"); ?>
+Redirect Permanent /blogs/000584.html http://www.zanshin.net/2005/06/12/
+   <?php echo sanitize_title("Flying Sucks"); ?>
+Redirect Permanent /blogs/000583.html http://www.zanshin.net/2005/06/12/
+   <?php echo sanitize_title("Virginia"); ?>
+Redirect Permanent /blogs/000582.html http://www.zanshin.net/2005/06/12/
+   <?php echo sanitize_title("Two-Thirty AM Phone Call"); ?>
+Redirect Permanent /blogs/000580.html http://www.zanshin.net/2005/06/06/
+   <?php echo sanitize_title("Transition"); ?>
+Redirect Permanent /blogs/000581.html http://www.zanshin.net/2005/06/06/
+   <?php echo sanitize_title("EMail"); ?>
+Redirect Permanent /blogs/000579.html http://www.zanshin.net/2005/06/03/
+   <?php echo sanitize_title("Job Funk"); ?>
+Redirect Permanent /blogs/000578.html http://www.zanshin.net/2005/06/02/
+   <?php echo sanitize_title("Ballistic Ice"); ?>
+Redirect Permanent /blogs/000577.html http://www.zanshin.net/2005/05/19/
+   <?php echo sanitize_title("Spoon"); ?>
+Redirect Permanent /blogs/000576.html http://www.zanshin.net/2005/05/15/
+   <?php echo sanitize_title("Virginia"); ?>
+Redirect Permanent /blogs/000575.html http://www.zanshin.net/2005/05/15/
+   <?php echo sanitize_title(" Cultural Creative"); ?>
+Redirect Permanent /blogs/000574.html http://www.zanshin.net/2005/05/14/
+   <?php echo sanitize_title("Upturn"); ?>
+Redirect Permanent /blogs/000573.html http://www.zanshin.net/2005/05/12/
+   <?php echo sanitize_title("Memory Test"); ?>
+Redirect Permanent /blogs/000572.html http://www.zanshin.net/2005/05/06/
+   <?php echo sanitize_title("44 Things About Me"); ?>
+Redirect Permanent /blogs/000571.html http://www.zanshin.net/2005/04/30/
+   <?php echo sanitize_title("Life Goes On"); ?>
+Redirect Permanent /blogs/000570.html http://www.zanshin.net/2005/04/29/
+   <?php echo sanitize_title("My URL ABCs"); ?>
+Redirect Permanent /blogs/000569.html http://www.zanshin.net/2005/04/28/
+   <?php echo sanitize_title("Seedlessness"); ?>
+Redirect Permanent /blogs/000568.html http://www.zanshin.net/2005/04/22/
+   <?php echo sanitize_title("Painless"); ?>
+Redirect Permanent /blogs/000567.html http://www.zanshin.net/2005/04/12/
+   <?php echo sanitize_title("Closing, If Not Closure"); ?>
+Redirect Permanent /blogs/000566.html http://www.zanshin.net/2005/04/08/
+   <?php echo sanitize_title("Still Here"); ?>
+Redirect Permanent /blogs/000565.html http://www.zanshin.net/2005/03/20/
+   <?php echo sanitize_title("What Does It All Mean?"); ?>
+Redirect Permanent /blogs/000564.html http://www.zanshin.net/2005/03/19/
+   <?php echo sanitize_title("When It Rains"); ?>
+Redirect Permanent /blogs/000563.html http://www.zanshin.net/2005/03/19/
+   <?php echo sanitize_title("365 Days"); ?>
+Redirect Permanent /blogs/000562.html http://www.zanshin.net/2005/03/19/
+   <?php echo sanitize_title("30,000+ "); ?>
+Redirect Permanent /blogs/000557.html http://www.zanshin.net/2005/02/28/
+   <?php echo sanitize_title("Through a Glass Darkly"); ?>
+Redirect Permanent /blogs/000556.html http://www.zanshin.net/2005/02/25/
+   <?php echo sanitize_title("I Love Maps"); ?>
+Redirect Permanent /blogs/000555.html http://www.zanshin.net/2005/02/21/
+   <?php echo sanitize_title("Nine Years Ago Yesterday"); ?>
+Redirect Permanent /blogs/000554.html http://www.zanshin.net/2005/02/19/
+   <?php echo sanitize_title("The 123 Meme"); ?>
+Redirect Permanent /blogs/000553.html http://www.zanshin.net/2005/02/07/
+   <?php echo sanitize_title("Victim Mentality "); ?>
+Redirect Permanent /blogs/000552.html http://www.zanshin.net/2005/01/31/
+   <?php echo sanitize_title("Two Fingers, Not Two Buttons"); ?>
+Redirect Permanent /blogs/000551.html http://www.zanshin.net/2005/01/30/
+   <?php echo sanitize_title("A Funny Thing Happened On the Way Home From Lunch"); ?>
+Redirect Permanent /blogs/000550.html http://www.zanshin.net/2005/01/30/
+   <?php echo sanitize_title("The Mouse BT"); ?>
+Redirect Permanent /blogs/000549.html http://www.zanshin.net/2005/01/25/
+   <?php echo sanitize_title("Sometimes, You have to Lose in Order to Win"); ?>
+Redirect Permanent /blogs/000548.html http://www.zanshin.net/2005/01/24/
+   <?php echo sanitize_title("Diminished Capacity"); ?>
+Redirect Permanent /blogs/000547.html http://www.zanshin.net/2005/01/23/
+   <?php echo sanitize_title("Johnny Carson"); ?>
+Redirect Permanent /blogs/000546.html http://www.zanshin.net/2005/01/19/
+   <?php echo sanitize_title("No Follow and the Return of Comments"); ?>
+Redirect Permanent /blogs/000545.html http://www.zanshin.net/2005/01/19/
+   <?php echo sanitize_title("End Game"); ?>
+Redirect Permanent /blogs/000544.html http://www.zanshin.net/2005/01/19/
+   <?php echo sanitize_title("500th Posting"); ?>
+Redirect Permanent /blogs/000543.html http://www.zanshin.net/2005/01/18/
+   <?php echo sanitize_title("Grace Under Fire"); ?>
+Redirect Permanent /blogs/000542.html http://www.zanshin.net/2005/01/14/
+   <?php echo sanitize_title("Mouse Blues"); ?>
+Redirect Permanent /blogs/000541.html http://www.zanshin.net/2005/01/05/
+   <?php echo sanitize_title("Pond Scum"); ?>
+Redirect Permanent /blogs/000540.html http://www.zanshin.net/2005/01/03/
+   <?php echo sanitize_title("New Direction"); ?>
+Redirect Permanent /blogs/000539.html http://www.zanshin.net/2005/01/01/
+   <?php echo sanitize_title("Film and Print Diversions"); ?>
+Redirect Permanent /blogs/000538.html http://www.zanshin.net/2004/12/21/
+   <?php echo sanitize_title("Pickle"); ?>
+Redirect Permanent /blogs/000536.html http://www.zanshin.net/2004/12/20/
+   <?php echo sanitize_title("Absolutely Nothing"); ?>
+Redirect Permanent /blogs/000535.html http://www.zanshin.net/2004/12/19/
+   <?php echo sanitize_title("Finding Neverland"); ?>
+Redirect Permanent /blogs/000533.html http://www.zanshin.net/2004/12/18/
+   <?php echo sanitize_title("Customer Service"); ?>
+Redirect Permanent /blogs/000532.html http://www.zanshin.net/2004/12/17/
+   <?php echo sanitize_title("Curve Ball"); ?>
+Redirect Permanent /blogs/000531.html http://www.zanshin.net/2004/12/17/
+   <?php echo sanitize_title("Purgatory"); ?>
+Redirect Permanent /blogs/000530.html http://www.zanshin.net/2004/12/13/
+   <?php echo sanitize_title("Routine as a Drug"); ?>
+Redirect Permanent /blogs/000529.html http://www.zanshin.net/2004/12/13/
+   <?php echo sanitize_title("Hanging by a Thread"); ?>
+Redirect Permanent /blogs/000528.html http://www.zanshin.net/2004/12/12/
+   <?php echo sanitize_title("This Just In From MarsEdit"); ?>
+Redirect Permanent /blogs/000527.html http://www.zanshin.net/2004/12/11/
+   <?php echo sanitize_title("Living Under Fascism "); ?>
+Redirect Permanent /blogs/000526.html http://www.zanshin.net/2004/12/10/
+   <?php echo sanitize_title("10,000 and Counting"); ?>
+Redirect Permanent /blogs/000525.html http://www.zanshin.net/2004/12/09/
+   <?php echo sanitize_title(".htaccess"); ?>
+Redirect Permanent /blogs/000524.html http://www.zanshin.net/2004/12/08/
+   <?php echo sanitize_title("Man plans, God laughs"); ?>
+Redirect Permanent /blogs/000523.html http://www.zanshin.net/2004/12/07/
+   <?php echo sanitize_title("Back to the Future"); ?>
+Redirect Permanent /blogs/000522.html http://www.zanshin.net/2004/12/06/
+   <?php echo sanitize_title("Mean Time To Failure"); ?>
+Redirect Permanent /blogs/000521.html http://www.zanshin.net/2004/12/05/
+   <?php echo sanitize_title("The Unbearable Weight of Being"); ?>
+Redirect Permanent /blogs/000520.html http://www.zanshin.net/2004/11/29/
+   <?php echo sanitize_title("Giving Thanks"); ?>
+Redirect Permanent /blogs/000519.html http://www.zanshin.net/2004/11/24/
+   <?php echo sanitize_title("Up Yours"); ?>
+Redirect Permanent /blogs/000518.html http://www.zanshin.net/2004/11/20/
+   <?php echo sanitize_title("Abu Ghriab and Me"); ?>
+Redirect Permanent /blogs/000516.html http://www.zanshin.net/2004/11/12/
+   <?php echo sanitize_title("No Union = No Vacation"); ?>
+Redirect Permanent /blogs/000515.html http://www.zanshin.net/2004/11/09/
+   <?php echo sanitize_title("Firefox Start"); ?>
+Redirect Permanent /blogs/000514.html http://www.zanshin.net/2004/11/08/
+   <?php echo sanitize_title("Valuation"); ?>
+Redirect Permanent /blogs/000513.html http://www.zanshin.net/2004/11/07/
+   <?php echo sanitize_title("Me and my Tivo"); ?>
+Redirect Permanent /blogs/000512.html http://www.zanshin.net/2004/11/02/
+   <?php echo sanitize_title("Don't Blame Me"); ?>
+Redirect Permanent /blogs/000510.html http://www.zanshin.net/2004/11/01/
+   <?php echo sanitize_title("Loss of Abstraction"); ?>
+Redirect Permanent /blogs/000509.html http://www.zanshin.net/2004/10/31/
+   <?php echo sanitize_title("Veil of Tears"); ?>
+Redirect Permanent /blogs/000507.html http://www.zanshin.net/2004/10/31/
+   <?php echo sanitize_title("Joseph Daniel McAvoy"); ?>
+Redirect Permanent /blogs/000506.html http://www.zanshin.net/2004/10/25/
+   <?php echo sanitize_title("Political Switch Ads"); ?>
+Redirect Permanent /blogs/000505.html http://www.zanshin.net/2004/10/18/
+   <?php echo sanitize_title("Twenty-One"); ?>
+Redirect Permanent /blogs/000501.html http://www.zanshin.net/2004/10/11/
+   <?php echo sanitize_title("WiFi Freedom"); ?>
+Redirect Permanent /blogs/000500.html http://www.zanshin.net/2004/10/06/
+   <?php echo sanitize_title("The Power of One"); ?>
+Redirect Permanent /blogs/000499.html http://www.zanshin.net/2004/10/03/
+   <?php echo sanitize_title("Go Ahead, Vote Republican"); ?>
+Redirect Permanent /blogs/000498.html http://www.zanshin.net/2004/09/30/
+   <?php echo sanitize_title("A Debate with Only Losers"); ?>
+Redirect Permanent /blogs/000497.html http://www.zanshin.net/2004/09/27/
+   <?php echo sanitize_title("Hurricanes Do Strike Twice"); ?>
+Redirect Permanent /blogs/000496.html http://www.zanshin.net/2004/09/27/
+   <?php echo sanitize_title("Visitors by Browser"); ?>
+Redirect Permanent /blogs/000495.html http://www.zanshin.net/2004/09/19/
+   <?php echo sanitize_title("Huevos Rancheros, Szechwan Beef Stir Fry and Carrot Cake"); ?>
+Redirect Permanent /blogs/000494.html http://www.zanshin.net/2004/09/19/
+   <?php echo sanitize_title("The Past Week"); ?>
+Redirect Permanent /blogs/000491.html http://www.zanshin.net/2004/09/12/
+   <?php echo sanitize_title("Interview Game"); ?>
+Redirect Permanent /blogs/000490.html http://www.zanshin.net/2004/09/11/
+   <?php echo sanitize_title("Fun With Statistics"); ?>
+Redirect Permanent /blogs/000489.html http://www.zanshin.net/2004/09/11/
+   <?php echo sanitize_title("What's The Matter With Kansas?"); ?>
+Redirect Permanent /blogs/000488.html http://www.zanshin.net/2004/09/11/
+   <?php echo sanitize_title("Head Music"); ?>
+Redirect Permanent /blogs/000487.html http://www.zanshin.net/2004/09/07/
+   <?php echo sanitize_title("Koyaanisqatsi"); ?>
+Redirect Permanent /blogs/000486.html http://www.zanshin.net/2004/08/31/
+   <?php echo sanitize_title("Sobering Thoughts "); ?>
+Redirect Permanent /blogs/000485.html http://www.zanshin.net/2004/08/30/
+   <?php echo sanitize_title("Out in the Cold"); ?>
+Redirect Permanent /blogs/000484.html http://www.zanshin.net/2004/08/29/
+   <?php echo sanitize_title("Ranking"); ?>
+Redirect Permanent /blogs/000483.html http://www.zanshin.net/2004/08/22/
+   <?php echo sanitize_title("Quandary"); ?>
+Redirect Permanent /blogs/000482.html http://www.zanshin.net/2004/08/21/
+   <?php echo sanitize_title("Shadows"); ?>
+Redirect Permanent /blogs/000481.html http://www.zanshin.net/2004/08/20/
+   <?php echo sanitize_title("Not Again"); ?>
+Redirect Permanent /blogs/000480.html http://www.zanshin.net/2004/08/20/
+   <?php echo sanitize_title("Cancer in the Air"); ?>
+Redirect Permanent /blogs/000478.html http://www.zanshin.net/2004/08/16/
+   <?php echo sanitize_title("Lighthouse"); ?>
+Redirect Permanent /blogs/000477.html http://www.zanshin.net/2004/08/16/
+   <?php echo sanitize_title("Outrageous"); ?>
+Redirect Permanent /blogs/000475.html http://www.zanshin.net/2004/08/10/
+   <?php echo sanitize_title("Life and Death"); ?>
+Redirect Permanent /blogs/000473.html http://www.zanshin.net/2004/08/08/
+   <?php echo sanitize_title("Hodge Podge"); ?>
+Redirect Permanent /blogs/000471.html http://www.zanshin.net/2004/07/27/
+   <?php echo sanitize_title("1000 Cubic Feet"); ?>
+Redirect Permanent /blogs/000469.html http://www.zanshin.net/2004/07/26/
+   <?php echo sanitize_title("Seven Years"); ?>
+Redirect Permanent /blogs/000468.html http://www.zanshin.net/2004/07/25/
+   <?php echo sanitize_title("Fahrenheit 9/11"); ?>
+Redirect Permanent /blogs/000467.html http://www.zanshin.net/2004/07/20/
+   <?php echo sanitize_title("Embarrassed for Decatur"); ?>
+Redirect Permanent /blogs/000466.html http://www.zanshin.net/2004/07/18/
+   <?php echo sanitize_title("Thin Ice"); ?>
+Redirect Permanent /blogs/000465.html http://www.zanshin.net/2004/07/17/
+   <?php echo sanitize_title("Sea of Boxes"); ?>
+Redirect Permanent /blogs/000464.html http://www.zanshin.net/2004/07/15/
+   <?php echo sanitize_title("Behaving Myself"); ?>
+Redirect Permanent /blogs/000463.html http://www.zanshin.net/2004/07/10/
+   <?php echo sanitize_title("Overland Park News"); ?>
+Redirect Permanent /blogs/000462.html http://www.zanshin.net/2004/07/09/
+   <?php echo sanitize_title("Eight Hours of Fun"); ?>
+Redirect Permanent /blogs/000460.html http://www.zanshin.net/2004/07/07/
+   <?php echo sanitize_title("Gated"); ?>
+Redirect Permanent /blogs/000459.html http://www.zanshin.net/2004/07/05/
+   <?php echo sanitize_title("50 Communities, 2 States, 1 City"); ?>
+Redirect Permanent /blogs/000458.html http://www.zanshin.net/2004/06/28/
+   <?php echo sanitize_title("99 Day Drought"); ?>
+Redirect Permanent /blogs/000457.html http://www.zanshin.net/2004/06/25/
+   <?php echo sanitize_title("Today Illinois, Tomorrow Kansas"); ?>
+Redirect Permanent /blogs/000456.html http://www.zanshin.net/2004/06/24/
+   <?php echo sanitize_title("Open Doors"); ?>
+Redirect Permanent /blogs/000455.html http://www.zanshin.net/2004/06/18/
+   <?php echo sanitize_title("Letting Go"); ?>
+Redirect Permanent /blogs/000454.html http://www.zanshin.net/2004/06/18/
+   <?php echo sanitize_title("Lies, Damned Lies, and Presidents"); ?>
+Redirect Permanent /blogs/000453.html http://www.zanshin.net/2004/06/17/
+   <?php echo sanitize_title("Justify This"); ?>
+Redirect Permanent /blogs/000452.html http://www.zanshin.net/2004/06/15/
+   <?php echo sanitize_title("Fascism Scorecard"); ?>
+Redirect Permanent /blogs/000451.html http://www.zanshin.net/2004/06/14/
+   <?php echo sanitize_title("Alice's Restaurant"); ?>
+Redirect Permanent /blogs/000450.html http://www.zanshin.net/2004/06/13/
+   <?php echo sanitize_title("Almost Over"); ?>
+Redirect Permanent /blogs/000449.html http://www.zanshin.net/2004/06/12/
+   <?php echo sanitize_title("You Can't Touch This"); ?>
+Redirect Permanent /blogs/000448.html http://www.zanshin.net/2004/06/10/
+   <?php echo sanitize_title("The Plot Thickens"); ?>
+Redirect Permanent /blogs/000447.html http://www.zanshin.net/2004/06/10/
+   <?php echo sanitize_title("A Question of Faith"); ?>
+Redirect Permanent /blogs/000446.html http://www.zanshin.net/2004/06/09/
+   <?php echo sanitize_title("No Apologies"); ?>
+Redirect Permanent /blogs/000445.html http://www.zanshin.net/2004/06/09/
+   <?php echo sanitize_title("35 Screens 15 Movies"); ?>
+Redirect Permanent /blogs/000444.html http://www.zanshin.net/2004/06/09/
+   <?php echo sanitize_title("Apple Lust"); ?>
+Redirect Permanent /blogs/000443.html http://www.zanshin.net/2004/06/07/
+   <?php echo sanitize_title("Fog of War"); ?>
+Redirect Permanent /blogs/000442.html http://www.zanshin.net/2004/06/07/
+   <?php echo sanitize_title("Home Alone"); ?>
+Redirect Permanent /blogs/000441.html http://www.zanshin.net/2004/06/06/
+   <?php echo sanitize_title("Sixty Years Ago Today"); ?>
+Redirect Permanent /blogs/000440.html http://www.zanshin.net/2004/06/05/
+   <?php echo sanitize_title("Hot Water"); ?>
+Redirect Permanent /blogs/000439.html http://www.zanshin.net/2004/06/04/
+   <?php echo sanitize_title("Reason #56 For Using A Mac"); ?>
+Redirect Permanent /blogs/000438.html http://www.zanshin.net/2004/05/31/
+   <?php echo sanitize_title("Revitalized"); ?>
+Redirect Permanent /blogs/000437.html http://www.zanshin.net/2004/05/29/
+   <?php echo sanitize_title("To Powerbook or not to Powerbook"); ?>
+Redirect Permanent /blogs/000436.html http://www.zanshin.net/2004/05/28/
+   <?php echo sanitize_title("Crossroads"); ?>
+Redirect Permanent /blogs/000435.html http://www.zanshin.net/2004/05/26/
+   <?php echo sanitize_title("24 Hours Later"); ?>
+Redirect Permanent /blogs/000434.html http://www.zanshin.net/2004/05/26/
+   <?php echo sanitize_title("Turmoil"); ?>
+Redirect Permanent /blogs/000433.html http://www.zanshin.net/2004/05/25/
+   <?php echo sanitize_title("Into The Rabbit Hole"); ?>
+Redirect Permanent /blogs/000432.html http://www.zanshin.net/2004/05/23/
+   <?php echo sanitize_title("Lexus vs. Sleep Inn"); ?>
+Redirect Permanent /blogs/000431.html http://www.zanshin.net/2004/05/21/
+   <?php echo sanitize_title("Things are starting to happen"); ?>
+Redirect Permanent /blogs/000430.html http://www.zanshin.net/2004/05/08/
+   <?php echo sanitize_title("First Swim"); ?>
+Redirect Permanent /blogs/000429.html http://www.zanshin.net/2004/05/07/
+   <?php echo sanitize_title("Final Straw, Hopefully"); ?>
+Redirect Permanent /blogs/000428.html http://www.zanshin.net/2004/05/06/
+   <?php echo sanitize_title("Forty-Three"); ?>
+Redirect Permanent /blogs/000427.html http://www.zanshin.net/2004/05/06/
+   <?php echo sanitize_title("Seeds of Mass Destruction"); ?>
+Redirect Permanent /blogs/000426.html http://www.zanshin.net/2004/05/05/
+   <?php echo sanitize_title("Siete de Mayo"); ?>
+Redirect Permanent /blogs/000425.html http://www.zanshin.net/2004/05/04/
+   <?php echo sanitize_title("#397"); ?>
+Redirect Permanent /blogs/000424.html http://www.zanshin.net/2004/05/04/
+   <?php echo sanitize_title("Life Goes On"); ?>
+Redirect Permanent /blogs/000423.html http://www.zanshin.net/2004/04/29/
+   <?php echo sanitize_title("Simply Profound"); ?>
+Redirect Permanent /blogs/000422.html http://www.zanshin.net/2004/04/26/
+   <?php echo sanitize_title("When It Rains..."); ?>
+Redirect Permanent /blogs/000421.html http://www.zanshin.net/2004/04/24/
+   <?php echo sanitize_title("Eternal or Everlasting?"); ?>
+Redirect Permanent /blogs/000420.html http://www.zanshin.net/2004/04/23/
+   <?php echo sanitize_title("Kicked In The Teeth"); ?>
+Redirect Permanent /blogs/000419.html http://www.zanshin.net/2004/04/22/
+   <?php echo sanitize_title("865, 14, 5000"); ?>
+Redirect Permanent /blogs/000418.html http://www.zanshin.net/2004/04/20/
+   <?php echo sanitize_title("Be Careful What You Wish For"); ?>
+Redirect Permanent /blogs/000417.html http://www.zanshin.net/2004/04/19/
+   <?php echo sanitize_title("Page 23"); ?>
+Redirect Permanent /blogs/000415.html http://www.zanshin.net/2004/04/16/
+   <?php echo sanitize_title("A Little Faith"); ?>
+Redirect Permanent /blogs/000414.html http://www.zanshin.net/2004/04/14/
+   <?php echo sanitize_title("So Close and Yet So Far Away"); ?>
+Redirect Permanent /blogs/000413.html http://www.zanshin.net/2004/04/09/
+   <?php echo sanitize_title("A Good Day"); ?>
+Redirect Permanent /blogs/000412.html http://www.zanshin.net/2004/04/07/
+   <?php echo sanitize_title("Think Positive"); ?>
+Redirect Permanent /blogs/000411.html http://www.zanshin.net/2004/04/07/
+   <?php echo sanitize_title("Phantom Mail Headers"); ?>
+Redirect Permanent /blogs/000410.html http://www.zanshin.net/2004/04/06/
+   <?php echo sanitize_title("Seen everywhere today, so why not . . . "); ?>
+Redirect Permanent /blogs/000409.html http://www.zanshin.net/2004/04/06/
+   <?php echo sanitize_title("Am I My Job?"); ?>
+Redirect Permanent /blogs/000408.html http://www.zanshin.net/2004/04/05/
+   <?php echo sanitize_title("Bringing It Home"); ?>
+Redirect Permanent /blogs/000407.html http://www.zanshin.net/2004/04/04/
+   <?php echo sanitize_title("Fun with Datetime"); ?>
+Redirect Permanent /blogs/000405.html http://www.zanshin.net/2004/04/03/
+   <?php echo sanitize_title("MT-Blacklist"); ?>
+Redirect Permanent /blogs/000404.html http://www.zanshin.net/2004/04/02/
+   <?php echo sanitize_title("iTunes Play Stats"); ?>
+Redirect Permanent /blogs/000403.html http://www.zanshin.net/2004/04/01/
+   <?php echo sanitize_title("Civility Lost"); ?>
+Redirect Permanent /blogs/000402.html http://www.zanshin.net/2004/03/31/
+   <?php echo sanitize_title("Tinnitus"); ?>
+Redirect Permanent /blogs/000401.html http://www.zanshin.net/2004/03/30/
+   <?php echo sanitize_title("PTSD sucks"); ?>
+Redirect Permanent /blogs/000400.html http://www.zanshin.net/2004/03/30/
+   <?php echo sanitize_title("Defeat"); ?>
+Redirect Permanent /blogs/000399.html http://www.zanshin.net/2004/03/27/
+   <?php echo sanitize_title("Return to Normalcy"); ?>
+Redirect Permanent /blogs/000398.html http://www.zanshin.net/2004/03/26/
+   <?php echo sanitize_title("Slippery Slope"); ?>
+Redirect Permanent /blogs/000396.html http://www.zanshin.net/2004/03/25/
+   <?php echo sanitize_title("Back From The Edge"); ?>
+Redirect Permanent /blogs/000395.html http://www.zanshin.net/2004/03/24/
+   <?php echo sanitize_title("If Only..."); ?>
+Redirect Permanent /blogs/000394.html http://www.zanshin.net/2004/03/22/
+   <?php echo sanitize_title("That Old Familiar (Sinking) Feeling"); ?>
+Redirect Permanent /blogs/000392.html http://www.zanshin.net/2004/03/21/
+   <?php echo sanitize_title("An Apple a Day Keeps the Computer Working"); ?>
+Redirect Permanent /blogs/000391.html http://www.zanshin.net/2004/03/20/
+   <?php echo sanitize_title("Half Dooced"); ?>
+Redirect Permanent /blogs/000390.html http://www.zanshin.net/2004/03/13/
+   <?php echo sanitize_title("The Friday Five"); ?>
+Redirect Permanent /blogs/000389.html http://www.zanshin.net/2004/03/08/
+   <?php echo sanitize_title("Faith"); ?>
+Redirect Permanent /blogs/000388.html http://www.zanshin.net/2004/03/07/
+   <?php echo sanitize_title("New and Improved"); ?>
+Redirect Permanent /blogs/000387.html http://www.zanshin.net/2004/03/05/
+   <?php echo sanitize_title("Survivor Disgrace"); ?>
+Redirect Permanent /blogs/000386.html http://www.zanshin.net/2004/03/02/
+   <?php echo sanitize_title("February Spam"); ?>
+Redirect Permanent /blogs/000385.html http://www.zanshin.net/2004/03/02/
+   <?php echo sanitize_title("The Hernia That Wasn't"); ?>
+Redirect Permanent /blogs/000384.html http://www.zanshin.net/2004/03/01/
+   <?php echo sanitize_title("Tivo and the Oscars"); ?>
+Redirect Permanent /blogs/000383.html http://www.zanshin.net/2004/03/01/
+   <?php echo sanitize_title("Intruder"); ?>
+Redirect Permanent /blogs/000382.html http://www.zanshin.net/2004/02/24/
+   <?php echo sanitize_title("Through the Looking Glass"); ?>
+Redirect Permanent /blogs/000381.html http://www.zanshin.net/2004/02/20/
+   <?php echo sanitize_title("Access Denied"); ?>
+Redirect Permanent /blogs/000380.html http://www.zanshin.net/2004/02/20/
+   <?php echo sanitize_title("Happy Birthday Zanshin"); ?>
+Redirect Permanent /blogs/000379.html http://www.zanshin.net/2004/02/17/
+   <?php echo sanitize_title("Resume Revisited"); ?>
+Redirect Permanent /blogs/000378.html http://www.zanshin.net/2004/02/15/
+   <?php echo sanitize_title("Tivo 2"); ?>
+Redirect Permanent /blogs/000377.html http://www.zanshin.net/2004/02/14/
+   <?php echo sanitize_title("Referer Spam"); ?>
+Redirect Permanent /blogs/000376.html http://www.zanshin.net/2004/02/13/
+   <?php echo sanitize_title("Seven years"); ?>
+Redirect Permanent /blogs/000375.html http://www.zanshin.net/2004/02/10/
+   <?php echo sanitize_title("Betrayal of Trust"); ?>
+Redirect Permanent /blogs/000373.html http://www.zanshin.net/2004/02/08/
+   <?php echo sanitize_title("Same View, New Perspective"); ?>
+Redirect Permanent /blogs/000372.html http://www.zanshin.net/2004/02/08/
+   <?php echo sanitize_title("The Real Problem is Violence Aganst Women"); ?>
+Redirect Permanent /blogs/000371.html http://www.zanshin.net/2004/02/06/
+   <?php echo sanitize_title("Hypocrisy Now"); ?>
+Redirect Permanent /blogs/000370.html http://www.zanshin.net/2004/02/06/
+   <?php echo sanitize_title("Bush Doesn't Care About Us"); ?>
+Redirect Permanent /blogs/000369.html http://www.zanshin.net/2004/02/05/
+   <?php echo sanitize_title("I Couldn't Agree More"); ?>
+Redirect Permanent /blogs/000367.html http://www.zanshin.net/2004/02/01/
+   <?php echo sanitize_title("January Spam"); ?>
+Redirect Permanent /blogs/000368.html http://www.zanshin.net/2004/01/31/
+   <?php echo sanitize_title("How Cold Is It?"); ?>
+Redirect Permanent /blogs/000366.html http://www.zanshin.net/2004/01/30/
+   <?php echo sanitize_title("Oh, The Places I've Been"); ?>
+Redirect Permanent /blogs/000365.html http://www.zanshin.net/2004/01/30/
+   <?php echo sanitize_title("Clever"); ?>
+Redirect Permanent /blogs/000364.html http://www.zanshin.net/2004/01/25/
+   <?php echo sanitize_title("Open book tests"); ?>
+Redirect Permanent /blogs/000363.html http://www.zanshin.net/2004/01/24/
+   <?php echo sanitize_title("A Painful Change"); ?>
+Redirect Permanent /blogs/000362.html http://www.zanshin.net/2004/01/22/
+   <?php echo sanitize_title("N.A.D.D."); ?>
+Redirect Permanent /blogs/000361.html http://www.zanshin.net/2004/01/22/
+   <?php echo sanitize_title("Putting a New Groove On"); ?>
+Redirect Permanent /blogs/000360.html http://www.zanshin.net/2004/01/22/
+   <?php echo sanitize_title("Gay Marriage Poll Gets Annulled"); ?>
+Redirect Permanent /blogs/000359.html http://www.zanshin.net/2004/01/21/
+   <?php echo sanitize_title("No More Monkey"); ?>
+Redirect Permanent /blogs/000358.html http://www.zanshin.net/2004/01/20/
+   <?php echo sanitize_title("CPU Frequency III"); ?>
+Redirect Permanent /blogs/000357.html http://www.zanshin.net/2004/01/18/
+   <?php echo sanitize_title("Easiest. Upgrades. Ever."); ?>
+Redirect Permanent /blogs/000356.html http://www.zanshin.net/2004/01/17/
+   <?php echo sanitize_title("Full Entry RSS Feed"); ?>
+Redirect Permanent /blogs/000355.html http://www.zanshin.net/2004/01/15/
+   <?php echo sanitize_title("Masking errors"); ?>
+Redirect Permanent /blogs/000354.html http://www.zanshin.net/2004/01/14/
+   <?php echo sanitize_title("An "A+" in Customer Service"); ?>
+Redirect Permanent /blogs/000352.html http://www.zanshin.net/2004/01/12/
+   <?php echo sanitize_title("Where Do We Want To Live Today?"); ?>
+Redirect Permanent /blogs/000351.html http://www.zanshin.net/2004/01/11/
+   <?php echo sanitize_title("DVD Menus"); ?>
+Redirect Permanent /blogs/000350.html http://www.zanshin.net/2004/01/11/
+   <?php echo sanitize_title("Horizontal Navigation Bar"); ?>
+Redirect Permanent /blogs/000349.html http://www.zanshin.net/2004/01/09/
+   <?php echo sanitize_title("Who reads Zanshin?"); ?>
+Redirect Permanent /blogs/000348.html http://www.zanshin.net/2004/01/07/
+   <?php echo sanitize_title("My Nerd Quotient"); ?>
+Redirect Permanent /blogs/000347.html http://www.zanshin.net/2004/01/07/
+   <?php echo sanitize_title("Your Own Font"); ?>
+Redirect Permanent /blogs/000346.html http://www.zanshin.net/2004/01/06/
+   <?php echo sanitize_title("Milestone and MacWorld"); ?>
+Redirect Permanent /blogs/000345.html http://www.zanshin.net/2004/01/05/
+   <?php echo sanitize_title("2003, The Year in Spam"); ?>
+Redirect Permanent /blogs/000344.html http://www.zanshin.net/2004/01/05/
+   <?php echo sanitize_title("Bush in 30 Seconds"); ?>
+Redirect Permanent /blogs/000343.html http://www.zanshin.net/2004/01/05/
+   <?php echo sanitize_title("eReading eBooks"); ?>
+Redirect Permanent /blogs/000341.html http://www.zanshin.net/2004/01/01/
+   <?php echo sanitize_title("During January in..."); ?>
+Redirect Permanent /blogs/000340.html http://www.zanshin.net/2003/12/29/
+   <?php echo sanitize_title("Paintballed"); ?>
+Redirect Permanent /blogs/000339.html http://www.zanshin.net/2003/12/29/
+   <?php echo sanitize_title("Five Days of Christmas"); ?>
+Redirect Permanent /blogs/000338.html http://www.zanshin.net/2003/12/24/
+   <?php echo sanitize_title("'Twas The Night Before Christmas"); ?>
+Redirect Permanent /blogs/000337.html http://www.zanshin.net/2003/12/23/
+   <?php echo sanitize_title("The Ideal Son"); ?>
+Redirect Permanent /blogs/000336.html http://www.zanshin.net/2003/12/23/
+   <?php echo sanitize_title("Cast Your Vote"); ?>
+Redirect Permanent /blogs/000335.html http://www.zanshin.net/2003/12/19/
+   <?php echo sanitize_title("Books on my desk"); ?>
+Redirect Permanent /blogs/000334.html http://www.zanshin.net/2003/12/19/
+   <?php echo sanitize_title("Secure E-Mail via ssh"); ?>
+Redirect Permanent /blogs/000333.html http://www.zanshin.net/2003/12/19/
+   <?php echo sanitize_title("Lightness of Being"); ?>
+Redirect Permanent /blogs/000332.html http://www.zanshin.net/2003/12/15/
+   <?php echo sanitize_title("Mark’s Chicken and Yellow Rice ~ Cuban Style"); ?>
+Redirect Permanent /blogs/000331.html http://www.zanshin.net/2003/12/14/
+   <?php echo sanitize_title("Some Tidbits"); ?>
+Redirect Permanent /blogs/000330.html http://www.zanshin.net/2003/12/12/
+   <?php echo sanitize_title("Secrets"); ?>
+Redirect Permanent /blogs/000329.html http://www.zanshin.net/2003/12/09/
+   <?php echo sanitize_title("SpamSieve: Coming Soon To A Mail Box Near Me"); ?>
+Redirect Permanent /blogs/000328.html http://www.zanshin.net/2003/12/08/
+   <?php echo sanitize_title("Brain Persuasion Test"); ?>
+Redirect Permanent /blogs/000327.html http://www.zanshin.net/2003/12/07/
+   <?php echo sanitize_title("Tis The Season"); ?>
+Redirect Permanent /blogs/000326.html http://www.zanshin.net/2003/12/05/
+   <?php echo sanitize_title("Alone in the Wilderness"); ?>
+Redirect Permanent /blogs/000325.html http://www.zanshin.net/2003/12/05/
+   <?php echo sanitize_title("November Spam"); ?>
+Redirect Permanent /blogs/000324.html http://www.zanshin.net/2003/11/30/
+   <?php echo sanitize_title("December 1st ~ World AIDS Day"); ?>
+Redirect Permanent /blogs/000323.html http://www.zanshin.net/2003/11/29/
+   <?php echo sanitize_title("Shotski's Ring"); ?>
+Redirect Permanent /blogs/000322.html http://www.zanshin.net/2003/11/29/
+   <?php echo sanitize_title("I've been Banned from /."); ?>
+Redirect Permanent /blogs/000319.html http://www.zanshin.net/2003/11/28/
+   <?php echo sanitize_title("Back Home Again"); ?>
+Redirect Permanent /blogs/000318.html http://www.zanshin.net/2003/11/26/
+   <?php echo sanitize_title("Life's End"); ?>
+Redirect Permanent /blogs/000317.html http://www.zanshin.net/2003/11/24/
+   <?php echo sanitize_title("Travel Thoughts"); ?>
+Redirect Permanent /blogs/000316.html http://www.zanshin.net/2003/11/23/
+   <?php echo sanitize_title("Hiatus"); ?>
+Redirect Permanent /blogs/000315.html http://www.zanshin.net/2003/11/21/
+   <?php echo sanitize_title("Apple Manifesto"); ?>
+Redirect Permanent /blogs/000314.html http://www.zanshin.net/2003/11/19/
+   <?php echo sanitize_title("Today, in 1863"); ?>
+Redirect Permanent /blogs/000313.html http://www.zanshin.net/2003/11/18/
+   <?php echo sanitize_title("OS X Ware: PDF Browser"); ?>
+Redirect Permanent /blogs/000311.html http://www.zanshin.net/2003/11/17/
+   <?php echo sanitize_title("Zippy I'm Not"); ?>
+Redirect Permanent /blogs/000309.html http://www.zanshin.net/2003/11/15/
+   <?php echo sanitize_title("CPU Frequency II"); ?>
+Redirect Permanent /blogs/000308.html http://www.zanshin.net/2003/11/15/
+   <?php echo sanitize_title("What They Don't Want You To Know"); ?>
+Redirect Permanent /blogs/000306.html http://www.zanshin.net/2003/11/14/
+   <?php echo sanitize_title("Thanks JJ"); ?>
+Redirect Permanent /blogs/000305.html http://www.zanshin.net/2003/11/13/
+   <?php echo sanitize_title("Book of Corporate Life"); ?>
+Redirect Permanent /blogs/000304.html http://www.zanshin.net/2003/11/13/
+   <?php echo sanitize_title("Still The Best Game In Town"); ?>
+Redirect Permanent /blogs/000303.html http://www.zanshin.net/2003/11/12/
+   <?php echo sanitize_title("Benefits of Being Prepared"); ?>
+Redirect Permanent /blogs/000301.html http://www.zanshin.net/2003/11/12/
+   <?php echo sanitize_title("Three Boats and a Helicopter"); ?>
+Redirect Permanent /blogs/000300.html http://www.zanshin.net/2003/11/11/
+   <?php echo sanitize_title("Whoa. I have seen the Revolution"); ?>
+Redirect Permanent /blogs/000299.html http://www.zanshin.net/2003/11/10/
+   <?php echo sanitize_title("Bottomless Pit"); ?>
+Redirect Permanent /blogs/000298.html http://www.zanshin.net/2003/11/09/
+   <?php echo sanitize_title("Site redesign"); ?>
+Redirect Permanent /blogs/000297.html http://www.zanshin.net/2003/11/09/
+   <?php echo sanitize_title("Yet Another Reason Not To Support G. W. "); ?>
+Redirect Permanent /blogs/000296.html http://www.zanshin.net/2003/11/08/
+   <?php echo sanitize_title("CPU Frequency"); ?>
+Redirect Permanent /blogs/000295.html http://www.zanshin.net/2003/11/06/
+   <?php echo sanitize_title("October Spam"); ?>
+Redirect Permanent /blogs/000294.html http://www.zanshin.net/2003/11/05/
+   <?php echo sanitize_title("8,400,000,000 Miles To Home"); ?>
+Redirect Permanent /blogs/000293.html http://www.zanshin.net/2003/11/03/
+   <?php echo sanitize_title("A Day of Cooking"); ?>
+Redirect Permanent /blogs/000291.html http://www.zanshin.net/2003/10/23/
+   <?php echo sanitize_title("Celebrating Amy"); ?>
+Redirect Permanent /blogs/000290.html http://www.zanshin.net/2003/10/20/
+   <?php echo sanitize_title("ssh, part II"); ?>
+Redirect Permanent /blogs/000289.html http://www.zanshin.net/2003/10/14/
+   <?php echo sanitize_title("Domino Theory of Interior Decorating"); ?>
+Redirect Permanent /blogs/000288.html http://www.zanshin.net/2003/10/13/
+   <?php echo sanitize_title("Saturday and Sunday"); ?>
+Redirect Permanent /blogs/000287.html http://www.zanshin.net/2003/10/09/
+   <?php echo sanitize_title("Menu bar meme"); ?>
+Redirect Permanent /blogs/000286.html http://www.zanshin.net/2003/10/09/
+   <?php echo sanitize_title("September Spam"); ?>
+Redirect Permanent /blogs/000285.html http://www.zanshin.net/2003/10/07/
+   <?php echo sanitize_title("No Truck = No TV"); ?>
+Redirect Permanent /blogs/000284.html http://www.zanshin.net/2003/10/06/
+   <?php echo sanitize_title("Consumer Rights"); ?>
+Redirect Permanent /blogs/000283.html http://www.zanshin.net/2003/10/06/
+   <?php echo sanitize_title("Sexie"); ?>
+Redirect Permanent /blogs/000282.html http://www.zanshin.net/2003/10/06/
+   <?php echo sanitize_title("A Vacation, Not A Trip"); ?>
+Redirect Permanent /blogs/000281.html http://www.zanshin.net/2003/10/01/
+   <?php echo sanitize_title("What's Up, Dock"); ?>
+Redirect Permanent /blogs/000279.html http://www.zanshin.net/2003/09/25/
+   <?php echo sanitize_title("Pez-heads"); ?>
+Redirect Permanent /blogs/000277.html http://www.zanshin.net/2003/09/25/
+   <?php echo sanitize_title("Wisdom from Molly Ivins"); ?>
+Redirect Permanent /blogs/000274.html http://www.zanshin.net/2003/09/16/
+   <?php echo sanitize_title("How Do You Spell Relief?"); ?>
+Redirect Permanent /blogs/000273.html http://www.zanshin.net/2003/09/16/
+   <?php echo sanitize_title("Walking Directions from the Shire to Mordor"); ?>
+Redirect Permanent /blogs/000272.html http://www.zanshin.net/2003/09/16/
+   <?php echo sanitize_title("Sometimes I Don't Tease Well"); ?>
+Redirect Permanent /blogs/000271.html http://www.zanshin.net/2003/09/15/
+   <?php echo sanitize_title("Where Are We Going?"); ?>
+Redirect Permanent /blogs/000270.html http://www.zanshin.net/2003/09/14/
+   <?php echo sanitize_title("What is at stake"); ?>
+Redirect Permanent /blogs/000269.html http://www.zanshin.net/2003/09/11/
+   <?php echo sanitize_title("Emotional Tupperware"); ?>
+Redirect Permanent /blogs/000268.html http://www.zanshin.net/2003/09/09/
+   <?php echo sanitize_title("Opus blooms again"); ?>
+Redirect Permanent /blogs/000267.html http://www.zanshin.net/2003/09/09/
+   <?php echo sanitize_title("i(Multi-Protocol)Chat"); ?>
+Redirect Permanent /blogs/000266.html http://www.zanshin.net/2003/09/08/
+   <?php echo sanitize_title("D'Oh!"); ?>
+Redirect Permanent /blogs/000265.html http://www.zanshin.net/2003/09/08/
+   <?php echo sanitize_title("Expressing Anger"); ?>
+Redirect Permanent /blogs/000264.html http://www.zanshin.net/2003/09/08/
+   <?php echo sanitize_title("Camino Revisited"); ?>
+Redirect Permanent /blogs/000263.html http://www.zanshin.net/2003/09/07/
+   <?php echo sanitize_title("Perfect Weekend"); ?>
+Redirect Permanent /blogs/000262.html http://www.zanshin.net/2003/09/07/
+   <?php echo sanitize_title("Oddly Appealing"); ?>
+Redirect Permanent /blogs/000261.html http://www.zanshin.net/2003/09/07/
+   <?php echo sanitize_title("My Life"); ?>
+Redirect Permanent /blogs/000260.html http://www.zanshin.net/2003/09/06/
+   <?php echo sanitize_title("True Rest"); ?>
+Redirect Permanent /blogs/000259.html http://www.zanshin.net/2003/09/06/
+   <?php echo sanitize_title("A Different Kind of Love Story"); ?>
+Redirect Permanent /blogs/000258.html http://www.zanshin.net/2003/09/05/
+   <?php echo sanitize_title("August Spam"); ?>
+Redirect Permanent /blogs/000256.html http://www.zanshin.net/2003/08/26/
+   <?php echo sanitize_title("This is Just Wrong"); ?>
+Redirect Permanent /blogs/000255.html http://www.zanshin.net/2003/08/26/
+   <?php echo sanitize_title("All your Sanity are belong to us!"); ?>
+Redirect Permanent /blogs/000254.html http://www.zanshin.net/2003/08/25/
+   <?php echo sanitize_title("Leaky Technology"); ?>
+Redirect Permanent /blogs/000253.html http://www.zanshin.net/2003/08/22/
+   <?php echo sanitize_title("Up For Three Weeks"); ?>
+Redirect Permanent /blogs/000251.html http://www.zanshin.net/2003/08/19/
+   <?php echo sanitize_title("Personal FUD"); ?>
+Redirect Permanent /blogs/000250.html http://www.zanshin.net/2003/08/13/
+   <?php echo sanitize_title("Spin Out of Control"); ?>
+Redirect Permanent /blogs/000249.html http://www.zanshin.net/2003/08/13/
+   <?php echo sanitize_title("It's All Good"); ?>
+Redirect Permanent /blogs/000248.html http://www.zanshin.net/2003/08/11/
+   <?php echo sanitize_title("According to Plan"); ?>
+Redirect Permanent /blogs/000247.html http://www.zanshin.net/2003/08/11/
+   <?php echo sanitize_title("Financial Roller Coaster with Emotional Payout"); ?>
+Redirect Permanent /blogs/000246.html http://www.zanshin.net/2003/08/11/
+   <?php echo sanitize_title("July Spam"); ?>
+Redirect Permanent /blogs/000245.html http://www.zanshin.net/2003/08/08/
+   <?php echo sanitize_title("Domino Effect"); ?>
+Redirect Permanent /blogs/000244.html http://www.zanshin.net/2003/08/08/
+   <?php echo sanitize_title("Everything be everything"); ?>
+Redirect Permanent /blogs/000243.html http://www.zanshin.net/2003/07/31/
+   <?php echo sanitize_title("Eeyore Gets A New Tail"); ?>
+Redirect Permanent /blogs/000242.html http://www.zanshin.net/2003/07/28/
+   <?php echo sanitize_title("Refer madness"); ?>
+Redirect Permanent /blogs/000241.html http://www.zanshin.net/2003/07/25/
+   <?php echo sanitize_title("Browse Like It's 1995"); ?>
+Redirect Permanent /blogs/000239.html http://www.zanshin.net/2003/07/22/
+   <?php echo sanitize_title("FUD"); ?>
+Redirect Permanent /blogs/000238.html http://www.zanshin.net/2003/07/21/
+   <?php echo sanitize_title("Enlightenment"); ?>
+Redirect Permanent /blogs/000237.html http://www.zanshin.net/2003/07/21/
+   <?php echo sanitize_title("Mirror, Mirror"); ?>
+Redirect Permanent /blogs/000235.html http://www.zanshin.net/2003/07/18/
+   <?php echo sanitize_title("Currently Enjoying..."); ?>
+Redirect Permanent /blogs/000233.html http://www.zanshin.net/2003/07/18/
+   <?php echo sanitize_title("Revisionist"); ?>
+Redirect Permanent /blogs/000232.html http://www.zanshin.net/2003/07/17/
+   <?php echo sanitize_title("ssh!"); ?>
+Redirect Permanent /blogs/000231.html http://www.zanshin.net/2003/07/15/
+   <?php echo sanitize_title("Brother, Can You Spare a Job"); ?>
+Redirect Permanent /blogs/000230.html http://www.zanshin.net/2003/07/14/
+   <?php echo sanitize_title("1 AM Thoughts"); ?>
+Redirect Permanent /blogs/000229.html http://www.zanshin.net/2003/07/11/
+   <?php echo sanitize_title("What A Difference A Day Makes"); ?>
+Redirect Permanent /blogs/000228.html http://www.zanshin.net/2003/07/08/
+   <?php echo sanitize_title("Bits and Bytes"); ?>
+Redirect Permanent /blogs/000226.html http://www.zanshin.net/2003/07/01/
+   <?php echo sanitize_title("Default Mode"); ?>
+Redirect Permanent /blogs/000222.html http://www.zanshin.net/2003/06/30/
+   <?php echo sanitize_title("A Good Cry"); ?>
+Redirect Permanent /blogs/000221.html http://www.zanshin.net/2003/06/30/
+   <?php echo sanitize_title("June Spam"); ?>
+Redirect Permanent /blogs/000220.html http://www.zanshin.net/2003/06/26/
+   <?php echo sanitize_title("How Do I Vote For This Man?"); ?>
+Redirect Permanent /blogs/000219.html http://www.zanshin.net/2003/06/24/
+   <?php echo sanitize_title("An Apple A Day..."); ?>
+Redirect Permanent /blogs/000218.html http://www.zanshin.net/2003/06/21/
+   <?php echo sanitize_title("Apple PowerMac G5"); ?>
+Redirect Permanent /blogs/000217.html http://www.zanshin.net/2003/06/20/
+   <?php echo sanitize_title("Hoisted on his own petard"); ?>
+Redirect Permanent /blogs/000216.html http://www.zanshin.net/2003/06/19/
+   <?php echo sanitize_title("A Sordid Tale"); ?>
+Redirect Permanent /blogs/000212.html http://www.zanshin.net/2003/06/17/
+   <?php echo sanitize_title("Ecstasy and Agony"); ?>
+Redirect Permanent /blogs/000211.html http://www.zanshin.net/2003/06/13/
+   <?php echo sanitize_title("Toxicity"); ?>
+Redirect Permanent /blogs/000210.html http://www.zanshin.net/2003/06/10/
+   <?php echo sanitize_title("Emotional Toll"); ?>
+Redirect Permanent /blogs/000209.html http://www.zanshin.net/2003/06/10/
+   <?php echo sanitize_title("iMainframe"); ?>
+Redirect Permanent /blogs/000208.html http://www.zanshin.net/2003/06/09/
+   <?php echo sanitize_title("Crisis of Faith"); ?>
+Redirect Permanent /blogs/000207.html http://www.zanshin.net/2003/06/06/
+   <?php echo sanitize_title("And If You Did Know"); ?>
+Redirect Permanent /blogs/000206.html http://www.zanshin.net/2003/06/04/
+   <?php echo sanitize_title("Dinkus"); ?>
+Redirect Permanent /blogs/000205.html http://www.zanshin.net/2003/06/02/
+   <?php echo sanitize_title("Moving Towards My Emotional Center"); ?>
+Redirect Permanent /blogs/000204.html http://www.zanshin.net/2003/06/01/
+   <?php echo sanitize_title("In the Beginning..."); ?>
+Redirect Permanent /blogs/000203.html http://www.zanshin.net/2003/05/29/
+   <?php echo sanitize_title("Eddie"); ?>
+Redirect Permanent /blogs/000202.html http://www.zanshin.net/2003/05/28/
+   <?php echo sanitize_title("Job Searching"); ?>
+Redirect Permanent /blogs/000201.html http://www.zanshin.net/2003/05/23/
+   <?php echo sanitize_title("And the Truth Shall Set Us Free"); ?>
+Redirect Permanent /blogs/000200.html http://www.zanshin.net/2003/05/16/
+   <?php echo sanitize_title("What Lies Underneath"); ?>
+Redirect Permanent /blogs/000198.html http://www.zanshin.net/2003/05/14/
+   <?php echo sanitize_title("1.44 Songs Per Second"); ?>
+Redirect Permanent /blogs/000197.html http://www.zanshin.net/2003/05/14/
+   <?php echo sanitize_title("This Space Not Intentionally Left Blank"); ?>
+Redirect Permanent /blogs/000196.html http://www.zanshin.net/2003/05/13/
+   <?php echo sanitize_title("Blind As A Bat"); ?>
+Redirect Permanent /blogs/000195.html http://www.zanshin.net/2003/05/12/
+   <?php echo sanitize_title("Gizmodo Mention"); ?>
+Redirect Permanent /blogs/000194.html http://www.zanshin.net/2003/05/11/
+   <?php echo sanitize_title("Happy Mother's Day"); ?>
+Redirect Permanent /blogs/000193.html http://www.zanshin.net/2003/05/11/
+   <?php echo sanitize_title("Revamped"); ?>
+Redirect Permanent /blogs/000192.html http://www.zanshin.net/2003/05/08/
+   <?php echo sanitize_title("Professional Geek"); ?>
+Redirect Permanent /blogs/000191.html http://www.zanshin.net/2003/04/30/
+   <?php echo sanitize_title("iTunes 4, Music Store, and Album Artwork"); ?>
+Redirect Permanent /blogs/000190.html http://www.zanshin.net/2003/04/25/
+   <?php echo sanitize_title("Emotional Piggy Bank"); ?>
+Redirect Permanent /blogs/000189.html http://www.zanshin.net/2003/04/21/
+   <?php echo sanitize_title("On Gifts: Given and Received"); ?>
+Redirect Permanent /blogs/000188.html http://www.zanshin.net/2003/04/21/
+   <?php echo sanitize_title("Revolution is Not an AOL Keyword"); ?>
+Redirect Permanent /blogs/000187.html http://www.zanshin.net/2003/04/20/
+   <?php echo sanitize_title("Countering a Wave of Hate"); ?>
+Redirect Permanent /blogs/000186.html http://www.zanshin.net/2003/04/18/
+   <?php echo sanitize_title("Can you say "Oops?""); ?>
+Redirect Permanent /blogs/000185.html http://www.zanshin.net/2003/04/17/
+   <?php echo sanitize_title("Enigmo"); ?>
+Redirect Permanent /blogs/000184.html http://www.zanshin.net/2003/04/13/
+   <?php echo sanitize_title("The Perfect Weekend"); ?>
+Redirect Permanent /blogs/000183.html http://www.zanshin.net/2003/04/12/
+   <?php echo sanitize_title("The Enemy That is Me"); ?>
+Redirect Permanent /blogs/000182.html http://www.zanshin.net/2003/04/11/
+   <?php echo sanitize_title("The Matrix Reloaded Trailer Released"); ?>
+Redirect Permanent /blogs/000181.html http://www.zanshin.net/2003/04/10/
+   <?php echo sanitize_title("Chicken Little"); ?>
+Redirect Permanent /blogs/000180.html http://www.zanshin.net/2003/04/09/
+   <?php echo sanitize_title("Patriotism"); ?>
+Redirect Permanent /blogs/000179.html http://www.zanshin.net/2003/04/08/
+   <?php echo sanitize_title("Dominos Falling"); ?>
+Redirect Permanent /blogs/000178.html http://www.zanshin.net/2003/04/07/
+   <?php echo sanitize_title("Dealing With My Addiction"); ?>
+Redirect Permanent /blogs/000177.html http://www.zanshin.net/2003/04/06/
+   <?php echo sanitize_title("Playing with CSS"); ?>
+Redirect Permanent /blogs/000176.html http://www.zanshin.net/2003/04/02/
+   <?php echo sanitize_title("Name Dropping"); ?>
+Redirect Permanent /blogs/000175.html http://www.zanshin.net/2003/04/02/
+   <?php echo sanitize_title("Fears"); ?>
+Redirect Permanent /blogs/000174.html http://www.zanshin.net/2003/04/02/
+   <?php echo sanitize_title("My Understanding"); ?>
+Redirect Permanent /blogs/000173.html http://www.zanshin.net/2003/04/01/
+   <?php echo sanitize_title("More Accountability"); ?>
+Redirect Permanent /blogs/000172.html http://www.zanshin.net/2003/03/31/
+   <?php echo sanitize_title("Accountability"); ?>
+Redirect Permanent /blogs/000171.html http://www.zanshin.net/2003/03/29/
+   <?php echo sanitize_title("A New Cat, Perhaps?"); ?>
+Redirect Permanent /blogs/000170.html http://www.zanshin.net/2003/03/28/
+   <?php echo sanitize_title("The War for Cell Phones"); ?>
+Redirect Permanent /blogs/000169.html http://www.zanshin.net/2003/03/25/
+   <?php echo sanitize_title("WOMD"); ?>
+Redirect Permanent /blogs/000168.html http://www.zanshin.net/2003/03/25/
+   <?php echo sanitize_title("Declaration of Conscience"); ?>
+Redirect Permanent /blogs/000167.html http://www.zanshin.net/2003/03/25/
+   <?php echo sanitize_title("Still Raw"); ?>
+Redirect Permanent /blogs/000166.html http://www.zanshin.net/2003/03/24/
+   <?php echo sanitize_title("Fictitious Times"); ?>
+Redirect Permanent /blogs/000165.html http://www.zanshin.net/2003/03/23/
+   <?php echo sanitize_title("Life Goes On"); ?>
+Redirect Permanent /blogs/000164.html http://www.zanshin.net/2003/03/22/
+   <?php echo sanitize_title("A New Look"); ?>
+Redirect Permanent /blogs/000163.html http://www.zanshin.net/2003/03/21/
+   <?php echo sanitize_title("The Morning After"); ?>
+Redirect Permanent /blogs/000162.html http://www.zanshin.net/2003/03/20/
+   <?php echo sanitize_title("Abby Normal McAvoy Nichols"); ?>
+Redirect Permanent /blogs/000161.html http://www.zanshin.net/2003/03/20/
+   <?php echo sanitize_title("The Hardest Thing I've Ever Done"); ?>
+Redirect Permanent /blogs/000160.html http://www.zanshin.net/2003/03/16/
+   <?php echo sanitize_title("Iraq, Terrorism, and Patriot Act II"); ?>
+Redirect Permanent /blogs/000159.html http://www.zanshin.net/2003/03/12/
+   <?php echo sanitize_title("Different Yet the Same"); ?>
+Redirect Permanent /blogs/000158.html http://www.zanshin.net/2003/03/07/
+   <?php echo sanitize_title("OS X: Address book vs. Palm OS 4 Address"); ?>
+Redirect Permanent /blogs/000157.html http://www.zanshin.net/2003/03/06/
+   <?php echo sanitize_title("Refer"); ?>
+Redirect Permanent /blogs/000156.html http://www.zanshin.net/2003/03/05/
+   <?php echo sanitize_title("Monopoly Money"); ?>
+Redirect Permanent /blogs/000155.html http://www.zanshin.net/2003/03/05/
+   <?php echo sanitize_title("Friday Five: Literature"); ?>
+Redirect Permanent /blogs/000115.html http://www.zanshin.net/2003/03/04/
+   <?php echo sanitize_title("Rewriting History"); ?>
+Redirect Permanent /blogs/000113.html http://www.zanshin.net/2003/03/03/
+   <?php echo sanitize_title("Static"); ?>
+Redirect Permanent /blogs/000112.html http://www.zanshin.net/2003/03/03/
+   <?php echo sanitize_title("Of Investments, Emotional and Otherwise"); ?>
+Redirect Permanent /blogs/000111.html http://www.zanshin.net/2003/02/28/
+   <?php echo sanitize_title("I'm A Big Dopey"); ?>
+Redirect Permanent /blogs/000110.html http://www.zanshin.net/2003/02/27/
+   <?php echo sanitize_title("Embarrassment"); ?>
+Redirect Permanent /blogs/000109.html http://www.zanshin.net/2003/02/25/
+   <?php echo sanitize_title("iSync, Proteus, and Safari"); ?>
+Redirect Permanent /blogs/000108.html http://www.zanshin.net/2003/02/24/
+   <?php echo sanitize_title("Abby Normal"); ?>
+Redirect Permanent /blogs/000107.html http://www.zanshin.net/2003/02/23/
+   <?php echo sanitize_title("Site cleaning"); ?>
+Redirect Permanent /blogs/000106.html http://www.zanshin.net/2003/02/22/
+   <?php echo sanitize_title("You Need To Read This"); ?>
+Redirect Permanent /blogs/000105.html http://www.zanshin.net/2003/02/18/
+   <?php echo sanitize_title("Total Waste of Time"); ?>
+Redirect Permanent /blogs/000104.html http://www.zanshin.net/2003/02/18/
+   <?php echo sanitize_title("Family Business"); ?>
+Redirect Permanent /blogs/000103.html http://www.zanshin.net/2003/02/11/
+   <?php echo sanitize_title("STS-107, Space Shuttle Columbia, February 1, 2003"); ?>
+Redirect Permanent /blogs/000101.html http://www.zanshin.net/2003/02/09/
+   <?php echo sanitize_title("Creative Commons"); ?>
+Redirect Permanent /blogs/000100.html http://www.zanshin.net/2003/02/08/
+   <?php echo sanitize_title("Uptime"); ?>
+Redirect Permanent /blogs/000099.html http://www.zanshin.net/2003/02/05/
+   <?php echo sanitize_title("A Different Kind of Switch"); ?>
+Redirect Permanent /blogs/000098.html http://www.zanshin.net/2003/02/03/
+   <?php echo sanitize_title("HotSync Woes"); ?>
+Redirect Permanent /blogs/000097.html http://www.zanshin.net/2003/01/29/
+   <?php echo sanitize_title("Working on the Bubble"); ?>
+Redirect Permanent /blogs/000096.html http://www.zanshin.net/2003/01/28/
+   <?php echo sanitize_title("Of Live's Little Curves"); ?>
+Redirect Permanent /blogs/000095.html http://www.zanshin.net/2003/01/27/
+   <?php echo sanitize_title("Escrow Scam"); ?>
+Redirect Permanent /blogs/000094.html http://www.zanshin.net/2003/01/19/
+   <?php echo sanitize_title("Two Computers In One"); ?>
+Redirect Permanent /blogs/000093.html http://www.zanshin.net/2003/01/19/
+   <?php echo sanitize_title("The Switch Continues"); ?>
+Redirect Permanent /blogs/000092.html http://www.zanshin.net/2003/01/19/
+   <?php echo sanitize_title("No more keys"); ?>
+Redirect Permanent /blogs/000091.html http://www.zanshin.net/2003/01/16/
+   <?php echo sanitize_title("The Switch Is On"); ?>
+Redirect Permanent /blogs/000090.html http://www.zanshin.net/2003/01/10/
+   <?php echo sanitize_title("New Math"); ?>
+Redirect Permanent /blogs/000089.html http://www.zanshin.net/2003/01/08/
+   <?php echo sanitize_title("My Head is Noisy Today"); ?>
+Redirect Permanent /blogs/000088.html http://www.zanshin.net/2003/01/07/
+   <?php echo sanitize_title("You Can Never Go Home Again"); ?>
+Redirect Permanent /blogs/000087.html http://www.zanshin.net/2003/01/07/
+   <?php echo sanitize_title("Rye Bread"); ?>
+Redirect Permanent /blogs/000086.html http://www.zanshin.net/2003/01/06/
+   <?php echo sanitize_title("Travelogue"); ?>
+Redirect Permanent /blogs/000085.html http://www.zanshin.net/2003/01/06/
+   <?php echo sanitize_title("Rejection"); ?>
+Redirect Permanent /blogs/000084.html http://www.zanshin.net/2003/01/05/
+   <?php echo sanitize_title("Same Signal, More Noise"); ?>
+Redirect Permanent /blogs/000083.html http://www.zanshin.net/2003/01/03/
+   <?php echo sanitize_title("Winter Cold"); ?>
+Redirect Permanent /blogs/000082.html http://www.zanshin.net/2003/01/01/
+   <?php echo sanitize_title("Signal to Noise"); ?>
+Redirect Permanent /blogs/000081.html http://www.zanshin.net/2002/12/30/
+   <?php echo sanitize_title("Home Again"); ?>
+Redirect Permanent /blogs/000080.html http://www.zanshin.net/2002/12/24/
+   <?php echo sanitize_title("Christmas on the High Seas"); ?>
+Redirect Permanent /blogs/000079.html http://www.zanshin.net/2002/12/19/
+   <?php echo sanitize_title("New Trip Paradigm"); ?>
+Redirect Permanent /blogs/000078.html http://www.zanshin.net/2002/12/16/
+   <?php echo sanitize_title("Yuletide Anger"); ?>
+Redirect Permanent /blogs/000077.html http://www.zanshin.net/2002/12/16/
+   <?php echo sanitize_title("Bowling For Columbine"); ?>
+Redirect Permanent /blogs/000076.html http://www.zanshin.net/2002/12/12/
+   <?php echo sanitize_title("Personal Responsibility"); ?>
+Redirect Permanent /blogs/000075.html http://www.zanshin.net/2002/12/10/
+   <?php echo sanitize_title("This is Just Sad"); ?>
+Redirect Permanent /blogs/000074.html http://www.zanshin.net/2002/12/09/
+   <?php echo sanitize_title("Wonderful Weekend"); ?>
+Redirect Permanent /blogs/000073.html http://www.zanshin.net/2002/12/03/
+   <?php echo sanitize_title("The Need To Teach"); ?>
+Redirect Permanent /blogs/000072.html http://www.zanshin.net/2002/11/26/
+   <?php echo sanitize_title("Giving Thanks"); ?>
+Redirect Permanent /blogs/000071.html http://www.zanshin.net/2002/11/24/
+   <?php echo sanitize_title("Another Reason to Switch"); ?>
+Redirect Permanent /blogs/000070.html http://www.zanshin.net/2002/11/19/
+   <?php echo sanitize_title("Emotional Reset"); ?>
+Redirect Permanent /blogs/000069.html http://www.zanshin.net/2002/11/18/
+   <?php echo sanitize_title("Foot in Mouth Disease"); ?>
+Redirect Permanent /blogs/000068.html http://www.zanshin.net/2002/11/18/
+   <?php echo sanitize_title("Incredible Weekend"); ?>
+Redirect Permanent /blogs/000067.html http://www.zanshin.net/2002/11/13/
+   <?php echo sanitize_title("Reluctance"); ?>
+Redirect Permanent /blogs/000066.html http://www.zanshin.net/2002/11/13/
+   <?php echo sanitize_title("Pseudo Digital Clock"); ?>
+Redirect Permanent /blogs/000065.html http://www.zanshin.net/2002/11/11/
+   <?php echo sanitize_title("404 Errors"); ?>
+Redirect Permanent /blogs/000064.html http://www.zanshin.net/2002/11/07/
+   <?php echo sanitize_title("The Perfect Meal"); ?>
+Redirect Permanent /blogs/000063.html http://www.zanshin.net/2002/11/06/
+   <?php echo sanitize_title("Random Bits"); ?>
+Redirect Permanent /blogs/000062.html http://www.zanshin.net/2002/11/04/
+   <?php echo sanitize_title("Now on your right..."); ?>
+Redirect Permanent /blogs/000061.html http://www.zanshin.net/2002/11/04/
+   <?php echo sanitize_title("The Need To Work"); ?>
+Redirect Permanent /blogs/000060.html http://www.zanshin.net/2002/11/03/
+   <?php echo sanitize_title("Windows XP Professional"); ?>
+Redirect Permanent /blogs/000059.html http://www.zanshin.net/2002/10/29/
+   <?php echo sanitize_title("More Techno Lust"); ?>
+Redirect Permanent /blogs/000058.html http://www.zanshin.net/2002/10/24/
+   <?php echo sanitize_title("Little Things That Bug Me"); ?>
+Redirect Permanent /blogs/000057.html http://www.zanshin.net/2002/10/23/
+   <?php echo sanitize_title("Something Money Can't Buy"); ?>
+Redirect Permanent /blogs/000056.html http://www.zanshin.net/2002/10/15/
+   <?php echo sanitize_title("Nobel Peace Price for 2002 ~ Jimmy Carter"); ?>
+Redirect Permanent /blogs/000055.html http://www.zanshin.net/2002/10/08/
+   <?php echo sanitize_title("So tired of it all"); ?>
+Redirect Permanent /blogs/000054.html http://www.zanshin.net/2002/10/08/
+   <?php echo sanitize_title("Feeling ADD"); ?>
+Redirect Permanent /blogs/000053.html http://www.zanshin.net/2002/10/07/
+   <?php echo sanitize_title("10 Tips for Online Auctions"); ?>
+Redirect Permanent /blogs/000052.html http://www.zanshin.net/2002/10/06/
+   <?php echo sanitize_title("Inclusion"); ?>
+Redirect Permanent /blogs/000051.html http://www.zanshin.net/2002/10/01/
+   <?php echo sanitize_title("Coming Soon"); ?>
+Redirect Permanent /blogs/000050.html http://www.zanshin.net/2002/09/30/
+   <?php echo sanitize_title("Paralyzed"); ?>
+Redirect Permanent /blogs/000049.html http://www.zanshin.net/2002/09/23/
+   <?php echo sanitize_title("Of Paradigms"); ?>
+Redirect Permanent /blogs/000048.html http://www.zanshin.net/2002/09/21/
+   <?php echo sanitize_title("Inner Turmoil"); ?>
+Redirect Permanent /blogs/000047.html http://www.zanshin.net/2002/09/18/
+   <?php echo sanitize_title("Kiss of Death"); ?>
+Redirect Permanent /blogs/000046.html http://www.zanshin.net/2002/09/16/
+   <?php echo sanitize_title("Gut Instinct"); ?>
+Redirect Permanent /blogs/000045.html http://www.zanshin.net/2002/09/16/
+   <?php echo sanitize_title("A Drink of Water"); ?>
+Redirect Permanent /blogs/000044.html http://www.zanshin.net/2002/09/15/
+   <?php echo sanitize_title("Indecision"); ?>
+Redirect Permanent /blogs/000043.html http://www.zanshin.net/2002/09/13/
+   <?php echo sanitize_title("Momentary Lapse of Reason"); ?>
+Redirect Permanent /blogs/000042.html http://www.zanshin.net/2002/09/10/
+   <?php echo sanitize_title("In a land before time"); ?>
+Redirect Permanent /blogs/000041.html http://www.zanshin.net/2002/09/10/
+   <?php echo sanitize_title("Emotional Roller Coaster"); ?>
+Redirect Permanent /blogs/000040.html http://www.zanshin.net/2002/08/29/
+   <?php echo sanitize_title("100 Things About Me"); ?>
+Redirect Permanent /blogs/000039.html http://www.zanshin.net/2002/08/26/
+   <?php echo sanitize_title("Nothing really"); ?>
+Redirect Permanent /blogs/000038.html http://www.zanshin.net/2002/08/15/
+   <?php echo sanitize_title("ADD"); ?>
+Redirect Permanent /blogs/000037.html http://www.zanshin.net/2002/08/12/
+   <?php echo sanitize_title("New Understanding"); ?>
+Redirect Permanent /blogs/000036.html http://www.zanshin.net/2002/08/10/
+   <?php echo sanitize_title("<a href="http://http://scruples.phoxxe.com/">Saturday Scruples</a>"); ?>
+Redirect Permanent /blogs/000035.html http://www.zanshin.net/2002/08/10/
+   <?php echo sanitize_title("<a href="http://fridayfive.org">Friday Five</a>"); ?>
+Redirect Permanent /blogs/000034.html http://www.zanshin.net/2002/08/08/
+   <?php echo sanitize_title("Courage"); ?>
+Redirect Permanent /blogs/000033.html http://www.zanshin.net/2002/08/06/
+   <?php echo sanitize_title("Depression"); ?>
+Redirect Permanent /blogs/000032.html http://www.zanshin.net/2002/08/05/
+   <?php echo sanitize_title("Realizations"); ?>
+Redirect Permanent /blogs/000031.html http://www.zanshin.net/2002/08/04/
+   <?php echo sanitize_title("Friday Five"); ?>
+Redirect Permanent /blogs/000030.html http://www.zanshin.net/2002/07/29/
+   <?php echo sanitize_title("Emotionally Crippled"); ?>
+Redirect Permanent /blogs/000029.html http://www.zanshin.net/2002/07/29/
+   <?php echo sanitize_title("Amazing Weekend"); ?>
+Redirect Permanent /blogs/000028.html http://www.zanshin.net/2002/07/26/
+   <?php echo sanitize_title("Mucking Around"); ?>
+Redirect Permanent /blogs/000027.html http://www.zanshin.net/2002/07/25/
+   <?php echo sanitize_title("This and that"); ?>
+Redirect Permanent /blogs/000026.html http://www.zanshin.net/2002/07/22/
+   <?php echo sanitize_title("Depressive State"); ?>
+Redirect Permanent /blogs/000025.html http://www.zanshin.net/2002/07/19/
+   <?php echo sanitize_title("I thought it was funny..."); ?>
+Redirect Permanent /blogs/000024.html http://www.zanshin.net/2002/07/18/
+   <?php echo sanitize_title("On the Bubble"); ?>
+Redirect Permanent /blogs/000023.html http://www.zanshin.net/2002/07/16/
+   <?php echo sanitize_title("Being In Truth"); ?>
+Redirect Permanent /blogs/000022.html http://www.zanshin.net/2002/07/15/
+   <?php echo sanitize_title("Lack of Service"); ?>
+Redirect Permanent /blogs/000021.html http://www.zanshin.net/2002/07/15/
+   <?php echo sanitize_title("Creative Frustration"); ?>
+Redirect Permanent /blogs/000020.html http://www.zanshin.net/2002/07/12/
+   <?php echo sanitize_title("Jealousy"); ?>
+Redirect Permanent /blogs/000019.html http://www.zanshin.net/2002/07/12/
+   <?php echo sanitize_title("Two Steps Forward"); ?>
+Redirect Permanent /blogs/000018.html http://www.zanshin.net/2002/07/11/
+   <?php echo sanitize_title("MIB II"); ?>
+Redirect Permanent /blogs/000017.html http://www.zanshin.net/2002/07/09/
+   <?php echo sanitize_title("Moveable Type"); ?>
+Redirect Permanent /blogs/000016.html http://www.zanshin.net/2002/06/20/
+   <?php echo sanitize_title("Simple Minded"); ?>
+Redirect Permanent /blogs/000015.html http://www.zanshin.net/2002/06/11/
+   <?php echo sanitize_title("Service"); ?>
+Redirect Permanent /blogs/000014.html http://www.zanshin.net/2002/06/07/
+   <?php echo sanitize_title("Priceless (update)"); ?>
+Redirect Permanent /blogs/000013.html http://www.zanshin.net/2002/06/07/
+   <?php echo sanitize_title("Priceless"); ?>
+Redirect Permanent /blogs/000012.html http://www.zanshin.net/2002/05/24/
+   <?php echo sanitize_title("Weekend"); ?>
+Redirect Permanent /blogs/000011.html http://www.zanshin.net/2002/05/24/
+   <?php echo sanitize_title("Hawaii"); ?>
+Redirect Permanent /blogs/000010.html http://www.zanshin.net/2002/05/23/
+   <?php echo sanitize_title("Service"); ?>
+Redirect Permanent /blogs/000009.html http://www.zanshin.net/2002/05/21/
+   <?php echo sanitize_title("Stupid is As Stupid Does"); ?>
+Redirect Permanent /blogs/000008.html http://www.zanshin.net/2002/05/16/
+   <?php echo sanitize_title("5am Salmon"); ?>
+Redirect Permanent /blogs/000007.html http://www.zanshin.net/2002/05/14/
+   <?php echo sanitize_title("Apple PowerBook G4"); ?>
+Redirect Permanent /blogs/000006.html http://www.zanshin.net/2002/05/14/
+   <?php echo sanitize_title("The Waiting Game"); ?>
+Redirect Permanent /blogs/000005.html http://www.zanshin.net/2002/05/14/
+   <?php echo sanitize_title("Palm Portable Keyboard"); ?>
+Redirect Permanent /blogs/000004.html http://www.zanshin.net/2002/05/13/
+   <?php echo sanitize_title("12MM X 10MM"); ?>
+Redirect Permanent /blogs/000003.html http://www.zanshin.net/2002/05/12/
+   <?php echo sanitize_title("Mother's Day"); ?>
+Redirect Permanent /blogs/000002.html http://www.zanshin.net/2002/05/11/
+   <?php echo sanitize_title("Dr. William H. Cosby, Jr."); ?>
+Redirect Permanent /blogs/000001.html http://www.zanshin.net/2002/05/10/
+   <?php echo sanitize_title("New Growth In Spring"); ?>
+Redirect Permanent /blogs/000154.html http://www.zanshin.net/2002/03/22/
+   <?php echo sanitize_title("Friday Five: Seasons"); ?>
+Redirect Permanent /blogs/000153.html http://www.zanshin.net/2002/03/15/
+   <?php echo sanitize_title("Friday Five: Pets"); ?>
+Redirect Permanent /blogs/000152.html http://www.zanshin.net/2002/03/09/
+   <?php echo sanitize_title("Friday Five: Home"); ?>
+Redirect Permanent /blogs/000151.html http://www.zanshin.net/2002/03/02/
+   <?php echo sanitize_title("Geek Test"); ?>
+Redirect Permanent /blogs/000150.html http://www.zanshin.net/2002/03/02/
+   <?php echo sanitize_title("Friday Five: Vacations"); ?>
+Redirect Permanent /blogs/000114.html http://www.zanshin.net/2001/09/26/
+   <?php echo sanitize_title("Spunky Dog"); ?>
+Redirect Permanent /blogs/000149.html http://www.zanshin.net/2001/09/23/
+   <?php echo sanitize_title("The Lost Joy of Travel"); ?>
+Redirect Permanent /blogs/000148.html http://www.zanshin.net/2001/09/22/
+   <?php echo sanitize_title("Are you there?"); ?>
+Redirect Permanent /blogs/000136.html http://www.zanshin.net/2001/09/14/
+   <?php echo sanitize_title("Riley"); ?>
+Redirect Permanent /blogs/000147.html http://www.zanshin.net/2001/09/11/
+   <?php echo sanitize_title("In Memorial: 9.11.2001"); ?>
+Redirect Permanent /blogs/000137.html http://www.zanshin.net/2001/08/18/
+   <?php echo sanitize_title("How Very Rude"); ?>
+Redirect Permanent /blogs/000146.html http://www.zanshin.net/2001/06/11/
+   <?php echo sanitize_title("What do I Like?"); ?>
+Redirect Permanent /blogs/000135.html http://www.zanshin.net/2001/05/11/
+   <?php echo sanitize_title("Our Goofy Cat Nekko"); ?>
+Redirect Permanent /blogs/000145.html http://www.zanshin.net/2001/04/29/
+   <?php echo sanitize_title("1000 Hours Free!"); ?>
+Redirect Permanent /blogs/000144.html http://www.zanshin.net/2001/03/31/
+   <?php echo sanitize_title("Emotional Objectivity"); ?>
+Redirect Permanent /blogs/000143.html http://www.zanshin.net/2001/03/28/
+   <?php echo sanitize_title("Police State"); ?>
+Redirect Permanent /blogs/000134.html http://www.zanshin.net/2001/03/27/
+   <?php echo sanitize_title("Taking Care of Myself"); ?>
+Redirect Permanent /blogs/000133.html http://www.zanshin.net/2001/03/27/
+   <?php echo sanitize_title("How Very Depressing"); ?>
+Redirect Permanent /blogs/000142.html http://www.zanshin.net/2001/03/23/
+   <?php echo sanitize_title("Karmic Debt"); ?>
+Redirect Permanent /blogs/000132.html http://www.zanshin.net/2001/03/19/
+   <?php echo sanitize_title("Vehicles I Have Owned"); ?>
+Redirect Permanent /blogs/000141.html http://www.zanshin.net/2001/03/13/
+   <?php echo sanitize_title("Uncle Mark"); ?>
+Redirect Permanent /blogs/000131.html http://www.zanshin.net/2001/03/10/
+   <?php echo sanitize_title("Mark's Knock-Yer-Socks-Off Chilli"); ?>
+Redirect Permanent /blogs/000140.html http://www.zanshin.net/2001/03/08/
+   <?php echo sanitize_title("Focus vs. Control"); ?>
+Redirect Permanent /blogs/000139.html http://www.zanshin.net/2001/03/07/
+   <?php echo sanitize_title("Orthogonal Persistence"); ?>
+Redirect Permanent /blogs/000138.html http://www.zanshin.net/2001/03/05/
+   <?php echo sanitize_title("Blue Monday"); ?>
+Redirect Permanent /blogs/000130.html http://www.zanshin.net/2001/01/27/
+   <?php echo sanitize_title("A Few Thoughts About Dying"); ?>
+Redirect Permanent /blogs/000129.html http://www.zanshin.net/2000/12/27/
+   <?php echo sanitize_title("A New Christmas"); ?>
+Redirect Permanent /blogs/000128.html http://www.zanshin.net/2000/12/22/
+   <?php echo sanitize_title("To Go or Not To Go"); ?>
+Redirect Permanent /blogs/000127.html http://www.zanshin.net/2000/11/01/
+   <?php echo sanitize_title("You Don't Want to Know"); ?>
+Redirect Permanent /blogs/000126.html http://www.zanshin.net/2000/08/08/
+   <?php echo sanitize_title("The Frustrations of Computers"); ?>
+Redirect Permanent /blogs/000125.html http://www.zanshin.net/2000/05/05/
+   <?php echo sanitize_title("Today I Lost My Job"); ?>
+Redirect Permanent /blogs/000124.html http://www.zanshin.net/2000/04/30/
+   <?php echo sanitize_title("Completing the First Step"); ?>
+Redirect Permanent /blogs/000123.html http://www.zanshin.net/2000/02/14/
+   <?php echo sanitize_title("For My Valentine"); ?>
+Redirect Permanent /blogs/000122.html http://www.zanshin.net/2000/01/15/
+   <?php echo sanitize_title("Chicken Soup for the Soul"); ?>
+Redirect Permanent /blogs/000121.html http://www.zanshin.net/2000/01/12/
+   <?php echo sanitize_title("What Love Means"); ?>
+Redirect Permanent /blogs/000120.html http://www.zanshin.net/2000/01/10/
+   <?php echo sanitize_title("List Compulsion"); ?>
+Redirect Permanent /blogs/000119.html http://www.zanshin.net/1999/12/28/
+   <?php echo sanitize_title("Millennium Musing"); ?>
+Redirect Permanent /blogs/000116.html http://www.zanshin.net/1999/12/16/
+   <?php echo sanitize_title("What is Zanshin?"); ?>
+Redirect Permanent /blogs/000118.html http://www.zanshin.net/1999/12/11/
+   <?php echo sanitize_title("What is Zen?"); ?>
+Redirect Permanent /blogs/000117.html http://www.zanshin.net/1999/12/10/
+   <?php echo sanitize_title("Our Four Agreements"); ?>
