@@ -1,8 +1,9 @@
 # 20110808 - updated htaccess file for octopress/jekyll site
 
 # 20110808 - redirect /YYYY/MM/DD/title-slug/ to http://zanshin.net/blog/YYYY/MM/DD/title-slug/
+# turns out this won't be necessary - plus it breaks diqus commenting. so it is commented out
 RewriteEngine on
-Redirect 301 /([0-9][0-9][0-9][0-9])/([0-9][0-9])/([0-9][0-9])/([^/]+)/ http://zanshin.net/blog/$1/$2/$3/$4/
+#Redirect 301 /([0-9][0-9][0-9][0-9])/([0-9][0-9])/([0-9][0-9])/([^/]+)/ http://zanshin.net/blog/$1/$2/$3/$4/
 
 # 20110808 - commenting out specific deny clauses for now. may add back in later if (as) needed
 # 2008.06.04 - removed as it really wasn't working anyway.
