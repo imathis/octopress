@@ -21,12 +21,12 @@ email:
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 root: /
 server_port: 4000
-permalink: /blog/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
 source: source
 destination: public
 plugins: plugins
 code_dir: downloads/code
-category_dir: blog/categories
+category_dir: categories
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
 
