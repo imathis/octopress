@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Wooden Floors
 date: 2007-8-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 Later this month Sibylle and I will be taking up residence in a townhouse in the neighboring suburb.  In my entire life I have never lived in anything but single story dwellings.  This is not to say that I haven't lived in buildings will multiple floors, it is just saying that my dwelling has always had just one floor.  (My parents house has a basement, but that's <i>their</i> dwelling.)
 

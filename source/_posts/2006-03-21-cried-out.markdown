@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Cried Out
 date: 2006-3-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 After my epiphany last evening regarding the root of my seemingly endless supply of anger I cried and cried. I haven't been crying much lately, in fact, looking back over the past few weeks, I haven't really been feeling much of anything for a while. It is obvious in the light of a new day that my anger was blocking the rest of my emotions and since I wasn't expressing my anger truthfully, I wasn't getting to anything.
 

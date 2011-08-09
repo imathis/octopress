@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: This Ain't Your Father's Buick
 date: 2006-6-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 So yesterday, after successfully traveling to Illinois and back (over 750 miles round trip), I went to Border's around 5:00 to kill some time. When I came out and started home I noticed a 4 - 6 inch long crack in the windshield starting in the lower left corner (as seen from the driver's seat). Once I got home and could really look at it I could see the tiniest of chips in the glass where the crack started. I must have picked up a rock impact along the way.
 

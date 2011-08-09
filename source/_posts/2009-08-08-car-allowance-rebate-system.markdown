@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Car Allowance Rebate System
 date: 2009-8-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 After reading about it this week, Sibylle researched the Car Allowance Rebate System, or CARS program that the US government is sponsoring. In a nutshell: if your car qualifies you can get up to $4,500 when trading it in for a new car that gets better gas milage.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: On the Bubble
 date: 2002-7-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 I work as an independent software consultant. Currently I am sub-contracting through another company to the local state government. As consulting gigs go this is pretty cushy. The contracts are one year in length, with the cost of the two one-year extensions built in from the start. Basically if you can do the work and you don't commit a serious political faux pas you are employed for 3 years.
 

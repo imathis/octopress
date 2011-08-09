@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: New Trip Paradigm
 date: "2002-12-19"
-link: false
+comments: false
 categories: life
+link: false
 ---
 For years when I have traveled I have treated the whole experience as something to be done as efficiently and quickly as possible. If I were taking a week off I would arrange my flights in the evening so I could work a full day before going. Then I would return at the last minute, often getting home scant hours before having to return to work. My memory is filled with having to run pell-mell through airports to make connecting flights, and I also remember the stress and upset my tight schedule caused. My focus was always on the physical vacation more than the emotional one.
 

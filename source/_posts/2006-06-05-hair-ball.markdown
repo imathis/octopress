@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Hair Ball
 date: 2006-6-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 For some weeks now I have been worried about one of my cats. Having one of the  two beings I feel closest too potentially be ill was more than I could handle. I tried to ignore the symptoms hoping against hope that they would go away on their own. The primary symptom was retching and occasionally throwing up undigested food. Sometimes this would happen two or three times in a single day. A friend at work suggested I try one of the sensitive stomach cat foods available at the pet store.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 24/7/52
 date: 2007-11-2
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I'm not sure when the phrase "twenty-four by seven" entered the mainstream.  Recently it has grown to become "twenty-four by seven by three-sixty-five."  Which I think is wrong.
 

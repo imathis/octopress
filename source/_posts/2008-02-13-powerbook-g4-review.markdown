@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Powerbook G4 Review
 date: 2008-2-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Most technology reviews happen shortly after the hardware or software is released, and the reviewer has had only a limited time to tinker with the product.  Publishing is not without a sense of one-upsmanship, and getting your review to press first is the only way to win that game.
 

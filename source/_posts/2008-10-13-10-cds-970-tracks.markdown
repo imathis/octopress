@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 10 CDs - 970 Tracks
 date: "2008-10-13"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Earlier this evening, on a trip to the local Half Price Bookstore, I picked up a new audiobook to listen to on my daily commute.  I prefer unabridged versions of stories, which tend to be lengthier audio recordings.  My new one, David Morrell's <a title="The League of Night and Fog" href="http://www.amazon.com/League-Night-Fog-David-Morrell/dp/1597377627/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1223947929&amp;sr=8-1">The League of Night and Fog</a>, is no exception, weighing in at 10 CDs.
 

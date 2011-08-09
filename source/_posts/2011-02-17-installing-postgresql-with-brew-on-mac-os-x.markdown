@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Installing PostgreSQL with brew on Mac OS X
 date: 2011-2-17
-link: false
+comments: false
 categories: life
+link: false
 ---
 In September 2009 I wrote a lengthy how-to describing the process I followed <a title="Installing PostgreSQL on Snow Leopard (Mac OS x 10.6)" href="http://zanshin.net/2009/09/07/installing-postgresql-on-mac-10-6-snow-leopard/" target="_self">installing PostgreSQL 8.x</a> on my Mac running Snow Leopard. It was an interesting experience figuring out solutions to all the obstacles along the way. The posting is one of the most popular on my site, and it has generated several emails from people looking for help with their PostgreSQL installation.
 

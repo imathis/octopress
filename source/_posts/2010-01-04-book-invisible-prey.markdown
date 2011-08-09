@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Book: Invisible Prey"
 date: 2010-1-4
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 John Sandford week continues. Somehow I missed several of the Prey books so I am now catching up. The only problem with this is I've read all the ones I have in the house so I'm fresh out of new books to read.
 

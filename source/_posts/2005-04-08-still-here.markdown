@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Still Here
 date: 2005-4-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 I haven't had the desire or inclination to post much here lately. The added stress of trying to limp along financially until the closing on our house, and worries over whether we'll be able to move out of this apartment soon have taken most of the wind out of my sails.
 

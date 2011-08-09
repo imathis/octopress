@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Yes, Virginia, There Is A Santa Claus
 date: "2007-12-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Much to my chagrin I must admit that I had never read the following editorial before today.  Sibylle pointed it out to me and I am pleased to present it here for you.
 

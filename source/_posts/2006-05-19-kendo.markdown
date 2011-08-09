@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Kendo
 date: 2006-5-19
-link: false
+comments: false
 categories: health
+link: false
 ---
 I first became aware of kendo when I was still in high school. My best friend knew of it and wanted to study it. The closest we could come was a sixteen-week course in fencing at the local YMCA. When I was twenty-nine I started karate-do and ultimately achieved a nidan, or second degree black belt. Throughout my karate studies I was interesting in other arts, trying at various times tai-chi, jujitsu, and aikido.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Enemy That is Me
 date: 2003-4-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 I feel as if I have taken the poison of my <a href="http://www.zanshin.net/blogs/000178.html" target="_blank">addiction</a> and tainted my wonderful wife's life. Before me she didn't have enormous financial problems and I seem to create bigger and more dangerous ones all the time. Because she is married to me she is tarred with the same brush as me. How can I say that I love her, if I subject her to the pain, frustration and uncertainty that I seem to need?
 

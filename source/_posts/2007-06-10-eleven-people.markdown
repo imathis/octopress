@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Eleven People
 date: 2007-6-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 With the help of eleven people we move most of her stuff yesterday.  There is something incredible in the generosity of friends and strangers.  Without the help of these people we could not have done what was accomplished yesterday.  The task of loading furniture and a refrigerator, tables and boxes on to the truck would have been quite simply beyond us.  And the task of unloading it all just a couple of hours drive later would have been impossible as well.
 

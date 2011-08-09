@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: links for 2008-09-21
 date: 2008-9-21
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 <ul class="delicious"><li>
                 <div class="delicious-link"><a href="http://en.wikipedia.org/wiki/Grasshopper_escapement">Grasshopper escapement - Wikipedia, the free encyclopedia</a></div>

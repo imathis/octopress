@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Need To Teach
 date: 2002-12-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 It appears that my continuing struggle with the decision whether or not to return to active workouts in karate really stem from a need to teach. Over the holiday weekend, Michele and I had several long discussions, one of them centered on my desire to help people around me.
 

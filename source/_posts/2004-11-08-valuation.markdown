@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Valuation
 date: 2004-11-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 The death of Michele's father last weekend has given me a sharper focus on what is really important and what isn't. In spite of my efforts to be otherwise, I am still driven at times by the need for material possessions or wealth. I can easily produce a list of objects I would like to own, from a home of my own design down to new books and movie DVDs. Hardly egregious stuff to be sure, but the crux of the problem isn't the object desired, but in the desire itself. Unrequited desire is an indication of a need not being met. Repeatedly feeding the need for new objects, only to find acquisition hasn't satiated the desire, is just a form of insanity. Stopping the cycle of blindly feeding an obsessive need is the path to truly feeding the desire underneath.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Power of A Phone Call
 date: "2007-10-14"
-link: false
+comments: false
 categories: life
+link: false
 ---
 This afternoon, after returning from a grocery shopping trip, we discovered that the power was out.  A quick trip down the side walk confirmed that it wasn't just us, the entire complex was in the dark.  Knowing that others had likely already called, I wanted to call anyway, just so I would feel like I had done something about the situation.
 

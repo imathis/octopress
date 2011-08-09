@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Doesn't Play Well With Others
 date: 2007-6-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 The cubical I occupy at work is fairly nice as cubes go, it even comes with a small built-in whiteboard.  The whiteboard is maybe 18 inches tall and 40 inches long.  I had to request a set of dry erase markers and an eraser, but that was easily accomplished in a couple of days.
 

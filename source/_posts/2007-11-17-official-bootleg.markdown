@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Official Bootleg
 date: "2007-11-17"
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 In September, on our way to Germany, Sibylle and I stopped off in Massachusetts to see my friends Ted and Bethanne.  And to see the Genesis <i>Turn It On Again</i> tour.  Genesis toured for the first time in 15 years this summer, doing twenty dates in Europe and twenty dates in the US.  Hartford Connecticut was one of the shows, and as it is only an hour or so from where Ted lives, we decided last March to get tickets to the show.
 

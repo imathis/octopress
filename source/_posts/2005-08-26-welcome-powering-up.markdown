@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Welcome. Powering up...
 date: 2005-8-26
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In the spring of 2001 Michele and I bought our first Tivo. The series 1 machine soon became an indispensable part of our lives. So much so that in January 2004 we bought a second Tivo, a series 2 with double the recording capacity. The original machine was moved to the bedroom where it collects old sitcoms from Nick@Nite, TVLand, and other cable outlets. While the new machine lives in our office space and records all the reality shows we like as well as movies and "Good Eats." In all we have over <a href="http://www.zanshin.net/blogs/000617.html" title="Season passes">20 season passes</a> set up, or we did.
 

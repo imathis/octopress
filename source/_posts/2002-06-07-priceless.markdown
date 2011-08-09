@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Priceless
 date: 2002-6-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 My wife and I are traveling to Hawaii for a cruise at Christmas time. I've been fretting over the flight arrangements. The cruise line has discounted tickets, but you lose a lot of control over them.
 

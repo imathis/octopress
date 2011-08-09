@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Whistle Stop
 date: 2007-9-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 The new neighborhood that Sibylle and I have moved into is bounded on the east by a pair of railroad tracks, and on the west side by the terminus of a relatively busy state highway.
 

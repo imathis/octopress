@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Of Butterflys
 date: "2005-10-14"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I feel more connected to Michele and to myself this afternoon. Somehow the memorial this morning removed the block I had that was preventing me from reaching her fully. Pete saw a monarch butterfly come into the table with her pictures and urn, circle it and then flit off to the side. He said, and he is a confirmed agnostic, that he felt a shiver go up his spine and he knew that Michele, whom I call Tinkerbell, was there in that moment. How appropriate that she use a butterfly when she was always Tink to me.
 

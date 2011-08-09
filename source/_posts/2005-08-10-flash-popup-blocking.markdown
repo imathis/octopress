@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Flash Popup Blocking
 date: 2005-8-10
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 One of the reasons I use Firefox when I am web browsing on a Windows OS machine is the ability to block popup advertising. Imagine my dismay to learn of a new exploit that allows the spawning of popup windows even with popup blocking enabled. It seems that using the Flash plugin we all have installed in our browsers it is possible to launch popup windows. The blocker doesn't prevent this since it is aimed at preventing javascript launched windows.
 

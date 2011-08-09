@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Limited Time Offer
 date: 2006-3-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 While my mother's condition hasn't worsened any in the last week or so, it hasn't gotten any better either. The lung cancer diagnoses has been confirmed and she has begun a course of treatment designed to make her comfortable. In the doctor's opinion there is no hope of eradicating the cancer, and an aggressive course of treatment will only make her sicker. All medicine can provide for her now is comfort, the end result is the same. What we don't know is how long it will be before she dies.
 

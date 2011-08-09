@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: High Tech Toy, Low Tech Sales Staff
 date: 2005-11-8
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 One of the projects I want to complete this fall is setting up my old Windows XP and Linux boxes in the spare bedroom. There are some development tools I'd like to play with that (currently) only run on Windows, and I'd like to setup file server and perhaps a postfix server on the Linux machine. Since I'm in an apartment drilling holes in the wall to run CAT-5 cord is probably not a good idea.
 

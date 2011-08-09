@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Seething
 date: 2006-3-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the joys about the impending death of a loved one is the seething undercurrent of anger that dogs you morning, noon, and night. You <em>know</em> in the depths of your soul that nothing will ever be the same again. You realize that the last normal moment of your life has already passed without notice or ceremony. The you that existed without the awful certainty of death tainting everything is somewhere in your past and every second carries that self farther and farther away.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Creative Frustration
 date: 2002-7-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 I am finding myself more and more frustrated with my job. For years I've told people that I get paid to play. However, the past few years this has been less and less true. There is a progression that happens as a software developer, you start as a programmer and advance through various jobs until one day you still think of yourself as a coder, but you are really an administrator of coders. This is fine (actually it pays better that coding) but you start to lose those perishable skills that made you good at your job in the first place.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Gut Instinct
 date: 2002-9-16
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 It appears I narrowly missed getting scammed on my online auction bid. At noon time today I went to check to see if I was still winning only to discover that the auction had been cancelled. Furthermore, when I checked the other 4 auctions "lisawarren" had listed, they were all cancelled as well.
 

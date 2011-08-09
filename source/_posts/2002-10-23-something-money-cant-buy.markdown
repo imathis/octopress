@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Something Money Can't Buy
 date: "2002-10-23"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I find that I am in a bit of a quandary this morning. I know from the Comptroller's web site that my latest check was cut on the 18th, which was last Friday. Assuming that the state doesn't come into work on Saturday just to mail things in a timely fashion, it was mail on Monday. The man I subcontract through, therefore, should have it in hand no later than today. There is a good chance he had it yesterday. He is going to be out of the office starting this afternoon about 2, until Monday. So if he doesn't walk up to me before he leaves today and hand me a check the earliest I'll get it is next Monday, five days from now. Now, we don't need it immediately, but I don't like that it is starting to become a habit with him to take a week or more to process the check and pay me. I don't want to blaze into his office and attack him because he will only become defensive and then I won't get anywhere. I do want to inquire as to the status of my check. By saying all of this here I feel less out of control and better setup to approach him without making him defensive. I am not trying to take care of him, I just want to maximize the potential that I get what I want out of our discussion, which is my check. And an understanding that I don't appreciate the length of time it appears to be taking him to deposit the state check and pay me.
 

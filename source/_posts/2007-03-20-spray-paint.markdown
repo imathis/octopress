@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Spray Paint
 date: 2007-3-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 While out and about on Sunday afternoon I managed to run over a can of spray paint laying in the road. The paint is in the red family of colors. I know this as my car has a surprising amount of paint on it now.
 

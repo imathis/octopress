@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Not So Fast
 date: 2010-5-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the summer of 2006 I joined a kendo club in Overland Park, partly out of a long standing interest in kendo and partly out of a need to workout and lose some weight. In early August I pulled a groin muscle in my left leg. Badly. Well, the original injury wasn't that bad perhaps, but I foolishly tried to workout anyway and ended up with a nasty pull.
 

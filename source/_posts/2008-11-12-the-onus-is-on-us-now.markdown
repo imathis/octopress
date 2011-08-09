@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Onus Is On Us Now
 date: "2008-11-12"
-link: false
+comments: false
 categories: life
+link: false
 ---
 One aspect of the recently concluded campaign for the White House that I found difficult were the character assassinations made by both President-elect Obama and Senator McCain.  It is all too easy in today's sound-bite driven world to generate something damning about another person using out-of-context quotes, or references to half truths.  And it appears that we as a nation more readily respond to situation-comedy style zingers than anything with substance.
 

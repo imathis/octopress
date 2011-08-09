@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: And If You Did Know
 date: 2003-6-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 My wife now has her own blog and her own site. For years as a therapist, when confronted with a patient who would claim, "I don't know," to questions, she responded with a question of her own. "And if you did know?"
 

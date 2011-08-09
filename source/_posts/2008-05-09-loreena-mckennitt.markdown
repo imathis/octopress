@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Loreena McKennitt
 date: 2008-5-9
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 It isn't often that I add a new artist to my music collection, but thanks to Ted, and a generous birthday gift, I have not only added <a title="Quinlan Road" href="http://www.quinlanroad.com/homepage/index.asp?LangType=1033">Loreena McKennitt</a> to my collection, I've discovered a new favorite artist.  Her music is hard to describe except to say that it beautifully combines Celtic origins with poetry and verse, and varied instrumentation.  
 

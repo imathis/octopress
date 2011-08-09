@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bowling For Columbine
 date: "2002-12-16"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday, Michele and I went to see this movie by Michael Moore. You may or may not remember him from the movie "Roger and Me" about the gutting of Flint Michigan by General Motors; or from his television show called "The Awful Truth."
 

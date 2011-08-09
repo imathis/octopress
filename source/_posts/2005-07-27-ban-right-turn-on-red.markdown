@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ban Right Turn on Red
 date: 2005-7-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 Shortly after I got my first driver's license in the mid-1970s, Illinois, along with most of the rest of the country passed a law making it legal to turn right at a stop light when it was red, provided you stopped first and no one was approaching. Seemed like a good idea at the time. Unfortunately most people are just large children in need of adult supervision, especially when they are behind the wheel of a car.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Learning Mode
 date: 2008-5-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the early 1990's, when I was still using OS/2 as my primary operating system, I attended a day-long demonstration about the platform.  Included in the slate of presentations was one about voice recognition.  The presenter, an energetic woman, described how she was able to read and respond to hundreds of emails and Compuserve forum postings using dictation, or voice-to-text, software.  She gave us a quick demo of the software's ability by dictating, "You were right to write to me right now, Mr. Wright."  The software was able to correctly spell each variation of the phonetically identical right/write/Wright.
 

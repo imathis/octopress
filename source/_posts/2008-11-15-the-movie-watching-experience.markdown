@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Movie Watching Experience
 date: "2008-11-15"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Going to the movies isn't what it used to be.  Or maybe it isn't what I fondly remember it as being.  The timing of our weekly trip to Manhattan this Saturday allowed me to take in the new Bond movie while Sibylle was teaching.  The 1:45 show time fit neatly into our usual schedule so I went to the movies.
 

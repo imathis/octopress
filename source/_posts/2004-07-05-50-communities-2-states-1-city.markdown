@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 50 Communities, 2 States, 1 City
 date: 2004-7-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 We have been living in Overland Park, a southern suburb of Kansas City, for just over a week now. As expected the trauma of moving and the shock of the transition from a house to an apartment is taking a toll. Nothing huge, but we've each had periods of depression at the loss we are experiencing.
 

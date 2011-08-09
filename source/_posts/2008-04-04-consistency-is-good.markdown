@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Consistency Is Good
 date: 2008-4-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 Walk into any store-front Chinese restaurant and order a fried rice variant, be it shrimp, chicken, pork, or combination, and you'll get almost exactly the same thing, regardless of where you are.  Rice, cubed carrots, peas, some onion perhaps, soy sauce, and the meat of your choice.  Oh, and soy sauce for color and flavor. The portion will be sufficiently large to fill you and then some, for less than $10.  Probably less than half that at lunchtime. 
 

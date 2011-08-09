@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 48 Hours Equals Five Days
 date: 2007-8-27
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For the past eleven years (twelve in February) I have had my domain registered with Network Solutions.  Back then they were <i>the</i> available option for registration.  Their website has always been cumbersome, and the layers of controls, checks, balances, identity verifications, et cetera only add to the poor experience of using their site.
 

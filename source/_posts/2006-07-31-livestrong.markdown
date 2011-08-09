@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: LIVESTRONG
 date: 2006-7-31
-link: false
+comments: false
 categories: life
+link: false
 ---
 On a whim a week or two ago I ordered a package of "LIVE<strong>STRONG</strong>" bracelets and a bright yellow tee-shirt. At the time my thinking was, I know four people in my immediate family who were either impacted by, or died from cancer. After having the bracelet for a few days it occurs to me that there is a fifth person impacted in all the cases - me.
 

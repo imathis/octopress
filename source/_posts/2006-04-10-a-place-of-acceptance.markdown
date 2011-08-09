@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Place of Acceptance
 date: 2006-4-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the weekend I traveled to Chicago to see a holy union ceremony between one of my oldest friends and his partner. Quite simply it was a beautiful service performed in an atmosphere of love, acceptance, and understanding. Normally I am not a church going person; the rote rituals and dogmatic following of traditions don't interest me. However, I would make an exception for the Broadway United Methodist Church of Chicago. The air of inclusion and acceptance there was palpable. The ministers and congregation didn't just give lip service to these ideals, they lived them. It was a place that Michele would have dearly loved and appreciated. Were we to ever live close enough to attend regularly she would have wanted to join.
 

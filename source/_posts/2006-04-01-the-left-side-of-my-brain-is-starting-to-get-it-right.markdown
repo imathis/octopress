@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Left Side of My Brain Is Starting to Get It Right
 date: 2006-4-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 Everyday for the past nine days I have started the morning my covering first one eye and then the other to see what I could see. Everyday for the past eight days when I put my hand over my left eye what I see with my right has been blurry and out of focus beyond a range of eight or so inches.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Learning Cello
 date: "2009-11-12"
-link: false
+comments: false
 categories: life
+link: false
 ---
 When I was in the 5th grade my class was taken by bus to one of the middle or high schools where we heard the student orchestra play. After the arranged pieces were complete, each instrument was demonstrated in a short solo piece and then explained by the conductor. It was hoped that this demonstration would interest some of us in to wanting to study music.
 

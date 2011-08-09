@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lexus vs. Sleep Inn
 date: 2004-5-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 Or <b>'There and Back Again in 22 Hours'</b>
 

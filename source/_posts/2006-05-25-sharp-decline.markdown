@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sharp Decline
 date: 2006-5-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 The last few days have seen a sharp decline in my mother's health. She is now sleeping nearly all the time, and has stopped eating. Her disorientation in terms of where she is, and even sometimes <em>when</em> she is, is increasing in frequency. She is so weak now that she is no longer able to walk or even stand on her own. Assisting her is becoming an impossible physical burden for my father. Yesterday they were forced to call upon the fire department to return her to bed after she was unable to help my father move her.
 

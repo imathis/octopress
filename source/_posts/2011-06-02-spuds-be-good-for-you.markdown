@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Spuds Be Good For You
 date: 2011-6-2
-link: true
+comments: false
 categories: links
+link: true
 ---
 <a href="http://www.spudcitysales.com/potato_facts.php" title="Potato Facts">Potato Facts</a> →
 <br />

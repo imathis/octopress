@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How I Spent My Summer
 date: 2008-8-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 In early July I was called to a meeting at DST Human Resources (HR) to discuss my position.  DST, a large corporation, is half owner of Argus Health Systems, which is the company I work for.  Ever since I joined Argus in January 2007 there has been some upheaval, including a major project cancellation, several reorganizations of the Information Technology department, and quite a few resignations. These resignations included all of the other members of the architecture team I had joined, included its manager.  By December 2007 I was the sole remaining architect.
 

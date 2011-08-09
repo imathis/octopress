@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: I've Lost Myself
 date: "2005-10-14"
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the hardest parts about this is feeling separated from myself. The part of me that Michele brought out is inaccessible to me now. Whether I ever get any or all of that part of me back will be determined in the days, weeks, and months to come.
 

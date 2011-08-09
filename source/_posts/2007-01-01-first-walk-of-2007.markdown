@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: First Walk of 2007
 date: 2007-1-1
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 Not so much a resolution, but a determination that we'd like to walk more days than not each week this year resulting in a beautiful walking in the brisk sunshine of a new day, new month, and new year this morning.
 

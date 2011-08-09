@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: On grieving
 date: 2005-6-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 <a href="http://www.staceywaspe.com/archives//2005/06.30_things_i_n.html" title="Things I need">This</a> may very well be one of the best things I've ever read about grieving. Having lost my sister when I was just twelve I could articulate how it felt and what I needed. Stacey Waspe's words capture the truth of the process, simply and accurately.
 

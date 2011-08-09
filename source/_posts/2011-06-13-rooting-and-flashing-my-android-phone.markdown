@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Rooting and Flashing my Android Phone
 date: 2011-6-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday, after weeks of thinking about it, I finally rooted and flashed my <a title="HTC Droid Incredible" href="http://www.htc.com/us/products/droid-incredible-verizon" target="_blank">HTC Droid Incredible</a> phone. It was relatively simple and straightforward. I've had my phone for a year now and I strongly suspect that neither HTC nor Verizon has any plans to update the OS beyond Android 2.2, so I took matters in to my own hands and did the necessary.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Non Sequitor
 date: 2008-5-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 For many years Non Sequitor has been one of my favorite daily comics.  Today's edition is particularly good.
 

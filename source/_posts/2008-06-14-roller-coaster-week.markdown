@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Roller-coaster Week
 date: 2008-6-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 The past seven days have been a real roller-coaster of a week.  The two weeks prior to last weekend weren't much better.
 ## May 27

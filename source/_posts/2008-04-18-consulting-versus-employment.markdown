@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Consulting versus Employment
 date: 2008-4-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 There are any number of differences between working as a consultant and working as an employee.  And there are some similarities.  Today I ran across an unexpected similarity.  The company I work for now, as an employee, has undergone significant growth in the past couple of years and they are going through all the growing pains you might expect as a result.
 

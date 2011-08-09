@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: An "A+" in Customer Service
 date: 2004-1-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday I upgraded my Powerbook to Panther (10.3.2) in a relatively painless 2 hour process. After the process was completed I was having trouble with my copy of <a href="http://www.codetek.com/" title="CodeTek">CodeTek's</a> <a href="http://www.codetek.com/php/virtual.php" title="VirtualDesktop">Virtual Desktop</a> application.
 

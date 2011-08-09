@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How to Use Facebook Via RSS
 date: "2009-12-28"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have a love-hate relationship with Facebook. I appreciate seeing what the people I know are up to, but I dislike all the quizzes and games and their associated chatter. Turns out it is possible to get status updates, notifications, notes and links via RSS feed. Naturally, since Facebook wants to your share your stuff with the world and not just lurk in the corner like a good introvert, they don't make it obvious how to set up the feeds.
 

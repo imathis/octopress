@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: No Truck = No TV
 date: 2003-10-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday Michele and I finally took the HDTV plunge and bought a 57" Sony for our home. We asked the salesmen about next-day delivery and were pleased to learn that our local Best Buy had just instituted a program guaranteeing next-day delivery for an extra $15. We plunked down our money and signed the paperwork.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Flattening Curve
 date: "2006-12-12"
-link: false
+comments: false
 categories: health
+link: false
 ---
 Since starting to lose weight in June, the graph of my daily weight has maintained a steady downward trend. There are flat spots in the plotted curve here and there, but the overall trend is downward. That is until recently.
 

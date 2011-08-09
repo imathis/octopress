@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Orwell's 1984
 date: 2006-1-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the weekend I purchased a second set of insoles for my work shoes. The first set has made a huge difference in the amount of pain I have from my fallen arches, but I was getting tired of swapping them from the brown work shoes to the black ones and back again. So, Saturday morning before getting my hair cut I went to the New Balance store and bought a second pair.
 

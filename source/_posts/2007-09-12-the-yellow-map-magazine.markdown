@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Yellow Map Magazine
 date: 2007-9-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 When I was growing up my parents always had a subscription to National Geographic magazine.  I was always fascinated with the maps, and looked forward to new ones.
 

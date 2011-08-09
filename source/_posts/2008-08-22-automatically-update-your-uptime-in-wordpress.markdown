@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Automatically Update Your Uptime In Wordpress
 date: 2008-8-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently I read an article on how to capture, upload, and display your computer's uptime in the footer of your blog. <a title="Automatically update your computer's uptime on your website" href="http://www.wesg.ca/2008/06/automatically-update-your-computers-uptime-on-your-website/">Automatically update your computer's uptime on your website</a> does a very good job of laying out the basic techniques for accomplishing this, admittedly nerdy, task.  However, the original script uses FTP, or File Transfer Protocol, to move the formatted uptime information from your computer to your web site host. Using Secure Copy, or scp, would be a better solution.
 ## SCP

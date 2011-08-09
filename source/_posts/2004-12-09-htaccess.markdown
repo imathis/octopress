@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: .htaccess
 date: 2004-12-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 With the help of this <a href="http://www.spywareinfo.com" title="Spywareinfo">Spywareinfo</a> <a href="http://www.spywareinfo.com/articles/referer_spam/" title="Referer Spam">article</a> about referer spam, and <a href="http://www.joemaller.com" title="Joe Maller">Joe Maller</a>'s <a href="http://www.joemaller.com/htaccess.txt" title="blacklist">blacklist</a> I have hopefully put an end to the increasing number of referer spam my site and my <a href="http://andifyoudidknow.com" title="And If You Did Know">wife's</a> site experience everyday.
 

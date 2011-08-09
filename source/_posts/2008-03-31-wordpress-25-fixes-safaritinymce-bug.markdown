@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Wordpress 2.5 Fixes Safari/TinyMCE Bug
 date: 2008-3-31
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Ever since switching my site's back end over to Wordpress in late December I've had to use Camino or Firefox to edit or produce new postings to my site, as there was a <a title="Safari, Wordpress, and TinyMCE" href="http://zanshin.net/2008/01/25/safari-wordpress-and-tinymce/" target="_blank">bug in the TinyMCE implementation</a> that Wordpress was using.  Any entry edited via Safari had all of its &amp;lt;p&amp;gt; tags stripped out leaving the posting as one large, uninterrupted block of text.
 

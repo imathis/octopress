@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Recon-silly-ation
 date: 2006-2-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 After a long hiatus I've decided to start tracking my income and expenses again. A recent review of <a href="http://www.iggsoftware.com/ibank/" title="iBank">iBank</a> caused me to download and demo it. Liking what I saw in the demo I made the purchase and downloaded all my transactions from December on and set up my accounts. Once I had the import rules and categories tweaked to suit me I ran a 'bank statement reconciliation."
 

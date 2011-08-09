@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: No more keys
 date: 2003-1-19
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 It seems that the web-based keystroke counter I was using is gone. The dolphin project at bitdevil.com has been shut down as the project leader wishes to pursue other projects.
 

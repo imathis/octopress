@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Uncle Mark
 date: 2001-3-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Tonight I became an uncle. My brother and his wife had their first child together. Riley Lynn Nichols. Born at 4:55 pm, she weighed 8 lbs 4 ounces and was 21 inches long. Even though I know that this lifetime isn't about children for me it was hard to see them and all the attention they are getting. Society places such a high level of approval on parents that one almost feels criminal by not joining in. My wife and I have talked many times about children and the many options open to us should we want to be parents. The truth for us is that we aren't destined to be parents in this lifetime. The lessons we need to learn are in other areas.
 

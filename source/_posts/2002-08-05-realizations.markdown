@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Realizations
 date: 2002-8-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 My weekend was filled with realizations, big and small. On Friday I took my Audi TT in for service. Some of the gauges were acting screwy and it needed to be diagnosed. I was given a VW Passat as a loaner car as it was likely the service would require an over the weekend stay. That evening my wife drove it and we both agreed that it was a much nicer car than we expected.
 

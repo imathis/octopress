@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Likeness of Myself
 date: 2007-7-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 They say that the third time is a charm, and in the case of getting a new passport that appears to be the case for me.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A New Cat, Perhaps?
 date: 2003-3-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I spent some time today looking at potential new cats for our household. We both, almost simultaneously, discovered an ad in the online copy of the local paper stating that Petsmart had cats for $25. These animals have been rescued and fostered back to good health and humor by volunteers and are now ready for adoption.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What to Eat When You're Depressed
 date: "2005-11-26"
-link: false
+comments: false
 categories: life
+link: false
 ---
 In order here are the "meals" I had today.
 

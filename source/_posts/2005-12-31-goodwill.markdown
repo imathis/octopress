@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Goodwill
 date: "2005-12-31"
-link: false
+comments: false
 categories: life
+link: false
 ---
 After weeks of procrastination I finally gathered up my courage and donated the bulk of Michele's clothes to Goodwill. As a therapist with a private practice she had amassed quite a collection of very nice clothes; dresses, dress suits, blouses, and skirts.
 

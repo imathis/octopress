@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lack of Service
 date: 2002-7-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 I just had another lovely 'service' experience at the local Audi dealer. It's one of these multiple marquee places handling Toyota, Audi, and Volkswagen. The underlying service model is distinctly American. That is to say a no service model.
 

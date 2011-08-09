@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Born on Sunday, But Not Last Sunday
 date: 2007-8-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the past week or so I've been trying to sell off some spare furniture on <a href="http://kansascity.craigslist.com" title="craigslist">craigslist</a>.  During the posting process, and with each inquiry you receive you are repeatedly warned about scams and to be wary of certified checks, money orders, escrow, and shipping.  At first you think this is all hyperbole, and then you get emails like this one:
 

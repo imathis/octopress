@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: One Ninety Nine
 date: 2007-2-4
-link: false
+comments: false
 categories: health
+link: false
 ---
 I have reached a milestone in my effort to lose some weight. This morning the bathroom scale read 199.8. Less than two hundred pounds. I honestly can't remember when it was that I crossed two hundred going the other direction, but I think it was while I was still active with martial arts in the mid-1990s. It took me ten years to put fifty pounds on, and only seven months to take it back off.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Laser Eyes, One Year Later
 date: 2007-5-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 It has been a year since my original laser eye surgery, actually more like 13 months.  A requirement of the lifetime enhancement package that I got is to have annual eye exams.  Yesterday afternoon I had the first of these and the results are not entirely good.
 

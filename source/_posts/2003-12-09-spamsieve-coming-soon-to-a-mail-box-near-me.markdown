@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "SpamSieve: Coming Soon To A Mail Box Near Me"
 date: 2003-12-9
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Beginning in 2002 I decided to keep track of my income messages. In that first year I received 37,122 total messages. Since I was active in a couple of high-volume mailing lists, I received 11,553 good e-mails, leaving 25,569 spams.
 

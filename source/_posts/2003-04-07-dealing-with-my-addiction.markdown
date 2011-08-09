@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Dealing With My Addiction
 date: 2003-4-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have an addiction, one that is damaging and hurtful to me and those who love me. It is hard to write about, hard even to think about, but unless I can bring it into the light, repeatedly, it will continue to rule my life.
 

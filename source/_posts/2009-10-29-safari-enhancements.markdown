@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Safari Enhancements
 date: "2009-10-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 From the first time I used my PowerBook nearly seven years ago until today, Safari has been my browser of choice. I dabble with all the major players, and a few of the minor ones, but I always come back to Safari.
 

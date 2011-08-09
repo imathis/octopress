@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Things They Don't Tell You
 date: 2007-3-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last year, after getting all the necessary 1099 and W2 forms in the mail, I sat down and did my taxes. They are mildly complex since I live in one state and work in another and, at the time, worked for an employer who couldn't be bothered to withhold the proper state's taxes. So I file in my state of residence first to get a huge refund, and then take that money and file in the state of work to pay what I owe. I netted about $200 in the process so it wasn't all bad.
 

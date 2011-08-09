@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Five Days of Christmas
 date: "2003-12-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I had a wonderful five days of Christmas this year. Family occupied three of the days, and the other two days were just for us. We had a wonderful holiday filled with drama, humor and spirit.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Door + Finger = @#!$*!
 date: 2007-7-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last evening Sibylle and I set out to explore the rear most boxes in my storage locker in a last ditch effort to find my missing passport.  Time is running out for me to get one before our trip to Germany in September and, while we await the arrival of a certified birth certificate, I wanted to continue the search.
 

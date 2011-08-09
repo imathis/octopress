@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Account Security
 date: 2010-3-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the many responsibilities that Sibylle has shouldered in the wake of her mother's death has been managing the financial portion of the estate. Working with the local bank and the account manager there, Sibylle was able to figure out what automatic payments occur each month, and general was able to get a sense for what upcoming payments would need to be authorized.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Shedding  Weight
 date: 2007-8-8
-link: false
+comments: false
 categories: health
+link: false
 ---
 Since the beginning of August my weight has consistently been under 200 pounds.  Moreover, for the past six days now it has been under 198; with a new low of 197.2 this morning.
 

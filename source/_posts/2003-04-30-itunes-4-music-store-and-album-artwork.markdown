@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: iTunes 4, Music Store, and Album Artwork
 date: 2003-4-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 Like the rest of the Mac world I have upgraded to the latest release of iTunes, which includes a new pay-per-track music store. While I haven't made any purchases yet it seems like Apple has hit the center of the target with this feature. It's Napster only legal. In Napster's heyday I participated and collected about 400 titles. With iTunes I can do this legally. Of course, it'd cost me $396 to duplicate my earlier collection. Hmm, this could be like the early days of AOL, when stories of massive monthly bills were common. Who'll be the first person to rack up a 1000, 5000 or 10,000 dollar download charge in a month I wonder.
 

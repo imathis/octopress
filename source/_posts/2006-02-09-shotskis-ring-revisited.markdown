@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Shotski's Ring, Revisited
 date: 2006-2-9
-link: false
+comments: false
 categories: health
+link: false
 ---
 <a title="Shotski's Ring" href="http://www.zanshin.net/blogs/000323.html">Previously</a> on zanshin I discussed my so-called shotski's ring or or esophageal stricture. As I have recently been having very good luck with this malady I thought an update was in order.
 

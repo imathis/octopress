@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Hoarded
 date: "2007-11-28"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Like all jobs (or most, anyway) mine came with a set of benefits, including two shiny floating holidays.  The parent company observes all the banking holidays each year, while my employer observes all but two.  To balance this inequity, we get two floating holidays each year.
 

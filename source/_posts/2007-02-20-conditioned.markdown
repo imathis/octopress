@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Conditioned
 date: 2007-2-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 After working for two and a half years in a building that provided certain amenities, I am discovering that I have been conditioned, like Pavlov's dogs, to expect some things to work a particular way. Flushing the toilet, for example, or washing my hands afterwards.
 

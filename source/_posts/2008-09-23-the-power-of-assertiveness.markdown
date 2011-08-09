@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "The Power of Assertiveness "
 date: 2008-9-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 I rarely, if ever, give out my work email address.  I have enough personal email addresses, that I don't need the one my employer provides for anything other than work related correspondence.  Sometimes, however, in order to get information from a vendor or software support center, I have provided my work email to people outside of work.  Since I am careful about to whom and when I provide my email address, I am always disappointed when I started getting marketing materials as a result.
 

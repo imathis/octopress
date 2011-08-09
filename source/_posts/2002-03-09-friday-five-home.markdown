@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Friday Five: Home"
 date: 2002-3-9
-link: false
+comments: false
 categories: meme
+link: false
 ---
 1. What makes you homesick?
 Not being at home, I guess.

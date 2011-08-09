@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Foreign Body
 date: 2006-5-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 When I was still active in the martial arts we had a saying to describe those people who joined, attended a few classes and then stopped coming to the dojo. We said that the dojo was an organism, and like all living organisms it rejected that which was foreign. This was not to say that the people who tried karate for a few weeks and then stopped were in any way bad or less than, it was merely a verbal shorthand to recognize that not all people fit into all situations; that there are times when you feel like you belong and times when you don't.
 

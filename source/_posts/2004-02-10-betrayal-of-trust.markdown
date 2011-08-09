@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Betrayal of Trust
 date: 2004-2-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Like many of you I watched Tim Russert interview the President on Sunday's "Meet the Press." Initially I felt that Russert was being soft on Mr. Bush in not following up on his stumbling answers and prevaricating during the hour long broadcast. As the interview drew to a close, however, it became clear that by only asking the questions, and not strongly attacking anything said by the President, Mr. Russert was creating a situation where George W. Bush would stand or fall on his own.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Reindeer Games
 date: 2006-11-8
-link: false
+comments: false
 categories: health
+link: false
 ---
 Starting last year about this time I have been searching for a martial art activity for myself. Initially I started with karate as that is what I had done before. Being out of shape and trying to return to something I was once very good at was disheartening to say the least. The mental image I had bore no resemblance to the physical reality I was experiencing. My return to karate lasted exactly two evenings.
 

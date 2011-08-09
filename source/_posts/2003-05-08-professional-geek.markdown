@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Professional Geek
 date: 2003-5-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 During the past year or so I have focused a lot of time and energy into this site, which reflects events and thoughts that I have as an individual. However, there is a professional side to me and it is with pleasure that I direct your attention to the newly revamped <a href="http://www.partitionsoftware.com" target="_blank">Partition Software</a> site.
 

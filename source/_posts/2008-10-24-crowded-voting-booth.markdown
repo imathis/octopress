@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Crowded Voting Booth
 date: "2008-10-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 In just a little under two weeks I'll be standing in a voting booth in the local church casting my ballot in the 2008 Presidential Election.  I will exercise my franchise as a citizen of the United States.  That I live in Kansas, a solidly "red" state, making my vote for Barack Obama largely symbolic, matters little to me.  I firmly believe that if you don't vote you can't later complain about the administration.
 

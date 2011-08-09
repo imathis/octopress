@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Same View, New Perspective
 date: 2004-2-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday I traveled to Chicago to visit with an old friend. The venue for our visit the the International New Motorcycle Show. I have been to this annual event several times in the past decade or so. It's always filled with crowds of people, glittering chrome, and jewel like machinery.
 

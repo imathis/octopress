@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Don't Drop The Wires
 date: 2007-7-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday we installed a new digital thermostat, replacing an ancient, mercury filled model.  Usually I'm not one for reading directions, trusting instinct and dumb-luck to see me through whatever it is I've undertaken.  Since I've never played around with thermostats before, and on the assumption that there might be electricity involved, I actually read through the instructions before starting.
 

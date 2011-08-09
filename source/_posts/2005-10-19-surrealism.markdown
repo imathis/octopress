@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Surrealism
 date: "2005-10-19"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I find that my sense of the surreal in all of this is increasing. At my employment engagement we are engaged in a week-long series of meetings to "clarify" various points of the application to be designed and built. The conversations are often long and drawn out, with multiple perspectives and opinions from all corners of the room. Then, when all is said and done, it is decided that the word "custom" should be changed to "other." Until someone objects and the whole situation spins out of control again; finally coming to rest on the word "additional."
 

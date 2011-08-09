@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Regarding Comments
 date: 2008-1-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 It turns out it is possible to configure Wordpress to make leaving comments almost impossible.  Without realizing it, I had done just that here at zanshin.net.  The configuration has been updated, so any one should now be able to leave a comment or three, if they so choose.
 

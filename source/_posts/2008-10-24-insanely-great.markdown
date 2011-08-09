@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Insanely Great
 date: "2008-10-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Apple, Inc. today announced their opposition to California Proposition 8, and added $100,000.00 to the campaign against this measure:
 <blockquote>

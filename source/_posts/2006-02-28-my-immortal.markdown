@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: my immortal
 date: 2006-2-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ever since being introduced to Evanescence a few weeks ago I have been listening to them pretty much non-stop. All of their lyrics speak to me, but this song in particular has been meaningful.
 

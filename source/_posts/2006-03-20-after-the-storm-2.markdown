@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: After The Storm
 date: 2006-3-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the greatest gifts Michele gave me was the understanding that anger was okay. Growing up I had the idea that anger was something to be feared and avoided. As a young adult I was fearful of losing my temper, in a sense I thought that I would be hurt if I lost my temper, and worse, that the people around me would be hurt.
 

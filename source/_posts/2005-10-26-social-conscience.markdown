@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Social Conscience
 date: "2005-10-26"
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the things I like about Apple Computer is their sense of social conscience. Take their home page today for example.
 

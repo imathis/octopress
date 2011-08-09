@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Beginning at the End
 date: 2007-3-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning I attended a piano pedagogy workshop that focused on 20th and 21st century music and the techniques for teaching these pieces. Even though I don't play piano I find striking similarities between some of the body kinetics of proper posture and arm weight, and of energy flow from the hips to the hands that you find in martial arts with what your find in properly taught piano.
 

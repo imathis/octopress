@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Domino Effect
 date: 2003-8-8
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 My wife uses <a href="http://www.mozilla.org/projects/camino/">Camino</a> as her browser of choice. She likes to use the sidebar and the way Camino's works is pleasing to her.
 

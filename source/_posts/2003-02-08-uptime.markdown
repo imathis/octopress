@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Uptime
 date: 2003-2-8
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 One of the things I like best about my new powerbook G4 is the operating system  it comes with: Mac OS X. Being based on the FreeBDS flavor of Unix gives it incredible stability. My laptop has been to work with me and back everyday, and to my parents one weekend. I have not turned it off and on in over 16 days.
 

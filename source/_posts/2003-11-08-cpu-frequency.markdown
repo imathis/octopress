@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: CPU Frequency
 date: 2003-11-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Thanks to <a href="http://a.wholelottanothing.org/">Matt Haughey</a>, <a href="http://randomfoo.net/">Leonard Lin</a>, and this <a href="http://docs.info.apple.com/article.html?artnum=14449#faq9">Apple document</a> my Powerbook G4 (867 MHz) is once again running at 867 MHz.
 

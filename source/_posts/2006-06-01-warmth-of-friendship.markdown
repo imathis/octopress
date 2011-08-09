@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Warmth of Friendship
 date: 2006-6-1
-link: false
+comments: false
 categories: family
+link: false
 ---
 Today it seems as if everyone is too busy to sit down and really connect. We are all racing around from one job or activity to another. Just getting together requires planning and work with all of our schedules. So it is very nice to discover that people really do care, and really do worry about each other.
 

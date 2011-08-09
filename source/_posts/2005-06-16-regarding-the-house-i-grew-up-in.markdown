@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Regarding the House I Grew Up In
 date: 2005-6-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 I recently learned that my parents, who have lived in the same house since 1962, are considering the possibility of selling it. Without having talked to them in any detail about the reasons, I suspect that it is starting to become problematic for them.
 

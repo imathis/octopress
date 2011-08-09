@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Think Positive
 date: 2004-4-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 After almost three weeks of unemployment, uncertainty, and fear about the future, we got some good news yesterday. One of the companies that Michele had applied to responded with a request for a phone interview.
 

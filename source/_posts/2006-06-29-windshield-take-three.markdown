@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Windshield, Take Three
 date: 2006-6-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 My worst fears about the reapplication of the rain sensor to the inside of my new windshield were realized this afternoon. Just 90 minutes after the repair was completed the sensor was once again dangling from its wire harness.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Springer Show Extras
 date: 2006-1-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 Apartment living sucks. It's like living on the back lot of the <i>Jerry Springer Show</i> during audition season.
 

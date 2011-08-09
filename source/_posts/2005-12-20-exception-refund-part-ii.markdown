@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Exception Refund, Part II
 date: "2005-12-20"
-link: false
+comments: false
 categories: life
+link: false
 ---
 The saga of my US Airlines exception refund continues. Shortly after Michele's death I contacted Expedia about getting a refund for plane tickets we were never going to use. After some initial <a href="http://www.zanshin.net/blogs/000683.html" title="Exception Refund">difficulty getting the paperwork into the pipeline</a>, Expedia at least is working on it for me. Since it had been a month since they passed the paperwork on to US Air I thought I'd call them today for an update.
 

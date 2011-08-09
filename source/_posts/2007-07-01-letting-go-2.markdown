@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Letting Go
 date: 2007-7-1
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Seven years ago this month I created a new domain, one for my professional self.  At the time I was engaged in negotiations for a contract that would set me up as an independent consultant.  I would be working for myself rather than a company.  Being hugely enamored of the entire web experience I wanted to have a domain for my doing-business-as name; I actually developed the doing-business-as name as a result of which domain names were available.  In the end, <a href="http://partitionsoftware.com" title="Partition Software">Partition Software</a> was created.  Using <i>partition</i> in the name was a play on words as the primary development platform I was working with at the time allowed distributed software to be created and partitioned across many servers with ease.
 

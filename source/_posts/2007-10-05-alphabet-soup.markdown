@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Alphabet Soup
 date: 2007-10-5
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Most modern browsers offer an auto-complete feature for the address bar; start typing an address and the browser offers one or more addresses that start with the same character or characters to save you from typing the entire URI.  Over time your favorite sites gravitate towards the top of this auto-complete list, resulting in the ability to type just a single letter, in some cases, to get to a site.  Here, then, are the top 26 sites in my version of the Internet, as determined by their first letter.
 

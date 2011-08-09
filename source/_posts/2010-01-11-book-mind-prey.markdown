@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Book: Mind Prey"
 date: 2010-1-11
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 John Sandford week continues with <em>Mind Prey</em>.
 

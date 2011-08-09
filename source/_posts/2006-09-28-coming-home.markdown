@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Coming Home
 date: 2006-9-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 After much deliberation and a couple of relatively sleepless nights, I've decided to continue Nekko's treatment and bring her home.
 

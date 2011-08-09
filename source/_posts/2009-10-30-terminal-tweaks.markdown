@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Terminal Tweaks
 date: "2009-10-30"
-link: false
+comments: false
 categories: life
+link: false
 ---
 While the Apple Mac OS X graphical user interface is beautiful and very easy to use, having a powerful Unix command line at my disposal gives OS X something extra. Out of the box Terminal (Applications -&gt; Utilities -&gt; Terminal) is ready to go, but I like to customize all parts of my computer, so here is what I've done to Terminal.
 ## Terminal Style

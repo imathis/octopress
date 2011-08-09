@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Long And Winding Road
 date: 2006-7-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 In my conversations with a friend, she made the statement that she wasn't sure I was ready for a new relationship. Companionship, certainly, but relationship - maybe not. Her statement echoed thoughts of my own.
 

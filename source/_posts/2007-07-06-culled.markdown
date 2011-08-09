@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Culled
 date: 2007-7-6
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For the past several years I've been actively reading numerous blogs on a near daily basis.  At first it was just a handful of sites that I liked for one reason or another.  Over time links these sites had led me to other sites, and so on.  Being moderately organized I keep all the blog URL in a folder on my Bookmarks bar in Firefox so when I want to see what everyone has to say I can just right-click and select "Open All in Tabs."
 

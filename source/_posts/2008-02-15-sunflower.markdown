@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sunflower
 date: 2008-2-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 Until I generated a graph of my site, I never knew it contained a sunflower.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Under Development
 date: 2007-8-6
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Yesterday, Sibylle and I spent most of the afternoon and some of the evening working on a new website for her piano studio.  She has had sites in the past, and one weekend last spring I played around with some design ideas that resulted in a prototype site that never saw the light of day.
 

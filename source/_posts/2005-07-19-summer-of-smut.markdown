@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Summer of Smut
 date: 2005-7-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I both like "reality" television. Our favorite shows are Survivor and Amazing Race. We also liked The Mole when it was on the air. However our shameful secret is that we also watch Big Brother.
 

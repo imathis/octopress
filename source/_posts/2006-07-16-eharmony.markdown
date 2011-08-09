@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: eHarmony
 date: 2006-7-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 In addition to all the physical things I've started doing to take better care of me, I've also started to look towards the future. And that future is not one spent alone. For all my introversion and comfort being with myself, I am a social creature who craves contact with other people. My circle of friends isn't large, but I have long standing and deep relationships with each of them.
 

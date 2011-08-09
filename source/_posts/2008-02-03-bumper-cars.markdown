@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bumper Cars
 date: 2008-2-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 While Sibylle and I were in Manhattan yesterday, so that she could teach, the Lexus was backed into.  Again.  Regular readers of zanshin will know that in August, while moving into our townhouse, someone visiting the neighbor backed his mini-van in to the right, rear passenger side of the car, doing roughly $1968 damage.  On that occasion I tried to be a nice guy and didn't call the police.  We just exchanged contact information, and I got a copy of his insurance information.  When it later turned out that he was uninsured, and penniless too boot, I regreted not having called the police.  (I am still short the $500 deductible required to have the car fixed.)
 

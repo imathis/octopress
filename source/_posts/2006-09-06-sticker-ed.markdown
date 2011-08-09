@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sticker-ed
 date: 2006-9-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 Tuesday morning I was successful in navigating the rapids of the local DMV and got a new sticker for my license plate. Some investigation online the night before revealed a branch location much closer to my apartment than the main office that I had been to in vain on Friday. The posted hours were 7:30 am to 4:30 pm. Since Tuesday was going to be the first day after a holiday weekend I anticipated a long line.
 

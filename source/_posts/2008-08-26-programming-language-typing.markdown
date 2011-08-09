@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Programming Language Typing
 date: 2008-8-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 The following comparison is from Dive into Python, by Mark Pilgram, Section 2.2.1:
 <blockquote><em>statically typed language</em>:

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Outlook Other Calendars
 date: 2008-1-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently at work I added all the conference room calendars, for the building I work in, to my "Other Calendar" list in Outlook.  This way I can click on the checkbox for a conference room and see its availability quickly; something useful when trying to schedule a meeting.
 

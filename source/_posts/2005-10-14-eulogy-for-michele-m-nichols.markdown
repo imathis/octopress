@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Eulogy for Michele M. Nichols
 date: "2005-10-14"
-link: false
+comments: false
 categories: life
+link: false
 ---
 October 14, 2005
 9:30 am

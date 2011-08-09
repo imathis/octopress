@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Thanks JJ
 date: "2003-11-14"
-link: false
+comments: false
 categories: life
+link: false
 ---
 <a href="http://blueyak.org/" title="blueyak.org">JJ</a> sent me an instant message today letting me know that some of my tags were showing. One of the dangers of copy-paste coding had reared its ugly head. I had an extra "/&gt;" embedded in the individual archive template. And I also had some residue from a previous-next navigation scheme that I had only partially removed.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mute Embarrassment
 date: 2007-12-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 My current assignment at work involves a large scale project that will ultimately effect how we create software.  A small team has been crafting a new methodology, and has been making presentation of various aspects of the new life-cycle to a larger team comprised of managers.  Due to the tight schedule for delivery of the new methodology, and the tight schedules of the parties involved, we have resorted to meeting over lunch, as that is the only time the quorum of parties is available.
 

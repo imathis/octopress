@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: true
 title: Google Fonts
 date: 2011-7-29
-link: false
+comments: true
 categories: nerdliness
+link: false
 ---
 After reading about them and looking them over, I've finally decided to take the font plunge using <a title="Google Web Fonts" href="http://www.google.com/webfonts#ChoosePlace:select">Google Fonts</a>. The process couldn't be easier, and the results are worth the few minutes time it takes.
 

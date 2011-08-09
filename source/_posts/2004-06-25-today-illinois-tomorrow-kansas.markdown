@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Today Illinois, Tomorrow Kansas
 date: 2004-6-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 We are moving. This morning we confirmed our new apartment address, setup utilities, telephone, and the all important broadband internet. We've got a small truck reserved for tomorrow, and will be loading enough stuff on it to allow us to set up housekeeping for the next two weeks, while we wait for Allied to bring the rest of our stuff on July 10th.
 

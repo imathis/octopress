@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Four Tons
 date: 2006-7-15
-link: false
+comments: false
 categories: health
+link: false
 ---
 Thursday evening during my "personalized workout" session with the trainer at the  gym I've joined, he talked about the "volume of weight" being the key. In my case I want to lose weight (and size) and tone up my muscles. The way to assist that process with resistance training is to lift less weight more times. If you want to get bigger you lift more weight fewer times.
 

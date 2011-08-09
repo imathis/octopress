@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A New Christmas
 date: "2000-12-27"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Christmas has come and gone again. This year marked a decided change in my approach to this most difficult and          wondrous of holidays.
 

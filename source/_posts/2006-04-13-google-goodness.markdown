@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Google Goodness
 date: 2006-4-13
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For the past two years I have been a daily user of Google's GMail service. I was never impressed with Microsoft Hotmail and I have a strong dislike for Yahoo's invasion-ware tactics when you install their chat client, so I was pleased to discover a simple, easy to use, and very slick web-based mail tool. (I have invitations if anyone would like.)
 

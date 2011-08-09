@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: You Never Forget
 date: 2009-5-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 With the exception of perhaps 30 minutes riding late October 2005, I haven't ridden either of my bicycles in 12, maybe 15 years. Several of my co-workers are commuting to work via bike, and given that we live only 4.5 miles from my office, I have been thinking about what it would be like to ride to work rather than drive.
 

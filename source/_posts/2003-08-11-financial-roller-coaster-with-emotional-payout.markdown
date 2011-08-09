@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Financial Roller Coaster with Emotional Payout
 date: 2003-8-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Several years ago, just after we were married, Michele and I tackled our revolving debt by using Consumer Credit Counseling Service. It was emotionally painful to realize that our debt was controlling us rather than us controlling our debt. In less than 3 years we had completely eliminated all of our credit card debt. To this day, we haven't acquired a new credit card and that feels very good.
 

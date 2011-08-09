@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tivo 2
 date: 2004-2-15
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Almost three years ago my wife and I acquired a <a href="http://www.tivo.com" title="Tivo">Tivo</a>. It changed the way we watched television, but only in the living room. Elsewhere in the house we were still watching the old fashioned way. And it seems we were watching more TV elsewhere and less with the Tivo.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Life's End
 date: "2003-11-26"
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 Michele's mom is obviously aging quickly now. We saw her last in February and she seemed vital and capable then. Spending time with her yesterday afternoon and evening was difficult as her health has suffered in just 9 months.
 

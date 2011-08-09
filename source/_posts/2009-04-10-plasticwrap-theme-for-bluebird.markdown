@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: PlasticWrap Theme for Bluebird
 date: 2009-4-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Earlier this week I downloaded the new Twitter client from <a title="{13bold}" href="http://13bold.com/">{13 Bold}</a> called <a title="Bluebird Twitter application" href="http://bluebirdapp.com">Bluebird</a>. While the client only runs on Mac OS X 10.5, meaning I only use it at work (my home machine are all 10.4.11 due to their aging G4 processors), I like the way it works. I especially like the theming capability that is built in.
 

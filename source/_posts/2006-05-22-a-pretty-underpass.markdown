@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Pretty Underpass
 date: 2006-5-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 To quote my father from a phone conversation I had with him early Saturday morning, "things have come to a pretty underpass." It seems the my mom has less and less of a grip on reality, or at least her grip is some what fluid. During the night Friday she was up for several hours and wandered through the entire house looking for my dad. Even the basement which is hard to believe given her current diminished physical state. On a previous occasion she forced herself to stay up all night because she was afraid that my father was going to kill her in the night, when actually what he was going to do was administer pain medicine on a schedule, rather than wait for the morning.
 

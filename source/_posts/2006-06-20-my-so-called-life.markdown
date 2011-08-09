@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: My So Called Life
 date: 2006-6-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today was a bad day. Bad as in I had to leave work before I totally lost my composure. I feel like the guy in one of those "how do you get two chickens and a fox across the river one at a time with out the fox eating the chickens" puzzles. Only I've got two foxes and one chicken. I can handle the grief of Michele's death. I can handle the grief of my mother's death. The two combined takes me right up to my limit. I have no freeboard left for anything else.
 

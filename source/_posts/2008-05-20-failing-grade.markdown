@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Failing Grade
 date: 2008-5-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 USA Today has an article up about <a title="At some schools, failure goes from zero to 50" href="http://www.usatoday.com/news/education/2008-05-18-zeroes-main_N.htm">new school policies regarding the minimum grade possible</a>.  Instead of allowing scores below 50, this new "minimum 50" policy would have 50 be the lowest score possible. The reasoning given in the article is that having a score range from 0 - 59 makes getting an F six times as likely as getting any other score.  As John Gruber of <a title="Daring Fireball" href="http://daringfireball.net">Daring Fireball</a> points out in <a title="'Minimum 50' Grading Policies" href="http://daringfireball.net/linked/2008/may#mon-19-minimum_50">'Minimum 50' Grading Polices</a>,
 <blockquote>This is so profoundly stupid it’s hard to believe it isn’t from The Onion. That F covers 0-59 doesn’t make it six times more likely that a student will get an F than any other grade, unless test scores are based on random numbers rather than actual performance.</blockquote>

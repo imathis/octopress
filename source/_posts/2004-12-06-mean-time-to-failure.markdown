@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mean Time To Failure
 date: 2004-12-6
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In the computer hardware world there is a term, "Mean Time to Failure" that measures the average time a device is expected to last under normal wear and tear before failing. Of course you don't always get the mean time, sometimes you get more and sometimes you get less.
 

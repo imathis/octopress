@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sparring with a Stick
 date: 2006-8-9
-link: false
+comments: false
 categories: health
+link: false
 ---
 Sparring in kendo is vastly different than sparring in karate-do. First off, the other guy is trying to WHACK YOU WITH A STICK. And given the it is rather small in circumference, and you are wearing a mask with bars obscuring your line of sight, you easily lose track of where it is currently. That is until it snacks into your hand, or rings your ears with a solid whack on your head.
 

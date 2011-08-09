@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Customer Service
 date: "2004-12-18"
-link: false
+comments: false
 categories: life
+link: false
 ---
 In a stunning, if only because it is nearly 2005, example of how not to provide customer service I give you Cingular Wireless. Today I tried twice, to upgrade my cell phone to a newer model. For those of you not familiar with how this particular shell game works, you only get a new phone with all the nifty features by agreeing to extend your contract for 1, or 2, or more years. Buying the phone outright is possible too, but they are outrageously expensive.
 

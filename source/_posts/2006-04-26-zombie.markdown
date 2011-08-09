@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Zombie
 date: 2006-4-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 The past couple of evenings I have been a total zombie. Getting up the energy to make dinner has been an effort. Monday evening I cheated and just had scrambled eggs and bacon. It only takes a few minutes to make, it's hot, delicious, and good comfort food for me. Last night I ordered-in from the nearby Chinese restaurant. Best part, other than spicy good food, is leftovers for lunch today.
 

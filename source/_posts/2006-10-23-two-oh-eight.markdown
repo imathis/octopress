@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two-oh-eight
 date: "2006-10-23"
-link: false
+comments: false
 categories: health
+link: false
 ---
 I have finally crossed the forty pound barrier and entered into the single digits above two hundred pounds. When I originally altered my eating habits I was hoping that in a year's time I would lose fifty pounds and once again be under two hundred. That I am just eight pounds away from that goal after only five months is astonishing to me.
 

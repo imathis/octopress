@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Painless
 date: 2005-4-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 My driver's license expires in just three weeks and so this afternoon Michele and I ventured out in search of the Kansas DMV so I could start the process of getting a new one. Having now lived in several states as a licensed driver, I've been through the gauntlet of tests, forms, lines, et cetera several times. I was expecting to get the review booklet today in preparation for a written test later.
 

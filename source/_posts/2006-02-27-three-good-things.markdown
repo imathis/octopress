@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Three Good Things
 date: 2006-2-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 A long time ago I learned a simple exercise to help put a bad day into perspective. Having just had a pretty awful day I thought I give it a try.
 

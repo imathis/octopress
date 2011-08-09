@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Minus Seven and a Half
 date: "2009-11-16"
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the three months or so since Sibylle and I purchased our Honda Insight Hybrid, we have averaged about 43 MPG for each tank of gas. The car's computer has a number of displays providing all sorts of information about the car's performance and gas milage. One of the displays shows the current miles per gallon for the tank of gas in use, as well as an instant MPG graph.
 

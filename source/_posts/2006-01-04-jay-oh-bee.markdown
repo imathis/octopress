@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Jay. Oh. Bee.
 date: 2006-1-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 Four weeks ago when I was informed that my contract wasn't funded for the next contract year it was a bitter pill to swallow. Coming close on the heels of Michele's death I found myself reeling; uncertain of the future. At the time I had very bittersweet thoughts about Michele: I was pleased that she didn't have to suffer through yet another round of employment roulette and saddened that my closet confidant, with her wisdom and keen insights, wasn't there to support me.
 

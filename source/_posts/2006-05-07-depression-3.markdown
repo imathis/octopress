@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Depression
 date: 2006-5-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 Seeing my mom this weekend was harder than ever. Her depression about dying is very evident now. She readily admits that she is tired and just wants to quit. At times you can see utter defeat and despair on her face. My father remains steadfast and dependable, he has been by her side every step of the way through out this cancer, and I know he will stay with her through the end. My respect for him has grown anew watching how gentle, loving, and caring he is towards his wife of 45 years.
 

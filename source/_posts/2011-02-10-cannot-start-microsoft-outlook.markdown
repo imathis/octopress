@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Cannot Start Microsoft Outlook
 date: 2011-2-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Less than a week after we installed Microsoft Office 2010 on my wife's new Toshiba laptop it stopped working. Any time you tried to start Outlook and error dialog saying, "Cannot start Microsoft Outlook" would be displayed. No reason, no helpful hint, just cannot start.
 

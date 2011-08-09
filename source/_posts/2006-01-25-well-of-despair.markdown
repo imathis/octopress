@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Well Of Despair
 date: 2006-1-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 My demons are getting the better of me this evening. I feel jittery and sluggish at the same time. My neck is a rigid bar of pain while my head feels as if it is stuffed with cotton. Emotionally I feel spent, however, there are spurts of white hot anger just to keep me (and anyone near me) on their toes.
 

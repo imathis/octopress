@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Saturday and Sunday
 date: "2003-10-13"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Saturday was spent running around doing little errands and visiting family. In the morning we went to an interior design shop looking for ideas and estimates on reupholstering a large overstuffed chair to use in our bedroom. Originally the chair was taupe colored and our room is soft pastels. The estimate for the chair alone was as much as it had cost new 2 years ago. By the time we thru in some shams for the bed and a small table cloth for an accent table in the room we were up over 2 grand.
 

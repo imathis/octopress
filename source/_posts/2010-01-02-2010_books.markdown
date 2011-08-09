@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 2010 Books
 date: 2010-1-2
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Every year in December I start to think about tracking the books I read for a year. I frequently am reading more than one book at a time, and sometimes I read two or three books in a week. Being the child of organized list makers, tracking what I read isn't necessarily a simple thing. Do you track only those books which are new, or can you count ones that you've read before?
 

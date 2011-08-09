@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Still Raw
 date: 2003-3-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I are still somewhat raw emotionally due to the loss of Abby. Last evening we tried to have dinner out but neither of us was in a space to tolerate the costs necessary to be out in public in that situation.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Place of Recognition
 date: 2006-8-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Having experienced to one degree or another the impact of four deaths in the past two years has focused a lot of my thinking on death and dying. Ultimately I have come to an understanding that works for me. I share it here mostly to capture it in words and solidify it in my mind.
 

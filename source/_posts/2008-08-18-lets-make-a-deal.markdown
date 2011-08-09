@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Let's Make A Deal
 date: 2008-8-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past six weeks or so I have been participating in a placement program at my employer.  My position was eliminated and this program is designed to locate a new position for me within the company.  While I applaud the thinking behind the program - that it is better to retain employees than to release them only to hire others - there are some aspects of it that have been stressful for Sibylle and me.
 

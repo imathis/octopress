@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Weekend Films
 date: 2005-7-31
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 We didn't watch as many movies this weekend as usual, but we did see a couple of good ones.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Business Continuity "
 date: "2008-12-23"
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the movie business, continuity refers to the process of making sure that scenes shot out of sequence line up contextually in the finished movie.  The best example I can think of is in Ocean's Eleven, where Brad Pitt's character is talking to Matt Damon's character while eating a shrimp cocktail.  In the middle of the scene his cocktail switches from a plate to a goblet.   Whoever was in charge of continuity between the two or three takes that make up the final scene botched their job.
 

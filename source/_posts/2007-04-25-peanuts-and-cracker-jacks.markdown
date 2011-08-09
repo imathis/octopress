@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Peanuts and Cracker Jacks
 date: 2007-4-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently at work I was chosen through a random drawing to receive a pair of tickets to see the Kansas City Royals host the Chicago White Sox.  It has been years and years since I last saw a professional baseball game so I was very much looking forward to it.
 

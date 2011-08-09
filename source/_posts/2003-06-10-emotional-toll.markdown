@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Emotional Toll
 date: 2003-6-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Tonight for the first time in weeks I had a fairly major throat episode. I have been doing much better managing my Shotski's ring of late, but this evening it took three trips to the bathroom and a complete emptying of my stomach before I was able to relax and eat. When my throat reacts this way it is always a sign that I am holding something back. I am figuratively swallowing something I don't want and my body reacts by clamping down on my throat.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Embarrassment
 date: 2003-2-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 The software project team that I am a part of recently reached a major milestone, our first release candidate. As a thank you and 'reward' the project leader setup a lunch out for all of us. I put reward inside quotes because for personal reasons eating in a group setting is difficult for me, and at times embarrassing.
 

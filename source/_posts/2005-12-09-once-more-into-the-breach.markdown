@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Once More Into The Breach
 date: 2005-12-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ah the nomadic life of a technology knowledge worker in the free trade market. In what is becoming an all too familiar scene in my life, I was informed today that my contract will be ending on January 12, 2006. And on a Friday too, so I can spend the entire weekend feeling helpless and out of control.
 

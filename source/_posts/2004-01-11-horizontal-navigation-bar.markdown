@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Horizontal Navigation Bar
 date: 2004-1-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 I've switched the navigation elements for my site from a vertical list, positioned on the right side of the page to a horizontal navigation bar. I used the <a href="http://css.maxdesign.com.au/listamatic/" title="List-a-matic">List-a-matic</a> web site to find a look and feel I liked, finally settling on <a href="http://css.maxdesign.com.au/listamatic/horizontal19.htm" title="Seth's horizontal list">Seth's horizontal list</a>.
 

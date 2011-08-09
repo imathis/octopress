@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Stumbling Towards Normalcy
 date: 2006-2-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the past two weeks I have attended two different survivors of suicide group. My motivation for going has been an increasing level of frustration and outright anger about little things, particularly when I am at home alone. In part I think my anger is about the unrelenting nature of grief. Almost every other experience you live through is either time limited, or feels good even if it lasts and lasts. Grief has neither of those attributes. Every time I turn around it is there, waiting for me; implacable, unreasoning, seemingly unending.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Locker Excavation
 date: "2006-12-10"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ever since moving to Kansas in 2004 a considerable pile of my stuff has resided in two storage lockers nearby. It turns out that a 2200 square foot house doesn't fit well into a 1000 square foot apartment. Also the house had considerable storage, including a 3-bay garage.
 

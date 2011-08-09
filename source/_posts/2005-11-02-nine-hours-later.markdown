@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Nine Hours Later
 date: 2005-11-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the first time in over three weeks I slept more than a handful of hours last night. I've been struggling with either a seasonal allergy or some kind of sinus thing for about 10 days, and last night I tried some Benadryl, which seemed to work. It also made me drowsy. Shortly after 8:00 o'clock I was in bed asleep.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Place For Lunch
 date: 2010-1-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the years I've had several favorite places for lunch during the work week.
 ## Springfield Northend

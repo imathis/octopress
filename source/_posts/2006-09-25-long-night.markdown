@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Long Night
 date: 2006-9-25
-link: false
+comments: false
 categories: family
+link: false
 ---
 My cat Nekko is in the animal hospital tonight. Upon coming home from my week's vacation in Oregon she wasn't her old self. She was limping a little in her hindquarters, and seemed very still. Normally when I sit at my desk she comes and sits on the floor beside me and reaches up with her paw to touch my arm. she'll do this until I reach down and rub her ears. She wasn't doing that. I wrote it off as being a result of having me gone for a week.
 

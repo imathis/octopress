@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Anniversary
 date: 2005-7-21
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 In December 1995 my life, my world, was turned upside down. And I have been happy ever since. You see, that December a decade ago I met my future wife online in, of all places, an AOL chat room. One or two online chats quickly grew into a phone call. And that initial phone call blossomed into more calls until we were talking for several hours every day.
 

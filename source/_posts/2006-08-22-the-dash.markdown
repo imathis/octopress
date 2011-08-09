@@ -1,9 +1,9 @@
 --- 
 layout: post
-comments: false
 title: The Dash
 date: 2006-8-22
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 <a href="http://www.thedashmovie.com/" title="The Dash Poem Movie">The Dash Poem Movie</a>

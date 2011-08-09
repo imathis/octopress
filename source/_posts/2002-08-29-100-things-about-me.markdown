@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 100 Things About Me
 date: 2002-8-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 001 ~ My favorite dessert is New York style cheese cake
 002 ~ I like that I am getting white hairs

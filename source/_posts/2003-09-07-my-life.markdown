@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: My Life
 date: 2003-9-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 I am a child of the space age. I was born just two days after Scott Sheppard made his 15-minute sub-orbital flight signaling the entry of the United States into the space race. I grew up with rockets and programmable calculators. I grew up a geek without realizing it.
 

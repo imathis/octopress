@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Closing, If Not Closure
 date: 2005-4-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 The event we've been waiting for since last spring is finally on the calendar.
 

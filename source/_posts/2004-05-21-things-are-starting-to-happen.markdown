@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Things are starting to happen
 date: 2004-5-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 There has been some activity lately concerning my employment. Not wanting to jinx anything I haven't written about it here, however, the lack of release from not writing is getting to me.
 

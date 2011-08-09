@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Insulin Shock
 date: 2008-5-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past twenty months Nekko's diabetes has been under control.  Sibylle and I have eased into a pattern where she administers the AM shot, and I take care of the PM shot.  The last several spot checks of her blood glucose levels have been good, and the blood glucose curve we had performed in March was excellent.
 

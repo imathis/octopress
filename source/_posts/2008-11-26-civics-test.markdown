@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Civics Test
 date: "2008-11-26"
-link: false
+comments: false
 categories: life
+link: false
 ---
 <a title="Flunking Civics" href="http://news.yahoo.com/s/afp/20081120/od_afp/ushistoryeducationoffbeat">Yahoo! News</a> is reporting the results of a simple literacy test given to US government officials.  The results are dismal.  Elected government officials scored just 44% on average on the test which asks questions about history, economics, and civics.
 

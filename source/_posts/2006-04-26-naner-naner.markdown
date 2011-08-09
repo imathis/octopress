@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Naner-naner
 date: 2006-4-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 At my follow-up eye exam today I learned why I've been having so much trouble seeing. And I also learned that my instincts that something wasn't right were dead on accurate. My right eye, the near one, healed far stronger than expected. Instead of measuring 150 it measures as a 3. Basically I have a microscope in my head. The doctor said there is no way I'll be able to adjust to this; that I either need a second procedure to my right eye or to get glasses.
 

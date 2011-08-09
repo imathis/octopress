@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Burned
 date: 2006-6-18
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 As I have had the same email address for over ten years now I get a ton of spam; upwards of 500 a day. Yes, <strong>five hundred</strong>. As a consequence I use an industrial strength Bayesian spam filter to clean out my inbox. In a week's time the filter traps and segregates 3500-4000 spam messages for me. By and large the filter is excellent but there is one type of message that defeats the filter.
 

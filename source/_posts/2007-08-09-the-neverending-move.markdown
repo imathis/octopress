@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Neverending Move
 date: 2007-8-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 In July 2004 when the move from Illinois to Kansas was completed a considerable amount of stuff was in storage.  Anticipating that a 2000 square foot house, with lots of storage and a generously large garage, wasn't going to fit into a 1000 square foot apartment with very little storage room, I had a storage locker rented, and a U-Haul truck reserved the day the movers arrived with their semi.  The plan was to have them off load some items directly onto the U-Haul so it could be taken immediately to the storage facility and locked away.  This plan worked flawlessly until yesterday.
 

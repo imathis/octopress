@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A More Perfect Union
 date: 2008-3-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 <em>The following is the text of Barack Obama's speech in Philadelphia, as prepared for delivery and provided by his campaign. (via <a href="http://www.iht.com/articles/2008/03/18/america/18obamaspeech.php" title="Transcript: Senator Barack Obama's speech">International Herald Tribune</a>)</em>
 

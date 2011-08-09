@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Resume Update and Trackback Spam
 date: "2006-11-17"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I've updated my resume page, and I've cleaned up some trackback spam from some of the older links.
 

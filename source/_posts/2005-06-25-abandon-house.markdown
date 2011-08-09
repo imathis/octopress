@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Abandon House
 date: 2005-6-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 A year ago this weekend (June 26th, to be exact) Michele and I abandoned our house in Illinois to move to Overland Park. On Friday afternoon we rented a 14 foot U-Haul truck for the one-way trip to Kansas. Friday evening was spent gathering those items we wanted for the two weeks before the movers would arrive with the rest of our belongings. I was up until well past midnight tearing down our computers and packing them for the journey.
 

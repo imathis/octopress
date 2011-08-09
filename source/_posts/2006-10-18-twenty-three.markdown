@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Twenty-Three
 date: "2006-10-18"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Almost without my noticing it, the twenty-third anniversary of the start of my career as a programmer / analyst / architect in the Information Technology industry passed earlier this week. I'm now in the twenty-forth year of employment as a "data processing professional."
 

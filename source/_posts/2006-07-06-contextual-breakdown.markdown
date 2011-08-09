@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Contextual Breakdown
 date: 2006-7-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 It has only been nine months since Michele died and already some of the memory contexts I've been using to keep the sound of her voice alive in my memory are failing. To be fair the urgency to hear her voice is falling off a bit too. In recent weeks I've been thinking more and more about the future, and while Michele will always be a part of me, she won't be an (active) part of my future.
 

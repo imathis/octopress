@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Turmoil
 date: 2004-5-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 You'd think that getting a great job offer after ten weeks of unemployment would be great. You would think that. Turns out you'd be wrong.
 

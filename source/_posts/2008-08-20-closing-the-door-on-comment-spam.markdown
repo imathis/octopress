@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Closing the Door on Comment Spam
 date: 2008-8-20
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 A week or so ago I installed the <a title="Close Old Posts" href="http://wordpress.org/extend/plugins/close-old-posts/">Close Old Posts</a> plugin to try and combat some of the comment spam zanshin.net receives.  The plugin closes comments on any posting older than 14 days by default "on the fly." No database queries are used, the postings are updated as they are viewed.
 

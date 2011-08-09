@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ecstasy and Agony
 date: 2003-6-17
-link: false
+comments: false
 categories: life
+link: false
 ---
 My short term employment future is looking better. My contract extension was picked up by the State so I am good for another 500 hours starting July 1st. However, my contract bid for a year long contract at another agency failed. The winning bid was less than half of my offer.
 

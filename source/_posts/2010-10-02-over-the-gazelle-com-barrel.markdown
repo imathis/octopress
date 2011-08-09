@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Over the Gazelle.com Barrel
 date: 2010-10-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently we decided to try and sell an HD camcorder we own. The camera was easy enough to use, and took nice videos, but the AVCHD file format it used to store the images hasn't yet been widely adopted and transferring video from the camera to Windows operating system personal computers proved to be time consuming and difficult. The promise of taking a video, uploading it to the laptop and then to YouTube wasn't met and so we decided to sell the camera.
 

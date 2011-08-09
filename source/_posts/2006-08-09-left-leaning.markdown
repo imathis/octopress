@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Left Leaning
 date: 2006-8-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Maybe three weeks ago I had the car into the shop for a scheduled maintenance and oil change. One of the activities performed is a tire rotation. In the days following that visit I noticed that at highway speed the car had a pronounced pull to the left. Since I was going to be taking it back in order for the front brakes to be replaced in a couple of weeks I wasn't' too worried about it.
 

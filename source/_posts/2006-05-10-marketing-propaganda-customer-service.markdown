@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Marketing Propaganda != Customer Service
 date: 2006-5-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last month I blundered and ordered a new phone from Amazon before determining if I could transfer my existing cell phone account to it. The terms of the offer, when I bothered to read them, specifically said the phone was for new service only. As soon as the phone arrived I return shipped it to Amazon; without even opening the box. It turns out that returning the phone and canceling the order did not trigger a cancel transaction at Cingular as I got a bill for the new phone number in the mail today.
 

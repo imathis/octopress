@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bullying Is Not 'Part of Growing Up'
 date: 2008-3-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 In <a href="http://www.nytimes.com/2008/03/24/us/24land.html?pagewanted=1" title="A Boy the Bullies Love to Beat Up, Repeatedly">A Boy The Bullies Love to Beat Up, Repeatedly</a>, on the New York Times web site, the story of Billy Wolfe is told.  As I read through the story my own emotions were in turmoil.  As a child all through out grade school, junior high, and the first couple years of high school I lived in terror of the bullies.  My experiences forever colored my view of that subset of men who seem to have but one emotion: anger.
 

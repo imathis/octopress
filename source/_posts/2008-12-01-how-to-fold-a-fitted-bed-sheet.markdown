@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How To Fold a Fitted Bed Sheet
 date: 2008-12-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 <a title="A tweet" href="http://twitter.com/jkottke/status/1019760669">Recently</a> <a title="Kottke.net" href="http://kottke.net">Jason Kottke</a> <a title="Twitter" href="http://twitter.com">twittered</a>:
 <blockquote>If I live 170 years, I still won't understand how to fold a fitted bed sheet. It's like you need an extra dimension.</blockquote>

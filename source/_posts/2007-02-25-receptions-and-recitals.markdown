@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Receptions and Recitals
 date: 2007-2-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 When I was growing up my father occasionally served as photographer for weddings. I remember him saying that it was the worst possible situation for a photographer. As he put it, "It is the only day that those people are all there, dressed like that. One mistake and everything is ruined."
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ambush Love
 date: 2006-11-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday Nekko had her first follow-up visit with the vet since she was diagnosed with diabetes. The past four weeks have seen her return to her normal self, but I have not been successful in administering her insulin every twelve hours as prescribed. Nekko is not a cuddly cat, and getting near her at times is difficult. Rather than chase her I've opted, thus far, to sit in her favorite overstuffed chair and wait for her to jump up on the back, before injecting her.
 

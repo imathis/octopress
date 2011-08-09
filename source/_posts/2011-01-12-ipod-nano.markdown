@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: iPod Nano
 date: 2011-1-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 Five years ago I got my first iPod, a 30 GB model, which has lasted me until now. It's primary function is to live in the arm rest of our Honda Insight where it is hooked, via USB cable, to the car's radio. This works fairly well, with my only real objection being the lack of a full set of controls on the car's dash.
 

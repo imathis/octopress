@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: I've been Banned from /.
 date: "2003-11-29"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 This is new. I've been banned from <a href="http://slashdot.org/">Slashdot</a>. I've been using NetNewsWire Lite for sometime now, and one of the feeds is Slashdot.
 

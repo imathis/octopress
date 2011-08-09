@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Kicked In The Teeth
 date: 2004-4-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 Without going into all the details tonight, our trip to Chapel Hill was less than successful in terms of finding suitable employment for Michele. In terms of learning enough about the prospective employer to know that she really doesn't want to work for them.
 

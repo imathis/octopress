@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Smoothies
 date: 2006-4-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 Seeing my mom this weekend was wonderful and bittersweet. her vitality is greatly diminished, and she is sleeping a lot now. The medical staff warned her and my dad that she would sleep more and more as the end got closer. Also that the amount of pain she would experience would increase. While her pain level is creeping higher it isn't debilitating yet.
 

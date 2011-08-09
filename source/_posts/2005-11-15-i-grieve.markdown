@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: I Grieve
 date: "2005-11-15"
-link: false
+comments: false
 categories: life
+link: false
 ---
 In 2002 Peter Gabriel released his latest album, called "UP". One of the songs on that album had previously been used in the soundtrack for the movie "City of Angels"; a song called "I Grieve". In an interview I read about the album Pete Gabriel talked about the impact an earlier song ("Don't Give Up") had made on people struggling with overwhelming odds. This new song he said was similar in that he hoped it would talk to people grieving.
 

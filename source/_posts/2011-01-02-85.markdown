@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "85"
 date: 2011-1-2
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Over the course of the past 12 months I managed to read a total of eight-five books. I'm not sure what this says about me other than I am a voracious reader. I don't know if I will keep score again this year or not, but it is tempting.
 

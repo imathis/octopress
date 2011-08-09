@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Der Osterspaziergang
 date: 2007-4-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 <strong><a href="http://www.phoneticsgroup.de/audio/goethe/goethe_osterspaziergang.mp3" title="Osterspaziergang MP3">Vor dem Tor</a></strong><br />
 Vom Eise befreit sind Strom und Bäche

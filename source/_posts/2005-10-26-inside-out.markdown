@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Inside Out
 date: "2005-10-26"
-link: false
+comments: false
 categories: life
+link: false
 ---
 As a creature of habit there are touchstones in my daily life that help me to feel grounded and on track. Obviously, talking to Michele was a big part of my life, and those times of the day are difficult now.
 

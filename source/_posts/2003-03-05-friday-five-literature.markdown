@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Friday Five: Literature"
 date: 2003-3-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 1. What is your favorite type of literature to read (magazine, newspaper, novels, nonfiction, poetry, etc.)?
 I would have to say novels.

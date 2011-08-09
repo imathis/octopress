@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Laser Surgery, Round Two
 date: 2006-6-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday I had another follow-up visit with the doctor at Lasik<em>Plus</em>. What I find so fascinating about this experience is the surge in declarative statements <em>after</em> the fact. Things that I felt should have been clearly stated prior to my procedure are only just now being said to me.
 

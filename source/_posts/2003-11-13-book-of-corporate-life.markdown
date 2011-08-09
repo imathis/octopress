@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Book of Corporate Life
 date: "2003-11-13"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today's reading is from the Book of Corporate Life. Chapter 1, verses 1-15:
 <span>

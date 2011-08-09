@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Past Week
 date: 2004-9-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 It was a good week here for me. My new job continues to be engaging and rewarding. One of my assignments was to oversee the creation of a network link between the client and a resource center outside of their network. Over the course of several weeks I managed to identify all the players at both ends of the proposed connection, and to get them all headed in the same direction. As of early last week we had a virtual private network (VPN) connection established between to the two firewalls, and work to configure the firewalls was underway. It turns out that this is the first time in the history of the client that such a connection has been successfully established. I guess it's really true what they say about nothing being impossible if you don't know what you are doing.
 

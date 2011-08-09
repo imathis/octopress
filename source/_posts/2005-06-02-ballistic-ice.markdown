@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ballistic Ice
 date: 2005-6-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning on my daily commute I was unintentionally shelled by ballistic ice. While traveling at about 70 MPH in the left lane of I-435, following an unremarkable late model American sedan (license plate 177 WWM) I observed the driver toss something out the window. Upon later reflection I decided what I had seen was him emptying a cup of its ice.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: I'm A Big Dopey
 date: 2003-2-28
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Back in the 'old' days, when I used Windows as my primary personal operating system I was a part of several distributed computing efforts. Most notably the SETI @ Home project. Eventually I tired of that screen saver and I stopped using it.
 

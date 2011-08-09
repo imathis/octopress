@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Riley
 date: 2001-9-14
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 My brother and his wife had their first child together last spring. Her name is Riley. Her          maternal grandmother's maiden name was Riley so this was a family nod. To add to that tie Riley          was born on the same day as her grandmother, March 13th. To say that the arrival of their first          grandchild unhinged my parents would be an understatement. Who knew they were this nuts about          grandchildren. It has been a joy to watch them enjoy their granddaughter.
 

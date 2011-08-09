@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Shadows
 date: 2004-8-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 The recent news that my cousin has a form of cancer has stirred up old feelings, and awakened new fears in me. My sister, Amy's, death from cancer cast a long shadow over my family. For years I couldn't understand why that one event seemed to define and limit the rest of our lives. I know now that the members of my immediate family, myself included, didn't grieve enough. Moreover, we never grieved together in any meaningful way.
 

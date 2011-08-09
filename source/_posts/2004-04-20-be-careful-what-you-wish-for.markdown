@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Be Careful What You Wish For
 date: 2004-4-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Since I lost my job in March I have been wishing for a new one. I have been dreaming of new possibilities and opportunities. Michele, too, has been exploring her profession's landscape looking for a chance to utilize her education and experience.
 

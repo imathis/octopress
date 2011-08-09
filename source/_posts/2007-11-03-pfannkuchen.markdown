@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Pfannkuchen
 date: 2007-11-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning for <em>frühstück</em> we had <em>Pfannkuchen</em>, or German style pancakes.  The recipe was a little thinner than Sibylle remember from her childhood, but the flavor was right, and we both enjoyed them.
 

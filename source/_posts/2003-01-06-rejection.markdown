@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Rejection
 date: 2003-1-6
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 I have been gone from work for 17 days, and today is my first day back. Every one here that I visit with knew that I was going to Hawaii with Michele for a week long cruise, all expressed interest and envy in my fortune. Several were adamant about wanting to see pictures as soon as I returned.
 

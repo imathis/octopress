@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Configuring Apple Mail for GMail IMAP Access
 date: 2007-11-4
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Like many people I was excited when I learned that Google was adding the IMAP protocol to GMail, and I have been playing with it in various desktop email clients ever since my accounts were all enabled.
 

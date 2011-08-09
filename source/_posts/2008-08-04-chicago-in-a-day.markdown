@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Chicago In A Day
 date: 2008-8-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 In order to renew her passport, Sibylle needed to travel to Chicago, where the nearest German Consulate is located.  We debated several options for getting her to the city and back again.  Flying by herself, the pari of us driving, or the pair of us flying.  
 

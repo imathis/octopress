@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Install Eclipse Ganymede on Ubuntu 9.04
 date: 2009-4-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 Previously I wrote about <a title="How to install Eclipse on Ubuntu 8.10" href="http://zanshin.net/2008/07/22/eclipse-ganymede-on-ubuntu/">installing Eclipse Ganymede on Ubuntu 8.10</a>, however retracing those steps wouldn't work for the latest Ubuntu release, as the Synaptic package doesn't end up in the /opt directory. However there is a very quick as easy way to get the latest Eclipse running on Jaunty Jackalope.
 <ol>

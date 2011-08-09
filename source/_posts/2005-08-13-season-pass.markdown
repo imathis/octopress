@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Season Pass
 date: 2005-8-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 We have two Tivos in the house. One in our office/living room and one in the bedroom. Just because I am in a list making mood, here are the shows we record via the "Season Pass" feature.
 

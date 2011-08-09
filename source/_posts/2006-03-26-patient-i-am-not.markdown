@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Patient, I Am Not
 date: 2006-3-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today marks the end of the third day since my eye surgery. At times I think I can see a difference, and at other times I think it is actually getting worse. By the end of the day, like now, everything is blurry. Obviously my mind and my eyes are getting tired of trying to deal with the new reality I've imposed on them. It is frustrating to have to squint to see anything. it is very difficult not to start to wonder if maybe there's been a horrible mistake made and that my vision is never going to improve.
 

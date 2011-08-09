@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "The Lost Art of Apprenticeship "
 date: "2008-11-25"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last week I was fortunate enough to attend a two-day overview of the capabilities and features of Adobe's Dreamweaver CS3 product.  The session was a highly level look at the major features and workflow the software provides.  My employer is looking at using the tool for interface mock ups and screen design. With that responsibility shifted from the Information Technology department to the product planners and their Business Analysts, something was needed to give the BAs a way to capture web page layouts and interface designs.
 

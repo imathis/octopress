@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: My Lane Is Better Than Your Lane
 date: 2008-3-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 My daily commute is twenty-two miles, each way.  Except for several hundred yards downtown, between the exit ramp and the parking garage, and about a mile of surface streets in our neighborhood, all of that distance is done on Interstate highway.  The first five or six miles are two-lane, and the rest is at least three-lane.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Defined
 date: 2009-2-14
-link: false
+comments: false
 categories: family
+link: false
 ---
 ## Husband
 husband |ˈhəzbənd|noun

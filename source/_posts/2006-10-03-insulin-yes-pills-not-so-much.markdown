@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Insulin Yes, Pills Not So Much
 date: 2006-10-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 Nekko continues to look and act like normal this week. The change in her demeanor from just a week ago is tremendous. The trick now is to manage her medications so that she can stay healthy.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Too Good For Lowe's or Home Depot
 date: "2008-12-30"
-link: false
+comments: false
 categories: life
+link: false
 ---
 On our drive between Manhattan and Olathe we pass a prominent Billboard that asks the question,
 <blockquote>Why is Stihl not sold at Lowe's or Home Depot?</blockquote>

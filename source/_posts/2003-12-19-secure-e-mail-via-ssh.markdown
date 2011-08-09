@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Secure E-Mail via ssh
 date: "2003-12-19"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In my quest to have total mobility with my Powerbook I have finally found a solution that allows me to access my mail regardless of any firewalls imposed by my connection location.
 

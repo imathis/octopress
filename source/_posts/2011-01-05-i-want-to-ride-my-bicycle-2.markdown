@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: I Want to Ride My Bicycle
 date: 2011-1-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 With the goal of getting into better shape and losing some weight set for this winter and spring I need an activity (that I'll stick to) to burn some calories. My plan is to get a stationary trainer, hook up one of my bikes, and pedal away some pounds.
 

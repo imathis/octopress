@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Missing Nekko
 date: 2008-6-12
-link: false
+comments: false
 categories: family
+link: false
 ---
 Several times since Monday I have started to write something about Nekko, but each time I found the emotion too strong to capture in words.  I still feel a sense of emptiness, of being hollow.  Nekko was with me for eleven years.  She moved from Illinois to Washington, and then to South Carolina, back to Illinois, and finally Kansas.  Twenty months ago she was critically ill.  Every day since then I have been grateful for deciding to pursue treatment for her diabetes.
 

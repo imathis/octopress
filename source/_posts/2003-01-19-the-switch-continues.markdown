@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Switch Continues
 date: 2003-1-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 Okay, it has been just over a week since Michele and I took the Apple plunge by purchasing a Powerbook G4 and 17 inch wide screen iMac. Michele was able to transfer all her files and leave her Windows ME machine behind in just a couple of days. I managed to convert and transfer my e-mail files, and copy over all of my data files, with only a little difficulty.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Exhausted
 date: "2005-11-15"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I guess a part of grief is exhaustion. I find that I run out of energy very quickly these days; two hour naps upon arrival home from work are becoming the norm. Of course the first few weeks of this ordeal I was unable to sleep until I was utterly exhausted. Trying to go to bed before that state was reached only resulted in an internal slide show accompanied by a litany of questions for which there are no answers. Several times now I have resorted to taking 1/2 a Xanax which not only makes me a little drowsy, it keeps the demons of "what if" and "if only" at bay.
 

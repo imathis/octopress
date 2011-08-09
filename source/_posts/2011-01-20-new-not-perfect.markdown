@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: New, Not Perfect
 date: 2011-1-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the things you discover with a new house is that it isn't perfect. In this instance when I say new I mean a brand new house that no one has ever lived in.
 

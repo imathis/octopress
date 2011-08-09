@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Creatures of Habit
 date: 2011-1-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 The music theory class I'm taking this spring occurs in a general purpose room in the music department. The class before us has all the xylophones out, and there's a jazz band that meets there immediately following our class. Consequently there are no fixed chairs in the room. Instead there are stacks of plastic chairs in the back.
 

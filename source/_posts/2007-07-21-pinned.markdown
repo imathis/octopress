@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Pinned
 date: 2007-7-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday afternoon by the time I arrived at home, my injured finger was swollen enough to be very uncomfortable.  Although we understood the mechanics of heating a paper clip and using that to create a opening in the nail to let the blood, and therefore the pressure, out, neither Sibylle or I felt comfortable doing this at home.  So we went to urgent care to have them do it.
 

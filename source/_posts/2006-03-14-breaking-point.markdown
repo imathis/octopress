@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Breaking Point
 date: 2006-3-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past several months I have struggled mightily to keep the flood of grief contained within the levees that define my personal life. For the most part I have managed to keep my professional life high and dry, as it were. There have been a couple of minor breaks in the dike, but nothing that was really major.
 

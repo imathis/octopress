@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "iPhone 3G S Unboxing "
 date: 2009-6-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 <p>The unboxing video to end all unboxing videos.</p>
 <p><object width="480" height="295"><br />

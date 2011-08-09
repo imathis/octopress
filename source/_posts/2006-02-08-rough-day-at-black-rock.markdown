@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Rough Day at Black Rock
 date: 2006-2-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today has been rough. For some time now I have been getting more and more confused by the design approach we are using on my project at work. This approach, coupled with a rather dense application framework, has contributed to feelings of inadequacy and lowered my battered self esteem even more. Feeling stupid has always been a trigger for me and today I reached the breaking point.
 

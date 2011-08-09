@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Twice A Day
 date: "2006-11-12"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Just over a week ago, Nekko had her follow up visit at the animal hospital. At the time I expressed my frustration at having to inject her twice a day with insulin to the doctor. He firmly, but politely, explained to me that there was really no option. The longer lasting insulin wasn't nearly as effective, especially with felines, as the twelve hour stuff. In short he said that I had to find a way to inject her on a regular schedule as close to every twelve hours as possible.
 

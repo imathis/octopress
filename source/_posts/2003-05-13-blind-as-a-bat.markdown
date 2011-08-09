@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Blind As A Bat
 date: 2003-5-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday I got my first pair of bifocals. For some time now I have been having difficulty reading text at less than arms length. The doctor agreed with me, saying the my right eye had gone from slight farsightedness to neutral, while my left eye (the dominate one) went from neutral to slightly nearsighted. Since I work with computers all day, and play with them in the evening I needed a combination lens to allow me to see the screen at arms length, and text at less than that distance.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: No Follow and the Return of Comments
 date: 2005-1-19
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Thanks to <a href="http://www.google.com/googleblog/2005/01/preventing-comment-spam.html" title="Google No Follow">Google</a>, MSN, and Yahoo, there's a new tool to fight comment and referer spam: the no follow tag.
 

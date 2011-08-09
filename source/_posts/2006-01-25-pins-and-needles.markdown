@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Pins and Needles
 date: 2006-1-25
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 After saving my pennies for a very long time I finally reached my goal and have ordered a new laptop. In an interesting bit of synchronicity I ordered the new machine three years to the date of getting my current Powerbook. The new machine is Intel based and will run Windows XP Professional. More on that in a minute.
 

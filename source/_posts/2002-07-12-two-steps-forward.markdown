@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two Steps Forward
 date: 2002-7-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 My journey towards personal understanding and truth took two steps yesterday. A big one and a small one. The big one came as I was getting home from the store after work. While in the check out line I felt very out of control. The woman behind me found it necessary to crowd me the whole time, even bumping into me once or twice. I asked her to stop, telling her that she was in my personal space and that I didn't like it. The checker added to my feeling by placing the bags with my items as far away on the counter as possible. I had to walk around the foot of the counter to pick them up.
 

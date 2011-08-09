@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: And the Truth Shall Set Us Free
 date: 2003-5-23
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 My wife, Michele, discovered this <a href="http://alternet.org/story.html?StoryID=15989" target="_blank">copy</a> of Senator Robert Byrd's comments on the Senate floor on May 21, 2003.
 

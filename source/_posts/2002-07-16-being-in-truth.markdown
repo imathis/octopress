@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Being In Truth
 date: 2002-7-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 I know that I tend to run back to old, destructive, behaviors when I feel threatened. An important recent discover of mine is realizing that I have contributed to leaving past jobs by shooting myself in the foot so I had to leave. I think, and this is only a guess, that I like it better when I feel like I am responsible for a situation ending rather than the other party. If I shoot myself in the foot, painful though that maybe, I am responsible for the end, not them. I can leave knowing (thinking) that they are okay. I think there are two primary reasons for my wanting to create this situation, my upbringing and my sister's death. I have put most of my sister issues to rest, but I think a part of me is mad at her for ending the situation without my say so. I didn't get to participate in her decision to end our relationship. So I try to control the endings of my relationships so that I make the choice and not them. As for my parents, I have always felt as if I was responsible for their emotions and feelings. Therefore I am responsible when they are sad or angry. When a work situation starts to go sour I want it to be my fault because that feels normal ~ that feels like home. If it feels like home then I can tolerate it. Making it feel otherwise is scary and hard. Even though making a situation feel safe and okay would be a good thing, I don't let myself see that side of it, I just see that safe and good is different from what was normal growing up.
 

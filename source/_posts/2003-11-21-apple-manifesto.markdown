@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Apple Manifesto
 date: "2003-11-21"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Being relatively new to the world of Apple computers, I hadn't ever seen or heard about the "Here's to the Crazy Ones" manifesto. Now that I've seen it I wanted to put it here on my site as a reminder to always look outside the box.
 

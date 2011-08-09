@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Moving
 date: "2007-12-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 <a href="http://zanshin.net" title="Zanshin.net">Zanshin.net</a> is moving to a new host this weekend.  The DNS change has been initiated and should complete in the a day or so.  (For the <em>uninitiated</em>, <strong>D</strong>omain <strong>N</strong>ame <strong>S</strong>ervers provide the translation between the URL you type (zanshin.net) and the actual IP address of the site.  Moving to a new host requires that the whole hierarchy of DNS be updated with the new information.  This can take 24-48 hours.)
 

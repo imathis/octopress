@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Link Surge
 date: 2006-4-19
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Last September I participated in a <a href="http://gigaom.com/2005/09/03/10macapps/" title="OS X application meme">meme about OS X applications</a>. Ever since then the comment I placed on the originating site has garnered me perhaps four or eight visits a week. All of that changed on Monday.
 

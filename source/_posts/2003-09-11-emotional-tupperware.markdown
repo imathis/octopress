@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Emotional Tupperware
 date: 2003-9-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Periodically when we clean out our refrigerator we discover various tupperware containers whose contents have become biology science experiments. I spent a couple of hours this morning cleaning out my emotional deep freeze and ridding myself of a particularly smelly bit of emotional tupperware.
 

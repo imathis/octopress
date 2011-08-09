@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How to Disable System Tray Popups
 date: 2007-7-17
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I get tired of endless popup notifications from the various denizens of the system tray telling me well-meaning but generally useless bits of information.  One aspect of the Mac OS X interface that I truly like is that you are only notified when there is some action you need to take, not for every minor change in your operating system's landscape.
 

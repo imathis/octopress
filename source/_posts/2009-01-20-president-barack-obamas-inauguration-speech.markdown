@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: President Barack Obama's Inauguration Speech
 date: 2009-1-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Text of President <span id="lw_1232475610_0" class="yshortcuts">Barack Obama</span>'s inaugural address on Tuesday, as prepared for delivery and released by the Presidential Inaugural Committee.
 

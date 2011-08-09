@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Next Steps
 date: 2006-7-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 I'm starting to take some "next steps" in my journey back from the land of grief. Some of these are mental and or emotional adjustments, while others are more tangible. The most tangible one to date has been the changing of my voice mail greeting.
 

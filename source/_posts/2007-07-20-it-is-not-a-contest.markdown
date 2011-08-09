@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: It Is Not A Contest
 date: 2007-7-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 While I was getting my degree one of the courses I took was called "Small Group Communication."  We studied the roles and interactions of people in small groups, which has proved invaluable in my career as a software developer and architect.  One of the concepts I still remember from that class was the idea of "consciousness raising."
 

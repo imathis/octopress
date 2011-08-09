@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Remote Access
 date: 2008-1-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 From time to time it would be convenient to access one or more of the computers at home remotely.  One of the projects I have going presently is to create a version control repository of all my code on the iMac, so that I can work on our hand-coded web sites from any machine in the house.  Since the other two machines I use on a regular basis are laptops, it would be ideal to open a port on my router to allow an inbound connection to the version repository on the iMac.
 

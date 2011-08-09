@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Seen everywhere today, so why not . . .
 date: 2004-4-6
-link: false
+comments: false
 categories: meme
+link: false
 ---
 [Grab the book nearest to you, turn to page 18, find line 4. Write down what it says] "He wanted to log in everywhere but was limited to the phone numbers on his list." <i>Masters of Deception</i> by Michelle Slatalla and Joshua Quittner
 

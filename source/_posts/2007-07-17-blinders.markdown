@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Blinders
 date: 2007-7-17
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the course of my professional life I have changed jobs a number of times.  In most of those instances there comes a point in time where you know you are going to leave the current job and a sometimes subtle, sometimes profound change occurs.  I refer to this change as the blinders coming off.
 

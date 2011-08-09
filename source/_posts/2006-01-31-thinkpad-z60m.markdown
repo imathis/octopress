@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: ThinkPad Z60m
 date: 2006-1-31
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 After three years of only using Windows machines at work, I once again have a Wintel box on my desk. I had grown frustrated with the issue my two towers were having with the development software I wanted to run. While still good computers they are now a little long in the tooth. The newer one is 5 years old, and the older one almost 7.
 

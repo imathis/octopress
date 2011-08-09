@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Making The Grade
 date: 2008-2-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today, Sibylle and I traveled to Manhattan KS to participate in and watch the 2008 Manhattan Area Music Teachers Association Concerto Competition.  Students competed in four age categories by performing concertos accompanied on a second piano by their teacher, who played the piano reduction of the orchestral accompaniment for the various pieces.
 

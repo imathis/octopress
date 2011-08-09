@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Yet Another Reason Not To Support G. W.
 date: 2003-11-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 <a href="http://www.veen.com/leslie/">Leslie Veen</a> was one of many who <a href="http://www.veen.com/leslie/archives/000367.html">talked</a> about the recent <a href="http://www.whitehouse.gov/news/releases/2003/11/images/20031105-1_p35410-21-515h.html">signing of the Partial-Birth Abortion Ban</a>.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Self Segmentation
 date: 2006-7-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 As I move from acknowledging Michele's death to accepting the new reality of life without her, I have become aware of the segmentation occurring within my personality. No, I'm not developing split personalities, although one could argue it would be hard to differentiate from my behavior prior to her death, but I am starting to set aside parts of me in order to complete the transition from shell-shocked suicide survivor to grieving widower to widower to a fully functional member of society.
 

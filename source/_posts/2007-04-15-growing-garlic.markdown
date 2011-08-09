@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Growing Garlic
 date: 2007-4-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 Growing up in a city, albeit a smaller one, I didn't learn much about growing food.  My mother always had a very African Violets on a stand in the window, and my father has a tomato patch in his yard every year, but I never had the urge to plant things and make them grow.
 

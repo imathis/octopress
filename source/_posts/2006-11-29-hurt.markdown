@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Hurt
 date: "2006-11-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the darker songs on the Johnny Cash album <i>American IV: The Man Comes Around</i>, is a cover of the Nine Inch Nails song, <i>Hurt</i>.
 

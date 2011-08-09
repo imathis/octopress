@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Need To Work
 date: 2002-11-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I are taking a week-long cruise around the Hawaiian Islands for Christmas this year. We are flying out to Honolulu a couple of days early so that we'll have time to recover from the 9-hour flight. After we get back I am taking a couple of days off, including New Year's Day. My plan is to return to work on Thursday, January 2nd. Michele's question to me was why? Why not take that Thursday and Friday off as well? So far I am having a hard time coming up with an answer that doesn't sound like bullshit.
 

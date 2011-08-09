@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Putting a New Groove On
 date: 2004-1-22
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 This week I am updating my wife's site, <a href="http://andifyoudidknow.com/" title="And if you did know?">andifyoudidknow.com</a> with new style sheets, images and color changes.
 

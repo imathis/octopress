@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Plot Thickens
 date: 2004-6-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ah what a tangled web we weave when first we practice to be human. I believe that the Tao, or God, or the Universal Is, has a plan for all of this. My role in each lifetime is to uncover a bit more of the plan and understand it. After many lifetimes I will eventually understand the whole plan. I will understand true love and I will return to the whole that is the Tao/God/Is.
 

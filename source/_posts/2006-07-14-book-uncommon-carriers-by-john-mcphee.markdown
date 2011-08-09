@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Book: Uncommon Carriers by John McPhee"
 date: 2006-7-14
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 My father introduced me to author John McPhee years ago with a volume entitled, <i>The Deltoid Pumpkin Seed</i>. The unlikely title referred to a new lifting vehicle, or rigid lighter-than-air balloon. McPhee's essays are about people and things, and are told with rare grace and deft use of language. They are a joy to read.
 

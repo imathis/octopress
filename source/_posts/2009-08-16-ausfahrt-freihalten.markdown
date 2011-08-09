@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ausfahrt Freihalten!
 date: 2009-8-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 In German, <em>Ausfahrt freihalten!</em> means "no parking here!" You see these little signs on garage doors and buildings to warn people from blocking a driveway.
 

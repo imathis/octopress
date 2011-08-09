@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: My Question for the Presidential Candidates
 date: 2008-10-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last night's "town hall" style debate between Senators Obama and McCain got me to thinking about what question I would have posed.  And about the answer that would satisfy me.  Much has been made of the first 100 days of President Franklin Roosevelt's administration.  
 

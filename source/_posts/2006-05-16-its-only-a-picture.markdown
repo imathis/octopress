@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: It's Only A Picture
 date: 2006-5-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 My sister, Amy, died, thirty-three years ago of leukemia. During the last year of her life, and before we knew she was sick, my father took a portrait of her that really captured her essence. Shortly after her death he sent a copy of the picture to a company that produced a large format print that looks like an oil painting. This picture has hung in my mother's bedroom ever since.
 

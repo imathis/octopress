@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Regarding the Men's Room
 date: 2007-6-19
-link: false
+comments: false
 categories: random
+link: false
 ---
 <strong>Auto Flush</strong>
 Overnight, one night last week, all the toilets in the men's rooms in the building where I work were converted from manual flush to automatic flush through the installation of some overly sensitive infrared sensors.  I discovered both of these facts simultaneously when I shifted a bit while seated.

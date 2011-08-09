@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lasik Surgery Fine Print
 date: 2008-3-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 The March 13th online edition of the New York Times has an article looking at the 5 - 10% of people who elect to have Lasik surgery and discover that it isn't always a panacea.  As one who had the surgery and is now ruing the day I ever considered it for myself, I strongly recommend that anyone considering this surgery read this article and then have a long talk with your regular eye professional.  Unless glasses are somehow injurious to you then I would suggest you not have the surgery.  Not wearing glasses is not a good enough reason.
 

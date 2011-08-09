@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Shake Your Booty
 date: 2006-11-7
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 Last evening I went out for pizza. While in the restaurant a large group of women and their daughters gathered in one end for some kind of awards dinner. There was laughter and shrieking and the general mayhem that accompanies a gaggle of ten-year girls. Eventually they got around to passing out awards and praising the efforts of different people. After the awards I became aware that the girls were performing cheers or chants of some kind.
 

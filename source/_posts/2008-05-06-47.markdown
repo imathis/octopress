@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "47"
 date: 2008-5-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 As you can see, I was a tiny baby forty-seven years ago.  These images were taken 21 days after my birth, when my weight was back up to a healthy level.  When I was nineteen my mother told me the story of my birth, and the events that followed.  The day I was circumcised I apparently didn't eat much, being somewhat cranky about the procedure.  Each day thereafter I wasn't strong enough to eat enough, and I steadily lost weight.  From a birth-weight of roughly 6 pounds I dropped to 5 pounds.  My mother realizing something was wrong called the doctor on a Friday afternoon.
 

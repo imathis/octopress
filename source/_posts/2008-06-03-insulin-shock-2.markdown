@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Insulin Shock
 date: 2008-6-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past week, Sibylle and I have kept a much closer watch on Nekko, her insulin injections, her food intake, litter box usage, and general overall demeanor.  For the most part Nekko has seemed to be fine.  She still displayed some aggressiveness around our food, but willingly ate her own food.  We reduced her insulin dosage to 3 units every twelve hours; a 25% reduction from the 4 units she has been getting twice daily since March 2007.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Presidents, Past and Future
 date: 2008-11-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 My lifetime has seen nine presidents: Kennedy, Johnson, Nixon, Ford, Carter, Reagan, Bush Sr., Clinton, and Bush Jr.  There have been twelve Presidential elections since I was born, and seven since I was old enough to vote.  The candidates I've supported have been on the losing side more than the winning; my record is 2 and 5.  This year's election marks the eighth time I will have voted for a President, and the first time in a long time I've felt like I was going to be pleased with the results on the day after.
 

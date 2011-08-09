@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Living Under Fascism
 date: "2004-12-11"
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 A while back I read an article that described 14 characteristics of fascism using the likes of Hitler, Mussolini, and others as examples. What was chilling about the piece were the parallels to present day America. You can read my <a href="http://www.zanshin.net/blogs/000452.html" title="Fascism Scorecard">Fascism Scorecard</a>, and see for yourself.
 

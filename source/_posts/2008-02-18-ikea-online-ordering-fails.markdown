@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: IKEA Online Ordering Fails
 date: 2008-2-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last week, on Thursday, Sibylle and I pulled the trigger on a bookcase purchase from IKEA.  As a full-time music teacher, Sibylle has a lot of music, and a lot of reference books that she'd like quick and easy access to.  We also have lots and lots of books that we'd like to display.
 

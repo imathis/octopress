@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Redirecting Moveable Type Entires to Wordpress
 date: 2008-1-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the potential drawbacks to switching content management systems for my website was losing the permanent link to specific postings.  I receive a fair amount of traffic due to some Google searches, and I have posted comments on a couple of sites that generate a few links per week.  I didn't want to lose this traffic simply because the link had changed names.
 

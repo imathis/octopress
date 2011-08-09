@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Laundry
 date: "2005-11-22"
-link: false
+comments: false
 categories: life
+link: false
 ---
 The problem with doing laundry at home is that it is a single threaded process, that only moves as fast as the dryer dries. I had four loads to complete this evening: work clothes, sweats and tee-shirts, whites, and towels. I started when I got home at 5:00. It is now 9:25 and the THIRD load (the whites) is still in the dryer. Luckily the towels can stay in the dryer until tomorrow after they finish. At least the rest of my life (such as it is) goes on in the background at home. I can eat dinner, watch Tivo, use the computer, et cetera.
 

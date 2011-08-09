@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: links for 2008-09-20
 date: 2008-9-20
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 <ul class="delicious"><li>
                 <div class="delicious-link"><a href="http://www.chmpdf.com/archives/ebooks/for dummies/">CHM PDF eBooks - Free Computer eBooks Downloads</a></div>

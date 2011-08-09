@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Spam, spam, spam
 date: 2006-5-17
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In a conversation with a friend the other day the subject of email spam came up as he was lamenting the amounts of junk he had to filter through. That got me to thinking about my own spam situation, and I realized that I hadn't looked at the statistics <a href="http://c-command.com/spamsieve/" title="SpamSieve">SpamSieve</a> collects for me as it cleans my inbox for some time now.
 

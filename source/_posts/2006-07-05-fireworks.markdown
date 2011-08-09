@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fireworks
 date: 2006-7-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday I went to a friend's house for a backyard cookout and 4th of July celebration. A family affair, there were kids, cold drinks, face painting, and fireworks.
 

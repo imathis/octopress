@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Grace Period
 date: 2006-1-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 I am starting to wonder if there wasn't a grace period on my grief. Except for the first couple of weeks, which were very rough, I have had a seemingly smooth ride through grief. The people I talk to about this all say that I am doing very well, and a part of me wants to agree. But there are increasing signs that the facade of normalcy is starting to crack.
 

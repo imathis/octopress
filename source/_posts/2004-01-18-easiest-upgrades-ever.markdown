@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Easiest. Upgrades. Ever.
 date: 2004-1-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 In ten or so years of personal computer ownership I have upgraded operating systems, office productivity tools, development environments, and a host of other applications large and small.
 

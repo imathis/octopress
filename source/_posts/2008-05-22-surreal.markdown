@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Surreal "
 date: 2008-5-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 <blockquote>Sticks and stones may break my bones, but names will never hurt me.</blockquote>
 As a child I hated this mantra.  As the target of taunting and teasing I knew full well that names, and false accusations, do in fact hurt.  Some of those childhood emotional scars took a long time to heal.  And I fully believe that somewhere in the tortured lives of those young men who take guns and bombs to school there exists prolonged and repeated teasing, hazing, and humiliation.

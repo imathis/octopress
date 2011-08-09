@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Groin Pull
 date: 2006-8-21
-link: false
+comments: false
 categories: health
+link: false
 ---
 As a part of my campaign to lose weight (twenty-six pounds lost so far!) I've been doing some resistance weight training at a nearby gym. Several of the machines are quite challenging for me, particularly the shoulder press which taxes an old rotator cuff injury. A couple are fairly easy. One of those was the crunch machine. With only thirty-five pounds on the stack I was easily able to complete two thirty repetition sets each workout.
 

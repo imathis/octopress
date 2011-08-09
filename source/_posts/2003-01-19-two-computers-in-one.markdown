@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two Computers In One
 date: 2003-1-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have to say that I am very impressed. At home I have my Powerbook plugged into a KDS Visual Sensations 19" monitor. The OS immediately recognized the monitor and the settings it was capable of supporting. The OS also immediately setup a multiple monitor desktop. Just like that. How very cool.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: I Want to Ride My Bicycle
 date: 2010-3-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the first time in too many years to remember (or think about) I got my bicycle out and rode more than just around the block. The last time I seriously rode a bike was probably in the early 1990s, call it 18 years ago. I flirted with the idea briefly in the Autumn of 2005 but was so far out of shape then that riding was painfully hard.
 

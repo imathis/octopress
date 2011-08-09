@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Eleven Crossings in Three Miles
 date: 2008-4-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 The townhouse where we live is near to a major rail corridor through town.  The city newsletter this week informed us of a multi-million dollar project to make improvements to the eleven grade crossings inside the city that will allow them to petition the Federal government for a "quiet zone."  This would mean that the 80, yes eighty, trains a day traversing these tracks would no longer be required to sound their horn for each crossing.
 

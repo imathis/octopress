@@ -1,12 +1,10 @@
 --- 
 layout: post
-comments: false
-title: !binary |
-  V0FMTOKAokU=
-
+title: "WALL\xE2\x80\xA2E"
 date: 2008-7-1
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Wondrous.  Amazing.  Love-story.  Laugh-out-loud funny.  Enchanting.  
 

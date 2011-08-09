@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Plain Paper vs. Lined
 date: 2008-7-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 My note taking involves three kinds of paper.  Plain, or blank paper, lined paper like we all used in school, and graph paper.
 ## Plain

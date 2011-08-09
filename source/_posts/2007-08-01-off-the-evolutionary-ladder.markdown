@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Off The Evolutionary Ladder
 date: 2007-8-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 As a resident of various cubical farms though-out my career, and more specifically, as a user of computer keyboards, I suffer from muscle spasms in my upper back periodically.  The strain of holding ones arms up in the typing position for hour after hour, day after day, takes a toll on the large muscles in your upper back.
 

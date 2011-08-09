@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Huevos Rancheros, Szechwan Beef Stir Fry and Carrot Cake
 date: 2004-9-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 I had a wonderful day of cooking today. Michele and I have been talking about a homemade carrot cake for a while. We even bought the cream cheese and carrots last weekend. Today I was in the "mood" and the resulting cake was spectacular. While this apartment may have some faults, the accuracy of the oven temperature isn't one of them. It makes a great cake.
 

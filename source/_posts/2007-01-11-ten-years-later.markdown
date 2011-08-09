@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ten Years Later
 date: 2007-1-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ten years ago this month I became a consultant. The first thirteen years of my career had been spent exclusively as an employee. Sure, I've been the employee of several consulting firms, but the mental shift that comes with being a consultant, of being an outsider, alters your view of your employer as well. Most of the past ten years have been good for me professionally. I've had the opportunity to move and to grow technically. In an era when technology shifts happen so rapidly as to appear continuous, I have been able to adapt and incorporate paradigm shifts into my skill set with relative ease.
 

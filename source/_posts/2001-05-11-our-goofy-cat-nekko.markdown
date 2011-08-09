@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Our Goofy Cat Nekko
 date: 2001-5-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past few days one of our cats has been acting very strange. We had a party to celebrate my 40th birthday on          Saturday. Between my brother's family, my parents and our friends from next door we had 14 extra people in the house          (and out and in and out and in) for hours that afternoon and evening. Normally it's just the two of our two cats, Abby and          Nekko and us.
 

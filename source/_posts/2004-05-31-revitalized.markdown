@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Revitalized
 date: 2004-5-31
-link: false
+comments: false
 categories: life
+link: false
 ---
 On Wednesday last week, May 26th, I got a call from a company that wanted to bid me on a multi-year contract with the state. At first I was hesitant about pursuing this option, as I had just received a verbal offer the day before in Kansas City. After thinking it over for a few minutes, and talking about it with Michele, I decided that I'd be foolish not to at least investigate the option further. After a couple of phones calls with the company, and a quick review of the job description, I consented to having my name submitted for the contract. I now had two bids in play for potential contracts with the state.
 

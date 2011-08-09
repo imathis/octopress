@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Seeds of Mass Destruction
 date: 2004-5-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 We have a pool. A nice in-ground pool. 29 x 13 feet, heated, fiberglass, hubba-hubba pool.
 

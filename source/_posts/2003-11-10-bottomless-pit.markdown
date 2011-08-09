@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bottomless Pit
 date: "2003-11-10"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I am feeling as if I am hanging by a thread over a bottomless pit today. My contract with the State of Illinois is being "renegotiated" to a lower rate at the State's behest. I put negotiated in quotes as all indications are that the State will present a new rate and the negotiation will be whether I stay on or not.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Installing MyEclipse
 date: "2009-11-14"
-link: false
+comments: false
 categories: life
+link: false
 ---
 MyEclipse, from Genuitec, is a popular set of plugins for the Eclipse platform. For several years I used it on my own as my primary Java development tool, and now I have an opportunity to use it in my work for the University. What follows is how I installed it for use on Mac OS X 10.6 (Snow Leopard).
 

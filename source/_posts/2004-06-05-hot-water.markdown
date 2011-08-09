@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Hot Water
 date: 2004-6-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Having a gas heater for our pool adds about 4 or 5 weeks to each end of the swimming season here in central Illinois. We opened the pool in late April this year, and have been swimming in it since the beginning of <a href="http://www.zanshin.net/blogs/000430.html" title="First Swim">May</a>. If the past couple of years are any indication, we should still be swimming in late September or early October.
 

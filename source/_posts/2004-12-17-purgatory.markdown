@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Purgatory
 date: "2004-12-17"
-link: false
+comments: false
 categories: life
+link: false
 ---
 My understanding of classic literature and religious teaching tells me that purgatory is a place where the newly dead go to atone for their sins before being allowed to enter heaven. While my personal spiritual belief system doesn't include the concept of sin or even heaven for that matter, I find myself in a living purgatory currently. Wednesday my father called me to say that my mother has been diagnosed with lung cancer. It has already spread far enough (i.e., both lungs) that cure is no longer a possibility. The treatment will only control and attempt to contain its spread. Put bluntly, my mother will in all likelihood die from lung cancer.
 

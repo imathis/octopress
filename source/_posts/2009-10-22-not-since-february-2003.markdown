@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Not Since February 2003
 date: "2009-10-22"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Not since February 2003 (maybe late January of that year) have I gone to work without carrying my PowerBook G4. It has been the ultimate filofax, holding pictures, music, words, code, and all the other electronic flotsam and jetsam near and dear to me.
 

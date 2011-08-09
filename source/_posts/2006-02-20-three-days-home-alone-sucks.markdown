@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Three Days Home Alone Sucks
 date: 2006-2-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Three days at home by myself is driving me nuts. And like a fool I agreed to be here today so that the idiot water delivery guy could come and get my empties - so I can't leave and escape my cabin fever.
 

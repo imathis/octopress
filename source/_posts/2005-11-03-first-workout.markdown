@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: First Workout
 date: 2005-11-3
-link: false
+comments: false
 categories: health
+link: false
 ---
 I had my first karate work out in over five years tonight. I am so wiped out it's not even funny. Excellent class, they didn't segregate me at all. I just worked at the end of the line and kept up as best I could. I'm 40 pounds heavier and 7 years out of practice. It was ugly at times, but I survived. 8 students there tonight, 4 black belts, 2 brown, a green belt and moi.
 

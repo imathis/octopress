@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Transition
 date: 2005-6-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 The transition is on. Apple is switching to Intel chips, with new hardware expected in the marketplace by this time next year. Their flagship development product XCode will produce "universal binary" capable of working on either PPC or Intel chips.
 

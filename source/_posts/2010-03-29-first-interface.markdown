@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: First Interface
 date: 2010-3-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 The high school I attended back in <a title="Decatur Illinois - Wikipedia" href="http://en.wikipedia.org/wiki/Decatur,_Illinois" target="_blank">Decatur Illinois</a>, <a title="Eisenhower High" href="http://www.dps61.org/ehs/site/default.asp" target="_blank">Dwight D. Eisenhower High School</a>, was fortunate enough to have a BASIC computer programming course. Through a time-sharing arrangement with a local manufacturer we had access to a mainframe computer via a couple of Teletype terminals.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 50 Words
 date: 2006-4-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 Empty
 Alone

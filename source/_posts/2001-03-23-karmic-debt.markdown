@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Karmic Debt
 date: 2001-3-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 I heard a joke yesterday about a group of terrorists who take a large convention hall full of lawyers hostage. They threaten to release one lawyer an hour unless their demands are met. I'd like to add realtors to this joke. A relatively simple transaction, the sale of an item, has been made hugely complex and intimidating by the group of people we call realtors. My wife and I moved from South Carolina to Illinois last fall. Our house there has been for sale ever since. When we originally made the deal with the realtor she said that if she was the selling and buying agent she'd knock 1% off the commission. At some point after the original deal she informed us that she was going back to her previous broker. At the time I didn't think to ask about how this switch would effect our deal. I mean, a deal is a deal? Right?
 

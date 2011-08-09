@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: i(Multi-Protocol)Chat
 date: 2003-9-9
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 One of the few pieces of software that I miss from Windows was the multi-protocol chat client Trillian. This free gem allowed me to be simultaneously connected to the 4 major chat services: AOL, MSN, Yahoo, and ICQ. Having been an early chat adopter (ICQ: 292099) I have enjoyed using instant messaging for several years now.
 

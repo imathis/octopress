@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Last Day
 date: 2007-1-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today is my last day on this project. It has been a good two and a half years professionally, and a tumultuous time personally. There have been times when this project, with all its instability, frustrations, and issues has been the best part of my life.
 

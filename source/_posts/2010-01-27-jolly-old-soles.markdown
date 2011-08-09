@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Jolly Old Soles
 date: 2010-1-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 About ten years ago the arches on my feet fell. The first indication of this was a heel spur that developed on my right foot. The spur was successfully reduced in size through a series of ultrasound treatments at my favorite chiropractor's office. When a spur appeared on my left foot it too was reduced via ultrasound. At the time I didn't realize that the spurs were symptoms of fallen arches, I thought they were the result of ten years in the martial arts.
 

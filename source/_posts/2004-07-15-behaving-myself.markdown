@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Behaving Myself
 date: 2004-7-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 Seeing as how I lost my last employment gig through exploration of the client's network, I am trying my best to not cross any known or unknown boundaries here at my new gig.
 

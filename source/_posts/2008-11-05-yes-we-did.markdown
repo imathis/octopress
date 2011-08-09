@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Yes. We. Did.
 date: 2008-11-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning when I sat down to eat my breakfast I had to wake up the computer and refresh CNN and the New York Times, and FiveThirtyEight.com, just to make sure that what we experienced last night wasn't a dream, that it wasn't somehow a mistake that had been corrected overnight.
 

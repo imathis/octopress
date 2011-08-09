@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Into The Trees - Zoe Keating
 date: 2011-1-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 It is rare these days that I find new music, from a new artist (new to me, any way) that I like enough to purchase. In the last decade I've only added four new artists to my listening rotation: <a title="Nanci Griffith" href="http://www.nancigriffith.com/" target="_blank">Nanci Griffith</a>, <a title="Evanescence" href="http://www.evanescence.com/" target="_blank">Evanescence</a>, <a title="Rodrigo y Gabriela" href="http://www.rodgab.com/" target="_blank">Rodrigo y Gabriela</a> and <a title="Loreena McKennitt" href="http://www.quinlanroad.com/" target="_blank">Loreena McKennitt</a>. A quick follow of those links will reveal that these artists cover a broad spectrum from contemporary country to Celtic-inspire folk, and from gothic rock to percussive guitar.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: While My Guitar Gently Weeps
 date: 2008-3-13
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 I look at you all see the love there that's sleeping
 While my guitar gently weeps

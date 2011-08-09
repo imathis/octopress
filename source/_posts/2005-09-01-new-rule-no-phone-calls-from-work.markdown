@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: New Rule - No Phone Calls From Work
 date: 2005-9-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 In May 2000, Michele got a phone call at home from my employer looking for me. I had taken the day off in celebration of my birthday. She took a message and called me on my cell phone. The <a href="http://www.zanshin.net/blogs/000125.html" title="Today I Lost My Job">sordid details</a> aside, I was "downsized" that day.
 

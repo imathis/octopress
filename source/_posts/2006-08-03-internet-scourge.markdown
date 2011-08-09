@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Internet Scourge
 date: 2006-8-3
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Spam truly is a scourge on the Internet. In the time that it takes my machine to delete the six thousand or so I've gotten in the last ten days, I get SIX NEW SPAMS.
 

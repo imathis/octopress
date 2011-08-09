@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Declaration of Conscience
 date: 2003-3-25
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 June 1, 1950, Margaret Chase Smith of Maine spoke on the Senate floor on behalf of the Declaration of Conscience. The declaration opposed McCarthyism. I have reprinted Smith's speech here, for I feel that we are entering a new era of suppression, fear and helplessness.
 

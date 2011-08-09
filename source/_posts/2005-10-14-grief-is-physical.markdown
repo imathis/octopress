@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Grief is Physical
 date: "2005-10-14"
-link: false
+comments: false
 categories: life
+link: false
 ---
 The physical impact of grief on me has taken me by surprise. Emotionally I thought I knew what to expect, but the nausea, cramps, feeling light headed, being constantly thirsty, and feeling wobbly when I stand, have all taken me quite by surprise.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Homeowner
 date: 2011-1-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 This afternoon I replaced two light switched in our bathroom, which made me feel like a true homeowner.
 

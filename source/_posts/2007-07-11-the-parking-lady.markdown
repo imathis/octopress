@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Parking Lady
 date: 2007-7-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Now that I am working <a href="http://maps.google.com/maps?f=q&hl=en&geocode=&q=1300+Washington+St,+Kansas+City,+MO+64105+(Argus)&sll=38.884775,-94.714667&sspn=0.011124,0.017381&ie=UTF8&z=16&om=1" title="downtown">downtown</a> I park in an underground ramp.  My employer is nice enough to offset the cost of this (roughly $60 a month) so all I have to do is slow down at the gate while my token is scanned by the overhead reader and enter (or exit) the garage.
 

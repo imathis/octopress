@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Eleven Years Old
 date: 2007-3-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 Somehow I completely forgot about and missed the eleventh anniversary of zanshin.net. The Whois record shows that this site was registered on February 20, 1996.
 

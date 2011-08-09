@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Just a Typical Thursday
 date: 2010-8-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 This evening Sibylle received an email from Delta letting her know that she has been upgraded to 1st class for the Atlanta to Kansas City leg of her return trip. The date on the notice was for <strong>Saturday, August 14th</strong> and not Sunday, August 15th.
 

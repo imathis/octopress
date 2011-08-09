@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: STS-107, Space Shuttle Columbia, February 1, 2003
 date: 2003-2-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 I haven't posted anything about the loss of <i>Columbia</i> until now. This was included in my weekly Palm Digital Media newsletter. I was touched and wanted to share it here, with you.
 

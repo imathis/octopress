@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Quandary
 date: 2004-8-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 Remember the posters that show some cute animal, usually a polar bear with a paw over its eyes, that have a caption that reads, "Just when I figured out the answers, someone changes the questions."? That poster pretty much sums up my life this weekend.
 

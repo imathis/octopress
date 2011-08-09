@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Unbearable Weight of Being
 date: 2004-12-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 The weight of daily existence is starting to wear me down. I've never done well in those times of my life where my focus was on the future or the past. I'm a present tense kind of person, and lately I just can't seem to find a connection to the present.
 

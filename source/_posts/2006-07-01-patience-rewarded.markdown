@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Patience Rewarded
 date: 2006-7-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 A month ago my new upstairs neighbors arrived and I have been struggling with the noise level ever since. In talking to my source in the apartment office I was led to believe it was a late middle age single woman moving in above me. On the first or second day I observed three adults, a child of three or so, and two dogs entering the apartment.
 

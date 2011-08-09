@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lost. Found. Lost Again. Perhaps.
 date: 2008-8-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 Earlier this week, Sibylle and I took a box full of used books to the Half Price bookstore we frequent.  Between the two of us we have lots and lots of books, some that we no longer want.  Recycling them through the bookstore allows us to clean away some of the clutter, and gives the books a second chance.
 

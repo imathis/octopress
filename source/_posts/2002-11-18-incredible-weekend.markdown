@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Incredible Weekend
 date: "2002-11-18"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I had an incredible weekend. I had tickets for the Peter Gabriel show in Chicago, Thursday, so we left during the day and drove up to Joliet. We had stayed there one night on our honeymoon 5 years ago so we wanted to re-visit it. That afternoon a friend came by and we visited for a while and then my buddy and I headed into town for the show.
 

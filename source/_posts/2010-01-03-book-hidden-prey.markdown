@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Book: Hidden Prey"
 date: 2010-1-3
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Hidden Prey is another John Sandford novel, this time with Lucas Davenport as the central character. As usual, Sandford spins a good story, with great characters and a couple of good plot twists.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Posse Comitatus
 date: 2005-9-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 The <em>Posse Comitatus</em> act prevents the United State government from using US troops for domestic law enforcement duties. Local or state militias, e.g., the National Guard, can and are used to restore order and assist in emergencies.
 

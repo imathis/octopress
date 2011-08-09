@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: After the Move
 date: 2007-4-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 The move to a new office building seems to have gone very smoothly.  All of my office items where here waiting for me upon my arrival Monday, and better still, none were broken or damaged.  There was network connectivity and my phone worked.  Almost anti-climatic after the several weeks of build up.
 

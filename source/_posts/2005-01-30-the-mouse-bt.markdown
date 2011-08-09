@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Mouse BT
 date: 2005-1-30
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In <a href="http://www.zanshin.net/blogs/000542.html" title="Mouse Blues">Mouse Blues</a> I chronicled my first steps towards having a Bluetooth enabled laptop and a Bluetooth mouse. Here, then, is the next chapter in this ongoing saga.
 

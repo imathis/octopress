@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: State of Denial
 date: 2006-5-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the course of the last week or so, I've managed to largely avoid thinking about my mom. Part of me feels guilty for turning away from her in the final stages of her dying, but another part of me has needed the time to regain my strength for what lies ahead. By not calling Decatur as much it is easy to pretend that everything there is okay, by not calling Decatur I can focus on the chaos of my own life without adding the chaos of my mom's impending death or my dad's increasing sorrow.
 

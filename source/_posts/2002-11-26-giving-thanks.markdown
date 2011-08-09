@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Giving Thanks
 date: "2002-11-26"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have a lot to be thankful for in my life. I am in love with a wonderful, vivacious, beautiful, passionate woman who is in love with me. I have a job that is rewarding and provides the means to have a comfortable life.
 

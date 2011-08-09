@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: No More iPad Envy
 date: 2011-1-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 About two weeks ago, just prior to our move to the new house, I was issued a new 32GB WiFi iPad at work. I've wanted an iPad since they were first announced and was extremely pleased when my request for one was granted.
 

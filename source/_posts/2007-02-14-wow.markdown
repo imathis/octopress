@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Wow
 date: 2007-2-14
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 The best waste of time on the Internet these days is <a href="http://www.kottke.org/06/10/line-rider" title="Line Rider">Line Rider</a>. The video below is the best Line Rider video I've seen.  Wow.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Delayed Impact
 date: 2006-5-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday, after returning from Illinois, I spent the afternoon and evening talking to friends on the telephone. All were some what amazed that I plan on trying to have a normal week this week. In explaining my reasons for wanting some normalcy right now I realized that the full impact of my mother's death isn't going to hit me for several days. Most likely the impact will come Saturday during and after the memorial service.
 

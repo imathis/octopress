@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: One Year
 date: 2008-1-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 A year ago today I started my current job.  For the first time in a seven years I was a full-time employee rather than a consultant, and for the first time in a decade I was changing jobs without moving cross-country in the process.
 

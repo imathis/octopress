@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: During January in...
 date: 2004-1-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 <ul>
 <li class="il">1994 ~ I received my shodan in karate</li>

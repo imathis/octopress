@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Debugging the House
 date: 2011-2-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 As a software developer I am familiar with the concept of debugging new code. As a new home owner, by which I mean the owner of a brand new house, I am learning that construction has a debugging phase too.
 

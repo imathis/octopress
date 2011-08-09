@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Johnny Carson
 date: 2005-1-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 From the time I was in high school, until he retired, I spent the last minutes of every day with Johnny Carson. I was greatly saddened to learn of his death today.
 

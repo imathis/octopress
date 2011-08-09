@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Out Of Office
 date: 2007-10-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 My employer utilizes Microsoft Outlook for email and calendaring.  The culture here uses the calendar to track outages.  When you are going to be out of the office, whether for training, the dentist, or vacation, you are to send a meeting announcement to your team letting them know of your absence.  It's a good idea, provided everyone follows a couple of simple rules.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Faith
 date: 2004-3-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 This evening my wife and I watched an episode of "Now" on PBS that we had previously recorded on our TiVo. The bulk of the show was an interview with the Reverend William Sloane Coffin. During the free-wheeling interview Reverend Coffin made the following statement about faith:
 

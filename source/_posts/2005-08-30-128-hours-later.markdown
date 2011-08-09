@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 128 Hours Later
 date: 2005-8-30
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 So, on Thursday last week at around 7:30 our primary Tivo died. Efforts to resuscitate it failed. Tivo kindly initiated an exchange for us, sending a refurbished series 2 machine our way.
 

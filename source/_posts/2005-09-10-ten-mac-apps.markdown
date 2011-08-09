@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ten Mac Apps
 date: 2005-9-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 <a href="http://gigaom.com/2005/09/03/10macapps/" title="10 Mac Apps">Om Malik</a> has started a new meme, this time about freeware or shareware Mac applications "that have helped you get the most out of your Mac."
 

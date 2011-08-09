@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Signal to Noise
 date: 2003-1-1
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For the last year I have been keeping every piece of e-mail I received. In total I got 37,122 e-mails between 1.1.2002 and 12.31.2002. Thirty-seven thousand, one-hundred and twenty-two.
 

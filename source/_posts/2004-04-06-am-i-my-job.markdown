@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Am I My Job?
 date: 2004-4-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 It has been eighteen days since I was last employed. Eighteen days of emotional highs and lows, eighteen days of struggling to make sense of it all. This morning as I realize yet another day has gone by without a job prospect, I find myself wondering about the connection between my self image and my job.
 

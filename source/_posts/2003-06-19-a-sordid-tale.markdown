@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Sordid Tale
 date: 2003-6-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 I current work as an independent consultant for the Illinois Department of Human Services. I have been on contract here since October 2000. The state elected its first democrat governor in 24 years last November and life has been very interesting ever since.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 4:00 am Rudeness
 date: 2006-6-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning about 3:30 am I kept waking up thinking I was hearing music. I'd lie in bed straining my ears and finally convince myself that I was dreaming. By 4:00 am I was wide awake and still hearing music. As the new upstairs neighbors moved in yesterday I was ready to accuse them as the source of the noise but Taz clued me into the real source.
 

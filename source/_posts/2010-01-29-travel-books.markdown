@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Travel Books
 date: 2010-1-29
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 I have managed to read several books on our trip to Germany.
 

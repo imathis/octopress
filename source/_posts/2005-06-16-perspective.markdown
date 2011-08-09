@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Perspective
 date: 2005-6-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele is teaching an on-the-ground (as opposed to online) class Wednesday evenings this summer. The facility is a rural elementary school, complete with pint sized chairs and desks. Some of the taller students literally have the desk between their knees when they sit down.
 

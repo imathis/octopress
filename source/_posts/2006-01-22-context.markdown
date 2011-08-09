@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Context
 date: 2006-1-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 My vacation took me to a context outside of the ones I shared with Michele. Traveling by plane was something we shared, and traveling was something we both appreciated. But going to Massachusetts was not something we ever did as a couple. In fact my trip here is a bit of a bookend, as the last solo vacation I had before marrying Michele was to this very place.
 

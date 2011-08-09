@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: I Feel Defeated
 date: 2006-5-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today has been a particularly tough day. I feel defeated on all fronts, and it feels like there is no where to turn for relief or even respite.
 

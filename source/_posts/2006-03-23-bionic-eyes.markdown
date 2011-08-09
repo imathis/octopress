@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bionic Eyes
 date: 2006-3-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today, in just a few hours, I am having laser keratotomy done to both of my eyes. LASIK, as it is commonly know, uses a low temperature (cool) laser to alter the curvature of your eye's lens so that images land on the retina properly. In my case I have two situations that need correcting: I am mildly farsighted and I have an astigmatism in each eye. The eye surgeon calls my prescription "interesting."
 

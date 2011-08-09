@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Friday Five: Vacations"
 date: 2002-3-2
-link: false
+comments: false
 categories: meme
+link: false
 ---
 Something new. Finally. I discovered a site called <a href="http://fridayfive.org" target="_blank">fridayFive</a>. The concept is simple... they ask five questions and you answer. So here goes.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Winning Streak
 date: 2007-4-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Shortly after starting at my new job I was asked if I wanted to join the Superbowl pool.  Figuring it might be a good way to meet some of the people I was working with I decided to give it a go.  To make a long story short, I happen to win both the first and second quarters for a total of $125.  I caught some razzing for being the new guy and taking half the pot home.
 

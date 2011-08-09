@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Caring For Your Introvert
 date: 2006-3-7
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 I missed Jonathan Rauch's article <em><a href="http://www.theatlantic.com/doc/200303/rauch" title="Caring For Your Introvert">Caring For Your Introvert</a></em> article when it first came out, but thanks to <a href="http://kottke.org" title="Kottke">kottke.org</a> I was introduced to it today.
 

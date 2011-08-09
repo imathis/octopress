@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Blackberry Touch
 date: 2009-3-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 This unofficial Blackberry Touch ad is outstanding.
 

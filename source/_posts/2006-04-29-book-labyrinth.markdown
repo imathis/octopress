@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Book: Labyrinth"
 date: 2006-4-29
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Usually I don't post about a book until I have finished with it, but I am enjoying <i><a href="http://www.amazon.com/gp/product/0399153446/sr=8-1/qid=1146347997/ref=pd_bbs_1/102-5862131-4347328?%5Fencoding=UTF8" title="Labyrinth">Labyrinth</a></i>, by Kate Mosse, too much to wait. A twist on the ever popular grail mystery, <i>Labyrinth</i> is very well written and engaging. Giving my personal beliefs and those I knew Michele held a couple of passages in the book have really struck a cord with me.
 <cite>

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Firefox Inline Autocomplete
 date: 2007-3-5
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 To turn on inline autocomplete in the Firefox web browser...
 

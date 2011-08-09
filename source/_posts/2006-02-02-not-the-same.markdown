@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Not The Same
 date: 2006-2-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the Summer of 1999 we were living in Summerville SC, just outside of Charleston. I had read about a new television game show where 16 people would be marooned, compete for food, and vote about each other to determine the winner of a $1,000,000 prize. At the time I thought it sounded farfetched and didn't consider watching the show. But then one evening, part way through the first season of Survivor, Michele and I watched an episode and were hooked. Although existing in a contrived setting, and certainly controlled by the dictates of the shows parameters, having real people interact in a stress filled situation and watching was fascinating to both of us.
 

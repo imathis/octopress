@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: New Neighbors
 date: 2011-1-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the exciting things about moving is getting new neighbors. You never know just what to expect. Last night, around nine-thirty we got a chance to observe some of our neighborhood's residents while they were out for an evening stroll.
 

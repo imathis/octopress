@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Too Many Movies
 date: 2006-1-2
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 It was a long four day weekend for me. I watched too many movies.
 

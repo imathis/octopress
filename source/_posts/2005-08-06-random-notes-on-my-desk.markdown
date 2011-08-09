@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Random Notes on My Desk
 date: 2005-8-6
-link: false
+comments: false
 categories: meme
+link: false
 ---
 The following, ah, collection of notes, found on various scraps of paper covering my desk, are presented here for your approval.
 

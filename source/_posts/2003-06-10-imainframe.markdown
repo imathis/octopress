@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: iMainframe
 date: 2003-6-10
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 <a href="http://www.zanshin.net/blogs/000204.html#000204" target="_blank">Once</a> upon a time, a long time ago, when I was in high school I was fortunate enough to learn basic programming via a TTY teletype terminal, optical scan cards, and time sharing with a local manufacturing companies mainframe.
 

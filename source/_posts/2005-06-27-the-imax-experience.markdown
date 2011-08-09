@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The IMAX Experience
 date: 2005-6-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I went to see the new Batman movie ("Batman Begins") yesterday afternoon. We noticed that our favorite multiplex now sports an IMAX theater, complete with a huge screen and over amped speakers. So we decided to see it there.
 

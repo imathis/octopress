@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Refer madness
 date: 2003-7-28
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 On my site I use a PHP/MySQL tool to track incoming referers. The tool, called <a href="http://www.textism.com/tools/refer">Refer 2.01</a> is very slick and it gives me a sense of where you all are coming from to get to my humble little web site.
 

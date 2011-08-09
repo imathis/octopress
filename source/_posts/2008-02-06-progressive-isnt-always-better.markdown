@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Progressive Isn't Always Better
 date: 2008-2-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 This afternoon, after two weeks of anticipation, I picked up my new glasses.  The frames and lens shape and size fit my face perfectly.  Both Sibylle and I are very pleased with how they look.  Unfortunately i am finding it hard to see through them.
 

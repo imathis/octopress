@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Netflix Listens
 date: 2008-7-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently it was reported that <a title="Netflix" href="http://netflix.com">Netflix</a> was eliminating the profile feature on their web site.  Profiles allow you to create sub-queues of movies for family members or others in your household, which are independent from the account holder's queue.  You could create a one-movie at a time, G-rated profile for a child, for example.
 

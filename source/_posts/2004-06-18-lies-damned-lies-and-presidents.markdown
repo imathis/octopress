@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lies, Damned Lies, and Presidents
 date: 2004-6-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 President Johnson lied about an attack in the Tonkin Gulf and escalated the United States' involvement in Vietnam ultimately resulting in the deaths of 3,000,000 or more Vietnamese, and over 55,000 Americans.
 

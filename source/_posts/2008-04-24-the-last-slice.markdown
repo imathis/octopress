@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Last Slice
 date: 2008-4-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 Many years ago, Pizza Hut had a series of television commercials featuring famous people talking about the whole pizza experience.  Rita Moreno did one, as did Herbie Hancock.  Herbie's was great.  He talked about how was to get a pizza and share it.  "Sure!  Have a slice."  That part that has stayed with me until today, though, was where he talked about the last slice.
 

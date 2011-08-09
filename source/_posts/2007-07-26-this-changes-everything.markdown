@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: This Changes Everything
 date: 2007-7-26
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 An excellent fan-made commercial for iPhone, based on <i>2001: A Space Odyssey</i>.
 

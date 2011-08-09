@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Victim Mentality
 date: 2005-2-7
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 A year later and we are still victimizing Janet Jackson for "her" wardrobe malfunction at the 2004 Superbowl. Seems to me that Janet didn't pull on her costume revealing her breast - Justin Timberlake did. Why isn't he ever mentioned in any of the hand-wringing stories about this incident?
 

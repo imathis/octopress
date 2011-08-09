@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Wistful Thinking
 date: 2008-2-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Like any self-respecting nerd with a website, I have a statistics package that tracks visits and page views on my site, and produces graphs and tables and other suitably nerdy artifacts for me to drool over.  My package of choice is <a href="http://haveamint.com" title="Mint">Mint</a>, from <a href="http://www.shauninman.com/" title="shauninman.com">Shaun Inman</a>.  (Check out the <a href="http://shawnblanc.net/2007/the-full-mint-y/" title="The Full Mint-y">excellent review</a> by <a href="http://shawnblanc.net" title="shawnblanc.net">Shawn Blanc</a>.)
 

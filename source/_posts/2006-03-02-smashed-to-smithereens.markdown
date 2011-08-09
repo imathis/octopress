@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Smashed To Smithereens
 date: 2006-3-2
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 One casualty of the move from Illinois to Washington in the Spring of 1998 was the printer. At the time we had a HP Color Ink Jet, maybe a 620c. Upon arrival in Vancouver it refused to work. Replacing the ink cartridge didn't help, cleaning the heads didn't work either. So we tossed it and bought a new HP.
 

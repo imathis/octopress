@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Cable Guy
 date: 2006-10-5
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Several months ago my broadband connection started acting up. After several calls to technical support it was determined that my cable modem had "gone bad." Since the monthly fee includes the use of one of Time-Warner's modems I went to the local office and got one.
 

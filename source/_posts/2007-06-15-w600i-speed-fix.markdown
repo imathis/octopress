@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: w600i Speed Fix
 date: 2007-6-15
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For the last year or so my cellphone has been a <a href="http://www.sonyericsson.com/spg.jsp?cc=global&lc=en&ver=4001&template=pp1_1_1&zone=pp&lm=pp1&pid=10296" title="Sony-Ericsson w600i">Sony-Ericsson w600i</a>.  Overall I am very pleased with the phone, its features, and its performance.  However, about two or three weeks ago it started responding slower and slower to inputs, either from the number pad or the multi-way joystick.  It got so bad that I could barely answer the phone; pressing the "answer" button took so long to respond that the call would forward to the voice mail system before the phone answered the call.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 2:00 pm to 5:00 pm
 date: 2006-4-11
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For several weeks now my broadband cable connection has been somewhat flaky. I first noticed that it was dropping the signal perhaps a month ago, and at that time unplugging the modem and plugging it back in seemed to clear up the problem. Two weekends ago it dropped on a Friday evening and no amount of resetting seemed to work. From past experience I know to unplug the router and modem, as well as the cable itself for a period of thirty or so seconds. Even this method of resetting things didn't clear up the problem. Hooking up the cable before powering on the modem and waiting for the sync light to be solid was fruitless; the sync light would blink faster and then slower but never became a solid connection.
 

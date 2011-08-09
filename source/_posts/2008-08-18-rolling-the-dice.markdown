@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Rolling the Dice
 date: 2008-8-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 The recent upheaval in my employment has knocked me off my emotional center; it is hard to think coherently about my upcoming choice.
 

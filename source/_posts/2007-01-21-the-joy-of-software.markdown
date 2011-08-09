@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Joy of Software
 date: 2007-1-21
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 A friend of mine at work is on the verge of buying his daughter a laptop for college. A year ago he got his son an Intel machine for college, but this spring he is looking at Macintosh laptops as she is going into graphic arts. In a way I envy him, as he gets to explore a new operating system and a new set of applications.  I'll get to vicariously experience his journey as he is already looking to me for advice about software and setup.
 

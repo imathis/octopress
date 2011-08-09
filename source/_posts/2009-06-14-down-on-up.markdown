@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Down on Up
 date: 2009-6-14
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Usually I am a huge fan of Pixar movies. However, I have to say that I was disappointed with <em>Up</em>. Well, not with the story, although I have some problems with it too, but primarily with the experience.
 

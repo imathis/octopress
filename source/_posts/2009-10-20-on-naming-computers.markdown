@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: On Naming Computers
 date: "2009-10-20"
-link: false
+comments: false
 categories: life
+link: false
 ---
 In <a title="Nerd Angst" href="http://zanshin.net/2009/10/19/nerd-angst-2/" target="_self">Nerd Angst</a> I mentioned briefly that I need to think up a suitable name for the new laptop due to arrive sometime Friday. Being a nerd through-and-through this is actually a more significant undertaking that you might otherwise suspect.
 

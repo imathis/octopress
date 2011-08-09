@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Book: Sudden Prey"
 date: 2010-1-11
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Yet another <em>Prey</em> book.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Cautious Optimism "
 date: 2008-5-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 We are hopeful that Nekko's episode with insulin shock was an isolated event.  Since Tuesday we have closely monitored her eating and insulin, and haven't seen any evidence of another bottoming out like Sibylle caught that day.
 

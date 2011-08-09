@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "3,150,983"
 date: 2006-3-15
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Today was one of those mornings where I was startled awake by the cat at 3:30 am. Her cold wet nose, followed by a raspy tongued lick was sufficient to bring me to full wakefulness. My mistake was in opening my eyes; once she saw that no amount of lying still and play possum worked. She-who-must-be-played-with would not be put off.
 

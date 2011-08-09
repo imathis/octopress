@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Cell Phone Freedom Day
 date: 2008-4-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the first time in several years, I am free of my cell phone contract.  When I moved to Kansas in 2004, my cell phone was nearing the end of its two-year obligation.  Without realizing the consequences (and without being told about them) I called Cingular and changed my phone number to the new area code.  Turns out that this change added a full year to the contract.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: My Week Thus Far
 date: 2006-9-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 My flight home from Portland, via Houston, was rain delay a couple of hours so I arrived at 1:00 am instead of 11:00. After collecting baggage and driving home it was after 2:00 before I was back in the apartment.
 

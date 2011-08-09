@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Uptime
 date: 2008-1-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 The uptime command, in the UNIX world, displays how long a particular machine has been "up" or running.  Recently I have been applying that term to my daily lower back exercises.  After reading a getting things done article that talked about Jerry Seinfeld, I have been working on better uptime for my exercises.
 

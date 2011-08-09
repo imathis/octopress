@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: This Space Not Intentionally Left Blank
 date: 2003-5-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 Contrary to recent indications, this space is not intentionally left blank. The code I was using to structure my new site layout breaks under some browsers, most especially Camino.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: OSx86
 date: 2005-8-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 Forget running Mac OS X on any old Intel processor. I managed to sneak into Apple's R&amp;D Lab and make off with a soon to be released G5 Powerbook!
 

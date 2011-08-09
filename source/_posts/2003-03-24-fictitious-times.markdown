@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fictitious Times
 date: 2003-3-24
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 At the 75th Academy Awards last night, the Oscar for Best Documentary feature went to Michael Moore for his critical anti-gun documentary <i>Bowling for Columbine</i>. The outspoken moviemaker invited his fellow nominees in the non-fiction category with him on stage and then both roused and infuriated the audience with an impassioned speech.
 

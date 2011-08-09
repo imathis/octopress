@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Curses! Boiled Again
 date: 2006-1-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 <i>Warning: Personal grooming and hygiene discussed ahead.</i>
 

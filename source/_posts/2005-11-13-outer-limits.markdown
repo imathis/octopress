@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Outer Limits
 date: "2005-11-13"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Tonight is a bad night.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Measure Once, Cut Twice
 date: 2006-2-10
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 A long time ago, when I was a budding programming student, one of my professors had us keep a log of our abends (abnormal ends) and our corrective action. The idea was to learn our bad programming habits and eliminate them from our code. He periodically collected the notebooks and reviewed our log. Repeated errors of the same type were questioned. All in all it was an interesting learning tool.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: January Spam
 date: 2004-2-1
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For the month of January 2004 I got 7,275 spam messages. Midway through the month I started using <a href="http://command-c.com/spamsieve" title="Command-C's SpamSieve">Command-C's SpamSieve</a>. So far I have been very pleased with SpamSieve.
 

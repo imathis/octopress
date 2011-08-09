@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Static
 date: 2003-3-3
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Last year in May my wife gave me a new Palm m515 handheld computer. This replaced my previous Vx handheld which I had purchased used from eBay. I use this handheld everyday and carry it with me everywhere. About one week after I got it the USB cradle stopped working. I called Palm Technical Support and they mailed me a new cradle. When it arrived it didn't work either. By this time I had purchased a serial cradle that worked fine so I just tossed the two USB cradles into my junk drawer and forgot about them.
 

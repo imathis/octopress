@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tissue Issue
 date: "2006-12-11"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Go to your nearest pastry store, bakery, or donut shop and buy a couple of your favorite whatever to go. Watch carefully what happens next. The person behind the counter will grab a sheet of tissue paper, usually decorated with the name of the establishment and it's logo, to handle the food items you are getting. One by one he or she will place your goodies in a box or bag for your take with you. When they are done they will leave the tissue in the container with your food.
 

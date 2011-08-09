@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Alice's Restaurant
 date: 2004-6-14
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In his seminal protest song, "Alice's Restaurant Massacre," Arlo Guthrie talks about getting fingerprinted, and having the results enshrined in a folder somewhere at the FBI.
 

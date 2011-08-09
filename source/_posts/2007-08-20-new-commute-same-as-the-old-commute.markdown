@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: New Commute, Same As The Old Commute
 date: 2007-8-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the first time in fifteen years I have moved without also changing jobs.  Last January I changed jobs without moving, a first in over ten years.  Every move I've made since 1992 has been necessitated by a new job in a new city, except for this last one.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Friday Five: Pets"
 date: 2002-3-15
-link: false
+comments: false
 categories: meme
+link: false
 ---
 1. What's your favorite animal?
 Cats. So free and independent.

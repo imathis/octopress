@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Software Development Meme
 date: 2008-7-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 I'm not sure I can really call this a "meme" since I was tagged with it by someone else but rather am borrowing it from the <a title="Software Development Meme" href="http://www.charlespetzold.com/blog/2008/07/Software-Development-Meme.html">Petzold Book Blog</a>.
 

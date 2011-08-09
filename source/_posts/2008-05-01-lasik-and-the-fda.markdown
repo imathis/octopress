@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: LASIK and the FDA
 date: 2008-5-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 After hearing a story about the <a title="Some Patients Say Life After LASIK Not Perfect" href="http://www.npr.org/templates/story/story.php?storyId=90070220">FDA investigating reports of problems following LASIK</a> eye surgery on NPR this morning, I followed the provided <a title="FDA Adverse Effects form" href="https://www.accessdata.fda.gov/scripts/medwatch/">complaint link</a>, and reported my experience to the FDA.  In the NPR story it was mentioned that it is believed as many as 5% of the nearly 1,000,000 LASIK patients per year have some difficulties following the surgery.  Unfortunately, the FDA has only received about 140 reports of issues in the past ten years.
 

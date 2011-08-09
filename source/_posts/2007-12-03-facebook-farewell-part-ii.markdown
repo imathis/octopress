@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Facebook Farewell, Part II
 date: 2007-12-3
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 This morning I ran across this <a href="http://www.pcworld.com/article/id,140182-c,onlineprivacy/article.html" title="Facebook Intrusive">PC World article</a>, where a researcher discovered that sites participating in the Beacon ad service with Facebook where transmitting details of transactions conducted <i>even when the user clicked the 'no' option and even when they were logged out of Facebook altogether.</i>
 

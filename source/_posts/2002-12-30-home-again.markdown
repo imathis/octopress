@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Home Again
 date: "2002-12-30"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I are finally home from our 10 day Hawaii Cruise Adventure. We had a fantastic vacation. Being able to spend hour after hour with my Love, uninterrupted phones, computers, TVs, etc., was wonderful. We connected at a very deep and real level.
 

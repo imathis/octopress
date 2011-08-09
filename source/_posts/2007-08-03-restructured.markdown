@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Restructured
 date: 2007-8-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the activities that occurs as two people begin to merge their lives is the redistribution of responsibilities.  Where before you were responsible for everything, now, suddenly, there is another set of hands to accomplish what needs doing.  Sometimes one or the other of you will setup to the mark and say, "I'm going to take care of this or that."  Other times you just start doing that chore or activity and it becomes yours.  Perhaps the most difficult thing (at least for me) is to say, "This is something I can't do well, would you please do it for us?"
 

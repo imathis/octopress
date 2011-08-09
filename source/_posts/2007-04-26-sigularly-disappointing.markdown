@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sigularly Disappointing
 date: 2007-4-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 Back in February, with a new job raise firmly in hand, I decided to get a wireless broadband card, or "aircard" as it is sometimes called.  Basically a cell phone in PCMCIA form-factor, this card would allow me to connect to the Internet regardless of my location and Wi-Fi availability.  Primarily I wanted it for the forty odd hours a week I spend at work.
 

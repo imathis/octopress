@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Satisfying Sounds
 date: 2006-8-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 <ul>
 <li class="il">The pop-fizzle of an icy cold soda can being opened.</li>&nbsp;

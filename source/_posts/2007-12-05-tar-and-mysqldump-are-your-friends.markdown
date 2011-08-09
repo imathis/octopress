@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tar and mysqldump Are Your Friends
 date: 2007-12-5
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 The first step in my site migration project is to backup all my data, all my content, everything.  Since my hosting platform is Linux based, this was surprisingly easy.
 

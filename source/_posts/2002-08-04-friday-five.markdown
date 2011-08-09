@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Friday Five
 date: 2002-8-4
-link: false
+comments: false
 categories: meme
+link: false
 ---
 1. What is your lineage? Where are your ancestors from? My mother's family is from Ireland and Scotland, while my father's linage goes back to England.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: H. A. L. T.
 date: "2005-10-16"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele always said that you should never make a decision when you were <strong>H</strong>ungry, <strong>A</strong>ngry, <strong>L</strong>onely, or <strong>T</strong>ired. I have certainly been all of these and more this week.
 

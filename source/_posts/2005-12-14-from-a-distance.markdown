@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: From A Distance
 date: "2005-12-14"
-link: false
+comments: false
 categories: life
+link: false
 ---
 A few weeks after Michele's death I went to a bar with some people from work to see a fellow work mate and his band play. It was good, and it got me out of  the apartment for a few hours at a time when I need diversions. In the days that followed my bass-playing friend and I discussed music quite a bit. He gave me a CD called <em>One Fair Summer Evening</em> by Nanci Griffith. Although more "country" than I normally prefer, her voice is liquid smooth and the live recording is very good.
 

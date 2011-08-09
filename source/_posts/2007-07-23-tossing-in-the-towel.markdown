@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tossing in The Towel
 date: 2007-7-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 Tonight after dinner, at my request, Sibylle and I spent a couple of hours digging through the final unexplored boxes in my locker. The ones at the back. On the bottom. Ten feet in and ten feet under.
 

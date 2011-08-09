@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Blister
 date: 2006-6-22
-link: false
+comments: false
 categories: health
+link: false
 ---
 Last night's kendo workout was good; more and more of the basics are starting to feel normal to me, my focus is returning, and I am less wiped out by the exercise itself. The soles of my feet are taking a beating; hopefully they will toughen up sooner rather than later. I did manage to generate a blister on the ball of my left foot. As the proper stance has the left heel in the air all the time, a lot of pressure is focus on the ball of that foot. Since I'll be out of town this weekend I'll miss Saturday's workout so it should heal before Wednesday.
 

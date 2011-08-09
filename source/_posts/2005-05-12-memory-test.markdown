@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Memory Test
 date: 2005-5-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 Once upon a time, a long time ago, in a land far, far away I worked for a YMCA summer camp. In a week's time I could teach 8-10 eight year olds the following:
 

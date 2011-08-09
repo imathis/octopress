@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: More Weeked Movies
 date: 2005-8-15
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 <strong><a href="http://imdb.com/title/tt0373074/" title="Kung Fu Hustle">Kung Fu Hustle</a></strong>
 A riot of a movie; zany, filled with stunts, and surreal. Think Bugs Bunny meets Matrix meets Jackie Chan.

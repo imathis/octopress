@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: coconutBattery
 date: 2008-7-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 <a title="coconutBattery" href="http://www.coconut-flavour.com/coconutbattery/">coconutBattery</a>
 <blockquote><span>isn't just a tool which shows you only the current charge of your battery - it also shows you the </span><span>current maximum capacity</span><span> of it in relation to the </span><span>original capacity your battery had</span><span>as it left the factory.

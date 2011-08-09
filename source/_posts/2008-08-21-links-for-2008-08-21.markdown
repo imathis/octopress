@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: links for 2008-08-21
 date: 2008-8-21
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 <ul class="delicious"><li>
                 <div class="delicious-link"><a href="http://www.military.com/opinion/0,15202,164859_1,00.html">Why I Will Not Vote for John McCain</a></div>

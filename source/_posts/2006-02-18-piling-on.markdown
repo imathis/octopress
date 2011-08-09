@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Piling On
 date: 2006-2-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 Events seem to be conspiring against me these days. Friday morning as I was arriving at work my cell phone rang. One of my best friends (and perhaps Michele's best friend of all) had just lost her brother. With my own grief still prominent in my daily life learning of her loss was tough. I talked to her again this morning, and I hope my feeble efforts to comfort her help to ease her way through this toughest of transitions.
 

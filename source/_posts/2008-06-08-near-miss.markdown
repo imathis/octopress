@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Near Miss
 date: 2008-6-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday around noon, we ran an errand to get some natural cat food at a nearby pet store. On the way we were one car shy of being in an accident.
 

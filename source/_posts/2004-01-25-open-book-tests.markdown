@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Open book tests
 date: 2004-1-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over at <a href="http://nslog.com/" title="NSLog();">NSLog();</a> the <a href="http://nslog.com/archives/2004/01/25/qotd_open_book.php" title="question of the day">question of the day</a> is how do you feel about open book tests. Ambivalent at best would be my first answer.
 

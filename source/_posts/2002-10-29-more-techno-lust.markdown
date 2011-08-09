@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: More Techno Lust
 date: "2002-10-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Okay, I'm fickle, I admit it. For some time now I have lusted after an Apple Titanium Powerbook G4 notebook computer. It has everything I want in a portable computer in the most pleasing form factor I've ever seen. It is unique.
 

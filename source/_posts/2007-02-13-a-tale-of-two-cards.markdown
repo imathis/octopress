@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Tale of Two Cards
 date: 2007-2-13
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Wanting to have the freedom of wireless Internet connectivity regardless of location, access points, or corporate policy I decided to reward my self with a mobile broadband card. It should come as no surprise that I am already on my second card, just a week after taking the initial plunge.
 

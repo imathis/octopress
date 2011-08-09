@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Loft in Name Only
 date: 2008-4-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Downtown Kansas City is experiencing a bit of a renaissance culturally and otherwise.  The city has poured a lot of money into the new <a title="KC Power and Light District" href="http://powerandlightdistrict.com/public/">Power and Light district</a>, with the new Sprint Center as the centerpiece.  New restaurants are opening, and all the old buildings, seemingly, are being converted into lofts.
 

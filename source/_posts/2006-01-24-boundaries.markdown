@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Boundaries
 date: 2006-1-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of my buttons involves my perception of some one crossing my boundaries. We all have various "lines in the sand" that when crossed provoke a response; one of mine is the demarcation between my professional life and my personal life.
 

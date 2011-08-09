@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: An Open Letter to the Senate
 date: 2005-7-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 I strongly urge the Senate to exercise its rightful role in the upcoming selection and confirmation process for supreme court justice. As Justice O'Connor was often the pivotal vote, her replacement needs to be similar ideologically.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Programming Master Class
 date: 2008-3-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past three days Sibylle has had the good fortune to attend a piano master class at a nearby university.  The presenter, head of the Yale Piano department, spent an hour with each student, listening to their piece and then helping them to mold it, or improve it in some way.  Some of the suggestions are subtle, mere nuances in the sound.  Others are more profound reinterpretations of the music.  With three students each afternoon, anyone who attended got to partake in nine hours of world class piano theory, practice, and technique.
 

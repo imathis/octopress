@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Orthogonal Persistence
 date: 2001-3-7
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Today I learned what orthogonal means. Aren't you impressed? You shouldn't be. My industry (information technology) is filled with $5 words for $.10 items. The currently hot term at my client is persistence. Persistence is the activity of permanently storing objects so that they are available the next time your application runs. After a while you can get into saying things like, ?We?re going to persist this data to the DB2 database, whereas the rest is going to flat-files.?
 

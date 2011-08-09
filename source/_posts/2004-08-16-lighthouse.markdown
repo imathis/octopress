@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lighthouse
 date: 2004-8-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I had a wonderful discussion yesterday morning as we lazily stayed in bed for an hour or so after waking up. For some time now we both have been struggling with feelings of depression and we both have expressed an occasionally desire to "go get in the car," our euphuism for committing suicide.
 

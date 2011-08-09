@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Rude Neighbors
 date: 2011-2-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 There's a construction crew making good use of today's near 60º temperature working up the street. They are putting the stone facade on a new house four houses up the street from us. Call it five houses distance as there is an intervening street too. Like all construction crews they have a large, loud stereo going.
 

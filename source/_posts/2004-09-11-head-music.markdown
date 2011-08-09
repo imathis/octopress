@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Head Music
 date: 2004-9-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Almost every day when I wake up I have music running through my head. Songs, well not so much songs and just refrains from songs, fill my head in the morning. Usually one song, repeated endlessly on my internal MP3 player. This morning is was "No One Is To Blame" by Howard Jones. I honestly can say that I haven't heard this song since it was popular in the early 80s. How it got into my head is beyond me.
 

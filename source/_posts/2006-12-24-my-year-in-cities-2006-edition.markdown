@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: My Year In Cities, 2006 Edition
 date: "2006-12-24"
-link: false
+comments: false
 categories: meme
+link: false
 ---
 As seen on <a href="http://www.kottke.org/06/12/my-year-in-cities-2006" title="Kottke">Kottke</a>.
 

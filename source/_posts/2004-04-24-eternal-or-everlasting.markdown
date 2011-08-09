@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Eternal or Everlasting?
 date: 2004-4-24
-link: false
+comments: false
 categories: random
+link: false
 ---
 Once upon a time, in college, I took a course about religion. It wasn't so much a comparative study of different religions as it was a glossary of terminology with which to discuss religion. I've forgotten most of the material but one concept stands out to this day.
 

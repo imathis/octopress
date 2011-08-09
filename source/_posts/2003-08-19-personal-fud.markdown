@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Personal FUD
 date: 2003-8-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 We have completed the initial steps in our financial plan. The old cars have been traded-in, and the new (to us anyway) car is in our possession. Our trip to the mortgage company went smoothly and we are on schedule for a closing in another 4 weeks. Finally, over the weekend we completed the paperwork for our offer in compromise to the IRS, and I mailed that package on Monday.
 

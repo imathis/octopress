@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What They Don't Want You To Know
 date: "2003-11-15"
-link: false
+comments: false
 categories: life
+link: false
 ---
 There is a file, called robots.txt, that when associated with a web site instructs search engine robots not to catalog the file or files disallowed. I have a teeny, tiny <a href="http://zanshin.net/robots.txt" title="danger will robinson">one</a> here on zanshin.
 

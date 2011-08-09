@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Back to the Future
 date: 2004-12-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 In spite of my best efforts to do otherwise, I find myself investing in a potential future. By this I mean I am emotionally and spiritually investing myself in a future that is currently dependent upon the actions of others. Most of us have some control over our immediate future, we can plan out the day or a week. And major events likes weddings or vacations are sometimes planned for months or years before coming to pass. These are all situations where most of the control lies in the individual and very little is delegated to others.
 

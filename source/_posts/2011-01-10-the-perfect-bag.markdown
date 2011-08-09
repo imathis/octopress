@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Perfect Bag
 date: 2011-1-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have a bit of a love/hate relationship with computer bags. Well, perhaps like/dislike is a more accurate phrase. I like which ever new bag I've just heard about, until I acquire one and then I start to dislike it.
 

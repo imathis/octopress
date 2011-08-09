@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Brother, Can You Spare a Job
 date: 2003-7-15
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I started working as a programmer in 1983 after getting a degree in computer science. In the 20 years since then I have worked as a mainframe programmer, client-server application developer, SQL Database Administrator, Object Modeler, Business Reorganization Analyst, distributed application architect, OO developer, web application developer, and consultant. I have coded, designed and developed applications in COBOL, Nomad 4, Easytrieve, CICS, IMS, Powerbuilder, Forte TOOL, Java, HTML, and Jakarta Struts. I have used file systems ranging from ISAM and IMS to VSAM and then DB2 and SQL Server, and even OODBMS. I've used code generators and CASE tools; hand coded web pages and developed using WYSIWYG IDEs.
 

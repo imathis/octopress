@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Merry Christmas
 date: "2007-12-22"
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 Over the past couple weeks I have become increasingly aware that fewer and fewer people you meet say, "Merry Christmas."  While my interactions with other members of the public, or store clerks, is by no means a representative sample, it seems like we are suddenly afraid to say the two words that have always (in my experience) been said this time of year.
 

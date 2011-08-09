@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Uphill All The Way
 date: "2007-10-30"
-link: false
+comments: false
 categories: life
+link: false
 ---
 There are two types of people in the world:  those who wait until the car's low fuel light has been on solidly for a few miles before getting gas, and those who fill up at half a tank.  I'm firmly in the fuel light group.
 

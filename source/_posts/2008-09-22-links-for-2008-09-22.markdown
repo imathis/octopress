@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: links for 2008-09-22
 date: 2008-9-22
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 <ul class="delicious"><li>
                 <div class="delicious-link"><a href="http://www.boingboing.net/2008/09/19/microsofts-im-a-pc-a.html">Microsoft’s “I’m a PC” Ads - made on a Mac - Boing Boing</a></div>

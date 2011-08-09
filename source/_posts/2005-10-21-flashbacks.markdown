@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Flashbacks
 date: "2005-10-21"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I keep having flashbacks to the day Michele killed herself. Discovering her is indelibly imprinted on my mind. Like a sore in your mouth that you can't stop touching with your tongue, I can't stop replaying some parts of that Monday over and over in my mind. I realize that the movies I've been watching, the phone calls to and from friends, and staying up until I am utterly exhausted, have all been efforts to keep myself from playing the images from her death over and over in my mind.
 

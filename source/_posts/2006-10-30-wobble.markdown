@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Wobble
 date: "2006-10-30"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Just over two weeks ago I had <a href="http://www.zanshin.net/blogs/001113.html" title="A Free Tire">new tires</a> put on the Lexus. The previous set had nearly reached the wear indicators, and were worn enough that the car no longer tracked properly. There was a surprisingly strong pull to the left at highway speeds, and the couple of times I drive in heavy rain I discovered the unique joy that is hydroplaning.
 

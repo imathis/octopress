@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bush Disaster
 date: 2005-9-10
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 <img src="http://zanshin.net/images/bushdisaster.jpg" title="Bush Disaster">
 

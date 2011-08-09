@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Book: Point of Impact"
 date: 2010-1-8
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 One of my favorite books, <em>Point of Impact</em> chronicles an ingenious plot to assassinate a public figure and frame a former Marine sniper. Only he's smarter than anyone expects. I know there was a movie made a few years ago that loosely follows the same plot, but I've not seen that so I don't know if it's any good or not. I've read the book several times and enjoyed it each time.
 

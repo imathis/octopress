@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Control-Z
 date: 2006-9-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the computing world, at least on Microsoft products, the "undo" function is accessed by the CTRL-Z key combination. Undo is a powerful concept; one that unfortunately doesn't exist in the real world.
 

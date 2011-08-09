@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Weekend of Food
 date: "2005-12-27"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Most of the past weekend was spent making and consuming food. Friday afternoon after work I went to the grocery store and bought what I thought were all the ingredients for Cuban style chicken and rice, chili, breakfast casserole, and tacos. After getting it all home and put away I promptly went out to eat. Go figure.
 

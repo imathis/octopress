@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: TTOW
 date: 2006-5-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 Two of the television shows that both Michele and I loved to watch were <em><a href="http://www.cbs.com/primetime/survivor12/" title="Survivor">Survivor</a></em> and <em><a href="http://www.cbs.com/primetime/amazing_race9/" title="Amazing Race">Amazing Race</a></em>. I watched the spring season of both shows this year, and while it was bittersweet at times, I'm glad I let myself have this enjoyment.
 

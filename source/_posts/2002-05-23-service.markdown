@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Service
 date: 2002-5-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 I am sitting in  carousel at the local Audi dealer writing for my car to complete its 15K service visit.
 

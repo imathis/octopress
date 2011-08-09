@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Weekend
 date: 2002-5-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 We had a fabulous weekend. Friday evening we had pizza from Papa Murphy's  ~ they build it and you bake it. This way it is hot and fresh no matter what. Plus their pizza is good.
 

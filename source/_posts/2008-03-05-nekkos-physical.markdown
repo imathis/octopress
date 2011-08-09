@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Nekko's Physical
 date: 2008-3-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday Nekko had a visit to the vet to get one of her annual vaccinations and to have a blood glucose curve test completed to measure the effectiveness of her current insulin treatments.
 

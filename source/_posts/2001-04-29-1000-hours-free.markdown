@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 1000 Hours Free!
 date: 2001-4-29
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 We just got another of the ubiquitous AOL CDs in the mail. Usually we toss these without even thinking about it. But this one caught my eye. It offers 1000 "free" hours in the first 45 days of usage. Wow! 1000 hours. A "meg." Hubba hubba.
 

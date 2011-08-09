@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Only $50 More
 date: 2006-1-10
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For some time now I have wanted an iPod. And in recent debates with myself I finally came to the conclusion that having a portable MP3 player was more important than a new cell phone. In truth, my cell phone usage has plummeted since Michele died; she was the principal reason I had a cell phone. I wanted to be able to call her anytime, and for her to be able to reach me at anytime. So, with less need for a new phone I shifted my focus to getting an iPod.
 

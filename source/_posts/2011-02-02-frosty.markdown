@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Frosty
 date: 2011-2-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 Like most of the continental United States we were caught up in the major winter storm system over the past two days. We were right at the western edge of the worst of it, I think, so we didn't get much snow, but we do have icy conditions as the storm started with freezing rain.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "611"
 date: 2007-2-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday, on my way into the grocery store, I discovered a cell phone laying on the ground just inside the outer doors. There was no one nearby, so I picked it up. After failing to find any identifying information in the phone about who the owner might be I tried calling several numbers from the contact list, hoping that their caller id would identify the owner. If that ploy had worked I was going to have them contact the owner and tell them where they could get their phone back. Only none of the contacts I tried answered the phone. I got one voice mailbox after another.
 

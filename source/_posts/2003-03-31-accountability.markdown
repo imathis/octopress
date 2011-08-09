@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Accountability
 date: 2003-3-31
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 I have added a counter to my page that shows an estimate of the Iraqi body count as a result of the current war against them. I found out about it at <a href="http://www.zeldman.com/" target="_blank">zeldman.com</a>. Here is the posting he used to talk about it:
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Where to Turn?
 date: "2005-11-17"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I reached a new low today. A series of seemingly small events culminating with a missed opportunity for lunch out with my coworkers left me in tears. I couldn't think or respond to anything. In the past when the stresses of the day ganged up in me to leave me reeling like this I would grab my cell phone and call Michele. She was always there to give me a safe place to fall, always there to offer unbiased counsel, always there to tell me that I would be okay.
 

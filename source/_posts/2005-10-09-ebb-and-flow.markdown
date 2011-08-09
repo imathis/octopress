@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ebb and Flow
 date: 2005-10-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday, especially last evening, was rocky for both of us. After plumbing the depths of despair on Friday we both came back towards normalcy Saturday. One of Michele's best friends, Laura, called and they talked for a long time on the phone. Being able to connect to someone outside of our immediate situation was a very good thing. Michele was able to sort through her feelings and fears without having to worry about me in the process.
 

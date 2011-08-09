@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Currently Reading
 date: 2007-11-6
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 There are always two or three or four books currently being read.  Here is the current crop:
 

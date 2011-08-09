@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ten Myths About Introverts
 date: 2011-6-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 Disclaimer: I am an introvert.
 

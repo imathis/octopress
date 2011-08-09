@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Weighty Oops
 date: 2006-8-15
-link: false
+comments: false
 categories: health
+link: false
 ---
 I've been lifting weights three times a week for several weeks now. The routine is becoming a habit, and I actually look forward to the time spent in the gym early in the morning.
 

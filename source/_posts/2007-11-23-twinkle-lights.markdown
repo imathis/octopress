@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Twinkle Lights
 date: "2007-11-23"
-link: false
+comments: false
 categories: life
+link: false
 ---
 On our way to the laundromat to dry a couple of loads of wash, Sibylle pointed out that some of the lights on the Jimmy's dash were behaving weirdly.  The intensity of the lights was flickering, and it looked like one of the gauge lights was trying to come on.
 

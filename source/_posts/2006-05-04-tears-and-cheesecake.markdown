@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tears and Cheesecake
 date: 2006-5-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday I made a cheesecake following my mom's recipe. This is true New York style cheesecake; obscenely rich, creamy, and decadent. It's also quite an undertaking to make with a pound of cream cheese, a pound of small curd cottage cheese, a pint of sour cream, grated lemon rind, lemon juice, sugar, vanilla, flour, a graham cracker crust, and four eggs.
 

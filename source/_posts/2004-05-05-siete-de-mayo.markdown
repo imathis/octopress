@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Siete de Mayo
 date: 2004-5-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 I know that most people celebrate Cinco de Mayo, but myself, I'm into Siete de Mayo. Specifically the one 43 years ago.
 

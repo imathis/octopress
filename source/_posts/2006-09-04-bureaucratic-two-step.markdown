@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bureaucratic Two-Step
 date: 2006-9-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 The current car I have was purchased in Illinois about three years ago. The dealer worked with us and we were able to get a fantastic loan through a small local bank. Only 5% interest, and the payments were exactly what we wanted.
 

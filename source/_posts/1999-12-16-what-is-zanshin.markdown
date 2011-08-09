@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What is Zanshin?
 date: "1999-12-16"
-link: false
+comments: false
 categories: life
+link: false
 ---
 <i>Zanshin</i> is truth.
 

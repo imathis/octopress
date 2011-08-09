@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Day My Mint Stats Died
 date: 2008-12-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 Three years ago, on December 5th, I installed Mint for the first time.  Since that time it has recorded 26,000 plus page views and almost 15,000 visits to my humble site.  Along the way I have added and taken away various peppers, and I upgraded to version 2.0 this past year.  Mint has worked flawlessly the entire time.
 

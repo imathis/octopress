@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Perk
 date: 2008-3-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 The company I work for has two buildings in downtown Kansas City.  The primary location has its own underground garage with two levels of parking for those associates who work there.  The garage isn't large enough to accommodate everyone, so some associates are given a leased space in the public garage across the street.  The company pays for the parking in the city lot, which is very nice.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The 123 Meme
 date: 2005-2-19
-link: false
+comments: false
 categories: meme
+link: false
 ---
 <strong>Ned knew that she and a young man had been courting, and he believed her tears must have resulted from something he had said or done.</strong>
 

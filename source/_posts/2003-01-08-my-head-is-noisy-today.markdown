@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: My Head is Noisy Today
 date: 2003-1-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 I think the biggest issue I have going right now is battling to overcome the false-personality stuff that I got from my childhood, especially from my father. There is a part of me that shrieks at the idea of doing what I want to do rather than having a traditional job.
 

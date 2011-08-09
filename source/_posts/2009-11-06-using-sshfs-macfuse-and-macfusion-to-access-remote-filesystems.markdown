@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Using SSHFS, MacFUSE, and Macfusion to Access Remote Filesystems
 date: 2009-11-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 ## SSHFS
 sshfs is a secure file system client that allows you to access and manipulate files on remote systems where that would normally be available via SFTP. sshfs is dependent upon FUSE or Filesystem in Userspace. FUSE is available for Linux, FreeBSD, NetBSD (as PUFFS), OpenSolaris, and Mac OS X (as MacFUSE). It was officially merged into the mainstream Linux kernel tree in kernel version 2.6.14.  h1.

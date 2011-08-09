@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What's The Matter With Kansas?
 date: 2004-9-11
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Michele and I just finished reading "What's The Matter With Kansas?" by Thomas Frank. The subtitle of the book is "How Conservatives Won The Heart Of America." It is a fascinating look at the radical shift towards the right that is happening in America today. Using Kansas, and the century or more of Populist movement that originated in here in the 1890s, Frank paints a clear, concise picture of how the radical right is is using polarizing issues to leverage the very people they are hurting the most.
 

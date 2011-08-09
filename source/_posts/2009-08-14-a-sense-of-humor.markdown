@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Sense of Humor
 date: 2009-8-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 In addition to great customer service, and fantastically fast shipping, <a title="Zappos" href="http://zappos.com">Zappos</a>, it seems, has a sense of humor.
 

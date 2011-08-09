@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Pissed Off
 date: 2006-3-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele I am so pissed off at you it isn't even funny. You stole my future, you stole my dreams of a life together with you, you stole everything that I had to live for. And you left me holding the bag. I'm out here in the cold, alone, lonesome, miserable, with no reason to continue. I simply exist now.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Favorite Artists
 date: 2009-8-6
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 According to <a title="zan5hin's Music Profile" href="http://www.last.fm/user/zan5hin">last.fm</a> my favorite musical artists are, in order:
 <ol>

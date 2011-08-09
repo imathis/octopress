@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Anonymity Breeds Contempt
 date: 2008-3-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 There were two articles yesterday about anonymity online, and the potential good or bad that can result.  Paul Stamatiou, a computational media senior at Georgia Tech, talked about the <a href="http://paulstamatiou.com/2008/03/25/the-perils-of-the-anonymous-user" title="The Perils of the Anonymous User">perils of anonymous users</a> in social networks.  He lists a couple of pros and cons:
 <blockquote>Pros: No barriers to entry. If someone wants to get involved quickly, they don’t have to create an account. It’s just easier to be anonymous.

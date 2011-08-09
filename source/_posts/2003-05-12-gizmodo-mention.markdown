@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Gizmodo Mention
 date: 2003-5-12
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I'm somebody now!
 

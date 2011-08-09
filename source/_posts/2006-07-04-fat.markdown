@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fat
 date: 2006-7-4
-link: false
+comments: false
 categories: health
+link: false
 ---
 Let's face it -- I'm fat. At five feet nine inches and two hundred forty odd pounds -- I'm fat. At age thirty (fifteen freakin' years ago!) I weighed one-sixty. How I managed to gain ninety pounds in fifteen years is beyond me.
 

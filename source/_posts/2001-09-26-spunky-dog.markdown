@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Spunky Dog
 date: 2001-9-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today I am filled with sadness. You see I gave away the very first puppy I had ever owned yesterday. He was wonderful, beautiful and filled with love. He was perfect in ever way possible and I gave him away.
 

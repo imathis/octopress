@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Frustration
 date: "2005-11-19"
-link: false
+comments: false
 categories: life
+link: false
 ---
 My frustration level is at an all time high these days. The slightest wrinkles in my plans leave me seething with anger. I know that the root cause is the loss of the one place where I could talk out the surface "story for publication" crap, and then explore the real underlying motivation and emotions. Most people when you talk to them about something that is emotionally charged want to fix or alleviate the cause of the charge. I don't want you to fix my life - it isn't broken. All I want is some one who will listen to me, validate that I have real feelings and that, no, I'm not some freak because I'm upset by some tiny event.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 1001 Movies To See Before You Die
 date: 2008-5-13
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 As seen on <a title="Kottke" href="http://kottke.org">Kottke</a>.  Here are the 263 titles that I've seen.  The original list is <a title="1001 Movies To See Before You Die" href="http://www.berbecuta.com/2008/03/14/1001-movie-you-must-see-before-you-die/">here</a>.
 <ul>

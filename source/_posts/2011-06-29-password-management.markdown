@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Password Management
 date: 2011-6-29
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Shortly after buying my first Macintosh computers in January 2003 (a 17" G4 iMac and a 15" Titanium PowerBook G4), I downloaded a password management application called PasswordMaster by <a title="Maury McCown" href="http://www.maurymccown.com/" target="_blank">Maury McCown</a> of RAILhead Design. PasswordMaster created a simple database on my computer which has grown over the years to hold some  286 accounts, serial numbers, and passwords. I've always like that it was local to my machine, and never minded that I had to copy and paste or retype passwords it stored into various web forms over the years.
 

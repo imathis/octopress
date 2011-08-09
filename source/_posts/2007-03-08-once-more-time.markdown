@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Once More Time
 date: 2007-3-8
-link: false
+comments: false
 categories: health
+link: false
 ---
 Recently, and quite by accident, I discovered what appeared to be a legitimate karate dojo just five minutes drive from my new office location. After conferring with a friend who had studied in the style himself, and learning that the association was well regarded, I decided to have a look.
 

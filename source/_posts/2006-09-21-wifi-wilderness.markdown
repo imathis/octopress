@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: WiFi Wilderness
 date: 2006-9-21
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 The spread of services offered in motels must follow a pattern, it only makes sense that once one motel offered free color television, that all the others had to as well in order to compete. Overnight it seems that every motel (and hotel) started pointing the ends of the toilet paper roll.
 

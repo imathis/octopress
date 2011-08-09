@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Typographic Spacing
 date: 2007-4-9
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 During high school I took a semester of typing as one of my elective courses.  (Yes, I am that old.)  I only remember a couple of things from that class.  First, all the assignments were handed out based on the speed of the <i>fastest</i> student in the class.  This meant that those of us who were slower at typing had to really struggle to complete all the required exercises.  By the end of the semester I was able to type an entire page at 20 or 21 words per minute (wpm) with only two errors per page.  Erasable bond paper was available, but since the ink would rub off the paper with only a little handling the teacher wouldn't allow us to use it for anything we wanted to hand in for grading.
 

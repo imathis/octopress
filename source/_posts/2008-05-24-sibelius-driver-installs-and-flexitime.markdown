@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sibelius, Driver Installs, and Flexitime
 date: 2008-5-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently Sibylle purchased an electronic keyboard for her studio, and last week the copy of Sibelius 5 that she had ordered arrived.  Sibelius is one of the top two or three music notation software programs available and includes a note input mechanism called "Flexitime."  Flexitime captures the music you play on the keyboard (or other MIDI input device) directly on a score.  Last evening we hooked everything up and gave it a try.  We could not have been more frustrated or disappointed.
 

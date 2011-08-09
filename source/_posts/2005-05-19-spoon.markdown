@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Spoon
 date: 2005-5-19
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 Once upon a time we bought a set of flatware for everyday use. Eight of everything: spoons, dessert forks, regular forks, and knives. Well, seven of the dessert forks; at some point in Illinois one of the dessert forks disappeared. All of the remaining utensils are just like their mates except for one spoon.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Different Perspective
 date: 2008-3-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 For nearly nine years, beginning in 1990, I was very active as a martial artist.  At the end of my active participation I had achieved the rank of <em>nedan</em>, or second degree black belt.  I competed at local, state, and national levels.  At my peak I placed third in the Men's 35+ Black Belt division at the 1997 National Championships.  Along the way I suffered two broken fingers, a broken nose, and a torn medial collateral ligament.  I share this information to establish my familarity with the idea of training and competing in a martial sport.
 

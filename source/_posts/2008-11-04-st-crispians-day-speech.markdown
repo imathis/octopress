@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: St. Crispian's Day Speech
 date: 2008-11-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 From <em>Henry V</em>, this <a title="Once More Unto The Breach" href="http://en.wikipedia.org/wiki/Once_more_unto_the_breach">speech</a> seems fitting today.
 

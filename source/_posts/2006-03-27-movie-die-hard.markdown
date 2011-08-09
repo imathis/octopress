@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Movie: Die Hard"
 date: 2006-3-27
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Using a recently acquired Best Buy gift card I bought a couple of movies over the weekend, including the "Die Hard" series with Bruce Willis. I hadn't seen any of them in several years and wanted to add them to my collection. While they haven't aged as well as the "Lethal Weapon" movies, they are still reasonably good.
 

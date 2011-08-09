@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: One Week of Trainer Riding
 date: 2011-1-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 I managed to ride four times for a total of about 20 miles in my first week of having a stationary trainer for my bicycle. I had hoped to ride Friday and Saturday but events conspired against me. And today, after the completion of String Fling I was entirely too tired to make myself go to it.  We did shovel snow of the neighbor's driveway however, so I got some exercise.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 5am Salmon
 date: 2002-5-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 We have two house cats, Abby and Nekko. Some time ago we started giving them a small portion of canned salon each day to augment their dry food diet. Needless to say, the fish is a big hit.
 

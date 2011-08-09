@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Tale Of Two Phones
 date: 2006-4-17
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For some months now I have been debating whether to get a new cellphone or not. My current phone is several years old, and while it still works, I am suffering from tech-envy as it doesn't play games, support bluetooth, or take pictures. Moreover, it is at least one transmission standard out of date, if not two, making it increasingly difficult to use.
 

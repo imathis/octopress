@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Seedlessness
 date: 2005-4-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 On the eve of becoming homeless (as in no longer owning a house variety, not the living in the back seat of my car variety) I am struck by at least one positive thought.
 

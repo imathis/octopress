@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Razor Blades
 date: "2008-10-22"
-link: false
+comments: false
 categories: life
+link: false
 ---
 When I was growing up I would sometimes watch my father shave in the morning.  I was fascinated by the soap and the brush he used to lather his face.  As I got older I discovered that the back of the medicine cabinet had a slot in it, labeled "used blades," or something similar.  As he replaced old blades for new, the old blade was deposited through the slot in the cabinet.  I asked him once where the blades went.  "Just into the space between the studs," was his answer.  
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Installing Tchibo Internet Stick on Mac OS X
 date: 2010-5-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 In order to enable Internet access while we are in Germany without having to rely upon Internet cafés or access to (usually per-per-use) WiFi, Sibylle and I invested 50 € in a Tchibo Internet Stick. Tchibo is nominally a coffee company, selling fresh ground beans and other coffee related items. However they also sell some small electronics including a USB based mobile modem.
 

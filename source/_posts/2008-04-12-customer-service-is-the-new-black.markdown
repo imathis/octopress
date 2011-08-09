@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Customer Service Is The New Black
 date: 2008-4-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 This is the tale of buying a portable digital piano keyboard.  The final decision involved two brick and mortar stores, hours of Internet research, several online retailers, and ultimately came down to customer service.  
 

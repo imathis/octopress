@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Like A Kid Again
 date: 2006-6-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have been exhausted all week long and consequently have been going to bed very early, even for me. The last two nights I've been in bed well before nine p.m., and last night I was asleep before then.
 

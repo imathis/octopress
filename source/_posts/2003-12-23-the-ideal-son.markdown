@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Ideal Son
 date: "2003-12-23"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I were up early this morning. We've both been experiencing some stress as the Christmas holiday draws near. Time with family isn't always easy or enjoyable and we find ourselves struggling to express all the little things that bug us about the whole situation. This morning was no different.
 

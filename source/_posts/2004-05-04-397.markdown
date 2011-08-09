@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "#397"
 date: 2004-5-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 This entry is the three-hundred-ninety-seventh posting to my site. The oldest dates back to December of 1999. We were living in Vancouver Washington then, enjoying the mild climate of the Pacific Northwest.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Course Catalog
 date: 2008-7-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 Every semester in college, when the new course catalog was issued, you got to look for classes to take following the break.  There was always an anticipation in this process.  Reading the course descriptions, matching offerings up to your schedule, and wondering if Psychology 101 was really as bad as everyone said.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Let Them Eat Cake
 date: 2006-7-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 For someone who usually spends his free time alone, huddled in front of multiple computer screens living life vicariously, this weekend has been filled with social outings.
 

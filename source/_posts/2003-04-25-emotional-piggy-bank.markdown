@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Emotional Piggy Bank
 date: 2003-4-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 I respond to job stress by looking for a way to change the situation. In the past this has led to cross-country moves to new job situations. If moving to a new job situation eliminated the stress and I was able to stay in the new situation for as long as I wanted this would be an okay response. However, the mere fact that I moved cross-country 3 times in less than 3 years is an indication that a new job isn't the answer.
 

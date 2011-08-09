@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What If I Don't Have A Birthday?
 date: 2006-4-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the things that Michele was particularly good at, and that she got me doing, was talking about uncomfortable situations in advance so as to lessen the impact when they happened for real. Knowing that you are going into a difficult situation is one thing, but talking about it before hand, in a safe, controlled place, allows you to dump your fears, or anger, or other powerful emotion outside of a situation where expressing yourself fully might be ill-advised or difficult.
 

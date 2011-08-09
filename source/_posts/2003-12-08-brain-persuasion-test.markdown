@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Brain Persuasion Test
 date: 2003-12-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 This <a href="http://www.mindmedia.com/brainworks/profiler" title="Brain Persuasion Test">Brain Persuasion Test</a> is fun and, surprisingly accurate.
 

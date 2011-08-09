@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: $13,150
 date: 2006-1-30
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 The first home computer I ever owed was a Laser 128; a clone of the venerable Apple II. I don't remember doing much with this machine, although I am sure I did use it. My parents gave it to me as a gift one year for Christmas in the late 1980s. Since that time I have purchased eight computers of my own, totally roughly $13,150.
 

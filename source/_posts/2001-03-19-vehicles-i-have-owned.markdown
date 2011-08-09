@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Vehicles I Have Owned
 date: 2001-3-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 This list is pure ego gratification. I have finally reached a point in my emotional growth and                  understanding that I no longer feel the need to take care of what I imagine the feelings of others to                  be. If this list is seen in a particular light by anyone reading it then they should understand                  that the light is shinning on them, and not on me.
 

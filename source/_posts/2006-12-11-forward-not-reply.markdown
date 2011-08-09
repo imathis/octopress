@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Forward, Not Reply
 date: "2006-12-11"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In this day of email it is common to get a message from someone, smack the reply icon, bang out a response and click send; all without a moment's hesitation. The mode of communication has become nearly seamless, at least for someone who has been using email for more than five minutes.
 

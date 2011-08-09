@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Chicken Little
 date: 2003-4-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 It has been an interesting morning here. The state budget address was given yesterday, and it targets consultant spending as one area where cuts should be made. Naturally this has upset many of my consultant coworkers. The one thing that I keep reminding myself as I listen to and get sucked into these discussions, is that the new governor has stepped on a lot of toes in his three months in office; his budget proposal is going to get hacked to bits in the coming weeks. So to get worked up today about the first proposal is just silly.
 

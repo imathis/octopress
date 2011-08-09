@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Vehicle Fire, Expect Delays
 date: 2006-11-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 On my way home from work Friday, one of the overhead information displays on the bypass read: "VEHICLE FIRE. EXPECT DELAYS. PAST 69 HWY" Having abandoned the highway for surface streets in the past when there was some delay I know that the frustration of traffic lights is worse (for me) than staying on the highway and creeping along with everyone else.
 

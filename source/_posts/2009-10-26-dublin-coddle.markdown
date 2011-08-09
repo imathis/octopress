@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Dublin Coddle
 date: "2009-10-26"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Shortly after moving to Kansas City I discovered a dish called "<a title="Dublin Coddle - Wikipedia" href="http://en.wikipedia.org/wiki/Coddle" target="_blank">Dublin Coddle</a>." It's a meat-and-potato-lovers dream soup. I've not made it in a very long time and wanted to try it again. Over the weekend we gathered the ingredients but ended up not making it. It needs to cook long and slow which lends itself to weekend cooking but not so much during the week. Then Sibylle suggested I make it at lunch and let it cook all afternoon. So that's what I did and it turned out beautifully.
 

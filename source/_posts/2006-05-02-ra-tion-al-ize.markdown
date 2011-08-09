@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: ra-tion-al-ize
 date: 2006-5-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 <em>verb</em>
 <strong>1</strong> attempt to explain or justify (one's own or another's behavior or attitude) with logical, plausible reasons, even if they are not true or appropriate.

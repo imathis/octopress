@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Third Tire is a Charm
 date: "2006-11-19"
-link: false
+comments: false
 categories: life
+link: false
 ---
 On Friday, after work, I stopped by the tire store and had a conversation with the manager there. Armed with information about the speed rating of the tires Lexus recommends for my car I hoped to talk them in to switching the tires from "H" to "V". The manager proved to be very easy to work with and we were able to negotiate a solution.
 

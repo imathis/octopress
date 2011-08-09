@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Inception
 date: 2011-2-6
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Yesterday, while returning <em><a title="Social Network" href="http://www.imdb.com/title/tt1285016/" target="_blank">Social Network</a></em> at the nearby Redbox, I saw that <em><a title="Inception" href="http://www.imdb.com/title/tt1375666/" target="_blank">Inception</a></em> was available so I grabbed a copy of it. Talk about a mind-altering movie. Wow. This has the same kick as <em><a title="The Matrix" href="http://www.imdb.com/title/tt0133093/" target="_blank">The Matri</a>x</em> did when it was brand new. And like <em><a title="The Matrix" href="http://www.imdb.com/title/tt0133093/" target="_blank">The Matrix</a></em>, this will take a re-watching or three to fully grasp and understand.
 

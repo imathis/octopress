@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Every Day Is Special
 date: 2006-6-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently, in a conversation with a good friend who, in an unbelievable twist of fate is also struggling through the aftermath of a spouse's death, we talked about special days and ordinary days. The gist of it was that every single day was special for one reason or another. Sure there are "big" days like birthdays, anniversaries, and holidays; all of which are difficult. There are also ordinary days that have meaning through the context of a once shared lifetime together.
 

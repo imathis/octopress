@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Random Bits
 date: 2006-1-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Synchronizing a 30GB iPod for the first time with just over 22 GB of music and videos takes approximately 10 hours over USB 1.1. This time is made even longer by your inability to halt the sync process.
 

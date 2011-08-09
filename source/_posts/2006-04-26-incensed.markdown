@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Incensed
 date: 2006-4-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 You'd think that the relative good news I got this afternoon regarding my vision would have given me an entire evening of good. You'd be wrong. Lately it seems that the boiling water of my anger is always just below the surface waiting for the slightest reason to explode.
 

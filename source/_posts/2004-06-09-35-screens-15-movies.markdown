@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 35 Screens 15 Movies
 date: 2004-6-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 I don't get the movie industry at all. Springfield has 35 movie screens in town, counting the two outdoor ones at the Route 66 Drive-in. Today there are only 15 movie titles being shown on these screens.
 

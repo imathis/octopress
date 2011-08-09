@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Opus blooms again
 date: 2003-9-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 When I was in college my favorite comic strips were 'Doonesbury' and 'Bloom County.' It appears that Opus may once again grace the Sunday comics page <a href="http://www.washingtonpost.com/wp-dyn/articles/A45450-2003Sep8.html">again</a>.
 

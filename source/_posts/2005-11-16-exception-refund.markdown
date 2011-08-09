@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Exception Refund
 date: "2005-11-16"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I had bought plane tickets to travel to NC for Thanksgiving way back in early September. We did this through Expedia.com and I called them to see about getting a refund once I made the decision not to go by myself. I sent all the paperwork they asked for THREE weeks ago and today I called to see what the status of the exception refund was. They claim they've never received my letter.
 

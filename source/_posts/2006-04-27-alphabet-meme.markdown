@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Alphabet Meme
 date: 2006-4-27
-link: false
+comments: false
 categories: meme
+link: false
 ---
 In lieu of a "45 Things About Me" list for my birthday next week, I give you:
 

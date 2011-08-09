@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Taking Care of Myself
 date: 2001-3-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ten days ago I treated myself to a new car. My wife and I have been sharing one car for over a year. We were          reducing our debt load and having just one-car payment made sense. Our financial status is better now and          we felt it was time to have a second car. Since I am self-employed we opted to lease the vehicle through          my company. The benefit here is being able to write off a considerable portion of the car's cost on my taxes          each year.
 

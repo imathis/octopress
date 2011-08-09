@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Graph Paper
 date: "2007-11-12"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Is there anything is the world as wonderful as a new pad of graph paper?  Fresh smooth pages of quarter inch squares?  Think of the possibilities.  Floor plans, or furniture drawings, geometric doodles, and precision drawings.
 

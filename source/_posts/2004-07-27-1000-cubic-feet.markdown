@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 1000 Cubic Feet
 date: 2004-7-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I have completed the last major task on our moving to-do list. We've stored all the overflow items in two climate controlled lockers down the road. Each locker is five feet by ten feet, with about 10 feet of vertical space. We filled each to capacity, so we have 1000 cubic feet of stuff in storage.
 

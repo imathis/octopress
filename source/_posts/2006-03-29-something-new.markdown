@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Something New
 date: 2006-3-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 Regarding my pique at being invited over to someone's house for the first time, and my initial reaction of "why now?", I think I came to a better understanding about it last night in group.
 

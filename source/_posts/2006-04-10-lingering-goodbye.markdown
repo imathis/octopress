@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lingering Goodbye
 date: 2006-4-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Since learning of my mother's terminal condition almost two months ago, the amount of contact I have with my parents, in person and on the phone, has naturally increased. Even having just seen her last Friday I am already contemplating my next visit. Not knowing when the last visit will happen, but knowing that it is inevitable has given me a certain motivation.
 

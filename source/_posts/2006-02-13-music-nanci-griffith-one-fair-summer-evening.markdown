@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Music: Nanci Griffith One Fair Summer Evening"
 date: 2006-2-13
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 I originally posted about this album <a href="http://www.zanshin.net/blogs/000709.html" title="From A Distance">a while back</a>, specifically her rendition of <i>From A Distance</i> which still soothes the ache in my heart when I hear it.
 

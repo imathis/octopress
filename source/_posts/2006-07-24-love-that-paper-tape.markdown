@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Love That Paper Tape
 date: 2006-7-24
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Having worked in the Information Technology field since it was called "data processing" I've been through several paradigm shifts. The first programs I wrote were stored on paper tape after having been coded on optical scan cards. (Yes, I'm really that "old.")
 

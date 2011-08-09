@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Forty-nine
 date: 2010-5-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 01. I started playing <a title="Cello" href="http://cello.zanshin.net" target="_self">violoncello</a> six months ago.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Veil of Tears
 date: "2004-10-31"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Thursday morning Michele woke up and immediately told me that she had a sense of dread, of foreboding. Given the lingering effects of our move to KC, apprehension over the upcoming election November 2, and fourth and final dental visit for her abscessed tooth, neither of us thought to much about it.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Flickr Photo Gallery
 date: 2009-3-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently Sibylle asked me if we could add a <a title="Elfenbein Klaviermusik Photo Gallery" href="http://sibyllekuder.com/photos.php" target="_blank">photo gallery</a> to her <a title="Elfenbein Klaviermusik" href="http://sibyllekuder.com" target="_blank">piano studio web site</a>, so that she might be able to display pictures there. I started to look at various examples but wasn't really excited about any of the templates I had found, until I read the <a title="Create a Slick Flickr Gallery with SimplePIE" href="http://net.tutsplus.com/tutorials/php/create-a-slick-flickr-gallery-with-simplepie/" target="_blank">Create a Slick Flickr Gallery with SimplePIE</a> on <a title="Nettuts" href="http://nettuts.com/" target="_blank">Nettuts.com</a>.
 

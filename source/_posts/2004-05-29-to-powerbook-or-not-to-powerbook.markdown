@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: To Powerbook or not to Powerbook
 date: 2004-5-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 An argument could be made that my Powerbook contributed to my, ah, abrupt departure from my last engagement. It was after all the base of my explorations in to TCP/IP networking, ssh, proxies, and NMap.
 

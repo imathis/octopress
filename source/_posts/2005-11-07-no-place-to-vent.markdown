@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: No Place to Vent
 date: 2005-11-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 The aspect of my relationship with Michele that is going to be the hardest to live without is the lack of a safe place to vent. We all have moments where the frustrations of the day overwhelm us and we want to lash out inappropriately in order to vent. Who among us hasn't skewered a fast-food counter clerk, or yelled at other drivers on the road, in an effort to get rid of the build up of anger, frustration, and helplessness? We all have.
 

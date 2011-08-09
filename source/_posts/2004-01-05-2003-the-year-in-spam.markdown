@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 2003, The Year in Spam
 date: 2004-1-5
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 My December spam totals are in, 7,889 for the month. This brings my 2003 total to 79,287.
 

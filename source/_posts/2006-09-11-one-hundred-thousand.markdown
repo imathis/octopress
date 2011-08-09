@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: One Hundred Thousand
 date: 2006-9-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 My current car, a 2001 Lexus LS 430, just crossed the hundred thousand mile mark. Purchased used three years ago last month, it had a mere twenty-seven thousand miles when I started driving it. That's an average of nineteen hundred miles a month, give or take.
 

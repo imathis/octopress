@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Music: Johnny Cash American IV: The Man Comes Around"
 date: 2006-3-7
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 As a boy I favored Johnny Cash records largely because he sang about trains (<i>Wreck of the Old 97</i>, <i>Orange Blossom Special</i>) and because <i>A Boy Named Sue</i> struck me as funny. For much of my life since then I haven't really followed him or his work, but hearing <i>I've Been Everywhere</i> recently got me interested in him again.
 

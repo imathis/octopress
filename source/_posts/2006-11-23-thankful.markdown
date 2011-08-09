@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Thankful
 date: "2006-11-23"
-link: false
+comments: false
 categories: life
+link: false
 ---
 On this day of thanks giving here in the US I am truly thankful. I am healthy, happy, and glad to be alive. While the past year has been filled with challenges it has also been filled with good.
 

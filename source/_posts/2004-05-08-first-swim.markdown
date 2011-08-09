@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: First Swim
 date: 2004-5-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I enjoyed our first swim of the season today. The pool water has been clearer every day since Thursday, and the air temps have been in the middle to upper eighties. I flipped the heater on Thursday morning with the water temp hovering around 66 degrees. By that evening the water was a toasty 86 degrees.
 

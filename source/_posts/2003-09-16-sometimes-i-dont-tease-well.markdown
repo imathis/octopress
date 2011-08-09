@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sometimes I Don't Tease Well
 date: 2003-9-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning I sent an e-mail to my wife about the Survivor pool here at work. She likes to participate so I picked a name out of the hat for her too. As the e-mail was written, misconstruing 'hot' for 'hat' made it sound like I thought her player was hot.
 

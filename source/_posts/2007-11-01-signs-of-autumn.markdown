@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Signs of Autumn
 date: 2007-11-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 Living in the Midwest there is one sure sign of autumn's arrival.  No, it isn't the fiery red of the leaves on the Maple trees. No, it isn't the sudden appearance of pumpkins for sale in every parking lot around town.  And it isn't frost on the car windows in the mornings.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Consumer Rights
 date: 2003-10-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 This afternoon my wife and I decided to purchase a new television set for our living room. We watch an increasing number of movies at home and wanted a bigger and better screen for viewing.
 

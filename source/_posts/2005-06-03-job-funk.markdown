@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Job Funk
 date: 2005-6-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 I've been at my current job for almost a year now. And, as much as I hate to admit it, I am getting antsy. It appears that it takes me about a year to get over the "new car smell" of a new position. The bloom is off the rose here, and I am starting to think about how a different job would get me away from this one. In the past, when I have acted while in this state of funk, and changed jobs (at great cost) only to find myself antsy in another year.
 

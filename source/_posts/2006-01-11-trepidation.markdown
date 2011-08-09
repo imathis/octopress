@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Trepidation
 date: 2006-1-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 In a few days I am scheduled to take a short trip, a mini-vacation if you will. Not counting funerals this will be the first time off and travel that I've had in over a year. Actually it has been closer to two years since I had any real vacation time. I know that the change in routine and scenery will do me good. I need to break out of the rut into which I have sunk.
 

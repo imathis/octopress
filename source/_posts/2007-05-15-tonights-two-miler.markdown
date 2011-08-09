@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tonight's Two Miler
 date: 2007-5-15
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 In keeping with my doctor's orders to exercise at least 30 minutes five times a week, I took another walk this evening.
 

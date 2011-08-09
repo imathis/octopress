@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Goo Goo G'joob
 date: "2007-11-14"
-link: false
+comments: false
 categories: life
+link: false
 ---
 While a lot of memories of my mother bring some tears with them, some are good.  Occasionally they bring a smile or laughter.  Yesterday was one of those good memory days.
 

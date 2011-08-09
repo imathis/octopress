@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Book: Heat Lightning"
 date: 2010-1-2
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 John Sandford's <em>Heat Lightning</em> is the second book with the central character Virgil Flowers.  Virgil works for the Minnesota Bureau of Criminal Apprehension for Lucas Davenport, the central character of all the <em>Prey</em> books. The first Virgil Flowers book, <em>Dark of the Moon</em>, was a little slow getting started but a good read. This second story was very good.
 

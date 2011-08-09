@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Things That Go Splat
 date: "2005-11-10"
-link: false
+comments: false
 categories: health
+link: false
 ---
 Tonight was my second karate workout since late last century. The theme was break falling, throws, and takedowns. Graceful I was not. Break falling required smoothness and body control. My mind knows what to do, but my body has forgotten the flow of it.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Gloom, Despair, and Agony
 date: "2005-10-21"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I just yelled at my cat. She was curled up in my arms, being affectionate, trying to lick my face as that is how she shows love. And I yelled at her because I couldn't get her to stop. Unfettered love, acceptance without bounds when you are trapped in the depths of despair is hard to take.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Big Dopey, Part II
 date: "2005-11-10"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 <a href="http://www.zanshin.net/blogs/000111.html" title="I am a Big Dopey">Once upon a time</a> I ran afoul of software that I had installed and forgotten about. Recently I've been making a mountain out of a molehill regarding my home network setup. Ever since we moved here I've wanted to have a network server, I just hadn't taken the time to set it up. With long evenings and weekends looming I thought this would be a good time to execute my plans.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two Plus Two Equals One
 date: 2008-2-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 As a student in American classrooms in the 1960s and 1970s I was introduced to the metric system in a failed attempt to join the world standard.  (That the United States is one of but <a href="http://upload.wikimedia.org/wikipedia/commons/1/17/Metric_system.png" title="Three countries that don't use the metric system">three countries on the planet</a> that doesn't use the metric system speaks volumes.)  Personally, I think the reason the metric system failed was making it about converting and not adopting.  Countless hours were spent in classrooms adding 32 and dividing by 5 before subtracting 32 and multiplying by 9 to know that 1 centimeter was a 100th of a meter regardless of whether it was freezing in Fahrenheit or Celsius.
 

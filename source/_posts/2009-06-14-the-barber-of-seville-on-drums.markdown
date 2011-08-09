@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Barber of Seville. On Drums.
 date: 2009-6-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 A stunning performance.
 

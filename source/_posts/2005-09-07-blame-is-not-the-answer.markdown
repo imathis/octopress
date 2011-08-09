@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Blame is NOT the Answer
 date: 2005-9-7
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 Over at "The Intellectual Activist" there's this story: <a href="http://tiadaily.com/php-bin/news/showArticle.php?id=1026" title="Unnatural Disaster: A Hurricane Exposes the Manmade Disaster of the Welfare State">Unnatural Disaster: A Hurricane Exposes the Manmade Disaster of the Welfare State</a>, purporting to explain the "real" reason behind the disaster that has become the aftermath of Hurricane Katrina.
 

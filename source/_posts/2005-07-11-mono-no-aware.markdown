@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mono no aware
 date: 2005-7-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 I ran across an interesting turn of phrase in a book I'm currently reading. The story takes place in Japan, and the prose is littered with bits of Japanese. The phrase <i>mono no aware</i> was translated as "the sadness of being human."
 

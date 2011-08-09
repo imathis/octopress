@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: OPFD
 date: 2006-1-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 I lost my temper again today. As is always the case, the straw that broke the camel's back was a minor, insignificant thing. I live in an complex of two story apartment buildings, town homes and duplexes. The local Fire Department has cited the management for allowing us all to have charcoal and gas grills on our patios. When we were first looking at apartments 18 months ago we discovered that there was a regulation prohibiting gas or charcoal grills on the deck of any apartment. Makes sense actually, having a large potential fire source on a wooden deck attached to multi-unit housing is a disaster waiting to happen.
 

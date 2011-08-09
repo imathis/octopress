@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Adobe Reader Ads
 date: 2006-3-16
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In setting up the ThinkPad one of the first pieces of software I installed was Adobe's PDF reader, now called, simply, Adobe Reader. With the proliferation of PDF files on the web and at work, having the reader installed is essential. I have a gripe, however, it displays ads in the toolbar area by default.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Getting Into The Groove
 date: 2006-6-14
-link: false
+comments: false
 categories: health
+link: false
 ---
 I am getting back into the martial arts workout groove. Muscles that were painfully sore after my first kendo workout are now only tired. The little nuances that make up and art form are starting to become apparent to me, and I am feeling my focus return as I strive to incorporate the proper stance, grip, footwork, and arm motions. In short I am starting to have fun with martial arts again.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: This Will Go On Your Permanent Record
 date: "2007-11-20"
-link: false
+comments: false
 categories: life
+link: false
 ---
 We are nearing the end of the calendar year and that means only one thing.  That's right, annual employment evaluations.  Joyous tidings to us all.
 

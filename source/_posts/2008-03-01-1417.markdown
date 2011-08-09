@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Twitter from Barack
 date: 2008-3-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 <img src="http://zanshin.net/images/barackobama.png" alt="Twitter tweet from Barack Obama" align="left" height="104" hspace="10" vspace="10" width="269" />Okay, I realize that Barack himself probably didn't thumb this message into his iPhone and send it to all of his <a href="http://twitter.com" title="Twitter">Twitter</a> followers.  Still, I'd like to think that he was involved in the process somewhere, if only to give verbal approval that the message be sent.
 

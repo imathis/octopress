@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: New Year, New Host
 date: 2008-1-2
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 At approximately 12:15 am this morning, January 2, the registration transfer I initiated last week, completed.  Along with the DNS changes I made then, this meant my site now resolved to the new server at <a href="http://bluehost.com" title="Blue Host">Blue Host</a>.
 

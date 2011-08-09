@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Out of the Blue
 date: "2005-12-12"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today, quite out of the blue, I received an offer to purchase my domain name. I've had zanshin.net registered since February 1996; i.e., this site will be ten years old in just a few weeks.
 

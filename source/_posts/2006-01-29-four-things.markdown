@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Four Things
 date: 2006-1-29
-link: false
+comments: false
 categories: meme
+link: false
 ---
 It's going around, and while I haven't been official "tagged", I thought I'd play too.
 

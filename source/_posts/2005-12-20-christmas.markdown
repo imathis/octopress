@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Christmas
 date: "2005-12-20"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I don't even know where to start about Christmas this year. I'm tempted to just say, "bah, humbug." However, that feels too much like giving up and I'm not ready to go there.
 

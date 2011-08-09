@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Movie: Godzilla"
 date: 2006-2-27
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Okay, so <a href="http://imdb.com/title/tt0120685/" title="Godzilla">Godzilla</a> is a bit campy, entirely predictable, and left wide open for a sequel; it's still a fun movie ride. Matthew Broderick's off-beat everyman comedy is a perfect foil to the larger than life monster.
 

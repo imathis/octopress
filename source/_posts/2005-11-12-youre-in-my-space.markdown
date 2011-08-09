@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: You're In My Space
 date: "2005-11-12"
-link: false
+comments: false
 categories: life
+link: false
 ---
 This weekend marks a full calendar month since Michele died. It is hard to believe that she has been gone that long. There are times when it feels like she just died, times when I don't believe she is gone and I expect her to be here, and times when it feels like forever since I last heard her voice, or touched her.
 

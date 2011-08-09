@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Ends Never Justify The Means
 date: 2008-7-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 Vanity Fair is running a chilling, sobering article by Christopher Hitchens on the subject of waterboarding, called "<a title="Believe Me, It's Torture" href="http://www.vanityfair.com/politics/features/2008/08/hitchens200808?currentPage=1">Believe Me, It's Torture</a>." In short, it's torture.  In it, he quotes Malcom Nance's denunciation of waterboarding,
 <blockquote>1. Waterboarding is a deliberate torture technique and has been prosecuted as such by our judicial arm when perpetrated by others.

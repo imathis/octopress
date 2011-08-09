@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: And So It Goes...
 date: 2006-2-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 This evening, right after I arrived home, my father called to fill me in on my mother's condition. Almost 14 months after the initial tumor was discovered in her lung, and after it responded so quickly to the chemotherapy and radiation treatments, her breathing was short and labored again. In short the cancer has returned. One lung has collapsed and they aspirated a quart of fluid from that lung and the surrounding chest area. Her medical oncologist indicated that no amount of treatment is going to stop this cancer, all he can provide is some relief. Left untreated he felt she would live for perhaps two months. With once a week treatments no one knows what her life expectancy will be.
 

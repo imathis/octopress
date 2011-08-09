@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Dreaming While I Sleep
 date: 2006-1-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently I have noticed an increase in my nighttime dream activity. This is not to say that I am dreaming more, I am just more aware of the dreams I have. I'm still not remembering them, but they are now waking me up fairly regularly. These aren't nightmares; I'm not waking up screaming or anything. But they are disrupting my sleep.
 

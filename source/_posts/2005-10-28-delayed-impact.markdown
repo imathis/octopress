@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Delayed Impact
 date: "2005-10-28"
-link: false
+comments: false
 categories: life
+link: false
 ---
 On Monday it will be three weeks since Michele died. Just twenty-one days chronologically but a lifetime for me. The first week I numbly moved through the activities of notifying friends and family, arranging her memorial service, and existing.
 

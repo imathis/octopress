@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: An Open Letter To GoComics
 date: 2009-2-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 To Whom It May Concern:
 

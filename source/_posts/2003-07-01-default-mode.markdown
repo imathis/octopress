@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Default Mode
 date: 2003-7-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 I understand that my default mode, if you will, is depression. I have to actively work at being not depressed. At times this is easy and at other times it is extremely difficult. Lately I have had a hard time staying just mildly depressed, I have been slipping in to deeper and deeper levels of helplessness and in activity.
 

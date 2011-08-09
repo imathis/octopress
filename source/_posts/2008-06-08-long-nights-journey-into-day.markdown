@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Long Night's Journey Into Day
 date: 2008-6-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Nekko's condition, after seeming to stabilize Wednesday and Thursday, started to diminish on Friday.  She stopped eating and was more and more listless through out the day.  By Saturday morning we were concerned that she wasn't eating, and had, apparently, not moved her bowels in a couple of days.  At the recommendation of our vet we went to a near by pet store and got some natural, grain-free cat food hoping to entice Nekko to eat.  She would only sniff the food; she wasn't interested in eating.
 

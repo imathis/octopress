@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: All Your Computer Are Belong To Us
 date: 2006-2-2
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In the three years I've been using a Macintosh as my primary personal computer I never bother to run anti-virus software. And in hundreds of hours online, with thousands of files downloaded I've never had a problem. Having an operating system that is significantly harder to crack and, that just isn't a target of the pond scum who create viruses, was one of the major reasons for getting the Powerbook in the first place.
 

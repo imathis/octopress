@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Upturn
 date: 2005-5-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently I updated my resumes on <a href="http://monster.com" title="monster.com">Monster</a> and <a href="http://dice.com" title="dice.com">Dice</a>. I had been very active on these two sites last spring during the 100 days I was out of work, but I had ignored them entirely since starting here in July 2004.
 

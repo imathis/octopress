@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Abu Ghriab and Me
 date: "2004-11-20"
-link: false
+comments: false
 categories: life
+link: false
 ---
 You never fully appreciate just how interconnected we all are until some event on the world stage impacts your life. Take the  Abu Ghraib prison scandal for example. As a program manager in the information technology field, working in Kansas, you wouldn't expect my life to be directly impacted by heinous human rights violations half way around the planet. But, as it turns out, my life was impacted by that scandal.
 

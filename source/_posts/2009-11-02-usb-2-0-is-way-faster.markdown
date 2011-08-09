@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: USB 2.0 is Way Faster
 date: 2009-11-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the last things to transfer to the new MacBook Pro was my iPod. I've got a 30 GB 5th Generation iPod that is nearly full; at last synchronization it only had 912 MB free.
 

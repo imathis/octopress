@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Crash Test Dummy
 date: "2005-11-28"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the weekend I visited the body shop recommended by Lexus and received an estimate to repair the front bumper. As it turns out, the bracket that holds the destroyed fog lamp in place is part of the bumper, and since it was snapped off in the accident, there is no way to replace just the light.
 

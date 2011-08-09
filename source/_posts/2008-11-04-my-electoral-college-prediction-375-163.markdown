@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "My Electoral College Prediction: 375-163"
 date: 2008-11-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 For what it is worth, I predict that Barack Hussein Obama will become the 44th President of the United States of America shortly before midnight (Central Time) with an Electoral College vote of 375-163.
 

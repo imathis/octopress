@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Eeyore Gets A New Tail
 date: 2003-7-31
-link: false
+comments: false
 categories: life
+link: false
 ---
 My Powerbook, affectionately known as Eeyore developed a nasty problem with its CD-RW/DVD drive late last week. On Thursday I was burning a series of CD-RWs, transferring a Red Hat distribution I had downloaded to disk. The first 4 burns when perfectly. The fifth stopped about a third of the way into the burn with an error. At the time I thought it was just a bad CD-RW.
 

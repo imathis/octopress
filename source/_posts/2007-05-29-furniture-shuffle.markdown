@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Furniture Shuffle
 date: 2007-5-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the weekend we spent a fair amount of time rearranging the furniture.  There were two goals in mind.  First a shared desk/office space with room for various computers, printers, camera USB cords, pencils, scraps of paper, and good luck Buddha's.  Oh, and two people.  Over the winter of 1992-1993 I built a wooden desk reminiscent of the teacher's desks the public school system placed in all my childhood classrooms.  By turning it ninety degrees and using a couple of TV trays as a printer stand we were able to fit all our computer stuff on the desk.  She sits on one side and I the other.  So far it is working out extremely well.  The timeless design of the wooden teachers desk has proven to be incredibly versatile.
 

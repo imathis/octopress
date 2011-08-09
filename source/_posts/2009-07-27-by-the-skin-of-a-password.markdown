@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: By The Skin of a Password
 date: 2009-7-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 Six, almost seven, years ago, I purchased two Apple computers using an "Apple Loan." Originally this was backed by MBNA, but they've long since been purchased by Bank of America. B of A implemented a number of security measures for their online banking, including a visual "site pass" image that I got to select and that should always be present when I sign in. I often times chafe at the security measures employed in the name of account security, but I recognize they are a necessary evil.
 

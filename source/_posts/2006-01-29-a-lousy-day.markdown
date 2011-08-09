@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Lousy Day
 date: 2006-1-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today has all the earmarkings of a lousy day. I was awake at 12:30, 2:30, 4:30 and finally 5:40 this morning. A series of two hour naps does not make for a good night's sleep. Being awake at 5:30 on a Sunday morning really sucks. There's nothing to do except sit around and wait for it to be 8:30 or 9:00 in the evening so you can lay down for another series of two hour naps.
 

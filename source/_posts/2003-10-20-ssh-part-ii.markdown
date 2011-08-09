@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: ssh, part II
 date: "2003-10-20"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 <a href="http://zanshin.net/blogs/000232.html">Once upon a time</a> I wrote about using ssh to connect to a server outside of the restrictive environment at my primary client site. Since that time I have been happily connecting from my laptop, which isn't logged into the LAN, to my NT workstation, which is logged in, and from the NT workstation to a server out in the wilds of the internet.
 

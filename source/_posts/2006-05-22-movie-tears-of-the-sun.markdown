@@ -1,9 +1,9 @@
 --- 
 layout: post
-comments: false
 title: "Movie: Tears of the Sun"
 date: 2006-5-22
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Rating: Maybe Bruce Willis' best movie

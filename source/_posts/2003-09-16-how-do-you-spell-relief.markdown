@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How Do You Spell Relief?
 date: 2003-9-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 This evening, in my inbox, there was an email notification of some new postings on the Illinois state procurement web site. I pointed my browser at the site and started down through the list of posting. Second from the end was DHS, my client agency.
 

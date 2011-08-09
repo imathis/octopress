@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Moveable Type
 date: 2002-7-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 After not a little work, I've managed to convert my web site to a content management system called 'Moveable Type'. It is freely available at <a href="http://www.moveabletype.org">moveabletype.org</a>. If you maintain a blog, or would like to, I can highly recommend it.
 

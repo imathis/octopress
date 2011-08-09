@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Question of Faith
 date: 2006-5-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last night as a result of the suicide survivor's group I'm attending, I came to a new understanding about faith. Or perhaps I should say the beliefs that sustain or hinder a person's faith. For much of my life I have struggled with what I now call dogmatic religious beliefs. I've never been one to accept things merely at face value, especially if there was no supporting argument except for, "you just have to believe.'
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Hernia That Wasn't
 date: 2004-3-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the summer of 2000 I noticed that I had a slight protrusion in the upper rim of my belly button. Gradually it grew in size until it was about the size of a dime, and stuck out about half the diameter of a dime. When pushed with a finger it would recede for a time, only to reappear later.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Visitors by Browser
 date: 2004-9-27
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 The image seen below is taken from my <a href="http://shortstat.shauninman.com" title="ShortStat">ShortStat</a> page. It is the list of browsers that have visited my humble page in the past two weeks or so. All the browsers version are included here, i.e. each row is a summary row by browser type. The version shown is the highest version seen.
 

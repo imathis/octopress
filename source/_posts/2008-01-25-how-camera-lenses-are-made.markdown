@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How Camera Lenses Are Made
 date: 2008-1-25
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 Excellent video of the process used to make a camera lens assembly.  Makes you want to run out a buy a SLR camera and some lenses right away.
 

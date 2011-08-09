@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: WordPress iPad App
 date: 2011-1-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 With an iPad at my disposal I have been exploring some of the available applications. Apple is quick to tout the number of apps available from the App Store, but as it turns out, quantity isn't the same as quality.
 

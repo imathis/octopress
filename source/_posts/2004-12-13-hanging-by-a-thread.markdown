@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Hanging by a Thread
 date: "2004-12-13"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I feel as if my future and my life is hanging by a thread today. After months of waiting and hoping, it appears that I maybe given an opportunity to return to Illinois and work on a contract there. This would allow us to retain our house, and the considerable financial investment it represents. It also gets us out of the stressful situation of living in an apartment. Neither of us is thriving in the closed, dark, intrusive atmosphere of community living.
 

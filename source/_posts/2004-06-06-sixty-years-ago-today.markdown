@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sixty Years Ago Today
 date: 2004-6-6
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 <img src="http://zanshin.net/images/dday.gif" alt="D-Day">
 

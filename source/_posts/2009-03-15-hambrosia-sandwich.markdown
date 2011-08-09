@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Hambrosia Sandwich
 date: 2009-3-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 You'll need a slice of your favorite bread, with just a smear of mayonnaise on it, perhaps 2 or 3 tablespoons of crushed pineapple, and about an equal amount of your favorite cheese, shredded, and a 2 or 3 ounce slice of ham cut into strips.
 

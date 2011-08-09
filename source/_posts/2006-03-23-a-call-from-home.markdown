@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Call From Home
 date: 2006-3-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last evening I had a call from my mother. She had been to her weekly chemotherapy appointment and wanted to give me an update on her condition. During the course of the appointment her doctor, who by all accounts seems like a caring and concerned individual, and whom my mother clearly trusts implicitly, asked her if she had informed her family about her condition and the fact that it is terminal. That she has isn't really the point, the point is that he wants to make her aware that time is running out for such things.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Not Again
 date: 2004-8-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 This afternoon as I was leaving work, I met two of my new coworkers headed back into the building. We stopped and visited for a moment. They had just gotten a call from the president of the company we all work for on this engagement. Their contracts are being ended in two weeks.
 

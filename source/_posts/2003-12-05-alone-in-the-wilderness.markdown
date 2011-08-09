@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Alone in the Wilderness
 date: 2003-12-5
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 This week I finally got and installed an Apple Airport card. My Powerbook now sports 802.11b connectivity. Only I haven't found any open access points. For that matter I haven't found any access points at all.
 

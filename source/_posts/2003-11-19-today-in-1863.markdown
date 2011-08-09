@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Today, in 1863
 date: "2003-11-19"
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 Gettysburg Address
 by Abraham Lincoln

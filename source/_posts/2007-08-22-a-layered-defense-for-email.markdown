@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Layered Defense for Email
 date: 2007-8-22
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 A couple of years ago I was introduced to a spam filtering technique by a colleague of mine.  The idea has been percolating in the recesses of my mind ever since and I have finally put it into practice.  In short it is a layered defense.
 

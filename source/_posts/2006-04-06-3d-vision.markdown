@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 3D Vision
 date: 2006-4-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 Now that I have eyes that see at two non-intersecting focal lengths I've discovered a neat (if strange) visual trick. Those of you without mono-vision will just have to image the effect. For the rest of you here's how to see your very own 3D images without the colored paper glasses.
 

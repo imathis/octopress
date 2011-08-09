@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Brand New Car. Sorta
 date: 2007-6-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 I bought a car yesterday.  Actually I bought <i>my</i> car again yesterday.  It's a long story.
 

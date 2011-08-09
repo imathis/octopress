@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Whacking Things With Sticks
 date: 2006-5-20
-link: false
+comments: false
 categories: health
+link: false
 ---
 This morning was my first full kendo workout, and basically the first workout I've had in months. Last November I took a run at restarting karate only to falter and stop after just two workouts. While the pain in my knees and back from not having been physical for so long certainly played a part in my stopping, realizing the distance I'd fallen in eight years of inactivity was harder to take.
 

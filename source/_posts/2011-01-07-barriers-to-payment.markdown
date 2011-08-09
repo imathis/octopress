@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Barriers to Payment
 date: 2011-1-7
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In his seminal 1970 book, <em><a title="Up The Organization" href="&lt;a href=&quot;http://www.amazon.com/gp/product/0787987751?ie=UTF8&amp;tag=zanshinnet&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0787987751&quot;&gt;Up the Organization&lt;/a&gt;" target="_blank">Up The Organization</a></em>, Robert Townsend outlined many good ideas for how to better run a corporation. One that always stuck with me was his idea of calling yourself at work to see what barriers had been erected to prevent people from getting through.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Practice, Practice, Practice
 date: 2006-7-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 Through my martial arts background I learned the axiom, "Practice does not make perfect. Practice only makes permanent. Perfect practice makes perfect."
 

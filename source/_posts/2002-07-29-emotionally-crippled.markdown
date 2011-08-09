@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Emotionally Crippled
 date: 2002-7-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 I grew up in a house that was predominately intellectual. Issues were resolved through discussion and reason; emotions rarely ever played a part. And when emotions did present themselves they were attacked. My family had two responses to emotional expression during my childhood: anger or Band-Aids. Either my parents would get angry with me for expressing an emotion, or they would try to take away the emotion so that I wouldn't have to deal with it. Neither of these responses allowed me the opportunity to develop normal emotional responses to situations. Either I was afraid that I would get in trouble for having the emotion, or my parents would be so over concerned that I was emotional that they would try and fix what ever and not hear that all I needed was a chance to express how I felt. I grew to be afraid to express even those narrow acceptable emotions for fear of parental teasing. Showing emotions was a weakness to be avoided at all costs.
 

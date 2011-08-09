@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: This is Just Sad
 date: "2002-12-10"
-link: false
+comments: false
 categories: life
+link: false
 ---
 My wife and I are taking a trip to Hawaii later this month. This will be my first trip there and her second. We are taking a 7-day cruise through the islands to celebrate her birthday, our 5th wedding anniversary, and Christmas.
 

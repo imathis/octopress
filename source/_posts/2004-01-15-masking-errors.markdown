@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Masking errors
 date: 2004-1-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning I spent an hour or so installing a new wireless router to replace the wired router we have been using since February 2000. The process seemed simple on the surface; unplug the CAT-5 cords and power supply from the old router and drop the new one into place. Access the build in web accessible configuration and we're surfing the Internet wirelessly.
 

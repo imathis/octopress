@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Separation Anxiety
 date: 2005-9-19
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 For the past couple of weeks I have been struggling with an issue that has been moving just under the surface of my life for many years now. Over the Labor Day holiday it came boiling to the surface and rather then force it under water again I have decided to rid myself of it once and for all. In short I have come to the realization that the relationship I have with my immediate family is toxic to me, that I have no mechanism for moving the relationship towards anything that would be less toxic, and that I need to distance myself from them literally and figuratively so that I can heal myself.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Comment Wars
 date: 2008-4-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 Zanshin.net is just a speck of lint under a finger nail on the long arm of the Internet.  As a weblog it gets few visitors, and even fewer comments.  While the domain has existed for over 11 years now, the site has been formatted as a blog only since December 1999.  I have no accurate, end-to-end accounting for the total number of site visits or page views, but I can make some guesses. 
 

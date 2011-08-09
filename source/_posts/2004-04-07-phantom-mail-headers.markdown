@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Phantom Mail Headers
 date: 2004-4-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 For some time now I have noticed that when I downloaded my e-mail I was seeing higher counts in the status bar than I was new messages in my inbox. When I first noticed the problem, one of my mail accounts was claiming to download 61 messages more than I was actually getting.
 

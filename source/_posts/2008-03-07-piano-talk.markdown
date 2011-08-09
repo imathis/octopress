@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Piano Talk
 date: 2008-3-7
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Last evening Sibylle and I attended a piano recital at Park University in Parkville, Missouri.  The recital was part of a three-day piano festival that the university's International School of Music is hosting this week.  Sibylle had spent the afternoon attending a piano master class, and after dinner out, we returned to the campus for the recital.
 

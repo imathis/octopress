@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Slippery Slope
 date: 2004-3-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 I feel as if my life is on a slippery slope to nowhere and gaining speed. I grew up thinking that my working career would mirror my father's, and that my retirement would be earned along the way. I see now that retirement is something that will be denied me, just as a stable job has been.
 

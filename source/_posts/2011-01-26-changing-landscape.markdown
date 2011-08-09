@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Changing Landscape
 date: 2011-1-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 Several of the lots around us aren't developed yet, so we have been enjoying a sense of space, and sight-lines that will, one day soon, be obstructed. We knew this intellectually, but now that one of the vacant lots is being developed we are faced with the reality of a house in "our" backyard.
 

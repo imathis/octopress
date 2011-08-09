@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Back Home Again
 date: "2003-11-28"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I have returned from our Thanksgiving trip to the Outer Banks. We had a good visit with her mom, Virginia, and a good trip overall. Driving 2200 miles in less than 5 days is not a treat, but we took good care of ourselves by forcing an overnight stay mid-way through rather than doing a forced march to complete the drive all at once.
 

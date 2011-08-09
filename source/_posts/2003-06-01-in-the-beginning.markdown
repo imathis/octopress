@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: In the Beginning...
 date: 2003-6-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 My first experience with a computer was in the winter of 1978, using a thermal paper terminal, an acoustic coupler (at 300 BAUD!), and time share on a local mainframe computer.
 

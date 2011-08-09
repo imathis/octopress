@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Public Hygiene
 date: 2006-3-3
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Like all office buildings, the one where I work sports a selection of restrooms. Being male I am subjected to the often times curious, often times crude habits of my fellow man in this hallowed space. The comedian Elaine Boosler had a line in her act that went something like, "Men are just bears with furniture. [In the bathroom] it seems they are happy as long as they hit something." This is a frighteningly true statement.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Lexus Link System Is ... Gone
 date: 2006-7-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 The current car I own (euphemism for the bank owns but lets me insure, maintain, and fill with gas, all for a low, low monthly price) is a high end Lexus. We lucked into the car used one Saturday afternoon and were able to put together a two-for-one trade getting us out of a usury lease on the Audi TT, and upgrading our ES 300 to an LS 430. It's a beautiful car with lots of power and comfort. Quite frankly it's hard to even think about other cars after driving this one for a few years.
 

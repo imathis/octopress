@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Now What?
 date: 2006-4-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 In moments of lucidity, brief moments of calm snatched from between bouts of crying and rage, I wonder what happens next. Where does my life go from here? Will I become an eccentric old man who carefully observes the routines that allow him to navigate the endless cycle of weeks until his death? Or will I reinvent myself as an eligible, slightly tragic figure of a man, who is perhaps attractive to someone, and end up with a new relationship?
 

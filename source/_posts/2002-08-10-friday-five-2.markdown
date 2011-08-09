@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Friday Five
 date: 2002-8-10
-link: false
+comments: false
 categories: meme
+link: false
 ---
 1. Do you have a car? If so, what kind of car is it? We have two cars, a 2000 Lexus ES 300, and a 2001 Audi TT.
 

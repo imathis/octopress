@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Party Down
 date: 2006-7-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 I attended a 4th of July cookout this afternoon and evening; the first of two I was invited to this year. I must admit it is nice to have a circle of friends and to be included in social events. I try very hard to stay in the moment and to enjoy the company of friends, but it is hard sometimes not to be envious of what I don't currently have.
 

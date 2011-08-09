@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Different Yet the Same
 date: 2003-3-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last night my sweetheart and I talked about our different approaches to using computers. I am a born geek who lives and breathes technology. I am willing to experiment with new software and hardware just to see what it does, and I expect and welcome the challenge when I "break" something along the way. Michele wants her computer to enable her creativity and to provide the means to accomplish her goals in life. At times I hear a simple request and make it a arduous ordeal of trial and error. I enjoy the search for answers and solutions to problems. She just wants to copy VHS tapes to DVD.
 

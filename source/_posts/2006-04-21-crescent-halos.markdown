@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Crescent Halos
 date: 2006-4-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last evening I took a short stroll around my apartment complex, mostly to burn off some nervous energy. At some point during my walk I glanced up at the night sky and discovered that the stars no longer have full-circle halos around them. Instead there is more of a crescent shaped halo.
 

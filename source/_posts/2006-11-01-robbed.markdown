@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Robbed
 date: 2006-11-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 Upon arriving at home yesterday at around quarter of five I discovered that I had been robbed.
 

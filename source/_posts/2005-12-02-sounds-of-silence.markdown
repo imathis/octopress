@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sounds of Silence
 date: 2005-12-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 The silence in my life is the hardest thing to deal with now. Coming back to the apartment from work or the movies or dinner out is coming back to a place of silence. And in that silence all I can hear are my own fears, thoughts, questions, musings, screams, whispers, and silence.
 

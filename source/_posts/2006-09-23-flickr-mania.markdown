@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Flickr Mania
 date: 2006-9-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 I've had a <a href="http://flickr.com" title="Flickr">Flickr</a> account for some time now, and occasionally upload a picture or three there. Thanks to the generosity of a very special someone ( ;) ) I now have a pro account and can upload 2GB a month.
 

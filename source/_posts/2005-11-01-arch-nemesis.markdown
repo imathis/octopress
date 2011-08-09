@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Arch Nemesis
 date: 2005-11-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 A <a href="http://www.zanshin.net/blogs/000609.html" title="MCL">while back</a> I saw a knee surgeon regarding my knees. Both hurt from time to time and produce a crackling sound when moved through a normal range of motion. Since then I have been following a regimen of Aleve (2 at a time, twice a day) to reduce inflammation, and liquid Glucosamine (2 tablespoons twice a day) which has eliminated nearly all my pain. Now my knees only hurt once in a while.
 

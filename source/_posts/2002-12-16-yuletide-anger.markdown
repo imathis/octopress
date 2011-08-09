@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Yuletide Anger
 date: "2002-12-16"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I had a bit of shopping rage today. I needed to run out to the local Best Buy and get a Y-cable and some rechargeable batteries for my MP3 player. The Y-Cable allows two headphones to be plugged in at one time, and the batteries are, well, batteries.
 

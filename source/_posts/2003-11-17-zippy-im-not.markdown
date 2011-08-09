@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Zippy I'm Not
 date: "2003-11-17"
-link: false
+comments: false
 categories: life
+link: false
 ---
 It would seem that I've come down with a mild cold. Two weekends ago we visited my brother and his family for the day. His youngest, Alyx, spent a large portion of the afternoon asleep on me. Later that evening her mom, Lisa, wondered out loud if maybe Alyx was coming down with something.
 

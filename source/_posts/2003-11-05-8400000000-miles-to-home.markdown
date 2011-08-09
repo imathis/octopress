@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 8,400,000,000 Miles To Home
 date: 2003-11-5
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 <a href="http://www.cnn.com">CNN</a> is <a href="http://www.cnn.com/2003/TECH/space/11/05/voyager.solar.boundary.ap/index.html">reporting</a> that Voyager 1 has left the solar system.
 

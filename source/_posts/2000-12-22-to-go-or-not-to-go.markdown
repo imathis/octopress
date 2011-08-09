@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: To Go or Not To Go
 date: "2000-12-22"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today is the last work day before the Christmas holiday. Originally I had planned on working a full day, 8-5.          I am taking an extra day off after Christmas that my client doesn't. So I've got a nice 4-day weekend for the          holiday in front of me.
 

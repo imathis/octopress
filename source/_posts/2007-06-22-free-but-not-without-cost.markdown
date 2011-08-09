@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Free, But Not Without Cost
 date: 2007-6-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 I was hoping to write today about finding a cure for my Yahoo Messenger ills.  The latest and greatest instant messenger client from Y! refuses to stay connected for more than about 10 minutes.  It drops connectivity in the middle of chats, file transfers, and when it is just idle.  Repeated forays into the support forum world haven't been helpful other than revealing others with the same issue.  One posting (which I should have bookmarked) purported from Y! itself suggested that using a third-party client might solve the issue.  It is pretty sad when a major software producer creates a standard or protocol and then their own software can't utilize it without blowing up.
 

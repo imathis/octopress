@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Carryout
 date: 2007-12-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 Once in a while, Sibylle and I will order take out from the nearby steakhouse and eat at home.  By ordering out we get to avoid the crush of people waiting 30 to 45" minutes for a table, and we save some money too.  Neither of us needs or wants to eat an entire 9 ounce steak, so we split one, with a couple of side dishes, to make a perfect meal at home.
 

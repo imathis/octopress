@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Random, And Not Repetitive
 date: 2008-4-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 In <a title="Random Is As Random Does" href="http://zanshin.net/2007/07/18/random-is-as-random-does/">Random Is As Random Does</a>, I talked about how I configured some smart playlists in iTunes to provide a better random sample of the music I most wanted to hear from my MP3 collection.  Basically I created smart playlists for the least played tracks, the least recently played tracks, the most played tracks, the most recently played tracks, and random tracks that weren't already part of the first four playlists.  These five playlists are combined into one massive list, and that list is in turn filtered through the list I spend the most time listening to; one that grabs only 25 tracks at random provided they haven't been played in the last 3 weeks.
 

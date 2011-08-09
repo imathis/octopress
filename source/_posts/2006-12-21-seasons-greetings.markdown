@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Seasons Greetings!
 date: "2006-12-21"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Please accept with no obligation, implied or implicit, our best wishes for an environmentally conscious, socially responsible, low-stress, non-addictive, gender-neutral celebration of the winter solstice holiday, practiced within the most enjoyable traditions of the religious persuasion of your choice, or secular practices of your choice, with respect for the religious/secular persuasion and/or traditions of others, or their choice not to practice religious or secular traditions at all.
 

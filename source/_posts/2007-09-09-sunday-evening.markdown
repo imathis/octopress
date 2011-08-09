@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sunday Evening
 date: 2007-9-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the winter, Sibylle and I fell into the habit of having take-out Chinese food for dinner on Sunday evenings.  There were a couple of very good restaurants near the apartment (one in particular was excellent) that we could call and, in ten minutes or so, have piping hot Honey glazed chicken and wok roasted chicken to eat.  We almost always combined this with a movie on DVD to create what we call "dinner and a movie."
 

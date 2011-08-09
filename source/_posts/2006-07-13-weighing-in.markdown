@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Weighing In
 date: 2006-7-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Due to a great $10 a month offer I joined the nearby fitness club earlier this week.  Tonight I had my introductory session with one of their trainers and learned about the resistance training machines and how to utilize them for my goals. The trick now will be balancing the kendo workouts with the circuit training so that I don't over tax myself.
 

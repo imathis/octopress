@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Google Rocks
 date: 2006-6-7
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Earlier today I added a new calendar entry to my Google Calendar; in the location field I put just the name of the eye surgery (LasikPlus), no address. Later I went back to the calendar entry and noticed there was a 'map' link available. I thought to myself, "no way."
 

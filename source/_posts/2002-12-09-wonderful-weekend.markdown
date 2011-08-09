@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Wonderful Weekend
 date: 2002-12-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I had a perfectly wonderful weekend. On Saturday we drove up to Normal and visited my brother and his family for an early Christmas. Since we won't be in town for the actual day we decided to meet and share our present early. On the way we stopped at the only Vietnamese restaurant in central Illinois for a bowl of beef noodle soup. Our lunch was fantastic, and our time together with my brother's family was relaxed and very enjoyable.
 

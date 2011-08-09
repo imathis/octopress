@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Release
 date: 2006-6-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the first time since my mom died I truly cried last night. Once I was started it was hard to stop, and as I sobbed I could feel the tension that has been with me for weeks now relaxing. Afterwards I was totally spent and exhausted. It was as cathartic a cry as I've had in a long time.
 

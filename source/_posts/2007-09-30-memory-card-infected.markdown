@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Memory Card Infected
 date: 2007-9-30
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For our trip to Germany, Sibylle and I discussed at length whether or not to take a laptop computer with us.  We were concerned about weight, space, and possible theft or damage.  In the end we decided to go without a computer and trust to finding an Internet cafe for our needs.
 

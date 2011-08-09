@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Beauty in Destruction
 date: 2011-6-9
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 There is something strangely beautiful about building implosions.
 

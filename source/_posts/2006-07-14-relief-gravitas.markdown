@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Relief Gravitas
 date: 2006-7-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 About fifteen months after we were married, Michele became ill. The illness itself isn't important, the fact it was debilitating, potentially embarrassing, and chronic is important. This illness plagued her until the day she died.
 

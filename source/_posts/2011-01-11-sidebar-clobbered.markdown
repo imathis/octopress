@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sidebar Clobbered
 date: 2011-1-11
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Yesterday I experimented briefly with a new theme for my site. Unfortunately it clobbered my sidebar, and when I restored my usual theme most of the widgets there were destroyed.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Abby Normal
 date: 2003-2-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 We have a 9-year old Tabby cat named Abby Normal, that my wife got as a kitten in Tampa. Abby is a beautiful tiger tabby with golden eyes and long whiskers. She was an only cat until 6 years ago when we acquired our second tabby, Nekko. Abby grudgingly accepted the interloper and now they are fast friends.
 

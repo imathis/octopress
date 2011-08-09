@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: It's About Time...
 date: "2005-12-27"
-link: false
+comments: false
 categories: life
+link: false
 ---
 From <a href="http://alternet.org" title="AlterNet">AlterNet</a> comes this:
 

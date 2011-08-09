@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Cost of Being Obsolete
 date: "2005-10-31"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the weekend I rearranged the furniture in the apartment. The new setting requires that both primary computers (the Powerbook and the iMac) connect to the LAN wirelessly. The Powerbook has had an Airport card for some time <a href="http://www.zanshin.net/blogs/000326.html" title="Alone In the Wilderness">now</a>, but the iMac has always been hard wired.
 

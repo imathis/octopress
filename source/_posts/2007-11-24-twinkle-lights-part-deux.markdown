@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Twinkle Lights, Part Deux
 date: "2007-11-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning, in a lightly falling snow, I took the Jimmy over to the nearest GMC dealer to have the flickering lights diagnosed.  On the way, just to reenforce that the Jimmy needed attention, all the lights and gauges not only flickered, they went on and off several times.
 

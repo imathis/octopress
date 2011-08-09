@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What's Up, Dock
 date: 2003-10-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 O'Reilly is running an <a href="http://www.macdevcenter.com/pub/a/mac/2003/09/30/dock.html">article</a> about the contents of various peoples docks. Being a switcher from Windows I tend to think of the dock as a the task bar. I keep my most frequently used applications and folders there, and in order from most used to least, left to right. I have slight magnification and bounce turned on, and the dock is at the bottom of the screen.
 

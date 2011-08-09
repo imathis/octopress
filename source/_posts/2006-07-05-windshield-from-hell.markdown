@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Windshield From Hell
 date: 2006-7-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 The saga of my windshield continues. Yesterday morning we had intermittent showers while I was out having breakfast and buying groceries and the automatic rain sensor failed to work properly.
 

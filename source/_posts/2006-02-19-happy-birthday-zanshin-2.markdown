@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Happy Birthday Zanshin
 date: 2006-2-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 The Network Solutions domain record for zanshin.net shows that it was originally registered on February 20, 1996 - ten years ago. Here's a list of things from the last ten years in honor of the occasion.
 <ul>

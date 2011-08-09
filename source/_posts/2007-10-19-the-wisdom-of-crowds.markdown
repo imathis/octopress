@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Wisdom of Crowds
 date: "2007-10-19"
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 <a href="http://karmatics.com/docs/evolution-and-wisdom-of-crowds.html" title="Evolution and The Wisdom of Crowds">Evolution and the Wisdom of Crowds</a> is a fascinating look at how the process of selection works behind the scenes to make predictive models work.  The author uses Wikipedia, predictive markets, and Netflix's recommendation system as examples of processes relying upon selection to work, producing results that are counter-intuitive.
 

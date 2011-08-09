@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: July Spam
 date: 2003-8-11
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I finally got around to deleting my accumulated spam from the month of July. Last month I did this on the 1st, and a few more pieces dated in June trickled in after the purge.
 

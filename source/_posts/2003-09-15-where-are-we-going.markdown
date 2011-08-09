@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Where Are We Going?
 date: 2003-9-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I had a excellent discussion this evening. It started out being about our upcoming mortgage refinance. Both of us are feeling a little apprehensive about this and we needed to air out our feelings. This is only the third mortgage process we have been through.
 

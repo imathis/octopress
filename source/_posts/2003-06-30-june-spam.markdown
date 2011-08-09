@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: June Spam
 date: 2003-6-30
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In a previous version of this site I used to have a counter showing the number of spam I'd received since January 1st each year. I grew tired of having to update it every few days and took it off the menu on this site design.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Facebook Farewell
 date: 2007-12-2
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 About three months ago, through one of Sibylle's sons, I was introduced to Facebook.  I am not the social network type, but it was interesting to be involved in something that was so popular.  Unfortunately, as recent <a href="http://bits.blogs.nytimes.com/2007/11/30/coke-is-holding-off-on-sipping-facebooks-beacon/" title="Coke and Facebook's Beacon">stories</a> <a href="http://us.blognation.com/2007/12/01/im-ready-to-bail-on-facebook-the-new-face-of-evil/" title="Facebook is the new face of evil">have</a> <a href="http://www.zeldman.com/2007/11/28/facebook-privacy/" title="Facebook Privacy">shown</a>, Facebook is perhaps not the safest place to have a digital representation of oneself.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Returning to the Mats
 date: "2005-10-31"
-link: false
+comments: false
 categories: health
+link: false
 ---
 The name for this site, <em>zanshin</em> is used in the martial arts, which is where I learned it. I studied karate-do for almost 9 years achieving the rank of nidan before I stopped physically practicing. Cross country moves, new jobs, and a delight in my marriage gave me higher priority activities than the regular practice of kata, kihon, and kumite.
 

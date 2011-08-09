@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: My URL ABCs
 date: 2005-4-29
-link: false
+comments: false
 categories: meme
+link: false
 ---
 As seen on <a href="http://www.blueplaidshirt.com/archives/000403.html" title="Blue Plaid Shirt">Blue Plaid Shirt</a>, these are my URL ABCs:
 

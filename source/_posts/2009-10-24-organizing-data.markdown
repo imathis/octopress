@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Organizing Data
 date: "2009-10-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Now that I have most of the software I use on a recurring basis installed on the MacBook Pro, it is time to start addressing my data. Pictures and music were the low-hanging fruit, and have already been transferred. (Although I am considering deleting all the pictures and re-transferring them via the Migration Assistant. Doing it manually certainly worked, but the folder hierarchy I had before was lost. I really don't want to recreate it and re-sort thousands of images.)
 

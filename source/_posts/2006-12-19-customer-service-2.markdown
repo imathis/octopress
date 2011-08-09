@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Customer Service
 date: "2006-12-19"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today I had occasion to call the customer service number for Select Comfort, the "sleep number bed" people. My bed is now eight years old and the foam border walls, as well as the center foam piece are a bit compressed. I wanted to find out how much a replacement set would be, so I could either order a set or start saving money for a set.
 

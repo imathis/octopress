@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mono Vision
 date: 2006-7-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 The follow-up procedure I had to correct the vision setting in my right eye on Friday continues to be a success. As I learned the first time through the recovery process it will take a some time for the new focal range of the eye to settle and become permanent. Most of yesterday I was able to see very clearly at arms length. Even this laptop, with the resolution set to 1680x1050, is readable at arms length.
 

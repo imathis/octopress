@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Modem Mania
 date: 2006-4-11
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Turns out my cable modem was going bad. The technician came and tested the signal strength in my apartment and declared it "perfect." (He said a range of +15 to -15 was acceptable, but that -3 is where you wanted to register. Mine signal is a -6.) He did swap the final three feet of cable (from the wall outlet to the modem) with a high quality one so that when he left everything was working.
 

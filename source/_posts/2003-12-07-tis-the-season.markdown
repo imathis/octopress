@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tis The Season
 date: 2003-12-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 It's beginning to look and feel like Christmas around here. Yesterday we traveled over to my parents house to help decorate their tree. It was also my sister-in-laws birthday, so there was cake and presents. It was enjoyable to spend the afternoon and early evening with family. We played 'Uno' and laughed and visited and generally had a wonderful time.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Book: The Lost Symbol"
 date: 2010-1-17
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 If you look carefully at the fine print on the back of some books, there is a classification or genre listed, largely (I think) to help the bookseller know where to shelve the volume. In the case of Dan Brown's latest novel I think the genre should read "hyperbole" or perhaps "suspension of disbelief."
 

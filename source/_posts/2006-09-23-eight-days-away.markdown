@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Eight Days Away
 date: 2006-9-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 My vacation is coming to an end. The past eight days have been good ones overall, not without some frustration and let down, but good nonetheless.
 

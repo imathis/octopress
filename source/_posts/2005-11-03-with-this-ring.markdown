@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: With This Ring...
 date: 2005-11-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 On a Saturday in early June 1997, Michele and I picked up our wedding rings from the jeweler. Two plain gold bands, their newness shiny and their import heavy in our hands. Naturally we both tried them on, and then we left them on for we considered ourselves married, the upcoming wedding was just a formality.
 

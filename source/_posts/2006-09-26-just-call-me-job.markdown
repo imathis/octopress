@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Just Call Me Job
 date: 2006-9-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 The vet called at around midnight to inform me of the results of Nekko's blood work. She has feline diabetes. Her body has entered a ketonic state, meaning that there are acids building up in her blood as a result of no insulin. She will be in the hospital for two to three days while they administer insulin and try to get her blood glucose level (BG) under control. Meanwhile I will have to undergo training on administering insulin and testing her blood to monitor BG.
 

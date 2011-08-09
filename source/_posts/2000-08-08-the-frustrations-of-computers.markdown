@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Frustrations of Computers
 date: 2000-8-8
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For some 17 years I have made my living working with computers. I have been writing software of one form or         another for 23 years. While I am not holding myself out as a guru or expert I like to think that I know more          than the average home computer user. What I want to know is what does the average Joe do when faced with the          always cryptic messages and dialogs that appear when the denizens inside the computer decide not to get along.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How To Read a High-Volume Mail List
 date: 2010-6-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the years I have joined and left a number of high-volume mail lists and I've finally come up with a set of guidelines that help me to consume the entries that interest me while not getting lost in the sea of entries offered.
 

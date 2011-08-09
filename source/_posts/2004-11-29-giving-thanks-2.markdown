@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Giving Thanks
 date: "2004-11-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I had a wonderful Thanksgiving holiday. Starting on Wednesday with a matinee showing of <a href="http://imdb.com/title/tt0368891/" title="National Treasure">National Treasure</a> and culminating with 4 glorious days of doing nothing.
 

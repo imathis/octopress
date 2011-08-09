@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: It's A Small World
 date: 2006-1-12
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Between online shopping on the Internet and package delivery services like FedEX, the world just keeps getting smaller.
 

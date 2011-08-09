@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Few Thoughts About Dying
 date: 2001-1-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 If you are fortunate enough to be part of a couple do you ever think what it will be like when your          companion dies? I'm not trying to be morbid here, just realistic. In my case my partner is older          than I. We've talked and we both understand that she will in all likelihood precede me in death. This          bothers both of us for different reasons.
 

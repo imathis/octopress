@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Primary Day
 date: "2007-11-16"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Roland S. Martin's <a href="http://www.cnn.com/2007/POLITICS/11/14/roland.martin/index.html" title="A few states shouldn't decide the Presidency">commentary</a> on CNN got me to thinking.  In a nutshell the primary system in America is broken.  There are key states, namely the first to host their primary or caucus, that make or break a candidacy.  Why shouldn't all of America be in on the fun.
 

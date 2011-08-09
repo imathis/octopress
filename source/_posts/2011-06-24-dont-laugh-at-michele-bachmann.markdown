@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Don't Laugh at Michele Bachmann
 date: 2011-6-24
-link: true
+comments: false
 categories: links
+link: true
 ---
 <a title="Michele Bachmann's Holy War" href="http://www.rollingstone.com/politics/news/michele-bachmanns-holy-war-20110622?page=1">Michele Bachmann's Holy War</a> &rarr;
 <br />

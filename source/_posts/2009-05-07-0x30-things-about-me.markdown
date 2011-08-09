@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 0x30 Things About Me
 date: 2009-5-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 0x01: I am learning how to play piano, proving that old dogs can learn new tricks.
 

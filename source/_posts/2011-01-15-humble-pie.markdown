@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Humble Pie
 date: 2011-1-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 A year ago this weekend I played in my first ever orchestra as a part of the 2010 String Fling hosted at KSU. String Fling is open to all 5th through 9th grade string players in Kansas and attracts 600+ students from around the state. The kids are grouped into orchestras based on grade and rehearse all day Saturday plus an hour Sunday morning, before performing for their family and friends.
 

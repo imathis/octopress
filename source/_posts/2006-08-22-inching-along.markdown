@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Inching Along
 date: 2006-8-22
-link: false
+comments: false
 categories: health
+link: false
 ---
 Roughly two months ago it occurred to me to take some body measurements so that I would know how much size I had lost in addition to the number of pounds. Acquiring a tailors tape I added a new page to my Hacker's Diet Spreadsheet and started measuring.
 

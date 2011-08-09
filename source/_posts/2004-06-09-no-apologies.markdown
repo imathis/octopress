@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: No Apologies
 date: 2004-6-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 I've never read any of the various 'steps for success' books that have been in vogue in the past decade or so. That being said, here is the first step for success in my book:
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: To Tip or Not To Tip
 date: 2010-8-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday evening, as I was waiting for carry out from the Chinese dive next to campus I tweeted this question:
 

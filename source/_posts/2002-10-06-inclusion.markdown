@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Inclusion
 date: 2002-10-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 I bought tickets to see the Peter Gabriel concert in Chicago today. In the process I learned a lesson. You see, I didn't ask my wife if she wanted to go with me. I knew that she wasn't a big fan and that huge crowds like that just aren't her cup of tea. So I assumed that she wouldn't want to go and got tickets for a friend, who is a fan, and myself.
 

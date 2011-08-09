@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Apple PowerBook G4
 date: 2002-5-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 I want one of these. The power of Unix and the sophistication of a world class UI. Gimme.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Painful Change
 date: 2004-1-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 With the recent reports of bovine spongiform encephalopathy, or "mad cow disease" in the United States, Michele and I have been looking at our diet. Michele has been and continues to be largely vegetarian in her approach to food. I have always been a meat and potatoes man. She eats meat mostly because I do, and since I prepare a majority of our evening meals, there's meat on the table.
 

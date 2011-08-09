@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: links for 2008-01-10
 date: 2008-1-10
-link: true
+comments: false
 categories: links
+link: true
 ---
 <ul class="delicious">
 	<li>

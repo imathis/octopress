@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Domino Theory of Interior Decorating
 date: "2003-10-14"
-link: false
+comments: false
 categories: life
+link: false
 ---
 It all started with buying a large screen television. Now it has blossomed into repainting one room, a new entertainment center, completely re-doing another room, and maybe refinishing ALL the wood trim in the house.
 

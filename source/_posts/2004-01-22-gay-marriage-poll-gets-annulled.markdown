@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Gay Marriage Poll Gets Annulled
 date: 2004-1-22
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 The online <a href="http://www.zanshin.net/blogs/000336.html" title="Cast your vote">poll</a> I talked about a while back has succeeded admirably. At least from my humanist stance. Voting was running 2 to 1 in favor of gay marriage or civil union when the organizers pulled the plug. <a href="http://www.wired.com/" title="wired">Wired</a> has <a href="http://www.wired.com/news/culture/0,1284,61982,00.html" title="Gay Marriage Poll Gets Annulled">the story</a>.
 

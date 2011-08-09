@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Weight of the Hours
 date: 2006-1-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the hardest parts about coping with Michele being gone is the hours and hours of time fill. Most week nights aren't too awful; between dinner and household chores I can usually fill the time until 8:30 or 9:00. Then it's an hour of mindless television before going to sleep.
 

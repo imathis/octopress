@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: An Evening At Home
 date: 2005-12-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 Okay. It's been nearly two months since Michele shuffled off this mortal coil and I am starting to discover a rhythm to my daily existence. For what it is worth, here is a typical evening at Chez Mark.
 

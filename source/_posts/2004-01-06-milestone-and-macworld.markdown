@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Milestone and MacWorld
 date: 2004-1-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 This week marks the one year anniversary of our switch from Windows to Macintosh. Michele and I ventured into the Apple store in St. Louis on January 11, 2003 and haven't looked back ever since.
 

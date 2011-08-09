@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Of Paradigms
 date: 2002-9-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the last couple of weeks I have struggled with an obsession about wanting a Powerbook G4 Titanium laptop from Apple. I have learned some important lessons about myself along the way. In a way these new understandings have eased my craving for this laptop, as I better understand some of the emotional motivations behind the need. On the other hand my desire has been strengthened because this laptop would always represent some significant and important growth milestones in my personal development.
 

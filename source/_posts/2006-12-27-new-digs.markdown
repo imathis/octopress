@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: New Digs
 date: "2006-12-27"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I've started a second weblog, called <a href="http://zanshin.wordpress.com" title="some assembly required">some assembly required</a>. I'm not sure how this site will fit into the "mark nichols online experience" yet. One thought is that I'll save <a href="http://zanshin.net" title="zanshin">zanshin.net</a> for longer, more introspective bits, and use <a href="http://zanshin.wordpress.com" title="some assembly required">some assembly required</a> for shorter, chatty pieces.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Personal Responsibility
 date: "2002-12-12"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday I ordered some roses for my wife's birthday. Her favorite rose is called "Sterling", which is the original lavender colored rose. They are rare and hard to come by these days, as there are other lavender color roses now.
 

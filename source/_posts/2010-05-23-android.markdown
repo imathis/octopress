@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Android
 date: 2010-5-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 When Apple started the original "Switchers" ads on television I desperately wanted to get an Apple PowerBook as my computer. Its elegant form combined with the Aqua user interface and Mac OS X seemed like an unbeatable combination to me. I haunted eBay and Amazon auctions (remember Amazon Auctions?) trying to find a good used machine. Unfortunately most of the offerings were scams, each time I managed to win an auction the seller always had some reason why they couldn't use an escrow service or otherwise complete the sale.
 

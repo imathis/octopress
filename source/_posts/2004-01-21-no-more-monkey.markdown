@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: No More Monkey
 date: 2004-1-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today marked the end of a long ordeal for Michele and I. After going into business for myself four years ago I significantly under-estimated my annual federal income tax. With each attempt to catch up and pay what I owed it seemed we only got in deeper.
 

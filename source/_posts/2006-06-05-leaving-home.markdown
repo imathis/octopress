@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Leaving Home
 date: 2006-6-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday as I drove away from my parent's house (I guess my Dad's house now) I was struck with a powerful feeling of home-sickness. For the first half of the six-hour drive I debated with myself about whether I should stay in Kansas or try to return to Illinois. The house was filled with people Saturday; cousins, aunts and uncles, nieces and nephews. It was good to be a part of the gathering. Living away from everyone else is hard at times and rewarding at other times.
 

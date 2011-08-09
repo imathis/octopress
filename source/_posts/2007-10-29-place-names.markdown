@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Place Names
 date: "2007-10-29"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Many years ago, when I worked in Vancouver Washington, I was introduced for the first time to the idea of naming servers.  All servers have names, but the manufacturing client I worked at was the first place in my experience to use human readable names over something like "lkhmx18."  The development servers there were all rivers (Danube, Orinoco, Nile) while the production machines were stars or planets (Mars, Orion, et cetera).
 

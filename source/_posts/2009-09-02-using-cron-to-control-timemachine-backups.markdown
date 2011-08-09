@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Using CRON to Control TimeMachine Backups
 date: 2009-9-2
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 My office setup includes two Macintosh computers, a Mac Pro and a MacBook Pro. I have a 500 GB FireWire drive attached to the Mac Pro that I use for TimeMachine backups. Through the power of a DNS entry for the Mac Pro, and this article on <a title="Network TimeMachine backups to another Mac" href="http://opensoul.org/2009/1/15/network-time-machine-backups-to-another-mac">Network Time Machine backups to another Mac</a>, I am able to backup the MacBook Pro, wirelessly, to the TimeMachine drive on the Mac Pro.
 

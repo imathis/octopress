@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: New Author Sadness
 date: 2006-3-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last night I stayed up late to finish a rather good book by a new author. My love of reading comes from my parents who read to me starting at a very early age, and we've shared books an authors throughout my life. My mother in particular reads many of the same authors that I enjoy, and we have shared new finds with each other over the years.
 

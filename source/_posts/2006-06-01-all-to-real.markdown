@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: All To Real
 date: 2006-6-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 As I gather up my things for my trip to Illinois this weekend the reason is all to real. Every time I have made this journey this spring I've felt a sense of unease, dread almost, the night before leaving. Every trip carried with it the potential of being the last one where I'd see Mom alive. Tonight is no different; I feel a sense of unease that won't go away.
 

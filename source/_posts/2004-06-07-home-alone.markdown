@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Home Alone
 date: 2004-6-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I have been together since Valentine's Day 1997. In the intervening  seven years we've only been apart two nights. And I can count on the fingers of both hands the number of times I've been home alone.
 

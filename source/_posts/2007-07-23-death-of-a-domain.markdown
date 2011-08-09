@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Death of a Domain
 date: 2007-7-23
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 With absolutely no fanfare one of my domains died over the weekend.  The site had been languishing for more than a year and it had never really been active; either in a visitor sense or as an advertisement for my company.  I am of two minds about it being gone, I miss the idea of it and I am glad to be past it.
 

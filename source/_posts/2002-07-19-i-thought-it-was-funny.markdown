@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: I thought it was funny...
 date: 2002-7-19
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 An SGML fan, an XML fan, and an HTML fan are watching a movie when they notice smoke coming out of a trash-can.
 

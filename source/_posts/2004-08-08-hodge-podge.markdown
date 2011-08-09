@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Hodge Podge
 date: 2004-8-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 <b>Traffic</b>
 Traffic here in KC is odd. I've lived and driven in other large cities and they all have their own flavor of driving. Some sport an aggressive, take-no-prisoners approach to rush hour. Others are fast paced without the aggression. KC is unhurried, almost slow. Few people exceed the speed limit, and plenty are content to mosey along in the far left lane at less than the posted limit. Coming from Springfield where my driving habits placed me in the top 1/3 of assertive drivers, I was shocked to realize that I was now one of the most aggressive drivers on the bypass. Unfortunately the KC Missouri police thought so too, I got a speeding ticket last week on my way home from work.

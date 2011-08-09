@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: High Speed Internet
 date: 2007-9-14
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Several times in recent weeks the wireless broadband card I have from Sprint has been pressed into service while traveling in the car.  The I-70 corridor from Kansas City west to at least K-177 (the Manhattan exit) has good data coverage.  With Sibylle driving the car I've been able to connect, view emails, chat, even VPN into my workstation at work and accomplish tasks "at" work.
 

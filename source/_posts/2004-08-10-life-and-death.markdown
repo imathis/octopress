@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Life and Death
 date: 2004-8-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 I am ready to die. The depression that has come as a result of the past few months is worsening, and I feel helpless in its grasp. It seems that every time I find a positive or uplifting piece of news that the world slaps be back down with more negative or out of control energy.
 

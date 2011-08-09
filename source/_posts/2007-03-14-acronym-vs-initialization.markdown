@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Acronym vs. Initialization
 date: 2007-3-14
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Like most people I suspect, I didn't know the difference between an <i>acronym</i> and an <i>initialization</i> until quite recently.
 

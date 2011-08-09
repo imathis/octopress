@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Paid Content
 date: 2005-8-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 Since 1997 or so I've been reading the daily comics via the Internet. Most of the major daily strips are syndicated, and those syndicates all have online archives of the material. In some cases the archives is two weeks old, in others it is current with what is in the newspapers. Reading the comics this way pleases me as I get to see just the ones I like, when I want, and without having to get newsprint ink all over my hands.
 

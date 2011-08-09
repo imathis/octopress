@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Electronic Pay Statement
 date: 2008-4-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 After thirty-one years of getting paper paychecks or pay stubs, tomorrow will mark the first occasion of my receiving an electronic pay statement.  My employer, in an effort to avoid paying the increased mass mailing postage rate, has decided to stop mailing associates, who use direct deposit, pay stubs.  Over the course of a year they estimate this will save the company in the neighborhood of $80,000.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Brighter Focus
 date: 2008-2-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the two days since I picked up my trifocals I have been thoroughly pleased with the improvement in my vision.  I have sharp focus at all three ranges of sight: near, intermediate, and distance.  Having owned a pair of bifocals before my <a href="http://zanshin.net/2008/01/23/eyes-two-years-later/" title="Eyes, Two Years Later">laser surgery mistake</a>, I knew there would be an adjustment period regarding the lines and not needed to tip my head but rather just drop my eyes.
 

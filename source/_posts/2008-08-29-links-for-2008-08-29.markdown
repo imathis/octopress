@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: links for 2008-08-29
 date: 2008-8-29
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 <ul class="delicious"><li>
                 <div class="delicious-link"><a href="http://gen5.info/q/2008/08/27/what-do-you-do-when-youve-caught-an-exception/">Generation 5 » What do you do when you’ve caught an exception?</a></div>

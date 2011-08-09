@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Winter Cold
 date: 2003-1-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 During our trip home we were both shocked at the numbers of people coughing. On our last tour bus we were surrounded by hacking and coughing. At least one woman wasn't even bothering to cover her mouth. On the plane there was more coughing.
 

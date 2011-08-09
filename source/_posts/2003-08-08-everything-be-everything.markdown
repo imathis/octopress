@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Everything be everything
 date: 2003-8-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Life has been going rather smoothly on the surface lately. We've been enjoying the pool, and cooking at home. Michele said the other day that we've finally gotten over the last move and are starting to feel really at home here. I agree with her. Even though it will be three years this October since we moved, I think we are just now starting to hit our own pace here.
 

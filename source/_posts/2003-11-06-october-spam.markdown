@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: October Spam
 date: 2003-11-6
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 The month of October saw a slight increase in the amount of spam I'm getting. For the month I had 6,312 spams, up from last month's 5009. My total for the year is now 64,023.
 

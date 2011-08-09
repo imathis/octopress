@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Frosty Explained
 date: 2011-2-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 The first two days of this week we were caught at the edge of the major winter storm that covered most of the eastern United States. In addition to freezing rain and snow, we had bitterly cold temperatures, perhaps as low as -10º. On Tuesday morning Sibylle discovered frost on the ceilings in both front bedrooms. We immediately contacted our builder as the house has a warranty.
 

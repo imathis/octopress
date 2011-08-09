@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Infamy
 date: 2006-12-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sixty-five yeras ago today Pearl Harbor was attacked by the Empire of Japan. Sixty-five years ago tomorrow, December 8, 1941, Franklin Delano Roosevelt delieved the famous "<a href="http://www.americanrhetoric.com/speeches/fdrpearlharbor.htm" title="FDR Peral Harbor">Day of Infamy</a>" speech. You can listen to that <a href="http://www.americanrhetoric.com/speeches/fdrpearlharbor.htm" title="FDR Peral Harbor">speech</a> (and many other important speeches) on <a href="http://www.americanrhetoric.com/top100speechesall.html" title="American Rhetoric">American Rhetoric</a>. The text of his address is below.
 

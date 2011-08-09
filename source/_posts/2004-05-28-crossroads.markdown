@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Crossroads
 date: 2004-5-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 I find myself at a crossroads today. One stage of my growth is completing and opportunities for the next stage are making themselves known. Where to go from here is now the most important though that fills my days.
 

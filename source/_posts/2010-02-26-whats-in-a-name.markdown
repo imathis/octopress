@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What's In A Name?
 date: 2010-2-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 On a whim, when purchasing plane tickets to <a title="Sibylle and Mark's Journeys" href="http://sibylleandmark.wordpress.com" target="_blank">Germany in January</a>, I signed Sibylle and I up for Delta Skymiles accounts. We like to visit Europe and try to use Delta for those trips and it seemed like a good idea to start benefitting from our loyalty.
 

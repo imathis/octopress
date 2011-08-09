@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Airport WiFi
 date: 2006-9-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 Earlier this week I discovered the <a href="http://www.travelpost.com/airport-wireless-internet.aspx" title="Airport Wireless Internet Access Guide">Airport Wireless Internet Access Guide</a>, which lists the availability of WiFi at all the major US airports. As luck would have it I am getting ready to fly this weekend and next for my vacation, so the list is timely.
 

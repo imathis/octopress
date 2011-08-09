@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Giant Auto II Magnetic Trainer
 date: 2011-1-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning, after taking my bicycle to the local independent bike shop to try out of couple of their trainers, I purchased a Giant Auto II magnetic trainer. I found it to be a tad quieter than the comparable CycleOps Fluid 2 trainer, and perhaps a tad easier to pedal. Although the pedaling resistance could have the roller being too tight against the rear wheel.
 

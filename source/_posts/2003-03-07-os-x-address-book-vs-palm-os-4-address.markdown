@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "OS X: Address book vs. Palm OS 4 Address"
 date: 2003-3-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 Since switching to Apple in January I have started using the OS X Address book to store my contact list. For the most part I am happy with this tool, although it is quirky in how you edit addresses. I like that I can store multiple sets of addresses for a contact, but therein lies a problem.
 

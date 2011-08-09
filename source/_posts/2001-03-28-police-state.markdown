@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Police State
 date: 2001-3-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 The State Police here have an unmarked Mustang they use for speeding ticket revenue generation. From a distance you can't tell this is a police car. Even up close it is hard to tell, the license plate is not a special government one and there is only one extra antenna. I've seen it in action a couple of times so I know what it looks like. This saved me the other day.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: That Old Familiar (Sinking) Feeling
 date: 2004-3-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 This being the fourth time I've been reluctantly out of work you'd think I'd be used to the emotional roller coaster ride that accompanies the experience. You'd think that but you'd be wrong.
 

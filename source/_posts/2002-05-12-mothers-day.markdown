@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mother's Day
 date: 2002-5-12
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 We had a quite day at home. It is still rainy outside. We've had nothing <b>but</b> rain for days now. Maybe we should be building an ark.
 

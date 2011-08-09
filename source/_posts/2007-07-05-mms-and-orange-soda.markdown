@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: M&Ms and Orange Soda
 date: 2007-7-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 After a seven year hiatus I returned to the dentist's office this morning to have my teeth evaluated and cleaned.  Over the years I have had a fair amount of dentistry done in my mouth, some of it rather painful and traumatic.  My mother always said that we were each born with a set amount of dental courage, and that once it was used up, it was gone.  My dental courage is long gone.
 

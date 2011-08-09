@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Civility Lost
 date: 2004-4-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 While this isn't by any means scientific, I have been using the responses to my resume campaign as a way to measure the loss of civility in our society. Once upon a time, when you sent your resume to a company, you could expect to receive a letter in response. At the very least the human resources department would acknowledge receipt of your mail, and would indicate how long they would keep it on hand.
 

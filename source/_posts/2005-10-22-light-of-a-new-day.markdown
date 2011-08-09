@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Light of a New Day
 date: "2005-10-22"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I had a very long conversation with a very good friend last night. She is one of Michele's oldest friends, and through my relationship with Michele I was able to develop my own friendship with her. Like me she is struggling to understand and absorb what happened to Michele. Like me she alternates between moments of relative calm and ones of great pain and sadness.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Hanging By A Thread
 date: 2007-9-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 Nearly seven weeks after I managed to shut the car door on my right forefinger, breaking the tip of my finger in the process, the fingernail is about to fall off.  In the past couple of days it has gotten dramatically looser on my finger; at present only the left edge of the nail is still fastened down at all.  When I lift the nail and peer underneath I can see clear, unblemished skin in the nail bed and what appears to be a new nail starting to grow from the cuticle.
 

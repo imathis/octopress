@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Whole House Humidification
 date: 2011-1-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 With a house full of instruments, two 7-foot concert grand pianos and a violoncello being the primary ones, we have a keen interest in maintaining a good humidity level here at Casa Mark y Sibylle.
 

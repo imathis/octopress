@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Last Hope Lost
 date: 2006-5-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 As expected the oncologist discontinued my mother's chemotherapy today. The regimen was only killing her blood and not impacting the tumor. Or should I say tumors, as the latest CAT scan revealed at least two.
 

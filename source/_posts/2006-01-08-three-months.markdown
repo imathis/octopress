@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Three Months
 date: 2006-1-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Dear Sweetheart,
 

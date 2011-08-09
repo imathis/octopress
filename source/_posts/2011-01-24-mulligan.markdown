@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mulligan
 date: 2011-1-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 In golf, and other sports, a <a title="Mulligan" href="http://en.wikipedia.org/wiki/Mulligan_(games)" target="_blank">mulligan</a> is a do-over or repeat of a spectacularly errant shot or play.
 

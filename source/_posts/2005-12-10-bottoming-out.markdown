@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bottoming Out
 date: "2005-12-10"
-link: false
+comments: false
 categories: life
+link: false
 ---
 As hard as it is to imagine, I am actually lower today than I've been in the two months since Michele died. The threat of losing my job in a month has taken the one "stable" part of my life and, not only made it unstable, but made it the biggest threat I'm facing. Most days I have a hard time getting up and facing the day, now I have to find the desire to search for, interview and evaluate, and select a new client/employer/engagement?
 

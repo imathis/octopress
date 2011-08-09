@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lies, Damn Lies, and Statistics
 date: 2005-9-11
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In the past year my little web site has seen approximately 53,500 visitors. I'm currently averaging about 145 visits per day, or 4,350 per month. Pretty amazing for a site that focuses on my mental state, obscure software, and left leaning politics.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How To Ruin Your 'Talent' Agency Using Email
 date: 2008-4-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently I have been dealing with a particularly egregious form of spam - technical recruiter emails.  One company in particular, Talentberg, stands out for its lack of professionalism and ignorance.  They absolutely refuse to prune their mailing list, even when repeated requests are made.  And they attempt to justify their actions through an intimidating, if false, disclaimer. 
 ## Some Background

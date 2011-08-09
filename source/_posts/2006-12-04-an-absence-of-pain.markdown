@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: An Absence of Pain
 date: 2006-12-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 <div style="float: right; margin-left: 10px; margin-bottom: 10px;">
 <a href="http://www.flickr.com/photos/zanshin/314068166/" title="photo sharing"><img src="http://static.flickr.com/114/314068166_be64685a74_m.jpg" alt="" style="border: solid 2px #000000;" /></a>

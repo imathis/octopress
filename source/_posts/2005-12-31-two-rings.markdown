@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two Rings
 date: "2005-12-31"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday I decided to get a new battery for my favorite watch. At one time I had a real fetish for watches; I must have 5 or 6 good ones just in the top drawer of my desk. One in particular has long been my favorite. It's a Seiko Chronograph with a brass tachymeter and brass dials. Very classy and functional.
 

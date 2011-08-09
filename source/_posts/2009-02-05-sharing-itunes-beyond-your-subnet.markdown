@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sharing iTunes Beyond Your Subnet
 date: 2009-2-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 iTunes allows you to share your music library with other computers based on the same subnet of your network. Network addressing is too arcane a subject for this posting, but a simplified explanation will help. Each computer on a network gets a unique address, know as an IP address. (IP stands for Internet Protocol.) IP addresses have four sets of numbers, separated by a dot, e.g., 192.168.101.10. For licensing reasons Apple restricts the sharing of music to computers that have identical addresses except for the last portion of the IP address. If your computer has an address of 198.162.101.1, then any computer with an address of 192.168.101.* can receive your shared music.
 

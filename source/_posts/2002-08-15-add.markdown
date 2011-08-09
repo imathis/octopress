@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: ADD
 date: 2002-8-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 I recently came to understand that I have ADD or attention deficit disorder. I used to laugh at all the people who had all these kids who were labeled ADD. I though it was just some passing fad in the medical world to bilk people out of money for drugs and treatments. I would say that had ADD been a term when I was growing up I would have been tarred by its brush.
 

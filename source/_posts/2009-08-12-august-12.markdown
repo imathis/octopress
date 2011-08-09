@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: August 12
 date: 2009-8-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 In any relationship there are dates of significance. Today, August 12, is one such date for Sibylle and I. Three years ago today we met in person for the first time. We had been introduced to each other on eHarmony nineteen days earlier and had already traded well over a hundred emails.
 

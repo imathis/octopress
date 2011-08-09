@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Pay No Attention To The Man Behind the Curtain
 date: 2008-9-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 Or in this case, the man behind the Palin or Wall Street bailout negotiation.  The Republicans and the McCain campaign have done a masterful job of changing the subject of this Presidential election.  For weeks not it hasn't been about John McCain and Barack Obama, it has been about Sarah Palin instead.  And now that the initial infatuation with the "hockey mom" is starting to fade, Senator McCain has announced that he is suspending his campaign in order to focus on the Wall Street bailout.
 

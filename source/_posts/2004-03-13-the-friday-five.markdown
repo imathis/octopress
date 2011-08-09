@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Friday Five
 date: 2004-3-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 I haven't done a friday five in a long time, but I ran across this set of questions today, and wanted to post my answers. So here goes:
 

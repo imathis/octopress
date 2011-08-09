@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Grace Under Fire
 date: 2005-1-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 In late November my mother-in-law was admitted to the hospital after collapsing at home. She had been weakened almost to the point of death by an unchecked and undiagnosed bleeding ulcer. After a short stay in the hospital to receive blood transfusions, she has been recuperating in a nursing home. To call my mother-in-law stubborn, secretive, and more than a little paranoid, would not be putting too fine a point on her personality. The forced invasion of medical and social services personnel has heightened her personality quirks.
 

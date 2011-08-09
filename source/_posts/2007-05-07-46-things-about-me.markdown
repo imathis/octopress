@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 46 Things About Me
 date: 2007-5-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 In honor of the date, here are 46 Things About Me...
 

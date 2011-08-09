@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Three Hundred Thousand
 date: 2006-8-2
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Somewhere in the last posting, or two, I crossed the three hundred thousand word mark on this site. The little counter at the top of the archive page tells me so.
 

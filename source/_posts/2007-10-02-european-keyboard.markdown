@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: European Keyboard
 date: 2007-10-2
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 While we were in Germany, Sibylle and I made good use of a small Internet Cafe in Winnenden, the town next to the village where we were staying.  The cafe had about a dozen mid-level desktop computers with 15 or 17 inch LCD monitors, and offered <i>miltch kaffee</i>, soft drinks, and beer.
 

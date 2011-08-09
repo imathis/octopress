@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ten
 date: 2006-7-8
-link: false
+comments: false
 categories: health
+link: false
 ---
 Last January while I was at a friend's house on vacation I stepped on to their bathroom scale. I hadn't weighed myself in years and only had a vague idea of my weight. Seeing two hundred and fifty pounds on the dial was a shock. I knew that I was heavy but I didn't realize just how heavy.
 

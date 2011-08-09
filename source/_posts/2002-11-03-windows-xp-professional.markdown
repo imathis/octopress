@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Windows XP Professional
 date: 2002-11-3
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I just upgraded my home PC from Windows 2000 to Windows XP Professional. From start to finish less than 70 minutes. This was by far the easiest Windows install I have ever done, and I have done more than a few.
 

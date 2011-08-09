@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Recent Movies
 date: 2005-8-8
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 In what is rapidly becoming a regular feature around here, I present to you, dear reader, a list of recently watched films.
 

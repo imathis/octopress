@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lack of Visits
 date: "2007-11-26"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 A year ago when I signed up for the <a href="http://www.nablopomo.com/" title="NaBloPoMo">NaBloPoMo</a> (National Blog Posting Month) I saw a surge in site visits.  A typical month for me sees about 525 page views and maybe 350 visitors.  November last year had more than 850 page views, largely due to the NaBloPoMo.  This year I have seen no difference in my site visits or page views.  In fact, November maybe lagging a tiny bit behind the average.
 

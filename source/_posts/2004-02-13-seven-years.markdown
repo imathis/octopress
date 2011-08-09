@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Seven years
 date: 2004-2-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Seven years ago this weekend, Valentine's Day 1997, I traveled from my home in Springfield Illinois to Michele's then home in Colorado Springs. We had been talking on the phone for over a year after meeting, in of all places, an AOL chat room. During that year we had meet four times, once in Colorado Springs, twice in Salinas Kansas, and most recently in Springfield.
 

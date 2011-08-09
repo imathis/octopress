@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fun With Borders
 date: 2011-8-2
-link: true
+comments: false
 categories: links
+link: true
 ---
 <a title="Haskell Free Library and Opera House" href="http://www.haskellopera.org/index.php?option=com_content&amp;view=article&amp;id=28&amp;Itemid=27">Haskell Free Library and Opera House</a> &rarr;
 <br />

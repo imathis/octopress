@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Here There Be Monsters
 date: 2006-4-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 Throughout your life you exist primarily inside a sphere called normal. Accidents, surprises, successes, and failures all move you around inside the sphere but you rarely approach the edge, much less cross that boundary into lunacy. The scope of normal is far greater than most of us would readily admit and, if we as a society were more willing to communicate honestly, the less odd we'd all feel. The fantasies, dreams, fears, and thoughts we hide inside are shockingly like the ones everyone else is hiding.
 

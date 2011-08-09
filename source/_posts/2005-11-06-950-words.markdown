@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 950 Words
 date: 2005-11-6
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 On the archive page of this site, towards the top, is a running total of the words written here. Before this posting there were 199,050 words of content contained here. Somewhere in one of the next few postings will be word 200,000.
 

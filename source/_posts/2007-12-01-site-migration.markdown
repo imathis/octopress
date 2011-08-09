@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Site Migration
 date: 2007-12-1
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 After a long time on my current host, I am finally ready to switch to a new host.  I've got nothing against <ahref="http://pair.com" title="Pair.com">Pair.com</a>, except that I can get the same hosting package for far less at any number of other established providers.  If my site were heavily visited I might reconsider my move, but since zanshin.net exists far out on the long tail of the Internet's power curve, i am satisfied to save some money.
 

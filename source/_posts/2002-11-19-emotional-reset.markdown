@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Emotional Reset
 date: "2002-11-19"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I did some emotional resetting this morning. I was working on refactoring some code I wrote several weeks ago and was finding it extremely frustrating. The changes were seemingly impossible to make and I just wanted to throw in the towel and quit. I felt my anger coming up and I wanted to yell at anyone and everyone around me.
 

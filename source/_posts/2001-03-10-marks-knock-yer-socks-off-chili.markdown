@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mark's Knock-Yer-Socks-Off Chili
 date: 2001-3-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 2 stalks of celery finely chopped
 1 med to large onion coarsely chopped

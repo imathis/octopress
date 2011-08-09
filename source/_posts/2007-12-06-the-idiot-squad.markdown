@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Idiot Squad
 date: 2007-12-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today marked the start of the 2007-2008 Car Hockey Season here in Kansas City.  Freezing rain followed by a few inches of snow fall start this morning.  By the time I left work at two o'clock, the roads were slick if not icy.  Most people on the highway were driving a cautious 25 or 30 miles per hour.  Not members of the Idiot Squad.
 

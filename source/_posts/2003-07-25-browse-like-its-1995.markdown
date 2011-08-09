@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Browse Like It's 1995
 date: 2003-7-25
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In a trend that oddly mirrors the recent <a href="http://texturadesign.com/html/index_previous.htm#072403">flap</a> over <a href="http://www.buy.com">buy.com</a>'s new <a href="http://buymusic.com/">music</a> service, my <a href="http://www.sharebuilder.com">sharebuilder</a> account was inaccessible to me this afternoon.
 

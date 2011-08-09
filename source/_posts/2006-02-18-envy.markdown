@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Envy
 date: 2006-2-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the undercurrent emotions I've been surprised to deal with in the midst of my grief is envy. In retrospect I suppose it isn't so surprising, after all, every where I look there are people who have what I don't.
 

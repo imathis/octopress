@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Up To
 date: "2007-11-13"
-link: false
+comments: false
 categories: random
+link: false
 ---
 A few things that I've been up to lately.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "\"Not Responsible For Damage - Stay Back 500 Feet\""
 date: "2005-11-20"
-link: false
+comments: false
 categories: life
+link: false
 ---
 If you live in a large city sooner or later you will see a construction dump truck, or cement mixer, rolling down the road or highway in front of you. They all have the same legend painted on the back:
 

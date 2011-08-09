@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Millennium Musing
 date: "1999-12-28"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Go get 100 pennies. Go on, get 'em. I'll wait.
 

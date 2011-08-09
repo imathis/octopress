@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Attention to Detail
 date: "2006-12-21"
-link: false
+comments: false
 categories: life
+link: false
 ---
 As a software developer, one who focuses (or can when he chooses) on minutia, I am often acutely aware that most people do not notice details. Which is a shame, as the little things in life are the ones that are worth noticing. Big things in life are just  conglomerations of little things.
 

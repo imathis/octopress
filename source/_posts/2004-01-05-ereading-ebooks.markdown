@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: eReading eBooks
 date: 2004-1-5
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For the past several years I have been enjoying reading books electronically. With the gift of a palm m515 handheld computer from my wife a couple of years ago I discovered that it was, among other things, an excellent platform for reading books.
 

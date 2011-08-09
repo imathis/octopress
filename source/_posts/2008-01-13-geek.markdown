@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Geek
 date: 2008-1-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Once upon a time, a long time ago, there was a site called <a href="http://web.archive.org/web/*/http://mydogmeg.net" title="mydogmeg.net archive">mydogmeg.net</a>.  Part of that site was a subdomain called geek.mydogmeg.net.  Geek was a collection of reference sites organized in to categories and beautifully displayed through CSS.
 

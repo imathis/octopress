@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Switch Light
 date: 2011-7-7
-link: true
+comments: false
 categories: links
+link: true
 ---
 <a title="The World's Greatest Light Bulb" href="http://www.slate.com/id/2298444/pagenum/all">The World's Greatest Light Bulb</a> &rarr;
 <br />

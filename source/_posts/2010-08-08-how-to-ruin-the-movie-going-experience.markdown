@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How to Ruin the Movie Going Experience
 date: 2010-8-8
-link: false
+comments: false
 categories: random
+link: false
 ---
 <strong>Step One</strong>: Go to the movies.<sup>1</sup>
 

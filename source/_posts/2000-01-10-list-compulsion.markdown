@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: List Compulsion
 date: 2000-1-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 I was raised by list makers. Growing up I could determine the importance and duration         of future events from the list making activities of my parents. Grocery lists, gift lists, book         lists. Lists of books to buy, lists of book already bought. Yes, even lists of lists.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tivo Feature Request
 date: 2006-4-1
-link: false
+comments: false
 categories: random
+link: false
 ---
 For the past five years I have watched television primarily through the Tivo. The number of live programs that I watch has decreased almost to zero. I find this to be a largely a good thing. There's only one problem.
 

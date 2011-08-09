@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Going Paperless
 date: 2011-1-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 A couple of months ago I stumbled upon a video showing how to setup a scanner and <a title="Evernote.com" href="http://evernote.com" target="_blank">Evernote</a> to create a <a title="How to Create A Paperless Office" href="http://www.johnchow.com/how-to-create-a-paperless-office-with-scansnap-and-evernote/" target="_blank">paperless office</a>. The results were impressive and I shared the video with Sibylle. We've talked about it on and off since then and finally decided to take the plunge.
 

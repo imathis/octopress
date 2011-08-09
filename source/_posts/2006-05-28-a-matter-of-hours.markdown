@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Matter of Hours
 date: 2006-5-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 It is only going to be a matter of hours now before my mom dies. She has been unresponsive since later Thursday or early Friday. Calling her name or talking to her no longer even causes her eyes to open. The hospice nurse assures us that we are doing all that can be done, and I personally believe that she isn't aware any more about her physical state.
 

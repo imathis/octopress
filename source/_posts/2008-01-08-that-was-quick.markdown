@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: That Was Quick
 date: 2008-1-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning while reading an article about <a href="http://paulstamatiou.com/2008/01/08/pstamcom-behind-the-scenes/" title="PSTAM.com Behind the Scenes">someones set up</a>, I stumbled across a Safari plug-in called "Inquisitor."  It purports to be an enhancement to the built-in search field in the Safari window.  I was intrigued enough that I downloaded and installed the plug-in within minutes.
 

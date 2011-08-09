@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: No Comment
 date: 2006-5-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 After nearly six years of having a blog, and close to 900 entries, the one thing I don't have is many comments. There have been twenty-nine comments total, to be exact, barely three percent in ratio to the postings. I don't really write here for the comments, and I suppose that most of my postings are a bit personal for people to participate in by adding their two cents worth.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Life Goes On
 date: 2003-3-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I have been slowly moving forward from Abby's death. Both of us have experienced moments of intense grief and moments of relative peace. Several thoughts and ideas have been explored as we process the loss of Abby.
 

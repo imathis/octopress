@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Year Ago
 date: 2006-6-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 A year ago yesterday our phone rang at <a href="http://www.zanshin.net/blogs/000582.html" title="Two-Thirty AM Phone Call">2:30</a> in the morning bringing the news the Michele's mom was in the hospital and not expected to survive the day. By 11:00 pm that evening her mom was dead and, I think, Michele's depression had started a slide that would ultimately contribute to her own death just four scant months later.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Refactoring
 date: 2007-2-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the world of software construction, <i>refactoring</i> is the activity whereby code is modified or enhanced. Perhaps you discovered that two separate pieces of code are performing the same function; you create a new home for the common code, remove it from the two original locations and replace it there with a call to the new, shared routine. You have refactored the code.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Copy All Subdirectory Contents to New Directory
 date: 2007-4-6
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 This entry is merely here so I don't have to try and remember where I wrote it down for the next time I need it.
 

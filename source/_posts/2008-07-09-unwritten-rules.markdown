@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Unwritten Rules
 date: 2008-7-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 On the playground, when teams are chosen for team sports, there is a definite picking order.  The future jocks are almost always the team captains, and their sycophants are rapidly picked next to fill out the roster.  Eventually the picking gets down to the kids who can't throw or run or who are somehow deemed as "better on the <em>other</em> team."  Growing up, I was one of those kids.  
 

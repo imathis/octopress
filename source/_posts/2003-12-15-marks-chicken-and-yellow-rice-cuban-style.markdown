@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mark's Chicken and Yellow Rice ~ Cuban Style
 date: "2003-12-15"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Olive oil
 1 package chicken breasts, rinsed and cut into cubes

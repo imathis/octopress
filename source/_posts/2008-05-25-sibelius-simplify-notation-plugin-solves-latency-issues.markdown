@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sibelius Simplify Notation Plugin Solves Latency Issues
 date: 2008-5-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 After a morning of continued experimentation with, and reading about, Sibelius, Sibylle discovered a<a title="Sibelius Forum - USB Keyboard Note input" href="http://www.sibeliusforum.com/forums/viewtopic.php?p=4560"> posting online </a>that talked about using plugins.  Also, I received a comment to my earlier <a title="Sibelius, Driver Installs, and Flexitime" href="http://zanshin.net/2008/05/24/sibelius-driver-installs-and-flexitime/">Sibelius posting</a>, that specifically called out using the "Simplify Notation" plugin to clean up a score that had been entered using Flexitime.  
 

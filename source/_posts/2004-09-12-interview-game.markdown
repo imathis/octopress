@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Interview Game
 date: 2004-9-12
-link: false
+comments: false
 categories: meme
+link: false
 ---
 Interview game: THE RULES
 1. Leave a comment, saying you want to be interviewed.

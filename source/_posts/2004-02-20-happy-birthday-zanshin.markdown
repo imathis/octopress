@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Happy Birthday Zanshin
 date: 2004-2-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Eight years ago today, February 20, 1996, the domain registration for zanshin.net was completed for the first time. Neither I or my fledgling ISP really understood all we were doing so I ended up with a .net domain. At the time I thought I wasn't a commercial enterprise, and I wasn't a non-profit organization, so by process of elimination I asked for and received a .net domain. (A short five days (<em>5 days!</em>) later zanshin.com was registered. If I had only known then what I know now.
 

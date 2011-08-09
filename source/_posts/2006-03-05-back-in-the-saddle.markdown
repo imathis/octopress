@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Back In The Saddle
 date: 2006-3-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 After a ten year hiatus I have started to ride my bicycle again. Last fall I took the better of my two bikes out of storage and over to the neighborhood bicycle shop for new tubes, tires, and a general tune up. For having been moved four times, and stored for much of the past decade or more, it was in surprisingly good shape. Too bad the same can't be said about me.
 

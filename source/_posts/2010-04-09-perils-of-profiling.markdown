@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Perils of Profiling
 date: 2010-4-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently I was profiled and, as a result, treated differently as I as leaving Walmart.
 

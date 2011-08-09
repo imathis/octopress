@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Connection Quotient
 date: 2005-12-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 The number of people I connect with and interact with on a daily basis has only gone down by one and yet it feels as if I have no connection to anyone at all. I sit alone in this apartment staring at the walls with mindless television or movies droning on to mask the oppressive quiet. I long for the phone to ring, to bring me human contact, and then, when it does ring I can't wait for the person to go away and leave me alone. I no longer know if I am coming or going. What once made sense now seems insane, and nothing seems normal any more.
 

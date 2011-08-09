@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Travelogue
 date: 2003-1-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 Friday, December 20, 2002
 Springfield, St. Louis, Honolulu

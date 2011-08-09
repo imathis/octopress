@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Question of Faith
 date: 2004-6-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 I recently heard a definition of faith that works for me. The Reverend William Sloane Coffin puts it this way: Faith is not belief without proof, faith is trust without reservation.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Pre-Approved
 date: 2006-5-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ever since they started becoming widespread I have been a fan of pay-at-the-pump gas stations. That I don't have to go stand in line behind someone buying a lifetime supply of losing lottery tickets, or brave the stale, smoke-tinged air of some service stations is fine with me.
 

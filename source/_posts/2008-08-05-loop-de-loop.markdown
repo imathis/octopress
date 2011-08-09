@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Loop-de-loop
 date: 2008-8-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Using the "Create a Map" feature over at <a title="Wayfaring.com" href="http://www.wayfaring.com">Wayfaring.com</a>, I made this map of our walking route through Chicago yesterday.  All told we covered about four and a half miles on foot.
 

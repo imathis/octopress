@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Initial Software "
 date: "2009-10-23"
-link: false
+comments: false
 categories: life
+link: false
 ---
 The following is a list of the software I installed on the new MacBook Pro in the first 24 hours.
 <ul>

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 2010 Honda Insight EX
 date: 2009-8-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Most of the day Sunday Sibylle and I searched for the errant Jimmy title in vain. In order to use the Jimmy for the CARS program we need to show proof of insurance for the past 12 months, produce registration for the past two years (current plus previous is fine), and have a free and clear title. The first two were easy, but finding the title after several moves was impossible.
 

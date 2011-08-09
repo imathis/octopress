@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: An Apple A Day...
 date: 2003-6-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday was the keynote address at the World Wide Developers Conference Apple is hosting in San Francisco. During his two hour presentation Steve Jobs offered up these new goodies:
 

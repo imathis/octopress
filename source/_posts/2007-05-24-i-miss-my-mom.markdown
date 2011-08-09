@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: I Miss My Mom
 date: 2007-5-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 Next Monday will mark the one-year anniversary of my mom's death, and for the past few days I have been acutely uncomfortable.  Nothing big, or easy to put into words, just a feeling of being antsy, itchy to do <i>something</i> and yet too tired to move.  Uncomfortable in my own skin.
 

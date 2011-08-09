@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: links for 2008-08-25
 date: 2008-8-25
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 <ul class="delicious"><li>
                 <div class="delicious-link"><a href="http://sethgodin.typepad.com/seths_blog/2008/08/more-vs-enough.html">Seth&#039;s Blog: More vs. enough</a></div>

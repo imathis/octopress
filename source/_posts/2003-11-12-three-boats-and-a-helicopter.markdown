@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Three Boats and a Helicopter
 date: "2003-11-12"
-link: false
+comments: false
 categories: life
+link: false
 ---
 There is an old joke about a man trapped by a flood who refuses rescue in three boats, and later a helicopter. His reasoning is that God will take care of him. After he drowns and reaches heaven, God says he shouldn't be here. The man says I waited for you to take care of me. God replies, I sent you three boats and a helicopter.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Firefox Start
 date: 2004-11-9
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Why do I think there are some in Redmond who are facing some sleepless nights these days?
 

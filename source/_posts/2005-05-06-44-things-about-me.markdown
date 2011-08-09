@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 44 Things About Me
 date: 2005-5-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 On the eve of my 44th birthday, here are 44 things about me.
 

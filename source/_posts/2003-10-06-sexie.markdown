@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sexie
 date: 2003-10-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last Thursday evening we went to see Eddie Izzard in his new show "Sexie." In a word it was fantastic. Michele discovered him several years ago through his HBO special, "Dress to Kill." Since that time we have collected all of his available videos and he has become our favorite comedian.
 

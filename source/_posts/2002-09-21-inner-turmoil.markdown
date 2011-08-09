@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Inner Turmoil
 date: 2002-9-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have been struggling with allowing myself to have a new laptop. This is not something I need to have. My wife and I already own three desktops and an IBM ThinkPad. We are not lacking computing power.
 

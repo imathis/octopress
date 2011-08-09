@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Four is Better Than Two
 date: 2007-4-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 When she was first diagnosed with diabetes last September, Nekko started getting two units of insulin twice a day (every twelve hours). Attempts to get her blood glucose level checked failed twice so it wasn't until late February that we finally got a measurement of her blood sugar (glucose) level.
 

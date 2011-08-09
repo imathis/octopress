@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Virus Safe, If Not Virus Free
 date: 2005-9-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 After reading about <a href="http://www.markallan.co.uk/clamXav/index.php?page=dl" title="ClamXav">ClamXav</a> I thought I'd download it and give it a try.
 

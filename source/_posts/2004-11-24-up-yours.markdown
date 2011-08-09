@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Up Yours
 date: "2004-11-24"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Dear Spammer(s),
 

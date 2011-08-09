@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Where Do We Want To Live Today?
 date: 2004-1-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I have been spending a lot of time and energy talking about moving. For the past few weeks we've kicked around a couple of potential destinations but we've been unable to find a reason to move.
 

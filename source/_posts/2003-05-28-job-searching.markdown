@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Job Searching
 date: 2003-5-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have been focused on my job situation for the past few weeks. My current contract ends on June 30th and there is some question as to whether I'll get another contract here or not.
 

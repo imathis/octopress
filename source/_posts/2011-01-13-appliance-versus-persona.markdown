@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Appliance Versus Persona
 date: 2011-1-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 I've worked with computers for years. At present there are five in my office (hooked up to a total of eight displays). I carry several with me nearly everywhere I go. I am a computer nerd.
 

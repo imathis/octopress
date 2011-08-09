@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: iMovie Wow
 date: 2007-2-27
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Over the weekend I shot about 5 hours of video using a borrowed Sony Handycam. This was my first entry into taking video and I have been anxious to see what the results were. Attempts to import the video stream from the camera to various computers using the included USB cord were unsuccessful and frustrating. After downloading a copy of the DCR-TRV17 manual from Sony I discovered that the USB cord is only intended to work with the Sony Memory Stick flash memory on the camera. If you want to stream video you either need to patch the camera to a VCR or television using the A/V patch cords, or get a "i.Link" or Firewire cable.
 

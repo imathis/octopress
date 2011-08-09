@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: More Email Nerdery
 date: 2007-9-10
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 <strong>The Goal</strong>
 I want to be able to read all my email, including my GMail accounts, via the OS-based client on the laptop I am currently using.  I have two primary computers, a Powerbook running Mac OS X (10.4.10) and a ThinkPad running Windows XP SP2.  On the Mac I use Apple Mail, and on the ThinkPad I am currently using Windows Live Mail (beta).

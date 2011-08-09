@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: RSS versus Live
 date: 2009-3-26
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I have a love - hate relationship with RSS feeds. Being able to view updates from several hundred sites in one place rather than having to visit them all individually is certainly a benefit. But only consuming a site through <a title="NetNewsWire" href="http://www.newsgator.com/Individuals/NetNewsWire/">NetNewsWire</a> means you never see the site itself. There's something to be said for the manner in which people present their digital selves on the web.
 

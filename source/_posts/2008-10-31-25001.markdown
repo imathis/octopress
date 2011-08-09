@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "25,001"
 date: "2008-10-31"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 My little site has had 25,001 page views since December 2005, from 14,137 unique visits.  A tiny amount compared to the tens of thousands of visits some <a title="1.1 million page views per month" href="http://daringfireball.net/feeds/sponsors/">sites</a> register daily, but significant to me.  Thank you to everyone who visits regularly, and welcome to any one new.
 

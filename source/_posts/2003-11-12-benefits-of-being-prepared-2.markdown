@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Benefits of Being Prepared
 date: "2003-11-12"
-link: false
+comments: false
 categories: life
+link: false
 ---
 After getting home this evening I had long talk with Michele about the rate situation. It felt good to rant and rave and let all my emotions run free. After a good venting I was able to see my situation more clearly. Along the way, Michele made several excellent points that helped bring me back into balance.
 

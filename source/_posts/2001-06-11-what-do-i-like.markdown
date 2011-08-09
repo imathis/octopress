@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What do I Like?
 date: 2001-6-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have a collection of MP3 music on the PC I use at work. Most days I spend some time under my headphones listening to the music I like.
 

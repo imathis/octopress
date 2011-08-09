@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Dust Motes
 date: "2005-10-18"
-link: false
+comments: false
 categories: life
+link: false
 ---
 The book I am currently reading, <em>Dark Hallow</em> by John Connolly, has a line in it about the past hanging in the air waiting to be illuminated by the sharp rays of memory.
 

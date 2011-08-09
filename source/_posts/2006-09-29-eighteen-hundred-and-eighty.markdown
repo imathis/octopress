@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Eighteen hundred and eighty
 date: 2006-9-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday afternoon I was able to pick Nekko up at the hospital and bring her home. Before leaving the hospital I was given a chance to practice injecting her with saline solution, and I got to observe how a pill should be administered.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Happy Birthday Sweetie
 date: "2005-12-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Since her birthday was December 24th, Michele rarely had the attention a June or October birthday might garner.  Instead her celebration was often rolled into the holiday or skipped altogether.  Throughout our relationship I tried very hard to make her birthday special.  I know that her birthday in South Carolina in 1999 was the low point in the years we had together.  Perhaps the high point was December 2003.  You see, that year I managed to pull off a surprise party for her which was attended by her three best friends.
 

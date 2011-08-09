@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Refold Undies
 date: 2007-1-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Life being what it is, there are times when the plethora of choices, options, and decisions to be made can overwhelm. Don't get me wrong, it's nice to have options, to have more good than you can use at once. But it can also wear you down. Leaving options on the table, recognizing that not everything that was possible is possible can leave you drained.
 

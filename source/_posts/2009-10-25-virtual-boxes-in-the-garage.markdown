@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Virtual Boxes in the Garage
 date: "2009-10-25"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Moving data from an old computer to a new computer is a bit like moving in the real world. The anticipation of having all your stuff neatly put away, orderly and tidy in the new place isn't enough to carry you through the actual doing.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "770"
 date: "2007-11-18"
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the last fourteen months I have administered roughly 770 insulin shots.  Our cat, Nekko, is diabetic and as such requires twice daily shots to survive.
 

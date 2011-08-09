@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Deleting "Un-deleteable" Google Calendar Events
 date: 2009-3-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently Sibylle added a repeating event to one of her Google Calendars. She's been auditing a class at K-State, and added the three-times-a-week classroom schedule to her calendar. This week is spring break here, and so she wanted to remove the three events from her calendar, since she won't be going to class.
 

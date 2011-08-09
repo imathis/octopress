@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Camino Revisited
 date: 2003-9-8
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 A few weeks ago my wife's copy of Camino became <a href="http://www.zanshin.net/blogs/000245.html">unstable</a> and she was forced to use Mozilla Firebird instead. About two weeks ago I tackled this problem one more time. I stumbled across instructions on the Camino web site detailing how to remove Camino entirely from your hard drive. They are as follows:
 

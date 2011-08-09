@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Through the Looking Glass
 date: 2004-2-24
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Over the weekend I picked up the Visual title "Unix for Mac." I have another Visual series title, and like that book, this one is easy to work with an informative. Although some of the information is very basic, the book as a whole is a great learning tool. Even though I have been poking around in the guts of Mac Unix for the better part of a year now, I picked up several new ideas, tools, and tips.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: $1968
 date: 2007-8-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 Some of life's lessons are more expensive than others.  Take the poor guy who backed into my car on Saturday.  One minute he and the kids are piling into the van and the next minute he's out $1968 for repairs to my car.  Not including a 4 or 5-day rental while mine is in the shop.
 

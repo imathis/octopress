@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Waiting Game
 date: 2002-5-14
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 My brother and I have a strained relationship at best. He and his family do a lot with my parents without ever inviting my wife and I to attend. on the surface this may seem like a small thing, but in actuality it is getting to be a bigger issue. most recently they setup a day with my Mom for Mother's Day and didn't invite us to attend. Prior to that they ignored my 41st birthday altogether.
 

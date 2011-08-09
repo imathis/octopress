@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Curve Ball
 date: "2004-12-17"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sometimes, when you aren't careful, life throws you a curve ball. In and of itself, a curve ball isn't a bad thing, the context of the moment and what you do with it determine its ultimate impact on your life. Take our situation for example. Michele and I have spent the past week or so getting ourselves prepared for one of two futures: (a) I get a contact in Illinois and we move back there and pick up the life we left behind in June, or (2) I don't get the contract in Illinois, we stay here and have a major financial meltdown (including the lose of our house and the investment it represents), and we start over at ground zero. After all that we've been through recently I think we both were beyond caring what happened. (We actually tossed around a third option, that of getting a couple of high-limit credit cards - having a blowout trip to Europe - and then ending it all. Joking about ending our lives is a pressure relief value. Honest.)
 

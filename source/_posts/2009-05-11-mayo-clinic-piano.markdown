@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mayo Clinic Piano
 date: 2009-5-11
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 In the Gonda Building of the Mayo Clinic there is a piano available. The video below is of Fran and Marlo Cowan playing a duet. They've been married 62 years and he was 90 in February.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The $50.34 Stamp
 date: 2007-4-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 So, as it turns out, you can't use scotch tape to fix a stamp to an envelope.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Your Own Font
 date: 2004-1-7
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 As seen on <a href="http://zeldman.com/" title="Jeffrey Zeldman">The Daily Report</a>, <a href="http://www.fontifier.com" title="Fontifier.com">Fontifier</a> is a free (for now) service that converts a scanned GIF of your handwriting into a True Type font.
 

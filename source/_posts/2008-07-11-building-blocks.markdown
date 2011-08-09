@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Building Blocks
 date: 2008-7-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 When I was a child I was given a large set of wooden blocks.  The set included a huge variety of sizes and shapes, and I spent many happy hours building any number of things with them.  My favorite activity was to build large towers; some required that I stand on a chair to add the upper layers.  Once the tower was complete I'd tie several newspaper rubber bands together and start attacking various supporting structures, until the whole thing came crashing down.  Followed shortly by my mother calling downstairs, "What was that?!  Are you alright?"
 

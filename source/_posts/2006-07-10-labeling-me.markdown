@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Labeling Me
 date: 2006-7-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the most dangerous, and perhaps damning, practices in our society today is the fixing of labels to individuals or groups. Any one who is in a minority group (label) already knows what this feels like. With just a word or three you are categorized, objectified, and shunted off to purgatory, never to return. As a white male, with a college education and a career in the high tech industry I've been largely immune to the potential ill effects of labeling.
 

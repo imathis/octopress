@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Final Straw, Hopefully
 date: 2004-5-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 This week's coverage of the torture and abuse of prisoners in Iraq sickens me. That the ordinary citizens of Iraq are likening the occupying United States force to Saddam Hussien is a damning indictment.
 

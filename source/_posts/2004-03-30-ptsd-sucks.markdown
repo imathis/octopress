@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: PTSD sucks
 date: 2004-3-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today has been a long and, at times, difficult day. I started out feeling defeated and lost in the wilderness of unemployment. Being cut off from the structure and social framework that has been my job for over three years has been harder to deal with than I would have imagined. My wife, who would know, tells me I am suffering from post traumatic stress syndrome. I think that this morning's feeling of defeat was another bit of that PTSD coming to the surface.
 

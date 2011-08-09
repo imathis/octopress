@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Relentless
 date: 2005-11-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 The thing about grief is that it is relentless. People talk about things being 24x7, meaning all the time, but until you have lived with the constant pressure of grief pulling at you every second of every minute of every hour of every day, until then you don't know what relentless really means.
 

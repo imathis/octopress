@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: planet Fitness
 date: 2006-7-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 As a part of my efforts to regain some fitness and lose weight I joined the neighborhood gym. I received a mailer from them in the mail touting a $10 per month fee, good for three years, with no contract. Figuring I had nothing to lose I went to look the place over on Monday after work.
 

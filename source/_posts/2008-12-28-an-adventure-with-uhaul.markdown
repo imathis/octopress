@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: An Adventure with UHaul
 date: "2008-12-28"
-link: false
+comments: false
 categories: life
+link: false
 ---
 We are taking a 14' truck full of boxes, Select Comfort bed pieces, two bicycles, and a variety of other small items to Manhattan KS today.
 

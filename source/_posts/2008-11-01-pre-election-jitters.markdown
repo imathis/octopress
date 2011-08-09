@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Pre-Election Jitters
 date: 2008-11-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 I've always been a rather indifferent voter, and, having moved several times in the last decade, I've sometimes been unregistered and unable to vote.  This year is different, however. This year I have been very active in following the campaigns and watching the polls.
 

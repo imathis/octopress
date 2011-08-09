@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Feeling ADD
 date: 2002-10-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 I am really feeling ADD this morning. When I got to work I discovered that I had left my Palm Pilot at home. I use this tool throughout the day, and especially at lunch when it serves as my electronic book reader. When I realized that I had forgotten it I nearly drove the 40 minute round trip to get it.
 

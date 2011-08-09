@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Momentary Lapse of Reason
 date: 2002-9-13
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 The development work I perform as a consultant involves a shared code-base. All the work done by all the developers here is kept in a central repository. Each of us has one or more workspaces where we can check out code, make changes to it, and later integrate our changes so that the other developers have access to the latest version.
 

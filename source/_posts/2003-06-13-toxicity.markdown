@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Toxicity
 date: 2003-6-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 I had another major throat episode last evening. We had Chinese takeout and I was forced to go to the bathroom three times. This almost never happens any more unless I am really avoiding something. After I was back at the table the last time we talked about it a little and Michele offered a suggestion as to what might be the cause. It isn't about some issue that I am avoiding, or any unexpressed emotion on my part. It is about the general atmosphere here at work. People here are scared, angry, inward, worried, and just generally zooey. Even though I am working daily to center myself and to deal with my emotions, I am subject to the toxicity here.
 

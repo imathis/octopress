@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Many Miles To Home
 date: "2005-12-18"
-link: false
+comments: false
 categories: life
+link: false
 ---
 This weekend I made my first solo road trip in almost nine years. Michele and I were good partners in the car and we enjoyed time spent traveling, whether listening to audio books, playing Twenty Questions, or just sharing the passing scenery.
 

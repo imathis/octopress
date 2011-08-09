@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 12MM X 10MM
 date: 2002-5-13
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 Quick how big is that? If you are from my generation you studied the metric system while in grade school. Days, weeks even were spent on complex conversion formulas all in a futile effort to move the United States to the same measurement system most of the rest of the world uses. Like so many grand social experiments, this one failed.
 

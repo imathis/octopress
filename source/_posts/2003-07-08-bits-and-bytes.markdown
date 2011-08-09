@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bits and Bytes
 date: 2003-7-8
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I have been doing some tidying up among the many files, templates, and settings that make this site work.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How NOT to Install Pepper Updates for Mint
 date: 2010-2-25
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Since December 2005 I have been using <a title="Mint" href="http://haveamint.com" target="_blank">Mint</a> to track my web site statistics. Out of the box it provides a good look at who is coming to your site, how frequently, and to which pages. Better still, Mint is extensible through plugins called Peppers. Pepper-mint, get it?
 

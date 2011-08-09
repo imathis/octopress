@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: del.icio.us
 date: 2006-2-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ok.
 

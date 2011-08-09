@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: An Apple a Day Keeps the Computer Working
 date: 2004-3-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 Several days ago my PowerBook started exhibiting some rather odd symptoms. Typing in any of the Cocoa applications (Safari, TextEdit, X-Pad, et cetera) produced doubled punctuation and double spaces between words. And just for variety, icons in the toolbar of Mail refused to work. Click on the compose icon and no window appeared. Quit Mail and restart it and then you'd get the window. Not a useful feature.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Site cleaning
 date: 2003-2-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 I've been doing some light site cleaning. I've removed some links from the 'elsewhere' menu that I no longer frequent. When I have the time and inclination I'll add some of the other links that have found their way to my daily visit list.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Take a Pill
 date: 2006-8-7
-link: false
+comments: false
 categories: health
+link: false
 ---
 The final piece of my weight adjustment program is taking daily supplements. Since I am eating less, and doing more, I am giving my body conflicting messages. I'm also starving it of necessary nutrients simply through less food consumed.
 

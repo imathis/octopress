@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Emotional Objectivity
 date: 2001-3-31
-link: false
+comments: false
 categories: life
+link: false
 ---
 I think our lives are made up of two things, objects that we collect and the emotions that we associate with those objects. Our society today focuses all of its attention on objects. We are constantly bombarded with messages that tell us having objects is good. Having the "right" object will make us perfect. This pursuit of objects is the foundation of our consumerism religion. We are constantly in the pursuit of the right object so that we can be perfect for having it. Of course, we take everyone else's word for what the "right" object is right now.
 

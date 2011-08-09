@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Re-immersion
 date: "2010-11-12"
-link: false
+comments: false
 categories: life
+link: false
 ---
 From 1983 until mid-2004, or twenty-one years, I wrote code every day of my working life. When people asked what I did for a living my answer was always, "I'm a programmer."
 

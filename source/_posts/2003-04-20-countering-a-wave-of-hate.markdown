@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Countering a Wave of Hate
 date: 2003-4-20
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 In my daily travels around the internet I stumbled across this <a href="http://www.alternet.org/story.html?StoryID=15673" target="_blank">transcript</a> of the speech given by actor Tim Robbins to the National Press Club on April 15, 2003. Because of his position on the war in Iraq, and because of his wife, Susan  Sarandon's, position on the war, his scheduled appearance at the Baseball Hall of fame was cancelled by its director.
 

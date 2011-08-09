@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What To Do
 date: 2006-9-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 The decision I am facing is a difficult one, there is no easy, clear-cut answer. There's no easy clear-cut set of factors. Objectivity is impossible, and long term impact - regardless of the choice - will be profound.
 

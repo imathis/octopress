@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Seven Years
 date: 2004-7-26
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 Seven years ago, on July 26, 1997, I was granted the rare privilege of marrying my best friend, my confidant, my lover, my true companion. She is a woman of uncompromising ethics, rare intelligence, emotional strength beyond measure, and quiet grace. It has been my honor to be her husband for the past seven years, and I am eagerly awaiting each day of the next seven and beyond.
 

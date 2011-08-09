@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: One Month
 date: 2011-1-17
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sibylle and I moved into our new house just over a month ago. We are slowly gutting used to it; it feels less and less like a really fancy hotel suite and more like our home everyday.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: By The Way,
 date: "2005-12-11"
-link: false
+comments: false
 categories: life
+link: false
 ---
 it was cold here last Friday.
 

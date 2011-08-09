@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sixteen Exercises a Day
 date: 2007-6-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 It has been several weeks now since the doctor diagnosed my back condition as severe degenerative disk disease (read <i>arthritis</i>).  I've had a physical therapy evaluation, and two follow-up PT sessions.  Tomorrow I have the final follow-up session and then I am on my own.
 

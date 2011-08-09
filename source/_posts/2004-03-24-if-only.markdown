@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: If Only...
 date: 2004-3-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 The past few days have been filled with the ever enjoyable "if only" game. If only I hadn't been so curious about interconnecting computers through a firewall. If only I hadn't taken this job in Illinois. If only..., if only.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: AKA Arthritis
 date: 2007-5-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 My physical therapy appointment yesterday shed new light on the condition of my lower back.  The more common term for severe degenerative disk disease is arthritis.  Somehow it doesn't seem as scary or bad described that way.
 

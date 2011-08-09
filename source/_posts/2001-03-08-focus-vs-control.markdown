@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Focus vs. Control
 date: 2001-3-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today was a singularly frustrating day.  I?m in charge of two major projects, and heavily involved in at least two more. This in and of itself isn't bad. Having more to do is better than having nothing to fill up the day. However, when you are constantly interrupted it is difficult to accomplish anything.
 

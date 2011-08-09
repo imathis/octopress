@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: OpenCourseWare
 date: "2007-11-27"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I had read about MIT's <a href="http://ocw.mit.edu/OcwWeb/web/home/home/index.htm" title="OpenCourseWare">OpenCourseWare</a> some time ago, but I had never followed up on the knowledge.  Last night, in a fit of inspiration, I did a Google search and then started browsing the course offerings.  After just a few minutes I settled on MIT 6.092, which is an introduction to Java Programming.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: According to Plan
 date: 2003-8-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the past few days Michele and I have worked very hard to find the best path out of our present financial situation. We developed a three-part plan. First get rid of the Audi TT and its damnable lease. As an option we were willing to trade the Lexus too. Second refinance the house and pool, reducing that monthly expense. Third, get a loan to pay off our taxes.
 

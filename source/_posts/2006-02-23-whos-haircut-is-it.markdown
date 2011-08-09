@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Who's Haircut Is It?
 date: 2006-2-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 As a boy my haircuts were done by my father. Being the mid-sixties his task was fairly easy, a "burr" haircut doesn't require a lot of talent. And at that age I really wasn't overly concerned about the appearance of my hair to others. Of course there are pictures of oddly thatched hair and cowlicks as he tried to leave my hair longer so it could be combed. By the time I reached junior high I was getting my hair done at the barber shop. It was a vastly different experience.
 

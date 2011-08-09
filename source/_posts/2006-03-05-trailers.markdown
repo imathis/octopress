@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Trailers
 date: 2006-3-5
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 At the showing of <i>Ultrviolet</i> I was at we saw not one, not two, not three, but four trailers before the movie. Not that I am complaining, mind you, I like previews. What was interesting was that all four were for horror films. Coming this spring and summer, to theaters near you...
 

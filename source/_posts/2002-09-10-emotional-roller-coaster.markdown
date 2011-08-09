@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Emotional Roller Coaster
 date: 2002-9-10
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 It has been a rough couple of weeks. Michele, we believe, has finally entered menopause. This is a relief as the pre-menopause condition she had is finally over. However the final round of DUB left her very anemic and this has resulted in the worst case of edema she's experienced yet. The excess fluid in her body is making it very difficult for her to breathe. I have been doing chest and back percussion several times a day to help her clear the congestion from her lungs. Neither of us is sleeping well as a result, and we are both scared of the change in her condition.
 

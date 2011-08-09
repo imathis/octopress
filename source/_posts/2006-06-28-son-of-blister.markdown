@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Son of Blister
 date: 2006-6-28
-link: false
+comments: false
 categories: health
+link: false
 ---
 One of the parts about working out in the martial arts that I haven't missed a bit are the little incidental injuries. Karate-do was wonderful for mystery bruises appearing in places you had no recollection of having been hit. Jammed toes, especially on a competition matted floor were also common. The worst by far were the large blisters that would form working on a wooden floor. It seemed as if a large piece of callus would come off all at once, leaving tender and sometimes torn skin underneath.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: You Might Be A Nerd If...
 date: 2006-6-14
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 1. You have instant message accounts on more than one service.
 2. The first thing you do in the morning, and the last thing before going to bed, is check your email

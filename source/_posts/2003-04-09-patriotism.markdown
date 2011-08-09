@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Patriotism
 date: 2003-4-9
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 I consider myself to be patriotic, but not blindly so. I have heard people say that now that the war has started the time for protest is over. That we should support our troops and not question the direction our government is taking.
 

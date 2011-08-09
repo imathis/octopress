@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Summer of Moving
 date: 2007-8-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sibylle and I have been moving more or less continuously since Memorial Day weekend.  There have been lulls, days where we didn't lift a box or try to figure out where to put things, but they have been precious few this summer.  We've both experienced the dislocation that comes from being multi-residential, Sibylle more than I as she was for a brief period tri-residential.  For the past couple of weeks we've been about 90% mono-residential, but that last 10% has been enough to exhaust us.
 

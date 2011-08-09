@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Thin Ice
 date: 2004-7-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I haven't lived in an apartment since the spring of 1998. And even then it was a duplex where we had reasonably good relations with the couple in the other half. Michele's last apartment would have been in Colorado Springs in February 1997, mine was earlier, April 1990.
 

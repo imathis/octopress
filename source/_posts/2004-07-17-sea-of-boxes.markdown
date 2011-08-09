@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sea of Boxes
 date: 2004-7-17
-link: false
+comments: false
 categories: life
+link: false
 ---
 Moving is an immense pain in the ass. And lower back. And feet. It's just a pain. Since last Saturday, when Allied deposited 8,300 pounds of our stuff here, I have spent several hours each day moving boxes, opening boxes, emptying boxes, refilling boxes, dreaming about boxes, and learning to hate boxes.
 

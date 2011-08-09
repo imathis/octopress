@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Half Dooced
 date: 2004-3-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Previously on this site I have written about using <a href="http://www.zanshin.net/blogs/000232.html" title="ssh">secure</a>  <a href="http://www.zanshin.net/blogs/000290.html" title="ssh II">shell</a> and port forwarding to access the internet without exposing the details of my actions to network monitoring. Originally it was an expression of my curiosity; using ssh was something new, it was exposure to the Unix underbelly of my Macintosh, as well as the workings of TCP/IP, firewalls, and networks.
 

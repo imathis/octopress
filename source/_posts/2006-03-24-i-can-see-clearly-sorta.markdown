@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: I Can See Clearly, Sorta
 date: 2006-3-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday my LASIK procedure went smoothly and without any complications. The doctor said the surgery went perfectly. There are plenty of things to write about, however, I'm still in the first 24-hour period where the flap hasn't started to really heal yet. So everything it a bit fuzzy around the edges.
 

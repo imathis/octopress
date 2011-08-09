@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fifty Years - Fifty Events
 date: 2011-5-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 <!-- p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier} p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; min-height: 14.0px} -->For several years now it has been a tradition on my site for me to post a list of things about me on my birthday. This year I decided to switch things up a bit and post a list of events, one per year, for each of the fifty years I've been alive. I like to tell people that I am a child of the space age, as Alan Shepard became the first American in outer space on May 5, 1961 just two days before I was born on May 7, 1961.
 

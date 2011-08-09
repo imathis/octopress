@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Windshield, Round Two
 date: 2006-6-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 Tuesday's windshield repair seemed to go smoothly at the time. The glass is fine, but the rain sensor promptly fell off it's mounting point and is now dangling behind the inside rear-view mirror. When I discovered this on the way home yesterday I called the installer and scheduled a second repair for today.
 

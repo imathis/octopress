@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Refocused
 date: 2008-2-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last Friday, after work, I returned to the vision center, ostensibly to have my eyes measured for bifocals.  In the time between making the appointment Thursday morning, and arriving there Friday afternoon, I had changed my mind - I wanted trifocals instead.
 

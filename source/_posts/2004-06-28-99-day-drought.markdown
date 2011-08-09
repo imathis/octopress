@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 99 Day Drought
 date: 2004-6-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today was my first day of work after being out of work for 99 days. It felt good and scary at the same time. This has been by far the longest stretch of time I've not worked since I graduated from college. Even though we had the specter of unemployment hanging over our heads, we managed to have a lot of fun together in the past three months.
 

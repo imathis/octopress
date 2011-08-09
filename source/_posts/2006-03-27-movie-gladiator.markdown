@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Movie: Gladiator"
 date: 2006-3-27
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 <a href="http://imdb.com/title/tt0172495/" title="Gladiator">Gladiator</a> is a masterpiece. I know it follows a tried and true formula in terms of plot, but the sets,  particularly of Rome are amazing. A thoroughly good movie.
 

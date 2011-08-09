@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Too Many Books
 date: "2007-10-25"
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past month or so I've been reading three books concurrently.  While we were in Germany we picked up a copy of Ken Follet's <i>Pillars of the Earth</i>, an epic tale of building a cathedral in 12th century England.  This has become the bathroom book, and we each read a few pages every visit.
 

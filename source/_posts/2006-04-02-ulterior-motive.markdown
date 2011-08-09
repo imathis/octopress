@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ulterior Motive
 date: 2006-4-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 Several times now I have spent one or both weekend mornings camped out in various Panera Bread locations. On the surface this is an effort to get me out of the apartment, to <em>do</em> something different. Ever since I used to haunt the indoor mall in Springfield I have known that people watching works for me. I like the hustle and bustle of busy people. All those years ago, when I'd stand at the center court balcony railing and watch the people around and below me, my thoughts were of how different from them I felt. Obviously they were okay and I was not, they belonged and I didn't. Today I feel similar feelings, although for vastly different reasons.
 

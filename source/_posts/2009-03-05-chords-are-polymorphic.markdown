@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Chords are Polymorphic
 date: 2009-3-5
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 In object oriented programming, polymorphism is defined as the ability of different objects to respond to the same message in different ways. Polymorphism is a Greek term meaning "many forms." While the term may seem intimidating, the basic idea couldn't be simpler: Each object can have a unique response to the same message.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two To Go
 date: "2007-11-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 This entry, and whatever I post tomorrow, will be the last two entries for National Blog Posting Month 2007.  It has been an interesting month, trying to post something everyday.  In the beginning I was having two or three good ideas a day, and I carefully doled those out.  In the last few days I've really been scraping the bottom of the barrel idea-wise.  Hence a posting like this one, that really isn't about anything at all.
 

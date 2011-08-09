@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Live From Winnenden Germany
 date: 2007-9-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sibylle and I are making good use of a small internet cafe in Winnenden Germany, near where her mother lives.  We've been able to check our email, copy pictures from cameras to our portable hard drive, and generally feed our nerd needs.
 

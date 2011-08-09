@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Timing Is Everything
 date: "2009-10-20"
-link: false
+comments: false
 categories: life
+link: false
 ---
 If I were to coin a phrase about buy consumer electronics it would be, "don't watch the price after completing your purchase." Usually, over time, the price of consumer electronics goes down, or, if the item is already at its lowest sustainable price, the features or extras go up for the same price.
 

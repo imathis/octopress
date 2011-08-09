@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ten Things I Learned This Week
 date: 2006-7-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 1. The energy that makes life worth living, comes from actually living. Not waiting around for life to come find you.
 

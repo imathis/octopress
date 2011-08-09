@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Moving Forward
 date: 2007-1-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the first time in a decade I am taking a new job that doesn't require a cross country move. And for the first time in ten years I'll be an employee and not a consultant. I'm excited about the changes ahead and eager to get started with the new company.
 

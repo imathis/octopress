@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Customer Abuse
 date: 2006-1-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past few months I have been using the keyboard that came with the iMac as my primary input device. Through some <a href="http://synergy2.sourceforge.net/" title="Synergy">nifty software</a> to allow one keyboard and mouse to control two computers with dedicated LCD screens. The arrangement has worked very well for me except for the keyboard itself.
 

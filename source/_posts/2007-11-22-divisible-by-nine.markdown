@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Divisible By Nine
 date: "2007-11-22"
-link: false
+comments: false
 categories: life
+link: false
 ---
 "Ah!," said she.
 

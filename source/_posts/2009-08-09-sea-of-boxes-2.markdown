@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sea of Boxes
 date: 2009-8-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today I spent roughly six hours opening every box in the garage and sifting through its contents. Along the way I found several items of interest to both Sibylle and I, and managed to repack several half empty larger boxes into smaller ones. However, I did not find the missing car title we need.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Kendo In The Park
 date: 2006-6-17
-link: false
+comments: false
 categories: health
+link: false
 ---
 This morning's workout was exceptional for me. About ten or twelve students from Lawrence came over and joined us, making the group around twenty for the day. The Lawrence dojo is Korean, and while they call it <em>kumdo</em> to our <em>kendo</em>, the two arts are the same. Remembering the fun of large group work outs from my karate experience I had been looking forward to today's workout since Wednesday when Sensei informed us it would take place.
 

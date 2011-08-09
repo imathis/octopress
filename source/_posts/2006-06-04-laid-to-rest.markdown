@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Laid To Rest
 date: 2006-6-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 Saturday we held a memorial service for my mother. Informal by the traditional standard but all the more meaningful for us as a result. Friends and family both got up and talked about my Mom, including <a href="http://www.zanshin.net/blogs/000950.html" title="Eulogy for Mom">myself</a>. Mom was organized and prepared to the very end; she picked out the music to be played and wrote her own obituary.
 

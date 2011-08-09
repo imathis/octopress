@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: On Playing Music
 date: 2008-5-17
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the fifth grade my class was taken on a field trip to a neighboring junior high school where we heard the band play.  After the arranged pieces were done, each instrument was introduced by the conductor, so we would start to know what they were and what they sounded like.  After that performance we were all asked if we wanted to play an instrument.  While hazy, my recollection is that all the boys wanted to play drums and the girls, flute.
 

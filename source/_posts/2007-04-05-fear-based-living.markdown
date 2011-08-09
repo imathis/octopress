@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fear Based Living
 date: 2007-4-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Several times in recent weeks I have been struck by the thought that most people are approaching life from a fear-avoidance stance. Not that avoiding fear is a bad idea, but perhaps one can over anticipate and end up altering their life needlessly in the process.
 

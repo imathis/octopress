@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Boiling Point
 date: 2005-11-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 The simmering lake of anger that exists just beneath the surface of my facade of normalcy boiled over today. The hapless target of this were various members of the Lexus service department in person, and the manager of that department later on the phone.
 

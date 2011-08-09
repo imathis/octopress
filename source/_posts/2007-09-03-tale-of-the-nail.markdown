@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tale of the Nail
 date: 2007-9-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 The damaged and blackened finger nail finally came off this afternoon.  I will admit that it had a little help from me.  Washing the dishes certainly helped to loosen it up, and when it was finally hanging by just one corner I gave a gentle tug and off it came.
 

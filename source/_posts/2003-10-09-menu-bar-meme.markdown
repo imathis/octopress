@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Menu bar meme
 date: 2003-10-9
-link: false
+comments: false
 categories: meme
+link: false
 ---
 Last week's Dock meme, started by <a href="http://www.macdevcenter.com/pub/a/mac/2003/09/30/dock.html">this</a> O'Reilly story and given legs by <a href="http://www.kottke.org/03/10/os-x-dock">this</a> Kottke posting was neatly summarized by <a href="http://daringfireball.net/2003/10/dock_dick_lick.html">this</a> Gruber bit. I indeed found some new applications and have started using Launch Bar as a result. I also added several new blogs to my daily read list.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Basically Not Here
 date: 2007-9-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 In about 90 minutes I'll complete the last day of work before the start of our vacation.  Sibylle and I are taking two weeks and traveling this year, all the way to Europe.  And back.  As with all vacations some measure of the fun is the anticipation leading up to the event.  I've had a running countdown on my whiteboard at work for the past several weeks (<i>Tage bis zum Urlaub: Eins</i>), and I've got widgets on both laptops ticking away the time until our flight takes off tomorrow (20 hours and 40-odd minutes).
 

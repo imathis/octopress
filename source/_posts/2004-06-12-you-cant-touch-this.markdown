@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: You Can't Touch This
 date: 2004-6-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 Thanks to <a href="http://www.padawan.info/" title="padawan.info">padawan.info</a>'s <a href="http://www.padawan.info/weblog/preventing_image_hotlinking.html" title="preventing image hotlinking">preventing image hotlinking</a> article I now have protected to some degree my site's images.
 

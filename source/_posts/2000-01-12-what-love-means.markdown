@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What Love Means
 date: 2000-1-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 All of you who love someone, raise your hand.
 

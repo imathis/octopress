@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Where Do I Go From Here?
 date: 2006-6-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 It has been almost nine months since my wife died and I am finding my thoughts turning more and more towards the future. What's next? Who will I become in the next year? Five years? Decade? It is hard to contemplate, and even harder to visualize as real.
 

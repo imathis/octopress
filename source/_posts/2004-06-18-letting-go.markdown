@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Letting Go
 date: 2004-6-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 This week has been a new experience in letting go for me. I spent considerable time sifting through more than fifty boxes of stuff in our garage, preparing for a potential move.
 

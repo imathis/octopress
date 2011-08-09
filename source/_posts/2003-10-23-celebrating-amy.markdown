@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Celebrating Amy
 date: "2003-10-23"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I haven't been posting much here lately. I'd like to think that meant I was doing great in all things and that I didn't need a place to vent. However, I suspect that my seasonal depression is starting; I have felt flat and tired more than not lately.
 

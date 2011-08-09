@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: November Spam
 date: 2003-12-5
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For the month of November I logged a total of 7,375 spams. This equates to 245 per day. For the year I now have received a total of 71,398 spam mails, making my monthly average 6,490.
 

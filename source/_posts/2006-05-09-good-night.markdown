@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Good Night
 date: 2006-5-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Every night, before we would go to sleep, MIchele and I said good night to each other. Over the course of our marriage this ritual became a bookend on the day. Even on those rare occasions when we didn't go to bed at the same time we shared our good nights with each other. In the months since her death I have continued to say out loud, in the dark, my portion of the good nights. In my mind and sometimes in my heart I can hear her good nights to me. I have found comfort in this simple ritual, the context is from a time when I wasn't grieving and filled with sorrow. For a few seconds I can escape the pain and torment that follows me around like a my shadow.
 

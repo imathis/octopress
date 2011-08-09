@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Beware the Eyes of March
 date: 2006-4-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 It has been just over four weeks since I had LASIK surgery to my eyes. The changes, while immediately apparent, are still not what I had hoped for. When the literature says your vision may not stabilize for six months they really aren't kidding.
 

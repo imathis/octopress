@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Triangle
 date: 2011-7-11
-link: true
+comments: false
 categories: links
+link: true
 ---
 Amazing juggling, both rhythmic and musical.
 &nbsp;

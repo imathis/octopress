@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: links for 2008-09-01
 date: 2008-9-1
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 <ul class="delicious"><li>
                 <div class="delicious-link"><a href="http://www.zephoria.org/thoughts/archives/2008/08/29/as_a_woman_im_o.html">apophenia: As a woman, I&#039;m offended.</a></div>

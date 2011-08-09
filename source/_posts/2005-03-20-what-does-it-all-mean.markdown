@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What Does It All Mean?
 date: 2005-3-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 I find myself in a rather morose mood today. This in spite of a firm contract for our house in Illinois, and the discovery of some new housing developments here producing ranch style homes we like. Selling our old house and thinking about a new one seems like jumping through hoops to me. Jumping through hoops that someone else is controlling.
 

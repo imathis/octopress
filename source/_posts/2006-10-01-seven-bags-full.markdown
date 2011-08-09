@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Seven Bags Full
 date: 2006-10-1
-link: false
+comments: false
 categories: health
+link: false
 ---
 The next time you are in your local grocery store, head on over to the back of the produce section, where they keep the potatoes. Grab, all at once, seven five-pound bags of any kind of potato.
 

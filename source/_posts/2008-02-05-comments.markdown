@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Comments
 date: 2008-2-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 There seem to be two schools of thought regarding comments on personal blogs.  Prominent sites like <a href="http://daringfireball.net" title="Daring Fireball">Daring Fireball</a> don't allow comments, and moreover, <a href="http://shawnblanc.net/2007/why-daring-fireball-is-comment-free/" title="Why Daring Fireball is Comment Free">explain why</a>.  Other equally prominent sites have huge comment threads on nearly every post published.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Best. Television. Ever.
 date: 2006-7-27
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 Morgan Spurlock, director and creator of the movie <i><a href="http://imdb.com/title/tt0390521/" title="Super Size Me">Super Size Me</a></i> had a short-run program on F/X last year called "<a href="http://imdb.com/title/tt0437696/" title="30 Days">30 Days</a>." Well it's back, and better than ever.
 

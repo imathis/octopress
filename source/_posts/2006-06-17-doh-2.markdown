@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: D'oh!
 date: 2006-6-17
-link: false
+comments: false
 categories: life
+link: false
 ---
 Earlier this week I used an "Old El Paso" taco kit to make, oddly enough, tacos. The outside of the box hinted that free iTunes songs could be had within. Sure enough, printed on one flap inside the box is a code good for one download.
 

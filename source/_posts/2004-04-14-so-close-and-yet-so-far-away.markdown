@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: So Close and Yet So Far Away
 date: 2004-4-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 As week four of my unemployment draws to a close I find that I am filled with mixed emotions. We have had good days and good news recently. Unfortunately our recent good fortune makes my awareness of our predicament  even more acute.
 

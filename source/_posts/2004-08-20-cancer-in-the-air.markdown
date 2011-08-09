@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Cancer in the Air
 date: 2004-8-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Cancer is in the air it seems.
 <ul>

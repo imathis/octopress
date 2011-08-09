@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fears
 date: 2006-8-22
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 Fear is caused by a gap in knowledge. When we are uninformed or lacking in understanding we have an open spot for fear to fill. Depending upon our current emotional, physical, mental, and spiritual energy and comfort levels the fear may be easily ignored or handled. Or it could be something that completely derails us until we overcome it.
 

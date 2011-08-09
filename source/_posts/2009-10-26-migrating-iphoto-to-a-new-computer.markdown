@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Migrating iPhoto to A New Computer
 date: "2009-10-26"
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the largest sets of data I had to transfer from my PowerBook to my MacBook Pro was my picture library. It took two tries and some fiddling around to get everything setup properly, so hopefully my posting here will save someone else the time and frustration I had.
 

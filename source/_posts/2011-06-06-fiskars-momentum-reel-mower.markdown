@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fiskars Momentum Reel Mower
 date: 2011-6-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 With a new house you also get a new lawn. And a new lawn, particularly after having only a rented lawn for many years, requires a new mower. Rather than buy some gas guzzling, noise spewing monster, Sibylle and I decided to get a reel mower for our yard. After reading some reviews we finally decided to get a <a href="http://www.amazon.com/gp/product/B0045VL1OO/ref=as_li_ss_tl?ie=UTF8&amp;tag=zanshinnet&amp;linkCode=as2&amp;camp=217153&amp;creative=399349&amp;creativeASIN=B0045VL1OO">Fiskars18-Inch 5-Blade Momentum Push Reel Lawn Mower</a> via Amazon.
 

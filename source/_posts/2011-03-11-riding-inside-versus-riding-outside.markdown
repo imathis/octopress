@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Riding Inside versus Riding Outside
 date: 2011-3-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 At the beginning of the year I bought a stationary trainer for my bicycle with the hopes of using it to regain some lost conditioning and perhaps lose a few pounds of weight. For the past two weeks I've been very diligent about riding it and, in spite of it being the most boring activity on earth, I'm pleased with how it's working out.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Virginia
 date: 2005-5-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 My mother-in-law, Virginia, is dying. She has been in poor health for a couple of years, and by all accounts is fading fast now. Obviously this is very stressful and difficult for Michele; being so far away and not having much financial flexibility isn't helping matters.
 

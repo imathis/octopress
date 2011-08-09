@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Password Security
 date: 2009-2-23
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Several times in the past couple of months I have gotten emails that indicate to me someone is trying to access one or more of my online personas. The latest was this morning and took this form:
 <blockquote>This email is a response to your request for information about the Blogger account with the user name [obfuscated]. To regain access to this account, please click on the following link:

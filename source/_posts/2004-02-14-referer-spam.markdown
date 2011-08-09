@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Referer Spam
 date: 2004-2-14
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For some time now I have been using the excellent referer logging tool, <a href="http://www.textism.com/tools/refer/" title="Refer">Refer</a> from <a href="http://www.textism.com/" title="Textism">Textism</a>. It's pure vanity and ego gratification served up in HTML.
 

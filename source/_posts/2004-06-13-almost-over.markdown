@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Almost Over
 date: 2004-6-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 One way or another I am nearing the end of my period of unemployment. The next few days will see me commit to either a full-time job in Kansas City or accept an as-yet-to-be-made offer to work 4 days a week from home on a java development project. The former starts in just two weeks on June 28th, the latter in eight days on June 21st.
 

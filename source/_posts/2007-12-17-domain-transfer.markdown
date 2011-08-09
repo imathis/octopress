@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Domain Transfer
 date: "2007-12-17"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 After waiting a week for the "losing" domain registrar to relinquish their hold on a domain I am transferring, I was able to take the next step in migrating from my old host to my new one.
 

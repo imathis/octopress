@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Words You Don't Want To Hear
 date: 2007-5-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 At my physical last week, in addition to blood work, the doctor ordered an x-ray series on my lower back.  I've had persistent, chronic lower back pain for eight or nine months now and she wanted to rule out structural problems first.
 

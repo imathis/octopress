@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Quality of Life
 date: "2005-10-10"
-link: false
+comments: false
 categories: life
+link: false
 ---
 With the uncertainty surrounding Michele's health this weekend, with a full body bone scan scheduled for tomorrow, we have been thinking and talking a lot about quality of life this weekend. Both Michele and I place a high degree of importance of our life's quality. I'm sure everyone reading this would say that they do too, who wouldn't?
 

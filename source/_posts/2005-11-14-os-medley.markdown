@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: OS Medley
 date: "2005-11-14"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Over the weekend, with my brother's help, I dug out my two old Intel machines from storage, along with a monitor and keyboard. I set up the spare desk in the unused bedroom and my plan is to use it hold a Linux server and a Windows XP workstation. I want to play with Linux to learn it better, and I'd like to have an XP machine so I can run the same development software at home that I use at work on the same platform.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mounting Pressure
 date: 2006-5-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 Talking to my dad last night made me more aware than ever of the mounting pressure on him, the rest of my family, and myself. Knowing what is coming and being helpless to change it is difficult. Doubly so for my father as he is on the front line of this battle, and, even though the outcome is already known, he continues to stay and fight. I cannot find words to express how impressed I am with his strength and courage.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Taxonomy
 date: 2008-1-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the seven or so years that I used <a href="http://www.movabletype.org/" title="MovableType.org">Moveable Type</a> as my content management system I managed to create 42 categories.  Some were catch-all groupings that ended up holding dozens or even hundreds of postings.  Others held just a handful or entries, or, in some cases, only one entry.
 

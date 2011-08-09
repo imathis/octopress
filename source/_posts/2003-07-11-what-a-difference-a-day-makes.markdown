@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What A Difference A Day Makes
 date: 2003-7-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday was awful. I was feeling down most of the day and everything I tried to accomplish failed to work. I was frustrated by a simple connection problem at work and ended up spending most of the day moving in circles to no avail.
 

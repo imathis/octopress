@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ergonomics
 date: 2007-1-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 The back massage I had just before the new year started did make an improvement in my overall level of pain. Since the therapist pointed out that my upper back is suffering from years of cubical living at work, I have taken some steps to alter the way I sit at my workstation.
 

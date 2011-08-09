@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: OneCare Frustration
 date: 2006-4-25
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 One of the joys of owning and using a Windows based computer is protecting it against the constant onslaught of viruses, worms, exploits, and malware. The ThinkPad came with a (surprisingly) short trial subscription to Symantic. When I started getting notices about the end of the trial at 60 days I began looking around for other software to use.
 

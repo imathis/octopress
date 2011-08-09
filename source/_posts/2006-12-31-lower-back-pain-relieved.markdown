@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lower Back Pain Relieved
 date: "2006-12-31"
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past several months I have been dealing with intermittent lower back pain. Some days it hurts, some days it's hard to even notice, and some days it is debilitating in a I-need-four-Motrin-to-move-way. I kept trying to pinpoint a cause and therefore, hopefully, a cure.
 

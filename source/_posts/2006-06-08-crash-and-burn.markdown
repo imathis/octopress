@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Crash and Burn
 date: 2006-6-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 The stress and toil of the past few months has finally caught up with me. I've been  constantly tired for weeks now and last evening I just couldn't bring myself to do anything. I was planning on attending the Wednesday evening kendo-in-the-park practice, but with an outside temperature in the low 90s I decided to pass and stayed home (and cool) instead.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Digging in the Dirt
 date: 2008-4-20
-link: false
+comments: false
 categories: family
+link: false
 ---
 This weekend was the first truly mild weather we've had this year, and Sibylle was determined to get the plants back outside for the season.  Saturday morning we started by moving the hibiscus, the geranium, and the fig tree back outside.  We then spent some time preparing the flower beds along the south side of the townhouse, and the ones bordering the patio on the east side.
 

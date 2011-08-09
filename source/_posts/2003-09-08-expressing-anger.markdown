@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Expressing Anger
 date: 2003-9-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 My earliest memory is of Christmas. I must have been about two-years old. When I described the scene for my parents years later they were astounded that I could remember something from such an early age. To my knowledge there are no pictures of the things I described so I think these are actual memories.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Kendo in the Park
 date: 2006-8-2
-link: false
+comments: false
 categories: health
+link: false
 ---
 My kendo workouts continue to be good. Having a prior background in karate is surprisingly helpful. While there are virtually no shared techniques except for some of the footwork, the concepts are the same -- and I was always good at applying new concepts.
 

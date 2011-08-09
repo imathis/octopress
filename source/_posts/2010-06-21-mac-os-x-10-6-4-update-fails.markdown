@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mac OS X 10.6.4 Update Fails
 date: 2010-6-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 Usually when Apple pushes out an operating system update I wait a day or so to see if there are any reports of major problems or gotchas, and then I update my system. The release of 10.6.4 recently was no different. After waiting a day I saved all my work, closed all my running applications and started Software Update.
 

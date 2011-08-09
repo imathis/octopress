@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Home Alone
 date: "2005-10-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I had a full day today, trying to keep the aloneness from getting to me. I got it in my head this week that I wanted to move the furniture around. Yesterday I bought a swivel base for the television in preparation for the new arrangement, and this morning at 7:00 I was running the vacuum over the carpet before stirring things up.
 

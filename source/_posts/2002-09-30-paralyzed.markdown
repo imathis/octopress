@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Paralyzed
 date: 2002-9-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 I am still struggling with purchasing a Powerbook G4 laptop. I have rationalized it over and over again, and yet, when I get to the point of actually making the purchase I get stuck. I want someone else to tell my it's okay, I want someone else to be responsible for the ultimate decision. To her credit, my wife won't play that game with me. I want her to say, "Mark get the laptop. I think it is okay and that you should make the purchase." If she were to do that it would move her into a parental role for the boundaries of this purchase. I would be the child, absolved of responsibility since the adult made the choice. This would not be healthy for her, our relationship, or me.
 

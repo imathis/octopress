@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Hoisin Chicken
 date: "2008-12-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sibylle and I have been experimenting in the kitchen of late and have discovered an Oriental-style chicken dish that I'm going to call Hoisin Chicken.
 

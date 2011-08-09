@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Google Search Predicts Winners
 date: 2008-2-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 <img src="http://zanshin.net/images/google_trends_politics.jpg" alt="Graph of Google Searches for Presidetial Candidates" align="absmiddle" height="247" width="500" />
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: MCL
 date: 2005-8-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the winter of my 7th grade year, call it early 1973, I had the extreme misfortune of having my right knee injured. The junior high school I attended brought the students inside the gym on cold or snowy days. We were supposed to sit quietly in the bleachers until classes started. On this day I was bumped or pushed from behind and accidently kicked the kid in front of me with my snowy boot. He took great offense and grabbed my foot and twisted through 180 degrees of rotation before I could do anything about it.
 

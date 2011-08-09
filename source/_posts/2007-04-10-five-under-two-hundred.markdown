@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Five Under Two Hundred
 date: 2007-4-10
-link: false
+comments: false
 categories: health
+link: false
 ---
 For several weeks now my morning weight has been hovering between two hundred and two oh five.  I've been eating a bit more than I was previously, and I am not currently engaged in a weekly workout regimen.   The "eat less, do more" weight loss only works if you in fact eat less and do more.
 

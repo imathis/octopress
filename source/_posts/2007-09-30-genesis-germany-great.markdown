@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Genesis + Germany = Great
 date: 2007-9-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sibylle and I had a fantastic trip to the East Coast to see Ted, and a Genesis concert, and then to Germany to see her mom, and Stuttgart.
 

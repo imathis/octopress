@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Roundhaus
 date: 2008-2-1
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 After trying to enable <a href="http://zanshin.net/2008/01/30/remote-access/" title="SBC DSL remote access - fail">remote access</a> to my home network and discovering that AT&amp;T doesn't really allow inbound connections, I've resorted to a different solution for access-from-anywhere-version-control.
 ### Roundhaus

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Treasure Hunt
 date: 2007-7-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the autumn of 1987 I took my first cruise, a Windjammer trip, to the Caribbean.  At the time all the identification that was required was your driver's license.  Two years later, in 1989, I took a second cruise to the Caribbean, this time with a passport in hand.  The passport provided some cheap souvenirs; each new island (country) visited added their visa stamp to one of the pages.  Martinique, Dominica, Guadalupe, St. Lucia, Grenada, and others all graced the pages in the back of that passport.
 

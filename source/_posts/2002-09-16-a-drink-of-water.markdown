@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Drink of Water
 date: 2002-9-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ever since I was a child I have felt a tremendous stigma about asking for anything for myself. As a child when I was at someone else's house, my mother would get upset if I asked for something. If a drink was offered I could accept but it was bad form to ask first.
 

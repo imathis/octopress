@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Weight and Finger Update
 date: "2007-11-30"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I am happy to report that the nail on the finger I accidentally shut in a car door back in July, nearly re-grown now.  There is perhaps a mm of growth left before it is the same length as its opposite number on my other hand.  The new nail is, ah, featured; with two major ripples that span the width of the nail, and far more side-to-side curvature than it had before.  I don't know that it will ever be the same as it was before, but at least it is starting to look normal again.
 

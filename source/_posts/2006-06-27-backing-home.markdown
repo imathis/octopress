@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Backing Home
 date: 2006-6-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 A sparkly new and clean windshield was installed today. Unfortunately, it'll only be new until the first bug impact on the way home.
 

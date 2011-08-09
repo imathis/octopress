@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Who reads Zanshin?
 date: 2004-1-9
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I just read an interesting <a href="http://www.makikoitoh.com/archives/2004/01/09/do_you_tell_your_family.php" title="makiko itoh">posting</a> which asked the question, "Do you tell your family about your blog?"
 

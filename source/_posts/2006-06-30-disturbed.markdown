@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Disturbed
 date: 2006-6-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past several weeks my normal sleeping pattern has been disturbed. For years I've been able to lay down, close my eyes, and be asleep within minutes. It used to annoy Michele that I could be asleep and snoring before she even got comfortable. Maybe twice a year I'd have a bout of insomnia and, after sleeping for thirty or forty minutes I'd wake up and then be up for and hour or two.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two Speeches
 date: 2008-11-5
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Last night we heard two speeches, a concession by Senator John McCain, and a victory speech by President-Elect Barack Obama.  In reality I'm sure there were four speeches.  A victory speech by Mr. McCain, and a concession by Mr. Obama in addition to the ones we heard.
 

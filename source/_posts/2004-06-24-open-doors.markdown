@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Open Doors
 date: 2004-6-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 For some weeks now I have been sitting on an offer of work in Kansas City. It was the first, and is still the only, offer I've generated in over three months of looking. Because it is located in a city I had never before considered it was hard initially to generate any enthusiasm for going there. Because it was not a position that would allow us to keep our home here it was hard to envision us moving and being happy.
 

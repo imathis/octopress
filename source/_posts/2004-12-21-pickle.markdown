@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Pickle
 date: "2004-12-21"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I find myself in a real pickle all of a sudden. Frequent readers here will know that after losing my contract in March 2004 I spent 3 months looking for employment and ended up moving at the last minute possible to Kansas City for a contract here. The work is okay, actually better than most places, and we are slowly starting to recover from the shock of unemployment and the move.
 

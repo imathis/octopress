@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Carry On Baggage
 date: 2008-8-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 On Sunday, Sibylle and I purchased two new Eddie Bauer backpacks to use during our trip to Europe this year. We gave them a "Dry run" yesterday during our trip to Chicago; one that they both passed with flying colors.
 

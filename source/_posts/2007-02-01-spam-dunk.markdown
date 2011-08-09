@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Spam Dunk
 date: 2007-2-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the last couple of weeks the amount of trackback spam my site has been subject to has skyrocketed. In all the time I've been using MoveableType to manage the site I've only had a handful of trackback pings that were spam. In the last ten days I've had hundreds at a time.
 

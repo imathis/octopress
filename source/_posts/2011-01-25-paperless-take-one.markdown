@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Paperless Take One
 date: 2011-1-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 Upon arriving home today I was ready to setup and start using our new Fujitsu SnapScan, however I was thwarted by a variety of issues.
 

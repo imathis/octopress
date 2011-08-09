@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Wisdom from Molly Ivins
 date: 2003-9-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last night Michele and I had the great good fortune to attend a talk given by columnist Molly Ivins. It was invigorating to be in the company of so many like minded people. Ms. Ivins' talk was at times funny, at time serious. But through out her message was clear: we, the ordinary citizens of the United States are the owners of this country. The elected officials in Washington are just the hired help.
 

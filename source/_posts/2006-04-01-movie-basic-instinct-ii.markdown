@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Movie: Basic Instinct II"
 date: 2006-4-1
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 What I like about <i>film noir</i> is the increasing state of confusion with which the central protagonist often finds himself embroiled. Where are the lies and where is the truth? <a href="http://imdb.com/title/tt0430912" title="Basic Instinct II">Basic Instinct II</a> captures, through plot twists and misdirection, much of what makes good film noir good film.
 

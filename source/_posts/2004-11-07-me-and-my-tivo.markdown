@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Me and my Tivo
 date: 2004-11-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 <a href="http://tivo.com" title="Tivo">TiVo</a> has released a list of the <a href="http://www.tivo.com/5.3.top100.asp" title="Top 100 season passes">Top 100 season passes</a>, based on 20,000 anonymous samplings. The few shows that we have season passes for are bolded.
 

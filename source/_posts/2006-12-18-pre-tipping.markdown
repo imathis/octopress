@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Pre-Tipping
 date: "2006-12-18"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday, after a successful shopping trip to a new outdoor mall, we stopped into a coffee shop for something to drink and maybe a scone or cookie. The establishment was small, tiny really, and boisterous with the energy of the people inside. We waited for several minutes until reaching the head of the line, giving me a chance to observe the constant motion ballet of the three women behind the counter.
 

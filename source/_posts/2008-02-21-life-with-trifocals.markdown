@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Life With Trifocals
 date: 2008-2-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 After a week of wearing trifocals I have come to some conclusions.
 

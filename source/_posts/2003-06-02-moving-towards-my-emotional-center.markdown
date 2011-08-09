@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Moving Towards My Emotional Center
 date: 2003-6-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 I find myself feeling anxious most of the time now. With my current contract ending in just 28 days and no certain income beyond that I am starting to feel very out of control. I want to attack this situation intellectually; with lists and phone calls, networking and favors. I want to map out tasks for each day. I want to exert control on a situation over which I have no control.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Linky Bits
 date: 2011-5-17
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For a while I was using Delicious to capture links to thinks I found interesting and a sidebar plugin here on my site to show the last ten of those links to you. However, Delicious has an uncertain future and so I am changing things around here a little. I've added "asides" to my site, which allow me to create mini-posts that are slightly different in formatting from regular posts.
 

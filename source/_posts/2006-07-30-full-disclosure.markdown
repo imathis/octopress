@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Full Disclosure
 date: 2006-7-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past seven years I have cataloged and discussed all manner of things here on my site. For the most part I was uncaring about the results of recording bits of my life and casting them adrift on the sea of the Internet. Since joining eHarmony however, I've found myself being a bit more judicious about what gets posted here and what doesn't.
 

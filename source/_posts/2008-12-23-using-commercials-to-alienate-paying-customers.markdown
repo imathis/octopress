@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Using Commercials to Alienate Paying Customers
 date: "2008-12-23"
-link: false
+comments: false
 categories: life
+link: false
 ---
 This evening we decided to treat ourselves to pizza rather than cook something at home.  We both like the personal pan pizza from Pizza Hut on occasion, so I called their number to place my order.
 

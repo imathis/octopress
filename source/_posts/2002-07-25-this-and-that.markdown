@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: This and that
 date: 2002-7-25
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 Things are calmer here than they have been for a while. My employment situation seems to have taken a turn for the better. While nothing is guaranteed all indications are I will be staying for at least another year. A new administration comes into power in January and my hope is that the financial situation next spring won't be as dire as it was this past spring.
 

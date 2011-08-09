@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Signup Snafu
 date: 2007-12-2
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Last night I tried to create an account at <a href="http://bluehost.com" title="Blue Host">Blue Host</a>.  While I was successful in creating an account, the process left a lot to be desired and as a result I almost immediately canceled the account.
 

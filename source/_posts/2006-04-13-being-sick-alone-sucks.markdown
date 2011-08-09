@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Being Sick Alone Sucks
 date: 2006-4-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past couple of days I have been suffering with the onset of a head cold. A faint cough began Tuesday afternoon and evening as post-nasal drip hailed the start of ten days of sheer joy. I managed to get through the work day yesterday, but only just. Once I was home I collapsed on the bed for a two hour nap, followed by a bowl of chicken noodle soup. (Note to self: next time make sure you buy regular chicken noodle soup, not the <i>creamy</i> kind.)
 

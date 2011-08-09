@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Follow Through
 date: 2007-9-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last week we had a U-Haul truck scheduled for Friday afternoon.  After some consideration we decided that we didn't need the truck so I called on Thursday, before the 24-hour limit, and canceled the reservation.  At the time I made the call I was put on hold for several minutes and had a very hurried conversation with the clerk when he came back on the line.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: My Eyes Haven't Got It (Yet)
 date: 2006-3-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today marks the one week milestone in my quest for glasses-free vision. To say that my eyes have been the focus of my life the past seven days would be an understatement, and a bad pun.
 

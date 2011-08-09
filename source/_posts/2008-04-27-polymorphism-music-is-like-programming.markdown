@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Polymorphism: Music is Like Programming"
 date: 2008-4-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 In his seminal book, <em>Object-Oriented Technology: A Manager's Guide</em>, the author, David A. Tayor, describes polymorphism as
 <blockquote>Hiding alternative procedures behind a common interface.</blockquote>

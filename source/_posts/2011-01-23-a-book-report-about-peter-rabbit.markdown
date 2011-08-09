@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Book Report About Peter Rabbit
 date: 2011-1-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the classic musical <em>You're a Good Man Charlie Brown</em>, there's a song about writing a book report about Peter Rabbit. I forget who sings it now (and I'm too lazy to open a new browser tab to find out via Google) but I do remember that the report was supposed to be 500 words long. The singer writes a little bit and then starts counting the words.
 

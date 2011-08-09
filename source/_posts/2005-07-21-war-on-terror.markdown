@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: War on Terror
 date: 2005-7-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 As we approach the next anniversary of Nine-Eleven I have this thought.
 

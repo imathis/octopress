@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Perfect Weekend
 date: 2003-4-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I have had the perfect weekend. After my long night <a href="http://www.zanshin.net/blogs/000183.html#000183" target="_blank">Friday</a> I slept in Saturday. Once I was up and about we decided to clean out our junk bedroom. Now that we are using his and her Macintoshes as our main computers we have two spare Window machines. By cleaning out this room we were able to setup a desk with a 19 inch monitor, keyboard and mouse. I've got a KVM switch, so both Windows boxes are plugged in and ready for use. There's a TV and VCR there too. All I need to do is visit the crawl space and activate that cable port and we are in business.
 

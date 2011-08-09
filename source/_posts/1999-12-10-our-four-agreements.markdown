@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Our Four Agreements
 date: "1999-12-10"
-link: false
+comments: false
 categories: life
+link: false
 ---
 
 

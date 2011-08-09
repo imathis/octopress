@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Holding My Tongue
 date: "2005-11-14"
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 For several weeks now I have been holding my tongue regarding a posting made to <a href="http://andifyoudidknow.com" title="And If You Did Know?">Michele'</a> site. Shortly after I converted the site to be a place to remember Michele her brother sent me a posting to include, along with a composite picture to display.
 

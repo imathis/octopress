@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Cool Mint
 date: 2005-12-7
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 After first becoming aware of <a href="http://www.shauninman.com/plete/" title="Shaun Inman">Shaun Inman's</a> latest website statistics package, called <a href="http://haveamint.com" title="Mint">Mint</a> in September, I have been debating about switching from Shortstat, his previous offering. The new tool costs $30 per domain and the demo movie was really too small to see much detail.
 

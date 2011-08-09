@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Under Pressure
 date: 2006-2-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 Given that I am still deep into depression over Michele's death and that I am now anticipating a call from Decatur to tell my of my mom's death (any time between now and, oh, say six months? eight months? three months?) I am stretched extremely thin right now. Having a sudden escalation in my work responsibilities could not come at a worse time. But come they have.
 

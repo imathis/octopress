@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Paintballed
 date: "2003-12-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last evening we decided to have Mexican take out. There is a wide lane between the restaurant entrance and the parking lot proper, so I pulled up to the curb by the door and ran in to get our food. As it was ready I was only inside for 4 or 5 minutes. During that time Michele waited in the car.
 

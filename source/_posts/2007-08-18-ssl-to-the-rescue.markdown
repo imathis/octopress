@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: SSL To The Rescue
 date: 2007-8-18
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Upon setting up the office in our new home this afternoon I tried to send an email only to get a "No Socket" error.  I fiddled around with the firewalls (Windows and Zone Alarms) to no avail, and rebooted a couple of times in a faint hope that magic would happen and my mail would be outbound again.
 

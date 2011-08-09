@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fun with .htaccess
 date: 2008-1-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently I have made good use of the Apache .htaccess file to redirect and rewrite URL's to keep visitors from getting page not found errors.  Moving three domains, creating a subdomain or two, and then moving things around again, has created ample opportunity for lost visitors.
 

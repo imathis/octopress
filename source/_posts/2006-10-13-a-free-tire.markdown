@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Free Tire
 date: "2006-10-13"
-link: false
+comments: false
 categories: life
+link: false
 ---
 With an average weekly commute of two hundred miles, not to mention excursions for groceries, dining out, and trips to Illinois, the set of tires I purchased two years ago are worn out. I'm not into the wear indicators, yet, but the wear is uneven enough that the car has started pulling to the left at highway speeds.
 

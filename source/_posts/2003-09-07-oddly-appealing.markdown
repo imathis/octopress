@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Oddly Appealing
 date: 2003-9-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 I found this to be oddly appealing. I'm not sure why, but I find I am attracted to it. Originally I found it on <a href="leslie.harpold.com">Leslie Harpold</a>'s site.
 

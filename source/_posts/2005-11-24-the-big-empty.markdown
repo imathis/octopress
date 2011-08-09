@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Big Empty
 date: "2005-11-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today has been filled with a hollow rushing noise in the space of my heart that Michele filled. I have felt disconnected and apart from everything going on around me, almost as if it was happening to someone else. Michele and I both loved turkey and the ritual of having roasted turkey for dinner. Not being able to fulfill that ritual this year is very hard. Every day is hard, but some days are more poignant than others.
 

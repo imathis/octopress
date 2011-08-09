@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Auto-pilot
 date: 2006-6-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have managed to coast through this week on auto-pilot. Emotionally I have been flat with one or two angry outbursts for flavor. Physically I am exhausted and worn out. Mentally I'm just not focused at all. I've had to resort to making a list of things I need to accomplish this week so that I show up in Decatur with my suit and tie, dress socks and shoes. That it is a holiday shortened week isn't helping matters at all as I feel like it is Wednesday and I have yet another day to prepare.
 

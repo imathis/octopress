@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lifting Again
 date: 2006-9-11
-link: false
+comments: false
 categories: health
+link: false
 ---
 After a three week hiatus to allow a pulled groin muscle to heal I returned to the gym today. I don't think the original pull was really all that bad, but I managed to aggravate it on several occasions by continuing my kendo workouts. As kendo is primarily a right-leg forward activity any movement primarily involves the adductor muscles in the left leg. I sat out for a couple of practices and made heavy use of Aleve for a week or so to get over the worst of it.
 

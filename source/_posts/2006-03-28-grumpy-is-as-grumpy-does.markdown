@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Grumpy Is As Grumpy Does
 date: 2006-3-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the weekend I received a call from one of my coworkers. Usually a call from work like this pertains to work, however this turned out to be a social call. The gist of the conversation was asking me if I would like to come over to their house for dinner one night this week. I found this intrusive and off-putting on several levels.
 

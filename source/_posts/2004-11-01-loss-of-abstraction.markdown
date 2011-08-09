@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Loss of Abstraction
 date: 2004-11-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 The death of my father-in-law on Saturday has filled my mind with numerous thoughts. This is not the first time I have lost someone in my family, but it is the first "parent" I've lost. No matter how well prepared you think you maybe for the death of aging loved one, you never are really ready. Death isn't like saying goodbye and driving away, or hanging up the phone. Death is final and most of us during our lives don't have to many events that are well and truly final.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: All your Sanity are belong to us!
 date: 2003-8-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 We have been dealing with my mother-in-law recently. I love her, and actually have developed a like for her in the 6 or so years that I've known her. She can be very sweet and caring, and a lovely person to know. She can also be the most obstreperous, cantankerous, passive-aggressive person I know. She has been known to visit these two poles of her personality in the same conversation with you.
 

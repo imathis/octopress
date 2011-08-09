@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Hardest Part
 date: "2005-12-12"
-link: false
+comments: false
 categories: life
+link: false
 ---
 The hardest part about going through this grief process isn't that other people can't experience what I am experiencing. They couldn't experience what I was going through when everything was great either. No, the hardest part is the loss of the one place where I was assured of a response that worked for me. No matter what the situation I knew that I could vent, spew, cry, rage, sulk, or whatever until I had expressed the emotional reaction to an outside stimulus. Michele never tried to hurry that process or fix anything for me until I was done with my emotional work. I learned over time how to do that for her as well.
 

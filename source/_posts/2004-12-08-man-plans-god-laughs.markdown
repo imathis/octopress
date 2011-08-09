@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Man plans, God laughs
 date: 2004-12-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the book <cite>Illusions</cite> by Richard Bach, he talks about meeting an advanced soul, and about learning the truth of this lifetime. One of the techniques for discovering truth that he talks about is posing a question in your mind and then opening at random a book or newspaper and reading the first thing that you see aloud. If you are properly focused the text will contain an answer to your question.
 

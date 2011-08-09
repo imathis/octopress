@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Flying Sucks
 date: 2005-6-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday Michele and I traveled home from Norfolk. On Friday evening, after the funeral was completed we decided to return to Norfolk and spend the night in a motel with shuttle service to the airport. Our flight was at 9:10 am, and we didn't want to be up at 4:00 to make the long drive from Currituck County to the airport.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ten Questions about My HTC Droid Incedible
 date: 2010-6-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 1. So, you got a new phone. What is it again?
 

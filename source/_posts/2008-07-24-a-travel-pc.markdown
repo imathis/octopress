@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Travel PC
 date: 2008-7-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sibylle and I are preparing for our next overseas trip, which starts in just six weeks.  Travel brochures, train schedules, dreaming of places to go, et cetera.  Last year, after some deliberation, we opted to not take a laptop with us. Instead I took a 40 GB drive in a USB/Firewire enclosure, and the card readers for our cameras.  We relied on an Internet café for getting email, and to transfer pictures from camera to had drive.  
 

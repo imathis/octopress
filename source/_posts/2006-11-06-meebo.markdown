@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Meebo
 date: 2006-11-6
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I've been a regular user of instant message chat since ICQ first became available (my ICQ id has only 6 digits). With AOL, MSN, Yahoo!, and now Google all offering semi-proprietary chat clients I have accounts on each service. Running five different chat clients is cumbersome and somehow not elegant.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Civil Unions in Illinois
 date: 2011-6-1
-link: true
+comments: false
 categories: links
+link: true
 ---
 <a title="Civil Unions in Illinois" href="http://www.suntimes.com/5703018-417/civil-union-law-for-same-sex-couples-takes-effect-in-illinois.html">Civil Unions in Illinois</a> →
 <br />

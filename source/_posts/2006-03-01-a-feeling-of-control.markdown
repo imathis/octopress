@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Feeling Of Control
 date: 2006-3-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently I've been attending a support group for people who've lost someone to suicide. Group is an interesting experience; on one hand you are with people who've all have experiences similar to yours and have a better appreciation for what you are experiencing. On the other hand you are in a room full of a lot of pain. I've been to a total of three sessions at two different groups and last night's was the most interesting by far.
 

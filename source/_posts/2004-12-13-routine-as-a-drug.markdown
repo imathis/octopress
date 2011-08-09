@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Routine as a Drug
 date: "2004-12-13"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I find ourselves in a pressure cooker these days. Staring in March 2004 when I lost my contract with the State, and continuing through today it seems like every time we turn around there is a new, seemingly out-of-control event impacting our lives. A quick chronology will bring you up to date on our trials and tribulations.
 

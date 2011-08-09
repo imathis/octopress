@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Quiet Thoughts and Memories
 date: 2006-4-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 An email from my mother left me crying uncontrollably this afternoon. In it she related that she is less and less able to do with out oxygen; that she is more and more aware that her days are numbered.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Radio Daze
 date: 2006-3-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 For maybe the last five years I haven't listened to FM radio at all. And for several years prior to that I only listened sporadically, usually to morning drive time shows like "The Bob and Tom Show." Monday night, however, I had a loaner from Lexus while my car was in for service, and without any CDs in hand or my iPod transmitter, I was forced to turn the radio on unless I wanted to listen to silence. Poking the scan button several times I finally landed on the "classic rock" station. I could tell it was the classic rock station because they were playing the same music they play five, or ten or even fifteen years ago.
 

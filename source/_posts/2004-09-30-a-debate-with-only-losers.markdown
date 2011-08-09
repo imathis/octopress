@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Debate with Only Losers
 date: 2004-9-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 Going into tonight's Presidential Debate I expected that Senator Kerry, with his years of experience debating in the Senate, to be the better overall debater. I was not disappointed. I feel that Senator Kerry did a better job of presenting his points and of rebutting President Bush's points.
 

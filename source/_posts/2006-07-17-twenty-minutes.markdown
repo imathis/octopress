@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Twenty Minutes
 date: 2006-7-17
-link: false
+comments: false
 categories: life
+link: false
 ---
 Since my marriage, and until her death, my whole life, was centered around my relationship with Michele. I defined who I was, and measured how I was doing, by that relationship. To have it wrested from me suddenly and without warning has left me adrift, I have no grounding upon which to stand.
 

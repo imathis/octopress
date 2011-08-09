@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: New Host, New Site
 date: 2007-12-8
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Last night I took the first major step towards moving all the sites I own or manage to <a href="http://bluehost.com" title="Blue Host">Blue Host</a>.  Having learned from my first attempt at signing up, that the account name would be composed of characters from the initial domain name, I was faced with a bit of an issue.  Of the three domains I wanted to move or create at Blue Host, none decomposed into an account name I was happy with.
 

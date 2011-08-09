@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Weighty Matter
 date: 2007-6-14
-link: false
+comments: false
 categories: health
+link: false
 ---
 Just over a year ago, on June 12th, I bought a bathroom scale and started tracking my weight.  I weighted 250 pounds on any given day, and I wanted to weigh less.  A lot less.
 

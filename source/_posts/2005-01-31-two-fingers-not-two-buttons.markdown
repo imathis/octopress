@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two Fingers, Not Two Buttons
 date: 2005-1-31
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the many debates approaching near religious zeal in the Apple camp revolves around the continued one-button form factor Apple uses for their mice and track-pads. In order to access right-click menus or functions one must utilize the "CTRL" key or use a third-party mouse.
 

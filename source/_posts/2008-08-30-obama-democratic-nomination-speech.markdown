@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Obama Democratic Nomination Speech
 date: 2008-8-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 To Chairman Dean and my great friend Dick Durbin; and to all my fellow citizens of this great nation;
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Intruder
 date: 2004-3-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 I took my laptop and went to the park for lunch today. There weren't any wireless connections I could find from inside the park, but as I was leaving one sounded, so I parked on a side street and tried to connect. Being unsuccessful I went to a spot I know has a connect able, un-encrypted wireless access point and surfed the Internet from there.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 365 Days
 date: 2005-3-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 It has been one year since I lost my contract in Illinois. As I sit here this morning it is hard to believe it has been <em>just</em> a year. Seems more like ten years.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Inguinal Nerve
 date: 2011-1-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Many, many years ago, when I was serious about bicycling and rode year round, I rarely had trouble with my inquinal nerve getting pinched. Today, however, during my trainer ride in the garage I experienced numbness in my groin. It's an odd sensation, not one I really recommend, and I hope that minor adjustments to my bicycle's geometry can address it.
 

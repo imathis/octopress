@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Aging Smells
 date: 2005-8-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 I know that the usual phrase is "aging stinks" but in my case it smells. Or rather I have olfactory hallucinations now that I never had before. They're called 'dysosmia' and they can be caused by any number of physiological or neurological events. In my case I strongly suspect that sinus infection and or allergies are the root cause.
 

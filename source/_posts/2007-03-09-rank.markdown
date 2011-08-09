@@ -1,9 +1,9 @@
 --- 
 layout: post
-comments: false
 title: Rank
 date: 2007-3-9
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 My latest <a href="http://zanshin.wordpress.com/" title="zanshin.wordpress.com">karate related blog</a> posting is now available. Go have a <a href="http://zanshin.wordpress.com/2007/03/09/rank/" title="Rank">read</a>.

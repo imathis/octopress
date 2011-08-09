@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Staying Grounded
 date: 2009-2-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 <a title="Sibylle Kuder" href="http://sibyllekuder.com" target="_blank">Sibylle</a> discovered this on the <a title="DailyOM" href="http://dailyom.com/" target="_blank">DailyOM</a>, and I thought it was well worth sharing.
 ## Staying Conscious

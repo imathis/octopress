@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Good Cry
 date: 2003-6-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 I had a good cry yesterday afternoon about my whole employment situation. All the fears and worries I've got about my future came bubbling up to the surface and I came apart.
 

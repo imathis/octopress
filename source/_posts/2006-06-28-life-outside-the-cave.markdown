@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Life Outside The Cave
 date: 2006-6-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the books I'm currently reading is all about the tipping point; that place in the lifetime of a thing where a phase transformation occurs. For example the tipping point between liquid water and ice occurs at 32 degrees Fahrenheit. (I've only just started the book so my understanding and example maybe a bit off.) There's been a tipping point recently in my life it seems.
 

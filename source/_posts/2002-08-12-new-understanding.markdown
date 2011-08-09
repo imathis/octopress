@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: New Understanding
 date: 2002-8-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 We had a good weekend. It was rough at times as I was doing a lot of emotional growing. The issues that I am getting down to are difficult to expose, let alone resolve. I fight against the changes because I am afraid of where I will be afterwards. Even though I understand that these changes are good for me and necessary for my continued emotional health, it is scary to leave behind what I have known for so long. Habits, good or bad are hard to break. Emotional habits are even harder because they are non-visual, you can't point to it and say, "that's that habit I am trying to break."
 

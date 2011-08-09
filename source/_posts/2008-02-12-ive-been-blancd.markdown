@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: I've Been Blanc'd
 date: 2008-2-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 Great Googly Moogly!
 

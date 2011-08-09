@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Refreshing Change
 date: 2006-2-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the first time since 1999 I am getting a tax refund. In fact, when all three of my tax returns are combined (one federal and two state) I will net a tidy sum. Given the difficulties my taxes have represented for the last 5 years this is a huge boost to my overall sense of well being. My only regret is that Michele isn't alive to see a return to normalcy around this issue.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Completing the First Step
 date: 2000-4-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 "Line up!"
 

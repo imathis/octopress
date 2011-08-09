@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Amazing
 date: 2006-3-13
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 From <a href="http://iwalt.com" title="iWalt">iWalt</a> (and Google Video) comes this amazing display of juggling.
 

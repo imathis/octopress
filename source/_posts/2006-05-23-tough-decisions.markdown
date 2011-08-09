@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tough Decisions
 date: 2006-5-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 My father called me this evening. He is now faced with some brutally difficult decisions regarding my mom. She is weak enough now that she is no longer able to stand or walk. Getting from her bed to the bathroom is extremely difficult, and my father is afraid that it is rapidly becoming more than he can handle. He called so that he could voice what he thought were the options out loud, before asking the hospice nurse tomorrow what options they could provide.
 

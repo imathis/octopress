@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Travel Thoughts
 date: "2003-11-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 We are in the midst of that most American of traditions, traveling to be with family for a major holiday. The has brought us into contact with several other major American traditions, some good and others not so good.
 

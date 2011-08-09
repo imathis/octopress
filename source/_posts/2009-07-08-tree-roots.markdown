@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tree Roots
 date: 2009-7-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 <p>Earlier this week the drains in our bathroom started acting funny. During my shower Monday morning the toilet started gurgling and partially drained itself. Flushing the toilet didn't help to raise the water level in the bowl, which had retreated to just above the outflow opening.</p>
 <p>Tuesday it happened during my shower again, and also for Sibylle. The tub wouldn't drain normally after her shower either, so she called our landlord. He promptly came out and pour a whole bottle of commercial grade drain opening down the sink drain and let it percolate for a couple of hours. After running hot water down both the tub drain and the sink everything appeared to be working properly again.</p>

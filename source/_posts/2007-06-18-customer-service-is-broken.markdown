@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Customer Service is Broken
 date: 2007-6-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the weekend I added international calling to my phone.  This seemingly simple goal was made overly complicated by the "customer service" paradigm employed by AT&amp;T.
 

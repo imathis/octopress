@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Zone Alarm Blocks Internet After Hibernation
 date: "2007-10-11"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I have a love-hate relationship with Zone Alarm.  Operating a Windows XP machine without virus and adware/spyware protection is foolhardy at best, so I appreciate having it on my laptop as a software barrier.  However, it often times gets in the way of normal operations making wish I could operate safely without it.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Father Knows Best
 date: 2007-1-31
-link: false
+comments: false
 categories: life
+link: false
 ---
 As I transition from being a consultant to being an employee again there are some obvious changes occurring, and some that aren't obvious. The best analogy I can think of is the difference between high school and college. In high school you are told what to do, where to go, and made to toe the line at every turn. You can't even wander in the hallway during class without a pass.
 

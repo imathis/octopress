@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Unbearable Heaviness of Grief
 date: 2006-3-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 Grief slinks along in the shadows, waiting for you to drop your guard before  grabing you, dragging you back into the darkness you were trying to leave. Grief hates the light, and hates you for being able to survive in the light. Grief is a demon that only knows darkness, despair, pain, and suffering. This demon exists between you and the world of light you lived in before, and the only way back to that world is by crossing through grief's territory.
 

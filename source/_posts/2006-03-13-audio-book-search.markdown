@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Audio Book: Search"
 date: 2006-3-13
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 <i>Search: How Google & Its Rivals Rewrote the Rules of Business & Transformed Our Culture</i> by John Battelle is a very interesting look at the short history of search on the Internet. I particularly found the author's ideas about where the Internet might go as a result of revenues made from click streams and search keywords interesting. While Google is the central theme to this book, considerable background information about the search industry is provided which should be of interest to any one who has been online for the past ten years.
 

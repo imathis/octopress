@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Using Synergy Over a Secure Connection
 date: "2009-12-10"
-link: false
+comments: false
 categories: life
+link: false
 ---
 At work I now have four computers and five screens, all controlled from one keyboard and mouse. Here's how I did it.
 ## Hardware

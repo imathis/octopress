@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fifteen Dollars
 date: "2006-11-21"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday I set out to pay some bills online. Most of the creditors I have sport payment pages on their web site making it easy to point, click, and pay. One loan, however, proved to be the exception. Several years ago, when purchasing the two Apple computers I own, a line of credit was established at MBNA. The old MBNA site had a mildly complicated but still navigable online payment process that I used to make payments. Recently however, MBNA has been merged into Bank of America, and the online payment experience just isn't working anymore.
 

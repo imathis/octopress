@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Crisis of Faith
 date: 2003-6-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 I am having a crisis of faith this morning. My employment situation is such that I may have to find a new job soon. It has been almost three years since I found my current position. In that time the technology that I have been using recently has gone from a cutting edge, in demand skill; to a little heard of dead-end.
 

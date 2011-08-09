@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Living Upstairs Would Make Robbery Harder, Right?
 date: 2006-11-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 I'm thinking about moving....
 

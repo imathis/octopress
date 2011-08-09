@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Father Son
 date: 2006-8-29
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 Last spring, in one of the final conversations I had with my Mom, she expressed a concern for my Dad, her husband. She said that she didn't know what he was going to do. I promised her that I would look after him. I told her that I was planning on offering to be a Sherpa for his camera equipment if he wanted to take a trip somewhere to shoot pictures.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Enormity
 date: 2006-4-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sometimes the enormity of Michele's death hits me particularly hard. The very idea of death is so hard to wrap your mind around that, when coupled with the death of your life's love, you really can't grasp it all. Or even begin to understand it all.
 

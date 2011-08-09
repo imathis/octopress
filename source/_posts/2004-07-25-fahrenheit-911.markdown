@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fahrenheit 9/11
 date: 2004-7-25
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 Go see this movie. Do it today. Take your friends, your family, your coworkers. I don't care if you agree with Michael Moore or not. His film is the first alternative view we have had of the events leading up to and following the terrorist attacks on the United States in September 2001.
 

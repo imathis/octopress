@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Finite Number
 date: 2006-4-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 Whether we want to admit it to ourselves or not, each of us has a finite number of days here on Earth. The metaphysics of reincarnation aside we all will come to the end sooner or later. For my mother the end is now sooner. She herself told me in an email last weekend that she felt her days were numbered. My father tells me she is eating less and sleeping more. Oxygen is required for all but the most idle of activities, and her blood counts have been too low two weeks running for any chemotherapy.
 

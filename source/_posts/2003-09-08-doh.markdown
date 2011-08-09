@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: D'Oh!
 date: 2003-9-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today while I was reviewing our bank statement online I noticed a charge from my former hosting company. I thought I had cancelled the last account I had there when I transferred my business domain to my current host. I was therefore upset about the $19.95 charge I was seeing in the register.
 

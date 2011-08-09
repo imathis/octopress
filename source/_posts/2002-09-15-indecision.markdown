@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Indecision
 date: 2002-9-15
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For some time now I have lusted for an Apple Powerbook G4. Even though I am a die-hard PC user I can't get the form and function of this laptop out of my mind. I've gone to the local Apple store and touched one. This only made my desire stronger. The switch commercials on TV haven't helped either.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Movie: Predator II"
 date: 2006-5-21
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 <i><a href="http://imdb.com/title/tt0100403/" title="PredatorII">Predator II</a></i> isn't nearly as good as the original. The acting is a bit forced, and the whole "LA as a war zone" was way overdone.
 

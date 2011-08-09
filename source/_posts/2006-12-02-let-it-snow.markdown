@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Let It Snow
 date: 2006-12-2
-link: false
+comments: false
 categories: photography
+link: false
 ---
 <div style="float: right; margin-left: 10px; margin-bottom: 10px;">
 <a href="http://www.flickr.com/photos/zanshin/310704030/" title="photo sharing"><img src="http://static.flickr.com/101/310704030_3827ddfd16_m.jpg" alt="" style="border: solid 2px #000000;" /></a>

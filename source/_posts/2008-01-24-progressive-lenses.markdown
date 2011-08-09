@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Progressive Lenses
 date: 2008-1-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 At my eye exam yesterday I learned that my vision does in fact need some help.  Moreover, I learned that my astigmatism has returned.  Here's my prescription:
 <table padding="3px">

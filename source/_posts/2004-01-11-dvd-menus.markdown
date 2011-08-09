@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: DVD Menus
 date: 2004-1-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 This afternoon Michele and I watched "Bruce Almighty" on a rented DVD. While DVDs maybe better than VHS tapes in many regards there is one area of the DVD viewing experience that I could live without.
 

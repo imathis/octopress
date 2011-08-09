@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Vacation Malaise
 date: 2006-9-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 I'm getting ready to take a week's vacation with my father in Oregon, and I am finding myself somewhat down. Normally in the days before a trip I'd be up and excited, but this trip is different on many levels and for many reasons.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Dr. William H. Cosby, Jr.
 date: 2002-5-11
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 We saw Bill Cosby tonight. Live. In person. It was most excellent. I had seen him 22 years ago while in college and tonight's performance was every bit as good as the first one. We laughed until our sides hurt and then we laughed some more.
 

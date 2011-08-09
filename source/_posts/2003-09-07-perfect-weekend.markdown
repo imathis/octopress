@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Perfect Weekend
 date: 2003-9-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I had a wonderful weekend. Little of any consequence was accomplished except for rest, relaxation and fun. We swam and napped, cooked in and ate out.
 

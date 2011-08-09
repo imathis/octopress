@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sharon Michele McAvoy Nichols
 date: "2005-10-12"
-link: false
+comments: false
 categories: family
+link: false
 ---
 <img src="http://zanshin.net/images/mmn.JPG" alt="Michele Nichols" height="338" width="450" />
 December 24, 1949 - October 10, 2005

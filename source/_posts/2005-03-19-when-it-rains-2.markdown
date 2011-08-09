@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: When It Rains
 date: 2005-3-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 After months of no activity on our house for sale in Illinois we suddenly find ourselves at the center of a small "bidding war." Last weekend we received an offer, and after a round of verbal bidding and counter bidding, agreed to a contract. The prospective buyers have to sell their home first, so the contract contains a contingency. The terms of the contingency allow them 24 hours to remove it should we get another offer.
 

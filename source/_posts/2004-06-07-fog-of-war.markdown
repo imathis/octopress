@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fog of War
 date: 2004-6-7
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 <img src="http://zanshin.net/images/fogofwar.jpg" style="margin: 12px; padding: 0px" align="left" />We rented and watched <a href="http://imdb.com/title/tt0317910/" title="Fog of War">"Fog of War: Eleven Lessons from the Life of Robert S. McNamara"</a> yesterday. It was an absolutely compelling look at events from the fire bombing of sixty seven (yes 67) cities in Japan during World War II to Vietnam, and the Cuban Missile Crisis.
 

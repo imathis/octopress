@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bush Doesn't Care About Us
 date: 2004-2-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 Presidential Appointee George W. Bush announced his budget recently. Here's what the <a href="http://www.suntimes.com/output/jesse/cst-edt-jesse03.html" title="Chicago Sun Times">Chicago Sun Times</a> had to say about it, in part:
 <p class="quote"> The president's budget reveals his priorities, what he truly cares about. It is not a reassuring picture.</p>

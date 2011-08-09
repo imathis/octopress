@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Gym
 date: 2008-3-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sibylle and I have joined a local gym.  The mother of one of her students remarked about how much she enjoyed her fitness club, which got Sibylle to looking at our options.  We went and visited the Prairie Life Center nearest us one Friday evening about a month ago, and had a tour.
 

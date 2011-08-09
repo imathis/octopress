@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Whoa. I have seen the Revolution
 date: "2003-11-11"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Today I finally saw the third and final installment of The Matrix movies. I had studiously avoided reading any critiques beforehand so I could measure its merits for myself. Still, I was aware that there were a significant number of people (based on weblogs I read) that were disappointed in the finale.
 

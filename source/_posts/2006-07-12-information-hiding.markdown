@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Information Hiding
 date: 2006-7-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 On Saturday, after getting home from my kendo workout, I noticed a new entry in the caller id register on my phone. My father had called but not left a message. At the time I thought this was a bit odd as he had shared with me his plan to be in Chicago for the weekend to visit area art fairs. After taking my shower I checked my email and discovered he had been hospitalized overnight Thursday after his blood pressure bottomed out.
 

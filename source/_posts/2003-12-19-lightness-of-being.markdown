@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lightness of Being
 date: "2003-12-19"
-link: false
+comments: false
 categories: life
+link: false
 ---
 For sometime now I have felt depressed, weighted down, and generally uninterested in many aspects of life. I wanted to make this the return of my annual depression, but somehow I knew there was more to this than just seasonal unhappiness.
 

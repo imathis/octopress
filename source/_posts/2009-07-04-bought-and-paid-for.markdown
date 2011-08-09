@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bought and Paid For
 date: 2009-7-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 <p>Today I made the last payment on the 2001 Lexus LS 430 that is our primary car. Sometime next week I will call the Credit Union and start the process of getting the title sent to me. In the twenty-five years that I've been buying cars, this will be the first one I have owned outright. </p>
 <p>Starting with a 1984 Pontiac Fiero, in February 1984, I have made payments on the following assortment of vehicles:</p>

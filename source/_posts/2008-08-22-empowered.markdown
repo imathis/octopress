@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Empowered
 date: 2008-8-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning I had a dentist appointment to have a couple of small cavities filled.  Growing up when I did, I have a almost paralyzing fear of the dentist.  Between braces, three abscessed teeth, a couple of root canals, and one root amputation, I've had more than my fair share of difficult dental procedures.  My childhood dentist was a fearful character in my life; he used to tell me that he was spraying rat poison in my mouth, to keep me from swallowing when he sprayed fluoride on my teeth.  "<em>Don't swallow!  Rat poison!</em>"
 

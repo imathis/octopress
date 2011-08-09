@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: ssh!
 date: 2003-7-17
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Recently I have been experimenting with <strong>ssh</strong> and <strong>port forwarding</strong>. Many people today have access to the internet while they are at work. This access usually comes at the price of privacy. The data packets that comprise their activities, be they web surfing or instant message chatting, are monitored and tracked. More than a few companies aggressively pursue violations of whatever access policy is in place.
 

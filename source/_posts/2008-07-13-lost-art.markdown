@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Lost Art
 date: 2008-7-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 When I was a child going to the grocery store and watching the bag boy work was always fascinating to me. Standing at the end of the conveyer belt, he sorted items into different bag.  Some items were shunted aside for later bags, occasionally an item was repositioned in a new bag.  They were fast and efficient, able to keep up with the checker, and having everything in the cart ready to be wheeled to our car by the time my mom had paid and gotten her change and receipt. 
 

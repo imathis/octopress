@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Thirteen Pounds or 154 Bucks
 date: 2007-5-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the last year, maybe year and a half, I have tossed my pocket change into an old tupperware bin in the kitchen junk drawer.  The bin finally filled to where coins were falling out of it into the drawer itself.  And the drawer was getting harder to work as the weight of the coins was causing it to bind in its tracks a bit.
 

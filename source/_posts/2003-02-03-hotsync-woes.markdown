@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: HotSync Woes
 date: 2003-2-3
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Last May for my birthday, Michele gave me a Palm m515. It is a wonderful device that I use everyday. This is my third Palm, following a Palm Vx and a Palm Pilot (the original!).
 

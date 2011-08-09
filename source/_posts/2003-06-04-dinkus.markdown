@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Dinkus
 date: 2003-6-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 We have a new cat in our household. Her name is Dinkus. She's a 3-month old black-on-white tabby with a pink nose. We brought her home from the Animal Protective League shelter yesterday afternoon. Going from a smallish 4 foot cage there to our 1800 square foot house filled her with energy. She spent much of the evening racing about in her new space.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What Not To Do
 date: 2007-4-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 If you want to piss me off, if you want to do something that will cause me to hold a grudge, simply agree to meet me somewhere and then don't show up.  Nothing upsets me more or faster that being stood up.
 

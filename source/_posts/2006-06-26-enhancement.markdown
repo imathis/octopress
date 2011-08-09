@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Enhancement
 date: 2006-6-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 Several weeks ago I had a followup visit with the optometrist at Lasik<em>Plus</em> and he cleared me for the enhancement to my right eye any time I wanted after June 23rd. Since I'll be unable to drive myself home I needed to coordinate a ride prior to setting the date, so rather than schedule it that day I called in a day or two later and scheduled the corrective surgery for June 29th.
 

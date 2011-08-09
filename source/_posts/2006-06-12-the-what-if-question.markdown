@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The "What If" Question
 date: 2006-6-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 As anyone who has experienced the loss of a loved one knows all too well, "what if" questions can become the bane of your existence. At every turn you are faced with some thought or question that makes you wonder if things could have turned out differently. Did you miss an indication or opportunity? Was what ultimately happened fated or could it have been delayed or avoided?
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mac Rising
 date: 2007-11-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Nearly five years after first purchasing a couple of Macintosh computers (largely due to OS X) I find myself "switching" again.  As a software architect I spend considerable amounts of my work day developing models and diagrams using proprietary tools that only work on the Windows operating system.  Two years ago, when I had saved enough money, I purchased a ThinkPad laptop expressly to be able to work with the Rational tool set on my own machine.
 

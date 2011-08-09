@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Meltdown
 date: "2005-12-21"
-link: false
+comments: false
 categories: life
+link: false
 ---
 It has been a little while in coming and, given what this weekend is, I wasn't surprised when I boiled over today and had to leave work early. The combination of stresses in my life just got to be too much so I left rather than say or do something that could come back to haunt me.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Family Ties
 date: 2006-3-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the weekend I traveled to Illinois to see my family, specifically my mother. Mom, and my oldest biological niece, share a birth date so Saturday's party was for both. Knowing that my mother's time is now limited made the trip hard in many ways.
 

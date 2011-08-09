@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: My Dear American Friend
 date: 2008-10-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 Terrific send up of those 419 scams from Africa.  Originally seen <a title="Making its way around the Internet" href="http://www.redstate.com/diaries/redstate/2008/oct/01/making-its-way-around-the-internets/">here</a>.
 

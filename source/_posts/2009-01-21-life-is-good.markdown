@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Life is Good
 date: 2009-1-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sibylle's sister (Hi, Schwesterchen!) asked today, via email, how I was liking my new job, and how we were liking living in Manhattan.
 ## Location, Location, Location

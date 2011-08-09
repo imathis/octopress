@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Nerd Angst "
 date: "2009-10-19"
-link: false
+comments: false
 categories: life
+link: false
 ---
 The new <a title="Apple - MacBook Pro" href="http://www.apple.com/macbookpro/design.html" target="_blank">MacBook Pro</a> has been ordered. It's status is still "not yet shipped" more than 48 hours after the order was completed, apparently ordering on a Saturday has disadvantages. However, I can make good use of the waiting time by preparing for how to transferring nearly 90 GB of data and applications from my PowerBook to the new MacBook Pro.
 ## Options

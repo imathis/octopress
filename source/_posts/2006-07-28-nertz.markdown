@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Nertz
 date: 2006-7-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 Meeting people through a computer services has pluses and minuses. One of the biggest minuses is the totality of the end of communication. Once either party moves the match to "closed" the other party is helpless. Over the past few days I have been exchanging messages with a woman who I found to be very engaging and insightful. I was having fun "talking" to her.
 

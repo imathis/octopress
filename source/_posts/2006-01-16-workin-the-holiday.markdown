@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Workin' The Holiday
 date: 2006-1-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 Because I can't read a calendar, or rather didn't try to read one, my short mini-vacation is scheduled for next weekend rather than this three-day weekend. D'oh!
 

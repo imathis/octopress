@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Antsy in the Night
 date: "2005-10-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Every night now the same pattern happens. I move through the evening until I get sleepy and then I go to bed. Sometimes I lie in bed watching television until I get sleepy. Some nights I fall asleep and stay asleep until morning. Other times, like this evening, I can't get my mind to stop racing when I close my eyes.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Day of Cooking
 date: 2003-11-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I spent yesterday morning cooking both a pot of spaghetti sauce and a crock pot of swiss steak. Originally we had planned on preparing and having swiss steak for dinner. It is one of our favorite meals and we hadn't made it in too long.
 

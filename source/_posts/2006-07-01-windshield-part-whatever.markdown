@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Windshield, Part Whatever
 date: 2006-7-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning's windshield repair got off to an inauspicious start when the technician called me from my work location. Oops. Luckily it's only about a 25 minute drive and he was able to come straight to the apartment.
 

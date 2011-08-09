@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fifty-Five
 date: 2007-8-19
-link: false
+comments: false
 categories: health
+link: false
 ---
 This morning when I got on the scale my weight was 195.2.  I've now lost fifty-five pounds.  55. <em>Fünfundfünfzig</em>.
 

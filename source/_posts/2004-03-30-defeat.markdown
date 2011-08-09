@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Defeat
 date: 2004-3-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today I am feeling defeat. The dozens of resumes I've sent out in the past 11 days haven't generated a single phone call or e-mail. The only places I've talked to were cold calls made to me based on my monster profile. Only one of those sounded promising, and it appears to have dried up.
 

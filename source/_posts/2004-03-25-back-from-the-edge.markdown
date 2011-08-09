@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Back From The Edge
 date: 2004-3-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past week I have been dealing with the emotional fallout of losing my job. My wife and I have talked about many options, and many geographical solutions to this situation. No less than six states and two countries have been considered in our search for the next place.
 

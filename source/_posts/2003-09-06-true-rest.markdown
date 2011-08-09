@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: True Rest
 date: 2003-9-6
-link: false
+comments: false
 categories: health
+link: false
 ---
 I have been moody, morose, and feeling unfulfilled for some time now. From outward appearances my world is going in all the right directions. My employment situation is headed in a good direction, our finances are back under control. I have the love and companionship of a wonderful, beautiful woman; who is my friend as well as my true love. But at the end of the day I am not satisfied.
 

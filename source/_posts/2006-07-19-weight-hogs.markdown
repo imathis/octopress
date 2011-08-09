@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Weight Hogs
 date: 2006-7-19
-link: false
+comments: false
 categories: health
+link: false
 ---
 In almost every group activity there is an individual or two that makes the rest of us uncomfortable. While I've only been to the gyn a handful of times I've already discovered the sub-species that inhabits that territory.
 

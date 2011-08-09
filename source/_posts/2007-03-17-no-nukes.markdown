@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: No Nukes
 date: 2007-3-17
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 After <a href="http://java.sun.com/developer/technicalArticles/J2EE/petstore/" title="Web 2.0 Petstore">reading about the Web 2.0 version of Sun's Petstore</a> application, I downloaded it to see for myself. At the end of the software license agreement was this line:
 <cite>

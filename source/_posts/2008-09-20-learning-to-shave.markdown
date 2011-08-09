@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Learning to Shave
 date: 2008-9-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 For my 15th or 16th birthday, my parents gave me an electric shaver.  At the time I only needed to shave every few days, and the speed and convenience of the electric was a good fit for my teenage approach to shaving.
 

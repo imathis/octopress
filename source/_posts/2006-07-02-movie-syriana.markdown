@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Movie: Syriana"
 date: 2006-7-2
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 I watched <i><a href="http://imdb.com/title/tt0365737/" title="Syriana">Syriana</a></i> yesterday, and I'm still trying to figure out just what the hell it was about. I got the part about oil being exploited by corrupt and greedy men. I got the part about how the American people don't want justice but rather the illusion of justice. And I guess Matt Damon's character had to fall from grace and nearly be blown up before he saw the error of his ways.
 

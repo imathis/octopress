@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tivo and the Oscars
 date: 2004-3-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 My wife and I are big <a href="www.tivo.com" title="Tivo">Tivo</a> fans. We bought our first unit three years ago and have been avid users ever since. The problem with one Tivo is that it isn't two Tivos. So we bought a second one, a Series 2, just last month. Due to our viewing habits we have the original one located in our bedroom, for late night viewing of old situation comedy reruns. The Series 2 machine is in our home office area, where we watch the rest of our weekly schedule. The big screen television in the living room is now used for DVD movies and special programs.
 

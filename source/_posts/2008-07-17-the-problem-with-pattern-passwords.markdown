@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Problem with Pattern Passwords
 date: 2008-7-17
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Increasingly the places where I work required frequent password changes.  And the new password policies also tend to stipulate lengthy, complicated passwords.  "Must contain upper and lower case letters, numbers, symbols, et cetera."  The kicker is not being allowed to repeat a password for so many iterations.
 

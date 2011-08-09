@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Omen
 date: 2007-1-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the two and a half years that I have been at my current engagement I have had surprisingly few problems with my workstation. Microsoft Windows is often maligned but XP has proved to be a stable platform for me. Or at least until this morning.
 

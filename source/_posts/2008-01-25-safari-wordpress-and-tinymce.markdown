@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Safari, Wordpress, and TinyMCE
 date: 2008-1-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 The visual editor provided with Wordpress is actually an implementation of <a href="http://tinymce.moxiecode.com/" target="_blank" title="TinyMCE">TinyMCE</a>.  Contained in the Wordpress implementation is coding that checks the browser type.  The coding following at least one of the Safari checks strips out all paragraph tags (&lt;p&gt;).  This means that any entry you either edit or create using Safari turns in to one huge block of text the instant you save or publish.  Not what you want, believe me.
 

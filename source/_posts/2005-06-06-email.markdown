@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: EMail
 date: 2005-6-6
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I've been using email in one form or another since the early 1980s. Then I worked for a midwestern utility company that had a mainframe based email package that, while cumbersome by today's standards, worked and was my introduction to the wide-world of electronic communication.
 

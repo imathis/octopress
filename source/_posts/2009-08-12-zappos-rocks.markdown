@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Zappos Rocks
 date: 2009-8-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday afternoon, about 1:30 Central time, I ordered a pair of shoes from Zappos.com. The are famous for their customer service, and free shipping plus free returns. Last night I got an email from them stating that my order, while made with the free shipping option, was being bumped up to a faster shipping option.
 

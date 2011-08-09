@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Diminished Capacity
 date: 2005-1-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ever since learning my mother had inoperable lung cancer I feel as if I have been operating at a diminished capacity. My thought processes have become muddy and indistinct; the mental sharpness that I normally possess is not currently attainable. There are periods of time where I just sit and stare, not thinking about anything, not processing any stimulus, not being aware of the passage of time. I suspect that were my thoughts sharp and clear I would be disturbed by this lack of focus. However, the silver lining of this malaise is a general lack of concern. I am too removed from myself to work myself up over much of anything.
 

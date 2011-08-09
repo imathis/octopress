@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Now Let's Bailout the Home Owners
 date: 2008-10-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday the $700 Billion bailout of Wall Street was signed by President Bush.  Like many Americans I felt scared and uncertain about the financial crisis and the need to do something about it.  We won't know for sometime whether history will see this as an intelligent response to the situation, or a knee-jerk reaction. However, it is done.
 

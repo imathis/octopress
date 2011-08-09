@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: President Kennedy's Moon Speech
 date: 2011-5-25
-link: true
+comments: false
 categories: links
+link: true
 ---
 <a title="Setting Goals for American Space Exploration" href="http://www.nasa.gov/multimedia/videogallery/index.html?media_id=90751431">Fifty Years Ago Today</a> →
 <br />

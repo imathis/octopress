@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Pez-heads
 date: 2003-9-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 Okay. I order a lot of stuff online. Books, DVDs, software, linens, you-name-it. No lines, shop when I want, wonderful convenience. That is until some pez-head company finds a way to make this process fail.
 

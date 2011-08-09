@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Access Denied
 date: 2004-2-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past year or so I have enjoyed having my PowerBook at work, especially since I was able to plug it into the LAN there and have full internet access. Through the magic of DHCP it was assigned an IP address, and thanks to my knowledge of an open HTTP proxy, I was able to surf the web, exchange chat messages, and generally enjoy the Internet.
 

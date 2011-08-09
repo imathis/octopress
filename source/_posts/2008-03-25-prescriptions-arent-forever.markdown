@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Prescriptions Aren't Forever
 date: 2008-3-25
-link: false
+comments: false
 categories: family
+link: false
 ---
 Twice in recent months, Sibylle and I have discovered that prescriptions aren't forever.  Our oldest cat, <a href="http://zanshin.net/tag/nekko" title="Tagged Nekko">Nekko</a>, has diabetes and consequently gets insulin twice daily.  The original prescription was labeled "99 refills," which at roughly three months per fill, would last for more than 24 years.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Replacement Value
 date: "2006-11-10"
-link: false
+comments: false
 categories: random
+link: false
 ---
 Many of you, who have home owners or renters insurance, may have a "replacement value" clause. The common misconception is that when your insured widget, gewgaw, or family heirloom is lost, damaged, or stolen you'll get enough money to go get yourself a new one. This is a nice misconception, but a misconception nonetheless.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Posting Record
 date: 2006-2-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Wow.
 

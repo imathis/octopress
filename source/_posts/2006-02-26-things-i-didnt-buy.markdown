@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Things I Didn't Buy
 date: 2006-2-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the semi-destructive behaviors I have started to exhibit as a result of my depression is spending money. Buying something new gives me a short high, a feeling of goodness and lightness. Unfortunately the feeling never lasts long, and I frequently regret having made the purchase in the first place. Several items I've recently purchases haven't worked the way I wanted, or for some other reason didn't satisfy, and have been taken back.
 

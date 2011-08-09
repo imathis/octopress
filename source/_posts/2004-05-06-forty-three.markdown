@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Forty-Three
 date: 2004-5-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 Forty-three things about me in honor of my Forty-Third birthday:
 

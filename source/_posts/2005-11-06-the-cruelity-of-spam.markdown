@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Cruelity of Spam
 date: 2005-11-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 So one flavor of spam spoofs the sending address to be the same as the receiving address. Thus it looks like the mail came from yourself. I am not sure what the asshole creating the spam thinks this will cause me to do, but there you go.
 

@@ -1,9 +1,9 @@
 --- 
 layout: post
-comments: false
 title: "Movie: Predator"
 date: 2006-5-21
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Rating: Still one of my favorites

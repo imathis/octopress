@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: iPad Disappeared from iTunes and How to Fix
 date: 2011-3-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the weekend I needed to charge my iPad as it had gotten down to about 5% battery life. Normally when I plug it into the computer the iPad screen shows that it is syncing, and when I go to iTunes on the computer I can see the device listed in the left-hand sidebar. Not this time. iPhoto started, since there are pictures on the iPad, but iTunes was ignorant of the iPad's presence.
 

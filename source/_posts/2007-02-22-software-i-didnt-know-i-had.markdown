@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Software I Didn't Know I Had
 date: 2007-2-22
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Last night I was poking around in the Applications folder on the iMac and discovered, much to my astonishment, that I own a copy of Quicken. It's the 2002 version, which neatly coincides with the age of the machine, making me think that it was an extra included when the machine was originally purchased four years ago. Somehow it has remained, lurking, in the Applications folder all this time without my noticing it.
 

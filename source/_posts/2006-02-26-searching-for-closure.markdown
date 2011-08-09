@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Searching For Closure
 date: 2006-2-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ever since getting the news that my mother's cancer is back, and will likely kill her this time, I have been searching for a path that will lead me through her death. I've been aware for several years now that both of my parents were getting older and that their health was becoming an increasing factor in their lives. When Michele and I moved to Vancouver one of the big issues for me was realizing that I was limiting the number of times I would see my parents again simply by living so far away.
 

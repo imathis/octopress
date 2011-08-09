@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Million Five
 date: 2008-1-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Being a nerd, I have a salary history spreadsheet that contains every pay increase, every promotional raise, and every new job I've had in over the past twenty-five years.  As much as possible these events are tied to the actual dates, therefore I can calculate how much I made at each salary.  
 

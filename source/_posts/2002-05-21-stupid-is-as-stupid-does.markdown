@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Stupid is As Stupid Does
 date: 2002-5-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have to pay in order to park at work. 480 bucks a year, or roughly $2 per day. It isn't much when you consider that the lot is close (less than a block away) and I always have a space.
 

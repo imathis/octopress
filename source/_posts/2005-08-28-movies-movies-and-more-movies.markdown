@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Movies, Movies, and More Movies
 date: 2005-8-28
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 With the primary Tivo on the <a href="http://www.zanshin.net/blogs/000621.html" title="Welcome. Powering up...">fritz</a> we've been watching movies. Lots of movies.
 

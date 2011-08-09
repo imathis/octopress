@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How Very Rude
 date: 2001-8-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 We had a pool installed in our back yard last month. Everything is done except for restringing the fence.          We are fortunate enough to live in the county where our original 42" chain link is high          enough. I've called a couple of places to get estimates and finally connected with one company. We          set an appointment for noon. This was about 9:00 am the same day.
 

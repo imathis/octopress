@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Feeling Better
 date: 2006-6-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 Several times in recent weeks I've found myself thinking about the future. Not the gloomy I'm-alone-in-a-cave-forever future, but the I'm actually-living-and-maybe-have-a-meaningful-relationship future. Shocking, but true. Don't tell anyone, it'll ruin the brooding, melancholy thing I've got going.
 

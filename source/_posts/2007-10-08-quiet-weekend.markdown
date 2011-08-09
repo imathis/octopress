@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Quiet Weekend
 date: 2007-10-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sibylle and I had a quiet weekend.  Saturday was spent doing very little; we slept in late and then took a nap in the afternoon.  The most ambitious thing we accomplished all day was making dinner and sitting down to watch <i>The Full Monty</i> while we ate.
 

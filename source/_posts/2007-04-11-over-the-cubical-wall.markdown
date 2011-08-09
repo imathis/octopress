@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Over The Cubical Wall
 date: 2007-4-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Working in the middle of a cubical farm, I am subjected to the conversations, mutterings, and sounds of the people around me.  Try as I might it is impossible to ignore all the snatches of conversation that drift over the wall from my neighbors.  Recently I have been privy to some rather involved plans for a birthday party. Catering. Pavilion rental. An Elvis impersonator, for crying-out-loud.
 

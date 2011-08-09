@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: False Positive
 date: 2009-7-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 The university here has been offering free hearing screenings this summer. I signed up and had one a month or so ago and the results confirmed what I had long suspected: I have a slight hearing loss in the higher frequencies. In addition to an audio test, the compliance of my ear drum was tested (measuring the pressure difference between my inner and outer ear), and a visual examination of my ear canal and ear drum was made. The visual inspection was done, in part, via a camera, so I got to see my ear on a small screen. Very cool.
 

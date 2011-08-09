@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Jealousy
 date: 2002-7-12
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 I must admit that I haven't posted this sooner because I am slightly embarrassed. Previously I stated here that I wasn't sure my brother would bother to call us when his second daughter was born. In fact he did. The phone call was brief and naturally centered on talk about the birth and everyone's health. (I later learned that my brother didn't have our phone number with him at the hospital. He had to ask my mother for it.)
 

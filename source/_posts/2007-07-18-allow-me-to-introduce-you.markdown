@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Allow Me To Introduce You
 date: 2007-7-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 Just over a year ago, around Independence Day, I joined <a href="http://eHarmony.com" title="eHarmony">eHarmony</a> in hopes of finding someone to spend my life with.  I could write volumes about my experiences there, and about how utterly happy I am that I took that step.  Instead I'd like share a blog posting that I wrote and only shared with a very special woman.  I wasn't ready to openly share my relationship on this site then; I am now.  Allow me to introduce you to <a href="#" title="say 'sea-BILL-uh'">Sibylle</a> through a recounting of our first meeting, which happened the weekend of August 12 - 13, 2006.
 

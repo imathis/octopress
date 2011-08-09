@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Return of "The Hand"
 date: "2005-12-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Everyone has nightmares from time to time. The culturally common one is the "falling dream" where you dream you are falling uncontrollably and wake up suddenly, hopefully, before you smack into the ground. Years ago when I was into downhill skiing I used to have what came to be known between my skiing buddy and I as a ski-mare: dreaming you were rocketing down the slopes uncontrollably.
 

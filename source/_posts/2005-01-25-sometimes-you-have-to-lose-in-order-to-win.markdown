@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sometimes, You have to Lose in Order to Win
 date: 2005-1-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ever since moving to Overland Park in late June last year, we have been trying to sell our house outside of Springfield Illinois. Initially we were basing our asking price on the loan valuation the mortgage company / bank gave us in order to load us money against the equity in the house. We had a slight <a href="http://www.zanshin.net/blogs/000247.html" title="tax story">tax</a> problem, and borrowing against the house was the only way out.
 

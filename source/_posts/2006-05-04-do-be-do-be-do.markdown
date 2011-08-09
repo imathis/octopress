@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Do Be Do Be Do
 date: 2006-5-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 <em>To be or not to be</em> - Shakespeare
 <em>To do is to be</em> - Nietzsche

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Thoughts About the Weekend
 date: 2006-5-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 After sleeping on it last night, and in the context of my own life here in Kansas, here are my thoughts about my mom, and my dad, after seeing them this past weekend.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Twenty-Twenty
 date: 2006-8-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 At my follow-up exam yesterday the eye doctor measured my vision at twenty-twenty. That's with both eyes working together. The near eye is at twenty-thirty by itself, and is working perfectly for up close reading of the computer or books.
 

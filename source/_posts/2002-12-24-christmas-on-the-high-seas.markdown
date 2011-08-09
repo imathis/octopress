@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Christmas on the High Seas
 date: "2002-12-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I are immensely enjoying our Christmas time cruise to Hawaii and the Pacific. The day of travel Friday to get here was very long, but went as smoothly as one might expect. Flying from Springfield was a HUGE improvement over flying from St. Louis. We cleared baggage checkin in 10 minutes flat, and security took only a few more moments. Ha! This more than wiped out last year's 3 hour marathon at the St. Louis terminal. The plane ride to Honolulu was long. Very long. Very, very long. Longer even. By the time we reached our room we were both exhausted. Room service and bed were all we accomplished that evening.
 

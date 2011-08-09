@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Bag For All Occasions
 date: 2006-2-6
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Over the weekend I decided to get (yet another) computer bag. Finding one that suits me, carries all my electronic toys, and looks good is not as easy as you'd think. Witness the FIVE other computer bags I now have in the closet. They were all good bags; each did what they were supposed to do, but over time some flow or failing would become apparent and I'd start the search for a replacement.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Airport Nirvana
 date: 2006-1-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 I found a bit of nirvana today; at least airport nirvana. With more than an hour to kill before my connecting flight boards I needed a place to sit, maybe eat some food, and be away from the teeming masses that surge through airports like so many lemming migrations.
 

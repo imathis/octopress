@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: You're Welcome
 date: 2007-11-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Many years ago my father pointed out to me that increasingly people don't say, "you're welcome" anymore.  Since then I have become aware that by and large he's right.  At the end of most transactions, be they in the grocery store, at the bank counter, or in a restaurant, both parties say, "thank you" to each other, but neither says, "you're welcome."
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: CPU Frequency III
 date: 2004-1-20
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Some times a little information is a dangerous thing.
 

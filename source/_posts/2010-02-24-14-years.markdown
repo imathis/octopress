@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 14 years
 date: 2010-2-24
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Fourteen years ago, on February 20, 1996, I registered my first Internet domain. This site has existed in one form or another ever since. In a real sense this site has been a constant in an ever shifting world. The nearly 1600 entries here cover all of the major changes in my life, and the site as a whole charts the shifting directions of my interests.
 

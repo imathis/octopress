@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Rage In The Machine
 date: 2006-4-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 After returning home yesterday from seeing my parents I had a major bout of the blues, with a heaping side helping of rage. I am certainly grateful that I have been able to visit my mom several times since her prognosis was changed to terminal in February, and I wouldn't give this time up for any reason; however, it is brutally hard to be trapped waiting for the end to arrive.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Cable Guy, Part II
 date: 2006-10-6
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 My cable service appointment this morning was schedule for some time between 8:00 am and 11:00 am. Naturally this guaranteed the technician's arrival to be 11:02 am.
 

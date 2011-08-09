@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Still The Best Game In Town
 date: "2003-11-13"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I continue to come down from my peak of anger and upset at yesterday's news about my rate reduction. It is amazing what a good long talk with a trusted and safe partner, followed by a sound night's sleep, can do for a guy.
 

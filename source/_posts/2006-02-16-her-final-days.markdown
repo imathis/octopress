@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Her Final Days
 date: 2006-2-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the days that followed Michele's death I started a diary, most of the entries in it are ragged, but upon rereading them tonight one caught my eye and I've decided to share it here. It was originally written on Tuesday, October 11th, the day after she completed suicide.
 

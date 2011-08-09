@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Make Safari Open Links in New Tabs Instead of New Windows
 date: 2008-12-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 From <a title="456 Berea Street" href="http://www.456bereastreet.com/">456 Berea Street</a> comes this <a title="Force Safari to Open Targeted Links in a New Tab" href="http://www.456bereastreet.com/archive/200812/make_safari_open_targeted_links_in_new_tabs_instead_of_new_windows/">tip on forcing Safari to open targeted links in a new tab</a> rather than in a new browser window.  (NB: I changed the order of the steps slightly to suit my way of thinking.)
 <ol>

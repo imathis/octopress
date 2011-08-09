@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Perfect Meal
 date: 2002-11-7
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 We had the perfect meal this evening. A wonderful roast, prepared with carrots, peppers, garlic, red potatoes, and pearl onions. The roast was wonderfully seasoned, moist and flavorful.  For dessert there was vanilla ice cream and strawberries with whipped cream.
 

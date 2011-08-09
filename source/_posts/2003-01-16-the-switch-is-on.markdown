@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Switch Is On
 date: 2003-1-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I took the Apple plunge this past weekend. On Saturday, pretty much on the spur of the moment, we headed south for St. Louis and the Apple store there. Initially we were just going to look and play, as the salesman in the Springfield store wasn't helpful. Once in St. Louis however, things took an interesting turn for the better.
 

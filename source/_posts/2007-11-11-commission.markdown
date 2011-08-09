@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Commission
 date: "2007-11-11"
-link: false
+comments: false
 categories: life
+link: false
 ---
 We ventured into a couple of furniture stores yesterday afternoon, just looking for ideas.  One of our favorite past times is designing a house for ourselves, and we like looking at open houses, model homes, and furniture stores to collect ideas.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What Lies Underneath
 date: 2003-5-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 For several days now I have been avoiding my emotions. My employment situation is tense at best, and lately it hasn't even approached best. Last evening I had a very emotional breakdown that allowed me to express what was going on for me.
 

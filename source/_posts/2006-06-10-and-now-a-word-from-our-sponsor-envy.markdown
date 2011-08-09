@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "And Now A Word From Our Sponsor: Envy"
 date: 2006-6-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently I have been having increasing feelings of jealous or envy, particularly when I am around couples. That they have a partner, companion, lover, friend, et cetera with them all the time and I don't is almost more than I can bear. Being the odd man out, once again, at parties or other gatherings is a painful reminder of how my life used to be before Michele.
 

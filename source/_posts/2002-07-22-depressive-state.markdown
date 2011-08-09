@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Depressive State
 date: 2002-7-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have a depressive tendency to my personality. I think I have always known this subconsciously but I have only recently started to consciously think about my actions. I am not clinical, but I could slip down to that level should I stop trying to fight my inner voice.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Restoring iTunes Backups
 date: "2009-10-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 In <a title="Backing Up iTunes Purchases" href="http://zanshin.net/2008/05/26/backing-up-itunes-purchases/" target="_self">Backing Up iTunes Purchases</a> I talked about how I made DVD backups of a portion of my iTunes library. Now that I have a significantly larger hard drive (320 GB versus 100 GB) it's time to put the restore feature to the test.
 

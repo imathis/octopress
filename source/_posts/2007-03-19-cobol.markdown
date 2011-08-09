@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: COBOL
 date: 2007-3-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the winter of 1979 I talked my way into a community college course on COBOL. At the time I was a senior in high school and, having had the Basic programming course the high school offered I was hungry for more. The father of one of my  friends was teaching a course in COBOL (COmmon Business Oriented Language) and when I learned of it I was ready to go.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Spin Out of Control
 date: 2003-8-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 In order to take care of myself with my parents I have always been selective in what information I shared with them, and how I shared that information. Whether I tell myself that I am taking care of me, or taking care of them really isn't the point. The point is that I have fallen into the habit of putting "spin" on my information sharing with them. Because they are people I love, I associate careful information sharing with love. I suspect that could I travel back in time and observe, that I'd see myself learning at a very early age what to tell my parents and how to tell them, so as to keep what I felt was judgmental love coming.
 

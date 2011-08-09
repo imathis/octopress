@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fun With Statistics
 date: 2004-9-11
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I've been having fun with a new site statistics package called <a href="http://shortstat.shauninman.com/" title="ShortStat">ShortStat</a> from <a href="http://shauninman.com/" title="Shaun Inman">Shaun Inman</a>. Not just a counter of hits, this slick PHP/MySQL combination shows me the browser breakdown of my visitors, and what country they are from. I can see search strings and pages viewed.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Resume Revisited
 date: 2004-2-17
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 It has been over a year since I blew the dust off my resume, so I took an hour or so today and gutted the old one mining the juicier bits for a new and improved view of my professional self.
 

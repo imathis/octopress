@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How Difficult Can This Be?
 date: 2008-3-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sibylle, who is fascinated with how people learn, and in knowing and understanding the challenges some people face while trying to learn, shared with me tonight a video documentary from <a href="http://www.ricklavoie.com/aboutrick.html" title="Richard Lavoie">Richard Lavoie</a> called <a href="http://www.amazon.com/Difficult-This-City-Workshop-Understanding/dp/B000KT0UJC/ref=pd_bbs_sr_2?ie=UTF8&amp;s=dvd&amp;qid=1206247767&amp;sr=8-2" title="How Difficult Can This Be?">How Difficult Can This Be?</a>  Mr. Lavoie takes a group of adults (educators and parents) and, through a series of carefully constructed exercises, exposes them to the difficulties learning disabled children face in school.
 

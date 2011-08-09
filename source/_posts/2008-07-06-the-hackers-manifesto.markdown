@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Hacker's Manifesto
 date: 2008-7-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 The following manifesto was originally published <a title="The Hacker's Manifesto" href="http://records.viu.ca/~soules/media112/hacker.htm">here</a>.
 

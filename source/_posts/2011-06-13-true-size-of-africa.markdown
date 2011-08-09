@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: True Size of Africa
 date: 2011-6-13
-link: true
+comments: false
 categories: links
+link: true
 ---
 <a title="Africa's true size" href="http://www.informationisbeautiful.net/2010/the-true-size-of-africa/">The True Size of Africa</a> &rarr;
 <br />

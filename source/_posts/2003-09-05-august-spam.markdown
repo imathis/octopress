@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: August Spam
 date: 2003-9-5
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I just cleaned out my spam folder by exporting all the August dated spams, a total of 4,917 messages. This brings my annual total to 42,702 spams for the year. In August my daily average slipped to a mere 158 spams a day. For the year my average is 175 spams a day.
 

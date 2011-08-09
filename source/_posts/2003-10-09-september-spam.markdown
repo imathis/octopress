@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: September Spam
 date: 2003-10-9
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I finally got around to deleting the accumulated spam from September, a mere 5009 messages this time around. This brings my annual total up to 52,711 spams.
 

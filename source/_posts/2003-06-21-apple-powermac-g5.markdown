@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Apple PowerMac G5
 date: 2003-6-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 The world's fastest personal computer.
 <ul>

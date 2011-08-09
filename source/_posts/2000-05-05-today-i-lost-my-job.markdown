@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Today I Lost My Job
 date: 2000-5-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today I lost my job. This is my birthday weekend and I had taken Friday off as a present to myself.          Midway through the morning I got a call from a work mate suggesting that I might want to come in to         the office. When I asked why he said they were letting people go. He had been let go. I lost all the         feeling in my limbs. In that moment I entered a free fall, the elevator cable had snapped. The world, once sharp         and stable around me, had suddenly become blurry and frightening.
 

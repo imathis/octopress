@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Saturday Scruples
 date: 2002-8-10
-link: false
+comments: false
 categories: meme
+link: false
 ---
 1. In a "must win football game, your coach tells you to target the rival quarterback's recent knee injury. Do you obey? No. Absolutely not. In fact I quit the team and report the coach's lack of concern for other humans to the school administration.
 

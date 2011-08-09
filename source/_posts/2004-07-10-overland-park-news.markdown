@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Overland Park News
 date: 2004-7-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Well it is now official. We've moved. The Allied truck with 8,300 pounds of our stuff arrived at 8:30 this morning. Yes, eight thousand three hundred pounds. This was a welcome figure as the original estimate was 11,400 pounds. Between giving and throwing away stuff, leaving behind a refrigerator, washer and dryer, and selling the big screen television and its surrounding furniture, we managed to shed over 1 1/2 tons. Whew.
 

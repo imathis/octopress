@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Birthday Lunch
 date: 2006-6-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 Back in late April and early May I was casting about trying to decide how to celebrate my birthday this year. For the first time in nine years it would be a day without Michele's planning behind it. Adding to the difficulty was my mom's declining health. The weekend of my birthday I actually traveled to Illinois in what later was the last visit I had with my Mom while she was still conscious. I would see her again  Memorial Day weekend, but she was no longer aware or responsive during that visit.
 

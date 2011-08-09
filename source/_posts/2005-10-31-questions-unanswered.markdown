@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Questions Unanswered
 date: "2005-10-31"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I spent some time today transferring most of the postings Michele had made to her site to the new format. Rereading some of her thoughts was painful at times, satisfying at others. One of the things that happens when someone you love suicides is that you begin to question every thing you believed about that person. This variation on the "what if" game is just as destructive and difficult to manage.
 

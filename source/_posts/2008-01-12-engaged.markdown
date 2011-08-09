@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Engaged
 date: 2008-1-12
-link: false
+comments: false
 categories: family
+link: false
 ---
 While we were in Germany last fall, I proposed to Sibylle on her birthday.  She joyfully said yes.
 

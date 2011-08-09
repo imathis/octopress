@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Synchronize Apple AddressBook Using Dropbox
 date: "2009-10-15"
-link: false
+comments: false
 categories: life
+link: false
 ---
 <address>Updated: 10.16.2009 </address>While this appears to work I am noticing problems with Adium, which can be configured to use address book cards for information about chat buddies. Also, each of the various groups I had created in my address book was replicated three and sometimes four times. Finally, Dropbox was continually refreshing and updating files associated with the address book stored there. I suspect these updates were a result of emails sent and or accesses by Adium. As a result, I have deleted the symbolic links to Dropbox on each machine and restored each address book using the combined one I had made earlier.
 

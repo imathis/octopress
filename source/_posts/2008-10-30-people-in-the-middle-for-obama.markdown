@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: People In The Middle for Obama
 date: "2008-10-30"
-link: false
+comments: false
 categories: life
+link: false
 ---
 <a title="People in the Middle for Obama" href="http://peopleinthemiddleforobama.org">People in the Middle for Obama</a> is an excellent set of "switcher" style ads featuring people who are thoughtful about their choosing Barack Obama in this election.  All of the vignettes are worth watching, but my favorite is below.  I like the phrase "energy without anger" that is used.  This simple phrase sums up, for me, a fundamental difference between John McCain and Barack Obama.  Senator Obama has great energy without anger while Senator McCain seems to have energy because his is angry.  America and the world have seen enough of the only "superpower" being angry.  It is time for our eight year temper tantrum to end.
 

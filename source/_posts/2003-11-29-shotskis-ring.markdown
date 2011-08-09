@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Shotski's Ring
 date: "2003-11-29"
-link: false
+comments: false
 categories: health
+link: false
 ---
 The following post was originally written January 13, 2002.
 

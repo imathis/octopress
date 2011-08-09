@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Hiya Suburi
 date: 2006-6-10
-link: false
+comments: false
 categories: health
+link: false
 ---
 Today's kendo workout was a good one for me. I blew it off on Wednesday evening mostly because I didn't want to go, but in part because I was tired. I ended up going to sleep about 8:30 that evening; getting almost nine hours that night. A fair trade I think.
 

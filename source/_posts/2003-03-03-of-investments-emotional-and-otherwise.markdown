@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Of Investments, Emotional and Otherwise
 date: 2003-3-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 Two years ago this month my wife and I leased an Audi TT. We had looked at this car a couple of times and loved its curvy appearance. The car we leased was used and therefore the monthly lease payments were very reasonable. In the negotiation we asked the dealer if we could walk away from the car prior to the end of the lease. He assured us that we could. So we went with a 4-year lease as it got us the lowest monthly payment.
 

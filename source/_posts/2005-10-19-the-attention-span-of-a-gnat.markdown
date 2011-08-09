@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Attention Span of a Gnat
 date: "2005-10-19"
-link: false
+comments: false
 categories: life
+link: false
 ---
 In recent years I've discovered that under normal circumstances I have the short term attention span of a gnat. The technical term for this is <a href="http://www.randsinrepose.com/archives/2003/07/10/nadd.html" title="N.A.D.D.">N. A. D. D.</a>. Michele would ask me to change out the empty 5-gallon water jug for a full one on the dispenser and, unless I did it immediately, I'd forget. She took to leaving the empty jug in my way coming into the house.
 

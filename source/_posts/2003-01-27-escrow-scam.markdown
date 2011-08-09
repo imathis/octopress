@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Escrow Scam
 date: 2003-1-27
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 All last fall, as I was trying to buy a Powerbook G4 via online auction, my rally cry was escrow or bust. If the seller refused to use escrow then I refused to participate. I had several seemingly great deals fall thru only because the seller refused to use an escrow service.
 

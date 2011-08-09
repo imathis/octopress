@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tear for Michele
 date: "2005-11-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 In my professional life as a software application architect I spend a lot of time looking at and understanding process. How does the client work today? How do they want to work tomorrow? What processes exist to help or hinder them? So it shouldn't be surprising that I look for processes in my personal life. Obviously the largest process I'm moving through currently is the so-called grief process.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Managing ssh keys
 date: 2009-10-9
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Earlier this evening, while not paying close enough attention to what I was doing, I managed to delete some semi-important files on my desktop at work. The error happened because I was remotely logged in via the command line and wasn't paying attention to which machine I was actually working against. My error is recoverable but it gives me new respect for the working environment system administrators live in day in and day out.
 

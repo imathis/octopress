@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Books on my desk
 date: "2003-12-19"
-link: false
+comments: false
 categories: life
+link: false
 ---
 <ul class="il">
 <li>"My Losing Season" by Pat Conroy</li>

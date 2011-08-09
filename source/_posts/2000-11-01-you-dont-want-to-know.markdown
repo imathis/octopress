@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: You Don't Want to Know
 date: 2000-11-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 I had occasion to park in a downtown, underground garage today. It is in a central location so it sees          a fair amount of business. Upon arriving at the gargare I punched the button and got my time-stamped ticket.          Its a small affair, not quite the size of a business card.
 

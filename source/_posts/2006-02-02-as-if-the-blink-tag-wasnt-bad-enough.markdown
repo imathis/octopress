@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: As If The <Blink> Tag Wasn't Bad Enough
 date: 2006-2-2
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Not to have sour grapes about my new computer or any thing, but...
 

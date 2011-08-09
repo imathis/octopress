@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Twenty-One
 date: "2004-10-18"
-link: false
+comments: false
 categories: life
+link: false
 ---
 My career turned twenty-one over the weekend. I started my first full-time, paying programming job on October 17, 1983. My career is now old enough to legally drink. Woohoo!
 

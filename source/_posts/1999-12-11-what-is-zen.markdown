@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What is Zen?
 date: "1999-12-11"
-link: false
+comments: false
 categories: life
+link: false
 ---
 <div align="center" >
 <font size="-1">

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Through a Glass Darkly
 date: 2005-2-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 Throughout our lives we encounter people and situations that alter us. Emotions, physical sensations, and thoughts all combine to leave new perceptions of the world around us. Over time our perceptions become a set of filters through which the real world passes before becoming our own personal reality. Obviously the oldest and perhaps strongest of these filters come from childhood. Your parents and immediate family members are the people you have the most contact with; and that contact comes at a time when we are un-molded clay, still pliable and unresistant to change.
 

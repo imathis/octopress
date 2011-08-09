@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Using jQuery to Create iGoogle Style Drag-and-Drop
 date: "2008-11-12"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Once upon a time, a long time ago, there was a website called mydogmeg.  One of the features was a sub-domain filled with links to technical sites.  The layout was simple and effective, and when mydogmeg went off the air I grabbed a copy of the geek sub-domain from the Internet Archives.  For a long time I did nothing with the page, but last year after moving to a new host I created my own geek sub-domain, and put a modified version up on my site.
 

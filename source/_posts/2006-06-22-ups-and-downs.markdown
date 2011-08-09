@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ups and Downs
 date: 2006-6-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 <b>Of Flutterbys and Bedspreads</b>
 The day of Michele's memorial, as P and I stood at the table holding the flowers and her pictures, a Monarch butterfly suddenly appeared from nowhere, did a lap around the arrangement and a figure-eight around the two of us. We both remarked about not having seen a Monarch in years. It felt like a sign then and still feels that way today.

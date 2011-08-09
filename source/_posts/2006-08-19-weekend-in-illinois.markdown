@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Weekend in Illinois
 date: 2006-8-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 I'm on a long weekend in Illinois to see family and friends. After the numerous visits I made last spring and early this summer I have needed some time away, needed some time not spent in the car driving seven hundred plus miles round trip in three days.
 

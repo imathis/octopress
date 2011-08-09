@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Life Goes On
 date: 2004-5-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 As I approach the end of week seven of unemployment, life goes on. Bills are getting paid, maple seeds are netted off the pool, and groceries are bought and consumed. The trash gets taken out, and the kitty litter gets changed. Dishes and clothes are dirtied and washed.
 

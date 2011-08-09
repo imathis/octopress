@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Motorola Q Phone Impressions
 date: "2008-10-29"
-link: false
+comments: false
 categories: life
+link: false
 ---
 My new position at work comes with a smart phone.  In this case a Motorola "Moto Q 9c" from Verizon.  I've never had a smart phone before so what follows are my first impressions, after just three days use.
 

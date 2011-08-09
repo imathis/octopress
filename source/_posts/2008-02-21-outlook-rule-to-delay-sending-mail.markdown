@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Outlook Rule to Delay Sending Mail
 date: 2008-2-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 If you are like me, you have at least once in your email usage history, accidentally sent a mail that you either didn't mean to send, or immediately wanted to recall to edit or attach or otherwise massage before sending. Wouldn't it be nice if there was a way to hold your outbound emails for a short period of time?
 

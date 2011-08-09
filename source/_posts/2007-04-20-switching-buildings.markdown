@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Switching Buildings
 date: 2007-4-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Since starting my new job in January my team, and two floors worth of other people, have been temporarily housed in a borrowed building.  The company I work for is owned by a larger company, and we've been squatting in one of their buildings.  My company has recently completed interior renovations on a new office building, and everyone is moving.  Some people are moving from the temporary building to the new building, some from the original building to the new building, and some (including me) are moving from the temporary building to the original building.
 

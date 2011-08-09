@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Suggestions, please
 date: 2009-9-28
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Like a lot of bloggers I tend to write erratically and about topics that are of interest to me. Sometimes my topics strike a chord with the blog reading public and I generate lots of page views and gain new regular readers. Toward that end I am experimenting with a suggestion service.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Refer
 date: 2003-3-6
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I have added <a href="http://www.textism.com/tools/refer/" target="_blank">Refer 1.1</a> from <a href="http://www.textism.com/" target="_blank">Textism</a> to my site so that I might discover who is linked to my site. I get about two dozen hits a week but I have no real idea from where.
 

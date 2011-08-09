@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Welcome to the BlackPerl
 date: "2009-10-22"
-link: false
+comments: false
 categories: life
+link: false
 ---
 My new MacBook Pro was delivered this morning, less then two-and-a-half days after it shipped from Shanghai China. It is stunning and sleek, simply beautiful. I am very pleased with my choice.
 

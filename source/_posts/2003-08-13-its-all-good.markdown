@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: It's All Good
 date: 2003-8-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 As mentioned <a href="http://www.zanshin.net/blogs/000248.html">previously</a> more than <a href="http://www.zanshin.net/blogs/000247.html">once</a> we have been working towards restructuring our debt.
 

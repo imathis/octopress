@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Rewriting History
 date: 2003-3-4
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I am in the process of adding some of the postings that lived on my site prior to my switch to moveabletype. I have been meaning to do this for some time and kept putting it off.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Off The Team
 date: 2008-8-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 The front page of today's Kansas City Star has an article about an incoming freshman basketball player who has been arrested on suspicion of shooting a passerby with a plastic BB from a BB gun, possibly while intoxicated.
 

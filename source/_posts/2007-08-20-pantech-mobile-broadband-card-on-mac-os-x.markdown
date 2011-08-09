@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Pantech Mobile Broadband Card on Mac OS X
 date: 2007-8-20
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 With the start of my new job last winter I treated myself to a mobile broadband card from Sprint.  This PCMCIA card allows me to connect to the Internet while at work (or anywhere else that doesn't have free Wi-Fi).  So far I have only used it in the ThinkPad as I wasn't able to get it to connect using the Powerbook.
 

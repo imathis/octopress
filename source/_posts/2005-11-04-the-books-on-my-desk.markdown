@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Books on My Desk
 date: 2005-11-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 For no particular reason, and in no order, here are the books on my desk this evening.
 

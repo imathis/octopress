@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Jonesing Explained
 date: 2006-7-12
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 <a href="http://news.scotsman.com/scitech.cfm?id=1008372006" title="genetic basis for an overwhelming need for the new and novel">This</a> story explains that there maybe a genetic basis for my need to have the newest and latest of everything.
 

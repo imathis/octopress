@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Helen Riley Nichols
 date: 2006-5-28
-link: false
+comments: false
 categories: family
+link: false
 ---
 <img src="http://zanshin.net/images/hrn.jpg" alt="Helen Riley Nichols portrait" height="563" width="425" />
 

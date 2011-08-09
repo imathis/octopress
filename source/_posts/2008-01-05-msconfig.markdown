@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: msconfig
 date: 2008-1-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently I read about <a href="http://www.codinghorror.com/blog/archives/000923.html" title="Speeding Up Your PC's Boot Time">speeding up boot times on Windows PC's</a>.  The gist of the article was that there are two sources of contention for your processor, startup items and anti-virus/spyware software.
 

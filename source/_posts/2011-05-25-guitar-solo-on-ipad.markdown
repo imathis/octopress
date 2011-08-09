@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Guitar Solo on iPad
 date: 2011-5-25
-link: true
+comments: false
 categories: links
+link: true
 ---
 <a title="Guitar Solo on iPad Shreds" href="http://www.tuaw.com/2011/05/25/guitar-solo-on-ipad-shreds/">Guitar Solo on iPad Shreds</a> →
 <br />

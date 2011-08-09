@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Waiting For DSL
 date: 2009-1-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 Of the many details needing to be addressed in our recent move, one that was high on both our lists was getting DSL service established at the new house quickly.  When I called to switch the service I learned that the "DSL Only" option that we preferred would take eight days to establish.  Getting new phone service in addition to DSL would cut that wait to only three days.  So, we got a new phone number.
 

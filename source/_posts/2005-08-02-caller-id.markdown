@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Caller ID
 date: 2005-8-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 This afternoon and evening I received three calls to my cell phone that all came from "private number." Each time the caller choose not to leave a message on my voice mail. Since they are blocking their caller id from appearing on my phone I have no way to know for certain that it was the same party calling each time, but I'm willing to bet that it was.
 

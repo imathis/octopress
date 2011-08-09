@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Foot in Mouth Disease
 date: "2002-11-18"
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 Once again I have foot in mouth disease. Over the weekend we bought some chicken breasts thinking that we'd make fried chicken for dinner. When it came time to start neither of us was in the cooking mood so we had Thai take out instead. This morning, when I talked to Michele on the phone from work, she told me that she was improvising with the chicken in the crock-pot for dinner tonight. It sounded fantastic, chicken, tomatoes, herbs, spices, low heat, and hours of simmering.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bringing It Home
 date: 2004-4-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 One of the hidden benefits of losing your job is the potential for losing your house as well. With no income the race between a new income source and the end of your savings account is underway. ( Since I was most recently independently employed, I am not eligible for unemployment compensation. )
 

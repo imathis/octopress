@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Working on the Bubble
 date: 2003-1-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 Once again my job is in jeopardy. My client, the State of Illinois, is having their annual budget crisis.  Even though this occurs every spring it is impossible to be emotionally prepared for its arrival. This year Illinois? first democratic governor in 30 years enhances the festivities. Although the press releases insist that a witch-hunt isn't going to occur firings are happening daily. It is a scary place and time to work.
 

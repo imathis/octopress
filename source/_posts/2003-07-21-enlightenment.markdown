@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Enlightenment
 date: 2003-7-21
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Many years ago when I was first developing this site I stumbled across a book called "Creating Killer Web Sites." Despite the hyperbole in the title it sparked an interest in web design that lasts to this day.
 

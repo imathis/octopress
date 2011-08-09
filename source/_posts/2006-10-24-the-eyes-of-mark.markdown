@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Eyes of Mark
 date: "2006-10-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 At my final follow-up examination today the doctor pronounced me a success and said that long-term all I needed to do was have an annual eye exam to make sure my vision was continuing to be stable.
 

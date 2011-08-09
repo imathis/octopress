@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Heiligabend Men\xC3\xBC"
 date: "2006-12-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 <div align="center" style="font-size: small"><i>
 Fillet of Talipia prepared with herb infused butter, shallots, and toasted Almond slivers<br />

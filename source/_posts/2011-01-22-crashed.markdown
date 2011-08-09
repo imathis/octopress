@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Crashed
 date: 2011-1-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 Neither of us had a lot of energy today, and we both ended up taking naps late this afternoon. After a dinner out at Panera we did some grocery shopping in anticipation of freezing drizzle followed by snow tonight and tomorrow morning. The plan is to not go out at all tomorrow.
 

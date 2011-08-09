@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Funny Thing Happened On the Way Home From Lunch
 date: 2005-1-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last weekend we picked up a Kansas City Star to see the real estate ads, mostly to see what kinds of house were for rent or sale in town. There was a story on the front page of the real estate section about an open house at a development of maintenance-free, ranch style condos. So we planned to go a see the place this weekend.
 

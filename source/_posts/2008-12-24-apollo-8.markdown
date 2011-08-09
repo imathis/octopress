@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Apollo 8
 date: "2008-12-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Forty years ago today, Apollo 8 was circling the Moon.  This iconic picture was taken.  The first Earthrise viewed by humans.
 

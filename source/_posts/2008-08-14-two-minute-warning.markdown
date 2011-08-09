@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two Minute Warning
 date: 2008-8-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 Throughout my career I have been fascinated with process.  At a certain level of abstraction my job is nothing but implementing processes, big and small, to achieve some goal.  After spending twenty-five years examining existing processes to understand them, and designing new automated processes to replace or augment them, I tend to see processes everywhere.  
 

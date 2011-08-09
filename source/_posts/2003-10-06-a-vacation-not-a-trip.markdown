@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Vacation, Not A Trip
 date: 2003-10-6
-link: false
+comments: false
 categories: health
+link: false
 ---
 Michele and I just had a wonderful vacation. Along the way we discovered what makes travel a vacation and not a trip. For us, anyway, trips have goals and constraints that are beyond our control. Going on a cruise, or flight reservations, or having to accommodate family all make it more of a trip.
 

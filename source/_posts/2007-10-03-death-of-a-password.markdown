@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Death of a Password
 date: 2007-10-3
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 While Sibylle and I were in Germany we made extensive use of an Internet Cafe in order to check email and upload pictures to Flickr.  Every time we logged out of the machines we were both very careful to log out of any password protected sites or applications, and to close all application windows.  Still, since we had no administrative rights on the machines and therefore couldn't wipe out the cache or browsing history, I was a bit nervous about having entered my passwords on a strange machine.
 

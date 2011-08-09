@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fascism Scorecard
 date: 2004-6-15
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 Dr. Lawrence Britt has examined the fascist regimes of  Hitler (Germany), Mussolini (Italy), Franco (Spain), Suharto (Indonesia)  and several Latin American regimes. Britt found <a href="http://www.rense.com/general37/char.htm" title="Fourteen Defining Characteristics of Fascism">14 defining characteristics</a> common to each. I've added a column for the United States so we can keep score.
 <table>

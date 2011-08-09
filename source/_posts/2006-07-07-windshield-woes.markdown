@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Windshield Woes
 date: 2006-7-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 Believe it or not, my windshield woes continue. In our last episode the technician came and examined the rain sensor assembly and decided that a new "gel pack" was needed. He called his office and they placed an order. Later that day I was called by the dispatcher and informed that the parts would arrive late Thursday, and could they install it on Friday. I explained very clearly that my car would be at my work location from 6:30 until 2:00 today, that the work had to be completed <strong>before</strong> 2:00 PM.
 

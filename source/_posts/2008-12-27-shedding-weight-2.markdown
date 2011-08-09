@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Shedding Weight
 date: "2008-12-27"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Four and a half years ago, when Michele and I moved to Kansas City we went from a 2000 square foot house, with ample storage and a huge three-bay garage, to a comfortable apartment that had but a single garage stall, barely large enough for the car, and only a 1000 square feet of space.  We ended up with two 5x10 foot storage lockers.  I liked to tell people that the difference between a 2000 square foot house and a 1000 square foot apartment was 1000 cubic feet.
 

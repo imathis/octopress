@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: You Can Never Go Home Again
 date: 2003-1-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 For 8 years in my thirties I studied karate. In that time I grew emotionally, spiritually, and physically. I need structure, and an outlet for my growth then, and karate was the perfect answer. I was able to achieve some small measure of outward success and a much larger degree of inward success.
 

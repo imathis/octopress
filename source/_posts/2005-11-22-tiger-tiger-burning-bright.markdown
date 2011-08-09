@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tiger, tiger burning bright
 date: "2005-11-22"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the weekend I installed Mac OS X release 10.4 on my two Macintoshes. Overall the experience was a good one. Apple includes a nice "archive and install" option that makes a copy of the current OS installation just in case. Selecting this option also enables the more important, in my estimation, "preserve users and network settings" option. Which does exactly what it claims to do: preserves your home directory.
 

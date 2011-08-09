@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Beware the Undertoad
 date: 2006-7-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the book, and the movie, <em>The World According To Garp</em> there is a scene were young T. S. Garp is at the ocean's edge and his mother yells to him to, "Beware the undertow!" The sound of the waves make it hard to hear so what Garp thinks she said was, "Beware the undertoad!" In his mind's eye he sees a large menacing toad that lurks just underneath the waves and if you aren't careful it'll grab you and pull you under. For the rest of the book whenever bad starts to happen, or potentially could happen, Garp thinks about the undertoad.
 

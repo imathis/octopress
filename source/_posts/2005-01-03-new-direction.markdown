@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: New Direction
 date: 2005-1-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 After weeks of uncertainty and indecision I finally have settled on a direction for my professional future. Instead of returning to Illinois and the known situation there I am going to take a leap of faith and pursue a new direction in my professional life here in Kansas.
 

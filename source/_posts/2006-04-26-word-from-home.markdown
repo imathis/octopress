@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Word from Home
 date: 2006-4-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 My mom called me last night and we had a wonderful conversation on the phone. She had been to her cancer treatment in the afternoon where her blood counts were high enough for a chemotherapy treatment. One bag of chemicals instead of the normal two, but a treatment nonetheless. She was tired from the outing but alert and herself on the phone. She even managed to eat some solid food for the first time in days.
 

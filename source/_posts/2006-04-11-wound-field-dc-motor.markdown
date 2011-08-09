@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Wound Field DC Motor
 date: 2006-4-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 In eighth grade metal shop class one of our projects was to make a <a href="http://en.wikipedia.org/wiki/Carbon-zinc_battery" title="zinc-carbon battery">zinc-carbon battery</a> and a <a href="http://en.wikipedia.org/wiki/Electric_motor#Wound_field_DC_motor" title="wound field DC electric motor">wound field DC electric motor</a>. The battery kit contained a tube and the end caps, as well as the paste that filled the battery. My best friend's battery kit was damaged so we used his paste and mine to fill one tube. Our battery clocked in at an impressive 2 volts or so, whereas the regular kit only yielded 1.5 volts.
 

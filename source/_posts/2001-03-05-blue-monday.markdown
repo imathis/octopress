@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Blue Monday
 date: 2001-3-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 I'm very moody this evening. Michele and I had a fantastic weekend but the reality that is Monday has struck once again. I wish I could say that I'm happy everyday, but I'm not. I'm human and sometimes I'm down.
 

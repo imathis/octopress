@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Null Space
 date: 2006-5-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 I started out to write a posting about needing a vacation. I was going to talk about the types of vacations I've had in the past, and how I find time by myself without structure difficult right now. As I re-read what I had writing it sounded like just so much bullshit to me.
 

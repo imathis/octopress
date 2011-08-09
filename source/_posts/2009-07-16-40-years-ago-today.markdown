@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 40 Years Ago Today
 date: 2009-7-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 I was riveted to the television.
 

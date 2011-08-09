@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Evolution of Dance
 date: 2006-5-10
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 <p><object width="425" height="350">
 <br />

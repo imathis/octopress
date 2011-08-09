@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Making Changes
 date: 2006-6-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 Shortly after I lost Michele last year I was told by a very dear and very wise friend that I should wait a year before making any major changes to my life. The upset caused by her death to my emotional, spiritual, mental, and physical balance would take at least that long to settle. Fortunately I have a long term work engagement and my apartment lease isn't due until this August 31st.
 

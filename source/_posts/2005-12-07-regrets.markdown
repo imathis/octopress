@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Regrets
 date: 2005-12-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 There aren't too many things I regret from the past ten years of my life. Michele and I met online on December 28, 1995 and, until her death two months ago, we were inseparable.
 

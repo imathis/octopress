@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sobering Thoughts
 date: 2004-8-31
-link: false
+comments: false
 categories: life
+link: false
 ---
 My wife is older than I. This is not something that has ever disturbed me or mattered in my love for her or my appreciation of our live together. However, it is likely, probably even, that she will die before I do, leaving me alone for the final portion of this lifetime. I am not looking forward to being alone once again. We talked about this yesterday as an outgrowth of a discussion about my career. At 43 I need to start seriously planning for retirement. Since my career is lucrative we both feel that as long as I am working Michele can semi-retire or completely stop working when she wants. However, without a retirement plan that starts very soon, I will not be able to stop working.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Random Bits
 date: 2002-11-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 I am struggling with whether or not to start karate again. I worked out for over 8 years, and then 4 years ago walked away. I know now that I left because it was no longer satisfying. The situation wasn't fulfilling my needs anymore. However, since I didn't have good closure with it I still feel the urge to put the gi back on and return to active status. This could be an incredible god idea, or a really bad one. I need to spend some more time sorting this out to know for sure.
 

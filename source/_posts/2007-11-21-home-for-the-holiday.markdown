@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Home For The Holiday
 date: "2007-11-21"
-link: false
+comments: false
 categories: life
+link: false
 ---
 This year Sibylle and I are staying close to home for Thanksgiving.  We had talked about maybe going to see my family in Illinois or venturing to the far north to visit her sister, but in the end we decided to stay home.
 

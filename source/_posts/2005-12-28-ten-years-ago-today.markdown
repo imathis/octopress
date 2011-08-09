@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ten Years Ago Today
 date: "2005-12-28"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Like most couples, Michele and I had a number of dates each year that were anniversaries of one kind or another. Certainly big ones like birthdays, or our wedding anniversary. But also smaller ones like buying our first house, or the first time we met face to face, or when I asked her to marry me. The very first important date we shared was today.
 

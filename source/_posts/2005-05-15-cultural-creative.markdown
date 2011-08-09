@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Cultural Creative
 date: 2005-5-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 
 <table border="0" cellpadding="5" cellspacing="0" width="480">

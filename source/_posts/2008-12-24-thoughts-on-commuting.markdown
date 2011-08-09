@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Thoughts on Commuting
 date: "2008-12-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 The first paid job I had, post college, was 50 miles away from where I was living at the time.  I started in October, and didn't find an apartment I liked until April the following year, so I spent two hours a day in the car for nearly six months.  After moving my commute was on the order of 10 to 12 minutes.
 

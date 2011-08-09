@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Using rsync to Update Wordpress
 date: 2008-4-28
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I currently support four public facing sites that use Wordpress as the back-end content management system (CMS).  I also have a Wordpress test platform on my laptop, where I tinker with several different themes, that supports another four sites. So, I've got eight different Wordpress installations to update each time a new release is made available.  Running through the update steps is tedious at best and, with the need to not inadvertently overlay the theme or plugin directory in each installation, there is a fair amount of stress.  Using ftp to accomplish the update isn't difficult, but after doing the same steps four or five or six times, it is easier to make a mistake.
 

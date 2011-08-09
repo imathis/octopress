@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Karma Laden
 date: 2007-9-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 The transition from multiple residences into one required some decisions to be made.  What gets kept, what gets sold or given away, can this be stored?  Three pieces of furniture were put on the block for sale.  I listed them in the mail room of the apartment complex, on my companies Intranet classifieds page, and many, many times on craigslist.
 

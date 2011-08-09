@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: What Business Can Learn From Open Source
 date: 2005-8-4
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Originally I saw this article linked to from <a href="http://slashdot.org/" title="/.">Slashdot</a>; it's so good I wanted to link to it here as well. I especially liked this:
 

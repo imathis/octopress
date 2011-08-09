@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Living Among Cats
 date: 2007-5-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the weekend we started to combine our households.  The first step was introducing the cats.  The initial stages have included some hissing and general tentativeness, but on the whole I think the melding is going rather well.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Short To Do List
 date: 2011-2-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 Finish moving boxes from the garage to the basement.
 

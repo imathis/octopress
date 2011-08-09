@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Passcode
 date: 2011-1-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 A couple of weeks ago I received an iPad through work. Yesterday, while at lunch with  my wife, it occurred to me that should I lose the iPad, or have it stolen, whomever had it would be able to send and receive emails as me, would have access to my bookmarked web sites - and be able to masquerade as me on those where the browser knows my password.
 

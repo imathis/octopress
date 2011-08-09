@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Indifference
 date: 2006-3-15
-link: false
+comments: false
 categories: life
+link: false
 ---
 Lately I've been starting to think about things I want to do, projects with my websites, cleaning out the storage lockers, or cleaning this apartment. Thinking about things to do is as far as I get before indifference and apathy take over. Being indifferent is actually a good thing in this case, as it means I don't have the spark to get down on myself about not following through.
 

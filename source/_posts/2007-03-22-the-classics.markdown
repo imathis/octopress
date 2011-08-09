@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Classics
 date: 2007-3-22
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Recently I talked about the shift in direction at my current engagement from a major redesign effort utilizing Java and Eclipse plug-ins with a Service Oriented Architecture (SOA) to refactoring and enhancing the existing <a href="http://www.zanshin.net/blogs/001218.html" title="COBOL">COBOL applications</a>. I have nothing against COBOL and JCL - I used them for nearly a decade when I first started out as a programmer. When people ask me what I do for a living my first reaction is to say, "I'm a programmer."
 

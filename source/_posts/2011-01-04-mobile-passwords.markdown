@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mobile Passwords
 date: 2011-1-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the more than thirty years I have been using computers I've had a lot of passwords.  Some formed to very complex rules, others to very simplistic rules or no rules at all. Until very recently all my passwords were entered into the computer using a standard keyboard. Starting a year ago, however, with a chance to use Sibylle's <a title="Apple's iPod Touch" href="http://www.apple.com/ipodtouch/" target="_blank">iPod Touch</a>, I discovered that some of my password techniques were reliant upon the keyboard itself, and that mobile devices often take great liberties with the layout and availability of certain keys.
 

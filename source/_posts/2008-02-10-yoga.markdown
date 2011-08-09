@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Yoga
 date: 2008-2-10
-link: false
+comments: false
 categories: health
+link: false
 ---
 After dipping our toes into the tai chi pool last summer, Sibylle and I have been looking for some physical exercise to improve our overall body tone and fitness.  Quite by accident, during a conversation with a work acquaintance, I discovered the name of a personal trainer and fitness professional, who teaches hatha flow yoga from her home studio.  Both Sibylle and I were impressed with her web site, and decided to attend a class or two to see what we thought about yoga.
 

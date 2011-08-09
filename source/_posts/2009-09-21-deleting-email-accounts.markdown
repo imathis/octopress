@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Deleting Email Accounts
 date: 2009-9-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 My first Internet email account was with AOL around March 1993. This was soon followed by an Internet Service Provider (ISP) account in late 1994. In February 1996 I acquired this domain and had my first domain email address. I still have that address, although I don't use it actively any more. Like a lot of Internet nerds I have been collecting email accounts ever since.
 

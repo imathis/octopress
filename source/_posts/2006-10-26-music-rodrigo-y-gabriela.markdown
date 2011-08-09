@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Music: Rodrigo y Gabriela"
 date: "2006-10-26"
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Stubling around the Internet often leads one to places and discoveries you'd never have otherwise. Recently on <a href="http://kottke.org" title="Kottke">kottke.org</a> there was a <a href="http://www.kottke.org/06/10/rodrigo-y-gabriela" title="rodrigo-y-gabriela">posting</a> about a musical duo called "Rodrigo y Gabriela.
 

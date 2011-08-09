@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Iraq, Terrorism, and Patriot Act II
 date: 2003-3-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have become politically active. Below is a copy of a letter I e-mailed today to both of my senators and representative. You can find the address and contact information for your elected officials <a href="http://www.vote-smart.org/" target="_blank">here</a>. I urge you to participate in your country by writing your elected officials no matter what your beliefs or opinions. Do not allow the large special interest groups to make decisions that are beneficial to them without adding your voice to the debate.
 

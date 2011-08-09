@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Little Things That Bug Me
 date: "2002-10-24"
-link: false
+comments: false
 categories: random
+link: false
 ---
 Why do restuarants find it necessary to play music constantly in the background? When I go out to eat I want to enjoy my food, and the conversation with my companion. I don't want to have to yell over the too loud music. This is a case where just because we can doesn't mean we should.
 

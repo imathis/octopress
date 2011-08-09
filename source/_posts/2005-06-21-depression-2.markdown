@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Depression
 date: 2005-6-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 Several years ago I was depressed enough that I sought medical help in the form of Paxil. I was only on the drug for maybe 35 or 40 days. At the time it was enough of a boost to bring me back to a normal sinus rhythm of ups and downs. Since then I haven't felt like I needed any assistance. The strength and depth of my relationship with Michele has given me a powerful tool to combat what I feel is my tendency towards melancholy. The past 15 months have beaten me down to the point were the joy and peace I find in my relationship with Michele is no longer strong enough to lift me out of depression.
 

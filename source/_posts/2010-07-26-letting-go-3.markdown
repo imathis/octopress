@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Letting Go
 date: 2010-7-26
-link: false
+comments: false
 categories: health
+link: false
 ---
 This is an incredibly important topic, one that is difficult and hard to look at directly. People are afraid of dying and perhaps more afraid of loved ones dying. Medical science and our health care system can do incredible things, but it can also overwhelm the people it is treating and their families.
 

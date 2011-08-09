@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: PlacesLivedException
 date: 2007-5-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Eagle-eyed reader JJ, sent me this today:
 

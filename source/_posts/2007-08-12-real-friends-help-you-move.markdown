@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Real Friends Help You Move
 date: 2007-8-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday, with the help of an old college friend, Ted, his son Adam, and a former student of Sibylle's, John, we moved the bulk of our stuff from the apartment to the  townhouse.  It was a long, hot day, but one that was ultimately successful.  Along the way my car was backed into by a careless driver, there were tears, laughter, simple food that was made better for sharing it and the experience around it, and a sense of accomplishment.
 

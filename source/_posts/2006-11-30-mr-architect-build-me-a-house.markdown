@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mr. Architect, Build Me A House
 date: "2006-11-30"
-link: false
+comments: false
 categories: life
+link: false
 ---
 <em>This tongue-in-cheek look at the joys of building software has been floating around forever. I have no idea who the original author is or where/when it first appeared.</em>
 

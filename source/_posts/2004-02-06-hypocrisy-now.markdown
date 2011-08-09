@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Hypocrisy Now
 date: 2004-2-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 It has been six days since Justin Timberlake ripped the snap-on portion of Janet Jackson's costume away exposing her breast and pierced nipple for all of one second on national television. It has been six days of innuendo, accusations, and the highest levels of hypocrisy.
 

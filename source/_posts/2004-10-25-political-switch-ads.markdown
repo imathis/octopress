@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Political Switch Ads
 date: "2004-10-25"
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 Remember the Apple switch ads? These are in the same vein only better. Real people talking about their disenchantment with the Republican party in general, and George Bush in particular. These are real votes that the GOP counted on four years ago that they have lost through arrogance.
 

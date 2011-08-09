@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Power of One
 date: 2004-10-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 Most of us, I think, believe that one vote or one voice makes little impact in the world today. Certainly after the debacle of the 2000 Presidential Election in Florida you have to wonder if individuals have any power in the process of our republic. I know I did.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: End Game
 date: 2005-1-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 In early December 2004 my mother was diagnosed with lung cancer. She had been suffering a shortness of breathe for a few weeks, and after a series of tests to eliminate other causes a chest x-ray revealed the tumor. Further images located it up against and around her pulmonary artery, making surgical removal impossible. Early indications also point towards involvement of the lymph system under both arms, meaning it has already spread further than surgery could ever hope to eradicate. The team of doctors all agree that containment and control are the only medical options open to her.
 

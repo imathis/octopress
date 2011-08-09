@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Feeling Like A Bully
 date: 2007-8-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 Growing up I was often the target of the neighborhood bully and his miscreant friends.  As I was sensitive and cried easily when teased or picked on I was an attractive target to bullies, easy game as it were.  As an adult I find that I react strongly to incidents where I see someone being bullied or when I feel like I am being bullied.
 

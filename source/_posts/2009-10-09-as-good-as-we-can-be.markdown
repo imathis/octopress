@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: As Good As We Can Be
 date: 2009-10-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today's announcement that President Barack Obama has been named the 2009 Nobel Peace Prize winner no doubt shocked many people, <a title="Obama Says He's 'Surprised' and 'Humbled'" href="http://www.nytimes.com/2009/10/10/world/10nobel.html?_r=2&amp;hp">including President Obama</a>. In a way this award is borrowed from the future. It represents what I hope will be the Obama administration's legacy.
 

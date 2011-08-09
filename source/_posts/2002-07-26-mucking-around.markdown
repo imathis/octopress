@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mucking Around
 date: 2002-7-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 My wife and I had a very difficult and important discussion last night. The past 2 months have been extremely stressful for both of us. The cause of my stress is visible and easy to point out, my job situation. The cause of hers is less open and visible. It is nonetheless just as important. The gist of our talk was about the one-sided approach we had been taking during this crisis. Most of the effort was focus on my issues and me. Far less time was devoted to her issues, feelings and needs.
 

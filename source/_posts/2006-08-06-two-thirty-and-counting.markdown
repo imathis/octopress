@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two Thirty And Counting
 date: 2006-8-6
-link: false
+comments: false
 categories: health
+link: false
 ---
 Saturday morning, prior to my workout, the scale read two thirty point four. Just four tenths of a pound shy of a twenty pound weight loss in two months time. After my workout the same scale read two twenty eight and change. Working out in near hundred degree temperatures causes impressive water weight loses.
 

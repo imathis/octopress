@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Amazing Weekend
 date: 2002-7-29
-link: false
+comments: false
 categories: life
+link: false
 ---
 It was an amazing weekend. Both Thursday and Friday evenings my wife and I had long, deep discussions about some issues that had started to build between us. We both work hard at airing out the little petty things before they become bigger, uglier issues that are impossible to deal with.
 

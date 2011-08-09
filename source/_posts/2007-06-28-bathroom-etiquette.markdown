@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bathroom Etiquette
 date: 2007-6-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently a friend sent me one of those joke emails containing a list of politically incorrect "laws" that govern a gender.  In this case they were "man laws," and one dealt with the men's room.  To whit:
 

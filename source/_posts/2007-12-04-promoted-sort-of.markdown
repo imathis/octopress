@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Promoted, Sort Of
 date: 2007-12-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 My employer has a parking garage under the main building for associates.  Unfortunately the company has grown so much in the past couple of years that there is no long sufficient room for everyone to park in this facility.  My employer's parent company has a number of real estate holdings in the downtown area, and one of those includes a large, multi-story parking garage more or less across the street from the building where I work.  The associate overflow parks in this detached garage.
 

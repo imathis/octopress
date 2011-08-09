@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Morning After
 date: 2003-3-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last evening was the longest I can ever remember. Michele and I alternated between a kind of shocked silence, tears, and pretense at normalcy. In gestalt therapy two terms are used to describe the current focus verses the rest of your life. When something is 'figure' it is your current focus and it often blocks your ability to see anything else in your life. 'Ground' is the term given to the rest of your life. Last night we each had periods where the loss of Abby was intensely figure and also periods where her death faded into the ground.
 

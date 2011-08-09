@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Fears
 date: 2003-4-2
-link: false
+comments: false
 categories: life
+link: false
 ---
 In this time of fear I find that I am struggling with a host of my own personal fears. So much of our lifetime is subject to events beyond our control that it is only natural that we individually develop a set of fears that try to interfere with our daily existence.
 

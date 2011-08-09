@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two Month Review
 date: 2006-3-31
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 After two months of daily use I am very satisfied with the Lenovo ThinkPad Z60m. It has been reliable and largely without flows or issues.
 

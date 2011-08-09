@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: It Might Get Loud
 date: 2010-3-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 With Sibylle in Germany for a week I've been watching a lot of movies to fill the time. At only a dollar a movie per night, Redbox has figured prominently in providing new material to watch. With several Redboxes in town and the ability to checkout their inventory online, I've been able to pick and choose movies I wanted to see.
 

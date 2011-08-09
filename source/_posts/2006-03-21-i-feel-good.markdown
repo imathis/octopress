@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: I Feel Good
 date: 2006-3-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently, in a conversation with Laura, I used the phrase "instead of trying to be with people who look good, we should try to be with people who feel good." She didn't let that <em><a href="http://dictionary.reference.com/search?q=bon%20mot" title="bon mot defined">bon mot</a></em> go by unnoticed. Thinking back on her comments about it, I realize that one of the cornerstones of my relationship with Michele was how we each felt towards each other, and more importantly, how we felt about ourselves when we were with each other.
 

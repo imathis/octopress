@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Morning Comics
 date: "2008-12-28"
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have been an avid reader of the comics "page" for as long as I can remember.  Page is in quotes since I rarely, if ever, read the newspaper anymore, instead I use a wonderful piece of software called Comictastic.  <a title="Comictastic" href="http://www.spiny.com/comictastic/" target="_blank">Comictastic</a>, available only for the Mac operating system, is, according to <a title="Andy Ihnatko" href="http://www.suntimes.com/technology/ihnatko/index.html" target="_blank">Andy Ihnatko</a>,
 <blockquote>It's like TiVo for comic strips, and that's the most emphatic praise I can give it without using certain words that my editor assures me he has no intention of ever printing.</blockquote>

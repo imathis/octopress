@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Power of Links
 date: 2008-4-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 All of us have heard of the "<a title="Six degrees of separation" href="http://en.wikipedia.org/wiki/Six_degrees_of_separation">six degrees of separation</a>" theory, which implies that you can get from any person on the planet to any other person on the planet with only six intervening connections.  For example, I know my father, whose best friend, in turn, is a former Washington DC lobbyist, and has met with former President Bush.  Therefore I'm only four degrees of separation away any number of world leaders.  That and $5 will get you a tall coffee at Starbuck's.
 

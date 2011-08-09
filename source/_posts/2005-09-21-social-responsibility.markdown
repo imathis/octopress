@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Social Responsibility
 date: 2005-9-21
-link: false
+comments: false
 categories: social issues
+link: false
 ---
 As members of a society we all agree to an unwritten contract that defines our conduct with others. Break some of the contracts clauses and you'll be considered eccentric. Break major clauses and you run afoul of the law and go to jail. (Unless you happen to be "corporate citizen.") Who is the judge and jury that enforces this social contract? You and I, of course.
 

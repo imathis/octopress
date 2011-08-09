@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Nothing really
 date: 2002-8-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 Sorry for the lack of posts here lately. I guess I have been doing pretty good on the whole. I've been feeling tired a lot lately and finally decided it was stress from work. I have managed to take some time off here and there and that is helping. I took last Friday off, and this coming weekend is Labor day. So a couple of 4-day weeks ~ that's nice.
 

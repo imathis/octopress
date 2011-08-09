@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: When It Rains...
 date: 2004-4-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 The past week has been long and stressful. On Tuesday Michele got an e-mail from her prospect in Chapel Hill asking her to call and set up a face to face interview. A time was open on Thursday, just two days later, so we scurried around Tuesday afternoon and evening making our preparations.
 

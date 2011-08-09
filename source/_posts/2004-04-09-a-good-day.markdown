@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Good Day
 date: 2004-4-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday we got out of the house and "blew the stink off" as my mother-in-law would say. We took a short road trip to St. Louis and had lunch a <a href="http://www.redrobin.com" title="Red Robin">Red Robin</a>, one of our favorite burger places. They have the best Freckled (strawberry) lemonade. Afterwards we stopped at a <a href="http://www.krispykreme.com" title="Krispy Kreme">Krispy Kreme</a> for a dozen doughnuts.
 

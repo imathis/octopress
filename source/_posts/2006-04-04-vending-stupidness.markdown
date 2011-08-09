@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Vending Stupidness
 date: 2006-4-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 The building where I work has a cafeteria on the ground floor, and vending machine areas on the third, forth, and fifth floors. Why the second floor got skipped is beyond me, and a subject for another rant.
 

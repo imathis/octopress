@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "On Gifts: Given and Received"
 date: 2003-4-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have trouble with present and gifts. I struggle to get excited about getting them for other people, and I resist receiving them for myself. I'm sure that the root of this lies in my past but it is one of those issues that is hard to see clearly.
 

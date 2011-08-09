@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Flaky Mac
 date: 2006-8-3
-link: false
+comments: false
 categories: life
+link: false
 ---
 About a week or so ago the wireless connection to the iMac computer started acting flaky. It has never made the connection on its own after being restarted or rebooted. I always have to click the WiFi icon and select my network to get it started. Once connected though, it was always rock solid.
 

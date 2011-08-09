@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Bachmann's Waterloo
 date: 2011-6-29
-link: true
+comments: false
 categories: links
+link: true
 ---
 <a title="Bachmann's Waterloo" href="http://factcheck.org/2011/06/bachmanns-waterloo/">Bachmann's Waterloo</a>&rarr;
 <br />

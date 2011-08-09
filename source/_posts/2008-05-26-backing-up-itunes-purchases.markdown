@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Backing up iTunes Purchases
 date: 2008-5-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 iTunes allows you to back up your purchased media, in fact you can make a back up of your entire library.  However, since most of my non-iTunes purchased media is already on CD, I don't see a need to back up the iTunes version.  My iTunes purchases include the introductory mini-series and first three seasons of Battlestar Galactica (BSG), a whopping 18 GB of material, that, quite frankly, has to go.  Even with an after-market 100 GB drive installed in the Powerbook, I'm regularly below 8 or 9 GB of free disk space these days.
 

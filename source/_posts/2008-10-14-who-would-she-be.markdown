@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Who Would She Be?
 date: "2008-10-14"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today is my sister's 46th birthday.  She died on Christmas Day 1973 at the age of eleven from leukemia.  In the intervening 35 years I've come to terms with her death, come to terms with my grief, and my survivor's guilt.  But there is one question I cannot answer: who would she be?
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Flickr Upload Via Command Line
 date: 2009-4-17
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently one of my coworkers Twittered that he had uploaded some <a title="Josh Works on Twitter" href="https://twitter.com/worksology/status/1530154480">11,000 pictures</a> to his Flickr account. After getting over my initial shock at the sheer volume of images, I started thinking that I had a couple thousand images on my hard drive that I would like to have on Flickr too.
 

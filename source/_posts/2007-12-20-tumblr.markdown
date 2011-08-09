@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tumblr
 date: "2007-12-20"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 There is a new type of weblog available, called a <i>tumblr</i> or tumble blog.  You can set one up in just a couple of minutes by visiting the <a href="http://tumblr.com" title="tumblr">tumblr home page</a>.  I did yesterday, and already I've got several <a href="http://zanshin.tumblr.com" title="remaining mind">postings</a>.
 

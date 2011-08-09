@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Too Damn Efficient
 date: "2005-11-27"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Efficiency is not your friend. At least not when you have an entire day to fill and you are depressed. In the three hours since I've been up I have:
 

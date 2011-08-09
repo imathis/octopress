@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mood Swings Like A Pendulum Do
 date: 2006-2-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 For whatever reason this evening, my mood is up for a change. I'm not really sure why tonight should be any different than any other night, but it is; not that I am complaining. When my mood is upbeat I feel lighter and better.
 

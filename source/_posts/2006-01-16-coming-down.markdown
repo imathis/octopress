@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Coming Down
 date: 2006-1-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 In the several hours since my rage filled posting earlier today I have had quite a breakdown. Initially I started expending the energy from my repressed anger by cleaning up what has become the storage closet. The Saturday of New Year's Eve I removed all of Michele work clothes and took them to Goodwill. Since then the closet and adjoining bedroom have been a shambles. I finished moving things around inside the closet and returned all the items I had strewn about the room. The closet is accessible again, and everything inside it is as well.
 

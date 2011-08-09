@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "PowerBook G4 vs. MacBook Pro "
 date: "2009-10-17"
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past seven years my primary day-to-day computer has been a Titanium PowerBook G4. In a word this laptop has been outstanding. Except for a faulty CD drive early in its life, I have had no mechanical difficulty with this machine. I replaced the original hard drive with a new 100 GB model about 4 years ago; the original 40 GB drive has continued to perform faithful service in a USB/FireWire enclosure. I bumped the memory up from its original 256 MB to the maximum 1 GB. I'm still using the original battery, and the AirCard I added weeks after getting the machine. In short it has been a phenomenal machine, well worth every penny of it's $2500 cost.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Some Tidbits
 date: "2003-12-14"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 <ul>
 <li>I have a new wireless mouse that I like very much. Once less cord on my desk is nice.</li>

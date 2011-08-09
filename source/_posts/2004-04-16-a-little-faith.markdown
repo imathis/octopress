@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Little Faith
 date: 2004-4-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently I posted a piece about a new definition ( to me any way ) of <a href="http://www.zanshin.net/blogs/000389.html" title="faith">faith</a>. Since then a lot has happened in my life that has required, oddly enough, faith.
 

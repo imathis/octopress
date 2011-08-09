@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Out in the Cold
 date: 2004-8-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 It has been almost four years since I was last an employee. In that previous iteration I was working for a company as an actual employee, consulting was not a part of the mix. There was a small, dedicated staff in the "front office" who dealt with our benefits; you could walk down the hall and ask questions about benefits, costs, et cetera.
 

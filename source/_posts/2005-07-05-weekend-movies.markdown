@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Weekend Movies
 date: 2005-7-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the long holiday weekend we watched several movies.
 

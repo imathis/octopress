@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: On This Day In History
 date: 2006-7-25
-link: false
+comments: false
 categories: family
+link: false
 ---
 Nine years ago this evening I was at the rehearsal dinner for my wedding. Friends and family had gathered from Florida, Tennessee, Massachusetts, and Illinois to help us celebrate the occasion. The experience was heady and surreal, exciting and scary, wonderful and beautiful.
 

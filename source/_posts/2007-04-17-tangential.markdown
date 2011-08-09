@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Tangential
 date: 2007-4-17
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 This morning I was reading one of my favorite sites, <a href="http://lifehacker.com" title="Life Hacker">Life Hacker</a> and saw a posting about personal Wiki software.  A "wiki" is the editable, cross-linked system behind <a href="http://wikipedia.org" title="Wikipedia">Wikipedia</a>.  I currently use one on occasion on my Powerbook called <a href="http="http://flyingmeat.com/voodoopad/" title="VoodooPad">VoodooPad</a>.  I've been looking for one to use on the Windows XP-based Thinkpad.
 

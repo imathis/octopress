@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: HTC Incredible
 date: 2010-5-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 Shortly before 4 pm this afternoon I became the proud owner of a receipt for a HTC Incredible from Verizon. The actual device will ship in about 2 1/2 weeks on June 11th. Until then I'll have to amuse myself with pictures online and the Android Emulator.
 

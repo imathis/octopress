@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: How to See Your Mailing List Postings Using Gmail
 date: 2007-11-7
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Recently I joined a very active mailing list for the Ubuntu operating system.  In doing so I discovered a "feature" of Gmail.  By default (and a setting that you can't change), any mail you post to a mailing list isn't reflected in your inbox.  Instead the mail is shown only in <b>Sent Mail</b> and <b>All Mail</b> on your account.  If you search the Gmail help pages you will find that this is done "<a href="https://mail.google.com/support/bin/answer.py?answer=6588" title="save time and prevent clutter">to save you time and prevent clutter</a>."
 

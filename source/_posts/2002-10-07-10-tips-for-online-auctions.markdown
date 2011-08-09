@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 10 Tips for Online Auctions
 date: 2002-10-7
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 (1) The seller must have a real e-mail address. Not just a hotmail, yahoo or other web based service. Web based e-mail accounts are simple to set up using made up personal information. Don't trust them. If the seller claims it is their only address then ask for a home phone number.
 

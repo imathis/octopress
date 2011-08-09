@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Backing Up Your Delicious Bookmarks
 date: 2009-1-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 Recently I have become a big user of the social bookmarking site Delicious.  Nearly everyday I add several new bookmarks to my list on the site, the most recent ten of which appear in my sidebar.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mom's Eulogy
 date: 2006-6-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 Eulogy for Helen Riley Nichols
 

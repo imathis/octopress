@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Simple Minded
 date: 2002-6-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have lunch a couple times a week at a local chili diner. The chili is simple and hot, the service quick, and the atmosphere pleasant.
 

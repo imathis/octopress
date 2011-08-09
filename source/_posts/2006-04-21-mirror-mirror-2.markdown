@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mirror Mirror
 date: 2006-4-21
-link: false
+comments: false
 categories: life
+link: false
 ---
 As I look towards the future my thoughts include questions about whether I'll ever be in another relationship. Obviously I am in no shape now to entertain such an undertaking, but someday I will be, and I wonder what that day holds for me. As I ponder that future self it occurs to me that one step I must complete is rediscovering my true self image.
 

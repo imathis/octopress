@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Drop, Drop, Rinse, Repeat
 date: 2006-3-24
-link: false
+comments: false
 categories: life
+link: false
 ---
 On Thursday I had LASIK eye surgery performed on both of my eyes. while the result will be several days, if not weeks, in the making, I am pleased to say that I am already noticing differences.
 

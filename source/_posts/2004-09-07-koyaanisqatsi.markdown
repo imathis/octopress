@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Koyaanisqatsi
 date: 2004-9-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 The Hopi Native American word for "a state of life that calls for another way of living" or "life out of balance" is Koyaanisqatsi.
 

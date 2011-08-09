@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Site redesign
 date: 2003-11-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 I've completed an extensive overhaul of my site. I believe everything is working now, except for the track back link for each posting. Since I've never had a track back this is not a major concern.
 

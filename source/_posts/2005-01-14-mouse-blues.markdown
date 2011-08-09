@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mouse Blues
 date: 2005-1-14
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 For almost two years now my mouse of choice has been a Kensington Wireless Pocket Mouse Pro. This mouse was nearly perfect for me. The size was right in my hand, the scroll wheel had a positive notched feel has it turned without making any annoying click, and the USB dongle stowed neatly inside the mouse for travel. There were two slight drawbacks to the Pocket Mouse: the USB dongle was "L" shaped, causing it to partial block neighboring plug ins on the back side of my Powerbook. Even though the long part of the "L" swiveled it still got in the way. And the automatic power saver feature caused a significant delay when first using the mouse after it had been idle long enough to "go to sleep."
 

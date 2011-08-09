@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Waiting
 date: "2007-10-28"
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I have been a big fan of Google Mail, also known as GMail, ever since it was introduced.  I was fortunate enough to snag an invitation early on in the beta cycles so I've been using it for over three years now.  Recently I detailed how I am using GMail to aggregate all my mail accounts in to one umbrella account, and then how I use an IMAP account on my domain to access all my mail from multiple machines.  The only thing that would improve my email configuration would be IMAP access to my GMail accounts.
 

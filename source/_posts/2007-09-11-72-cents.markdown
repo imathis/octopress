@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 72 Cents
 date: 2007-9-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Earlier today I saw <a href="http://kottke.org" title="Kottke.org">Kottke's</a> posting about finding <a href="http://www.kottke.org/07/09/where-did-that-number-come-from" title="Where did that number come from">68 cents</a> in his pants, immediately after guessing aloud that there was 68 cents in his pants.
 

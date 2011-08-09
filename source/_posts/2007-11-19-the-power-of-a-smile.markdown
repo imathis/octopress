@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: The Power of A Smile
 date: "2007-11-19"
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning I forgot my parking transponder and work badge.  Naturally I didn't discover this oversight until I was completely downtown, 25 miles from home.  And, this being Monday, I had an eight o'clock meeting meaning no time to return home to retrieve them.
 

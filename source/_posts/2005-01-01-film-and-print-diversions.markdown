@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Film and Print Diversions
 date: 2005-1-1
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 <a href="http://musicplasma.com/" title="De-lovely">De-lovely</a> is a wonderful musical love-story. Kevin Kline astounds as Cole Porter in this de-lightfully presented story of his life, his music, and his love.
 

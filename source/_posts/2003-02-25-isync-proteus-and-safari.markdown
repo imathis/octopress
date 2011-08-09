@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: iSync, Proteus, and Safari
 date: 2003-2-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 In switching to Apple, and Mac OS X, I have been introduced to several new software applications that I like and use frequently. Being a software developer by trade I understand that it is impossible to produce software that is all things to all people. Still, there are features that I'd like to see added to some of my new favorites.
 

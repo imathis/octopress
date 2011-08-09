@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Donate
 date: 2007-9-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 For the past several weeks I have been trying to sell some extra furniture on <a href="http://www.salvationarmyusa.org/usn/www_usn.nsf/vw-sublinks/85256DDC007274DF80256B80003C8893?openDocument" title="Kansas City craigslist">craigslist</a>.  The experience has been interesting to say the least.
 

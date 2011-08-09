@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Monday
 date: "2005-10-31"
-link: false
+comments: false
 categories: life
+link: false
 ---
 It's funny how your perspective changes over time. For the past eight, almost nine, years I have viewed Monday with a certain depression. Monday meant that the weekend was over, my uninterrupted time with Michele was over until the next weekend. Before I met Michele, and before she moved into my life, weekends were something to be endured. I was socially introverted and more comfortable the painful isolated existence I'd setup for myself than with breaking down the walls of my own making in order to be with other people.
 

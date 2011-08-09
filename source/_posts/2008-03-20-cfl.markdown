@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: CFL
 date: 2008-3-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 On 19 December 2007, United States President George W. Bush signed the Energy Independence and Security Act of 2007. Among other provisions, that law sets efficiency standards for electric lights that will see the incandescent light bulb phased off the US market beginning in 2012. (via <a href="http://en.wikipedia.org/wiki/Compact_fluorescent_lamp" title="Government encouraged adoption of CFLs">Wikipedia</a>)  This means that in just four years we will start to see the end of the incandescent light bulb, and the rise of the CFL or Compact Fluorescent Lamp, as its replacement.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Just Because It Is Allowed Doesn't Make It Right
 date: 2008-3-17
-link: false
+comments: false
 categories: life
+link: false
 ---
 It <a href="http://www.npr.org/blogs/news/2008/03/republicans_turning_out_in_dro_1.html" title="Republicans Voting for Clinton">appears that Republicans are voting for Hillary Clinton</a> in late season primaries in order to either prolong the divisive contest between her and fellow Democratic candidate Barack Obama, or to outright boost her to  the nomination.  The strategy is based on their belief that Senator Clinton can be defeated by John McCain in November.
 

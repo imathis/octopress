@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Version Control Systems as Airlines
 date: 2011-6-6
-link: true
+comments: false
 categories: links
+link: true
 ---
 <a title="If Version Control Systems Were Airlines" href="http://changelog.complete.org/archives/698-if-version-control-systems-were-airlines">If Version Control Systems Were Airlines</a> &rarr;
 <br />

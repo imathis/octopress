@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Show Me Your Buttons, I Dare You
 date: 2006-4-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele always said that I need to come with a warning label, perhaps a tattoo on my forehead others could read stating, "Poor Impulse Control", or "Will Play With Your Head." In any event she was well aware of my willingness to verbally poke at people if only to discover their hot buttons. Never to be malicious, just to understand what made them tick. Some people display their buttons more openly than others, and some need to just stay indoors.
 

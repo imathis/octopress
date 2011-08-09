@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Into The Rabbit Hole
 date: 2004-5-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 This morning I had the most intense and rigorous interview of my twenty year career. The gentleman on the other end of the phone was very up front about needing to vet me, and how he was going to achieve that. The thirty minutes left me excited and drained at the same time.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Palm Portable Keyboard
 date: 2002-5-14
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I am typing this on my new Palm Portable keyboard. This folding device requires no power, no cabling, and very little space. My m515 plugs in quickly and easily and I am able to capture my thoughts at a moments notice.
 

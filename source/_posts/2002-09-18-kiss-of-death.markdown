@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Kiss of Death
 date: 2002-9-18
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I am starting to develop a complex. My luck with online auctions is continuing to be awful.
 

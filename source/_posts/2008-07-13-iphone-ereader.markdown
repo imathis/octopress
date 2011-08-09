@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: iPhone eReader
 date: 2008-7-13
-link: false
+comments: false
 categories: life
+link: false
 ---
 Ever since getting my first Palm Pilot many years ago, I have been a big fan of electronic books.  First with Peanut Press, and now with eReader, I have collected nearly 400 electronic books.  The diminutive screen size has never bothered me, and I have enjoyed the portability and availability of having one, or two, or twelve, books in my pocket.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Private Screening
 date: 2006-5-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 The theater nearest to where I live has very early matinees on the weekends. The first showing is usually around 11:00 am. As a bonus the admission price to this early show is only $4.50, two dollars less than the usual admittance price. However, that isn't the best part.
 

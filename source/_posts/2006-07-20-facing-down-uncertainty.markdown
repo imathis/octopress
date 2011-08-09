@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Facing Down Uncertainty
 date: 2006-7-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 Here's the thing, dating is filled with uncertainty. Gaps in your knowledge if you will. And we, as humans, love to fill gaps in our knowledge with fear. You send some one a note and don't hear back for a day. Then two. Not knowing the reason why you start to assume the worst, they hate me and I'm never going to hear from them again. Once the gap is filled with your fear (which is really an expression of insecurity) you move on to bashing yourself for the insecurity. It's a downward spiral that's no fun to ride.
 

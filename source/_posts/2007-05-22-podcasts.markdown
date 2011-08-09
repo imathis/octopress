@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Podcasts
 date: 2007-5-22
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I'm late coming to the whole Podcast scene.  To me it seemed like talk radio, only performed by amateurs.  Recently, however, at a friends recommendation, I have started actively listening to one.  <a href="http://mydailyphrase.com/german" title="My Daily Phrase: German">My Daily Phrase: German</a>.
 

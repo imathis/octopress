@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Rumble Strips
 date: 2006-8-14
-link: false
+comments: false
 categories: life
+link: false
 ---
 As with any large metropolitan area in the summer, there are numerous highway construction projects tying up traffic here. There is one huge project that starts just where I get on the ring road and continues for the first few miles of my commute. All of the work being done is off to the side or overhead, so the traffic flow isn't too bad. The lanes are narrower there, and snake back and forth from one shoulder to the other throughout the construction zone.
 

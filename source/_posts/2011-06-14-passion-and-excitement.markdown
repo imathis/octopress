@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Passion and Excitement
 date: 2011-6-14
-link: false
+comments: false
 categories: elsewhere
+link: false
 ---
 I love the passion and excitement and wonder that Han Na Chang brings to her playing. She's having a blast.
 

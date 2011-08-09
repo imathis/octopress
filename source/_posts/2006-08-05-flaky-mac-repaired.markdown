@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Flaky Mac Repaired
 date: 2006-8-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 It appears that the new WiFi card has cured the iMac of it's won't-stay-connected blues. The new card arrived in the mail yesterday, but since it was insured the post man conveniently left me a claim ticket so I could trek to the post office this morning on my way to kendo.
 

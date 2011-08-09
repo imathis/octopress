@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Outrageous
 date: 2004-8-16
-link: false
+comments: false
 categories: life
+link: false
 ---
 I have discovered one place where Springfield has Kansas City beat. Video rental pricing.
 

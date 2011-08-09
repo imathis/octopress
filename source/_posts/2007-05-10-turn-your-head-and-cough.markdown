@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Turn Your Head and Cough
 date: 2007-5-10
-link: false
+comments: false
 categories: life
+link: false
 ---
 Today I had my first physical in perhaps a dozen years.  There are several dynamics at work here, not the least of which is a desire to keep my health for as long as possible.  You see, when I was sixteen and the United States celebrated its Bicentennial I decided that I wanted to be alive to see the Tricentennial.  I'll be 116 then, and I'd like my body to be as fit and as healthy as possible.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Depression
 date: 2002-8-6
-link: false
+comments: false
 categories: life
+link: false
 ---
 I am sliding into depression again and I am doing so largely without realizing it. I have been more tired than normal the past few days, and what sleep I do get is less restorative. All of this happened with out my awareness until just a few minutes ago when I suddenly thought to myself that I am depressed again.
 

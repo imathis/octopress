@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Family Business
 date: 2003-2-18
-link: false
+comments: false
 categories: life
+link: false
 ---
 This past weekend my wife and I traveled to Manteo North Carolina to visit my mother-in-law. We had scheduled this trip some time ago last fall and in the time since then there have been some complications with Virginia's health, so our trip had a sense of urgency.
 

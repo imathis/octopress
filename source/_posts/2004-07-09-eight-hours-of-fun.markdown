@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Eight Hours of Fun
 date: 2004-7-9
-link: false
+comments: false
 categories: life
+link: false
 ---
 Prolog : The week of July 5th I initiate the process of selling enough stock to generate $3000 in cash in the money market account. This money won't be available until July 13th.
 

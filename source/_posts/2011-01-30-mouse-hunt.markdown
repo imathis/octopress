@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Mouse Hunt
 date: 2011-1-30
-link: false
+comments: false
 categories: life
+link: false
 ---
 One evening, about a week ago, Bootstrap was sitting on one of the pianos staring up at the ceiling. This isn't normal behavior for him, but we didn't really pursue it. A few evenings later Sibylle was working at the table in the studio when Bootstrap became interesting in the corner of the room there. She could hear faint scrabbling sounds from the wall.
 

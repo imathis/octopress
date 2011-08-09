@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Can You See Me Now?
 date: 2006-4-5
-link: false
+comments: false
 categories: life
+link: false
 ---
 Tomorrow it will have been two weeks since I underwent LASIK eye surgery to correct my vision. My patience (never something I possess in abundance) is all but gone. I am not able to see with out squinting, or sitting 5 inches away from what I trying to do. Driving at night is surreal and awful - there are halos around all the lights and I have a hard time focusing my attention on just the road. I will admit that I am terrified that I have made a huge mistake and that I'll end up regretting this for the rest of my life. My fear is that I am going to need glasses in order to see past the alterations that don't seem to be helping me see yet.
 

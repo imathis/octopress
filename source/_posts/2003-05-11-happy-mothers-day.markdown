@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Happy Mother's Day
 date: 2003-5-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 Happy Mother's Day to Helen and Virginia.
 

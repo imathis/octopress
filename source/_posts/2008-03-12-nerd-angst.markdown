@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Nerd Angst
 date: 2008-3-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 The first instant messages I sent were within AOL's "wading pool" using version 1.0 or 1.5 in about March 1993.  Soon thereafter I left the wading pool and started swimming in the open, unfiltered Internet ocean.  One of the first pieces of software I played with was the first version of ICQ.  I still have that initial account, 292099.
 

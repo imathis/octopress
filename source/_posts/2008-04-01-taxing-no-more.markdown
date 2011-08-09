@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Taxing No More
 date: 2008-4-1
-link: false
+comments: false
 categories: life
+link: false
 ---
 Every year for the past twenty-four years I have prepared my own taxes.  For many years my income and filing status allowed me to use the 1040-EZ form, eventually I graduated to the infamous 1040 Long Form.  In 2000, after going into business for myself I was introduced to self employment tax, Schedule C and other forms I care not to remember now.  For the past several years I have lived in one state while working in another, and for much of that time I had an employer who only withheld tax for the state where he was located, not where I was actually working.
 

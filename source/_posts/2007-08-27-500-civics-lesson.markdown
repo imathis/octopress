@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: $500 Civics Lesson
 date: 2007-8-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 Two weeks ago my car was backed into while it was parked.  I happened to be coming out the front door of the townhouse and witnessed the accident.  The driver of the minivan was suitably upset and we exchanged contact information, and I collected from him his driver's license number and insurance information.  He said that he wanted to handle this himself and not involve the police or insurance.  I was willing to go along with that, mostly because the damage looked so slight.
 

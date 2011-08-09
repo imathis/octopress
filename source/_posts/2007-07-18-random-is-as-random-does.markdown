@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Random Is As Random Does
 date: 2007-7-18
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 I've been using my iPod on a daily basis at my new job which has brought to a light a couple of quirks in how it handles smart playlists.  For those of you who aren't iPod and iTunes savvy, a smart playlist is dynamic;  you specific parameters and the contents of the list are filtered through those parameters.  For example, you might create a list that only contains music not played in the last month.
 

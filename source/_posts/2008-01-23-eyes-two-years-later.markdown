@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Eyes, Two Years Later
 date: 2008-1-23
-link: false
+comments: false
 categories: life
+link: false
 ---
 Almost two years ago, in March 2006, I had LASIK surgery done to my eyes to eliminate the need to wear bifocal glasses any more.  The goal was to allow me to see without corrective lens whether I was reading a book, looking at a computer monitor, or driving the car.  Given my age at the time (45) the LASIK option that sounded best was "mono-vision."  As we age our eyes lose some of their focal range.  You might be able to see fine up close, but not far away.  Or the other way around, but not both ends of the scale.  By adjusting, surgically, one eye to see up close and the other to see distance, you can increase the range of unaided vision.
 

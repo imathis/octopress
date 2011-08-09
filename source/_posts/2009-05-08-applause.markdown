@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Applause "
 date: 2009-5-8
-link: false
+comments: false
 categories: diversions
+link: false
 ---
 Last night Sibylle and I went to the opening of <em>Star Trek</em> at the local theater. We haven't been to the movies in a long time, and seeing as how the opening of <em>Star Trek</em> and my birthday coincided, we took the opportunity to go.
 

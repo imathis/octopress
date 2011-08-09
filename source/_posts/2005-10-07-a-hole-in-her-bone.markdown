@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A hole in her bone
 date: 2005-10-7
-link: false
+comments: false
 categories: life
+link: false
 ---
 For severals weeks now Michele has been complaining about a sharp pain in her left shin. Sometimes it would be worse, and sometimes not even there. In the past few days however the pain has become debilitating. Elevating her leg, applying heat or cold provided just a little respite, but no real relief.
 

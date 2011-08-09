@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: It's Like Caramel
 date: 2007-7-11
-link: false
+comments: false
 categories: life
+link: false
 ---
 My favorite ice cream topping is a toss up between caramel and butterscotch.  Part of the attraction, for me, is that the cold of the ice cream changes the consistency of the topping, making it gooey, then gummy, and finally brittle.
 

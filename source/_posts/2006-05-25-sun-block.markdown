@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Sun Block
 date: 2006-5-25
-link: false
+comments: false
 categories: health
+link: false
 ---
 In my career as a martial artist I have had many different injuries. I have jammed toes and fingers, broken knuckles, broken my nose, dislocated my elbow, and torn the medial collateral ligament in my right knee. Not to mention countless contusions and bruises. However, last evening I added a new "injury" to my list of martial arts related boo-boos: sunburn. Sort of adds a whole new meaning to the term sun block.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Reality
 date: 2005-10-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday was surreal; even now it feels like it was happening to someone else. The doctor prescribed some Xanax for us to use to lessen the anxiety of the situation. Around 7 we each took one full tablet. I know that it made me feel vague and floaty, which given the circumstance wasn't pleasant. Still I couldn't get worked up about it so I guess the stuff works.
 

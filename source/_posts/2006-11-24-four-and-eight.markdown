@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Four and Eight
 date: "2006-11-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Participating in <a href="http://www.fussy.org/nablopomo.html" title="NaBloPoMo">NaBloPoMo</a> (National Blog Posting Month) has been an interesting challenge. Trying to come up with some thing to say every day, and then remember to capture it here before midnight has been interesting. I don't really mind, but I am glad that it isn't NaBloPoYr.
 

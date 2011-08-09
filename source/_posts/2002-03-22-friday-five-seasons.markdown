@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: "Friday Five: Seasons"
 date: 2002-3-22
-link: false
+comments: false
 categories: meme
+link: false
 ---
 1. What is your favorite time of year?
 Spring, then fall, summer, and lastly winter.

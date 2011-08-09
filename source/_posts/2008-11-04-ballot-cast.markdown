@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Ballot Cast
 date: 2008-11-4
-link: false
+comments: false
 categories: life
+link: false
 ---
 At about 6:55 am this morning I cast my ballot in the 2008 elections.  The whole process took about 30~35 minutes, which is nothing compared to the lines in some states for early voting.  I was only outside for about 5 minutes, and then the line moved indoors.
 

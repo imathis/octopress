@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Humans Banned on Flights
 date: 2006-8-19
-link: false
+comments: false
 categories: life
+link: false
 ---
 This is perfect.
 

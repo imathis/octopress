@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Brain Food
 date: 2009-1-26
-link: false
+comments: false
 categories: life
+link: false
 ---
 Over the course of the past couple of weeks, I have observed an interesting phenomenon. The amount of Internet reading (RSS feeds, daily site visits, et cetera) that I do is inversely proportional to the mental engagement I have at work.
 

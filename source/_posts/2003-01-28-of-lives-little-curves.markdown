@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Of Live's Little Curves
 date: 2003-1-28
-link: false
+comments: false
 categories: life
+link: false
 ---
 Yesterday, when I stuck my hand into our mailbox, I discovered a large envelope from the Oregon Justice department labeled "Private and Confidential" addressed to my wife.
 

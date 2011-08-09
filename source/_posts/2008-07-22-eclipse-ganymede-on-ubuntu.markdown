@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Eclipse Ganymede on Ubuntu
 date: 2008-7-22
-link: false
+comments: false
 categories: life
+link: false
 ---
 (These steps assume you already have a version of Eclipse installed under /opt.)
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Frigidaire Affinity
 date: 2007-10-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 Many things go into the concept of <em>home</em>.  Some are tangible, others are not.  Sibylle and I have started, slowly, to make a home, together.  Tonight we added something tangible to the list of <em>home</em> in the form of a new front-loading clothes washer.
 

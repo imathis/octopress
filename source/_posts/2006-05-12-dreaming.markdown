@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Dreaming
 date: 2006-5-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 Throughout my life I've never been able to remember my dreams. On rare occasion I'll wake up and know that I've been dreaming, but the images in my head are fleeting and disappear almost immediately. It has never really bothered me, until now.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Leaky Technology
 date: 2003-8-25
-link: false
+comments: false
 categories: life
+link: false
 ---
 About 2 weeks ago our cleaning lady noticed that the throw rug in front of the kitchen sink was soaking wet. We couldn't imagine how it had gotten this way, unless we had spilled water on it without realizing our clumsiness.
 

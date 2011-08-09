@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Reluctance
 date: "2002-11-13"
-link: false
+comments: false
 categories: relationships
+link: false
 ---
 Several weeks ago I discovered that Peter Gabriel, one of my all time favorite artists was on tour and would be in Chicago. My initial try at getting tickets failed as the show as sold out. Several days later, however, a friend informed that a second show had been added. He was interested in going as well so I ordered two tickets online immediately. Then I asked/told Michele about the show. It was not a good <a href="http://www.zanshin.net/blogs/000052.html">thing</a>. While I knew she didn't want to go to a concert I still should have asked to include her. Her feelings were hurt by not being asked.
 

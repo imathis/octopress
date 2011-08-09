@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Dysosmia Unchecked
 date: "2005-11-15"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Once upon a time I wrote about <a href="http://www.zanshin.net/blogs/000605.html" title="olfactory hallucinations">dysosmia</a>, which is the fancy term for olfactory hallucinations. When my allergies or sinus are upset I smell smoke where there isn't any. Usually it's just a faint whiff of smoke and I know that there is nothing there, but sometimes the odor is persistent and strong enough that I start to wonder if there is a fire. I used to ask Michele if she smelled it on those occasions to reassure myself that everything was okay. Now I have to move through the apartment looking in closets and checking appliances.
 

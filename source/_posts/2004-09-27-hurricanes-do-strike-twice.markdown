@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Hurricanes Do Strike Twice
 date: 2004-9-27
-link: false
+comments: false
 categories: life
+link: false
 ---
 I first saw this image over at <a href="http://iheartmena.com" title="i <3 mena">i heart mena</a>, and it made enough of an impression that I wanted to post it here.
 

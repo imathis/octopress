@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Napping 101
 date: "2005-12-11"
-link: false
+comments: false
 categories: life
+link: false
 ---
 To my mind there are several kinds of naps, with a nap being any sleep outside of the normal go-to-bed-at-night-and-get-up-in-the-morning sleep.
 

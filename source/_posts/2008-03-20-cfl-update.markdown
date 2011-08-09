@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: CFL Update
 date: 2008-3-20
-link: false
+comments: false
 categories: life
+link: false
 ---
 My posting about CFL bulbs and their hazards seems to have been well timed.  On Slashdot today, there is a link to <a href="http://www.msnbc.msn.com/id/23694819/" title="Shining a light on fluorescent bulbs">this MSNBC story about the growing concern</a> in the environmental community about the safety of the bulbs in light of their mercury content.
 

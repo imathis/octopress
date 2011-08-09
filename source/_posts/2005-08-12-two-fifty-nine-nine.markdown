@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two-Fifty-Nine Nine
 date: 2005-8-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 When I was a child there were two service stations a mile from my parents house, a Shell station and across the road a Standard station. (Who else remembers Standard stations?) These were full-service stations; when you pulled in next to the pump island your car ran over the annunciator cord causing a bell to ring inside the station itself. The attendant, dressed in an collared shirt with his name embroidered over the left pocket, came out and asked you what kind of gas you wanted, and should he check the oil. The front and rear windows were cleaned as a matter of course.
 

@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Two-Thirty AM Phone Call
 date: 2005-6-12
-link: false
+comments: false
 categories: life
+link: false
 ---
 <b>Long Day's Journey Into Night</b>
 Tuesday morning, at about 2:40 the phone rang walking us both up. By the time I reached it in the living room the voice mail system had already grabbed it. While I was waiting for the message waiting light to flash I checked in the incoming call log to see who had called. The number started with the (252) area code for eastern North Carolina where Michele's mom lived.

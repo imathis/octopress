@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: 108 degrees
 date: 2006-6-8
-link: false
+comments: false
 categories: life
+link: false
 ---
 <img src="http://www.zanshin.net/images/108.jpg" width="450" height="192" alt="car thermometer showing 108 degrees">
 

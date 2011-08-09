@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Trampled
 date: "2008-11-28"
-link: false
+comments: false
 categories: life
+link: false
 ---
 When I was 13 or 14 years old, the last year I was an active member of the Boy Scouts, my troop spent a week at camp.  The camp was new and modern and full of great activities.  The pool director liked to have people tossed in the pool.  Birthday.  New merit badge.  Any kind of recognition at all was an excuse to pick someone up from the dinning hall, carry them to the pool and toss them in.  Great fun.
 

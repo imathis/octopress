@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Personal Property Worksheet
 date: "2006-11-14"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Last Friday I received a voice mail from the insurance adjuster assigned to my claim telling me that my claim had been completed and that I should be getting a check in the mail within seven to ten business days. Knowing that I had a $500 deductible on the policy I was surprised, as I felt the depreciated value of the items stolen would be less than the deductible.
 

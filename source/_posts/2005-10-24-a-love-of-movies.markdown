@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: A Love of Movies
 date: "2005-10-24"
-link: false
+comments: false
 categories: life
+link: false
 ---
 Michele and I both shared a love of movies. Long before we ever met we looked forward to seeing new movies and renting old favorites to see again. Throughout our relationship we watched movies together. In what I later learned was a litmus test, one of the first weekends we spent together included a suggestion from her that we see "The Mirror Has Two Faces", a romantic comedy. I thoroughly enjoyed it, and my willingness to share that enjoyment with her earned me extra points.
 

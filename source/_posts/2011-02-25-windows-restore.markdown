@@ -1,10 +1,10 @@
 --- 
 layout: post
-comments: false
 title: Windows Restore
 date: 2011-2-25
-link: false
+comments: false
 categories: nerdliness
+link: false
 ---
 Last Saturday Sibylle's brand new Toshiba laptop started acting funny. First would lock up anytime the computer went to sleep, and then it stopped recognizing USB devices. It also stopped recognizing SD Cards. Not good things.
 
