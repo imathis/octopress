@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress: Configuring Octopress</title>
+  <meta name="author" content="Brandon Mathis">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://octopress.org/docs/configuring/index.html"/>
+  <link href="/octopress/favicon.png" rel="shortcut icon" />
+  <link href="/octopress/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/octopress/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/octopress/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/octopress/octopress/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml"/>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10876422-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body   class="no-sidebar" >
+  <header><hgroup>
+  <h1><a href="/octopress/">Octopress</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role=navigation><ul role=subscription data-subscription="rss">
+  <li><a href="/octopress/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="site-search">
+    <input type="hidden" name="q" value="site:octopress.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul role=main-navigation>
+  <li><a href="/octopress/">Blog</a></li>
+  <li><a href="/octopress/docs">Documentation</a></li>
+  <li><a href="/octopress/help">Help</a></li>
+  <li><a href="http://github.com/imathis/octopress">Source</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Configuring Octopress</h1>
+    <p class="meta">
+
+
+
+
+<time datetime="2011-07-19 00:00:00 -0400" pubdate  updated >Jul 19<span>th</span>, 2011</time>
+
+
+</p>
+  </header>
+  <p><a href="/octopress/docs/setup">&laquo; Previous, Octopress Setup</a></p>
+
+<p>I&#8217;ve tried to keep configuring Octopress fairly simple and you&#8217;ll probably only ever change the <code>Rakefile</code> and the <code>_config.yml</code>.
+Here&#8217;s a list of files for configuring Octopress.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'>_config.yml       <span class="c"># Main config (Jekyll&#39;s settings)</span>
+</div><div class='line'>Rakefile          <span class="c"># Configs for deployment</span>
+</div><div class='line'>config.rb         <span class="c"># Compass config</span>
+</div><div class='line'>config.ru         <span class="c"># Rack config</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Configurations in the <code>Rakefile</code> are mostly related to deployment and you probably won&#8217;t have to touch them unless you&#8217;re using rsync.</p>
+
+<h2>Blog Configuration</h2>
+
+<p>In the <code>_config.yml</code> there are three sections for configuring your Octopress Blog.
+<strong>Spoiler:</strong> You must change <code>url</code>, and you&#8217;ll probably change <code>title</code>, <code>subtitle</code> and <code>author</code> and enable some 3rd party services.</p>
+
+<h3>Main Configs</h3>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+</pre></td><td class='code' width='100%'><pre><code class='yaml'><div class='line'><span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span>                <span class="c1"># For rewriting urls for RSS, etc</span>
+</div><div class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span>              <span class="c1"># Used in the header and title tags</span>
+</div><div class='line'><span class="l-Scalar-Plain">subtitle</span><span class="p-Indicator">:</span>           <span class="c1"># A description used in the header</span>
+</div><div class='line'><span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span>             <span class="c1"># Your name, for RSS, Copyright, Metadata</span>
+</div><div class='line'><span class="l-Scalar-Plain">simple_search</span><span class="p-Indicator">:</span>      <span class="c1"># Search engine for simple site search</span>
+</div><div class='line'><span class="l-Scalar-Plain">subscribe_rss</span><span class="p-Indicator">:</span>      <span class="c1"># Url for your blog&#39;s feed, defauts to /atom.xml</span>
+</div><div class='line'><span class="l-Scalar-Plain">subscribe_email</span><span class="p-Indicator">:</span>    <span class="c1"># Url to subscribe by email (service required)</span>
+</div><div class='line'><span class="l-Scalar-Plain">email</span><span class="p-Indicator">:</span>              <span class="c1"># Email address for the RSS feed if you want it.</span>
+</div></code></pre></td></tr></table></div>
+
+<p><strong>Note:</strong> If your site is a multi-author blog, you may want to set this config&#8217;s <code>author</code> to the name of your
+company or project, and add author metadata to posts and pages to give proper attribution for those works.</p>
+
+<h3>Jekyll &amp; Plugins</h3>
+
+<p>These configurations are used by Jekyll and Plugins. If you&#8217;re not familiar with Jekyll, you should probably have a look at the <a href="https://github.com/mojombo/jekyll/wiki/Configuration">configuration docs</a> which lists more options that aren&#8217;t covered here.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+<span class='line'>17</span>
+</pre></td><td class='code' width='100%'><pre><code class='yaml'><div class='line'><span class="l-Scalar-Plain">root</span><span class="p-Indicator">:</span>               <span class="c1"># Mapping for relative urls (default: /)</span>
+</div><div class='line'><span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span>               <span class="c1"># Port to mount Jekyll&#39;s WEBrick server</span>
+</div><div class='line'><span class="l-Scalar-Plain">permalink</span><span class="p-Indicator">:</span>          <span class="c1"># Permalink structure for blog posts</span>
+</div><div class='line'><span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span>             <span class="c1"># Directory for site source files</span>
+</div><div class='line'><span class="l-Scalar-Plain">destination</span><span class="p-Indicator">:</span>        <span class="c1"># Directory for generated site files</span>
+</div><div class='line'><span class="l-Scalar-Plain">plugins</span><span class="p-Indicator">:</span>            <span class="c1"># Directory for Jekyll plugins</span>
+</div><div class='line'><span class="l-Scalar-Plain">code_dir</span><span class="p-Indicator">:</span>           <span class="c1"># Directory for code snippets (for include_code plugin)</span>
+</div><div class='line'><span class="l-Scalar-Plain">category_dir</span><span class="p-Indicator">:</span>       <span class="c1"># Directory for generated blog category pages</span>
+</div><div class='line'>
+</div><div class='line'><span class="l-Scalar-Plain">pygments</span><span class="p-Indicator">:</span>           <span class="c1"># Toggle python pygments syntax highlighting</span>
+</div><div class='line'><span class="l-Scalar-Plain">paginate</span><span class="p-Indicator">:</span>           <span class="c1"># Posts per page on the blog index</span>
+</div><div class='line'><span class="l-Scalar-Plain">recent_posts</span><span class="p-Indicator">:</span>       <span class="c1"># Number of recent posts to appear in the sidebar</span>
+</div><div class='line'>
+</div><div class='line'><span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span>     <span class="c1"># Configure what shows up in the sidebar and in what order</span>
+</div><div class='line'><span class="l-Scalar-Plain">blog_index_asides</span><span class="p-Indicator">:</span>  <span class="c1"># Optional sidebar config for blog index page</span>
+</div><div class='line'><span class="l-Scalar-Plain">post_asides</span><span class="p-Indicator">:</span>        <span class="c1"># Optional sidebar config for post layout</span>
+</div><div class='line'><span class="l-Scalar-Plain">page_asides</span><span class="p-Indicator">:</span>        <span class="c1"># Optional sidebar config for page layout</span>
+</div></code></pre></td></tr></table></div>
+
+<p>If you want to change the way permalinks are written for your blog posts, see <a href="https://github.com/mojombo/jekyll/wiki/Permalinks">Jekyll&#8217;s permalink docs</a>.</p>
+
+<p><strong>Note:</strong> Jekyll has a <code>baseurl</code> config which adds a redirect for Jekyll&#8217;s WEBrick server for subdirectory support. This works fine if you want
+to use the WEBrick server, but for any other web service you have to add support for the redirect. Instead, Octopress uses the <code>root</code> config and offers a rake task
+<code>set_root_dir[/some/directory]</code> which moves the output directory into a subdirectory and updates configurations. <a href="/octopress/docs/deploying">(see Deploying Octopress)</a>.</p>
+
+<h3 id="third_party">3rd Party Settings</h3>
+
+
+<p>These third party integrations are already set up for you. Simply fill in the configurations and they&#8217;ll be added to your site.</p>
+
+<ul>
+<li><strong>Twitter</strong> - <em>Setup a sidebar twitter feed, follow button, and tweet button (for sharing posts and pages).</em></li>
+<li><strong>Google Plus One</strong> - <em>Setup sharing for posts and pages on Google&#8217;s plus one network.</em></li>
+<li><strong>Pinboard</strong> - <em>Share your recent Pinboard bookmarks in the sidebar.</em></li>
+<li><strong>Delicious</strong> - <em>Share your recent Delicious bookmarks in the sidebar.</em></li>
+<li><strong>Disqus Comments</strong> - <em>Add your disqus short name to enable disqus comments on your site.</em></li>
+<li><strong>Google Analytics</strong> - <em>Add your tracking id to enable Google Analytics tracking for your site.</em></li>
+</ul>
+
+
+<p>The Octopress layouts read these configurations and only include the javascript and html necessary for the enabled services.</p>
+
+<p><a href="/octopress/docs/blogging/">Next, Blogging with Octopress &raquo;</a></p>
+
+  
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer><p>
+  Copyright &copy; 2011 - Brandon Mathis -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+</body>
+</html>

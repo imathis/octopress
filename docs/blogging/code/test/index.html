@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress: Syntax Highlighting Test</title>
+  <meta name="author" content="Brandon Mathis">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://octopress.org/docs/blogging/code/test/index.html"/>
+  <link href="/octopress/favicon.png" rel="shortcut icon" />
+  <link href="/octopress/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/octopress/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/octopress/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/octopress/octopress/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml"/>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10876422-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body   class="no-sidebar" >
+  <header><hgroup>
+  <h1><a href="/octopress/">Octopress</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role=navigation><ul role=subscription data-subscription="rss">
+  <li><a href="/octopress/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="site-search">
+    <input type="hidden" name="q" value="site:octopress.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul role=main-navigation>
+  <li><a href="/octopress/">Blog</a></li>
+  <li><a href="/octopress/docs">Documentation</a></li>
+  <li><a href="/octopress/help">Help</a></li>
+  <li><a href="http://github.com/imathis/octopress">Source</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Syntax Highlighting Test</h1>
+    
+  </header>
+  <div><figure role=code><figcaption><span> (test.js)</span> <a href='http://octopress.org/downloads/code/javascripts/test.js'>download</a></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+<span class='line'>17</span>
+<span class='line'>18</span>
+<span class='line'>19</span>
+<span class='line'>20</span>
+</pre></td><td class='code' width='100%'><pre><code class='js'><div class='line'><span class="cm">/**</span>
+</div><div class='line'><span class="cm">sample javascript from xui</span>
+</div><div class='line'><span class="cm">*/</span>
+</div><div class='line'>
+</div><div class='line'><span class="kd">var</span> <span class="kc">undefined</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">xui</span><span class="p">,</span>
+</div><div class='line'>    <span class="nb">window</span>     <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">string</span>     <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">),</span>
+</div><div class='line'>    <span class="nb">document</span>   <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">simpleExpr</span> <span class="o">=</span> <span class="sr">/^#?([\w-]+)$/</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">idExpr</span>     <span class="o">=</span> <span class="sr">/^#/</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">tagExpr</span>    <span class="o">=</span> <span class="sr">/&lt;([\w:]+)/</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">slice</span>      <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="p">};</span>
+</div><div class='line'>    <span class="k">try</span> <span class="p">{</span> <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">slice</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">nodeType</span><span class="p">;</span> <span class="p">}</span>
+</div><div class='line'>    <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span> <span class="nx">slice</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="kd">var</span> <span class="nx">ret</span><span class="o">=</span><span class="p">[];</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+</div><div class='line'>        <span class="nx">ret</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span> <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span> <span class="p">};</span> <span class="p">}</span>
+</div><div class='line'>
+</div><div class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">x$</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">xui</span> <span class="o">=</span> <span class="nx">xui</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+</div><div class='line'>    <span class="k">return</span> <span class="k">new</span> <span class="nx">xui</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">context</span><span class="p">);</span>
+</div><div class='line'><span class="p">};</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+<span class='line'>17</span>
+<span class='line'>18</span>
+<span class='line'>19</span>
+<span class='line'>20</span>
+</pre></td><td class='code' width='100%'><pre><code class='html'><div class='line'><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;</span>
+</div><div class='line'><span class="nt">&lt;html&gt;&lt;head&gt;</span>
+</div><div class='line'><span class="nt">&lt;title&gt;</span>A Tiny Page<span class="nt">&lt;/title&gt;</span>
+</div><div class='line'><span class="nt">&lt;style </span><span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
+</div><div class='line'><span class="o">&lt;!</span><span class="nt">--</span>
+</div><div class='line'>      <span class="nt">p</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span><span class="m">15pt</span><span class="p">;</span> <span class="k">color</span><span class="o">:</span><span class="m">#000</span> <span class="p">}</span>
+</div><div class='line'>    <span class="nt">--</span><span class="o">&gt;</span>
+</div><div class='line'><span class="nt">&lt;/style&gt;&lt;/head&gt;</span><span class="c">&lt;!-- real comment --&gt;</span>
+</div><div class='line'><span class="nt">&lt;body</span> <span class="na">bgcolor=</span><span class="s">&quot;#FFFFFF&quot;</span> <span class="na">text=</span><span class="s">&quot;#000000&quot;</span> <span class="na">link=</span><span class="s">&quot;#0000CC&quot;</span><span class="nt">&gt;</span>
+</div><div class='line'><span class="nt">&lt;script </span><span class="na">language=</span><span class="s">&quot;javascript&quot;</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+</div><div class='line'>      <span class="kd">function</span> <span class="nx">changeHeight</span><span class="p">(</span><span class="nx">h</span><span class="p">)</span> <span class="p">{</span>
+</div><div class='line'>        <span class="kd">var</span> <span class="nx">tds</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">);</span>
+</div><div class='line'>        <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">tds</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</div><div class='line'>          <span class="nx">tds</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="nx">h</span> <span class="o">+</span> <span class="s2">&quot;px&quot;</span><span class="p">);</span>
+</div><div class='line'>      <span class="p">}}</span>
+</div><div class='line'><span class="nt">&lt;/script&gt;</span>
+</div><div class='line'><span class="nt">&lt;h1&gt;</span>abc<span class="nt">&lt;/h1&gt;</span>
+</div><div class='line'><span class="nt">&lt;h2&gt;</span>def<span class="nt">&lt;/h2&gt;</span>
+</div><div class='line'><span class="nt">&lt;p&gt;</span>Testing page<span class="nt">&lt;/p&gt;</span>
+</div><div class='line'><span class="nt">&lt;/body&gt;&lt;/html&gt;</span>
+</div></code></pre></td></tr></table></div>
+
+<div><script src='https://gist.github.com/996818.js?file='></script>
+<noscript><pre><code>@@ -590,7 +590,7 @@ class SpritesTest &lt; Test::Unit::TestCase
+  it &quot;should generate a sprite from nested folders&quot; do
+    css = render &lt;&lt;-SCSS
+-     @import &quot;nested/*.png&quot;;
++     @import &quot;nested/**/*.png&quot;;
+      @include all-nested-sprites;
+    SCSS
+    assert_correct css, &lt;&lt;-CSS</code></pre></noscript></div>
+
+
+
+
+<div><figure role=code><figcaption><span>Testing PHP (syntax_test.php) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+<span class='line'>17</span>
+<span class='line'>18</span>
+<span class='line'>19</span>
+<span class='line'>20</span>
+<span class='line'>21</span>
+<span class='line'>22</span>
+<span class='line'>23</span>
+<span class='line'>24</span>
+<span class='line'>25</span>
+<span class='line'>26</span>
+<span class='line'>27</span>
+<span class='line'>28</span>
+<span class='line'>29</span>
+</pre></td><td class='code' width='100%'><pre><code class='php'><div class='line'><span class="cp">&lt;?php</span>
+</div><div class='line'><span class="k">require_once</span><span class="p">(</span><span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">&#39;g_campsiteDir&#39;</span><span class="p">]</span><span class="o">.</span> <span class="s2">&quot;/</span><span class="si">$ADMIN_DIR</span><span class="s2">/country/common.php&quot;</span><span class="p">);</span>
+</div><div class='line'><span class="k">require_once</span><span class="p">(</span><span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">&#39;g_campsiteDir&#39;</span><span class="p">]</span><span class="o">.</span> <span class="s2">&quot;/classes/SimplePager.php&quot;</span><span class="p">);</span>
+</div><div class='line'><span class="nx">camp_load_translation_strings</span><span class="p">(</span><span class="s2">&quot;api&quot;</span><span class="p">);</span>
+</div><div class='line'>
+</div><div class='line'><span class="nv">$f_country_language_selected</span> <span class="o">=</span> <span class="nx">camp_session_get</span><span class="p">(</span><span class="s1">&#39;f_language_selected&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</div><div class='line'><span class="nv">$f_country_offset</span> <span class="o">=</span> <span class="nx">camp_session_get</span><span class="p">(</span><span class="s1">&#39;f_country_offset&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</div><div class='line'><span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$f_country_language_selected</span><span class="p">))</span> <span class="p">{</span>
+</div><div class='line'>    <span class="nv">$f_country_language_selected</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+</div><div class='line'><span class="p">}</span>
+</div><div class='line'><span class="nv">$ItemsPerPage</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+</div><div class='line'><span class="nv">$languages</span> <span class="o">=</span> <span class="nx">Language</span><span class="o">::</span><span class="na">GetLanguages</span><span class="p">(</span><span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">null</span><span class="p">,</span> <span class="k">array</span><span class="p">(),</span> <span class="k">array</span><span class="p">(),</span> <span class="k">true</span><span class="p">);</span>
+</div><div class='line'><span class="nv">$numCountries</span> <span class="o">=</span> <span class="nx">Country</span><span class="o">::</span><span class="na">GetNumCountries</span><span class="p">(</span><span class="nv">$f_country_language_selected</span><span class="p">);</span>
+</div><div class='line'>
+</div><div class='line'><span class="nv">$pager</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SimplePager</span><span class="p">(</span><span class="nv">$numCountries</span><span class="p">,</span> <span class="nv">$ItemsPerPage</span><span class="p">,</span> <span class="s2">&quot;index.php?&quot;</span><span class="p">);</span>
+</div><div class='line'>
+</div><div class='line'><span class="nv">$crumbs</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+</div><div class='line'><span class="nv">$crumbs</span><span class="p">[]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nx">getGS</span><span class="p">(</span><span class="s2">&quot;Configure&quot;</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+</div><div class='line'><span class="nv">$crumbs</span><span class="p">[]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nx">getGS</span><span class="p">(</span><span class="s2">&quot;Countries&quot;</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+</div><div class='line'><span class="k">echo</span> <span class="nx">camp_html_breadcrumbs</span><span class="p">(</span><span class="nv">$crumbs</span><span class="p">);</span>
+</div><div class='line'>
+</div><div class='line'><span class="cp">?&gt;</span><span class="x"></span>
+</div><div class='line'>
+</div><div class='line'><span class="cp">&lt;?php</span>  <span class="k">if</span> <span class="p">(</span><span class="nv">$g_user</span><span class="o">-&gt;</span><span class="na">hasPermission</span><span class="p">(</span><span class="s2">&quot;ManageCountries&quot;</span><span class="p">))</span> <span class="p">{</span> <span class="cp">?&gt;</span><span class="x"></span>
+</div><div class='line'><span class="x">&lt;table BORDER=&quot;0&quot; CELLSPACING=&quot;0&quot; CELLPADDING=&quot;1&quot;&gt;</span>
+</div><div class='line'><span class="x">    &lt;tr&gt;</span>
+</div><div class='line'><span class="x">        &lt;td&gt;&lt;a href=&quot;add.php&quot;&gt;</span><span class="cp">&lt;?php</span> <span class="nx">putGS</span><span class="p">(</span><span class="s2">&quot;Add new&quot;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/a&gt;&lt;/td&gt;</span>
+</div><div class='line'><span class="x">    &lt;/tr&gt;</span>
+</div><div class='line'><span class="x">&lt;/table&gt;</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+
+
+<div><figure role=code><figcaption><span>Testing Objective C (Cocoa1AppDelegate.m) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+<span class='line'>17</span>
+<span class='line'>18</span>
+<span class='line'>19</span>
+<span class='line'>20</span>
+<span class='line'>21</span>
+</pre></td><td class='code' width='100%'><pre><code class='objc'><div class='line'><span class="cp">#import &quot;Cocoa1AppDelegate.h&quot;</span>
+</div><div class='line'>
+</div><div class='line'><span class="k">@implementation</span> <span class="nc">Cocoa1AppDelegate</span>
+</div><div class='line'>
+</div><div class='line'><span class="k">@synthesize</span> <span class="n">window</span><span class="p">,</span><span class="n">siteUrl</span><span class="p">,</span><span class="n">pageContents</span><span class="p">;</span>
+</div><div class='line'>
+</div><div class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">applicationDidFinishLaunching:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="n">aNotification</span>
+</div><div class='line'><span class="p">{</span>
+</div><div class='line'>    <span class="c1">// Insert code here to initialize your application</span>
+</div><div class='line'>    <span class="n">model</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Cocoa1Model</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</div><div class='line'><span class="p">}</span>
+</div><div class='line'>
+</div><div class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">getSiteContents:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span> <span class="p">{</span>
+</div><div class='line'>    <span class="p">[</span><span class="n">model</span> <span class="nl">setPageUrl:</span><span class="p">[</span><span class="n">siteUrl</span> <span class="n">stringValue</span><span class="p">]];</span>
+</div><div class='line'>    <span class="n">NSString</span><span class="o">*</span> <span class="n">reply</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span> <span class="n">getUrlAsString</span><span class="p">];</span>
+</div><div class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;pageSrc: %@&quot;</span><span class="p">,</span> <span class="n">reply</span><span class="p">);</span>
+</div><div class='line'>    <span class="p">[</span><span class="n">pageContents</span> <span class="nl">setString:</span><span class="n">reply</span><span class="p">];</span>
+</div><div class='line'>    <span class="p">[[[</span><span class="n">pageContents</span> <span class="n">textStorage</span><span class="p">]</span> <span class="n">mutableString</span><span class="p">]</span> <span class="nl">appendString:</span><span class="n">reply</span><span class="p">];</span>
+</div><div class='line'><span class="p">}</span>
+</div><div class='line'>
+</div><div class='line'><span class="k">@end</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+
+
+<div><figure role=code><figcaption><span>Testing Haskel (syntax_test.hs) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+<span class='line'>17</span>
+<span class='line'>18</span>
+<span class='line'>19</span>
+<span class='line'>20</span>
+<span class='line'>21</span>
+<span class='line'>22</span>
+<span class='line'>23</span>
+<span class='line'>24</span>
+<span class='line'>25</span>
+<span class='line'>26</span>
+<span class='line'>27</span>
+<span class='line'>28</span>
+<span class='line'>29</span>
+<span class='line'>30</span>
+<span class='line'>31</span>
+<span class='line'>32</span>
+<span class='line'>33</span>
+<span class='line'>34</span>
+<span class='line'>35</span>
+<span class='line'>36</span>
+<span class='line'>37</span>
+<span class='line'>38</span>
+<span class='line'>39</span>
+<span class='line'>40</span>
+</pre></td><td class='code' width='100%'><pre><code class='hs'><div class='line'><span class="cm">{-# LANGUAGE OverloadedStrings #-}</span>
+</div><div class='line'><span class="kr">module</span> <span class="nn">Main</span> <span class="kr">where</span>
+</div><div class='line'>
+</div><div class='line'><span class="c1">--import Prelude hiding (id)</span>
+</div><div class='line'><span class="c1">--import Control.Category (id)</span>
+</div><div class='line'><span class="kr">import</span> <span class="nn">Control.Arrow</span> <span class="p">((</span><span class="o">&gt;&gt;&gt;</span><span class="p">),</span> <span class="p">(</span><span class="o">***</span><span class="p">),</span> <span class="nf">arr</span><span class="p">)</span>
+</div><div class='line'><span class="kr">import</span> <span class="nn">Control.Monad</span> <span class="p">(</span><span class="nf">forM_</span><span class="p">)</span>
+</div><div class='line'><span class="c1">-- import Data.Monoid (mempty, mconcat)</span>
+</div><div class='line'>
+</div><div class='line'><span class="c1">-- import System.FilePath</span>
+</div><div class='line'>
+</div><div class='line'><span class="kr">import</span> <span class="nn">Hakyll</span>
+</div><div class='line'>
+</div><div class='line'>
+</div><div class='line'><span class="nf">main</span> <span class="ow">::</span> <span class="kt">IO</span> <span class="nb">()</span>
+</div><div class='line'><span class="nf">main</span> <span class="ow">=</span> <span class="n">hakyll</span> <span class="o">$</span> <span class="kr">do</span>
+</div><div class='line'>
+</div><div class='line'>    <span class="n">route</span>   <span class="s">&quot;css/*&quot;</span> <span class="o">$</span> <span class="n">setExtension</span> <span class="s">&quot;css&quot;</span>
+</div><div class='line'>    <span class="n">compile</span> <span class="s">&quot;css/*&quot;</span> <span class="o">$</span> <span class="n">byExtension</span> <span class="p">(</span><span class="ne">error</span> <span class="s">&quot;Not a (S)CSS file&quot;</span><span class="p">)</span>
+</div><div class='line'>        <span class="p">[</span> <span class="p">(</span><span class="s">&quot;.css&quot;</span><span class="p">,</span>  <span class="n">compressCssCompiler</span><span class="p">)</span>
+</div><div class='line'>        <span class="p">,</span> <span class="p">(</span><span class="s">&quot;.scss&quot;</span><span class="p">,</span> <span class="n">sass</span><span class="p">)</span>
+</div><div class='line'>        <span class="p">]</span>
+</div><div class='line'>
+</div><div class='line'>    <span class="n">route</span>   <span class="s">&quot;js/**&quot;</span> <span class="n">idRoute</span>
+</div><div class='line'>    <span class="n">compile</span> <span class="s">&quot;js/**&quot;</span> <span class="n">copyFileCompiler</span>
+</div><div class='line'>
+</div><div class='line'>    <span class="n">route</span>   <span class="s">&quot;img/*&quot;</span> <span class="n">idRoute</span>
+</div><div class='line'>    <span class="n">compile</span> <span class="s">&quot;img/*&quot;</span> <span class="n">copyFileCompiler</span>
+</div><div class='line'>
+</div><div class='line'>    <span class="n">compile</span> <span class="s">&quot;templates/*&quot;</span> <span class="n">templateCompiler</span>
+</div><div class='line'>
+</div><div class='line'>    <span class="n">forM_</span> <span class="p">[</span><span class="s">&quot;test.md&quot;</span><span class="p">,</span> <span class="s">&quot;index.md&quot;</span><span class="p">]</span> <span class="o">$</span> <span class="nf">\</span><span class="n">page</span> <span class="ow">-&gt;</span> <span class="kr">do</span>
+</div><div class='line'>        <span class="n">route</span>   <span class="n">page</span> <span class="o">$</span> <span class="n">setExtension</span> <span class="s">&quot;html&quot;</span>
+</div><div class='line'>        <span class="n">compile</span> <span class="n">page</span> <span class="o">$</span> <span class="n">pageCompiler</span>
+</div><div class='line'>            <span class="o">&gt;&gt;&gt;</span> <span class="n">applyTemplateCompiler</span> <span class="s">&quot;templates/default.html&quot;</span>
+</div><div class='line'>            <span class="o">&gt;&gt;&gt;</span> <span class="n">relativizeUrlsCompiler</span>
+</div><div class='line'>
+</div><div class='line'><span class="nf">sass</span> <span class="ow">::</span> <span class="kt">Compiler</span> <span class="kt">Resource</span> <span class="kt">String</span>
+</div><div class='line'><span class="nf">sass</span> <span class="ow">=</span> <span class="n">getResourceString</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">unixFilter</span> <span class="s">&quot;sass&quot;</span> <span class="p">[</span><span class="s">&quot;-s&quot;</span><span class="p">,</span> <span class="s">&quot;--scss&quot;</span><span class="p">]</span>
+</div><div class='line'>                         <span class="o">&gt;&gt;&gt;</span> <span class="n">arr</span> <span class="n">compressCss</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+
+
+<div><figure role=code><figcaption><span>Testing Bash (syntax_test.sh) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+<span class='line'>17</span>
+<span class='line'>18</span>
+<span class='line'>19</span>
+<span class='line'>20</span>
+<span class='line'>21</span>
+<span class='line'>22</span>
+<span class='line'>23</span>
+<span class='line'>24</span>
+<span class='line'>25</span>
+<span class='line'>26</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'><span class="c">#!/bin/bash</span>
+</div><div class='line'>
+</div><div class='line'><span class="nb">cd</span> <span class="nv">$ROOT_DIR</span>
+</div><div class='line'><span class="nv">DOT_FILES</span><span class="o">=</span><span class="s2">&quot;lastpass weechat ssh Xauthority&quot;</span>
+</div><div class='line'><span class="k">for </span>dotfile in <span class="nv">$DOT_FILES</span>; <span class="k">do </span>conform_link <span class="s2">&quot;$DATA_DIR/$dotfile&quot;</span> <span class="s2">&quot;.$dotfile&quot;</span>; <span class="k">done</span>
+</div><div class='line'>
+</div><div class='line'><span class="c"># TODO: refactor with suffix variables (or common cron values)</span>
+</div><div class='line'>
+</div><div class='line'><span class="k">case</span> <span class="s2">&quot;$PLATFORM&quot;</span> in
+</div><div class='line'>    linux<span class="o">)</span>
+</div><div class='line'>        <span class="c">#conform_link &quot;$CONF_DIR/shell/zshenv&quot; &quot;.zshenv&quot;</span>
+</div><div class='line'>        crontab -l &gt; <span class="nv">$ROOT_DIR</span>/tmp/crontab-conflict-arch
+</div><div class='line'>        <span class="nb">cd</span> <span class="nv">$ROOT_DIR</span>/<span class="nv">$CONF_DIR</span>/cron
+</div><div class='line'>        <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$(diff ~/tmp/crontab-conflict-arch crontab-current-arch)&quot;</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span>
+</div><div class='line'>            <span class="o">]]</span>;
+</div><div class='line'>            <span class="k">then</span> <span class="c"># no difference with current backup</span>
+</div><div class='line'>                logger <span class="s2">&quot;$LOG_PREFIX: crontab live settings match stored &quot;</span><span class="se">\</span>
+</div><div class='line'>                    <span class="s2">&quot;settings; no restore required&quot;</span>
+</div><div class='line'>                rm ~/tmp/crontab-conflict-arch
+</div><div class='line'>            <span class="k">else</span> <span class="c"># current crontab settings in file do not match live settings</span>
+</div><div class='line'>                crontab <span class="nv">$ROOT_DIR</span>/<span class="nv">$CONF_DIR</span>/cron/crontab-current-arch
+</div><div class='line'>                logger <span class="s2">&quot;$LOG_PREFIX: crontab stored settings conflict with &quot;</span><span class="se">\</span>
+</div><div class='line'>                    <span class="s2">&quot;live settings; stored settings restored. &quot;</span><span class="se">\</span>
+</div><div class='line'>                    <span class="s2">&quot;Previous settings recorded in ~/tmp/crontab-conflict-arch.&quot;</span>
+</div><div class='line'>        <span class="k">fi</span>
+</div><div class='line'>    ;;
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+
+
+<div><figure role=code><figcaption><span>Testing Python (syntax_test.py) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+<span class='line'>17</span>
+<span class='line'>18</span>
+<span class='line'>19</span>
+<span class='line'>20</span>
+<span class='line'>21</span>
+<span class='line'>22</span>
+<span class='line'>23</span>
+<span class='line'>24</span>
+<span class='line'>25</span>
+<span class='line'>26</span>
+<span class='line'>27</span>
+<span class='line'>28</span>
+<span class='line'>29</span>
+<span class='line'>30</span>
+<span class='line'>31</span>
+<span class='line'>32</span>
+<span class='line'>33</span>
+<span class='line'>34</span>
+<span class='line'>35</span>
+<span class='line'>36</span>
+<span class='line'>37</span>
+<span class='line'>38</span>
+<span class='line'>39</span>
+<span class='line'>40</span>
+<span class='line'>41</span>
+<span class='line'>42</span>
+<span class='line'>43</span>
+<span class='line'>44</span>
+<span class='line'>45</span>
+<span class='line'>46</span>
+<span class='line'>47</span>
+<span class='line'>48</span>
+<span class='line'>49</span>
+<span class='line'>50</span>
+<span class='line'>51</span>
+<span class='line'>52</span>
+<span class='line'>53</span>
+<span class='line'>54</span>
+<span class='line'>55</span>
+<span class='line'>56</span>
+<span class='line'>57</span>
+<span class='line'>58</span>
+<span class='line'>59</span>
+<span class='line'>60</span>
+<span class='line'>61</span>
+<span class='line'>62</span>
+<span class='line'>63</span>
+<span class='line'>64</span>
+<span class='line'>65</span>
+<span class='line'>66</span>
+<span class='line'>67</span>
+</pre></td><td class='code' width='100%'><pre><code class='py'><div class='line'><span class="c"># test python (sample from offlineimap)</span>
+</div><div class='line'>
+</div><div class='line'><span class="k">class</span> <span class="nc">ExitNotifyThread</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span>
+</div><div class='line'>    <span class="sd">&quot;&quot;&quot;This class is designed to alert a &quot;monitor&quot; to the fact that a thread has</span>
+</div><div class='line'><span class="sd">    exited and to provide for the ability for it to find out why.&quot;&quot;&quot;</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div><div class='line'>        <span class="k">global</span> <span class="n">exitthreads</span><span class="p">,</span> <span class="n">profiledir</span>
+</div><div class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">threadid</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get_ident</span><span class="p">()</span>
+</div><div class='line'>        <span class="k">try</span><span class="p">:</span>
+</div><div class='line'>            <span class="k">if</span> <span class="ow">not</span> <span class="n">profiledir</span><span class="p">:</span>          <span class="c"># normal case</span>
+</div><div class='line'>                <span class="n">Thread</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</div><div class='line'>            <span class="k">else</span><span class="p">:</span>
+</div><div class='line'>                <span class="k">try</span><span class="p">:</span>
+</div><div class='line'>                    <span class="kn">import</span> <span class="nn">cProfile</span> <span class="kn">as</span> <span class="nn">profile</span>
+</div><div class='line'>                <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+</div><div class='line'>                    <span class="kn">import</span> <span class="nn">profile</span>
+</div><div class='line'>                <span class="n">prof</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">Profile</span><span class="p">()</span>
+</div><div class='line'>                <span class="k">try</span><span class="p">:</span>
+</div><div class='line'>                    <span class="n">prof</span> <span class="o">=</span> <span class="n">prof</span><span class="o">.</span><span class="n">runctx</span><span class="p">(</span><span class="s">&quot;Thread.run(self)&quot;</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="nb">locals</span><span class="p">())</span>
+</div><div class='line'>                <span class="k">except</span> <span class="ne">SystemExit</span><span class="p">:</span>
+</div><div class='line'>                    <span class="k">pass</span>
+</div><div class='line'>                <span class="n">prof</span><span class="o">.</span><span class="n">dump_stats</span><span class="p">(</span> \
+</div><div class='line'>                            <span class="n">profiledir</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">threadid</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;_&quot;</span> <span class="o">+</span> \
+</div><div class='line'>                            <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;.prof&quot;</span><span class="p">)</span>
+</div><div class='line'>        <span class="k">except</span><span class="p">:</span>
+</div><div class='line'>            <span class="bp">self</span><span class="o">.</span><span class="n">setExitCause</span><span class="p">(</span><span class="s">&#39;EXCEPTION&#39;</span><span class="p">)</span>
+</div><div class='line'>            <span class="k">if</span> <span class="n">sys</span><span class="p">:</span>
+</div><div class='line'>                <span class="bp">self</span><span class="o">.</span><span class="n">setExitException</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+</div><div class='line'>                <span class="n">tb</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">()</span>
+</div><div class='line'>                <span class="bp">self</span><span class="o">.</span><span class="n">setExitStackTrace</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
+</div><div class='line'>        <span class="k">else</span><span class="p">:</span>
+</div><div class='line'>            <span class="bp">self</span><span class="o">.</span><span class="n">setExitCause</span><span class="p">(</span><span class="s">&#39;NORMAL&#39;</span><span class="p">)</span>
+</div><div class='line'>        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s">&#39;exitmessage&#39;</span><span class="p">):</span>
+</div><div class='line'>            <span class="bp">self</span><span class="o">.</span><span class="n">setExitMessage</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+</div><div class='line'>
+</div><div class='line'>        <span class="k">if</span> <span class="n">exitthreads</span><span class="p">:</span>
+</div><div class='line'>            <span class="n">exitthreads</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+</div><div class='line'>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">setExitCause</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cause</span><span class="p">):</span>
+</div><div class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">exitcause</span> <span class="o">=</span> <span class="n">cause</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">getExitCause</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div><div class='line'>        <span class="sd">&quot;&quot;&quot;Returns the cause of the exit, one of:</span>
+</div><div class='line'><span class="sd">        &#39;EXCEPTION&#39; -- the thread aborted because of an exception</span>
+</div><div class='line'><span class="sd">        &#39;NORMAL&#39; -- normal termination.&quot;&quot;&quot;</span>
+</div><div class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitcause</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">setExitException</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc</span><span class="p">):</span>
+</div><div class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">exitexception</span> <span class="o">=</span> <span class="n">exc</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">getExitException</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div><div class='line'>        <span class="sd">&quot;&quot;&quot;If getExitCause() is &#39;EXCEPTION&#39;, holds the value from</span>
+</div><div class='line'><span class="sd">        sys.exc_info()[1] for this exception.&quot;&quot;&quot;</span>
+</div><div class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitexception</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">setExitStackTrace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">st</span><span class="p">):</span>
+</div><div class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">exitstacktrace</span> <span class="o">=</span> <span class="n">st</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">getExitStackTrace</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div><div class='line'>        <span class="sd">&quot;&quot;&quot;If getExitCause() is &#39;EXCEPTION&#39;, returns a string representing</span>
+</div><div class='line'><span class="sd">        the stack trace for this exception.&quot;&quot;&quot;</span>
+</div><div class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitstacktrace</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">setExitMessage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+</div><div class='line'>        <span class="sd">&quot;&quot;&quot;Sets the exit message to be fetched by a subsequent call to</span>
+</div><div class='line'><span class="sd">        getExitMessage.  This message may be any object or type except</span>
+</div><div class='line'><span class="sd">        None.&quot;&quot;&quot;</span>
+</div><div class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">exitmessage</span> <span class="o">=</span> <span class="n">msg</span>
+</div><div class='line'>    <span class="k">def</span> <span class="nf">getExitMessage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div><div class='line'>        <span class="sd">&quot;&quot;&quot;For any exit cause, returns the message previously set by</span>
+</div><div class='line'><span class="sd">        a call to setExitMessage(), or None if there was no such message</span>
+</div><div class='line'><span class="sd">        set.&quot;&quot;&quot;</span>
+</div><div class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">exitmessage</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+
+
+<div><figure role=code><figcaption><span>Testing Perl (syntax_test.pl) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+<span class='line'>17</span>
+<span class='line'>18</span>
+<span class='line'>19</span>
+<span class='line'>20</span>
+<span class='line'>21</span>
+<span class='line'>22</span>
+<span class='line'>23</span>
+<span class='line'>24</span>
+<span class='line'>25</span>
+<span class='line'>26</span>
+<span class='line'>27</span>
+<span class='line'>28</span>
+<span class='line'>29</span>
+<span class='line'>30</span>
+<span class='line'>31</span>
+<span class='line'>32</span>
+<span class='line'>33</span>
+</pre></td><td class='code' width='100%'><pre><code class='perl'><div class='line'><span class="c1">#!perl -w</span>
+</div><div class='line'>
+</div><div class='line'><span class="c1"># Time-stamp: &lt;2002/04/06, 13:12:13 (EST), maverick, csvformat.pl&gt;</span>
+</div><div class='line'><span class="c1"># Two pass CSV file to table formatter</span>
+</div><div class='line'>
+</div><div class='line'><span class="nv">$delim</span> <span class="o">=</span> <span class="nv">$#ARGV</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="p">?</span> <span class="nv">$ARGV</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span> <span class="s">&#39;,&#39;</span><span class="p">;</span>
+</div><div class='line'><span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&quot;Split pattern: $delim\n&quot;</span><span class="p">;</span>
+</div><div class='line'>
+</div><div class='line'><span class="c1"># first pass</span>
+</div><div class='line'><span class="nb">open</span> <span class="n">F</span><span class="p">,</span> <span class="s">&quot;&lt;$ARGV[0]&quot;</span> <span class="ow">or</span> <span class="nb">die</span><span class="p">;</span>
+</div><div class='line'><span class="k">while</span><span class="p">(</span><span class="sr">&lt;F&gt;</span><span class="p">)</span>
+</div><div class='line'><span class="p">{</span>
+</div><div class='line'>  <span class="nb">chomp</span><span class="p">;</span>
+</div><div class='line'>  <span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</div><div class='line'>  <span class="nb">map</span> <span class="p">{</span> <span class="nv">$max</span><span class="p">[</span><span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="p">(</span><span class="nv">$max</span><span class="p">[</span><span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="p">}</span>
+</div><div class='line'>    <span class="p">(</span><span class="nb">map</span> <span class="p">{[</span><span class="nb">length</span> <span class="nv">$_</span><span class="p">,</span> <span class="nv">$i</span><span class="o">++</span><span class="p">]}</span> <span class="nb">split</span><span class="p">(</span><span class="nv">$delim</span><span class="p">));</span>
+</div><div class='line'><span class="p">}</span>
+</div><div class='line'><span class="nb">close</span> <span class="n">F</span><span class="p">;</span>
+</div><div class='line'>
+</div><div class='line'><span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&#39;Field width:   &#39;</span><span class="p">,</span> <span class="nb">join</span><span class="p">(</span><span class="s">&#39;, &#39;</span><span class="p">,</span> <span class="nv">@max</span><span class="p">),</span> <span class="s">&quot;\n&quot;</span><span class="p">;</span>
+</div><div class='line'><span class="k">print</span> <span class="bp">STDERR</span> <span class="nb">join</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">,</span> <span class="nb">map</span> <span class="p">{</span><span class="s">&#39;-&#39;</span> <span class="n">x</span> <span class="nv">$_</span><span class="p">}</span> <span class="nv">@max</span><span class="p">);</span>
+</div><div class='line'>
+</div><div class='line'><span class="c1"># second pass</span>
+</div><div class='line'><span class="nb">open</span> <span class="n">F</span><span class="p">,</span> <span class="s">&quot;&lt;$ARGV[0]&quot;</span> <span class="ow">or</span> <span class="nb">die</span><span class="p">;</span>
+</div><div class='line'><span class="k">while</span><span class="p">(</span><span class="sr">&lt;F&gt;</span><span class="p">)</span>
+</div><div class='line'>  <span class="p">{</span>
+</div><div class='line'>  <span class="nb">chomp</span><span class="p">;</span>
+</div><div class='line'>  <span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</div><div class='line'>  <span class="nb">map</span> <span class="p">{</span> <span class="nb">printf</span><span class="p">(</span><span class="s">&quot;%-$max[$_-&gt;[1]]s &quot;</span><span class="p">,</span> <span class="nv">$_</span><span class="o">-&gt;</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">}</span>
+</div><div class='line'>    <span class="p">(</span><span class="nb">map</span> <span class="p">{[</span><span class="nv">$_</span><span class="p">,</span> <span class="nv">$i</span><span class="o">++</span><span class="p">]}</span> <span class="nb">split</span><span class="p">(</span><span class="nv">$delim</span><span class="p">));</span>
+</div><div class='line'>  <span class="k">print</span> <span class="s">&quot;\n&quot;</span><span class="p">;</span>
+</div><div class='line'><span class="p">}</span>
+</div><div class='line'><span class="nb">close</span> <span class="n">F</span><span class="p">;</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+
+
+<div><figure role=code><figcaption><span>Test Java (syntax_test.java) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+</pre></td><td class='code' width='100%'><pre><code class='java'><div class='line'><span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+</div><div class='line'><span class="kn">import</span> <span class="nn">java.util.TreeSet</span><span class="o">;</span>
+</div><div class='line'>
+</div><div class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GetEnv</span> <span class="o">{</span>
+</div><div class='line'>  <span class="cm">/**</span>
+</div><div class='line'><span class="cm">   * let&#39;s test generics</span>
+</div><div class='line'><span class="cm">   * @param args the command line arguments</span>
+</div><div class='line'><span class="cm">   */</span>
+</div><div class='line'>  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</div><div class='line'>    <span class="c1">// get a map of environment variables</span>
+</div><div class='line'>    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">env</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">();</span>
+</div><div class='line'>    <span class="c1">// build a sorted set out of the keys and iterate</span>
+</div><div class='line'>    <span class="k">for</span><span class="o">(</span><span class="n">String</span> <span class="nl">k:</span> <span class="k">new</span> <span class="n">TreeSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">env</span><span class="o">.</span><span class="na">keySet</span><span class="o">()))</span> <span class="o">{</span>
+</div><div class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;%s = %s\n&quot;</span><span class="o">,</span> <span class="n">k</span><span class="o">,</span> <span class="n">env</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">k</span><span class="o">));</span>
+</div><div class='line'>    <span class="o">}</span>
+</div><div class='line'>  <span class="o">}</span>    <span class="o">}</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+
+
+<div><figure role=code><figcaption><span>Test C (syntax_test.c) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+<span class='line'>17</span>
+<span class='line'>18</span>
+<span class='line'>19</span>
+<span class='line'>20</span>
+<span class='line'>21</span>
+<span class='line'>22</span>
+<span class='line'>23</span>
+<span class='line'>24</span>
+<span class='line'>25</span>
+<span class='line'>26</span>
+</pre></td><td class='code' width='100%'><pre><code class='c'><div class='line'><span class="cp">#define UNICODE</span>
+</div><div class='line'><span class="cp">#include &lt;windows.h&gt;</span>
+</div><div class='line'>
+</div><div class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+</div><div class='line'>  <span class="kt">int</span> <span class="n">speed</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">speed1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">speed2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 1-20</span>
+</div><div class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Set Mouse Speed by Maverick</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</div><div class='line'>
+</div><div class='line'>  <span class="n">SystemParametersInfo</span><span class="p">(</span><span class="n">SPI_GETMOUSESPEED</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</div><div class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Current speed: %2d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">speed</span><span class="p">);</span>
+</div><div class='line'>
+</div><div class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</div><div class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="n">sscanf</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed1</span><span class="p">);</span>
+</div><div class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="n">sscanf</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed2</span><span class="p">);</span>
+</div><div class='line'>
+</div><div class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">// set speed to first value</span>
+</div><div class='line'>    <span class="n">speed</span> <span class="o">=</span> <span class="n">speed1</span><span class="p">;</span>
+</div><div class='line'>  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">speed</span> <span class="o">==</span> <span class="n">speed1</span> <span class="o">||</span> <span class="n">speed</span> <span class="o">==</span> <span class="n">speed2</span><span class="p">)</span> <span class="c1">// alternate</span>
+</div><div class='line'>    <span class="n">speed</span> <span class="o">=</span> <span class="n">speed1</span> <span class="o">+</span> <span class="n">speed2</span> <span class="o">-</span> <span class="n">speed</span><span class="p">;</span>
+</div><div class='line'>  <span class="k">else</span>
+</div><div class='line'>    <span class="n">speed</span> <span class="o">=</span> <span class="n">speed1</span><span class="p">;</span>  <span class="c1">// start with first value</span>
+</div><div class='line'>
+</div><div class='line'>  <span class="n">SystemParametersInfo</span><span class="p">(</span><span class="n">SPI_SETMOUSESPEED</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="n">speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</div><div class='line'>  <span class="n">SystemParametersInfo</span><span class="p">(</span><span class="n">SPI_GETMOUSESPEED</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">speed</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</div><div class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;New speed:     %2d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">speed</span><span class="p">);</span>
+</div><div class='line'>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</div><div class='line'><span class="p">}</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+
+
+  
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer><p>
+  Copyright &copy; 2011 - Brandon Mathis -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress: Include Array Plugin</title>
+  <meta name="author" content="Brandon Mathis">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://octopress.org/docs/plugins/include-array/index.html"/>
+  <link href="/octopress/favicon.png" rel="shortcut icon" />
+  <link href="/octopress/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/octopress/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/octopress/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/octopress/octopress/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml"/>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10876422-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body   class="no-sidebar" >
+  <header><hgroup>
+  <h1><a href="/octopress/">Octopress</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role=navigation><ul role=subscription data-subscription="rss">
+  <li><a href="/octopress/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="site-search">
+    <input type="hidden" name="q" value="site:octopress.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul role=main-navigation>
+  <li><a href="/octopress/">Blog</a></li>
+  <li><a href="/octopress/docs">Documentation</a></li>
+  <li><a href="/octopress/help">Help</a></li>
+  <li><a href="http://github.com/imathis/octopress">Source</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Include Array Plugin</h1>
+    <p class="meta">
+
+
+
+
+<time datetime="2011-08-02 00:10:00 -0400" pubdate  updated >Aug 2<span>nd</span>, 2011</time>
+
+
+</p>
+  </header>
+  <p>This plugin was created for Octopress by <a href="http://www.woodwardjd.com">Jason Woodward</a> to make it possible to manage order of the sidebar partials from the <code>_confgi.yml</code>.
+This is mostly useful for those working on an Octopress theme.</p>
+
+<h3>First, How Partials Work</h3>
+
+<p>Jekyll allows you to include partials from the <code>/source/_includes</code> directory as follows:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='html'><div class='line'>{% include partial.html %}
+</div></code></pre></td></tr></table></div>
+
+<p>This will embed the contents of <code>/source/_includes/partial.html</code> in place of the snippet above.</p>
+
+<h3>Now, How Include Array Works</h3>
+
+<p>First add an array pointing to a list of partials underneath <code>/source/_includes</code></p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='yaml'><div class='line'><span class="l-Scalar-Plain">asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">asides/about.html</span><span class="p-Indicator">,</span> <span class="nv">asides/social.html</span><span class="p-Indicator">]</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Now from within a template you can render the partials from the yaml array like this.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='html'><div class='line'>{% include_array asides %}
+</div></code></pre></td></tr></table></div>
+
+<p>Octopress uses <code>include_array</code> to allow configuration of different sidebars for each layout.</p>
+
+  
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer><p>
+  Copyright &copy; 2011 - Brandon Mathis -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+</body>
+</html>

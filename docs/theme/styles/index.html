@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress: Styles</title>
+  <meta name="author" content="Brandon Mathis">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://octopress.org/docs/theme/styles/index.html"/>
+  <link href="/octopress/favicon.png" rel="shortcut icon" />
+  <link href="/octopress/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/octopress/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/octopress/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/octopress/octopress/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml"/>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10876422-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body   class="no-sidebar" >
+  <header><hgroup>
+  <h1><a href="/octopress/">Octopress</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role=navigation><ul role=subscription data-subscription="rss">
+  <li><a href="/octopress/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="site-search">
+    <input type="hidden" name="q" value="site:octopress.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul role=main-navigation>
+  <li><a href="/octopress/">Blog</a></li>
+  <li><a href="/octopress/docs">Documentation</a></li>
+  <li><a href="/octopress/help">Help</a></li>
+  <li><a href="http://github.com/imathis/octopress">Source</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Styles</h1>
+    <p class="meta">
+
+
+
+
+<time datetime="2011-08-01 19:11:00 -0400" pubdate  updated >Aug 1<span>st</span>, 2011</time>
+
+
+</p>
+  </header>
+  <h2 id="overriding_styles">Overriding Styles</h2>
+
+
+<p>If you want to add or override styles, edit <code>sass/custom/_styles.css</code>. This stylesheet is imported last, so you can override styles with the cascade.</p>
+
+<h2 id="customizing_styles">Changing the Color Scheme</h2>
+
+
+<p>For help choosing colors check out <a href="http://hslpicker.com">HSL Color Picker</a>, an easy to use web based color picker.</p>
+
+<pre><code># In /sass/base/
+_theme.scss      # All colors are defined here
+
+# In /sass/custom/ - Change these files for easy customization
+_colors.scss     # Override colors in base/_theme.scss to change color schemes
+_styles.scss     # Easly Override any style (last in the cascade)
+</code></pre>
+
+<p>All of the colors for Octopress are defined as Sass variables in <code>/sass/base/_theme.scss</code>.
+To customize your color scheme edit <code>sass/custom/_colors.scss</code> and override the colors in <code>sass/base/_theme.scss</code>.</p>
+
+<p>The official Octopress site is using the default &#8216;classic&#8217; theme with a few minor color changes to the custom colors file. Take a look at this file and you&#8217;ll see some lines of sass code that have been commented out.</p>
+
+<div><figure role=code><figcaption><span>Custom Colors (sass/custom/_colors.scss)</span><a href='https://github.com/imathis/octopress/tree/master/.themes/classic/sass/custom/_colors.scss'>View on Github </a></figcaption> <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+</pre></td><td class='code' width='100%'><pre><code class='scss'><div class='line'><span class="na">$header-bg</span><span class="o">:</span> <span class="mh">#263347</span><span class="p">;</span>
+</div><div class='line'><span class="na">$subtitle-color</span><span class="o">:</span> <span class="nf">lighten</span><span class="p">(</span><span class="nv">$header-bg</span><span class="o">,</span> <span class="mi">58</span><span class="p">);</span>
+</div><div class='line'><span class="na">$nav-bg</span><span class="o">:</span> <span class="nf">desaturate</span><span class="p">(</span><span class="nf">lighten</span><span class="p">(</span><span class="mh">#8fc17a</span><span class="o">,</span> <span class="mi">18</span><span class="p">)</span><span class="o">,</span> <span class="mi">5</span><span class="p">);</span>
+</div><div class='line'><span class="na">$sidebar-bg</span><span class="o">:</span> <span class="nf">desaturate</span><span class="p">(</span><span class="mh">#eceff5</span><span class="o">,</span> <span class="mi">8</span><span class="p">);</span>
+</div><div class='line'><span class="na">$sidebar-link-color</span><span class="o">:</span> <span class="nf">saturate</span><span class="p">(</span><span class="mh">#526f9a</span><span class="o">,</span> <span class="mi">10</span><span class="p">);</span>
+</div><div class='line'><span class="na">$sidebar-link-color-hover</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="mh">#7ab662</span><span class="o">,</span> <span class="mi">9</span><span class="p">);</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>The custom colors file has some commented out colors you can The theme file is broken up into sections to make it easier to read through. Here&#8217;s a look at the navigation section of <code>sass/base/_theme.scss</code>.</p>
+
+<div><figure role=code><figcaption><span>Navigation (sass/base/_theme.scss)</span><a href='https://github.com/imathis/octopress/tree/master/.themes/classic/sass/base/_theme.scss'>View on Github </a></figcaption> <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+</pre></td><td class='code' width='100%'><pre><code class='scss'><div class='line'><span class="cm">/* Navigation */</span>
+</div><div class='line'><span class="na">$nav-bg</span><span class="o">:</span> <span class="mh">#ccc</span> <span class="nv">!default</span><span class="p">;</span>
+</div><div class='line'><span class="na">$nav-color</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$nav-bg</span><span class="o">,</span> <span class="mi">38</span><span class="p">)</span> <span class="nv">!default</span><span class="p">;</span>
+</div><div class='line'><span class="na">$nav-color-hover</span><span class="o">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$nav-color</span><span class="o">,</span> <span class="mi">25</span><span class="p">)</span> <span class="nv">!default</span><span class="p">;</span>
+</div><div class='line'><span class="nc">...</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>The <code>!default</code> rule lets the variable be overridden if it is defined beforehand.
+is imported before the <code>_theme.scss</code> it can predefine these colors easily. There are comments to help out with this in the
+<a href="https://github.com/imathis/octopress/tree/master/.themes/classic/sass/custom/_colors.scss">source</a>.</p>
+
+<p>Many of the colors in the theme are picked using <a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">Sass&#8217;s color functions</a>.
+As a result you can pick a new background color for the navigation by setting the <code>$nav-bg</code> variable
+and the other colors will derived for you. This isn&#8217;t perfect, but it should do a decent job with most colors.</p>
+
+<h2 id="changing_layout">Changing the Layout</h2>
+
+
+<pre><code># In /sass/base
+_layout.scss     # Responsive layouts are defined here
+
+# In /sass/custom - Change these files for easy customization
+_layout.scss     # Override settings for base/_layout.scss to change the layout
+</code></pre>
+
+<p>Just like with colors, widths in <code>/sass/base/_layout.scss</code> are defined like <code>$max-width: 1200px !default;</code> and can be easily customized
+by defining them in <code>sass/custom/_layout.scss</code>. Here&#8217;s a look at the layout defaults.</p>
+
+<div><figure role=code><figcaption><span>Layout Defaults (_layout.scss)</span><a href='https://github.com/imathis/octopress/tree/master/.themes/classic/sass/base/_layout.scss'>view on Github </a></figcaption> <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+</pre></td><td class='code' width='100%'><pre><code class='scss'><div class='line'><span class="na">$max-width</span><span class="o">:</span> <span class="mi">1200</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</div><div class='line'>
+</div><div class='line'><span class="c1">// Padding used for layout margins</span>
+</div><div class='line'><span class="na">$pad-min</span><span class="o">:</span> <span class="mi">18</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</div><div class='line'><span class="na">$pad-narrow</span><span class="o">:</span> <span class="mi">25</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</div><div class='line'><span class="na">$pad-medium</span><span class="o">:</span> <span class="mi">35</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</div><div class='line'><span class="na">$pad-wide</span><span class="o">:</span> <span class="mi">55</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</div><div class='line'>
+</div><div class='line'><span class="c1">// Sidebar widths used in media queries</span>
+</div><div class='line'><span class="na">$sidebar-width-medium</span><span class="o">:</span> <span class="mi">240</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</div><div class='line'><span class="na">$sidebar-pad-medium</span><span class="o">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</div><div class='line'><span class="na">$sidebar-pad-wide</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</div><div class='line'><span class="na">$sidebar-width-wide</span><span class="o">:</span> <span class="mi">300</span><span class="kt">px</span> <span class="nv">!default</span><span class="p">;</span>
+</div><div class='line'>
+</div><div class='line'><span class="na">$indented-lists</span><span class="o">:</span> <span class="n-Pseudo">false</span> <span class="nv">!default</span><span class="p">;</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>These variables are used to calculate the width and padding for the responsive layouts. The <code>$indented-lists</code> variable allows you to
+choose if you prefer indented or normal lists.</p>
+
+  
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer><p>
+  Copyright &copy; 2011 - Brandon Mathis -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress: Sharing Code Snippets</title>
+  <meta name="author" content="Brandon Mathis">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://octopress.org/docs/blogging/code/index.html"/>
+  <link href="/octopress/favicon.png" rel="shortcut icon" />
+  <link href="/octopress/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/octopress/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/octopress/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/octopress/octopress/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml"/>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10876422-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body   class="no-sidebar" >
+  <header><hgroup>
+  <h1><a href="/octopress/">Octopress</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role=navigation><ul role=subscription data-subscription="rss">
+  <li><a href="/octopress/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="site-search">
+    <input type="hidden" name="q" value="site:octopress.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul role=main-navigation>
+  <li><a href="/octopress/">Blog</a></li>
+  <li><a href="/octopress/docs">Documentation</a></li>
+  <li><a href="/octopress/help">Help</a></li>
+  <li><a href="http://github.com/imathis/octopress">Source</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Sharing Code Snippets</h1>
+    <p class="meta">
+
+
+
+
+<time datetime="2011-07-19 18:10:00 -0400" pubdate  updated >Jul 19<span>th</span>, 2011</time>
+
+
+</p>
+  </header>
+  <p><a href="/octopress/docs/blogging">&laquo; Previous, Blogging Basics</a></p>
+
+<p>Sharing code is important, and blogging about it should be easy and beautiful.
+That&#8217;s why Octopress is packed with features to make blogging your code a breeze.
+Though Jekyll comes with support for <a href="http://pygments.org">Pygments syntax highlighting</a>,
+Octopress makes it way better. Here&#8217;s how.</p>
+
+<ul>
+<li>A Sass port of <a href="http://ethanschoonover.com/solarized">Solarized syntax highlighting</a> created specifically for Octopress.</li>
+<li>Gist code embedding - by <a href="https://gist.github.com/1027674">Brandon Tilly</a>.</li>
+<li>Insert code snippets from your filesystem with a download link.</li>
+<li>Easy inline code blocks with <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> and optional download links.</li>
+<li>Pygments caching - a <a href="https://github.com/rsim/blog.rayapps.com/blob/master/_plugins/pygments_cache_patch.rb">Jekyll community plugin</a>.</li>
+<li>Table based line numbers added with javascript.</li>
+</ul>
+
+
+<h2>Solarized Highlighting</h2>
+
+<p><a href="http://ethanschoonover.com/solarized">Solarized</a> has a beautiful syntax highlighting color scheme, but reproducing it requires a highly sophisticated highlighting engine.
+<a href="http://pygments.org">Pygments</a> (the highlighter Jekyll uses) processes code snippets into styleable HTML, but it isn&#8217;t nearly as powerful as the highlighting engine in Vim for example.
+In order to port Solarized theme to octopress, I processed its <a href="https://github.com/altercation/solarized/tree/master/utils/tests">test files</a> with Pygments and styled the output with Sass while comparing
+them to the Vim rendered versions.</p>
+
+<p>Check out the <a href="/octopress/docs/blogging/code/test">test page</a> to see the results.</p>
+
+<h2>Github Style Code Blocks</h2>
+
+<p>With the <code>backtick_codeblock</code> filter you can use Github&#8217;s lovely back tick syntax highlighting blocks.
+Simply start a line with three back ticks followed by a space and the language you&#8217;re using. Tab in four spaces
+for your code snippets, and then finish your code block with three more back ticks.</p>
+
+<p><strong>Note: Back tick code blocks are only supported in HTML and Markdown. With the Textile markup language, use the <a href="/octopress/docs/plugins/codeblock/">codeblocks</a> instead.</strong></p>
+
+<h4>Syntax</h4>
+
+<div><figure role=code><pre><code>``` language
+    code snippet
+```</code></pre></figure></div>
+
+
+<h4>Example</h4>
+
+<div><figure role=code><pre><code>``` ruby
+    class Fixnum
+      def prime?
+        ('1' * self) !~ /^1?$|^(11+?)\1+$/
+      end
+    end
+```</code></pre></figure></div>
+
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="k">class</span> <span class="nc">Fixnum</span>
+</div><div class='line'>  <span class="k">def</span> <span class="nf">prime?</span>
+</div><div class='line'>    <span class="p">(</span><span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="nb">self</span><span class="p">)</span> <span class="o">!~</span> <span class="sr">/^1?$|^(11+?)\1+$/</span>
+</div><div class='line'>  <span class="k">end</span>
+</div><div class='line'><span class="k">end</span>
+</div></code></pre></td></tr></table></div>
+
+<p>This is a nice, lightweight way to add a highlighted code snippet. For features like titles and links you&#8217;ll want to look
+at the <a href="/octopress/docs/plugins/code-block/">codeblock</a> or <a href="/octopress/docs/plugins/include-code/">include_code</a> liquid tags.</p>
+
+<h2>Gist Embedding</h2>
+
+<p>All you need is the gist&#8217;s id and you can easily embed it in your page. This actually downloads a cache of the gist and embeds it in a <code>&lt;noscript&gt;</code> tag for RSS
+readers and search engines, while still using Github&#8217;s javascript gist embed code for browsers.</p>
+
+<h4>Syntax</h4>
+
+<pre><code>{% gist gist_id [filename] %}
+</code></pre>
+
+<h4>Example</h4>
+
+<pre><code>{% gist 996818 %}
+</code></pre>
+
+<div><script src='https://gist.github.com/996818.js?file='></script>
+<noscript><pre><code>@@ -590,7 +590,7 @@ class SpritesTest &lt; Test::Unit::TestCase
+  it &quot;should generate a sprite from nested folders&quot; do
+    css = render &lt;&lt;-SCSS
+-     @import &quot;nested/*.png&quot;;
++     @import &quot;nested/**/*.png&quot;;
+      @include all-nested-sprites;
+    SCSS
+    assert_correct css, &lt;&lt;-CSS</code></pre></noscript></div>
+
+
+<p>If you have a gist with multiple files, you can include files one at a time by adding the name after the gist id.</p>
+
+<pre><code>{% gist 1059334 svg_bullets.rb %}
+{% gist 1059334 usage.scss %}
+</code></pre>
+
+<p>This plugin was developed by <a href="http://brandontilley.com/2011/01/31/gist-tag-for-jekyll.html">Brandon Tilly</a> but I have fixed some bugs and made some improvements to it for Octopress.</p>
+
+<h2>Include Code Snippets</h2>
+
+<p>Import files on your filesystem into any blog post as embedded code snippets with syntax highlighting and a download link.
+In the <code>_config.yml</code> you can set your <code>code_dir</code> but the default is <code>source/downloads/code</code>. Simply put a file anywhere under that directory and
+use the following tag to embed it in a post.</p>
+
+<h4>Syntax</h4>
+
+<pre><code>{% include_code [title] url %}
+</code></pre>
+
+<h4>Example 1</h4>
+
+<pre><code>{% include_code javascripts/test.js %}
+</code></pre>
+
+<h4>Example 2 (with optional title)</h4>
+
+<pre><code>{% include_code Testing include_code javascripts/test.js %}
+</code></pre>
+
+<p>This includes a file from <code>source/downloads/code/javascripts/test.js</code>. By default the <code>&lt;figcaption&gt;</code> will be the filename, but you can add a title before the filepath if you like.</p>
+
+<h4>Demo of Example 2</h4>
+
+<div><figure role=code><figcaption><span>Testing include_code (test.js)</span> <a href='http://octopress.org/downloads/code/javascripts/test.js'>download</a></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+<span class='line'>17</span>
+<span class='line'>18</span>
+<span class='line'>19</span>
+<span class='line'>20</span>
+</pre></td><td class='code' width='100%'><pre><code class='js'><div class='line'><span class="cm">/**</span>
+</div><div class='line'><span class="cm">sample javascript from xui</span>
+</div><div class='line'><span class="cm">*/</span>
+</div><div class='line'>
+</div><div class='line'><span class="kd">var</span> <span class="kc">undefined</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">xui</span><span class="p">,</span>
+</div><div class='line'>    <span class="nb">window</span>     <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">string</span>     <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">),</span>
+</div><div class='line'>    <span class="nb">document</span>   <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">simpleExpr</span> <span class="o">=</span> <span class="sr">/^#?([\w-]+)$/</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">idExpr</span>     <span class="o">=</span> <span class="sr">/^#/</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">tagExpr</span>    <span class="o">=</span> <span class="sr">/&lt;([\w:]+)/</span><span class="p">,</span>
+</div><div class='line'>    <span class="nx">slice</span>      <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="p">};</span>
+</div><div class='line'>    <span class="k">try</span> <span class="p">{</span> <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">slice</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">nodeType</span><span class="p">;</span> <span class="p">}</span>
+</div><div class='line'>    <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span> <span class="nx">slice</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="kd">var</span> <span class="nx">ret</span><span class="o">=</span><span class="p">[];</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+</div><div class='line'>        <span class="nx">ret</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span> <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span> <span class="p">};</span> <span class="p">}</span>
+</div><div class='line'>
+</div><div class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">x$</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">xui</span> <span class="o">=</span> <span class="nx">xui</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+</div><div class='line'>    <span class="k">return</span> <span class="k">new</span> <span class="nx">xui</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">context</span><span class="p">);</span>
+</div><div class='line'><span class="p">};</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<h2>Inline Code Blocks</h2>
+
+<p>With this plugin you can write blocks of code directly in your posts and optionally add titles and links.</p>
+
+<h4>Syntax</h4>
+
+<pre><code>{% codeblock [title] [url] [link text] %}
+</code></pre>
+
+<h4>Example 1</h4>
+
+<pre><code>{% codeblock %}
+Awesome code snippet
+{% endcodeblock %}
+</code></pre>
+
+<div><figure role=code><pre><code>Awesome code snippet</code></pre></figure></div>
+
+
+<h4>Example 2</h4>
+
+<pre><code># Including a file extension in the title enables highlighting
+{% codeblock Time to be Awesome - awesome.rb %}
+puts "Awesome!" unless lame
+{% endcodeblock %}
+</code></pre>
+
+<div><figure role=code><figcaption><span>Time to be Awesome - awesome.rb </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='rb'><div class='line'><span class="nb">puts</span> <span class="s2">&quot;Awesome!&quot;</span> <span class="k">unless</span> <span class="n">lame</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<h4>Example 3</h4>
+
+<pre><code># Add an optional URL to enable downloading or linking to source
+{% codeblock Got pain? painreleif.sh http://example.com/painreleief.sh Download it! %}
+$ rm -rf ~/PAIN
+{% endcodeblock %}
+</code></pre>
+
+<div><figure role=code><figcaption><span>Javascript Array Syntax (array.js)</span><a href='https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array'>MDN Documentation </a></figcaption> <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='js'><div class='line'><span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">arrayLength</span><span class="p">);</span>
+</div><div class='line'><span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">element0</span><span class="p">,</span> <span class="nx">element1</span><span class="p">,</span> <span class="p">...,</span> <span class="nx">elementN</span><span class="p">);</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>The last argument <code>link_text</code> is optional. You may want to link to a source for download file, or documentation on some other site.</p>
+
+<p>Also, see <a href="/octopress/docs/blogging/plugins">Blogging with Plugins</a> and <a href="/octopress/docs/plugins">The Octopress plugins page</a></p>
+
+  
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer><p>
+  Copyright &copy; 2011 - Brandon Mathis -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress: Theming &amp; Customization</title>
+  <meta name="author" content="Brandon Mathis">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://octopress.org/docs/theme/template/index.html"/>
+  <link href="/octopress/favicon.png" rel="shortcut icon" />
+  <link href="/octopress/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/octopress/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/octopress/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/octopress/octopress/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml"/>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10876422-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body   class="no-sidebar" >
+  <header><hgroup>
+  <h1><a href="/octopress/">Octopress</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role=navigation><ul role=subscription data-subscription="rss">
+  <li><a href="/octopress/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="site-search">
+    <input type="hidden" name="q" value="site:octopress.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul role=main-navigation>
+  <li><a href="/octopress/">Blog</a></li>
+  <li><a href="/octopress/docs">Documentation</a></li>
+  <li><a href="/octopress/help">Help</a></li>
+  <li><a href="http://github.com/imathis/octopress">Source</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Theming &amp; Customization</h1>
+    <p class="meta">
+
+
+
+
+<time datetime="2011-08-01 21:16:00 -0400" pubdate  updated >Aug 1<span>st</span>, 2011</time>
+
+
+</p>
+  </header>
+  <p>Shortly after the 2.0 release Octopress added the <code>source/_includes/custom</code> directory. If you don&#8217;t have this, you&#8217;ll want to <a href="/octopress/docs/updating">update</a> because it&#8217;s really nice.</p>
+
+<pre><code>source/
+  _includes/    # Main layout partials
+    custom/     # &lt;- Customize head, header, navigation, footer, and sidebar here
+    asides/     # Theme sidebar partials
+    post/       # post metadata, sharing &amp; comment partials
+  _layouts/     # layouts for pages, posts &amp; category archives
+</code></pre>
+
+<h2>Changing the &lt;HEAD&gt;</h2>
+
+<p>If you want to add to the <code>&lt;HEAD&gt;</code>take a look at <code>/source/_includes/custom/head.html</code>.</p>
+
+<div><figure role=code><figcaption><span>&lt;HEAD&gt; (source/_includes/custom/head.html) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='html'><div class='line'><span class="c">&lt;!--Fonts from Google&#39;s Web font directory at http://google.com/webfonts --&gt;</span>
+</div><div class='line'><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&#39;http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic&#39;</span> <span class="na">rel=</span><span class="s">&#39;stylesheet&#39;</span> <span class="na">type=</span><span class="s">&#39;text/css&#39;</span><span class="nt">&gt;</span>
+</div><div class='line'><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&#39;http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic&#39;</span> <span class="na">rel=</span><span class="s">&#39;stylesheet&#39;</span> <span class="na">type=</span><span class="s">&#39;text/css&#39;</span><span class="nt">&gt;</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>Here you can easily change or remove the <a href="http://google.com/webfonts">Google Webfonts</a>, insert javascripts, etc.</p>
+
+<h3>Changing the sidebar</h3>
+
+<p>Octopress integrates with some <a href="/octopress/docs/configuring/#third_party">3rd party services</a> like Twitter, Pinboard and Delicious which appear in the sidebar.
+In the <code>_config.yml</code> you can rearrange these, create custom sidebars for each layout, and add your own sidebar sections.</p>
+
+<div><figure role=code><figcaption><span>Sidebar configuration (_config.yml) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+</pre></td><td class='code' width='100%'><pre><code class='yaml'><div class='line'><span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span>   <span class="p-Indicator">[</span><span class="nv">asides/recent_posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">]</span>
+</div><div class='line'><span class="c1"># blog_index_asides:</span>
+</div><div class='line'><span class="c1"># post_asides:</span>
+</div><div class='line'><span class="c1"># page_asides:</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>If you want to add a section to your sidebar, create a new file in <code>source/_includes/custom/asides/</code>.
+Since many people probably want to add an About Me section, there&#8217;s already an <code>about.html</code> file in there waiting to be added. Here&#8217;s a look.</p>
+
+<div><figure role=code><figcaption><span>About Me (source/_includes/custom/asides/about.html) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+</pre></td><td class='code' width='100%'><pre><code class='html'><div class='line'><span class="nt">&lt;section&gt;</span>
+</div><div class='line'>  <span class="nt">&lt;h1&gt;</span>About Me<span class="nt">&lt;/h1&gt;</span>
+</div><div class='line'>  <span class="nt">&lt;p&gt;</span>A little something about me.<span class="nt">&lt;/p&gt;</span>
+</div><div class='line'><span class="nt">&lt;/section&gt;</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>Whenever you add a section to the sidebar, follow this pattern, with a <code>&lt;section&gt;</code> block and an <code>&lt;h1&gt;</code> for a title. To add it to the sidebar, edit the <code>_config.yml</code> and add it to the list of asides.</p>
+
+<div><figure role=code><figcaption><span>Sidebar configuration (_config.yml) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+</pre></td><td class='code' width='100%'><pre><code class='yaml'><div class='line'><span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span>     <span class="p-Indicator">[</span><span class="nv">asides/recent_posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">]</span>
+</div><div class='line'><span class="l-Scalar-Plain">blog_index_asides</span><span class="p-Indicator">:</span>  <span class="p-Indicator">[</span><span class="nv">custom/asides/about.html</span><span class="p-Indicator">,</span> <span class="nv">asides/recent_posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">]</span>
+</div><div class='line'><span class="l-Scalar-Plain">post_asides</span><span class="p-Indicator">:</span>        <span class="p-Indicator">[</span><span class="nv">custom/asides/about.html</span><span class="p-Indicator">,</span> <span class="nv">asides/recent_posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">]</span>
+</div><div class='line'><span class="c1"># page_asides:</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>In the configuration above I&#8217;ve added the about page to the blog index and post pages. Since <code>page_asides</code> isn&#8217;t being set, it will inherit from the default list.</p>
+
+<h2>Changing the Header, Navigation &amp; Footer</h2>
+
+<p>These are sections of the site that are most likely to be customized. You can edit each in <code>/source/_includes/custom/</code> and your changes will be preserved across updates.</p>
+
+<h3>Changing the Header</h3>
+
+<p>The header title and subtitle should be configured in the <code>_config.yml</code> If you want to make other changes to the header, edit <code>/source/_includes/custom/header.html</code> which looks like this:</p>
+
+<div><figure role=code><figcaption><span>Header (source/_includes/custom/header.html) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+</pre></td><td class='code' width='100%'><pre><code class='html'><div class='line'><span class="nt">&lt;hgroup&gt;</span>
+</div><div class='line'>  <span class="nt">&lt;h1&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/&quot;</span><span class="nt">&gt;</span>{{ site.title }}<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
+</div><div class='line'>  {% if site.subtitle %}
+</div><div class='line'>    <span class="nt">&lt;h2&gt;</span>{{ site.subtitle }}<span class="nt">&lt;/h2&gt;</span>
+</div><div class='line'>  {% endif %}
+</div><div class='line'><span class="nt">&lt;/hgroup&gt;</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<h3>Changing the Navigation</h3>
+
+<p>To change or add links to the main navigation, edit <code>/source/_includes/custom/navigation.html</code> which looks like this:</p>
+
+<div><figure role=code><figcaption><span>Navigation (source/_includes/custom/navigation.html) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+</pre></td><td class='code' width='100%'><pre><code class='html'><div class='line'><span class="nt">&lt;ul</span> <span class="na">role=</span><span class="s">main-navigation</span><span class="nt">&gt;</span>
+</div><div class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/&quot;</span><span class="nt">&gt;</span>Blog<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</div><div class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ root_url }}/blog/archives&quot;</span><span class="nt">&gt;</span>Archives<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</div><div class='line'><span class="nt">&lt;/ul&gt;</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>The <code>href</code> for each link begins with <code>{{ root_url }}</code> (this helps Octopress write urls differently if a site is deployed to a subdirectory).
+If you&#8217;re deploying your site to a subdirectory like <code>yoursite.com/octopress</code> you&#8217;ll want to add this to any links you add.</p>
+
+<h3>Changing the Footer</h3>
+
+<p>You can customize the footer in <code>source/_includes/custom/footer.html</code> which looks like this:</p>
+
+<div><figure role=code><figcaption><span>Footer (source/_includes/custom/footer.html) </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+</pre></td><td class='code' width='100%'><pre><code class='html'><div class='line'><span class="nt">&lt;p&gt;</span>
+</div><div class='line'>  Copyright <span class="ni">&amp;copy;</span> {{ site.time | date: &quot;%Y&quot; }} - {{ site.author }} -
+</div><div class='line'>  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;credit&quot;</span><span class="nt">&gt;</span>Powered by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://octopress.org&quot;</span><span class="nt">&gt;</span>Octopress<span class="nt">&lt;/a&gt;&lt;/span&gt;</span>
+</div><div class='line'><span class="nt">&lt;/p&gt;</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>Change this however you like, but be cool and keep the Octopress link in there.</p>
+
+  
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer><p>
+  Copyright &copy; 2011 - Brandon Mathis -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+</body>
+</html>

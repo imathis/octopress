@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress: Deploying Octopress</title>
+  <meta name="author" content="Brandon Mathis">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://octopress.org/docs/deploying/index.html"/>
+  <link href="/octopress/favicon.png" rel="shortcut icon" />
+  <link href="/octopress/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/octopress/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/octopress/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/octopress/octopress/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml"/>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10876422-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body   class="no-sidebar" >
+  <header><hgroup>
+  <h1><a href="/octopress/">Octopress</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role=navigation><ul role=subscription data-subscription="rss">
+  <li><a href="/octopress/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="site-search">
+    <input type="hidden" name="q" value="site:octopress.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul role=main-navigation>
+  <li><a href="/octopress/">Blog</a></li>
+  <li><a href="/octopress/docs">Documentation</a></li>
+  <li><a href="/octopress/help">Help</a></li>
+  <li><a href="http://github.com/imathis/octopress">Source</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Deploying Octopress</h1>
+    <p class="meta">
+
+
+
+
+<time datetime="2011-07-18 00:00:00 -0400" pubdate  updated >Jul 18<span>th</span>, 2011</time>
+
+
+</p>
+  </header>
+  <h2 id="rsync">Deploying with Rsync via SSH</h2>
+
+
+<p>Add your server configurations to the <code>Rakefile</code> under Rsync deploy config. To deploy with Rsync, be sure your public key is listed in your server&#8217;s <code>~/.ssh/authorized_keys</code> file.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">ssh_user</span>       <span class="o">=</span> <span class="s2">&quot;user@domain.com&quot;</span>
+</div><div class='line'><span class="n">document_root</span>  <span class="o">=</span> <span class="s2">&quot;~/website.com/&quot;</span>
+</div><div class='line'><span class="n">deploy_default</span> <span class="o">=</span> <span class="s2">&quot;rsync&quot;</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Now if you run</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'>rake generate   <span class="c"># If you haven&#39;t generated your blog yet</span>
+</div><div class='line'>rake deploy     <span class="c"># Syncs your blog via ssh</span>
+</div></code></pre></td></tr></table></div>
+
+<p>in your terminal, your <code>public</code> directory will be synced to your server&#8217;s document root.</p>
+
+<h2 id="github_pages">Deploying to Github Pages</h2>
+
+
+<p>To setup deployment, you&#8217;ll want to clone your target repository into the <code>_deploy</code> directory in your Octopress project.
+If you&#8217;re using Github user or organization pages, clone the repository <code>git@github.com:username/username.github.com.git</code>.</p>
+
+<h3>With Github User/Organization pages</h3>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'>git clone git@github.com:username/username.github.com _deploy
+</div><div class='line'>rake config_deploy<span class="o">[</span>master<span class="o">]</span>
+</div></code></pre></td></tr></table></div>
+
+<h3>With Github Project pages (gh-pages)</h3>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'>git clone git@github.com:username/project.git _deploy
+</div><div class='line'>rake config_deploy<span class="o">[</span>gh-pages<span class="o">]</span>
+</div></code></pre></td></tr></table></div>
+
+<p>The <code>config_deploy</code> rake task takes a branch name as an argument and creates a <a href="http://book.git-scm.com/5_creating_new_empty_branches.html">new empty branch</a>, and adds an initial commit.
+This also sets <code>deploy_default = "push"</code> in your <code>_config.yml</code> and prepares your branch for easy deployment. The <code>rake deploy</code> task copies the generated blog from the <code>public</code> directory to the <code>_deploy</code> directory, adds new files, removes old files, sets a commit message, and pushes to Github.
+Github will queue your site for publishing (which usually occurs instantly or within minutes if it&#8217;s your first commit).</p>
+
+<p>Now you should be set up to deploy, just run</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'>rake generate   <span class="c"># If you haven&#39;t generated your blog yet</span>
+</div><div class='line'>rake deploy     <span class="c"># Pushes your generated blog to Github</span>
+</div></code></pre></td></tr></table></div>
+
+<h2 id="deploy_subdir">Deploying to a Subdirectory (Github Project Pages does this)</h2>
+
+
+<p>If you&#8217;re deploying to a subdirectory on your site, or if you&#8217;re using Github&#8217;s project pages, make sure you set up your urls correctly in your configs.
+You can do this <em>almost</em> automatically:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'>rake set_root_dir<span class="o">[</span>your/path<span class="o">]</span>
+</div><div class='line'>
+</div><div class='line'><span class="c"># To go back to publishing to the document root</span>
+</div><div class='line'>rake set_root_dir<span class="o">[</span>/<span class="o">]</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Then update your <code>_config.yml</code> and <code>Rakefile</code> as follows:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'><span class="c"># _config.yml</span>
+</div><div class='line'>url: http://yoursite.com/your/path
+</div><div class='line'>
+</div><div class='line'><span class="c"># Rakefile (if deploying with rsync)</span>
+</div><div class='line'><span class="nv">document_root</span> <span class="o">=</span> <span class="s2">&quot;~/yoursite.com/your/path&quot;</span>
+</div></code></pre></td></tr></table></div>
+
+<p>To manually configure deployment to a subdirectory, you&#8217;ll change <code>_config.yml</code>, <code>config.rb</code> and <code>Rakefile</code>.
+Here&#8217;s an example for deploying the Octopress website to Github Project Pages:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'><span class="c"># _config.yml</span>
+</div><div class='line'>destination: public/octopress
+</div><div class='line'>url: http://imathis.github.com/octopress
+</div><div class='line'>subscribe_rss: /octopress/atom.xml
+</div><div class='line'>root: /octopress
+</div><div class='line'>
+</div><div class='line'><span class="c"># config.rb - for Compass &amp; Sass</span>
+</div><div class='line'><span class="nv">http_path</span> <span class="o">=</span> <span class="s2">&quot;/octopress&quot;</span>
+</div><div class='line'><span class="nv">http_images_path</span> <span class="o">=</span> <span class="s2">&quot;/octopress/images&quot;</span>
+</div><div class='line'><span class="nv">http_fonts_path</span> <span class="o">=</span> <span class="s2">&quot;/octopress/fonts&quot;</span>
+</div><div class='line'><span class="nv">css_dir</span> <span class="o">=</span> <span class="s2">&quot;public/octopress/stylesheets&quot;</span>
+</div><div class='line'>
+</div><div class='line'><span class="c"># Rakefile</span>
+</div><div class='line'><span class="nv">public_dir</span> <span class="o">=</span> <span class="s2">&quot;public/octopress&quot;</span>
+</div><div class='line'><span class="c"># If deploying with rsync, update your Rakefile path</span>
+</div><div class='line'><span class="nv">document_root</span> <span class="o">=</span> <span class="s2">&quot;~/yoursite.com/your/path&quot;</span>
+</div></code></pre></td></tr></table></div>
+
+  
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer><p>
+  Copyright &copy; 2011 - Brandon Mathis -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+</body>
+</html>

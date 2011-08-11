@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress: Blogging Basics</title>
+  <meta name="author" content="Brandon Mathis">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://octopress.org/docs/blogging/index.html"/>
+  <link href="/octopress/favicon.png" rel="shortcut icon" />
+  <link href="/octopress/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/octopress/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/octopress/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/octopress/octopress/atom.xml" rel="alternate" title="Octopress" type="application/atom+xml"/>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10876422-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body   class="no-sidebar" >
+  <header><hgroup>
+  <h1><a href="/octopress/">Octopress</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role=navigation><ul role=subscription data-subscription="rss">
+  <li><a href="/octopress/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="site-search">
+    <input type="hidden" name="q" value="site:octopress.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul role=main-navigation>
+  <li><a href="/octopress/">Blog</a></li>
+  <li><a href="/octopress/docs">Documentation</a></li>
+  <li><a href="/octopress/help">Help</a></li>
+  <li><a href="http://github.com/imathis/octopress">Source</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Blogging Basics</h1>
+    <p class="meta">
+
+
+
+
+<time datetime="2011-07-19 00:00:00 -0400" pubdate  updated >Jul 19<span>th</span>, 2011</time>
+
+
+</p>
+  </header>
+  <p>Octopress offers some rake tasks to create post and pages preloaded with metadata and according to Jekyll&#8217;s naming conventions.</p>
+
+<h2>Blog Posts</h2>
+
+<p>Blog posts must be stored in the <code>source/_posts</code> directory and named according to Jekyll&#8217;s naming conventions: <code>YYYY-MM-DD-post-title.markdown</code>. The name of the file will be used
+as the url slug, and the date helps with file distinction and determines the sorting order for post loops.</p>
+
+<p>Octopress provides a rake task to create new blog posts with the right naming conventions, with sensible yaml metadata.</p>
+
+<h4>Syntax</h4>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;title&quot;</span><span class="o">]</span>
+</div></code></pre></td></tr></table></div>
+
+<p><code>new_post</code> expects a naturally written title and strips out undesirable url characters when creating the filename.
+The default file extension for new posts is <code>markdown</code> but you can configure that in the <code>Rakefile</code>.</p>
+
+<h4>Example</h4>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;Zombie Ninjas Attack: A survivor&#39;s retrospective&quot;</span><span class="o">]</span>
+</div><div class='line'><span class="c"># Creates source/_posts/2011-07-03-zombie-ninjas-attack-a-survivors-retrospective.markdown</span>
+</div></code></pre></td></tr></table></div>
+
+<p>The filename will determine your url. With the default <a href="https://github.com/mojombo/jekyll/wiki/Permalinks">permalink settings</a> the url would be something like
+<code>http://site.com/blog/20011/07/03/zombie-ninjas-attack-a-survivors-retrospective/index.html</code>.</p>
+
+<p>Open a post in a text editor and you&#8217;ll see a block of <a href="https://github.com/mojombo/jekyll/wiki/yaml-front-matter">yaml front matter</a>
+which tells Jekyll how to processes posts and pages.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+</pre></td><td class='code' width='100%'><pre><code class='yaml'><div class='line'><span class="nn">---</span>
+</div><div class='line'><span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">post</span>
+</div><div class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Zombie</span><span class="nv"> </span><span class="s">Ninjas</span><span class="nv"> </span><span class="s">Attack:</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">survivor&#39;s</span><span class="nv"> </span><span class="s">retrospective&quot;</span>
+</div><div class='line'><span class="l-Scalar-Plain">date</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2011-07-03 5:59</span>
+</div><div class='line'><span class="l-Scalar-Plain">comments</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</div><div class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span>
+</div><div class='line'><span class="nn">---</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Here you can turn comments off and or categories to your post. If you are working on a multi-author blog, you can add <code>author: Your Name</code> to the
+metadata for proper attribution on a post. If you are working on a draft, you can add <code>published: false</code> to prevent it from being posted when you generate your blog.</p>
+
+<p>You can add a single category or multiple categories like this.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+</pre></td><td class='code' width='100%'><pre><code class='yaml'><div class='line'><span class="c1"># One category</span>
+</div><div class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Sass</span>
+</div><div class='line'>
+</div><div class='line'><span class="c1"># Multiple categories example 1</span>
+</div><div class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">CSS3</span><span class="p-Indicator">,</span> <span class="nv">Sass</span><span class="p-Indicator">,</span> <span class="nv">Media Queries</span><span class="p-Indicator">]</span>
+</div><div class='line'>
+</div><div class='line'><span class="c1"># Multiple categories example 2</span>
+</div><div class='line'><span class="l-Scalar-Plain">categories</span><span class="p-Indicator">:</span>
+</div><div class='line'><span class="p-Indicator">-</span> <span class="l-Scalar-Plain">CSS3</span>
+</div><div class='line'><span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Sass</span>
+</div><div class='line'><span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Media Queries</span>
+</div></code></pre></td></tr></table></div>
+
+<h2>New Pages</h2>
+
+<p>You can add pages anywhere in your blog source directory and they&#8217;ll be parsed by Jekyll. The URL will correspond directly to the filepath, so <code>about.markdown</code> will become <code>site.com/about.html</code>. If you prefer the URL <code>site.com/about/</code> you&#8217;ll want to create the page as <code>about/index.markdown</code>.
+Octopress has a rake task for creating new pages easily.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'>rake new_page<span class="o">[</span>super-awesome<span class="o">]</span>
+</div><div class='line'><span class="c"># creates /source/super-awesome/index.markdown</span>
+</div><div class='line'>
+</div><div class='line'>rake new_page<span class="o">[</span>super-awesome/page.html<span class="o">]</span>
+</div><div class='line'><span class="c"># creates /source/super-awesome/page.html</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Like with the new post task, the default file extension is <code>markdown</code> but you can configure that in the <code>Rakefile</code>. A freshly generated page might look like this.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+</pre></td><td class='code' width='100%'><pre><code class='yaml'><div class='line'><span class="nn">---</span>
+</div><div class='line'><span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">page</span>
+</div><div class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Super</span><span class="nv"> </span><span class="s">Awesome&quot;</span>
+</div><div class='line'><span class="l-Scalar-Plain">date</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2011-07-03 5:59</span>
+</div><div class='line'><span class="l-Scalar-Plain">comments</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</div><div class='line'><span class="l-Scalar-Plain">sharing</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</div><div class='line'><span class="l-Scalar-Plain">footer</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</div><div class='line'><span class="nn">---</span>
+</div></code></pre></td></tr></table></div>
+
+<p>The title is derived from the filename so you&#8217;ll likely want to change that. This is very similar to the post yaml except it doesn&#8217;t include categories, and you can toggle sharing and comments or remove the footer altogehter. If you don&#8217;t want to show a date on your page, just remove it from the yaml.</p>
+
+<h2>Generate &amp; Preview</h2>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'>rake generate   <span class="c"># Generates posts and pages into the public directory</span>
+</div><div class='line'>rake watch      <span class="c"># Watches source/ and sass/ for changes and regenerates</span>
+</div><div class='line'>rake preview    <span class="c"># Watches, and mounts a webserver at http://localhost:4000</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Jekyll&#8217;s built in WEBrick server is handy, but if you&#8217;re a <a href="http://pow.cx">POW</a> user, you can set it up to work with Octopress like this.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='sh'><div class='line'><span class="nb">cd</span> ~/.pow
+</div><div class='line'>ln -s /path/to/octopress
+</div><div class='line'><span class="nb">cd</span> -
+</div></code></pre></td></tr></table></div>
+
+<p>Now that you&#8217;re setup with POW, you&#8217;ll just run <code>rake watch</code> and load up <code>http://octopress.dev</code> instead.</p>
+
+<p>Also see <a href="/octopress/docs/blogging/code">Sharing Code Snippets</a> and <a href="/octopress/docs/blogging/plugins">Blogging with Plugins</a></p>
+
+  
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer><p>
+  Copyright &copy; 2011 - Brandon Mathis -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+</body>
+</html>

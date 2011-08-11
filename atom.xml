@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Octopress</title>
+  <link href="http://octopress.org/atom.xml" rel="self"/>
+  <link href="http://octopress.org/"/>
+  <updated>2011-08-11T17:07:20-04:00</updated>
+  <id>http://octopress.org/</id>
+  <author>
+    <name>Brandon Mathis</name>
+    
+      <email>brandon@imathis.com</email>
+    
+  </author>
+
+  
+  <entry>
+    <title>Octopress 2.0 Surfaces</title>
+    <link href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/"/>
+    <updated>2011-07-23T18:05:00-04:00</updated>
+    <id>http://octopress.org/blog/2011/07/23/octopress-20-surfaces</id>
+    <content type="html">&lt;p&gt;Octopress is a framework designed by &lt;a href=&quot;http://brandonmathis.com&quot;&gt;Brandon Mathis&lt;/a&gt; for &lt;a href=&quot;http://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;, the blog aware static site generator powering Github Pages.
+To start blogging with with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress
+All of that is already taken care of. Simply &lt;a href=&quot;https://github.com/imathis/octopress&quot;&gt;clone or fork Octopress&lt;/a&gt;, install dependencies and the theme, and you're set.&lt;/p&gt;
+
+&lt;h2&gt;What's new in 2.0?&lt;/h2&gt;
+
+&lt;p&gt;Short answer: Everything. Octopress is now based on &lt;a href=&quot;http://github.com/mojombo/jekyll&quot;&gt;mojombo/jekyll&lt;/a&gt; has been completely rewritten from the ground up with a mountain of goodies.&lt;/p&gt;
+
+&lt;p&gt;Octopress comes with:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A semantic HTML5 template&lt;/li&gt;
+&lt;li&gt;A Mobile friendly responsive (&lt;a href=&quot;http://stuffandnonsense.co.uk/projects/320andup/&quot;&gt;320 and up&lt;/a&gt;) layout (rotate, or resize your browser and see)&lt;/li&gt;
+&lt;li&gt;Built in 3rd party support for Twitter, Google Plus One, Disqus Comments, Pinboard, Delicious, and Google Analytics&lt;/li&gt;
+&lt;li&gt;An easy deployment strategy using Github pages or Rsync&lt;/li&gt;
+&lt;li&gt;Built in support for POW and Rack servers&lt;/li&gt;
+&lt;li&gt;Easy theming with Compass and Sass&lt;/li&gt;
+&lt;li&gt;A Beautiful &lt;a href=&quot;http://ethanschoonover.com/solarized&quot;&gt;Solarized&lt;/a&gt; syntax highlighting&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Be sure to check out the &lt;a href=&quot;http://octopress.org/docs&quot;&gt;documentation&lt;/a&gt; to get the full scoop.&lt;/p&gt;
+
+&lt;h3&gt;Plugins FTW&lt;/h3&gt;
+
+&lt;p&gt;Most of these plugins have been created just for Octopress, but a few come from the Jekyll community along with improvements and updates.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/plugins/video-tag&quot;&gt;HTML5 Video Tag&lt;/a&gt; - &lt;em&gt;easily post mp4 HTML5 video with flash player fallback&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/plugins/codeblock&quot;&gt;Code Block&lt;/a&gt; - &lt;em&gt;for easy inline code sharing&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/plugins/include-code&quot;&gt;Include Code&lt;/a&gt; - &lt;em&gt;embed code from your filesystem&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/plugins/gist-tag&quot;&gt;Gist Tag&lt;/a&gt; - &lt;em&gt;automatically downloads and embeds Github gists&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/plugins/image-tag&quot;&gt;Image Tag&lt;/a&gt; - &lt;em&gt;easily post images with class names and titles&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/plugins/render-partial&quot;&gt;Render Partial&lt;/a&gt; - &lt;em&gt;insert any file into another post or page&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/plugins/blockquote&quot;&gt;Blockquote&lt;/a&gt; - &lt;em&gt;generate beautiful, semantic block quotes&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/plugins/pullquote&quot;&gt;Pullquote&lt;/a&gt; - &lt;em&gt;generate CSS only pull quotes &amp;mdash; no duplicate data, no javascript&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/plugins/category-generator&quot;&gt;Category Generator&lt;/a&gt; - &lt;em&gt;generates archive pages for each blog category&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;For more plugins check out the &lt;a href=&quot;http://octopress.org/docs/plugins&quot;&gt;plugin list&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Ready to Get Started?&lt;/h2&gt;
+
+&lt;p&gt;Octopress is really easy to set up and deploy, &lt;a href=&quot;http://octopress.org/docs/setup&quot;&gt;start here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For now that's it. Check out the &lt;a href=&quot;http://octopress.org/docs&quot;&gt;docs&lt;/a&gt;, &lt;a href=&quot;http://github.com/imathis/octopress&quot;&gt;kick the tires&lt;/a&gt;, post &lt;a href=&quot;http://github.com/imathis/octopress/issues&quot;&gt;issues&lt;/a&gt; send me &lt;a href=&quot;http://convore.com/octopress/support&quot;&gt;support requests&lt;/a&gt; and tell all your friends.&lt;/p&gt;
+
+&lt;p&gt;Oh, and if you like, follow &lt;a href=&quot;http://twitter.com/octopress&quot;&gt;@octopress&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/imathis&quot;&gt;@imathis&lt;/a&gt; on Twitter.&lt;/p&gt;
+</content>
+  </entry>
+  
+</feed>
