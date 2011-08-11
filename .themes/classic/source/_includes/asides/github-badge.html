@@ -1,0 +1,17 @@
+{% if site.github_user %}
+<section>
+  <div id="github-badge"></div>
+  <script type="text/javascript" charset="utf-8">
+    GITHUB_USERNAME="{{ site.github_user }}";
+    GITHUB_LIST_LENGTH=10;
+    GITHUB_HEAD="h1"; // e.g. change to "h2" for wordpress sidebars
+    GITHUB_TITLE = "Github projects"
+    GITHUB_SHOW_ALL = "Show all"
+  </script>
+  <script src="/javascripts/libs/jquery.js" type="text/javascript"></script>
+  <script src="/javascripts/libs/jquery.template.js" type="text/javascript"></script>
+  <script src="/javascripts/github-badge-launcher.js" type="text/javascript"></script>
+  <script src="/javascripts/github-badge.js" type="text/javascript"></script>
+  <link href="/stylesheets/github-badge.css" rel="stylesheet" type="text/css">
+</section>
+{% endif %}

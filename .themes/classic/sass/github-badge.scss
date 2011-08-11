@@ -1,0 +1,67 @@
+#github-badge {
+  .body {
+    padding: .2em;
+    background-color: #F2F2F2;
+    font: 12px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  }
+
+  a {
+    color: #4183c4; /* blue */
+    background-color: #F2F2F2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #4183c4; /* blue */
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: #4183c4; /* blue */
+  }
+
+  .repos {
+    padding-top: 1em;
+
+    ul#repo_listing {
+      padding: .2em;
+      margin: 0px;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 0.25em;
+      padding: .1em;
+      font-size: 110%;
+      background: transparent none repeat scroll 0%;
+    }
+
+    img {
+      padding-right: .2em;
+      vertical-align: middle;
+    }
+
+    .public {
+      border: 1px solid #d8d8d8;
+      background-color: #f0f0f0;
+
+      a {
+        background-color: #f0f0f0;
+      }
+
+      .description {
+        margin-left: 18px;
+      }
+
+      img {
+        padding-right: 0.5em;
+      }
+    }
+  }
+
+
+  .clickable {
+    cursor: pointer; 
+    cursor: hand;
+  }
+}
