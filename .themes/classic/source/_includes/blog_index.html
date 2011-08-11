@@ -19,7 +19,7 @@
     {% endif %}
   </div>
 </nav>
-{% if site.disqus_short_name %}
+{% if site.disqus_short_name and disqus_show_comment_count %}
 <script type="text/javascript">
     var disqus_shortname = '{{ site.disqus_short_name }}';
     (function () {

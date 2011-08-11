@@ -13,7 +13,7 @@
 {% if index %}
   <div class="entry-content">{{ content | excerpt }}</div>
   <footer>
-    <a rel="full-article" href="{{ root_url }}{{ post.url }}">Read on &rarr;</a>
+  <a rel="full-article" href="{{ root_url }}{{ post.url }}{% if site.disqus_show_comment_count %}#disqus_thread{% endif %}">Read on &rarr;</a>
   </footer>
 {% else %}
 <div class="entry-content">{{ content }}</div>
