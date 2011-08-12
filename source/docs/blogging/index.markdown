@@ -101,11 +101,11 @@ The title is derived from the filename so you'll likely want to change that. Thi
     rake preview    # Watches, and mounts a webserver at http://localhost:4000
 ```
 
-Jekyll's built in WEBrick server is handy, but if you're a [POW](http://pow.cx) user, you can set it up to work with Octopress like this.
+Using the `rake preview` server is nice, but If you're a [POW](http://pow.cx) user, you can set up your Octopress site like this.
 
 ``` sh
     cd ~/.pow
-    ln -s /path/to/octopress
+    ln -s /path/to/octopress octopress
     cd -
 ```
 

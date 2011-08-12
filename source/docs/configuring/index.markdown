@@ -46,7 +46,6 @@ These configurations are used by Jekyll and Plugins. If you're not familiar with
 
 ``` yaml
     root:               # Mapping for relative urls (default: /)
-    port:               # Port to mount Jekyll's WEBrick server
     permalink:          # Permalink structure for blog posts
     source:             # Directory for site source files
     destination:        # Directory for generated site files
