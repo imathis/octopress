@@ -19,13 +19,16 @@ With Dropbox installed on each machine you wish to sync you need to prepare and 
 
 # Third Step
 Once your backups are completed, you are ready to move the combined Address Book to Dropbox. To do this you will use the <strong>Terminal</strong> application located in the <strong>Applications | Utilities</strong> folder. Make sure that you have quit Address Book before doing these commands. Also, these commands assume your Dropbox is located in your home folder. If you placed it elsewhere, you'll have to adjust the Dropbox path accordingly.
-
+{% codeblock %}$ mv ~/Library/Application\ Support/AddressBook ~/Dropbox/{% endcodeblock %}
 This will move your AddressBook directory to Dropbox. Next create a symbolic link on your machine to point to the new location for the AddressBook directory. Like this:
-
+{% codeblock %}$ ln -s ~/Dropbox/AddressBook ~/Library/Application\ Support/AddressBook{% endcodeblock %}
 Now when you start AddressBook it will use the symbolic link in ~/Library/Application \Support to find the actual AddressBook in ~/Dropbox. Start AddressBook to make sure you've typed everything correctly to this point.
 # Forth Step
 With AddressBook working on the first machine it is time to setup the other machine or machines. Since you combined the AddressBook already, all you need to do is move the AddressBook directory from ~/Library/Application \Support and add a symbolic link to the Dropbox location. Again use the Terminal to issue these commands:
-
+{% codeblock %}$ cd
+$ mkdir backups
+$ mv ~/Library/Application\ Support/AddressBook/ ~/backups
+$ ln -s ~/Dropbox/AddressBook/ ~/Library/Application\ Support/AddressBook{% endcodeblock %}
 The <strong>cd</strong> moves you to your home directory. <strong>mkdir backups</strong> creates a backups directory. <strong>mv ~/Library/Application \Support/AddressBook/ ~/backups</strong> moves the existing AddressBook directory to the backups directory. This is perhaps safer than outright deleting the directory. The <strong>ln</strong> command creates the symbolic link necessary for the Address Book application to find the data now located in Dropbox.
 
 Repeat the Forth step for each machine you want to share your Address Book with.

@@ -8,7 +8,7 @@ link: false
 ---
 The following manifesto was originally published <a title="The Hacker's Manifesto" href="http://records.viu.ca/~soules/media112/hacker.htm">here</a>.
 
-<pre>                               ==Phrack Inc.==
+{% codeblock %}                               ==Phrack Inc.==
 
                     Volume One, Issue 7, Phile 3 of 10
 
@@ -82,4 +82,4 @@ for.
 but you can't stop us all... after all, we're all alike.
 
                                +++The Mentor+++
-_______________________________________________________________________________</pre>
+_______________________________________________________________________________{% endcodeblock %}

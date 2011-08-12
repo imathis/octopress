@@ -15,11 +15,25 @@ As much fun as all of this has been I have wanted an easier way to set PostgreSQ
 As with any software installation process, you are proceeding at your own risk. Mucking around with package installers and things that live in the bowels of your file system are fine activities, but not for the uninitiated. Make a good backup and proceed with caution.
 ## Steps
 With brew installed it is simple to install PostgreSQL:
-
+{% codeblock %}$ brew install postgresql{% endcodeblock %}
 That's it, you're done.
 ## Sysctl
 When I went to initialize my first database using the new PostgreSQL installation I received an error saying the the memory request could not be satisfied. After some Googling I found out I needed to change the settings on a couple for sysctl managed attributes. Specifically kern.sysv.shmmax and kern.sysv.shmall. Here's what I changed mine to:
+{% codeblock %}$ sysctl -w kern.sysv.shmmax=13421772800
+kern.sysv.shmmax: 4194304
+sysctl: kern.sysv.shmmax: Operation not permitted
 
+$ sudo !!
+sudo sysctl -w kern.sysv.shmmax=13421772800
+Password:
+kern.sysv.shmmax: 4194304 -&gt; 13421772800
+
+$ sudo sysctl -w kern.sysv.shmall=13421772800
+kern.sysv.shmall: 1024 -&gt; 13421772800{% endcodeblock %}
 Changing sysctl managed attributes in this fashion only lasts until you restart the machine. If you don't want to repeatedly reset these values, create <strong>/etc/sysctl.conf</strong> and put the following 5 lines there and save the file.
-
+{% codeblock %}kern.sysv.shmmax=13421772800
+kern.sysv.shmmin=1
+kern.sysv.shmmni=32
+kern.sysv.shmseg=8
+kern.sysv.shmall=13421772800{% endcodeblock %}
 If you follow these directions, please leave a comment and let me know how they worked for you.

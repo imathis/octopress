@@ -14,9 +14,9 @@ A directory, A, contains many sub-directories, B, C, D, .... Each sub-directory 
 <strong>Solution</strong>
 The *nix <strong>cp</strong> command.
 
-<code>
+{% codeblock %}
 cp -r &lt;source_directory&gt;/*/*.filetype .
-</code>
+{% endcodeblock}
 
 Copy, recursively for files (little r, not Directories or big R), from the source_directory, searching all folders (/*), for all files of a type (/*.filetype) to here (.)
 

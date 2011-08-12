@@ -14,8 +14,8 @@ However, I recently learned about scp, or secure copy, on Unix and wanted to be 
 
 So I resorted to using the command line interface (terminal) and a command like this to make my secure connection and necessary port forwards:
 
-<pre>
-sudo ssh -C -l<i>userid</i> -L22:localhost:22 -L8080:localhost:8080 10.21.85.76</pre>
+{% codeblock %}
+sudo ssh -C -l<i>userid</i> -L22:localhost:22 -L8080:localhost:8080 10.21.85.76{% endcodeblock %}
 
 The breakdown goes like this:
 

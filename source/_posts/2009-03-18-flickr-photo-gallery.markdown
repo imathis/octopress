@@ -15,7 +15,25 @@ I was able to get Sibylle's photographs page working in relatively little time. 
 Since I had the URLs for all the image sizes, I decided to see if I could test the results for the large image URL, and if it wasn't available, substitute the URL for the medium image size. The gallery page uses PHP to manipulate the images, so I did come Google searches and discovered the <strong>curl</strong> function. Using that function I was able to capture the HTTP response header from Flickr when the large image URL was used as the request. Parsing that response using the string position function, <strong>strpos</strong>, I was able to determine if the image existed or was unavailable.
 
 The php code that does this image pre-fetch is shown below. <strong>$full_url</strong> is set to the large image size URL by the time this code is reached. <strong>$not_available</strong> is set to the image not available URL from Flickr, or http://l.yimg.com/g/images/photo_unavailable.gif. If <strong>strpos</strong> returns a value greater than zero the image isn't there, and we set <strong>$full_url</strong> to be the medium sized URL from the <strong>$img</strong> collection.
-
+{% codeblock %}// make sure the full size image exists
+$timeout = 2;
+$ch = curl_init();
+// set the URL we are interested in
+curl_setopt($ch, CURLOPT_URL, $full_url);
+// bring back the HEADER
+curl_setopt($ch, CURLOPT_HEADER, 1);
+// and just the HEADER please
+curl_setopt($ch, CURLOPT_NOBODY, 1);
+// don't show results in browswer
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+// time out after the value set above
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+$output = curl_exec($ch);
+curl_close($ch);
+// test the result
+if (strpos($output,$not_available) &gt; 0) {
+	$full_url = select_image($img, 3);
+}{% endcodeblock %}
 Now her gallery page automatically adjusts the modal window to display the large image if it is available, or the medium sized image if it is not. A slick Flickr gallery made even slicker.
 
 If you are interested it the full source listing of the page, please leave a comment with a working email address and I'll be happy to send it to you.

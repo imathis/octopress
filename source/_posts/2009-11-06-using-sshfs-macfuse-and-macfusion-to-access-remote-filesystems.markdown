@@ -61,7 +61,7 @@ Under the <strong>Macfusion</strong> tab:
 You are now ready to mount the SSHFS on your desktop. Click on the mount button and if the SSH settings are correct you should have a green disk icon mounted on the desktop. (Note, you may need to visit the Finder preferences to make sure that you are allowing *Connected Servers* to be displayed.)  You should now be able to access the remote files as if they were on an external disk attached to your system. You can copy, move, rename, and delete files. Remember, that in order to edit files you must <strong>uncheck </strong>the <em>Ignore Apple Double Files</em> option. This can only be done with the remote filesystem is unmounted.
 ### sshnodelay.so Error
 If the mount operation fails, click the gear icon in the Macfusion main window and select the Log option (or use Cmd-L with Macfusion as the active application). If you see the following error message:
-
+{% codeblock %}dyld: could not load inserted library: /Applications/Macfusion.app/Contents/Plugins/sshfs.mfplugin/Contents/Resources/sshnodelay.so{% endcodeblock %}
 <p style="text-align: center;"><img class="aligncenter size-full wp-image-2165" title="Macfusion_log_viewer" src="http://zanshin.net/wp-content/uploads/2009/11/Macfusion_log_viewer.png" alt="Macfusion_log_viewer" width="452" height="274" /></p>
 
 Then you need to rename or remove that library. Navigate to the <strong>/Applications/Macfusion.app/Contents/Plugins/sshfs.mfplugin/Contents/Resources</strong> directory and rename (e.g., sshnodelay.orig) or remove the sshnodelay.so file.
@@ -69,19 +69,19 @@ Then you need to rename or remove that library. Navigate to the <strong>/Applica
 
 ## Update SSHFS
 Now that you have a working connection it is time to verify the version of sshfs included with Macfusion, and update it if necessary.   Using the Terminal, navigate to:
-
+{% codeblock %}$ cd /Applications/Macfusion/Contents/Plugins/sshfs.mfplugin/Contents/Resources{% endcodeblock %}
 The copy of sshfs that Macfusion uses is located in this directory. Run the command:
-
+{% codeblock %} $ ./sshfs-static -V{% endcodeblock %}
 to verify the installed version. As of this writing the current available version of sshfs was 2.2, if the displayed version is anything less than that, you will see a performance increase by updating.
 
 <strong>Download SSHFS from: </strong><a title="sshfs download" href="http://code.google.com/p/macfuse/wiki/MACFUSE_FS_SSHFS" target="_blank">http://code.google.com/p/macfuse/wiki/MACFUSE_FS_SSHFS </a>
 
 For Mac OS X 10.6 you want to get the <strong>sshfs-static-leopard.gz</strong> file. Uncompress the gzip archive. Inside the resulting sshfs-binaries folder will be an application called <em>sshfs-static-leopard</em>.  In Terminal rename the original sshfs-static application (assuming you are still in the /Applications/Macfusion/Contents/Plugins/sshfs.mfplugin/Contents/Resources directory):
-
+{% codeblock %}$ mv sshfs-static sshfs-static-orig{% endcodeblock %}
 And then copy the new version into place:
-
+{% codeblock %}$ mv ~/Downloads/sshfs-binaries/sshfs-static-leopard sshfs-static{% endcodeblock %}
 This should result in a significant performance increase.
 ## Preventing .DS_Store files over Network Connections
 You can prevent .DS_Store files from being created on the mounted filesystem by executing the following command in Terminal:
-
+{% codeblock %}$ defaults write com.apple.desktopservices DSDontWriteNetworkStores true{% endcodeblock %}
 This will affect interactions with SMB/CIFS, AFP, NFS, and WebDav servers.  You will need to restart the computer or log out and back in to your user account for this change to take effect.

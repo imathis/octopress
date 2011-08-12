@@ -13,7 +13,7 @@ Delicious is owned by <a title="Yahoo!" href="http://yahoo.com" target="_blank">
 	<li>Open up a terminal (in Mac OS X, Terminal.app lives in Applications/Utilities)</li>
 	<li>Type the following command:</li>
 </ol>
-<pre>curl -k --user username:password -o delicious.bakup.xml -O 'https://api.del.icio.us/v1/posts/all'</pre>
+{% codeblock %}curl -k --user username:password -o delicious.bakup.xml -O 'https://api.del.icio.us/v1/posts/all'{% endcodeblock %}
 substituting your username and password for username:password.
 
 That's it.  You could schedule this via cron, but that's the subject of another posting.

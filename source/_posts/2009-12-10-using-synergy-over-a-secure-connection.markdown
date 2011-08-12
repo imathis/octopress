@@ -27,7 +27,50 @@ Synergy consists of two parts, a server (the machine with the keyboard and mouse
 	<li>Orthanc (Work MBP)</li>
 </ul>
 So my Synergy configuration file looks like this:
+{% codeblock %}# synergy configuration file
 
+section: screens
+	# three hosts:
+	#	Palantir (Mac Pro)
+	# 	Orthanc (MacBook Pro)
+	#	BlackPerl (MacBook Pro)
+	#
+	# arranged from left to right: BlackPerl : Palantir : Orthanc
+	#
+	BlackPerl:
+	Palantir:
+	Orthanc:
+end
+
+section: links
+	# Palantir is to the right of BlackPerl
+	BlackPerl:
+		right = Palantir
+	# BlackPerl is to the left of Palantir,
+	# Orthanc is to the right of Palantir
+	Palantir:
+		left = BlackPerl
+		right = Orthanc
+	# Palantir is to the left of Orthanc
+	Orthanc:
+		left = Palantir
+end
+
+section: aliases
+	# Palantir has an alias
+	Palantir:
+		localhost
+end
+
+section: options
+	# use control+alt+# to hop to screen directly
+	# 1 = BlackPerl
+	# 2 = Palantir
+	# 3 = Orthanc
+	keystroke(control+alt+1) = switchToScreen(BlackPerl)
+	keystroke(control+alt+2) = switchToScreen(Palantir)
+	keystroke(control+alt+3) = switchToScreen(Orthanc)
+end{% endcodeblock %}
 This configuration is saved in my home directory as <strong>.synergy.conf</strong>.
 
 While you could manually start the server each time you wanted to use Synergy, a better solution is to have it started automatically each time the computer is restarted or booted. Using <a title="Lingon from Sourceforge" href="http://sourceforge.net/projects/lingon/files/" target="_blank">Lingon</a> I was able to create a launchd plist for Synergy that starts the server component automatically. My net.sourceforge.synergy2.plist looks like this:
@@ -35,11 +78,11 @@ While you could manually start the server each time you wanted to use Synergy, a
 <img class="aligncenter size-full wp-image-2197" title="synergy2" src="http://zanshin.net/wp-content/uploads/2009/12/synergy2.png" alt="synergy2" width="554" height="401" />Once this file is created, Synergy will start automatically every time the machine is booted. This creates the server necessary for Synergy to work.
 
 On each client machine I added a function to my .bashrc file to create a secure shell connection to the machine with the Synergy server, in my case called Palantir. The function looks like this:
-
+{% codeblock %}function pssh() { ssh -L 24800:localhost:24800 userid@palantir.example.com }{% endcodeblock %}
 What is happening here is that port 24800 on the local machine is being forwarded to the same port on the remote machine (Palantir). All traffic to port 24800 will be encrypted and passed along to the other machine.
 
 In addition to that function, each client machine also has a second .bashrc funtion called syn, that starts the Synergy client over the port forwarding created by the first function. It looks like this:
-
+{% codeblock %}function syn() { /Users/username/bin/synergy-1.3.1/synergyc -f --name clientName localhost }{% endcodeblock %}
 This function starts the Synergy client (synergyc) and names the client machine (--name clientName) and points it at localhost as the server. Since the Synergy port (24800) is port forwarded to the server machine, pointing the client at localhost works.
 ## How to Use
 With the Synergy server always running on my Mac Pro it is easy to start Synergy on both client machines. I open up a new Terminal tab and run the port forwarding function first (pssh). This function results in your being signed into the server, and this connection must exist in order for Synergy to work.

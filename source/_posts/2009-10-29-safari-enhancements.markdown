@@ -11,7 +11,7 @@ From the first time I used my PowerBook nearly seven years ago until today, Safa
 It isn't perfect however. There are two "enhancements" I make to my copy to better suit my browsing style.
 ## Force Links to Open in New Tab Instead of a New Window
 By default, any time a web site uses the target="_blank" attribute on a link, Safari will open that link in a new window. I prefer it to open in a new tab in the current window. Open a Terminal window (<strong>Applicaitons -&gt; Utilities -&gt; Terminal</strong>) and enter the following command:
-<pre>defaults write com.apple.Safari TargetedClicksCreateTabs -bool true</pre>
+{% codeblock %}defaults write com.apple.Safari TargetedClicksCreateTabs -bool true{% endcodeblock %}
 <img class="aligncenter size-full wp-image-2123" title="createTabs" src="http://zanshin.net/wp-content/uploads/2009/10/createTabs.png" alt="createTabs" width="505" height="213" />
 
 You'll need to re-start Safari for the change to take effect.

@@ -13,15 +13,23 @@ The only problem with this arrangement is that the MacBook Pro attempts to back 
 A better solution would be a script or automated action that would turn TimeMachine on or off. Since I work relatively stable hours a cron job coupled with code to activate or deactivate TimeMachine would suffice.
 
 You can turn TimeMachine on or off via Terminal using this defaults command:
-
+{% codeblock %}defaults write /Library/Preferences/com.apple.TimeMachine AutoBackup -boolean [YES|NO]{% endcodeblock %}
 I created two bash scripts, one to turn TimeMachine on:
-
+{% codeblock %}#!/bin/bash
+defaults write /Library/Preferences/com.apple.TimeMachine AutoBackup -boolean YES{% endcodeblock %}
 And another to turn it off:
-
+{% codeblock %}#!/bin/bash
+defaults write /Library/Preferences/com.apple.TimeMachine AutoBackup -boolean NO{% endcodeblock %}
 The final step is to create two cron entries, one for 8 am Monday through Friday to run the "on" script from above. And the second for 5 pm Monday through Friday to run the "off" script from above. Crontab entries are in this order: minute hour day-of-month month day-of-week what-to-do. The day-of-week entry uses either 0 or 7 for Sunday, with Monday as 1, Tuesday as 2, and so forth. So the "on" script entry would look like this: <strong>0 8 * * 1-5 ~/bin/timeMachineon.sh</strong> and the "off" script entry would look like this: <strong>0 8 * * 1-5 ~/bin/timeMachineoff.sh</strong>.
 
 Here's my completed crontab:
+{% codeblock %}# minute hour day-of-month month day-of-week what
 
+# activate TimeMachine zero minutes past 8 am M-F
+0 8 * * 1-5 ~/bin/timeMachineon.sh
+
+# deactivate TimeMachine zero minutes past 5 pm (17) M-F
+0 17 * * 1-5 ~/bin/timeMachineoff.sh{% endcodeblock %}
 Now TimeMachine only runs during working hours when I am (presumably) on the work network.
 
 <strong>Update 1:</strong> The evening cron job fails to run when the laptop is closed, i.e., sleeping, when 5 pm rolls around. Cron is a useful tool but it has to be awake to run. I've changed the evening cron time to 4 pm, a time I am almost always still at work. I am considering adding a second evening crontab entry, say for 7 or 8 pm in case the 4 o'clock instance is missed for some reason. A better solution would be a network aware triggering of the scripts, running the on script only when the work network is detected, and the off script for all other networks.
@@ -29,9 +37,20 @@ Now TimeMachine only runs during working hours when I am (presumably) on the wor
 <strong>Update 2:</strong> Here's the latest solution, based on Josh's comments.
 
 I created a script called login-hook.sh, which is the target of:
-
+{% codeblock %}sudo defaults write com.apple.loginwindow LoginHook ~/bin/login-hook.sh{% endcodeblock %}
 This script tests to see if a TimeMachine control script is running at every login, and starts it if necessary:
+{% codeblock %}#!/bin/bash
+# login-hook.sh
 
+if [ "$(ps ax | grep tm-control.sh | grep -vc grep)" -lt 1 ]; then
+    sudo -u mhn /Users/mhn/bin/tm-control.sh &amp;
+fi{% endcodeblock %}
 And tm-control.sh runs the Python script Josh supplied every 30 minutes (1800 seconds), in effect simulating a cron job, but leveraging the network awareness of the Python script. Here's tm-control.sh:
+{% codeblock %}#!/bin/bash
+# tm-control.sh
 
+while [ 1 ]; do
+    python ~/bin/TM_off_on.py
+    sleep 1800
+done{% endcodeblock %}
 <strong>Update 3:</strong> Getting LoginHook to work is a bit finicky. By using <strong><em>defaults read com.apple.loginwindow LoginHook</em></strong>, you can display the current setting, if any, this attribute has. <strong><em>defaults delete com.apple.loginwindow LoginHook</em></strong> will allow you to remove the setting. Make sure you have your login-hook.sh, and the script it calls in place prior to establishing the hook and you should be okay.
