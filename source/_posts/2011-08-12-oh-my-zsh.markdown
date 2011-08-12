@@ -1,0 +1,55 @@
+---
+layout: post
+title: "Oh My Zsh!"
+date: 2011-08-12 13:44
+comments: true
+categories: nerdliness
+link: false
+---
+There are any number of zsh tutorials and getting started guides, and this one is mine.
+
+[Zsh](http://www.zsh.org/ "zsh") is an alternative to the venerable bash shell. It is a superset of the functionality included in bash along with some additional features that make it a very attractive choice.
+
+Here's how I installed zsh and set it up for use on my MacBook Pro. As always with Internet how-tos, proceed at your own risk, make back up copies along the way, and know that only you are responsible for wiping out all your files with an errant rm -rf / *.
+
+## Step One
+Review your current bash setup. In my case I have three primary machines: my personal MacBook Pro, a work assigned MacBook Pro, and a work provided iMac. The work provided machines are still running Snow Leopard as my employer hasn't yet sorted out buying mass licenses. My personal machine has been running Lion since the Saturday after it was released. In addition to these physical machines I have access to a number of servers and make use of several virtual machine images. These servers and VMs are all using some variant of Unix as there operating system.
+
+Each of these environments has some derivate of a .bash\_profile, .bashrc, and optionally a .bash\_aliases file. Once upon a time these files were all the same, having started from the same source. Over time they have grown independently of each other. I started by examining the configuration on each machine I used and combining the differences into a set of master files, one each for .bash\_profile, .bashrc, and .bash\_aliases. 
+
+Once the master set was done I created a dotfiles directory in Dropbox and copied the files, leading dots and all, to that location. Next I created symbolic links in the home directories of each of my machines to the ur-files. Like so:
+
+{% codeblock %}
+$ cd 
+$ ln -s /Users/mark/Dropbox/dotfiles/.bash\_profile .bash\_profile
+$ ln -s /Users/mark/Dropbox/dotfiles/.bashrc .bashrc
+$ ln -s /Users/mark/Dropbox/dotfiles/.bash\_aliases .bash\_aliases
+{% endcodeblock %}
+
+Now all my machines have the same capabilities (bash-wise) as each other. Plus, changes made in one environment are immediately available elsewhere through Dropbox syncing. 
+
+## Step Two
+Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh "oh-my-zsh"). Most modern Unix-based operating system should support (if not outright have already) zsh. You can fiddle around with it from your current bash shell simply by issuing a "zsh" command at the prompt. This will create a minimally configured zsh environment. Or, you can install oh-my-zsh, which includes an extensive set of plugins, numerous themes, and an active community effort. 
+
+The oh-my-zsh installer is fairly slick as it looks at your current set up (primarily your PATH statement) and migrates it for you to the new .zshrc file. This is why Step One above pays off. Well, that and having a nice tidy bash configuration as a fall-back just in case you and zsh don't take to each other.
+
+## Step Three
+Select a theme and customize. I made good used of this [Intredia.com](http://intridea.com/2011/5/18/its-not-enough-to-bash-in-heads-youve-got-to-bash-in-minds-with-zsh?blog=company "It's Not Enough to Bash in Heads, You've Got to Bash in Minds with Zsh?") article about zsh to get my environment configured to my liking. I'm using [iTerm](http://www.iterm2.com/#/section/home "iTerm2") and the [Solarized](http://ethanschoonover.com/solarized "Solarized") Dark color scheme, and I liked the looks of the Soliah theme. Under my bash environment I had a two-line prompt with a leading blank line. Purists may squawk at the idea of using up three lines for each new prompt, but I find a cluttered console easier to read with a blank line before the prompt, a nice current working directory listed on line two, and a lonely "$" ready for a command on line three. 
+
+The default prompt that came with Soliah had a similar look, but without the extra leading line. I also changed some of the colors to suit my aesthetics. And I set up a right-prompt, something bash hasn't got, to display which Ruby version was active for the current directory.
+
+For lack of a better, more polished solution, I copied my aliases and functions from .bashrc and .bash\_aliases so I would still have my shortcuts. Eventually I'll go through these and make them more zsh-like.
+
+Once I had my theme working and my .zshrc file configured I use the same Dropbox dotfiles directory I described earlier to share them between my machines and environments.
+
+## Step Four
+Explore. There are tons of goodies to explore in zsh. Try typing ".." instead of "cd ..". Or "-" instead of "cd - ". The [Intredia.com](http://intridea.com/2011/5/18/its-not-enough-to-bash-in-heads-youve-got-to-bash-in-minds-with-zsh?blog=company "It's Not Enough to Bash in Heads, You've Got to Bash in Minds with Zsh?") article article also has a table with quite a few new shortcuts and aliases to use.
+
+## Files
+Here is my oh-my-zsh theme file. It is "git aware" and when in a directory containing a Git repository displays useful information about the current state of the repository. The time calculation, which shows how long it has been since the last commit, is nice, but it does slow the prompts response down. I'm thinking about taking it out.
+
+{% gist 1142716 %}
+
+And here is my .zshrc file:
+
+{% gist 1142739 %}
