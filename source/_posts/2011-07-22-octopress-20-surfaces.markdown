@@ -8,7 +8,7 @@ categories: release
 ---
 
 Octopress is a framework designed by [Brandon Mathis](http://brandonmathis.com) for [Jekyll](http://github.com/mojombo/jekyll), the blog aware static site generator powering Github Pages.
-To start blogging with with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress
+To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress
 All of that is already taken care of. Simply [clone or fork Octopress](https://github.com/imathis/octopress), install dependencies and the theme, and you're set.
 
 ## What's new in 2.0?
