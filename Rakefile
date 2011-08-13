@@ -166,6 +166,8 @@ desc "Deploy website via rsync"
 task :rsync do
   puts "## Deploying website via Rsync"
   ok_failed system("rsync -avz --delete #{public_dir}/ #{ssh_user}:#{document_root}")
+ # puts "## Setting up .htaccess file"
+ # ok_failed system("cp #{ssh_user}:#{document_root}/htaccess/.htaccess #{ssh_user}:#{document_root}/.htaccess")
 end
 
 desc "deploy public directory to github pages"

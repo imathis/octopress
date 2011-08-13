@@ -1,35 +1,11 @@
-# 20110808 - updated htaccess file for octopress/jekyll site
-
-# 20110808 - redirect /YYYY/MM/DD/title-slug/ to http://zanshin.net/blog/YYYY/MM/DD/title-slug/
-# turns out this won't be necessary - plus it breaks diqus commenting. so it is commented out
 RewriteEngine on
-#Redirect 301 /([0-9][0-9][0-9][0-9])/([0-9][0-9])/([0-9][0-9])/([^/]+)/ http://zanshin.net/blog/$1/$2/$3/$4/
+RewriteBase /
 
-# 20110808 - commenting out specific deny clauses for now. may add back in later if (as) needed
-# 2008.06.04 - removed as it really wasn't working anyway.
-# 2008.04.25
-# allow all, deny specific IPs
-order allow,deny
-#Deny From 195.189.50.51  # pesky comment spammer
-#Deny From 195.225.178.15  # pesky trackback spammer
-#Deny From 67.180.85.178   # repeated searches for mary spicuzza
-#Deny From 74.38.190.180 # rhonda king
-#Deny From 74.38.          # rhonda king (frontiernet)
-#Deny From 72.1.150.252   # ms @ home
-#Deny From 76.87.47.110   # ms from work
-#Deny From 65.55.232.*    # msn bot
-#Deny From 65.55.109.*    # msn bot
-#Deny From 65.55.110.*    # msn bot
-Allow From all
+RewriteCond %{HTTP_HOST} ^www\.zanshin\.net$
+RewriteRule (.*) http://zanshin.net/$1 [R=Permanent]
 
 # ErrorDocument
-ErrorDocument 404 /404
-
-<IfModule mod_rewrite.c>
-# 20110808 - reviewed and kept
-# block Microsoft referer spam 2010-01-05 from http://www.the-art-of-web.com/system/logs-bing/
-RewriteCond %{REMOTE_ADDR} ^65\.55\.(104|107|109|110|165|232)
-RewriteCond %{HTTP_REFERER} (www\.bing|search\.live)\.com
-RewriteCond %{HTTP_REFERER} !\&
-RewriteRule .* - [F]
-</IfModule>
+ErrorDocument 401 /401/index.html
+ErrorDocument 403 /403/index.html
+ErrorDocument 404 /404/index.html
+ErrorDocument 500 /500/index.html
