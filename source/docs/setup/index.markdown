@@ -27,6 +27,13 @@ Next, if you're using Github pages for users or organizations, create a source b
     git push origin source
 ```
 
+The `source` branch is created to have somewhere to store the source
+of your site. GitHub expects the generated site to be pushed to the
+`master` branch of your GitHub repository so that branch needs to stay
+clean. As we will see later, in the [Deploying Octopress](/docs/deploying/)
+section, a "link" to the `master` branch will be created in the
+`_deploy` directory in which the generated site will end up.
+
 Next, setup an [RVM](http://beginrescueend.com/) and install dependencies.
 
 ``` sh
