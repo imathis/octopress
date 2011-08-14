@@ -14,13 +14,11 @@ One of the tools is [Siege](http://www.joedog.org/index/siege-home "Siege"), a "
 
 This site, [zanshin.net](http://zanshin.net "zanshin.net") is now statically served. My cello blog, [Solfège](http://cello.zanshin.net "Solfège"), is based on WordPress and is therefore dynamically served. Both sites are hosted on the same hardware at [Bluehost](http://bluehost.com "Bluehost")
 
-Installing Siege was simple with [brew](http://mxcl.github.com/homebrew/ "Homebrew"), just type:
-{% codeblock %}
+Installing Siege was simple with [brew](http://mxcl.github.com/homebrew/ "Homebrew"), just type:{% codeblock %}
 $ brew install siege
 {% endcodeblock %}
 
-With Siege installed I first ran a test against the static site. The test simulates twenty (20) concurrent connections for thirty (30 seconds). Here are the results:
-{% codeblock %}
+With Siege installed I first ran a test against the static site. The test simulates twenty (20) concurrent connections for thirty (30 seconds). Here are the results:	{% codeblock %}
 ○ siege -c20 zanshin.net -b -t30s
 ** SIEGE 2.70
 ** Preparing 20 concurrent users for battle.
@@ -50,8 +48,7 @@ Shortest transaction:	        0.53
 
 612 hits in 29.76 seconds, 100% of which were available.
 
-Now here are the results against the dynamically served site:
-{% codeblock %}
+Now here are the results against the dynamically served site:{% codeblock %}
 ○ siege -c20 cello.zanshin.net -b -t30s
 ** SIEGE 2.70
 ** Preparing 20 concurrent users for battle.
@@ -83,7 +80,7 @@ Successful transactions:          98
 Failed transactions:	         164
 Longest transaction:	        9.93
 Shortest transaction:	        0.26
-{% endcode block %}
+{% endcodeblock %}
 
 Only 98 hits in 29.09 seconds, and only 37.40% availability. For those 98 successful hits there were 164 failed hits. It is worth noting that the number of bytes returned for the static site is 50,339 per transaction, whereas for the dynamic site is it only 30,498 -- when the access was successful.
 
