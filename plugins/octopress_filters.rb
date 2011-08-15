@@ -4,9 +4,9 @@ require './plugins/pygments_code'
 module OctopressFilters
   include HighlightCode
   # Used on the blog index to split posts on the <!--more--> marker
-  def excerpt(input)
-    if input.index(/<!--\s*more\s*-->/i)
-      input.split(/<!--\s*more\s*-->/i)[0]
+  def excerpt(input, url, text)
+      if input.include? "<!--more-->"
+          input.split("<!--more-->").first + "<footer><a rel='full-article' href='#{url}'>#{text}</a></footer>"
     else
       input
     end
