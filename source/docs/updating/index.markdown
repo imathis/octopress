@@ -68,4 +68,4 @@ If you made changes elsewhere, you can copy them back them from `/source.old` or
 Yep. I figured this is the simplest thing that could possibly work. I don't like the idea of having blog files change if someone wants to update their plugins,
 and I haven't yet figured out a better way. If you have a better idea, [post an issue](https://github.com/imathis/octopress/issues) with your idea for improving this.
 
-See also [Blogging With Octopress &raquo;](/docs/blogging) and [Theming & Customization](/docs/theme)
+See also [Blogging With Octopress](/docs/blogging) and [Theming & Customization](/docs/theme)
