@@ -17,3 +17,13 @@ sidebar: false
     foo && bar
     module.exports = Tweets
 ```
+
+{% codeblock Append this to your .bashrc file. %}
+echo "User .bashrc..."
+for i in ~/.env/*.sh ; do
+if [ -r "$i" ]; then
+. $i
+fi
+done
+unset i
+{% endcodeblock %}
