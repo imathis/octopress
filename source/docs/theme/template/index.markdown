@@ -15,7 +15,7 @@ Shortly after the 2.0 release Octopress added the `source/_includes/custom` dire
         post/       # post metadata, sharing & comment partials
       _layouts/     # layouts for pages, posts & category archives
 
-<h2 id="landing_page">Landing Page vs Blog Index</h2>
+<h2 id="landing_page">Landing Page vs. Blog Index</h2>
 By default Octopress generates your blog's post index at your site's root directory.
 If you'd rather publish your blog index somewhere else like `blog/index.html` do this in your terminal.
 
