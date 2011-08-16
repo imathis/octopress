@@ -15,6 +15,25 @@ Shortly after the 2.0 release Octopress added the `source/_includes/custom` dire
         post/       # post metadata, sharing & comment partials
       _layouts/     # layouts for pages, posts & category archives
 
+<h2 id="landing_page">Landing Page vs Blog Index</h2>
+By default Octopress generates your blog's post index at your site's root directory.
+If you'd rather publish your blog index somewhere else like `blog/index.html` do this in your terminal.
+
+``` sh
+    mv source/index.html source/blog/index.html
+    rake new_page[index.html]
+```
+
+Next you'll want to update your `Rakefile` to be sure your new blog index is preserved when you [update Octopress](/docs/updating).
+
+``` ruby
+    blog_index_dir = 'source/blog'
+```
+
+Remember to update the main navigation for your site, since currently the blog link points to `/`. Skip down to the section on [changing navigation](#changing_navigation), add a 'home' link and update the 'blog' link to point to `/blog/`.
+
+Finally, `source/index.html` can become the landing page of your wildest dreams.
+
 ## Changing the &lt;HEAD&gt;
 
 If you want to add to the `<HEAD>`take a look at `/source/_includes/custom/head.html`.
@@ -24,7 +43,6 @@ If you want to add to the `<HEAD>`take a look at `/source/_includes/custom/head.
 {% endcodeblock %}
 
 Here you can easily change or remove the [Google Webfonts](http://google.com/webfonts), insert javascripts, etc.
-
 
 ### Changing the sidebar
 Octopress integrates with some [3rd party services](/docs/configuring/#third_party) like Twitter, Pinboard and Delicious which appear in the sidebar.
@@ -67,7 +85,7 @@ The header title and subtitle should be configured in the `_config.yml` If you w
 {% render_partial ../.themes/classic/source/_includes/custom/header.html raw %}
 {% endcodeblock %}
 
-### Changing the Navigation
+<h3 id="changing_navigation">Changing the Navigation</h3>
 
 To change or add links to the main navigation, edit `/source/_includes/custom/navigation.html` which looks like this:
 
