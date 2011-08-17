@@ -41,4 +41,4 @@ for your code snippets, and then finish your code block with three more back tic
 ```
 
 This is a nice, lightweight way to add a highlighted code snippet. For features like titles and links you'll want to look
-at the [codeblock](/docs/plugins/code-block/) or [include_code](/docs/plugins/include-code/) liquid tags.
+at the [codeblock](/docs/plugins/codeblock/) or [include_code](/docs/plugins/include-code/) liquid tags.
