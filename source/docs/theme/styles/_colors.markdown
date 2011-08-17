@@ -22,7 +22,7 @@ $sidebar-link-color: saturate(#526f9a, 10);
 $sidebar-link-color-hover: darken(#7ab662, 9);
 {% endcodeblock %}
 
-The custom colors file has some commented out colors you can The theme file is broken up into sections to make it easier to read through. Here's a look at the navigation section of `sass/base/_theme.scss`.
+The custom colors file has some commented out colors you can use. The theme file is broken up into sections to make it easier to read through. Here's a look at the navigation section of `sass/base/_theme.scss`.
 
 {% codeblock Navigation (sass/base/_theme.scss) https://github.com/imathis/octopress/tree/master/.themes/classic/sass/base/_theme.scss View on Github %}
 /* Navigation */
