@@ -23,17 +23,17 @@ Here's how: just pick a starting key, say the 4-key, and a pattern, angle down t
 The problem as we'll see in a moment is that entering this pattern on a touch keyboard is much more involved than on a traditional tactile keyboard.
 ## Apple's Touch Keyboards
 The iPad (and iPod Touch, and I assume iPhone) has three keyboard layouts; what I will call the ABC-layout, the 123-layout, and the #+=-layout.
-<p style="text-align: center;"><a href="http://zanshin.net/wp-content/uploads/2011/01/ipad_default.png"><img class="aligncenter size-full wp-image-2421" title="ipad_default" src="http://zanshin.net/wp-content/uploads/2011/01/ipad_default.png" alt="" width="461" height="614" /></a></p>
+<p style="text-align: center;"><a href="http://zanshin.net/images/ipad_default.png"><img class="aligncenter size-full wp-image-2421" title="ipad_default" src="http://zanshin.net/images/ipad_default.png" alt="" width="461" height="614" /></a></p>
 <p style="text-align: center;"><em>ABC-layout</em></p>
 <p style="text-align: center;"><em>
 </em></p>
 <p style="text-align: center;"></p>
-<p style="text-align: center;"><a href="http://zanshin.net/wp-content/uploads/2011/01/ipad_123.png"><img class="aligncenter size-full wp-image-2422" title="ipad_123" src="http://zanshin.net/wp-content/uploads/2011/01/ipad_123.png" alt="" width="461" height="614" /></a></p>
+<p style="text-align: center;"><a href="http://zanshin.net/images/ipad_123.png"><img class="aligncenter size-full wp-image-2422" title="ipad_123" src="http://zanshin.net/images/ipad_123.png" alt="" width="461" height="614" /></a></p>
 <p style="text-align: center;"><em>123-layout</em></p>
 <p style="text-align: center;"><em>
 </em></p>
 <p style="text-align: center;"></p>
-<p style="text-align: center;"><a href="http://zanshin.net/wp-content/uploads/2011/01/ipad_+.png"><img class="aligncenter size-full wp-image-2420" title="ipad_#+=" src="http://zanshin.net/wp-content/uploads/2011/01/ipad_+.png" alt="" width="461" height="614" /></a></p>
+<p style="text-align: center;"><a href="http://zanshin.net/images/ipad_+.png"><img class="aligncenter size-full wp-image-2420" title="ipad_#+=" src="http://zanshin.net/images/ipad_+.png" alt="" width="461" height="614" /></a></p>
 <p style="text-align: center;"><em>#+=-layout</em></p>
 <p style="text-align: center;"><em>
 </em></p>
@@ -43,22 +43,22 @@ The iPad (and iPod Touch, and I assume iPhone) has three keyboard layouts; what 
 ## Android Default and Swype Keyboard Layouts
 ### Android Default
 <p style="text-align: left;">The default Android touch keyboard takes a slightly different approach to things, putting two characters on each key and allowing you to "long press" a key to get the secondary symbol. There are three layouts: the ABC-layout, the Symbol-1-layout and the Symbol-2-layout.</p>
-<p style="text-align: center;"><a href="http://zanshin.net/wp-content/uploads/2011/01/android_default_abc_lower.png"><img class="aligncenter size-full wp-image-2430" title="android_default_abc_lower" src="http://zanshin.net/wp-content/uploads/2011/01/android_default_abc_lower.png" alt="" width="480" height="800" /></a></p>
+<p style="text-align: center;"><a href="http://zanshin.net/images/android_default_abc_lower.png"><img class="aligncenter size-full wp-image-2430" title="android_default_abc_lower" src="http://zanshin.net/images/android_default_abc_lower.png" alt="" width="480" height="800" /></a></p>
 <p style="text-align: center;"><em>ABC-layout (lowercase)</em></p>
 <p style="text-align: center;"><em>
 </em></p>
 <p style="text-align: center;"></p>
-<p style="text-align: center;"><a href="http://zanshin.net/wp-content/uploads/2011/01/android_default_abc_upper.png"><img class="aligncenter size-full wp-image-2431" title="android_default_abc_upper" src="http://zanshin.net/wp-content/uploads/2011/01/android_default_abc_upper.png" alt="" width="480" height="800" /></a></p>
+<p style="text-align: center;"><a href="http://zanshin.net/images/android_default_abc_upper.png"><img class="aligncenter size-full wp-image-2431" title="android_default_abc_upper" src="http://zanshin.net/images/android_default_abc_upper.png" alt="" width="480" height="800" /></a></p>
 <p style="text-align: center;"><em>ABC-layout (uppercase)</em></p>
 <p style="text-align: center;"><em>
 </em></p>
 <p style="text-align: center;"></p>
-<p style="text-align: center;"><a href="http://zanshin.net/wp-content/uploads/2011/01/android_default_12_1.png"><img class="aligncenter size-full wp-image-2428" title="android_default_12#_1" src="http://zanshin.net/wp-content/uploads/2011/01/android_default_12_1.png" alt="" width="480" height="800" /></a></p>
+<p style="text-align: center;"><a href="http://zanshin.net/images/android_default_12_1.png"><img class="aligncenter size-full wp-image-2428" title="android_default_12#_1" src="http://zanshin.net/images/android_default_12_1.png" alt="" width="480" height="800" /></a></p>
 <p style="text-align: center;"><em>Symbol-1-layout</em></p>
 <p style="text-align: center;"><em>
 </em></p>
 <p style="text-align: center;"></p>
-<p style="text-align: center;"><a href="http://zanshin.net/wp-content/uploads/2011/01/android_default_12_2.png"><img class="aligncenter size-full wp-image-2429" title="android_default_12#_2" src="http://zanshin.net/wp-content/uploads/2011/01/android_default_12_2.png" alt="" width="480" height="800" /></a></p>
+<p style="text-align: center;"><a href="http://zanshin.net/images/android_default_12_2.png"><img class="aligncenter size-full wp-image-2429" title="android_default_12#_2" src="http://zanshin.net/images/android_default_12_2.png" alt="" width="480" height="800" /></a></p>
 <p style="text-align: center;"><em>Symbol-2-layout</em></p>
 <p style="text-align: center;"><em>
 </em></p>
@@ -68,22 +68,22 @@ The iPad (and iPod Touch, and I assume iPhone) has three keyboard layouts; what 
 ### Swype
 <p style="text-align: left;">There is a very intriguing alternative keyboard/input system for Android called <a title="Swype" href="http://swypeinc.com/" target="_blank">Swype</a>. With Swype you "draw" each word by sliding your finger from character to character. When you lift your finger, Swype starts a new word. I find this input method to be the fastest for entering text and really wish there was a similar option for Apple's iOS platforms.</p>
 <p style="text-align: left;">There are four Swype layouts: ABC-lowercase, ABC-uppercase, Symbol-lowercase, and Symbol-uppercase.</p>
-<p style="text-align: center;"><a href="http://zanshin.net/wp-content/uploads/2011/01/android_swype_abc_lower.png"><img class="aligncenter size-full wp-image-2432" title="android_swype_abc_lower" src="http://zanshin.net/wp-content/uploads/2011/01/android_swype_abc_lower.png" alt="" width="480" height="800" /></a></p>
+<p style="text-align: center;"><a href="http://zanshin.net/images/android_swype_abc_lower.png"><img class="aligncenter size-full wp-image-2432" title="android_swype_abc_lower" src="http://zanshin.net/images/android_swype_abc_lower.png" alt="" width="480" height="800" /></a></p>
 <p style="text-align: center;"><em>Swype ABC-lowercase</em></p>
 <p style="text-align: center;"><em>
 </em></p>
 <p style="text-align: center;"></p>
-<p style="text-align: center;"><a href="http://zanshin.net/wp-content/uploads/2011/01/android_swype_abc_upper.png"><img class="aligncenter size-full wp-image-2433" title="android_swype_abc_upper" src="http://zanshin.net/wp-content/uploads/2011/01/android_swype_abc_upper.png" alt="" width="480" height="800" /></a></p>
+<p style="text-align: center;"><a href="http://zanshin.net/images/android_swype_abc_upper.png"><img class="aligncenter size-full wp-image-2433" title="android_swype_abc_upper" src="http://zanshin.net/images/android_swype_abc_upper.png" alt="" width="480" height="800" /></a></p>
 <p style="text-align: center;"><em>Swype ABC-uppercase</em></p>
 <p style="text-align: center;"><em>
 </em></p>
 <p style="text-align: center;"></p>
-<p style="text-align: center;"><a href="http://zanshin.net/wp-content/uploads/2011/01/android_swype_sym_lower.png"><img class="aligncenter size-full wp-image-2434" title="android_swype_sym_lower" src="http://zanshin.net/wp-content/uploads/2011/01/android_swype_sym_lower.png" alt="" width="480" height="800" /></a></p>
+<p style="text-align: center;"><a href="http://zanshin.net/images/android_swype_sym_lower.png"><img class="aligncenter size-full wp-image-2434" title="android_swype_sym_lower" src="http://zanshin.net/images/android_swype_sym_lower.png" alt="" width="480" height="800" /></a></p>
 <p style="text-align: center;"><em>Swype Symbol-lowercase</em></p>
 <p style="text-align: center;"><em>
 </em></p>
 <p style="text-align: center;"></p>
-<p style="text-align: center;"><a href="http://zanshin.net/wp-content/uploads/2011/01/android_swype_sym_upper.png"><img class="aligncenter size-full wp-image-2435" title="android_swype_sym_upper" src="http://zanshin.net/wp-content/uploads/2011/01/android_swype_sym_upper.png" alt="" width="480" height="800" /></a></p>
+<p style="text-align: center;"><a href="http://zanshin.net/images/android_swype_sym_upper.png"><img class="aligncenter size-full wp-image-2435" title="android_swype_sym_upper" src="http://zanshin.net/images/android_swype_sym_upper.png" alt="" width="480" height="800" /></a></p>
 <p style="text-align: center;"><em>Swype Symbol-uppercase</em></p>
 <p style="text-align: center;"><em>
 </em></p>

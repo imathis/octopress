@@ -15,7 +15,7 @@ In order to synchronize your Apple AddressBook using Dropbox you need to have <a
 Get a copy of Dropbox if you haven't already. It's an amazingly useful tool that gives you 2 GB of storage on the "cloud" for free. With clients for Linux, Windows, and Mac operating systems, I use it every day. The installation and setup is well explained on the Dropbox site so I won't cover that here.
 # Second Step
 With Dropbox installed on each machine you wish to sync you need to prepare and backup your AddressBook. To prepare my Address Book I combined all my addresses into a single address book. This combined address book is the one I pushed to Dropbox. But before that I made backups of all my address books. Under File | Export you'll find the <strong>Address Book Archive...</strong> option.
-<p style="text-align: center;"><img class="aligncenter size-full wp-image-2014" title="addressBookBackup" src="http://zanshin.net/wp-content/uploads/2009/10/addressBookBackup.jpg" alt="addressBookBackup" width="491" height="231" /></p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-2014" title="addressBookBackup" src="http://zanshin.net/images/addressBookBackup.jpg" alt="addressBookBackup" width="491" height="231" /></p>
 
 # Third Step
 Once your backups are completed, you are ready to move the combined Address Book to Dropbox. To do this you will use the <strong>Terminal</strong> application located in the <strong>Applications | Utilities</strong> folder. Make sure that you have quit Address Book before doing these commands. Also, these commands assume your Dropbox is located in your home folder. If you placed it elsewhere, you'll have to adjust the Dropbox path accordingly.

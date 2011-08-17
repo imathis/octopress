@@ -8,7 +8,7 @@ link: false
 ---
 Yesterday evening, as I was waiting for carry out from the Chinese dive next to campus I tweeted this question:
 
-<a href="http://zanshin.net/wp-content/uploads/2010/08/etiquette.png"><img class="aligncenter size-full wp-image-2398" title="etiquette" src="http://zanshin.net/wp-content/uploads/2010/08/etiquette.png" alt="" width="601" height="241" /></a>
+<a href="http://zanshin.net/images/etiquette.png"><img class="aligncenter size-full wp-image-2398" title="etiquette" src="http://zanshin.net/images/etiquette.png" alt="" width="601" height="241" /></a>
 
 The majority of responses indicated that people tip for carry out at those establishments where they would tip for dine in service, and they do not tip at places were they wouldn't after eating there.
 

@@ -75,7 +75,7 @@ This configuration is saved in my home directory as <strong>.synergy.conf</stron
 
 While you could manually start the server each time you wanted to use Synergy, a better solution is to have it started automatically each time the computer is restarted or booted. Using <a title="Lingon from Sourceforge" href="http://sourceforge.net/projects/lingon/files/" target="_blank">Lingon</a> I was able to create a launchd plist for Synergy that starts the server component automatically. My net.sourceforge.synergy2.plist looks like this:
 
-<img class="aligncenter size-full wp-image-2197" title="synergy2" src="http://zanshin.net/wp-content/uploads/2009/12/synergy2.png" alt="synergy2" width="554" height="401" />Once this file is created, Synergy will start automatically every time the machine is booted. This creates the server necessary for Synergy to work.
+<img class="aligncenter size-full wp-image-2197" title="synergy2" src="http://zanshin.net/images/synergy2.png" alt="synergy2" width="554" height="401" />Once this file is created, Synergy will start automatically every time the machine is booted. This creates the server necessary for Synergy to work.
 
 On each client machine I added a function to my .bashrc file to create a secure shell connection to the machine with the Synergy server, in my case called Palantir. The function looks like this:
 {% codeblock %}function pssh() { ssh -L 24800:localhost:24800 userid@palantir.example.com }{% endcodeblock %}

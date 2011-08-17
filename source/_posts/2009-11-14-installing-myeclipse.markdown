@@ -18,29 +18,29 @@ Re-running the installer a second time I changed the default locations to my App
 
 Here's how I did it.
 ## Step 1: Start the MyEclipse installer from the download
-<img class="aligncenter size-full wp-image-2177" title="myEclipseWelcome" src="http://zanshin.net/wp-content/uploads/2009/11/myEclipseWelcome.png" alt="myEclipseWelcome" width="525" height="389" />
+<img class="aligncenter size-full wp-image-2177" title="myEclipseWelcome" src="http://zanshin.net/images/myEclipseWelcome.png" alt="myEclipseWelcome" width="525" height="389" />
 
 Click on "Next" to start the installer.
 ## Step 2: Accept the License Agreements
-<img class="aligncenter size-full wp-image-2178" title="myEclipseAccept" src="http://zanshin.net/wp-content/uploads/2009/11/myEclipseAccept.png" alt="myEclipseAccept" width="525" height="465" />
+<img class="aligncenter size-full wp-image-2178" title="myEclipseAccept" src="http://zanshin.net/images/myEclipseAccept.png" alt="myEclipseAccept" width="525" height="465" />
 
 After reviewing and accepting the license agreements, click "Next" to continue.
 ## Step 3: Change the Default Locations
-<img class="aligncenter size-full wp-image-2179" title="myEclipseDefaultLocations" src="http://zanshin.net/wp-content/uploads/2009/11/myEclipseDefaultLocations.png" alt="myEclipseDefaultLocations" width="525" height="465" />
+<img class="aligncenter size-full wp-image-2179" title="myEclipseDefaultLocations" src="http://zanshin.net/images/myEclipseDefaultLocations.png" alt="myEclipseDefaultLocations" width="525" height="465" />
 
 I chose not to accept the default "Install" and "Common software" locations. Click the "Configure" button and enter in the locations you want. In my case I entered <strong>/Users/mark/Applications/Genuitec</strong>.
 
-<img class="aligncenter size-full wp-image-2180" title="myEclipseNewLocations" src="http://zanshin.net/wp-content/uploads/2009/11/myEclipseNewLocations.png" alt="myEclipseNewLocations" width="525" height="465" />
+<img class="aligncenter size-full wp-image-2180" title="myEclipseNewLocations" src="http://zanshin.net/images/myEclipseNewLocations.png" alt="myEclipseNewLocations" width="525" height="465" />
 
 After setting the locations, click "Next to continue.
 ## Step 4: Install
-<img class="aligncenter size-full wp-image-2181" title="myEclipseInstall" src="http://zanshin.net/wp-content/uploads/2009/11/myEclipseInstall.png" alt="myEclipseInstall" width="525" height="465" />
+<img class="aligncenter size-full wp-image-2181" title="myEclipseInstall" src="http://zanshin.net/images/myEclipseInstall.png" alt="myEclipseInstall" width="525" height="465" />
 
 With the locations set to your preferences, click "Install" to complete the process.
 ## Step 5: Dismiss the Application's First Run
 Once the install is complete, MyEclipse will automatically start. Dismiss the "Workspace Launcher" dialog so that you can finish moving installed files where you want them.
 
-<img class="aligncenter size-full wp-image-2182" title="myEclipseWorkspace" src="http://zanshin.net/wp-content/uploads/2009/11/myEclipseWorkspace.png" alt="myEclipseWorkspace" width="587" height="244" />
+<img class="aligncenter size-full wp-image-2182" title="myEclipseWorkspace" src="http://zanshin.net/images/myEclipseWorkspace.png" alt="myEclipseWorkspace" width="587" height="244" />
 
 Click "Cancel" to dismiss the launcher.
 ## Step 6: Move the "MyEclipse" directory

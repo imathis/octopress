@@ -32,7 +32,7 @@ Macfusion is an open source SSHFS mounting application for Mac OS X.
 ### Setting up an SSHFS file system
 Once Macfusion is installed, start the application and click on the plus icon in the bottom left of the main window and choose SSHFS.
 
-<img class="aligncenter size-full wp-image-2161" title="Macfusion_sshfs" src="http://zanshin.net/wp-content/uploads/2009/11/Macfusion_sshfs.png" alt="Macfusion_sshfs" width="513" height="202" />
+<img class="aligncenter size-full wp-image-2161" title="Macfusion_sshfs" src="http://zanshin.net/images/Macfusion_sshfs.png" alt="Macfusion_sshfs" width="513" height="202" />
 ### Set SSHFS mount parameters
 Under the <strong>SSH</strong> tab:
 <ul>
@@ -41,14 +41,14 @@ Under the <strong>SSH</strong> tab:
 	<li><strong>Password:</strong> Your SSH password. (At present I don't know how to enable this via SSH Keys.)</li>
 	<li><strong>Path:</strong> This can be left blank.</li>
 </ul>
-<img class="aligncenter size-full wp-image-2162" title="Macfusion_ssh_tab" src="http://zanshin.net/wp-content/uploads/2009/11/Macfusion_ssh_tab.png" alt="Macfusion_ssh_tab" width="499" height="321" />
+<img class="aligncenter size-full wp-image-2162" title="Macfusion_ssh_tab" src="http://zanshin.net/images/Macfusion_ssh_tab.png" alt="Macfusion_ssh_tab" width="499" height="321" />
 
 Under the <strong>SSH Advanced</strong> tab:
 <ul>
 	<li><strong>Port:</strong> The default SSH port is 22 unless the server uses a different one.</li>
 	<li><strong>Follow Symbolic Links:</strong> Leave this checked</li>
 </ul>
-<img class="aligncenter size-full wp-image-2163" title="Macfusion_ssh_advanced_tab" src="http://zanshin.net/wp-content/uploads/2009/11/Macfusion_ssh_advanced_tab.png" alt="Macfusion_ssh_advanced_tab" width="494" height="326" />
+<img class="aligncenter size-full wp-image-2163" title="Macfusion_ssh_advanced_tab" src="http://zanshin.net/images/Macfusion_ssh_advanced_tab.png" alt="Macfusion_ssh_advanced_tab" width="494" height="326" />
 
 Under the <strong>Macfusion</strong> tab:
 <ul>
@@ -56,16 +56,16 @@ Under the <strong>Macfusion</strong> tab:
 	<li><strong>Ignore Apple Double Files:</strong> You must uncheck this if you plan to <em>open/edit/save</em> files on the mounted volume. While allowing for remote editing of files is a powerful feature there is a downside. Mac OS X will place .DS_Store and ._* (Apple double) files on the server. OS X utilizes these hidden files for enhanced filesystem features and extended attributes in non-OS X filesystems. Since they start with a dot (.) these files should be invisible on the remote system. You may leave this option checked if you only plan to <em>copy/move/delete</em> files (it will also increase speed).</li>
 	<li><strong>Enable Negative VNode Cache:</strong> This is an optimization to increase speed and should generally be left checked, <strong>unless</strong> files can appear on the mounted volume from the server side of the connection. For example, if multiple users are using your mounted disk space leave this unchecked.</li>
 </ul>
-<img class="aligncenter size-full wp-image-2164" title="Macfusion_macfusion_tab" src="http://zanshin.net/wp-content/uploads/2009/11/Macfusion_macfusion_tab.png" alt="Macfusion_macfusion_tab" width="494" height="391" />
+<img class="aligncenter size-full wp-image-2164" title="Macfusion_macfusion_tab" src="http://zanshin.net/images/Macfusion_macfusion_tab.png" alt="Macfusion_macfusion_tab" width="494" height="391" />
 ## Mounting the Remote filesystem
 You are now ready to mount the SSHFS on your desktop. Click on the mount button and if the SSH settings are correct you should have a green disk icon mounted on the desktop. (Note, you may need to visit the Finder preferences to make sure that you are allowing *Connected Servers* to be displayed.)  You should now be able to access the remote files as if they were on an external disk attached to your system. You can copy, move, rename, and delete files. Remember, that in order to edit files you must <strong>uncheck </strong>the <em>Ignore Apple Double Files</em> option. This can only be done with the remote filesystem is unmounted.
 ### sshnodelay.so Error
 If the mount operation fails, click the gear icon in the Macfusion main window and select the Log option (or use Cmd-L with Macfusion as the active application). If you see the following error message:
 {% codeblock %}dyld: could not load inserted library: /Applications/Macfusion.app/Contents/Plugins/sshfs.mfplugin/Contents/Resources/sshnodelay.so{% endcodeblock %}
-<p style="text-align: center;"><img class="aligncenter size-full wp-image-2165" title="Macfusion_log_viewer" src="http://zanshin.net/wp-content/uploads/2009/11/Macfusion_log_viewer.png" alt="Macfusion_log_viewer" width="452" height="274" /></p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-2165" title="Macfusion_log_viewer" src="http://zanshin.net/images/Macfusion_log_viewer.png" alt="Macfusion_log_viewer" width="452" height="274" /></p>
 
 Then you need to rename or remove that library. Navigate to the <strong>/Applications/Macfusion.app/Contents/Plugins/sshfs.mfplugin/Contents/Resources</strong> directory and rename (e.g., sshnodelay.orig) or remove the sshnodelay.so file.
-<p style="text-align: center;"><img class="aligncenter size-full wp-image-2166" title="Macfusion_rename_sshnodelay" src="http://zanshin.net/wp-content/uploads/2009/11/Macfusion_rename_sshnodelay.png" alt="Macfusion_rename_sshnodelay" width="577" height="136" /></p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-2166" title="Macfusion_rename_sshnodelay" src="http://zanshin.net/images/Macfusion_rename_sshnodelay.png" alt="Macfusion_rename_sshnodelay" width="577" height="136" /></p>
 
 ## Update SSHFS
 Now that you have a working connection it is time to verify the version of sshfs included with Macfusion, and update it if necessary.   Using the Terminal, navigate to:

@@ -9,7 +9,7 @@ link: false
 1. So, you got a new phone. What is it again?
 
 An HTC Droid Incredible through Verizon.
-<p style="text-align: center;"><a href="http://zanshin.net/wp-content/uploads/2010/06/htc-incredible.jpg"><img class="aligncenter size-full wp-image-2364" title="htc-incredible" src="http://zanshin.net/wp-content/uploads/2010/06/htc-incredible.jpg" alt="" width="540" height="491" /></a></p>
+<p style="text-align: center;"><a href="http://zanshin.net/images/htc-incredible.jpg"><img class="aligncenter size-full wp-image-2364" title="htc-incredible" src="http://zanshin.net/images/htc-incredible.jpg" alt="" width="540" height="491" /></a></p>
 <p style="text-align: left;">2. Looks pretty cool. What operating system does it run?</p>
 <p style="text-align: left;">Android 2.1 ("Eclair") plus HTC Sense. Android 2.1  is the operating system, and Sense is an extra user interface layer added by HTC. The native Android UI is a bit inconsistent across the OS and Sense cleans that up a bit.</p>
 <p style="text-align: left;">Rumor has it that I'll get the FroYo, Android 2.2 update later this year.</p>

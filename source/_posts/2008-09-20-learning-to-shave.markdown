@@ -16,7 +16,7 @@ One day last spring I read an article online about <a title="Learn How to Shave 
 
 Of course to shave the way my father did would require getting a safety razor handle, and some safety razor blades.  You can order the blades online, and you can order a handle online too.  Quite by happenstance, on our first full day in Winnenden Germany this year, we walked past a store called "Chris Messerschmiede."  A store selling all kinds of knives, blades, and, you guessed it, razor handles.  After going inside and examing several of the handles he had for sale, I settled on the one pictured below.
 
-<a href="http://zanshin.net/wp-content/uploads/2008/09/razor-001.jpg"><img class="alignnone size-full wp-image-1597" title="razor" src="http://zanshin.net/wp-content/uploads/2008/09/razor-001.jpg" alt="" width="500" height="666" /></a>
+<a href="http://zanshin.net/images/razor-001.jpg"><img class="alignnone size-full wp-image-1597" title="razor" src="http://zanshin.net/images/razor-001.jpg" alt="" width="500" height="666" /></a>
 
 It is surprisingly heavy, and has a very good feel in my hand.  The butt end of the handle unscews to allow removal of the blade keeper.  When the knob is fully tightened the keeper slightly bends the blade, bringing the cutting edge into perfect alignment with the edge of the guide.
 

@@ -9,7 +9,7 @@ link: false
 While the Apple Mac OS X graphical user interface is beautiful and very easy to use, having a powerful Unix command line at my disposal gives OS X something extra. Out of the box Terminal (Applications -&gt; Utilities -&gt; Terminal) is ready to go, but I like to customize all parts of my computer, so here is what I've done to Terminal.
 ## Terminal Style
 I use a colored theme to provide high contrast in my Terminal window. This improves readability tremendously. The theme I like currently is called <a title="GiovanniStyle" href="http://tempe.st/2009/01/giovannistyle-high-readability-for-your-terminalapp/" target="_blank">GiovanniStyle</a>. It uses light yellow on a dark blue background. While the author suggests Consolas for the font I am using <a title="Anonymous Pro font" href="http://www.ms-studio.com/FontSales/anonymouspro.html" target="_blank">Anonymous Pro</a>. Consolas comes with Microsoft Office which I don't have installed. There is a free font called Inconsolas that mimics the Microsoft offering, but I still like the Anonymous appearance better.
-<p style="text-align: center;"><img class="aligncenter size-full wp-image-2128" title="terminal" src="http://zanshin.net/wp-content/uploads/2009/10/terminal.png" alt="terminal" width="537" height="397" /></p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-2128" title="terminal" src="http://zanshin.net/images/terminal.png" alt="terminal" width="537" height="397" /></p>
 
 ## Manpages Color
 The only drawback to GiovanniStyle is view manpages. By default some of the colors used in man's output is not contrasty enough to be legible. Consequently I added a section to my .bash_profile to compensate. Here are the color designations I'm using for manpages:
@@ -23,12 +23,12 @@ export LESS_TERMCAP_ue=$'\E[0m'          # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'      # begin underline{% endcodeblock %}
 And here's the output:
 
-<img class="aligncenter size-full wp-image-2137" title="manpages" src="http://zanshin.net/wp-content/uploads/2009/10/manpages.png" alt="manpages" width="596" height="441" />
+<img class="aligncenter size-full wp-image-2137" title="manpages" src="http://zanshin.net/images/manpages.png" alt="manpages" width="596" height="441" />
 ## My Prompt
 Speaking of bash, I've modified my prompt, to make it standout more and to provide the information about who I'm logged in as and what my current working directory is, in a manner pleasing to me. Here's the prompt:
 {% codeblock %}PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\H \[\e[33m\]\w\[\e[0m\]\n$\[\033]0;\u@\h:\w\007\] '{% endcodeblock %}
 And here's what it looks like:
-<p style="text-align: center;"><img class="aligncenter size-full wp-image-2142" title="prompt" src="http://zanshin.net/wp-content/uploads/2009/10/prompt.png" alt="prompt" width="599" height="128" /></p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-2142" title="prompt" src="http://zanshin.net/images/prompt.png" alt="prompt" width="599" height="128" /></p>
 
 ## .bash_profile and .bashrc
 I do not pretend to understand (yet) all the ins and outs of what goes in a .bash_profile and what goes in a .bashrc file. With that disclaimer in mind, I know the .bash_profile is the personal initialization file, which is executed for login shells, and the .bashrc file is the individual per-interactive-shell startup file. In my case I tend to have PATH additions and exports in .bash_profile, while keeping aliases and functions in my .bashrc.
