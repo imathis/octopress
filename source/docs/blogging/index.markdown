@@ -32,7 +32,7 @@ The default file extension for new posts is `markdown` but you can configure tha
 ```
 
 The filename will determine your url. With the default [permalink settings](https://github.com/mojombo/jekyll/wiki/Permalinks) the url would be something like
-`http://site.com/blog/20011/07/03/zombie-ninjas-attack-a-survivors-retrospective/index.html`.
+`http://site.com/blog/2011/07/03/zombie-ninjas-attack-a-survivors-retrospective/index.html`.
 
 Open a post in a text editor and you'll see a block of [yaml front matter](https://github.com/mojombo/jekyll/wiki/yaml-front-matter)
 which tells Jekyll how to processes posts and pages.
