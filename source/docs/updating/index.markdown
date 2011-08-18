@@ -17,7 +17,7 @@ footer: false
     rake update_style             # update the template's style
 ```
 
-This will update your plugins, theme, gemfiles, rakefile and configs, preserving your changes as explained in [Theming &amp; Customization](http://octopress.dev/docs/theme).
+This will update your plugins, theme, gemfiles, rakefile and configs, preserving your changes as explained in [Theming &amp; Customization](/docs/theme).
 Read on for an explanation of how all this works.
 
 ### How Updating Works
