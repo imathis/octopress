@@ -1,1 +1,1 @@
-rvm 1.9.2
+rvm ruby-1.8.7-p302@octopress --create
