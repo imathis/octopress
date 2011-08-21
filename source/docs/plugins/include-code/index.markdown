@@ -22,7 +22,7 @@ This includes a file from `source/downloads/code/test.js`.
 
 {% include_code test.js %}
 
-#### Example 2 (with optional title)
+#### Example 2
 By default the `<figcaption>` will be the filename, but you can add a title before the filepath if you like.
 
     {{ "{% include_code Add to_fraction for floats ruby/test.rb" }} %}
@@ -32,6 +32,7 @@ This includes a file from `source/downloads/code/ruby/test.rb`.
 {% include_code Add to_fraction for floats ruby/test.rb %}
 
 #### Example 3 (Force Highlighting)
+
 Pygments supports many languages, but doesn't recognize some file extensions.
 Add `lang:your_language` to force highlighting if the filename doesn't work.
 

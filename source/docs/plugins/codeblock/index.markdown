@@ -46,11 +46,10 @@ Including a file extension in the title enables highlighting
 puts "Awesome!" unless lame
 {% endcodeblock %}
 
-#### Example 4
+#### Example 4 (Force Highlighting)
 
-**Note:** Pygments supports many languages, but doesn't recognize some file extensions.
-Add `lang:your_language` to force a language for highlighting. Here's an example:
-
+Pygments supports many languages, but doesn't recognize some file extensions.
+Add `lang:your_language` to force highlighting if the filename doesn't work.
 
     {{ "{% codeblock Here's an example .rvmrc file. lang:ruby" }} %}
     rvm ruby-1.8.6 # ZOMG, seriously? We still use this version?
