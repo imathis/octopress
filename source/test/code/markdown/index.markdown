@@ -27,3 +27,7 @@ fi
 done
 unset i
 {% endcodeblock %}
+
+{% codeblock config.ru %}
+Bunch of ruby code
+{% endcodeblock %}
