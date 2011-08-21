@@ -1,5 +1,6 @@
 require "rubygems"
 require "bundler/setup"
+require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -64,7 +65,7 @@ task :new_post, :title do |t, args|
   mkdir_p "#{source_dir}/#{posts_dir}"
   args.with_defaults(:title => 'new-post')
   title = args.title
-  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.downcase.gsub(/&/,'and').gsub(/[,'":\?!\(\)\[\]]/,'').gsub(/[\W\.]/, '-').gsub(/-+$/,'')}.#{new_post_ext}"
+  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     system "mkdir -p #{source_dir}/#{posts_dir}/";
