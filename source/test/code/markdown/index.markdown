@@ -28,6 +28,6 @@ done
 unset i
 {% endcodeblock %}
 
-{% codeblock config.ru %}
+{% codeblock config lang:ruby %}
 Bunch of ruby code
 {% endcodeblock %}

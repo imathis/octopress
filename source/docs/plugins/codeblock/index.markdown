@@ -10,7 +10,7 @@ With this plugin you can write blocks of code directly in your posts and optiona
 
 #### Syntax
 
-    {{ "{% codeblock [title] [url] [link text]" }} %}
+    {{ "{% codeblock [title] [lang:language] [url] [link text]" }} %}
 
 #### Example 1
 
@@ -24,7 +24,20 @@ Awesome code snippet
 
 #### Example 2
 
-    # Including a file extension in the title enables highlighting
+You can also add syntax highlighting like this.
+
+    {% raw %}{% codeblock lang:objc %}
+    [rectangle setX: 10 y: 10 width: 20 height: 20];
+    {% endcodeblock %}{% endraw %}
+
+{% codeblock lang:objc %}
+[rectangle setX: 10 y: 10 width: 20 height: 20];
+{% endcodeblock %}
+
+#### Example 3
+
+Including a file extension in the title enables highlighting
+
     {{ "{% codeblock Time to be Awesome - awesome.rb" }} %}
     puts "Awesome!" unless lame
     {{ "{% endcodeblock" }} %}
@@ -33,14 +46,30 @@ Awesome code snippet
 puts "Awesome!" unless lame
 {% endcodeblock %}
 
-#### Example 3
+#### Example 4
 
-    # Add an optional URL to enable downloading or linking to source
-    {{ "{% codeblock Got pain? painreleif.sh http://example.com/painreleief.sh Download it!" }} %}
-    $ rm -rf ~/PAIN
+**Note:** Pygments supports many languages, but doesn't recognize some file extensions.
+Add `lang:your_language` to force a language for highlighting. Here's an example:
+
+
+    {{ "{% codeblock Here's an example .rvmrc file. lang:ruby" }} %}
+    rvm ruby-1.8.6 # ZOMG, seriously? We still use this version?
     {{ "{% endcodeblock" }} %}
 
-{% codeblock Javascript Array Syntax (array.js) https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array MDN Documentation %}
+{% codeblock Here's an example .rvmrc file. lang:ruby %}
+rvm ruby-1.8.6 # ZOMG, seriously? We still use this version?
+{% endcodeblock %}
+
+#### Example 5
+
+Add an optional URL to enable downloading or linking to source.
+
+    {% raw %}{% codeblock Javascript Array Syntax lang:js http://j.mp/pPUUmW MDN Documentation %}
+    var arr1 = new Array(arrayLength);
+    var arr2 = new Array(element0, element1, ..., elementN);
+    {% endcodeblock %}{% endraw %}
+
+{% codeblock Javascript Array Syntax lang:js http://j.mp/pPUUmW MDN Documentation %}
 var arr1 = new Array(arrayLength);
 var arr2 = new Array(element0, element1, ..., elementN);
 {% endcodeblock %}
