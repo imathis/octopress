@@ -3,7 +3,7 @@ layout: post
 title: "Converse"
 date: 2011-08-14 15:57
 comments: true
-categories: link
+categories: links
 link: true
 ---
 [Converse](http://getconverse.com/ "Converse") &rarr;  
