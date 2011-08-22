@@ -174,9 +174,15 @@ task :rsync do
   ok_failed system("rsync -avz --delete #{public_dir}/ #{ssh_user}:#{document_root}")
 end
 
-desc "Deploy website via s3cmd"
+desc "Deploy website via s3cmd to Amazon S3"
 task :s3 do
-  puts "## Deploying website via s3cmd"
+  puts "## Deploying website via s3cmd to Amazon S3"
+  ok_failed system("s3cmd sync --acl-public --reduced-redundancy public/* s3://#{s3_bucket}/")
+end
+
+desc "Deploy website via s3cmd to Amazon CloudFront"
+task :cloudfront do
+  puts "## Deploying website via s3cmd to Amazon CloudFront"
   ok_failed system("s3cmd sync --acl-public --reduced-redundancy --cf-invalidate public/* s3://#{s3_bucket}/")
 end
 
