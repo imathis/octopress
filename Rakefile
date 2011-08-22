@@ -7,9 +7,6 @@ ssh_user       = "user@domain.com"
 document_root  = "~/website.com/"
 deploy_default = "rsync"
 
-## -- S3 deployment configuration -- ##
-s3_bucket      = "www.mywebsite.com"
-
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
 
@@ -177,12 +174,18 @@ end
 desc "Deploy website via s3cmd to Amazon S3"
 task :s3 do
   puts "## Deploying website via s3cmd to Amazon S3"
+  config = YAML::load(File.open('_config.yml'))
+  url = config['url']
+  s3_bucket = URI.parse(url).host
   ok_failed system("s3cmd sync --acl-public --reduced-redundancy public/* s3://#{s3_bucket}/")
 end
 
 desc "Deploy website via s3cmd to Amazon CloudFront"
 task :cloudfront do
   puts "## Deploying website via s3cmd to Amazon CloudFront"
+  config = YAML::load(File.open('_config.yml'))
+  url = config['url']
+  s3_bucket = URI.parse(url).host
   ok_failed system("s3cmd sync --acl-public --reduced-redundancy --cf-invalidate public/* s3://#{s3_bucket}/")
 end
 
