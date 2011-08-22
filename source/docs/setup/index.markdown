@@ -39,6 +39,7 @@ Next, setup an [RVM](http://beginrescueend.com/) and install dependencies.
     rvm rvmrc trust
     rvm reload
     gem install bundler
+    gem install rake
     bundle install
 ```
 
