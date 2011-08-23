@@ -63,8 +63,12 @@ task :new_post, :title do |t, args|
   require './plugins/titlecase.rb'
   args.with_defaults(:title => 'new-post')
   title = args.title
-  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.downcase.gsub(/&/,'and').gsub(/[,'":\?!\(\)\[\]]/,'').gsub(/[\W\.]/, '-').gsub(/-+$/,'')}.#{new_post_ext}"
+  source_posts_dir = "#{source_dir}/#{posts_dir}"
+  filename = "#{source_posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.downcase.gsub(/&/,'and').gsub(/[,'":\?!\(\)\[\]]/,'').gsub(/[\W\.]/, '-').gsub(/-+$/,'')}.#{new_post_ext}"
   puts "Creating new post: #{filename}"
+  unless File.exists?(source_posts_dir)
+    mkdir_p(source_posts_dir)
+  end
   open(filename, 'w') do |post|
     system "mkdir -p #{source_dir}/#{posts_dir}";
     post.puts "---"
