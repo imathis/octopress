@@ -1,5 +1,0 @@
-# ErrorDocument
-ErrorDocument 401 /401/index.html
-ErrorDocument 403 /403/index.html
-ErrorDocument 404 /404/index.html
-ErrorDocument 500 /500/index.html
