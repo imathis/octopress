@@ -13,6 +13,14 @@ Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
 Check out [Octopress.org](http://octopress.org/docs) for guides and documentation.
 
 ## License
+
+The following directories and their contents are Copyright © 1996-2011  Mark H. Nichols. You may not reuse anything therein without my permission:
+
+_posts/
+images/
+
+All other directories and files are MIT Licensed. Feel free to use the HTML and CSS as you please.
+
 (The MIT License)
 
 Copyright © 2009-2011 Brandon Mathis
@@ -26,3 +34,5 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 #### If you want to be awesome.
 - Proudly display the 'Powered by Octopress' credit in the footer.
 - Add your site to the wiki so we can watch the community grow.
+
+## 
