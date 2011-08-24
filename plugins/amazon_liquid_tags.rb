@@ -1,5 +1,5 @@
 #
-# Author: Michael Janssen (added to Octopress by Mark Nichols)
+# Author: Michael Janssen (http://base0.net/about.html) (added to Octopress by Mark Nichols (http://zanshin.net))
 # Queries Amazon Web Services (AWS) using a provided ASIN and returns attributres selected.
 #
 #   {{ "ASIN" | amazon_link }}
