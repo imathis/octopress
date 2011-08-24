@@ -1,3 +1,10 @@
+#
+# Author: Michael Janssen (added to Octopress by Mark Nichols)
+# Queries Amazon Web Services (AWS) using a provided ASIN and returns attributres selected.
+#
+#   {{ "ASIN" | amazon_link }}
+#
+
 require 'amazon/aws'
 require 'amazon/aws/search'
 require 'cgi'
