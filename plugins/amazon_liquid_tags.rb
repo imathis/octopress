@@ -4,6 +4,14 @@
 #
 #   {{ "ASIN" | amazon_link }}
 #
+#   {{ "ASIN" | amazon_small_image }}
+#
+#   {{ "ASIN" | amazon_medium_image }}
+#
+#   {{ "ASIN" | amazon_authors }}
+#
+# Requires ruby-aaws gem and Amazon Web Services account
+#
 
 require 'amazon/aws'
 require 'amazon/aws/search'
