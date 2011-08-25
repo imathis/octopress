@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'bundler/setup'
+require_relative 'octopress.rb'
+
+Octopress::CLI.start
