@@ -51,13 +51,35 @@ end
 desc "Watch the site and regenerate when it changes"
 task :watch do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  system "trap 'kill $jekyllPid $compassPid' Exit; jekyll --auto & jekyllPid=$!; compass watch & compassPid=$!; wait"
+  puts "Starting to watch source with Jekyll and Compass."
+  jekyllPid = spawn("jekyll --auto")
+  compassPid = spawn("compass watch")
+
+  trap("INT") {
+	Process.kill(9, jekyllPid)
+	Process.kill(9, compassPid)
+	exit 0
+  }
+
+  Process.wait
 end
 
 desc "preview the site in a web browser"
 task :preview do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  system "trap 'kill $jekyllPid $compassPid $rackPid' Exit; jekyll --auto & jekyllPid=$!; compass watch & compassPid=$!; rackup --port #{server_port} & rackPid=$!; wait"
+  puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
+  jekyllPid = spawn("jekyll --auto")
+  compassPid = spawn("compass watch")
+  rackupPid = spawn("rackup --port #{server_port}")
+
+  trap("INT") {
+	Process.kill(9, jekyllPid)
+	Process.kill(9, compassPid)
+	Process.kill(9, rackupPid)
+	exit 0
+  }
+
+  Process.wait
 end
 
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
@@ -141,7 +163,7 @@ task :update_style, :theme do |t, args|
   end
   system "mv sass sass.old"
   puts "## Moved styles into sass.old/"
-  system "mkdir -p sass; cp -R #{themes_dir}/"+theme+"/sass/* sass/"
+  cp_r "#{themes_dir}/"+theme+"/sass/", "sass"
   cp_r "sass.old/custom/.", "sass/custom"
   puts "## Updated Sass ##"
 end
