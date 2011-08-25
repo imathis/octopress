@@ -1,29 +1,41 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "yaml"
 
-## -- Rsync Deploy config -- ##
+def config
+  @config ||= lambda do
+    config = YAML::load(File.open('_config.yml'))
+    if File.exists?('rsync.yml')
+      config.merge! YAML::load(File.open('rsync.yml'))
+    end
+    config
+  end.call
+end
+
+# --------------------------------- #
+#   get configs from _config.yml    #
+# --------------------------------- #
+#
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "user@domain.com"
-document_root  = "~/website.com/"
-deploy_default = "rsync"
+ssh_user        = config['ssh_user']
+document_root   = config['document_root']
+deploy_default  = config['deploy_default']
 
-# This will be configured for you when you run config_deploy
-deploy_branch  = "gh-pages"
+public_dir      = config['destination']     # compiled site directory
+source_dir      = config['source']          # source file directory
+blog_index_dir  = config['blog_index_dir']  # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
+new_post_ext    = config['markdown']        # default new post file extension when using the new_post task
+new_page_ext    = config['markdown']        # default new page file extension when using the new_page task
+server_port     = config['4000']            # port for preview server eg. localhost:4000
+deploy_branch   = config['deploy_branch']
 
-## -- Misc Configs -- ##
+## -- Misc Rakefile Configs -- ##
 
-public_dir      = "public"    # compiled site directory
-source_dir      = "source"    # source file directory
-blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
-deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
-stash_dir       = "_stash"    # directory to stash posts for speedy generation
-posts_dir       = "_posts"    # directory for blog files
-themes_dir      = ".themes"   # directory for blog files
-new_post_ext    = "markdown"  # default new post file extension when using the new_post task
-new_page_ext    = "markdown"  # default new page file extension when using the new_page task
-server_port     = "4000"      # port for preview server eg. localhost:4000
-
+themes_dir      = '.themes'   # directory for blog files
+deploy_dir      = '_deploy'   # deploy directory (for Github pages deployment)
+stash_dir       = '_stash'    # directory to stash posts for speedy generation
+posts_dir       = '_posts'    # directory for blog files
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
@@ -240,11 +252,6 @@ task :set_root_dir, :dir do |t, args|
     else
       dir = "/" + args.dir.sub(/(\/*)(.+)/, "\\2").sub(/\/$/, '');
     end
-    rakefile = IO.read(__FILE__)
-    rakefile.sub!(/public_dir(\s*)=(\s*)(["'])[\w\-\/]*["']/, "public_dir\\1=\\2\\3public#{dir}\\3")
-    File.open(__FILE__, 'w') do |f|
-      f.write rakefile
-    end
     compass_config = IO.read('config.rb')
     compass_config.sub!(/http_path(\s*)=(\s*)(["'])[\w\-\/]*["']/, "http_path\\1=\\2\\3#{dir}/\\3")
     compass_config.sub!(/http_images_path(\s*)=(\s*)(["'])[\w\-\/]*["']/, "http_images_path\\1=\\2\\3#{dir}/images\\3")
@@ -266,6 +273,16 @@ task :set_root_dir, :dir do |t, args|
   end
 end
 
+desc "Generate rsync config"
+task :config_rsync do
+  File.open('rsync.yml', 'w') do |f|
+    f.write <<-CONFIG
+ssh_user: "user@domain.com"
+document_root: "~/website.com/"
+    CONFIG
+  end
+end
+
 desc "Setup _deploy folder and deploy branch"
 task :config_deploy, :branch do |t, args|
   puts "!! Please provide a deploy branch, eg. rake init_deploy[gh-pages] !!" unless args.branch
@@ -277,12 +294,12 @@ task :config_deploy, :branch do |t, args|
     system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
     system "git add ."
     system "git commit -m 'Octopress init'"
-    rakefile = IO.read(__FILE__)
-    rakefile.sub!(/deploy_branch(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_branch\\1=\\2\\3#{args.branch}\\3")
-    rakefile.sub!(/deploy_default(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_default\\1=\\2\\3push\\3")
-    File.open(__FILE__, 'w') do |f|
-      f.write rakefile
-    end
+  end
+  jekyll_config = IO.read('_config.yml')
+  jekyll_config.sub!(/^deploy_branch:.+$/, "deploy_branch: #{args.branch}")
+  jekyll_config.sub!(/^deploy_default:.+$/, "deploy_default: push")
+  File.open('_config.yml', 'w') do |f|
+    f.write jekyll_config
   end
   puts "## Deployment configured. Now you can deploy to the #{args.branch} branch with `rake deploy` ##"
 end

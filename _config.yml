@@ -15,6 +15,15 @@ subscribe_email:
 email:
 
 # ----------------------- #
+#       Deployment        #
+# ----------------------- #
+# Octopress defaults to deploying with Rsync, but you can deploy with Github pages too
+# read http://octopress.org/docs/deploying/ for more info
+
+deploy_default: rsync
+deploy_branch:
+
+# ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
 
@@ -24,8 +33,13 @@ permalink: /blog/:year/:month/:day/:title/
 source: source
 destination: public
 plugins: plugins
+blog_index_dir: source
 code_dir: downloads/code
 category_dir: blog/categories
+new_post_ext: markdown
+new_page_ext: markdown
+server_port: 4000
+
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
 
