@@ -53,7 +53,12 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       @title = nil
       @caption = nil
+      @filetype = nil
       @highlight = true
+      if markup =~ /\s*lang:(\w+)/i
+        @filetype = $1
+        markup = markup.sub(/lang:\w+/i,'')
+      end
       if markup =~ CaptionUrlTitle
         @file = $1
         @caption = "<figcaption><span>#{$1}</span><a href='#{$2 + $3}'>#{$4}</a></figcaption>"
@@ -64,7 +69,7 @@ module Jekyll
         @file = $1
         @caption = "<figcaption><span>#{$1}</span></figcaption>\n"
       end
-      if @file =~ /\S[\S\s]*\.(\w+)/
+      if @file =~ /\S[\S\s]*\w+\.(\w+)/ && @filetype.nil?
         @filetype = $1
       end
       super
@@ -77,12 +82,9 @@ module Jekyll
       source += @caption if @caption
       source = context['pygments_prefix'] + source if context['pygments_prefix']
       if @filetype
-        @filetype = 'objc' if @filetype == 'm'
-        @filetype = 'perl' if @filetype == 'pl'
-        @filetype = 'yaml' if @filetype == 'yml'
         source += " #{highlight(code, @filetype)}</figure></div>"
       else
-        source += "<pre><code>" + code.lstrip.rstrip.gsub(/</,'&lt;') + "</code></pre></figure></div>"
+        source += "#{tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'))}</figure></div>"
       end
       source = source + context['pygments_suffix'] if context['pygments_suffix']
     end

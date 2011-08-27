@@ -12,6 +12,11 @@ module OctopressFilters
     end
   end
 
+  # Checks for excerpts (helpful for template conditionals)
+  def has_excerpt(input)
+    input =~ /<!--\s*more\s*-->/i ? true : false
+  end
+
   # Summary is used on the Archive pages to return the first block of content from a post.
   def summary(input)
     if input.index(/\n\n/)
@@ -26,14 +31,17 @@ module OctopressFilters
   #     code snippet
   # ```
   def backtick_codeblock(input)
+    code = nil
     # Markdown support
     input = input.gsub /<p>`{3}\s*(\w+)?<\/p>\s*<pre><code>\s*(.+?)\s*<\/code><\/pre>\s*<p>`{3}<\/p>/m do
       lang = $1
       if lang != ''
         str  = $2.gsub('&lt;','<').gsub('&gt;','>').gsub('&amp;','&')
-        highlight(str, lang)
+        code = highlight(str, lang)
+        "<figure role=code>#{code}</figure>"
       else
-        "<pre><code>#{$2}</code></pre>"
+        code = tableize_code($2)
+        "<figure role=code>#{code}</figure>"
       end
     end
 
@@ -48,9 +56,11 @@ module OctopressFilters
       lang = $1
       str  = $2.gsub(/^\s{4}/, '')
       if lang != ''
-        highlight(str, lang)
+        code = highlight(str, lang)
+        "<figure role=code>#{code}</figure>"
       else
-        "<pre><code>#{$2.gsub('<','&lt;').gsub('>','&gt;')}</code></pre>"
+        code = tableize_code($2.gsub('<','&lt;').gsub('>','&gt;'))
+        "<figure role=code>#{code}</figure>"
       end
     end
   end
@@ -58,7 +68,7 @@ module OctopressFilters
   # Replaces relative urls with full urls
   def expand_urls(input, url='')
     url ||= '/'
-    input.gsub /(\s+(href|src)\s*=\s*["|']{1})(\/[^\"'>]+)/ do
+    input.gsub /(\s+(href|src)\s*=\s*["|']{1})(\/[^\"'>]*)/ do
       $1+url+$3
     end
   end
