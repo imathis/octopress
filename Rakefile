@@ -291,7 +291,9 @@ namespace :aws do
       return;
     end
     puts "Invalidating CloudFront caches"
-    acf = RightAws::AcfInterface.new(aws_access_key_id, aws_secret_access_key)
+    logger = Logger.new(STDOUT)
+    logger.level = Logger::WARN
+    acf = RightAws::AcfInterface.new(aws_access_key_id, aws_secret_access_key, { :logger => logger })
     acf.create_invalidation distribution[:aws_id], :path => paths_to_invalidate
   end
   
