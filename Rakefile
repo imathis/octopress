@@ -309,7 +309,7 @@ namespace :aws do
     aws = aws_init
     distribution = cloudfront_init(aws[:access_key_id], aws[:secret_access_key], aws[:s3_bucket])
     paths_to_invalidate = s3_deploy(aws[:access_key_id], aws[:secret_access_key], aws[:s3_bucket], public_dir)
-    cloudfront_invalidate(aws.access_key_id, aws.secret_access_key, distribution, paths_to_invalidate)
+    cloudfront_invalidate(aws[:access_key_id], aws[:secret_access_key], distribution, paths_to_invalidate)
     puts "\n## Amazon CloudFront deploy complete"
   end
 end
