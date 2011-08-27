@@ -241,7 +241,7 @@ namespace :aws do
         if !key || (key.e_tag != ("\"" + Digest::MD5.hexdigest(File.read(file))) + "\"")
           puts "Deploying file #{remote_file}"
           bucket.put(key, open(file), {}, 'public-read', {
-            'content-type'        => MIME::Types.type_for(file).to_s,
+            'content-type'        => MIME::Types.type_for(file).first.to_s,
             'x-amz-storage-class' => 'REDUCED_REDUNDANCY'
           })
           paths_to_invalidate << "/#{remote_file}"
