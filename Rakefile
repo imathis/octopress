@@ -1,6 +1,5 @@
 require "rubygems"
 require "bundler/setup"
-require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -91,7 +90,7 @@ task :new_post, :title do |t, args|
   mkdir_p "#{source_dir}/#{posts_dir}"
   args.with_defaults(:title => 'new-post')
   title = args.title
-  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.downcase.gsub(/&/,'and').gsub(/[,'":\?!\(\)\[\]]/,'').gsub(/[\W\.]/, '-').gsub(/-+$/,'')}.#{new_post_ext}"
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     system "mkdir -p #{source_dir}/#{posts_dir}/";
@@ -152,7 +151,7 @@ end
 
 desc "Clean out caches: _code_cache, _gist_cache, .sass-cache"
 task :clean do
-  rm_rf ["_code_cache/**", "_gist_cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
+  system "rm -rf _code_cache/** _gist_cache/** .sass-cache/** source/stylesheets/screen.css"
 end
 
 desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"
@@ -160,9 +159,9 @@ task :update_style, :theme do |t, args|
   theme = args.theme || 'classic'
   if File.directory?("sass.old")
     puts "removed existing sass.old directory"
-    rm_r "sass.old", :secure=>true
+    system "rm -r sass.old"
   end
-  mv "sass", "sass.old"
+  system "mv sass sass.old"
   puts "## Moved styles into sass.old/"
   cp_r "#{themes_dir}/"+theme+"/sass/", "sass"
   cp_r "sass.old/custom/.", "sass/custom"
@@ -174,16 +173,15 @@ task :update_source, :theme do |t, args|
   theme = args.theme || 'classic'
   if File.directory?("#{source_dir}.old")
     puts "removed existing #{source_dir}.old directory"
-    rm_r "#{source_dir}.old", :secure=>true
+    system "rm -r #{source_dir}.old"
   end
-  mv source_dir, "#{source_dir}.old"
+  system "mv #{source_dir} #{source_dir}.old"
   puts "moved #{source_dir} into #{source_dir}.old/"
-  mkdir_p source_dir
-  cp_r "#{themes_dir}/"+theme+"/source/.", source_dir
-  cp_r "#{source_dir}.old/.", source_dir, :preserve=>true
-  cp_r "#{source_dir}.old/_includes/custom/.", "#{source_dir}/_includes/custom/"
-  mv "#{source_dir}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != source_dir
-  cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir
+  system "mkdir -p #{source_dir}; cp -R #{themes_dir}/"+theme+"/source/. #{source_dir}"
+  system "cp -Rn #{source_dir}.old/. #{source_dir}"
+  system "cp -Rf #{source_dir}.old/_includes/custom/. #{source_dir}/_includes/custom/"
+  system "mv -f #{source_dir}/index.html #{blog_index_dir}" if blog_index_dir != source_dir
+  system "cp -f #{source_dir}.old/index.html #{source_dir}" if blog_index_dir != source_dir
   puts "## Updated #{source_dir} ##"
 end
 
@@ -212,7 +210,7 @@ task :rsync do
 end
 
 desc "deploy public directory to github pages"
-multitask :push do
+task :push do
   puts "## Deploying branch to Github Pages "
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
   system "cp -R #{public_dir}/* #{deploy_dir}"
