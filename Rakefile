@@ -1,5 +1,6 @@
 require "rubygems"
 require "bundler/setup"
+require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -26,6 +27,9 @@ server_port     = "4000"      # port for preview server eg. localhost:4000
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
+  if File.directory?(source_dir) || File.directory?("sass")
+    abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
+  end
   # copy theme into working Jekyll directories
   theme = args.theme || 'classic'
   puts "## Copying "+theme+" theme into ./#{source_dir} and ./sass"
@@ -90,7 +94,10 @@ task :new_post, :title do |t, args|
   mkdir_p "#{source_dir}/#{posts_dir}"
   args.with_defaults(:title => 'new-post')
   title = args.title
-  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.downcase.gsub(/&/,'and').gsub(/[,'":\?!\(\)\[\]]/,'').gsub(/[\W\.]/, '-').gsub(/-+$/,'')}.#{new_post_ext}"
+  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     system "mkdir -p #{source_dir}/#{posts_dir}/";
@@ -118,6 +125,9 @@ task :new_page, :filename do |t, args|
     filename = "#{name}.#{extension}"
     mkdir_p page_dir
     file = page_dir + filename
+    if File.exist?(file)
+      abort("rake aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    end
     puts "Creating new page: #{file}"
     open(file, 'w') do |page|
       page.puts "---"
@@ -151,7 +161,7 @@ end
 
 desc "Clean out caches: _code_cache, _gist_cache, .sass-cache"
 task :clean do
-  system "rm -rf _code_cache/** _gist_cache/** .sass-cache/** source/stylesheets/screen.css"
+  rm_rf ["_code_cache/**", "_gist_cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
 end
 
 desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"
@@ -159,9 +169,9 @@ task :update_style, :theme do |t, args|
   theme = args.theme || 'classic'
   if File.directory?("sass.old")
     puts "removed existing sass.old directory"
-    system "rm -r sass.old"
+    rm_r "sass.old", :secure=>true
   end
-  system "mv sass sass.old"
+  mv "sass", "sass.old"
   puts "## Moved styles into sass.old/"
   cp_r "#{themes_dir}/"+theme+"/sass/", "sass"
   cp_r "sass.old/custom/.", "sass/custom"
@@ -172,16 +182,15 @@ desc "Move source to source.old, install source theme updates, replace source/_i
 task :update_source, :theme do |t, args|
   theme = args.theme || 'classic'
   if File.directory?("#{source_dir}.old")
-    puts "removed existing #{source_dir}.old directory"
-    system "rm -r #{source_dir}.old"
+    puts "## Removed existing #{source_dir}.old directory"
+    rm_r "#{source_dir}.old", :secure=>true
   end
-  system "mv #{source_dir} #{source_dir}.old"
-  puts "moved #{source_dir} into #{source_dir}.old/"
-  system "mkdir -p #{source_dir}; cp -R #{themes_dir}/"+theme+"/source/. #{source_dir}"
-  system "cp -Rn #{source_dir}.old/. #{source_dir}"
-  system "cp -Rf #{source_dir}.old/_includes/custom/. #{source_dir}/_includes/custom/"
-  system "mv -f #{source_dir}/index.html #{blog_index_dir}" if blog_index_dir != source_dir
-  system "cp -f #{source_dir}.old/index.html #{source_dir}" if blog_index_dir != source_dir
+  cp_r "#{source_dir}/.", "#{source_dir}.old"
+  puts "## Copied #{source_dir} into #{source_dir}.old/"
+  cp_r "#{themes_dir}/"+theme+"/source/.", source_dir, :remove_destination=>true
+  cp_r "#{source_dir}.old/_includes/custom/.", "#{source_dir}/_includes/custom/", :remove_destination=>true
+  mv "#{source_dir}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != source_dir
+  cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir
   puts "## Updated #{source_dir} ##"
 end
 
@@ -210,7 +219,7 @@ task :rsync do
 end
 
 desc "deploy public directory to github pages"
-task :push do
+multitask :push do
   puts "## Deploying branch to Github Pages "
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
   system "cp -R #{public_dir}/* #{deploy_dir}"
@@ -289,6 +298,20 @@ def ok_failed(condition)
   else
     puts "FAILED"
   end
+end
+
+def get_stdin(message)
+  print message
+  STDIN.gets.chomp
+end
+
+def ask(message, valid_options)
+  if valid_options
+    answer = get_stdin("#{message} #{valid_options.to_s.gsub(/"/, '').gsub(/, /,'/')} ") while !valid_options.include?(answer)
+  else
+    answer = get_stdin(message)
+  end
+  answer
 end
 
 desc "list tasks"
