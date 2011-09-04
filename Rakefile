@@ -92,6 +92,11 @@ task :new_post, :title do |t, args|
   args.with_defaults(:title => 'new-post')
   title = args.title
   filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  if File.exist?(filename)
+    puts "### #{filename} Already exists. Overwrite? y/n:"
+    response = $stdin.gets.chomp.downcase
+    next unless response == 'y'
+  end
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     system "mkdir -p #{source_dir}/#{posts_dir}/";
@@ -120,6 +125,11 @@ task :new_page, :filename do |t, args|
     filename = "#{name}.#{extension}"
     mkdir_p page_dir
     file = page_dir + filename
+    if File.exist?(file)
+      puts "### #{file} Already exists. Overwrite? y/n:"
+      response = $stdin.gets.chomp.downcase
+      next unless response == 'y'
+    end
     puts "Creating new page: #{file}"
     open(file, 'w') do |page|
       page.puts "---"
@@ -174,15 +184,13 @@ desc "Move source to source.old, install source theme updates, replace source/_i
 task :update_source, :theme do |t, args|
   theme = args.theme || 'classic'
   if File.directory?("#{source_dir}.old")
-    puts "removed existing #{source_dir}.old directory"
+    puts "## Removed existing #{source_dir}.old directory"
     rm_r "#{source_dir}.old", :secure=>true
   end
-  mv source_dir, "#{source_dir}.old"
-  puts "moved #{source_dir} into #{source_dir}.old/"
-  mkdir_p source_dir
-  cp_r "#{themes_dir}/"+theme+"/source/.", source_dir
-  cp_r "#{source_dir}.old/.", source_dir, :preserve=>true
-  cp_r "#{source_dir}.old/_includes/custom/.", "#{source_dir}/_includes/custom/"
+  cp_r "#{source_dir}/.", "#{source_dir}.old"
+  puts "## Copied #{source_dir} into #{source_dir}.old/"
+  cp_r "#{themes_dir}/"+theme+"/source/.", source_dir, :remove_destination=>true
+  cp_r "#{source_dir}.old/_includes/custom/.", "#{source_dir}/_includes/custom/", :remove_destination=>true
   mv "#{source_dir}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != source_dir
   cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir
   puts "## Updated #{source_dir} ##"
