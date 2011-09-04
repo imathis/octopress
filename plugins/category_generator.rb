@@ -69,7 +69,7 @@ module Jekyll
       if self.layouts.key? 'category_index'
         dir = self.config['category_dir'] || 'categories'
         self.categories.keys.each do |category|
-          self.write_category_index(File.join(dir, UnicodeUtils.nfkd(category).gsub(/[^\x00-\x7F]/, '').gsub(/_|\W/, '-').to_s), category)
+          self.write_category_index(File.join(dir, UnicodeUtils.nfkd(category).gsub(/[^\x00-\x7F]/, '').gsub(/_|\W/, '-').gsub(/-{2,}/, '-').to_s), category)
         end
 
       # Throw an exception if the layout couldn't be found.
@@ -106,7 +106,7 @@ module Jekyll
     def category_links(categories)
       dir = @context.registers[:site].config['category_dir']
       categories = categories.sort!.map do |item|
-        "<a class='category' href='/#{dir}/#{UnicodeUtils.nfkd(item).gsub(/[^\x00-\x7F]/, '').gsub(/_|\W/, '-').to_s}/'>#{item}</a>"
+        "<a class='category' href='/#{dir}/#{UnicodeUtils.nfkd(item).gsub(/[^\x00-\x7F]/, '').gsub(/_|\W/, '-').gsub(/-{2,}/, '-').to_s}/'>#{item}</a>"
       end
 
       case categories.length
