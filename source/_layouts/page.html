@@ -4,16 +4,18 @@ layout: default
 
 <div>
 <article>
+  {% if page.title %}
   <header>
     <h1 class="entry-title">{{ page.title | titlecase }}</h1>
     {% if page.date %}<p class="meta">{% include post/date.html %}</p>{% endif %}
   </header>
+  {% endif %}
   {{ content }}
   {% unless page.footer == false %}
     <footer>
       {% if page.date or page.author %}<p class="meta">
         {% if page.author %}{% include post/author.html %}{% endif %}
-        {% include post/date.html %}
+        {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
         {% if page.categories %}{% include post/categories.html %}{% endif %}
       </p>{% endif %}
       {% unless page.sharing == false %}
