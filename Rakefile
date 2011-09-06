@@ -27,6 +27,9 @@ server_port     = "4000"      # port for preview server eg. localhost:4000
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
+  if File.directory?(source_dir) || File.directory?("sass")
+    abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
+  end
   # copy theme into working Jekyll directories
   theme = args.theme || 'classic'
   puts "## Copying "+theme+" theme into ./#{source_dir} and ./sass"
@@ -93,9 +96,7 @@ task :new_post, :title do |t, args|
   title = args.title
   filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
   if File.exist?(filename)
-    puts "### #{filename} Already exists. Overwrite? y/n:"
-    response = $stdin.gets.chomp.downcase
-    next unless response == 'y'
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
@@ -125,9 +126,7 @@ task :new_page, :filename do |t, args|
     mkdir_p page_dir
     file = page_dir + filename
     if File.exist?(file)
-      puts "### #{file} Already exists. Overwrite? y/n:"
-      response = $stdin.gets.chomp.downcase
-      next unless response == 'y'
+      abort("rake aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
     end
     puts "Creating new page: #{file}"
     open(file, 'w') do |page|
@@ -299,6 +298,20 @@ def ok_failed(condition)
   else
     puts "FAILED"
   end
+end
+
+def get_stdin(message)
+  print message
+  STDIN.gets.chomp
+end
+
+def ask(message, valid_options)
+  if valid_options
+    answer = get_stdin("#{message} #{valid_options.to_s.gsub(/"/, '').gsub(/, /,'/')} ") while !valid_options.include?(answer)
+  else
+    answer = get_stdin(message)
+  end
+  answer
 end
 
 desc "list tasks"
