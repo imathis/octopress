@@ -5,7 +5,6 @@
 $header-bg: #79AFAF;
 $subtitle-color: lighten($header-bg, 58);
 $nav-bg: desaturate(lighten($header-bg, 18), 5);
-$sidebar-bg: desaturate(#98D2AF, 8);
 $sidebar-bg: desaturate($nav-bg, 8);
 $sidebar-link-color: saturate(#008899, 10);
 $sidebar-link-color-hover: lighten($sidebar-link-color, 10); 
