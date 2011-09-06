@@ -8,53 +8,53 @@ function getNav(){
     if (event.target.value) window.location.href = event.target.value;
   });
 }
+
 function addSidebarToggler() {
-
-    function isCollapsed() {
-        return $('body').hasClass('collapse-sidebar');
-    }
-
-    function collapse() {
+	
+	function isCollapsed(){
+		return $('body').hasClass('collapse-sidebar');
+	}
+	
+	function collapse(){
         $('body').addClass('collapse-sidebar');
-        setState('collapsed');
-    }
-
-    function inflate() {
-        $('body').removeClass('collapse-sidebar');
-        setState('inflated');
-    }
-
-    function getState() {
-        if (window.localStorage) {
-            var currentState = window.localStorage.getItem('sidebar');
-            return currentState && currentState === 'collapsed' ? 'collapsed' : 'inflated';
-        }
-    }
-
-    function setState(state) {
-        if (window.localStorage) {
-            window.localStorage.setItem('sidebar', state);
-        }
-    }
-
-    if (getState() === 'collapsed') {
-        collapse();
-    }
-
+		setState('collapsed');
+	}
+	
+	function inflate(){
+        $('body').removeClass('collapse-sidebar');	
+		setState('collapsed');	
+	}
+	
+	function getState(){
+		if(window.localStorage){
+			var currentState = window.localStorage.getItem('sidebar');
+			return currentState && currentState === 'collapsed' ? 'collapsed' : 'inflated';
+		}
+	}
+	function setState(state){
+		if(window.localStorage){
+			window.localStorage.setItem('sidebar', state);
+		}
+	}
+	
+	if(getState() === 'collapsed'){
+		collapse();
+	}
+	
     $('#content').append('<span class="toggle-sidebar"></span>');
 
     $('.toggle-sidebar').bind('click', function (e) {
         e.preventDefault();
 
         if (isCollapsed()) {
-            inflate();
+			inflate();
         } else {
-            collapse();
+			collapse();
         }
     });
 
     var sections = $('aside[role=sidebar] > section'),
-        count;
+		count;
     if (sections.length > 1) {
         sections.each(function (section, index) {
             if ((sections.length >= 3) && index % 3 === 0) {
