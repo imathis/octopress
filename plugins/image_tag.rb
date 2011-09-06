@@ -14,34 +14,37 @@
 module Jekyll
 
   class ImageTag < Liquid::Tag
-    @img = nil
-    @title = nil
-    @class = ''
-    @width = ''
-    @height = ''
 
     def initialize(tag_name, markup, tokens)
+      @img = {}
+      
       if markup =~ /(\S.*\s+)?(https?:\/\/|\/)(\S+)(\s+\d+\s+\d+)?(\s+.+)?/i
-        @class = $1 || ''
-        @img = $2 + $3
-        if $5
-          @title = $5.strip
-        end
+        @img[:src] = $2 + $3
+        @img[:class] = $1 if $1
+        @img[:title] = $5.strip if $5
+        
         if $4 =~ /\s*(\d+)\s+(\d+)/
-          @width = $1
-          @height = $2
-        end
+          @img[:width] = $1
+          @img[:height] = $2
+        end      
       end
       super
     end
 
     def render(context)
+      
       output = super
-      if @img
-        "<img class='#{@class}' src='#{@img}' width='#{@width}' height='#{@height}' alt='#{@title}' title='#{@title}'>"
+      if @img[:src]
+        
+        attributes = []
+        @img.each{ |key, value| attributes << "#{key}='#{value}'" }
+        attributes = attributes.join(' ').gsub(/'/, '"')
+        
+        "<img #{attributes}>"
       else
         "Error processing input, expected syntax: {% img [class name(s)] /url/to/image [width height] [title text] %}"
       end
+      
     end
   end
 end
