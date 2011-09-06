@@ -22,7 +22,7 @@ function addSidebarToggler() {
 	
 	function inflate(){
         $('body').removeClass('collapse-sidebar');	
-		setState('collapsed');	
+		setState('inflated');	
 	}
 	
 	function getState(){
