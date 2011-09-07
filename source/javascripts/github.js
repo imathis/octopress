@@ -1,4 +1,5 @@
 github = (function(){
+	
     function render(target, repos){
         var i = 0, fragment = '', t = $(target)[0];
 
@@ -7,6 +8,7 @@ github = (function(){
 
         t.innerHTML =  fragment;
     }
+
     return {
         showRepos: function(options){
             var feed = new jXHR();
@@ -36,7 +38,7 @@ github = (function(){
                 render(options.target, repos)
               }
             };
-            feed.open("GET","http://github.com/api/v2/json/repos/show/"+options.user+"?callback=?");
+            feed.open("GET","//github.com/api/v2/json/repos/show/"+options.user+"?callback=?");
             feed.send();
         }
     };
