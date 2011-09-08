@@ -28,7 +28,7 @@ them to the Vim rendered versions.
 
 Check out the [test page](/docs/blogging/code/test) to see the results.
 
-## Github Style Code Blocks
+## Backtick Code Blocks
 {% render_partial docs/plugins/backtick-codeblock/index.markdown %}
 
 ## Gist Embedding
