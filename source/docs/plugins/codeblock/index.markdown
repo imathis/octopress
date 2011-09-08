@@ -11,6 +11,8 @@ With this plugin you can write blocks of code directly in your posts and optiona
 #### Syntax
 
     {{ "{% codeblock [title] [lang:language] [url] [link text]" }} %}
+    code snippet
+    {{ "{% endcodeblock" }} %}
 
 #### Example 1
 

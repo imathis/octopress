@@ -6,7 +6,7 @@ footer: false
 sidebar: false
 ---
 
-``` coffeescript
+``` coffeescript Some Coffee Script for you http://google.com/
     Tweets = 1
 
     module.exports = Tweets

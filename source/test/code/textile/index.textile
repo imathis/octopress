@@ -7,11 +7,13 @@ sharing: true
 footer: true
 ---
 
+<notextile>
 ``` coffeescript
     _Tweets_ = 1
 
     module.exports = Tweets
 ```
+</notextile>
 
 ``` coffeescript
     Tweets = 1
