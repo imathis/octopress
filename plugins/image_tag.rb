@@ -32,13 +32,11 @@ module Jekyll
     IMG = /\A#{CLASS}?#{SRC}#{DIMENSIONS}?#{TITLE_AND_ALT}?\s*\Z/  # class, dimensions title and alt are optional
 
     def initialize(tag_name, markup, tokens)
-      puts "foo " + markup.inspect
       if markup =~ IMG
         @img = TAGS.reduce({}) {|img,tag| img[tag] = $~[tag]; img}
         @img[:title] ||= $~[:quoted_title]
         # Make sure alt is set if we have something to put in there
         @img[:alt] ||= @img[:title]
-        puts @img.inspect
       end
       super
     end
@@ -46,7 +44,7 @@ module Jekyll
     def render(context)
       output = super
       if @img
-        "<img #{@img.reduce([]) {|a,p| a << "#{p[0].to_s}='#{p[1]}'" if p[1]; a}.join(" ")}>"
+        "<img #{@img.collect {|k,v| "#{k.to_s}='#{v}'" if v}.compact.join(" ")}>"
       else
         "Error processing input, expected syntax: {% img [class name(s)] /url/to/image [width [height]] [title text | \"title text\" [\"alt text\"]] %}"
       end
