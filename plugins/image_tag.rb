@@ -21,13 +21,13 @@ module Jekyll
     TAGS = [:class, :src, :width, :height, :title, :alt]
 
     CLASS = /(?:(?<class>[^'"\s][^'"]*)\s+)/
-    SRC = /(?:(?<src>(https?:\/\/|\/)([^'"\s]+)))/i
+    SRC = /(?:(?<src>(https?:\/\/|\/)([^\s]+)))/i
     WIDTH = /(?:\s+(?<width>\d+))/
     HEIGHT = /(?:\s+(?<height>\d+))/
     DIMENSIONS = /#{WIDTH}(?:#{HEIGHT})?/  # height is optional
-    UNQUOTED_TITLE = /(?:\s+(?<title>[^'"\s][^'"]*?))/
-    QUOTED_TITLE = /(?:\s+(?<title_quote>['"])(?<quoted_title>[^'"]*)\g<title_quote>)/
-    QUOTED_ALT = /(?:\s+(?<alt_quote>['"])(?<alt>[^'"]*)\g<alt_quote>)/
+    UNQUOTED_TITLE = /(?:\s+(?<title>[^'"\s].*?))/
+    QUOTED_TITLE = /(?:\s+(?<title_quote>['"])(?<quoted_title>.*?)\g<title_quote>)/
+    QUOTED_ALT = /(?:\s+(?<alt_quote>['"])(?<alt>.*?)\g<alt_quote>)/
     TITLE_AND_ALT = /(?:#{UNQUOTED_TITLE}|#{QUOTED_TITLE}(?:#{QUOTED_ALT})?)/  # alt is optional
     IMG = /\A#{CLASS}?#{SRC}#{DIMENSIONS}?#{TITLE_AND_ALT}?\s*\Z/  # class, dimensions title and alt are optional
 
@@ -44,7 +44,7 @@ module Jekyll
     def render(context)
       output = super
       if @img
-        "<img #{@img.collect {|k,v| "#{k.to_s}='#{v}'" if v}.compact.join(" ")}>"
+        "<img #{@img.collect {|k,v| "#{k.to_s}=\"#{v.gsub(/"/, "&#34;")}\"" if v}.compact.join(" ")}>"
       else
         "Error processing input, expected syntax: {% img [class name(s)] /url/to/image [width [height]] [title text | \"title text\" [\"alt text\"]] %}"
       end
