@@ -49,13 +49,13 @@ function testFeatures() {
 function addCodeLineNumbers(){
   if (navigator.appName == 'Microsoft Internet Explorer') { return }
   $('div.gist-highlight').each(function(code){
-    var tableStart = '<table cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter">';
+    var tableStart = '<table><tbody><tr><td class="gutter">';
     var lineNumbers = '<pre class="line-numbers">';
-    var tableMiddle = '</pre></td><td class="code" width="100%">';
+    var tableMiddle = '</pre></td><td class="code">';
     var tableEnd = '</td></tr></tbody></table>';
-    var count = $('div.line', code).length;
+    var count = $('span.line', code).length;
     for (i=1;i<=count; i++){
-      lineNumbers += '<span class="line">'+i+'</span>\n';
+      lineNumbers += '<span class="line-number">'+i+'</span>\n';
     }
     table = tableStart + lineNumbers + tableMiddle + '<pre>'+$('pre', code).html()+'</pre>' + tableEnd;
     $(code).html(table);
