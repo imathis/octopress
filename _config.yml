@@ -66,6 +66,11 @@ twitter_tweet_button: true
 google_plus_one: true
 google_plus_one_size: medium
 
+# Google Plus Widget
+# You can find your id at your profile url
+# https://plus.google.com/<here is your id>/posts
+# google_plus_id: 
+
 # Pinboard
 pinboard_user:
 pinboard_count: 3
