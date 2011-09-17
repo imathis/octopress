@@ -14,11 +14,11 @@ Don't feel like reading the documentation? You've come to the right place! Actua
 
 ## Getting/Giving Help
 
-If you have a question, or if you love helping others, Join me on:
+If you have a question, or if you love helping others:
 
-1. **IRC** in the #octopress channel on irc.freenode.net
-2. **[Convore](http://convore.com/octopress/)** a web chat system. If I'm not there, leave a message.
-3. **[Post an issue](http://github.com/imathis/octopress/issues)** on Github's issue tracker.
+1. Join the #Octopress IRC channel on irc.freenode.net.
+2. [Post an issue](http://github.com/imathis/octopress/issues) on Github's issue tracker.
+3. Mention [@Octopress](http://twitter.com/octopress) on Twitter.
 
 ## Contributing
 
