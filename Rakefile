@@ -1,17 +1,9 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
-require "yaml"
+require "./octopress/octopress.rb"
 
-def config
-  @config ||= lambda do
-    config = YAML::load(File.open('_config.yml'))
-    if File.exists?('rsync.yml')
-      config.merge! YAML::load(File.open('rsync.yml'))
-    end
-    config
-  end.call
-end
+config          = Octopress::config
 
 # --------------------------------- #
 #   get configs from _config.yml    #
@@ -25,8 +17,8 @@ deploy_default  = config['deploy_default']
 public_dir      = config['destination']     # compiled site directory
 source_dir      = config['source']          # source file directory
 blog_index_dir  = config['blog_index_dir']  # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
-new_post_ext    = config['markdown']        # default new post file extension when using the new_post task
-new_page_ext    = config['markdown']        # default new page file extension when using the new_page task
+new_post_ext    = config['new_post_ext']    # default new post file extension when using the new_post task
+new_page_ext    = config['new_page_ext']    # default new page file extension when using the new_page task
 server_port     = config['4000']            # port for preview server eg. localhost:4000
 deploy_branch   = config['deploy_branch']
 
