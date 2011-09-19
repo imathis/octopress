@@ -5,9 +5,12 @@
   <nav role=navigation>{% include navigation.html %}</nav>
   <div id="main">
     <div id="content">
-      {{ content | expand_urls: root_url | backtick_codeblock | smart_quotes }}
+      {{ content | expand_urls: root_url }}
     </div>
   </div>
   <footer>{% include footer.html %}</footer>
+  {% include google_analytics.html %}
+  {% include google_plus_one.html %}
+  {% include twitter_sharing.html %}
 </body>
 </html>

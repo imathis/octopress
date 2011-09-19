@@ -1,3 +1,5 @@
+# encoding: utf-8
+#
 # Jekyll category page generator.
 # http://recursive-design.com/projects/jekyll-plugins/
 #
@@ -16,8 +18,8 @@
 # - category_dir:          The subfolder to build category pages in (default is 'categories').
 # - category_title_prefix: The string used before the category name in the page title (default is
 #                          'Category: ').
-module Jekyll
 
+module Jekyll
 
   # The CategoryIndex class creates a single category page for the specified category.
   class CategoryIndex < Page
@@ -68,7 +70,7 @@ module Jekyll
       if self.layouts.key? 'category_index'
         dir = self.config['category_dir'] || 'categories'
         self.categories.keys.each do |category|
-          self.write_category_index(File.join(dir, category.gsub(/_|\W/, '-')), category)
+          self.write_category_index(File.join(dir, category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase), category)
         end
 
       # Throw an exception if the layout couldn't be found.
@@ -105,7 +107,7 @@ module Jekyll
     def category_links(categories)
       dir = @context.registers[:site].config['category_dir']
       categories = categories.sort!.map do |item|
-        "<a class='category' href='/#{dir}/#{item.gsub(/_|\W/, '-')}/'>#{item}</a>"
+        "<a class='category' href='/#{dir}/#{item.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase}/'>#{item}</a>"
       end
 
       case categories.length
