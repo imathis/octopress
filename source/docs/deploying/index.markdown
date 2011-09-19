@@ -1,100 +1,48 @@
 ---
 layout: page
-title: Deploying Octopress
+title: Deploying
 date: July 18 2011
 sidebar: false
 footer: false
 ---
 
-<h2 id="rsync">Deploying with Rsync via SSH</h2>
+Here are some nice and easy ways to deploy your Octopress blog.
 
-Add your server configurations to the `Rakefile` under Rsync deploy config. To deploy with Rsync, be sure your public key is listed in your server's `~/.ssh/authorized_keys` file.
+## Github Pages
+Hosting your blog with Github's [Pages service](pages.github.com) is free and allows custom domains. To deploy you simply push your repository to Gihub.
+This is a great way to host a personal blog, or even a multi-author blog, where contributions can be handled with pull requests and commit access.
 
-``` ruby
-    ssh_user       = "user@domain.com"
-    document_root  = "~/website.com/"
-    deploy_default = "rsync"
+[Deploying to Github Pages &raquo;](/docs/deploying/github)
+
+## Heroku
+Like Github Pages, Heroku is also free, allows custom domains, and uses a git based deployment workflow. Heroku is a bit simpler to use and your blog repository remains private.
+
+[Deploying to Heroku &raquo;](/docs/deploying/heroku)
+
+## Rsync
+If you have web hosting service you can probably deploy with [Rsync](http://en.wikipedia.org/wiki/Rsync) which is brilliantly fast, syncing new and changed files through SSH.
+If your host doesn't offer SSH access, and you're looking for one that does, check out [Dreamhost](http://www.dreamhost.com/r.cgi?109007) (I've been a happy customer since 2005).
+
+[Deploying with Rsync &raquo;](/docs/deploying/rsync)
+
+## Host your own remote repository
+
+If you want to set up a private git repository on your own server, here's how you'd do it. You'll need SSH access to follow along.
+
+```sh
+ssh user@host.com
+mkdir -p git/octopress.git
+cd git/octopress.git
+git init --bare
+pwd  # print the working directory, you'll need it below.
+logout
 ```
 
-Now if you run
+The origin remote currently points to the Octopress project on Github but you'll want to point it to your remote repository.
 
-``` sh
-    rake generate   # If you haven't generated your blog yet
-    rake deploy     # Syncs your blog via ssh
+```sh
+git remote rename origin octopress
+git remote add origin ssh://user@host.com/(output of pwd above)
+git config branch.master.remote origin
 ```
 
-in your terminal, your `public` directory will be synced to your server's document root.
-
-<h2 id="github_pages">Deploying to Github Pages</h2>
-
-To setup deployment, you'll want to clone your target repository into the `_deploy` directory in your Octopress project.
-If you're using Github user or organization pages, clone the repository `git@github.com:username/username.github.com.git`.
-
-### With Github User/Organization pages
-
-``` sh
-    git clone git@github.com:username/username.github.com _deploy
-    rake config_deploy[master]
-```
-
-### With Github Project pages (gh-pages)
-
-``` sh
-    git clone git@github.com:username/project.git _deploy
-    rake config_deploy[gh-pages]
-```
-
-The `config_deploy` rake task takes a branch name as an argument and creates a [new empty branch](http://book.git-scm.com/5_creating_new_empty_branches.html), and adds an initial commit.
-This also sets `deploy_default = "push"` in your `_config.yml` and prepares your branch for easy deployment. The `rake deploy` task copies the generated blog from the `public` directory to the `_deploy` directory, adds new files, removes old files, sets a commit message, and pushes to Github.
-Github will queue your site for publishing (which usually occurs instantly or within minutes if it's your first commit).
-
-Now you should be set up to deploy, just run
-
-``` sh
-    rake generate   # If you haven't generated your blog yet
-    rake deploy     # Pushes your generated blog to Github
-```
-
-<h2 id="deploy_subdir">Deploying to a Subdirectory (Github Project Pages does this)</h2>
-
-If you're deploying to a subdirectory on your site, or if you're using Github's project pages, make sure you set up your urls correctly in your configs.
-You can do this *almost* automatically:
-
-``` sh
-    rake set_root_dir[your/path]
-
-    # To go back to publishing to the document root
-    rake set_root_dir[/]
-```
-
-Then update your `_config.yml` and `Rakefile` as follows:
-
-``` sh
-    # _config.yml
-    url: http://yoursite.com/your/path
-
-    # Rakefile (if deploying with rsync)
-    document_root = "~/yoursite.com/your/path"
-```
-
-To manually configure deployment to a subdirectory, you'll change `_config.yml`, `config.rb` and `Rakefile`.
-Here's an example for deploying the Octopress website to Github Project Pages:
-
-``` sh
-    # _config.yml
-    destination: public/octopress
-    url: http://imathis.github.com/octopress
-    subscribe_rss: /octopress/atom.xml
-    root: /octopress
-
-    # config.rb - for Compass & Sass
-    http_path = "/octopress"
-    http_images_path = "/octopress/images"
-    http_fonts_path = "/octopress/fonts"
-    css_dir = "public/octopress/stylesheets"
-
-    # Rakefile
-    public_dir = "public/octopress"
-    # If deploying with rsync, update your Rakefile path
-    document_root = "~/yoursite.com/your/path"
-```
