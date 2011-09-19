@@ -1,18 +1,17 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
-require "./octopress/octopress.rb"
+require "./lib/octopress.rb"
 
-config          = Octopress::config
+config          = Octopress.config
 
 # --------------------------------- #
 #   get configs from _config.yml    #
 # --------------------------------- #
 #
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user        = config['ssh_user']
-document_root   = config['document_root']
-deploy_default  = config['deploy_default']
+#ssh_user        = config['ssh_user']
+deploy_config   = config['deploy_config']
 
 public_dir      = config['destination']     # compiled site directory
 source_dir      = config['source']          # source file directory
@@ -20,12 +19,11 @@ blog_index_dir  = config['blog_index_dir']  # directory for your blog's index pa
 new_post_ext    = config['new_post_ext']    # default new post file extension when using the new_post task
 new_page_ext    = config['new_page_ext']    # default new page file extension when using the new_page task
 server_port     = config['4000']            # port for preview server eg. localhost:4000
-deploy_branch   = config['deploy_branch']
+
 
 ## -- Misc Rakefile Configs -- ##
 
 themes_dir      = '.themes'   # directory for blog files
-deploy_dir      = '_deploy'   # deploy directory (for Github pages deployment)
 stash_dir       = '_stash'    # directory to stash posts for speedy generation
 posts_dir       = '_posts'    # directory for blog files
 
@@ -195,9 +193,23 @@ end
 # Deploying  #
 ##############
 
-desc "Default deploy task"
-multitask :deploy => [:copydot, "#{deploy_default}"] do
+desc "Setup deploy configuration"
+task :setup_deploy, :platform do |t, args|
+  valid_platforms = ['rsync', 'github', 'heroku', 'amazon']
+  platform = args.platform
+  platform = Octopress.ask('Please select your deployment platform.', valid_platforms) if platform.nil? || !valid_platforms.include?(platform)
+
+  Octopress.send("setup_#{platform}")
 end
+
+
+desc "Deploy task"
+task :deploy do
+  raise "## Please setup your deployment environment first with `rake setup_deploy`" if deploy_config.nil?
+  Rake::Task[:copydot].execute
+  Octopress.send("deploy_#{deploy_config.sub!(/\.yml/, '')}")
+end
+
 
 desc "copy dot files for deployment"
 task :copydot do
@@ -211,29 +223,6 @@ task :copydot do
   end
 end
 
-desc "Deploy website via rsync"
-task :rsync do
-  puts "## Deploying website via Rsync"
-  ok_failed system("rsync -avz --delete #{public_dir}/ #{ssh_user}:#{document_root}")
-end
-
-desc "deploy public directory to github pages"
-multitask :push do
-  puts "## Deploying branch to Github Pages "
-  (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
-  system "cp -R #{public_dir}/* #{deploy_dir}"
-  puts "\n## copying #{public_dir} to #{deploy_dir}"
-  cd "#{deploy_dir}" do
-    system "git add ."
-    system "git add -u"
-    puts "\n## Commiting: Site updated at #{Time.now.utc}"
-    message = "Site updated at #{Time.now.utc}"
-    system "git commit -m '#{message}'"
-    puts "\n## Pushing generated #{deploy_dir} website"
-    system "git push origin #{deploy_branch}"
-    puts "\n## Github Pages deploy complete"
-  end
-end
 
 desc "Update configurations to support publishing to root or sub directory"
 task :set_root_dir, :dir do |t, args|
@@ -257,43 +246,8 @@ task :set_root_dir, :dir do |t, args|
   end
 end
 
-desc "Generate rsync config"
-task :config_rsync do
-  File.open('rsync.yml', 'w') do |f|
-    f.write <<-CONFIG
-ssh_user: "user@domain.com"
-document_root: "~/website.com/"
-    CONFIG
-  end
-end
-
-desc "Setup _deploy folder and deploy branch"
-task :config_deploy, :branch do |t, args|
-  puts "!! Please provide a deploy branch, eg. rake init_deploy[gh-pages] !!" unless args.branch
-  puts "## Creating a clean #{args.branch} branch in ./#{deploy_dir} for Github pages deployment"
-  cd "#{deploy_dir}" do
-    system "git symbolic-ref HEAD refs/heads/#{args.branch}"
-    system "rm .git/index"
-    system "git clean -fdx"
-    system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
-    system "git add ."
-    system "git commit -m 'Octopress init'"
-  end
-  jekyll_config = IO.read('_config.yml')
-  jekyll_config.sub!(/^deploy_branch:.+$/, "deploy_branch: #{args.branch}")
-  jekyll_config.sub!(/^deploy_default:.+$/, "deploy_default: push")
-  File.open('_config.yml', 'w') do |f|
-    f.write jekyll_config
-  end
-  puts "## Deployment configured. Now you can deploy to the #{args.branch} branch with `rake deploy` ##"
-end
-
 def ok_failed(condition)
-  if (condition)
-    puts "OK"
-  else
-    puts "FAILED"
-  end
+  puts condition ? "OK" : "FAILED"
 end
 
 desc "list tasks"

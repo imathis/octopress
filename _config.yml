@@ -17,11 +17,9 @@ email:
 # ----------------------- #
 #       Deployment        #
 # ----------------------- #
-# Octopress defaults to deploying with Rsync, but you can deploy with Github pages too
-# read http://octopress.org/docs/deploying/ for more info
 
-deploy_default: rsync
-deploy_branch:
+deploy_config:
+
 
 # ----------------------- #
 #    Jekyll & Plugins     #
