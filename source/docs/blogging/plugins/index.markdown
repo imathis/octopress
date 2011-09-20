@@ -73,4 +73,10 @@ Import files on your file system into any blog post or page. For example, to emb
 
 [Examples & documentation &raquo;](/docs/plugins/render-partial/)
 
+## Key Commands
+
+Create stylish key command sequences: {% key &#8984; + Shift + R %}.
+
+[Examples & documentation &raquo;](/docs/plugins/key/)
+
 Also see the [Octopress Plugin index](/docs/plugins) for the full list of Octopress plugins.

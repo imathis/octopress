@@ -1,0 +1,50 @@
+$radius: 4px;
+$top-from: #D8D8D8;
+$top-to: #EEE;
+$bottom: #AAA;
+$text-color: #444;
+
+.key-sequence {
+    .key {
+        /* Geometry */
+        display: inline;
+        padding: 4px 5px 2px 5px;
+        margin: 0 2px;
+
+        /* Background */
+        $start-pos: 0%;
+        $stop-pos: 100%;
+        $gradient: linear-gradient(top, $top-from $start-pos,$top-to $stop-pos);
+        background:  $top-from; /* Old browsers */
+        background: -moz-#{$gradient}; /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop($start-pos,$top-from), color-stop($stop-pos,$top-to)); /* Chrome,Safari4+ */
+        background: -webkit-#{$gradient}; /* Chrome10+,Safari5.1+ */
+        background: -o-#{$gradient}; /* Opera11.10+ */
+        background: -ms-#{$gradient}; /* IE10+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top-from', endColorstr='$top-to',GradientType=0 ); /* IE6-9 */
+        background: $gradient; /* W3C */
+
+
+        /* Border */
+        -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        border-radius: $radius;
+        $box-shadow:
+        0 2px 0 $bottom,
+        0 2px 5px rgba(0,0,0,.35),
+        inset 0px  1px 0px 0px rgba(255,255,255,.8),
+        inset 0px -1px 0px 0px rgba(0,0,0,.2);
+        -webkit-box-shadow: $box-shadow;
+        -moz-box-shadow: $box-shadow;
+        box-shadow: $box-shadow;
+
+        /* Font */
+        font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+        vertical-align: top;
+        color: $text-color;
+        text-shadow: 0 1px 0px #FFF;
+        filter: dropshadow(color=#FFF, offx=0, offy=1);
+    }
+
+    .key-sep:before { content: " + "; }
+}

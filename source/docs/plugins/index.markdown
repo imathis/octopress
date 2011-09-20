@@ -20,6 +20,7 @@ Octopress ships with the following plugins. Many have been written specially for
 - [Pull Quote](/docs/plugins/pullquote/) - *generate CSS only pull quotes &mdash; no duplicate data, no javascript*
 - [Category Generator](/docs/plugins/category-generator/) - *generates archive pages for each blog category*
 - [Include Array](/docs/plugins/include-array/) - *includes an array of partials specified in the _config.yml*
+- [Key Tag](/docs/plugins/key/) - *insert stylish key command sequences*
 
 The following filters are used by Octopress, and are documented as necessary in their source.
 
