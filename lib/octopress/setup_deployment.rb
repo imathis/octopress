@@ -60,7 +60,7 @@ document_root: "#{document_root}"
           system "git clean -fdx"
           system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
           system "git add ."
-          system "git commit -m 'Octopress init'"
+          system "git commit -m \"Octopress init\""
         end
       end
       File.open("#{deploy_config}.yml", 'w') do |f|

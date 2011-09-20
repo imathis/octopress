@@ -1,7 +1,7 @@
 require './octopress/octopress.rb'
 
-config           = Octopress::config
-root_dir         = (config['root'] == '/') ? '' : config['root'].sub(/\/$/, '')
+config           = Octopress.config
+root_dir         = config['root'].sub(/\/$/, '')
 
 
 # Require any additional compass plugins here.

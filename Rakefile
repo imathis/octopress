@@ -9,8 +9,6 @@ config          = Octopress.config
 #   get configs from _config.yml    #
 # --------------------------------- #
 #
-# Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-#ssh_user        = config['ssh_user']
 deploy_config   = config['deploy_config']
 
 public_dir      = config['destination']     # compiled site directory
@@ -30,7 +28,7 @@ posts_dir       = '_posts'    # directory for blog files
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
   if File.directory?(source_dir) || File.directory?("sass")
-    abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
+    abort("rake aborted!") if Octopress.ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
   end
   # copy theme into working Jekyll directories
   theme = args.theme || 'classic'
@@ -95,7 +93,7 @@ task :new_post, :title do |t, args|
   title = args.title
   filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
   if File.exist?(filename)
-    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    abort("rake aborted!") if Octopress.ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
@@ -125,7 +123,7 @@ task :new_page, :filename do |t, args|
     mkdir_p page_dir
     file = page_dir + filename
     if File.exist?(file)
-      abort("rake aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+      abort("rake aborted!") if Octopress.ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
     end
     puts "Creating new page: #{file}"
     open(file, 'w') do |page|
@@ -197,7 +195,6 @@ end
 # Deploying  #
 ##############
 
-<<<<<<< HEAD
 desc "Setup deploy configuration"
 task :setup_deploy, :platform do |t, args|
   valid_platforms = ['rsync', 'github', 'heroku', 'amazon']
@@ -258,19 +255,6 @@ def ok_failed(condition)
   puts condition ? "OK" : "FAILED"
 end
 
-def get_stdin(message)
-  print message
-  STDIN.gets.chomp
-end
-
-def ask(message, valid_options)
-  if valid_options
-    answer = get_stdin("#{message} #{valid_options.to_s.gsub(/"/, '').gsub(/, /,'/')} ") while !valid_options.include?(answer)
-  else
-    answer = get_stdin(message)
-  end
-  answer
-end
 
 desc "list tasks"
 task :list do
