@@ -47,15 +47,15 @@ end
 
 desc "Generate jekyll site"
 task :generate do
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
   system "jekyll"
 end
 
 desc "Watch the site and regenerate when it changes"
 task :watch do
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  puts "Starting to watch source with Jekyll and Compass."
+  raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  puts "## Starting to watch source with Jekyll and Compass."
   jekyllPid = Process.spawn("jekyll --auto")
   compassPid = Process.spawn("compass watch")
 
@@ -69,8 +69,8 @@ end
 
 desc "preview the site in a web browser"
 task :preview do
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
+  raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  puts "## Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
   jekyllPid = Process.spawn("jekyll --auto")
   compassPid = Process.spawn("compass watch")
   rackupPid = Process.spawn("rackup --port #{server_port}")
@@ -86,7 +86,7 @@ end
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
 desc "Begin a new post in #{source_dir}/#{posts_dir}"
 task :new_post, :title do |t, args|
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   require './plugins/titlecase.rb'
   mkdir_p "#{source_dir}/#{posts_dir}"
   args.with_defaults(:title => 'new-post')
@@ -95,7 +95,7 @@ task :new_post, :title do |t, args|
   if File.exist?(filename)
     abort("rake aborted!") if Octopress.ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
-  puts "Creating new post: #{filename}"
+  puts "## Creating new post: #{filename}"
   open(filename, 'w') do |post|
     system "mkdir -p #{source_dir}/#{posts_dir}/";
     post.puts "---"
@@ -111,7 +111,7 @@ end
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
 desc "Create a new page in #{source_dir}/(filename)/index.#{new_page_ext}"
 task :new_page, :filename do |t, args|
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   require './plugins/titlecase.rb'
   args.with_defaults(:filename => 'new-page')
   page_dir = source_dir
@@ -125,7 +125,7 @@ task :new_page, :filename do |t, args|
     if File.exist?(file)
       abort("rake aborted!") if Octopress.ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
     end
-    puts "Creating new page: #{file}"
+    puts "## Creating new page: #{file}"
     open(file, 'w') do |page|
       page.puts "---"
       page.puts "layout: page"
@@ -137,7 +137,7 @@ task :new_page, :filename do |t, args|
       page.puts "---"
     end
   else
-    puts "Syntax error: #{args.filename} contains unsupported characters"
+    raise "!! Syntax error: #{args.filename} contains unsupported characters"
   end
 end
 
@@ -156,23 +156,23 @@ task :integrate do
   FileUtils.mv Dir.glob("#{source_dir}/#{stash_dir}/*.*"), "#{source_dir}/#{posts_dir}/"
 end
 
-desc "Clean out caches: _code_cache, _gist_cache, .sass-cache"
+desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
 task :clean do
-  rm_rf ["_code_cache/**", "_gist_cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
+  rm_rf [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
 end
 
 desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"
 task :update_style, :theme do |t, args|
   theme = args.theme || 'classic'
   if File.directory?("sass.old")
-    puts "removed existing sass.old directory"
+    puts "## Removed existing sass.old directory"
     rm_r "sass.old", :secure=>true
   end
   mv "sass", "sass.old"
   puts "## Moved styles into sass.old/"
   cp_r "#{themes_dir}/"+theme+"/sass/", "sass"
   cp_r "sass.old/custom/.", "sass/custom"
-  puts "## Updated Sass ##"
+  puts "## Updated Sass"
 end
 
 desc "Move source to source.old, install source theme updates, replace source/_includes/navigation.html with source.old's navigation"
@@ -188,7 +188,7 @@ task :update_source, :theme do |t, args|
   cp_r "#{source_dir}.old/_includes/custom/.", "#{source_dir}/_includes/custom/", :remove_destination=>true
   mv "#{source_dir}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != source_dir
   cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir
-  puts "## Updated #{source_dir} ##"
+  puts "## Updated #{source_dir}"
 end
 
 ##############
@@ -207,7 +207,7 @@ end
 
 desc "Deploy task"
 task :deploy do
-  raise "## Please setup your deployment environment first with `rake setup_deploy`" if deploy_config.nil?
+  raise "!! Please setup your deployment environment first with `rake setup_deploy`" if deploy_config.nil?
   Rake::Task[:copydot].execute
   Octopress.send("deploy_#{deploy_config.sub!(/\.yml/, '')}")
 end
@@ -222,7 +222,7 @@ desc "copy dot files for deployment"
 task :copydot do
   exclusions = [".", "..", ".DS_Store"]
   Dir["#{source_dir}/**/.*"].each do |file|
-    if !File.directory?(file) && !exclusions.include?(file)
+    if !File.directory?(file) && !exclusions.include?(File.basename(file))
       cp(file, file.gsub(/#{source_dir}/, "#{public_dir}"));
     end
   end
@@ -231,7 +231,7 @@ end
 
 desc "Update configurations to support publishing to root or sub directory"
 task :set_root_dir, :dir do |t, args|
-  puts ">>> !! Please provide a directory, eg. rake config_dir[publishing/subdirectory]" unless args.dir
+  raise "!! Please provide a directory, eg. rake config_dir[publishing/subdirectory]" unless args.dir
   if args.dir
     if args.dir == "/"
       dir = ""
@@ -247,7 +247,7 @@ task :set_root_dir, :dir do |t, args|
     end
     rm_rf public_dir
     mkdir_p "#{public_dir}#{dir}"
-    puts "## Site's root directory is now '/#{dir.sub(/^\//, '')}' ##"
+    puts "## Site's root directory is now '/#{dir.sub(/^\//, '')}'"
   end
 end
 
