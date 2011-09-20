@@ -1,14 +1,16 @@
 require './octopress/octopress.rb'
 
 config           = Octopress::config
+root_dir         = (config['root'] == '/') ? '' : config['root'].sub(/\/$/, '')
+
 
 # Require any additional compass plugins here.
 project_type     = :stand_alone
 
 # Publishing paths
 http_path        = config['root']
-http_images_path = "/images"
-http_fonts_path  = "/fonts"
+http_images_path = "#{root_dir}/images"
+http_fonts_path  = "#{root_dir}/fonts"
 css_dir          = "#{config['destination']}/stylesheets"
 
 # Local development paths

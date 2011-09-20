@@ -27,15 +27,7 @@ module Deployment
 
     def deploy_heruku
       puts "## Deploying Octopress to Heroku"
-      system "git add ."
-      system "git add -f #{self.config['destination']}"
-      system "git add -u"
-      puts "\n## Commiting: Site updated at #{Time.now.utc}"
-      message = "Site updated at #{Time.now.utc}"
-      system "git commit -m \"#{message}\""
-      puts "\n## Pushing Octopress"
-      system "git push origin #{deploy_branch}"
-      puts "\n## Heroku deploy complete"
+      system "git push heroku master"
     end
 
 
