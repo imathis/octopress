@@ -10,7 +10,7 @@ module Deployment
     def deploy_github
       puts "## Deploying branch to Github Pages"
       Dir["#{self.config['deploy_dir']}/*"].each { |f| rm_rf(f) }
-      system "cp -R #{self.config['destination']}/* #{self.config['deploy_dir']}"
+      system "cp -R #{self.config['destination']}/ #{self.config['deploy_dir']}"
       puts "\n## copying #{self.config['destination']} to #{self.config['deploy_dir']}"
       cd "#{self.config['deploy_dir']}" do
         system "git add ."
