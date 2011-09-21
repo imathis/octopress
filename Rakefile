@@ -156,9 +156,9 @@ task :integrate do
   FileUtils.mv Dir.glob("#{source_dir}/#{stash_dir}/*.*"), "#{source_dir}/#{posts_dir}/"
 end
 
-desc "Clean out caches: _code_cache, _gist_cache, .sass-cache"
+desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
 task :clean do
-  rm_rf ["_code_cache/**", "_gist_cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
+  rm_rf [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
 end
 
 desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"
@@ -209,7 +209,7 @@ desc "copy dot files for deployment"
 task :copydot do
   exclusions = [".", "..", ".DS_Store"]
   Dir["#{source_dir}/**/.*"].each do |file|
-    if !File.directory?(file) && !exclusions.include?(file)
+    if !File.directory?(file) && !exclusions.include?(File.basename(file))
       cp(file, file.gsub(/#{source_dir}/, "#{public_dir}"));
     end
   end
@@ -225,14 +225,14 @@ desc "deploy public directory to github pages"
 multitask :push do
   puts "## Deploying branch to Github Pages "
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
-  system "cp -R #{public_dir}/* #{deploy_dir}"
+  system "cp -R #{public_dir}/ #{deploy_dir}"
   puts "\n## copying #{public_dir} to #{deploy_dir}"
   cd "#{deploy_dir}" do
     system "git add ."
     system "git add -u"
     puts "\n## Commiting: Site updated at #{Time.now.utc}"
     message = "Site updated at #{Time.now.utc}"
-    system "git commit -m '#{message}'"
+    system "git commit -m \"#{message}\""
     puts "\n## Pushing generated #{deploy_dir} website"
     system "git push origin #{deploy_branch}"
     puts "\n## Github Pages deploy complete"
@@ -284,7 +284,7 @@ task :config_deploy, :branch do |t, args|
     system "git clean -fdx"
     system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
     system "git add ."
-    system "git commit -m 'Octopress init'"
+    system "git commit -m \"Octopress init\""
     rakefile = IO.read(__FILE__)
     rakefile.sub!(/deploy_branch(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_branch\\1=\\2\\3#{args.branch}\\3")
     rakefile.sub!(/deploy_default(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_default\\1=\\2\\3push\\3")
