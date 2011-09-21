@@ -1,4 +1,5 @@
-require './octopress/octopress.rb'
+require 'rake'
+require './lib/octopress.rb'
 
 config           = Octopress.config
 root_dir         = config['root'].sub(/\/$/, '')
