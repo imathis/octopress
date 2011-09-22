@@ -12,28 +12,21 @@ If that sounds daunting, Octopress probably isn't for you.
 
 ## Before You Begin
 
-You'll need to have Git and RVM installed before you move forward.
+You'll need to [install Git](http://git-scm.com/) and set up your Ruby environment.
+**Octopress requires Ruby 1.9.2** wich you can easily install with [RVM](http://rvm.beginrescueend.com) or [rbenv](https://github.com/sstephenson/rbenv).
+You can't use both rbenv and RVM on the same system, so choose one.
 
-1. [Download Git](http://git-scm.com/)
+### Using RVM
 
-Octopress requires Ruby 1.9.2 so you have two alternatives to install it: RVM or rbenv.
-
-**Important:** you can't have both rbenv and RVM installed on the same system. Choose one.
-
-### RVM steps
-
-1. [Setup RVM](/docs/setup/rvm)
-2. Install Ruby 1.9.2
+If you don't have RVM yet, [Install RVM](/docs/setup/rvm) and then install Ruby 1.9.2.
 
 ```sh
 rvm install 1.9.2
 ```
 
-### rbenv steps
+### Using rbenv
 
-1. [Install rbenv](https://github.com/sstephenson/rbenv#section_2)
-2. [Install ruby-build](https://github.com/sstephenson/ruby-build)
-3. Install Ruby 1.9.2
+If you don't have rbenv yet, [Install rbenv](https://github.com/sstephenson/rbenv#section_2) and [install ruby-build](https://github.com/sstephenson/ruby-build), then install Ruby 1.9.2.
 
 ```sh
 rbenv install 1.9.2-p290
