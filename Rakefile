@@ -213,8 +213,7 @@ task :deploy do
 end
 
 desc "Generate website and deploy"
-task :gen_deploy do
-  [:integrate, :generate, :deploy].each { |t| Rake::Task[t].execute }
+task :gen_deploy => [:integrate, :generate, :deploy] do
 end
 
 
