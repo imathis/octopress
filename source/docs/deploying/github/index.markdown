@@ -16,7 +16,7 @@ Github Pages for users and organizations uses the master branch like the public 
 As a result, you'll want to work on the source for your blog in the source branch and commit *the generated content* to the master branch. Octopress has a configuration task that helps you set all this up.
 
 ``` sh
-rake config_github_pages
+rake setup_github_pages
 ```
 
 This will:
@@ -57,7 +57,7 @@ Github will look for a `gh-pages` branch in your project's repository and make t
 Here's now you can set up Octopress site to publish to your projects gh-pages repository:
 
 ``` sh
-rake config_github_pages
+rake setup_github_pages
 ```
 
 This will:
