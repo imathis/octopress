@@ -25,3 +25,21 @@ Now if you run
 
 in your terminal, your `public` directory will be synced to your server's document root.
 
+## Version control
+
+You'll want to keep your blog source in a remote git repository,
+so either [set up a Github repository](https://github.com/repositories/new) or [host your own](#self_hosted_git) and then do this.
+
+```sh
+# Since you cloned Octopress, you'll need to change the origin remote
+git remote rename origin octopress
+git remote add origin (your repository url)
+# set your new origin as the default branch
+git config branch.master.remote origin
+```
+
+
+{% render_partial docs/deploying/_self_hosted_git.markdown %}
+
+{% render_partial docs/deploying/_subdir.markdown %}
+

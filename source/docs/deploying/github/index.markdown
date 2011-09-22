@@ -6,37 +6,87 @@ sidebar: false
 footer: false
 ---
 
-To setup deployment, you'll want to clone your target repository into the `_deploy` directory in your Octopress project.
-If you're using Github user or organization pages, clone the repository `git@github.com:username/username.github.com.git`.
+## With Github User/Organization pages
 
-### With Github User/Organization pages
+Use this if you want to host a blog from `http://username.github.com` (though you can also use [custom domains](#custom_domains)).
 
-``` sh
-    git clone git@github.com:username/username.github.com _deploy
-    rake config_deploy[master]
-```
+Create a [new Github repository](https://github.com/repositories/new) and name the repository with your user name or organization name `username.github.com` or `organization.github.com`.
 
-### With Github Project pages (gh-pages)
+Github Pages for users and organizations uses the master branch like the public directory on a web server, serving up the files at your Pages url `http://username.github.com`.
+As a result, you'll want to work on the source for your blog in the source branch and commit *the generated content* to the master branch. Octopress has a configuration task that helps you set all this up.
 
 ``` sh
-    git clone git@github.com:username/project.git _deploy
-    rake config_deploy[gh-pages]
+rake config_github_pages
 ```
 
-The `config_deploy` rake task takes a branch name as an argument and creates a [new empty branch](http://book.git-scm.com/5_creating_new_empty_branches.html), and adds an initial commit.
-This also sets `deploy_default = "push"` in your `_config.yml` and prepares your branch for easy deployment. The `rake deploy` task copies the generated blog from the `public` directory to the `_deploy` directory, adds new files, removes old files, sets a commit message, and pushes to Github.
-Github will queue your site for publishing (which usually occurs instantly or within minutes if it's your first commit).
+This will:
 
-Now you should be set up to deploy, just run
+1. Ask you for your Github Pages repository url.
+2. Rename the remote pointing to imathis/octopress from 'origin' to 'octopress'
+3. Add your Github Pages repository as the default origin remote.
+4. Switch the active branch from master to source.
+5. Configure your blog's url according to your repository.
+6. Setup a master branch in the _deploy directory for deployment.
+
+Next run:
+
+```sh
+rake generate
+rake deploy
+```
+
+This will generate your blog, copy the generated files into `_deploy/`, add them to git, commit and push them up to the master branch. In a few seconds you should get an email
+from Github telling you that your commit has been received and will be published on your site.
+
+**Don't forget** to commit the source for your blog.
+
+```sh
+git add .
+git commit -m 'your message'
+git push origin source
+```
+
+**Note:** With new repositories, Github sets the default branch based on the branc you push first, and it looks there for the generated site content.
+If you're having trouble getting Github to publish your site, go to the admin panel for your repository and make sure that the master branch is the default branch.
+
+## With Github Project pages (gh-pages)
+
+Github's Project Pages service allows you to host a site for your existing open source project.
+Github will look for a `gh-pages` branch in your project's repository and make the contents available at url like `http://username.github.com/project`.
+
+Here's now you can set up Octopress site to publish to your projects gh-pages repository:
 
 ``` sh
-    rake generate   # If you haven't generated your blog yet
-    rake deploy     # Pushes your generated blog to Github
+rake config_github_pages
 ```
 
-<h2 id="deploy_subdir">Deploying to a Subdirectory (Github Project Pages does this)</h2>
+This will:
 
-{% render_partial docs/deploying/_subdir.markdown %}
+1. Ask you for the repository url for your project.
+2. Rename the remote pointing to imathis/octopress from 'origin' to 'octopress'
+3. Configure your blog for deploying to a subdirectory.
+4. Set up a gh-pages branch for your project in the _deploy directory, ready for deployment.
+
+Next run:
+
+```sh
+rake generate
+rake deploy
+```
+
+This will generate your blog, copy the generated files into `_deploy/`, add them to git, commit and push them up to the master branch. In a few seconds you should get an email
+from Github telling you that your commit has been received and will be published on your site.
+
+Now you have a place to commit the generated content for your site, but you should also set up repository to store the source for your blog.
+After you set up a repository for your blog source, add it as the origin remote.
+
+```sh
+git remote add origin (your repo url)
+# set your new origin as the default branch
+git config branch.master.remote origin
+```
+
+Now push your changes and you'll be all set.
 
 <h2 id="custom_domains">Custom Domains</h2>
 

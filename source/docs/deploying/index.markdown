@@ -24,25 +24,3 @@ If you have web hosting service you can probably deploy with [Rsync](http://en.w
 If your host doesn't offer SSH access, and you're looking for one that does, check out [Dreamhost](http://www.dreamhost.com/r.cgi?109007) (I've been a happy customer since 2005).
 
 [Deploying with Rsync &raquo;](/docs/deploying/rsync)
-
-## Host your own remote repository
-
-If you want to set up a private git repository on your own server, here's how you'd do it. You'll need SSH access to follow along.
-
-```sh
-ssh user@host.com
-mkdir -p git/octopress.git
-cd git/octopress.git
-git init --bare
-pwd  # print the working directory, you'll need it below.
-logout
-```
-
-The origin remote currently points to the Octopress project on Github but you'll want to point it to your remote repository.
-
-```sh
-git remote rename origin octopress
-git remote add origin ssh://user@host.com/(output of pwd above)
-git config branch.master.remote origin
-```
-
