@@ -46,7 +46,7 @@ git commit -m 'your message'
 git push origin source
 ```
 
-**Note:** With new repositories, Github sets the default branch based on the branc you push first, and it looks there for the generated site content.
+**Note:** With new repositories, Github sets the default branch based on the branch you push first, and it looks there for the generated site content.
 If you're having trouble getting Github to publish your site, go to the admin panel for your repository and make sure that the master branch is the default branch.
 
 ## With Github Project pages (gh-pages)
