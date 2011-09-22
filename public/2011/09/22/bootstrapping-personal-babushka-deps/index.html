@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>James Ottaway</title>
+  <title>Bootstrapping Personal Babushka Deps - James Ottaway</title>
   <meta name="author" content="James Ottaway">
   
 
@@ -16,7 +16,7 @@
 
   
 
-  <link rel="canonical" href="http://blog.james.ottaway.mp/index.html"/>
+  <link rel="canonical" href="http://blog.james.ottaway.mp/2011/09/22/bootstrapping-personal-babushka-deps/"/>
   <link href="/favicon.png" rel="shortcut icon" />
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -56,15 +56,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
-
-
-
-  <article>
-    
+      <div>
+<article class="hentry">
+  
   <header>
     
-      <h1 class="entry-title"><a href="/2011/09/22/bootstrapping-personal-babushka-deps/">Bootstrapping Personal Babushka Deps</a></h1>
+      <h1 class="entry-title">Bootstrapping Personal Babushka Deps</h1>
     
     
       <p class="meta">
@@ -82,7 +79,7 @@
   </header>
 
 
-  <div class="entry-content"><p>I have recently been pushing the envelope of what I use <a href="http://babushka.me/">Babushka</a> towards the vicinity of provisioning everything I need for my personal and work machines. To this effect, I am running Babushka on fresh installs of both OS X Lion and Ubuntu 11.04.</p>
+<div class="entry-content"><p>I have recently been pushing the envelope of what I use <a href="http://babushka.me/">Babushka</a> towards the vicinity of provisioning everything I need for my personal and work machines. To this effect, I am running Babushka on fresh installs of both OS X Lion and Ubuntu 11.04.</p>
 
 <p>As you can imagine, the first thing I do is install Babushka. That all works great, but my next step is to run something like <code>babushka dev-natty</code>. Unfortunately, this fresh machine doesn&#8217;t have my personal deps on it, and I don&#8217;t want to keep running all of my personal deps like <code>babushka jamesottaway:dev-natty</code></p>
 
@@ -144,21 +141,52 @@ end</code></pre></noscript></div>
 
 <p>The end result: <code>babushka jamesottaway:bootstrap</code> will get me up and ready to edit and run my personal deps without any further messing around.</p>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">James Ottaway</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-09-22T08:10:00+10:00" pubdate  data-updated="true" >Sep 22<span>nd</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/babushka/'>babushka</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.james.ottaway.mp/2011/09/22/bootstrapping-personal-babushka-deps/" data-via="" data-counturl="http://blog.james.ottaway.mp/2011/09/22/bootstrapping-personal-babushka-deps/" >Tweet</a>
   
   
+  <div class="g-plusone" data-size="medium"></div>
+  
+</div>
 
-
-  </article>
-
-<nav role="pagination">
-  <div>
     
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</nav>
+  </footer>
+</article>
 
 </div>
+
 <aside role=sidebar>
   
     <section>
@@ -178,6 +206,7 @@ end</code></pre></noscript></div>
 
   
 </aside>
+
 
     </div>
   </div>
