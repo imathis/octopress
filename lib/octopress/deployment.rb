@@ -1,6 +1,10 @@
 module Deployment
   module ClassMethods
 
+    def method_missing(m, *args, &block)  
+      raise "!! No deploy method for platform `#{m.to_s.sub(/setup_/, '')}` found. Aborting."
+    end
+
     def get_deployment_platforms
       platforms = []
       self.methods(true).grep(/deploy_/).each { |m| platforms << m.to_s.sub(/deploy_/, '') }

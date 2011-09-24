@@ -8,6 +8,10 @@ module SetupDeployment
   module ClassMethods
     include Rake::DSL
 
+    def method_missing(m, *args, &block)  
+      raise "!! No setup method for deplyoment platform `#{m.to_s.sub(/setup_/, '')}` found. Aborting."
+    end
+
     def set_deployment_config(deploy_config)
       jekyll_config = IO.read('_config.yml')
       if /^deploy_config:.*$/ =~ jekyll_config
