@@ -10,7 +10,18 @@ module SetupDeployment
 
     def set_deployment_config(deploy_config)
       jekyll_config = IO.read('_config.yml')
-      jekyll_config.sub!(/^deploy_config:.*$/, "deploy_config: #{deploy_config}")
+      if /^deploy_config:.*$/ =~ jekyll_config
+        jekyll_config.sub!(/^deploy_config:.*$/, "deploy_config: #{deploy_config}")
+      else
+        jekyll_config << <<-CONFIG
+
+# ----------------------- #
+#       Deployment        #
+# ----------------------- #
+
+deploy_config: #{deploy_config}
+        CONFIG
+      end
       File.open('_config.yml', 'w') { |f| f.write jekyll_config }
 
       puts "## Deployment configured in #{deploy_config}.yml."
@@ -25,8 +36,8 @@ module SetupDeployment
 
       File.open("#{deploy_config}.yml", 'w') do |f|
         f.write <<-CONFIG
-ssh_user: "#{ssh_user}"
-document_root: "#{document_root}"
+ssh_user: #{ssh_user}
+document_root: #{document_root}
         CONFIG
       end
       set_deployment_config(deploy_config)
@@ -65,8 +76,8 @@ document_root: "#{document_root}"
       end
       File.open("#{deploy_config}.yml", 'w') do |f|
         f.write <<-CONFIG
-deploy_branch: "#{@branch}"
-deploy_dir: "#{deploy_dir}"
+deploy_branch: #{@branch}
+deploy_dir: #{deploy_dir}
 CONFIG
       end
       set_deployment_config(deploy_config)
