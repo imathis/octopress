@@ -199,7 +199,7 @@ end
 
 desc "Setup deploy configuration"
 task :setup_deploy, :platform do |t, args|
-  valid_platforms = ['rsync', 'github', 'heroku', 'amazon']
+  valid_platforms = Octopress.get_deployment_platforms
   platform = args.platform
   platform = Octopress.ask('Please select your deployment platform.', valid_platforms) if platform.nil? || !valid_platforms.include?(platform)
 

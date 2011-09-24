@@ -1,6 +1,13 @@
 module Deployment
   module ClassMethods
 
+    def get_deployment_platforms
+      platforms = []
+      self.methods(true).grep(/deploy_/).each { |m| platforms << m.to_s.sub(/deploy_/, '') }
+      platforms.sort!
+    end
+
+
     def deploy_rsync
       puts "## Deploying website via Rsync"
       ok_failed system("rsync -avz --delete #{self.config['public_dir']}/ #{self.config['ssh_user']}:#{self.config['document_root']}")
