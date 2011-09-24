@@ -103,6 +103,8 @@ module Deployment
         end
         distribution = distributions.select { |distribution| distribution[:cnames].include?(s3_bucket) }.first
         puts "Distribution #{distributionID} created and ready to serve your blog"
+        puts "Don't forget to setup your DNS properly. You should have something like this in your DNS zone file:"
+        puts "\twww 10800 IN CNAME #{distributionID}.cloudfront.net."
       else
         distribution = distributions.first
         puts "Distribution #{distribution[:aws_id]} found"
