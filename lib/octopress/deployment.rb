@@ -48,9 +48,9 @@ module Deployment
       paths_to_invalidate = []
       # Retreive bucket or create it if not available
       bucket = s3.bucket(s3_bucket, true, 'public-read')
-      Dir.glob("public/**/*").each do |file|
+      Dir.glob("#{self.config['destination']}/**/*").each do |file|
         if File.file?(file)
-          remote_file = file.gsub("public/", "")
+          remote_file = file.gsub("#{self.config['destination']}/", "")
           key = bucket.key(remote_file, true)
           if !key || (key.e_tag != ("\"" + Digest::MD5.hexdigest(File.read(file))) + "\"")
             puts "Deploying file #{remote_file}"
