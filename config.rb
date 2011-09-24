@@ -12,7 +12,7 @@ project_type     = :stand_alone
 http_path        = config['root']
 http_images_path = "#{root_dir}/images"
 http_fonts_path  = "#{root_dir}/fonts"
-css_dir          = "#{config['destination']}/stylesheets"
+css_dir          = config['stylesheets']
 
 # Local development paths
 sass_dir         = "sass"

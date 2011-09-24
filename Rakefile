@@ -12,6 +12,7 @@ config          = Octopress.config
 deploy_config   = config['deploy_config']
 
 public_dir      = config['destination']     # compiled site directory
+style_dir       = config['stylesheets']     # stylesheet directory
 source_dir      = config['source']          # source file directory
 blog_index_dir  = config['blog_index_dir']  # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
 new_post_ext    = config['new_post_ext']    # default new post file extension when using the new_post task
@@ -49,6 +50,7 @@ desc "Generate jekyll site"
 task :generate do
   raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
+  style_dir.sub!(/#{public_dir}/, source_dir)
   system "jekyll"
 end
 
