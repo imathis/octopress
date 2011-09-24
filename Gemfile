@@ -12,6 +12,8 @@ group :development do
   gem 'rubypants'
   gem 'rb-fsevent'
   gem 'stringex'
+  gem 'right_aws'
+  gem 'mime-types'
 end
 
 gem 'sinatra', '1.2.6'
