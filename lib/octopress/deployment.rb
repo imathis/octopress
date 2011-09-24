@@ -36,7 +36,7 @@ module Deployment
 
 
     def deploy_amazon
-      Octopress.send("deploy_amazon_#{config['service']}")
+      send("deploy_amazon_#{config['service']}")
     end
     
     def deploy_amazon_s3
