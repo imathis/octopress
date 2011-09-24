@@ -21,7 +21,7 @@ You can't use both rbenv and RVM on the same system, so choose one.
 If you don't have RVM yet, [Install RVM](/docs/setup/rvm) and then install Ruby 1.9.2.
 
 ```sh
-rvm install 1.9.2
+rvm install 1.9.2 && rvm use 1.9.2
 ```
 
 ### Using rbenv
