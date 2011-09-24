@@ -116,7 +116,7 @@ module Deployment
       if (paths_to_invalidate.empty?) then
         return;
       end
-      puts "Invalidating CloudFront caches"
+      puts "Invalidating CloudFront caches..."
       logger = Logger.new(STDOUT)
       logger.level = Logger::WARN
       acf = RightAws::AcfInterface.new(self.config['aws_access_key_id'], self.config['aws_secret_access_key'], { :logger => logger })
