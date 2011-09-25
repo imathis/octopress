@@ -12,7 +12,7 @@ simple_search: http://google.com/search
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: james@ottaway.mp
 
 # ----------------------- #
 #    Jekyll & Plugins     #
