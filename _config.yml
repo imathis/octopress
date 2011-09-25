@@ -55,8 +55,8 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
-twitter_tweet_count: 4
+twitter_user: jms_
+twitter_tweet_count: 5
 twitter_show_replies: false
 twitter_follow_button: true
 twitter_show_follower_count: false
