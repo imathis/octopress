@@ -14,6 +14,7 @@ Octopress ships with the following plugins. Many have been written specially for
 - [Code Block](/docs/plugins/codeblock/) - *for sharing code with titles and links*
 - [Include Code](/docs/plugins/include-code/) - *embed code from your filesystem with a download link*
 - [Gist Tag](/docs/plugins/gist-tag/) - *automatically downloads and embeds Github gists*
+- [jsFiddle](/docs/plugins/jsfiddle-tag/) - *embeds code from jsFiddle*
 - [Image Tag](/docs/plugins/image-tag/) - *easily post images with class names and titles*
 - [Render Partial](/docs/plugins/render-partial/) - *insert any file into another post or page*
 - [Block Quote](/docs/plugins/blockquote/) - *generate beautiful, semantic block quotes*
