@@ -36,11 +36,13 @@ deploy_config: #{deploy_config}
       deploy_config = __method__.to_s.sub('setup_', '')
 
       ssh_user = ask("SSH user", "user@domain.com")
+      ssh_port = ask("SSH port", "22")
       document_root = ask("Document root", "~/website.com/")
 
       File.open("#{deploy_config}.yml", 'w') do |f|
         f.write <<-CONFIG
 ssh_user: #{ssh_user}
+ssh_port: #{ssh_port}
 document_root: #{document_root}
         CONFIG
       end
