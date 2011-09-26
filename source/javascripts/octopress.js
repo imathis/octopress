@@ -1,6 +1,7 @@
 function getNav() {
   var mobileNav = $('nav[role=navigation] fieldset[role=search]').after('<fieldset class="mobile-nav"></fieldset>').next().append('<select></select>');
   mobileNav.children('select').append('<option value="">Navigate&hellip;</option>');
+  $('ul[role=main-navigation]').addClass('main-navigation');
   $('ul.main-navigation a').each(function(link) {
     mobileNav.children('select').append('<option value="'+link.href+'">&bull; '+link.text+'</option>');
   });
@@ -10,15 +11,17 @@ function getNav() {
 }
 
 function addSidebarToggler() {
-  $('#content').append('<span class="toggle-sidebar"></span>');
-  $('.toggle-sidebar').bind('click', function(e) {
-    e.preventDefault();
-    if ($('body').hasClass('collapse-sidebar')) {
-      $('body').removeClass('collapse-sidebar');
-    } else {
-      $('body').addClass('collapse-sidebar');
-    }
-  });
+  if(!$('body').hasClass('sidebar-footer')) {
+    $('#content').append('<span class="toggle-sidebar"></span>');
+    $('.toggle-sidebar').bind('click', function(e) {
+      e.preventDefault();
+      if ($('body').hasClass('collapse-sidebar')) {
+        $('body').removeClass('collapse-sidebar');
+      } else {
+        $('body').addClass('collapse-sidebar');
+      }
+    });
+  }
   var sections = $('aside.sidebar > section');
   if (sections.length > 1) {
     sections.each(function(section, index){
@@ -89,7 +92,7 @@ function flashVideoFallback(){
 function wrapFlashVideos() {
   $('object').each(function(object) {
     object = $(object);
-    if (object.children('param[name=movie]')) {
+    if ( $('param[name=movie]', object).length ) {
       var wrapper = object.before('<div class="flash-video"><div>').previous();
       $(wrapper).children().append(object);
     }
