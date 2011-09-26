@@ -29,6 +29,6 @@ source ~/.zshrc
 Install Ruby 1.9.2 and ensure RVM has the latest RubyGems.
 
 ```sh
-rvm install 1.9.2
+rvm install 1.9.2 && rvm use 1.9.2
 rvm rubygems latest
 ```
