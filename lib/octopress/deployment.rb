@@ -14,7 +14,7 @@ module Deployment
 
     def deploy_rsync
       puts "## Deploying website via Rsync"
-      ok_failed system("rsync -avze 'ssh -p #{ssh_port}' --delete #{self.config['public_dir']}/ #{self.config['ssh_user']}:#{self.config['document_root']}")
+      ok_failed system("rsync -avze 'ssh -p #{self.config['ssh_port']}' --delete #{self.config['public_dir']}/ #{self.config['ssh_user']}:#{self.config['document_root']}")
     end
 
 
