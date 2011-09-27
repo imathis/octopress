@@ -14,7 +14,7 @@ This means that I can run `rake generate` like usual, and track my `public` dire
 
 This works great, until I wanted to do a `git push origin master` to keep my Github repository up-to-date. I'd rather not have to have my `public` directory visible on Github, given that the real magic is happening inside the `source` directory.
 
-My solution was to deploy to Heroku from a Git branch, aptly named `deploy`. Creating the branch was as simple as `git checkout -b deploy`.
+My solution was to deploy to Heroku from a Git branch, aptly named `deploy`. Creating the branch was as simple as `git checkout -b deploy`. Once on the branch, I quickly run `git merge master` to pull new posts I have written plus any other changes that need to be deployed.
 
 I then ran `rake generate` and `git add --force public` like before, but the deploy step became `git push heroku deploy:master`. What this says is that I want to push my local `deploy` branch to the `heroku` remote's `master` branch.
 
