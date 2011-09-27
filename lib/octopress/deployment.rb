@@ -196,7 +196,7 @@ module Deployment
       packet = Net::DNS::Resolver.start(domain, Net::DNS::NS)
       current_dns_servers = packet.answer.collect { |ns| ns.nsdname }
       amazon_dns_servers = resource_record_sets.reject { |record| record[:type] != 'NS' }.collect { |ns| ns[:resource_records] }.flatten
-      unless (amazon_dns_servers.eql? current_dns_servers) then
+      unless ((amazon_dns_servers - current_dns_servers).empty?) then
         puts "####################################################################################################################"
         puts "# Your DNS Setup is invalid!"
         puts "#"
