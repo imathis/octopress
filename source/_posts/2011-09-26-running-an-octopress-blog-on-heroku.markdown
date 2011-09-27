@@ -3,7 +3,7 @@ layout: post
 title: "Running an Octopress blog on Heroku"
 date: 2011-09-26 08:46
 comments: true
-categories: octopress, heroku, blog
+categories: octopress heroku blog
 ---
 
 As a software developer worth his salt, I use Git to version any code that I write. It works really well, and I've recently come to love the idea of extending that to include versioning *everything* in my life a developer. This means that when it comes to blogging, options like Wordpress just aren't going to cut it. After reading about Octopress, a blogging framework that generates your blog as a static website, I fell in love.
