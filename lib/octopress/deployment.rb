@@ -1,6 +1,7 @@
 require "right_aws"
 require "digest/md5"
 require "mime/types"
+require 'net/dns/resolver'
 require "public_suffix_service"
 
 module Deployment
@@ -165,14 +166,6 @@ module Deployment
         zone = zone[0]
       end
       
-      # Delete zone records and the zone itself
-      #resource_record_sets = r53.list_resource_record_sets(zone[:aws_id])
-      #resource_record_sets = resource_record_sets.reject { |record| record[:type] == 'NS' || record[:type] == 'SOA' }
-      #puts resource_record_sets
-      #r53.delete_resource_record_sets(zone[:aws_id], resource_record_sets, 'kill all records I have created')
-      #r53.delete_hosted_zone(zone[:aws_id])
-      #exit
-      
       # Setup the 'www' record if needed
       resource_record_sets = r53.list_resource_record_sets(zone[:aws_id])
       if (self.config['service'] == 's3') then
@@ -192,20 +185,31 @@ module Deployment
               :resource_records => ['174.129.25.170']
             }]
           r53.create_resource_record_sets(zone[:aws_id], new_resource_record_sets, 'My Octopress records')
+          puts "Amazon Route53: zone created for your domain '#{domain}'"
         end
-        puts "####################################################################################################################"
-        puts "Amazon Route53: domain setup complete. Please set up the following DNS servers for your domain '#{domain}':"
-        resource_record_sets.each { |record|
-          if (record[:type] == 'NS') then
-            record[:resource_records].each { |resource| 
-              puts " - #{resource}"
-            }
-          end
-        }
-        puts "####################################################################################################################"
       else
         raise "Unknow Amazon service: #{self.config['service']
         self.config['service']}"
+      end
+      
+      # Check domain name configuration for appropriate DNS servers
+      packet = Net::DNS::Resolver.start(domain, Net::DNS::NS)
+      current_dns_servers = packet.answer.collect { |ns| ns.nsdname }
+      amazon_dns_servers = resource_record_sets.reject { |record| record[:type] != 'NS' }.collect { |ns| ns[:resource_records] }.flatten
+      unless (amazon_dns_servers.eql? current_dns_servers) then
+        puts "####################################################################################################################"
+        puts "# Your DNS Setup is invalid!"
+        puts "#"
+        puts "# Your current DNS servers are:"
+        current_dns_servers.each { |dns|
+          puts "# - #{dns}"
+        }
+        puts "#"
+        puts "# You should set the following DNS servers for your domain '#{domain}' instead:"
+        amazon_dns_servers.each { |dns|
+          puts "# - #{dns}"
+        }
+        puts "####################################################################################################################"
       end
     end
     

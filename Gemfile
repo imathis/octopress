@@ -15,6 +15,7 @@ group :development do
   gem 'right_aws'
   gem 'mime-types'
   gem 'public_suffix_service'
+  gem 'net-dns'
 end
 
 gem 'sinatra', '1.2.6'
