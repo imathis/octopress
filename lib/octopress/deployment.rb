@@ -114,13 +114,6 @@ module Deployment
         end
         distribution = distributions.select { |distribution| distribution[:cnames].include?(s3_bucket) }.first
         puts "Distribution #{distributionID} created and ready to serve your blog"
-        
-        if (self.config['managed_dns']) then
-          deploy_amazon_cloudfront_route53_dns(distribution)
-        end
-        
-        puts "Don't forget to setup your DNS properly. You should have something like this in your DNS zone file:"
-        puts "\twww 10800 IN CNAME #{distributionID}.cloudfront.net."
       else
         distribution = distributions.first
         puts "Distribution #{distribution[:aws_id]} found"
@@ -166,6 +159,14 @@ module Deployment
         zone = zone[0]
       end
       
+      # Delete zone records and the zone itself
+      #resource_record_sets = r53.list_resource_record_sets(zone[:aws_id])
+      #resource_record_sets = resource_record_sets.reject { |record| record[:type] == 'NS' || record[:type] == 'SOA' }
+      #puts resource_record_sets
+      #r53.delete_resource_record_sets(zone[:aws_id], resource_record_sets, 'kill all records I have created')
+      #r53.delete_hosted_zone(zone[:aws_id])
+      #exit
+      
       # Setup the 'www' record if needed
       resource_record_sets = r53.list_resource_record_sets(zone[:aws_id])
       if (self.config['service'] == 's3') then
@@ -186,6 +187,8 @@ module Deployment
             }]
           r53.create_resource_record_sets(zone[:aws_id], new_resource_record_sets, 'My Octopress records')
           puts "Amazon Route53: zone created for your domain '#{domain}'"
+        else
+          puts "Amazon Route53 setup OK"
         end
       else
         raise "Unknow Amazon service: #{self.config['service']
@@ -193,23 +196,38 @@ module Deployment
       end
       
       # Check domain name configuration for appropriate DNS servers
-      packet = Net::DNS::Resolver.start(domain, Net::DNS::NS)
-      current_dns_servers = packet.answer.collect { |ns| ns.nsdname }
+      puts "Checking DNS configuration for domain '#{domain}'"
+      current_dns_servers = []
       amazon_dns_servers = resource_record_sets.reject { |record| record[:type] != 'NS' }.collect { |ns| ns[:resource_records] }.flatten
-      unless ((amazon_dns_servers - current_dns_servers).empty?) then
+      begin
+        packet = Net::DNS::Resolver.start(domain, Net::DNS::NS)
+        current_dns_servers = packet.answer.collect { |ns| ns.nsdname }
+      rescue
+      end
+      if (current_dns_servers.empty?) then
         puts "####################################################################################################################"
-        puts "# Your DNS Setup is invalid!"
+        puts "# Could not check DNS settings. Check the name servers declared for your domain '#{domain}':"
         puts "#"
-        puts "# Your current DNS servers are:"
-        current_dns_servers.each { |dns|
-          puts "# - #{dns}"
-        }
-        puts "#"
-        puts "# You should set the following DNS servers for your domain '#{domain}' instead:"
         amazon_dns_servers.each { |dns|
           puts "# - #{dns}"
         }
         puts "####################################################################################################################"
+      else
+        unless ((amazon_dns_servers - current_dns_servers).empty?) then
+          puts "####################################################################################################################"
+          puts "# Your DNS Setup is invalid!"
+          puts "#"
+          puts "# Your current DNS servers are:"
+          current_dns_servers.each { |dns|
+            puts "# - #{dns}"
+          }
+          puts "#"
+          puts "# You should set the following DNS servers for your domain '#{domain}' instead:"
+          amazon_dns_servers.each { |dns|
+            puts "# - #{dns}"
+          }
+          puts "####################################################################################################################"
+        end
       end
     end
     
