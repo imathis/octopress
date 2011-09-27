@@ -1,6 +1,7 @@
 require "right_aws"
 require "digest/md5"
 require "mime/types"
+require "public_suffix_service"
 
 module Deployment
   module ClassMethods
@@ -41,6 +42,21 @@ module Deployment
     
     def deploy_amazon_s3
       puts "## Deploying Octopress to Amazon S3"
+      result = deploy_amazon_copy_to_s3
+      deploy_amazon_route53_init(result[:bucket])
+      puts "\n## Amazon S3 deploy complete"
+    end
+
+    def deploy_amazon_cloudfront
+      puts "## Deploying Octopress to Amazon CloudFront"
+      distribution = deploy_amazon_cloudfront_init()
+      deploy_amazon_route53_init(distribution)
+      result = deploy_amazon_copy_to_s3()
+      deploy_amazon_cloudfront_invalidate(distribution, result['invalidation_paths'])
+      puts "\n## Amazon CloudFront deploy complete"
+    end
+    
+    def deploy_amazon_copy_to_s3
       s3_bucket = URI.parse(self.config['url']).host
       logger = Logger.new(STDOUT)
       logger.level = Logger::WARN
@@ -62,16 +78,10 @@ module Deployment
           end
         end
       end
-      return paths_to_invalidate
-      puts "\n## Amazon S3 deploy complete"
-    end
-    
-    def deploy_amazon_cloudfront
-      puts "## Deploying Octopress to Amazon CloudFront"
-      distribution = deploy_amazon_cloudfront_init()
-      paths_to_invalidate = deploy_amazon_s3()
-      deploy_amazon_cloudfront_invalidate(distribution, paths_to_invalidate)
-      puts "\n## Amazon CloudFront deploy complete"
+      return {
+        "bucket" => bucket,
+        "invalidation_paths" => paths_to_invalidate
+      }
     end
     
     def deploy_amazon_cloudfront_init
@@ -103,6 +113,11 @@ module Deployment
         end
         distribution = distributions.select { |distribution| distribution[:cnames].include?(s3_bucket) }.first
         puts "Distribution #{distributionID} created and ready to serve your blog"
+        
+        if (self.config['managed_dns']) then
+          deploy_amazon_cloudfront_route53_dns(distribution)
+        end
+        
         puts "Don't forget to setup your DNS properly. You should have something like this in your DNS zone file:"
         puts "\twww 10800 IN CNAME #{distributionID}.cloudfront.net."
       else
@@ -121,6 +136,77 @@ module Deployment
       logger.level = Logger::WARN
       acf = RightAws::AcfInterface.new(self.config['aws_access_key_id'], self.config['aws_secret_access_key'], { :logger => logger })
       acf.create_invalidation distribution[:aws_id], :path => paths_to_invalidate
+    end
+    
+    def deploy_amazon_route53_init(source)
+      if (self.config['managed_dns'] == 'n') then
+        return
+      end
+      
+      puts "Checking Amazon Route53 environment"
+      logger = Logger.new(STDOUT)
+      logger.level = Logger::WARN
+      r53 = RightAws::Route53Interface.new(self.config['aws_access_key_id'], self.config['aws_secret_access_key'], { :logger => logger })
+      host = URI.parse(self.config['url']).host
+      domain = PublicSuffixService.parse(host).domain
+      
+      # Locate zones by domain name
+      zone = r53.list_hosted_zones.select { |zone| zone[:name] == "#{domain}." }
+      if (zone.empty?) then
+        hosted_zone_config = {
+          :name   => "#{domain}.",
+          :config => {
+            :comment => 'My Octopress site!'
+          }
+        }
+        puts "## Creating Route53 zone for domain #{domain}"
+        zone = r53.create_hosted_zone(hosted_zone_config)
+      else
+        zone = zone[0]
+      end
+      
+      # Delete zone records and the zone itself
+      #resource_record_sets = r53.list_resource_record_sets(zone[:aws_id])
+      #resource_record_sets = resource_record_sets.reject { |record| record[:type] == 'NS' || record[:type] == 'SOA' }
+      #puts resource_record_sets
+      #r53.delete_resource_record_sets(zone[:aws_id], resource_record_sets, 'kill all records I have created')
+      #r53.delete_hosted_zone(zone[:aws_id])
+      #exit
+      
+      # Setup the 'www' record if needed
+      resource_record_sets = r53.list_resource_record_sets(zone[:aws_id])
+      if (self.config['service'] == 's3') then
+        puts "Octopress can't manage deployments to Amazon S3 with Route53 yet."
+        puts "Modify your 'amazon.yml' file so that 'managed_dns' is set to 'n' until this feature is supported."
+      elsif (self.config['service'] == 'cloudfront') then
+        if (resource_record_sets.count { |record| record[:name] == "#{domain}." && record[:type] == 'A'} == 0) then
+          new_resource_record_sets = [{
+              :name => "www.#{domain}.",
+              :type => 'CNAME',
+              :ttl => 14400,
+              :resource_records => "#{source[:domain_name]}"
+            }, {    # WWWizer service 
+              :name => "#{domain}.",
+              :type => 'A',
+              :ttl => 14400,
+              :resource_records => ['174.129.25.170']
+            }]
+          r53.create_resource_record_sets(zone[:aws_id], new_resource_record_sets, 'My Octopress records')
+        end
+        puts "####################################################################################################################"
+        puts "Amazon Route53: domain setup complete. Please set up the following DNS servers for your domain '#{domain}':"
+        resource_record_sets.each { |record|
+          if (record[:type] == 'NS') then
+            record[:resource_records].each { |resource| 
+              puts " - #{resource}"
+            }
+          end
+        }
+        puts "####################################################################################################################"
+      else
+        raise "Unknow Amazon service: #{self.config['service']
+        self.config['service']}"
+      end
     end
     
   end

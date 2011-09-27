@@ -14,6 +14,7 @@ group :development do
   gem 'stringex'
   gem 'right_aws'
   gem 'mime-types'
+  gem 'public_suffix_service'
 end
 
 gem 'sinatra', '1.2.6'
