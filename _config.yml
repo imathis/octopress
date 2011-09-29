@@ -80,3 +80,7 @@ disqus_show_comment_count: false
 
 # Google Analytics
 google_analytics_tracking_id:
+
+# Piwik Analytics
+piwik_url:        # Your Piwik installation URL. Leave out the protocol and trailing slash. E.g. yourdomain.com/piwik
+piwik_site_id:    # ID number (in Piwik) of the site you you want to track.

@@ -1,0 +1,10 @@
+{% if site.piwik_url and site.piwik_site_id %}
+  <script type="text/javascript">
+    (function(){
+      var pkBaseURL = (("https:" == document.location.protocol) ? "https://{{ site.piwik_url }}/" : "http://{{ site.piwik_url }}/");
+      document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+      try { var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", {{ site.piwik_site_id }}); piwikTracker.trackPageView(); piwikTracker.enableLinkTracking(); } catch( err ) {}
+    })();
+  </script>
+  <noscript><p><img src="http://{{ site.piwik_url }}/piwik.php?idsite={{ site.piwik_site_id }}" style="border:0" alt="" /></p></noscript>
+{% endif %}
