@@ -47,6 +47,7 @@ article {
     @extend .flex-content;
     @extend .basic-alignment;
     @include shadow-box;
+    min-height: 50px;
   }
   video, .flash-video { margin: 0 auto 1.5em; }
   video { display: block; width: 100%; }
