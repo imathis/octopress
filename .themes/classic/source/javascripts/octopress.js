@@ -1,26 +1,50 @@
+/*jshint forin:false*/
+/*global Modernizr:true, swfobject:true*/
+
+// Octopress Namespace
+var Octopress = {};
+
+Octopress.loadAsync = function(scriptUrl, callback) {
+  var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+  script.src = scriptUrl;
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+
+  if (callback && typeof callback === "function") { script.onload = function() { callback.call(this); }; }
+};
+
+Octopress.extend = function(destination, source) {
+  for (var property in source) { destination[property] = source[property]; }
+  return destination;
+};
+
+
 function getNav() {
-  var mobileNav = $('nav[role=navigation] fieldset[role=search]').after('<fieldset class="mobile-nav"></fieldset>').next().append('<select></select>');
-  mobileNav.children('select').append('<option value="">Navigate&hellip;</option>');
+  var mobileNavItems = '<option value="">Navigate &hellip;</option>';
+
   $('ul[role=main-navigation]').addClass('main-navigation');
   $('ul.main-navigation a').each(function(link) {
-    mobileNav.children('select').append('<option value="'+link.href+'">&bull; '+link.text+'</option>');
+    mobileNavItems += '<option value="'+ link.href + '">&bull; ' + link.text + '</option>';
   });
-  mobileNav.children('select').bind('change', function(event) {
-    if (event.target.value) { window.location.href = event.target.value; }
-  });
+  $('nav[role=navigation]')
+    .append( '<fieldset class="mobile-nav"><select>' + mobileNavItems + '</select></fieldset>' )
+    .children('select').bind('change', function(event) {
+      if (event.target.value) { window.location.href = event.target.value; }
+    });
 }
 
 function addSidebarToggler() {
-  if(!$('body').hasClass('sidebar-footer')) {
-    $('#content').append('<span class="toggle-sidebar"></span>');
-    $('.toggle-sidebar').bind('click', function(e) {
-      e.preventDefault();
-      if ($('body').hasClass('collapse-sidebar')) {
-        $('body').removeClass('collapse-sidebar');
-      } else {
-        $('body').addClass('collapse-sidebar');
-      }
-    });
+  var body = $('body');
+  if( !body.hasClass('sidebar-footer') ) {
+    $('#content')
+      .append('<span class="toggle-sidebar"></span>')
+      .children('span.toggle-sidebar').bind('click', function(e) {
+        e.preventDefault();
+        if (body.hasClass('collapse-sidebar')) {
+          body.removeClass('collapse-sidebar');
+        } else {
+          body.addClass('collapse-sidebar');
+        }
+      });
   }
   var sections = $('aside.sidebar > section');
   if (sections.length > 1) {
@@ -38,31 +62,23 @@ function addSidebarToggler() {
 function testFeatures() {
   var features = ['maskImage'];
   $(features).map(function(feature) {
-    if (Modernizr.testAllProps(feature)) {
-      $('html').addClass(feature);
-    } else {
-      $('html').addClass('no-'+feature);
-    }
+    $('html').addClass( Modernizr.testAllProps(feature) ? feature : 'no-'+feature );
   });
-  if ("placeholder" in document.createElement("input")) {
-    $('html').addClass('placeholder');
-  } else {
-    $('html').addClass('no-placeholder');
-  }
+  $('html').addClass( ("placeholder" in document.createElement("input")) ? 'placeholder' : 'no-placeholder' );
 }
 
 function addCodeLineNumbers() {
   if (navigator.appName === 'Microsoft Internet Explorer') { return; }
   $('div.gist-highlight').each(function(code) {
-    var tableStart = '<table><tbody><tr><td class="gutter">',
+    var tableStart  = '<table><tbody><tr><td class="gutter">',
         lineNumbers = '<pre class="line-numbers">',
         tableMiddle = '</pre></td><td class="code">',
-        tableEnd = '</td></tr></tbody></table>',
-        count = $('.line', code).length;
+        tableEnd    = '</td></tr></tbody></table>',
+        count       = $('.line', code).length;
     for (var i=1;i<=count; i++) {
       lineNumbers += '<span class="line-number">'+i+'</span>\n';
     }
-    var table = tableStart + lineNumbers + tableMiddle + '<pre>'+$('pre', code).html()+'</pre>' + tableEnd;
+    var table = tableStart + lineNumbers + tableMiddle + '<pre>' + $('pre', code).html() + '</pre>' + tableEnd;
     $(code).html(table);
   });
 }
@@ -70,10 +86,10 @@ function addCodeLineNumbers() {
 function flashVideoFallback(){
   var flashplayerlocation = "/assets/jwplayer/player.swf",
       flashplayerskin = "/assets/jwplayer/glow/glow.xml";
-  $('video').each(function(video){
+  $('video').each(function(video) {
     video = $(video);
     if (!Modernizr.video.h264 && swfobject.getFlashPlayerVersion() || window.location.hash.indexOf("flash-test") !== -1){
-      video.children('source[src$=mp4]').first().map(function(source){
+      video.children('source[src$=mp4]').first().map(function(source) {
         var src = $(source).attr('src'),
             id = 'video_'+Math.round(1 + Math.random()*(100000)),
             width = video.attr('width'),
@@ -91,8 +107,8 @@ function flashVideoFallback(){
 
 function wrapFlashVideos() {
   $('object').each(function(object) {
-    object = $(object);
     if ( $('param[name=movie]', object).length ) {
+      object = $(object);
       var wrapper = object.before('<div class="flash-video"><div>').previous();
       $(wrapper).children().append(object);
     }
@@ -102,15 +118,6 @@ function wrapFlashVideos() {
     var wrapper = iframe.before('<div class="flash-video"><div>').previous();
     $(wrapper).children().append(iframe);
   });
-}
-
-function renderDeliciousLinks(items) {
-  var output = "<ul>";
-  for (var i=0,l=items.length; i<l; i++) {
-    output += '<li><a href="' + items[i].u + '" title="Tags: ' + items[i].t.join(', ') + '">' + items[i].d + '</a></li>';
-  }
-  output += "</ul>";
-  $('#delicious').html(output);
 }
 
 $.domReady(function() {
