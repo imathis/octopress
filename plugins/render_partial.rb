@@ -31,9 +31,11 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       @file = nil
       @raw = false
+      @convert = false
       if markup =~ /^(\S+)\s?(\w+)?/
         @file = $1.strip
         @raw = $2 == 'raw'
+        @convert = $2 == 'convert'
       end
       super
     end
@@ -58,7 +60,16 @@ module Jekyll
         else
           partial = Liquid::Template.parse(contents)
           context.stack do
-            partial.render(context)
+            contents = partial.render(context)
+            if @convert
+              site = context.registers[:site]
+              ext = File.extname(@file)
+
+              converter = site.converters.find { |c| c.matches(ext) }
+              contents = converter.convert(contents) unless converter.nil?
+            end
+            
+            contents
           end
         end
       end
