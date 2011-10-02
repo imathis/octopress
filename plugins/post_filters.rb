@@ -20,6 +20,14 @@ module Jekyll
     def post_render(post)
     end
 
+    #Called before the post is written to the disk.
+    #Use the post object to read it's contents to do something
+    #before the post is safely written. Hint: post.output
+    #will give you the html that's being written to the disk
+    #right after this is run.
+    def pre_write(post)
+    end
+
     #Called after the post is written to the disk.
     #Use the post object to read it's contents to do something
     #after the post is safely written.
@@ -60,6 +68,7 @@ module Jekyll
     #
     # Returns nothing
     def write(dest)
+      pre_write if respond_to?(:pre_write)
       old_write(dest)
       post_write if respond_to?(:post_write)
     end
@@ -79,6 +88,7 @@ module Jekyll
     #
     # Returns nothing
     def write(dest)
+      pre_write if respond_to?(:pre_write)
       old_write(dest)
       post_write if respond_to?(:post_write)
     end
@@ -122,6 +132,18 @@ module Jekyll
       if self.site.post_filters and is_filterable?
         self.site.post_filters.each do |filter|
           filter.post_render(self)
+        end
+      end
+    end
+
+    # Call the #pre_write methods on all of the loaded
+    # post_filter plugins.
+    #
+    # Returns nothing
+    def pre_write
+      if self.site.post_filters and is_filterable?
+        self.site.post_filters.each do |filter|
+          filter.pre_write(self)
         end
       end
     end
