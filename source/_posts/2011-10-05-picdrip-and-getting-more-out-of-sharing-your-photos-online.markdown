@@ -15,4 +15,8 @@ When I returned home I found myself faced with a not-so-unfamiliar dilemma: afte
 
 # Solution
 
+This time, though, I was determined to automate my problem away. This time, I spent a day or two working on a very basic version of an online application that would allow me to upload all of my photos, which would then "trickle" my photos into Flickr at the rate of one photo per day.
+
+The result was Picdrip, which lives at http://picdrip.com in its largely unpolished state.
+
 # Picdrip Overview
