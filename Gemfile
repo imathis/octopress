@@ -14,4 +14,8 @@ group :development do
   gem 'stringex'
 end
 
+group :test do
+  gem 'rspec'
+end
+
 gem 'sinatra', '1.2.6'
