@@ -42,3 +42,7 @@ Dragonfly was my choice for both managing photo uploads and for rendering them b
 The final gem I leveraged was FlickRaw, which is a wrapper around the Flickr API. It works by dynamically loading the Flickr API methods when you call `FlickRaw::Flickr.new` by querying the the `flickr.reflection`getMethods` API call. It then lets you call methods exactly as they appear in the Flickr API documentation, handles passing your API key (which nearly all calls require), and both accepts arguments and returns responses as simple Ruby hashes.
 
 Overall there was little required other than some simple glue code to wire these gems together to do exactly what I wanted.
+
+### Next?
+
+There are still some obvious features to implement, such as bulk uploading, as well as some serious work to be done on the visual design as well as the usability of the application. You can [find the source on GitHub](https://www.github.com/jamesottaway/picdrip) and you can see the application in action at [http://picdrip.com](http://picdrip.com). I have also written a lightning talk on Picdrip featuring some more detailed code examples, which you can see at [http://lightning.picdrip.com](http://lightning.picdrip.com).
