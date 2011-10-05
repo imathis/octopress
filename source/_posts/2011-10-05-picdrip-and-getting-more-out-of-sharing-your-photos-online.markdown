@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Picdrip, and getting more out of sharing your photos online"
-date: 2011-10-05 16:47
+date: 2011-10-06 08:44
 comments: true
-categories: picdrip pet-project
-publish: false
+categories: picdrip pet-project ruby
+publish: true
 ---
 
 ### Background
