@@ -5,6 +5,7 @@ require "stringex"
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 ssh_user       = "user@domain.com"
+ssh_port       = "22"
 document_root  = "~/website.com/"
 deploy_default = "rsync"
 
@@ -49,6 +50,7 @@ desc "Generate jekyll site"
 task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
+  system "compass compile --css-dir #{source_dir}/stylesheets"
   system "jekyll"
 end
 
@@ -182,12 +184,14 @@ task :update_source, :theme do |t, args|
     puts "## Removed existing #{source_dir}.old directory"
     rm_r "#{source_dir}.old", :secure=>true
   end
+  mkdir "#{source_dir}.old"
   cp_r "#{source_dir}/.", "#{source_dir}.old"
   puts "## Copied #{source_dir} into #{source_dir}.old/"
   cp_r "#{themes_dir}/"+theme+"/source/.", source_dir, :remove_destination=>true
   cp_r "#{source_dir}.old/_includes/custom/.", "#{source_dir}/_includes/custom/", :remove_destination=>true
+  cp "#{source_dir}.old/favicon.png", source_dir
   mv "#{source_dir}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != source_dir
-  cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir
+  cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir && File.exists?("#{source_dir}.old/index.html")
   puts "## Updated #{source_dir} ##"
 end
 
@@ -218,7 +222,7 @@ end
 desc "Deploy website via rsync"
 task :rsync do
   puts "## Deploying website via Rsync"
-  ok_failed system("rsync -avz --delete #{public_dir}/ #{ssh_user}:#{document_root}")
+  ok_failed system("rsync -avze 'ssh -p #{ssh_port}' --delete #{public_dir}/ #{ssh_user}:#{document_root}")
 end
 
 desc "deploy public directory to github pages"
