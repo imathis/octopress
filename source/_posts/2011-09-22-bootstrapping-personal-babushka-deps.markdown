@@ -6,23 +6,23 @@ comments: true
 categories: babushka
 ---
 
-I have recently been pushing the envelope of how I use [Babushka](http://babushka.me/), with the aim of using it to provision everything I need for my personal and work machines. To this effect, I am running Babushka on fresh installs of both OS X Lion and Ubuntu 11.04.
+One slightly more unconventional use that I have found for [Babushka](http://babushka.me/), a Ruby-based automation DSL tool written by [Ben Hoskings](http://benhoskin.gs/), is to use it to provision a complete local computer. To this effect, I have recently been using Babushka on fresh installs of varying operating systems.
 
-As you can imagine, the first thing I do is install Babushka. That all works great, but my next step is to run something like `babushka natty-dev-box`. Unfortunately, this fresh machine doesn't have my personal deps on it, and I don't want to keep running all of my personal deps by prefixing my username (for example, `babushka jamesottaway:natty-dev-box`). If you aren't familiar with this convention in Babushka, read the [Sharing](http://babushka.me/sharing) page to understand what I mean.
+As you can imagine, the first thing I do is install Babushka. That all works great, but my next step is to run something like `babushka natty-dev-box`. Unfortunately, a fresh machine doesn't have my personal deps on it, and I don't want to keep running all of my personal deps by prefixing my username (for example, `babushka jamesottaway:natty-dev-box`). If you aren't familiar with this convention in Babushka, read the [Sharing](http://babushka.me/sharing) page to understand what I mean.
 
 I could go and create a new public/private SSH key pair, log into Github, give it my new public key, and then clone by `babushka-deps` repo. But why can't Babushka do it for me?
 
-The solution is to write a few deps that manage those steps above, which I can run on a fresh machine by prefixing my Github username to the dep (ie. `babushka jamesottaway:bootstrap`).
+I managed to write a few deps that manage those steps above, which I can run on a fresh machine by using the "username-prefix" convention I mentioned above.
 
-The first dep ensures that I have a public/private key pair.
+First I ensure that I have a public/private key pair.
 
 {% gist 1234192 ssh.rb %}
 
-The next dep ensures I can push and pull from Github.
+Next I need to make sure Github has my public key and that I can authenticate with this public key over SSH.
 
 {% gist 1234192 github.rb %}
 
-And the final dep will clone my Babushka deps repo into `~/.babushka/deps`, as well as alias the main dep to give it a shorter name.
+Finally I clone my Babushka deps repo into `~/.babushka/deps`. The final line simply aliases the main dep to a single word.
 
 {% gist 1234192 bootstrap.rb %}
 
