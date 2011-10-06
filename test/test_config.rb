@@ -1,5 +1,3 @@
-# http://rspec.info/
-# https://www.relishapp.com/rspec/
 require '../lib/octopress/config'
 
 describe "Octopress::Configuration" do

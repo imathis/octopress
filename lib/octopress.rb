@@ -1,4 +1,4 @@
-$:.unshift File.dirname(__FILE__)
+$:.unshift File.dirname(__FILE__) # For use/testing when no gem is installed
 
 def require_all(path)
   glob = File.join(File.dirname(__FILE__), path, '*.rb')
