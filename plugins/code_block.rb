@@ -41,55 +41,37 @@
 # <pre><code>&lt;sarcasm> Ooooh, sarcasm... How original!&lt;/sarcasm></code></pre>
 # </figure>
 #
-require './plugins/pygments_code'
-require './plugins/raw'
+require './lib/octopress/codeblock.rb'
 
 module Jekyll
 
   class CodeBlock < Liquid::Block
-    include HighlightCode
-    include TemplateWrapper
-    CaptionUrlTitle = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)\s+(.+)/i
-    CaptionUrl = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)/i
-    Caption = /(\S[\S\s]*)/
     def initialize(tag_name, markup, tokens)
-      @title = nil
-      @caption = nil
-      @filetype = nil
-      @highlight = true
-      if markup =~ /\s*lang:(\w+)/i
-        @filetype = $1
-        markup = markup.sub(/lang:\w+/i,'')
+      if markup.strip =~ /\s*lang:(\w+)/i
+        @language = $1
+        markup = markup.strip.sub(/lang:\w+/i,'')
       end
-      if markup =~ CaptionUrlTitle
-        @file = $1
-        @caption = "<figcaption><span>#{$1}</span><a href='#{$2 + $3}'>#{$4}</a></figcaption>"
-      elsif markup =~ CaptionUrl
-        @file = $1
-        @caption = "<figcaption><span>#{$1}</span><a href='#{$2 + $3}'>link</a></figcaption>"
-      elsif markup =~ Caption
-        @file = $1
-        @caption = "<figcaption><span>#{$1}</span></figcaption>\n"
+
+      if markup =~ /(.+?)(https?:\/\/\S+)\s*(.+)?/i
+        @title     = $1
+        @link_href = $2
+        @link_name = $3
+      elsif markup =~ /(.+)?/i
+        @title     = $1
       end
-      if @file =~ /\S[\S\s]*\w+\.(\w+)/ && @filetype.nil?
-        @filetype = $1
-      end
+      @title.strip! if @title
       super
     end
 
     def render(context)
-      output = super
-      code = super.join
-      source = "<figure class='code'>"
-      source += @caption if @caption
-      if @filetype
-        source += " #{highlight(code, @filetype)}</figure>"
-      else
-        source += "#{tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'))}</figure>"
-      end
-      source = safe_wrap(source)
-      source = context['pygments_prefix'] + source if context['pygments_prefix']
-      source = source + context['pygments_suffix'] if context['pygments_suffix']
+      code    = super.join
+
+      CodeBlockHighlighter.new(code, {
+        :language  => @language,
+        :title     => @title,
+        :link_href => @link_href,
+        :link_name => @link_name || 'download'
+      }).render(context)
     end
   end
 end

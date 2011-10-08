@@ -19,52 +19,47 @@
 #
 # will output a figcaption with the title: Example 2 (test.js)
 #
-
-require './plugins/pygments_code'
-require './plugins/raw'
-require 'pathname'
+require './lib/octopress/codeblock.rb'
 
 module Jekyll
 
   class IncludeCodeTag < Liquid::Tag
-    include HighlightCode
-    include TemplateWrapper
     def initialize(tag_name, markup, tokens)
-      @title = nil
-      @file = nil
       if markup.strip =~ /\s*lang:(\w+)/i
-        @filetype = $1
+        @language = $1
         markup = markup.strip.sub(/lang:\w+/i,'')
       end
-      if markup.strip =~ /(.*)?(\s+|^)(\/*\S+)/i
-        @title = $1 || nil
-        @file = $3
+
+      if markup.strip =~ /(.*)?(?:\s+|^)(\/*\S+)/i
+        @title     = $1
+        @link_href = $2
       end
+      @title = @link_href if @title.nil? || @title.empty?
       super
     end
 
     def render(context)
-      code_dir = (context.registers[:site].config['code_dir'].sub(/^\//,'') || 'downloads/code')
-      code_path = (Pathname.new(context.registers[:site].source) + code_dir).expand_path
-      file = code_path + @file
+      code_dir  = context.registers[:site].config['code_dir'].sub(/^\//,'') || 'downloads/code'
 
-      if File.symlink?(code_path)
-        return "Code directory '#{code_path}' cannot be a symlink"
+      file_path = File.expand_path(code_dir, context.registers[:site].source)
+      file_name = "#{file_path}/#{@link_href}"
+
+      if File.symlink?(file_path)
+        return "Code directory '#{file_path}' cannot be a symlink"
       end
 
-      unless file.file?
-        return "File #{file} could not be found"
-      end
+      begin
+        file_content = File.open(file_name, 'r') { |f| f.read }
+      rescue
+        return "Could not read file #{filename}"
+      end  
 
-      Dir.chdir(code_path) do
-        code = file.read
-        @filetype = file.extname.sub('.','') if @filetype.nil?
-        title = @title ? "#{@title} (#{file.basename})" : file.basename
-        url = "/#{code_dir}/#{@file}"
-        source = "<figure class='code'><figcaption><span>#{title}</span> <a href='#{url}'>download</a></figcaption>\n"
-        source += " #{highlight(code, @filetype)}</figure>"
-        safe_wrap(source)
-      end
+      CodeBlockHighlighter.new(file_content, {
+        :language  => @language,
+        :title     => @title,
+        :link_href => "/#{code_dir}/#{@link_href}",
+        :link_name => 'download'
+      }).render(context)
     end
   end
 

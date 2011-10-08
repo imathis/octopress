@@ -220,6 +220,10 @@ figure.code {
   }
   .highlight {
     margin-bottom: 0;
+    @include border-radius(.4em);
+  }
+  figcaption + .highlight {
+    @include border-top-radius(0)
   }
 }
 
