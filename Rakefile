@@ -54,6 +54,16 @@ task :generate do
   system "jekyll"
 end
 
+# usage rake generate_only[my-post]
+desc "Generate only the specified post (much faster)"
+task :generate_only, :filename do |t, args|
+  puts "## Stashing other posts"
+  Rake::Task["isolate"].invoke(args.filename)
+  Rake::Task["generate"].execute
+  puts "## Restoring stashed posts"
+  system "rake integrate"
+end
+
 desc "Watch the site and regenerate when it changes"
 task :watch do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
