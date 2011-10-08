@@ -36,13 +36,19 @@ Octopress.github = function(options) {
     return repos;
   }
 
-  $.ajax({
-    url:     'http://github.com/api/v2/json/repos/show/' + opts.username + '?callback=?',
-    type:    'jsonp',
-    error:   function (err) { $( opts.target + ' li.loading' ).addClass( 'error' ).text( 'Error loading repositories' ); },
-    success: function(data) {
-      var repos = parseResult(data);
-      $( opts.target ).html( render(repos) );
-    }
-  });
+  var cache = Octopress.cacheGet('github');
+  if (cache) {
+    $( opts.target ).html( render(cache) );
+  } else {
+    $.ajax({
+      url:     'http://github.com/api/v2/json/repos/show/' + opts.username + '?callback=?',
+      type:    'jsonp',
+      error:   function (err) { $( opts.target + ' li.loading' ).addClass( 'error' ).text( 'Error loading repositories' ); },
+      success: function(data) {
+        var repos = parseResult(data);
+        $( opts.target ).html( render(repos) );
+        Octopress.cacheSet('github', repos, 300);
+      }
+    });
+  }
 };

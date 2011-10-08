@@ -1,7 +1,7 @@
 /*jshint forin:false*/
 /*global Modernizr:true, swfobject:true*/
 
-// Octopress Namespace
+// -- Octopress Namespace -----------------------------------------------------
 var Octopress = {};
 
 Octopress.loadAsync = function(scriptUrl, callback) {
@@ -17,7 +17,33 @@ Octopress.extend = function(destination, source) {
   return destination;
 };
 
+Octopress.isSessionStorage = function() {
+  // Test for sessionStorage support
+  return (('sessionStorage' in window) && window.sessionStorage !== null);
+};
 
+Octopress.storageGet = function(key) {
+  return (Octopress.isSessionStorage() && (key in sessionStorage)) ? JSON.parse(sessionStorage.getItem(key)) : undefined;
+};
+
+Octopress.storageSet = function(key, value) {
+  if (Octopress.isSessionStorage()) { sessionStorage.setItem(key, JSON.stringify(value)); }
+};
+
+Octopress.cacheGet = function(key) {
+  var cacheResult = Octopress.storageGet(key);
+  return (cacheResult && cacheResult.value && Date.now() <= cacheResult.expires) ? cacheResult.value : undefined;
+};
+
+Octopress.cacheSet = function(key, value, expirationInSeconds) {
+  Octopress.storageSet(key, {
+    value: value,
+    expires: Date.now() + (expirationInSeconds * 1000)
+  });
+};
+
+
+// -- DOM ready functions -----------------------------------------------------
 function getNav() {
   var mobileNavItems = '<option value="">Navigate &hellip;</option>';
 
@@ -41,10 +67,17 @@ function addSidebarToggler() {
         e.preventDefault();
         if (body.hasClass('collapse-sidebar')) {
           body.removeClass('collapse-sidebar');
+          Octopress.storageSet('sidebar-collapsed', false);
         } else {
           body.addClass('collapse-sidebar');
+          Octopress.storageSet('sidebar-collapsed', true);
         }
       });
+
+      // Initially trigger collapsing behavior if sidebar status is saved.
+      if (Octopress.storageGet('sidebar-collapsed')) {
+        body.addClass('collapse-sidebar');
+      }
   }
   var sections = $('aside.sidebar > section');
   if (sections.length > 1) {

@@ -86,12 +86,21 @@ Octopress.twitter = function(options) {
     return content;
   }
 
-  // Fetch the double amount of `count` as filter for replies
-  // is applied afterwards(!) by the Twitter API
-  $.ajax({
-    url:     'http://api.twitter.com/1/statuses/user_timeline/' + opts.username + '.json?trim_user=true&count=' + (opts.count * 2) + '&include_entities=1&exclude_replies=' + (opts.show_replies ? '0' : '1') + '&callback=?',
-    type:    'jsonp',
-    error:   function (err) { $( opts.target + 'li.loading' ).addClass( 'error' ).text( "Twitter's busted" ); },
-    success: function(data) { $( opts.target ).html( render(data.slice(0, opts.count), opts.username) ); }
-  });
+  var cache = Octopress.cacheGet('twitter');
+  if (cache) {
+    $( opts.target ).html( render(cache, opts.username) );
+  } else {
+    // Fetch the double amount of `count` as filter for replies
+    // is applied afterwards(!) by the Twitter API
+    $.ajax({
+      url:     'http://api.twitter.com/1/statuses/user_timeline/' + opts.username + '.json?trim_user=true&count=' + (opts.count * 2) + '&include_entities=1&exclude_replies=' + (opts.show_replies ? '0' : '1') + '&callback=?',
+      type:    'jsonp',
+      error:   function (err) { $( opts.target + 'li.loading' ).addClass( 'error' ).text( "Twitter's busted" ); },
+      success: function(data) {
+        var tweets = data.slice(0, opts.count);
+        $( opts.target ).html( render(tweets, opts.username) );
+        Octopress.cacheSet('twitter', tweets, 300);
+      }
+    });
+  }
 };

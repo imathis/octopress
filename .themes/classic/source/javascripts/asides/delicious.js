@@ -20,11 +20,19 @@ Octopress.delicious = function(options) {
     return output;
   }
 
-  $.ajax({
-    url:     'http://feeds.delicious.com/v2/json/' + opts.username + '?count=' + opts.count + '&sort=date&callback=?',
-    type:    'jsonp',
-    error:   function (err) { $( opts.target + 'li.loading' ).addClass( 'error' ).text( 'Error loading bookmarks' ); },
-    success: function(data) { $( opts.target ).html( render(data) ); }
-  });
+  var cache = Octopress.cacheGet('delicious');
+  if (cache) {
+    $( opts.target ).html( render(cache) );
+  } else {
+    $.ajax({
+      url:     'http://feeds.delicious.com/v2/json/' + opts.username + '?count=' + opts.count + '&sort=date&callback=?',
+      type:    'jsonp',
+      error:   function (err) { $( opts.target + 'li.loading' ).addClass( 'error' ).text( 'Error loading bookmarks' ); },
+      success: function(data) {
+        $( opts.target ).html( render(data) );
+        Octopress.cacheSet('delicious', data, 300);
+      }
+    });
+  }
 };
 

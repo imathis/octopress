@@ -31,11 +31,19 @@ Octopress.pinboard = function(options) {
     return output;
   }
 
-  $.ajax({
-    url:           'http://feeds.pinboard.in/json/v1/u:' + opts.username + '?count=' + opts.count + '&format=json&cb=?',
-    type:          'jsonp',
-    jsonpCallback: 'cb',
-    error:         function (err) { $( opts.target + 'li.loading' ).addClass( 'error' ).text( 'Error loading bookmarks' ); },
-    success:       function(data) { $( opts.target ).html( render(data) ); }
-  });
+  var cache = Octopress.cacheGet('pinboard');
+  if (cache) {
+    $( opts.target ).html( render(cache) );
+  } else {
+    $.ajax({
+      url:           'http://feeds.pinboard.in/json/v1/u:' + opts.username + '?count=' + opts.count + '&format=json&cb=?',
+      type:          'jsonp',
+      jsonpCallback: 'cb',
+      error:         function (err) { $( opts.target + 'li.loading' ).addClass( 'error' ).text( 'Error loading bookmarks' ); },
+      success:       function(data) {
+        $( opts.target ).html( render(data) );
+        Octopress.cacheSet('pinboard', data, 300);
+      }
+    });
+  }
 };
