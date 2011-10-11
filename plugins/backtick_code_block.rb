@@ -1,43 +1,34 @@
-require './plugins/pygments_code'
+require './lib/octopress/codeblock.rb'
 
 module BacktickCodeBlock
-  include HighlightCode
-  AllOptions = /([^\s]+)\s+(.+?)(https?:\/\/\S+)\s*(.+)?/i
-  LangCaption = /([^\s]+)\s*(.+)?/i
   def render_code_block(input)
-    @options = nil
-    @caption = nil
-    @lang = nil
-    @url = nil
-    @title = nil
     input.gsub /^`{3} *([^\n]+)?\n(.+?)\n`{3}/m do
-      @options = $1 || ''
-      str = $2
+      metadata = $1 || ''
+      code = $2
+      code.gsub!(/^ {4}/, '') if code.match(/\A {4}/)
 
-      if @options =~ AllOptions
-        @lang = $1
-        @caption = "<figcaption><span>#{$2}</span><a href='#{$3}'>#{$4 || 'link'}</a></figcaption>"
-      elsif @options =~ LangCaption
-        @lang = $1
-        @caption = "<figcaption><span>#{$2}</span></figcaption>"
+      if metadata =~ /([^\s]+)\s+(.+?)(https?:\/\/\S+)\s*(.+)?/i
+        language  = $1
+        title     = $2
+        link_href = $3
+        link_name = $4      
+      elsif metadata =~ /([^\s]+)\s*(.+)?/i
+        language  = $1
+        title     = $2
       end
 
-      if str.match(/\A {4}/)
-        str = str.gsub /^ {4}/, ''
-      end
-      if @lang.nil? || @lang == 'plain'
-        code = tableize_code(str.gsub('<','&lt;').gsub('>','&gt;'))
-        "<figure class='code'>#{@caption}#{code}</figure>"
+      if language && language.include?('-raw')
+        raw = "``` #{metadata.sub('-raw', '')}\n"
+        raw << code
+        raw << "\n```\n"
       else
-        if @lang.include? "-raw"
-          raw = "``` #{@options.sub('-raw', '')}\n"
-          raw += str
-          raw += "\n```\n"
-        else
-          code = highlight(str, @lang)
-          "<figure class='code'>#{@caption}#{code}</figure>"
-        end
+        codenblock = CodeBlockHighlighter.new(code, {
+          :language  => language,
+          :title     => title,
+          :link_href => link_href,
+          :link_name => link_name
+        }).render
       end
-    end
+    end 
   end
 end
