@@ -96,14 +96,18 @@ small { font-size: .8em; }
 
 big { font-size: 1.2em; }
 
-blockquote {
+blockquote { 
   $bq-margin: 1.2em;
+  padding-left: 1em;
+  border-left: 4px solid rgba($text-color-light, .5);  
+}
+
+blockquote.citation {
+
   font-style: italic;
   position: relative;
   font-size: 1.2em;
-  line-height: 1.5em;
-  padding-left: 1em;
-  border-left: 4px solid rgba($text-color-light, .5);
+  line-height: 1.5em; 
   cite {
     font-style: italic;
     a { color: $text-color-light !important; word-wrap: break-word; }
