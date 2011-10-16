@@ -5,7 +5,7 @@ module BacktickCodeBlock
     input.gsub /^`{3} *([^\n]+)?\n(.+?)\n`{3}/m do
       metadata = $1 || ''
       code = $2
-      code.gsub!(/^ {4}/, '') if code.match(/\A {4}/)
+      code.gsub!(/^( {4}|\t)/, '') if code.match(/\A( {4}|\t)/)
 
       if metadata =~ /([^\s]+)\s+(.+?)(https?:\/\/\S+)\s*(.+)?/i
         language  = $1
