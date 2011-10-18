@@ -50,7 +50,7 @@ Over the past 24 hours I've been reflecting on my life & I've realized only one 
 
 **Quote from an article on the web**
 
-    {{ "{% Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing" }} %}
+    {{ "{% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing" }} %}
     Every interaction is both precious and an opportunity to delight.
     {{ "{% endblockquote" }} %}
 
