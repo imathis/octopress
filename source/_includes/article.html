@@ -21,7 +21,7 @@
   {% if excerpted == 'true' %}
     <footer>
 	  {% capture alt_excerpt %}{{ content | alt_excerpt_link }}{% endcapture %}
-	  {% if alt_excerpt == 'false' %} <!--This creates a false positive on 'morefalse', which I think we can live with, especially given that 'more false' behaves correctly.-->
+	  {% if alt_excerpt == 'false' %} 
         <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
       {% else %}
         <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ alt_excerpt }}</a>
