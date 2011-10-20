@@ -47,12 +47,11 @@ module OctopressLiquidFilters
     input =~ /<!--\s*more.*-->/i ? true : false 
   end
   
-  # Checks for alternate excerpt link text
+  # Used on Article pages to return alternate text for excerpt link, if any exists.
   def alt_excerpt_link(input)
     excerpt = input.split(/<!--\s*more/i)[1].split(/-->/)[0] 
     excerpt =~ /\S/ ? excerpt : false
   end
-  
 
   # Summary is used on the Archive pages to return the first block of content from a post.
   def summary(input)
