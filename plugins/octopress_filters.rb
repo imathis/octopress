@@ -35,8 +35,8 @@ end
 module OctopressLiquidFilters
   # Used on the blog index to split posts on the <!--more--> marker
   def excerpt(input)
-    if input.index(/<!--\s*more\s*-->/i)
-      input.split(/<!--\s*more\s*-->/i)[0]
+    if input.index(/<!--\s*more.*-->/i)
+      input.split(/<!--\s*more.*-->/i)[0]
     else
       input
     end
@@ -44,8 +44,15 @@ module OctopressLiquidFilters
 
   # Checks for excerpts (helpful for template conditionals)
   def has_excerpt(input)
-    input =~ /<!--\s*more\s*-->/i ? true : false
+    input =~ /<!--\s*more.*-->/i ? true : false 
   end
+  
+  # Checks for alternate excerpt link text
+  def alt_excerpt_link(input)
+    excerpt = input.split(/<!--\s*more/i)[1].split(/-->/)[0] 
+    excerpt =~ /\S/ ? excerpt : false
+  end
+  
 
   # Summary is used on the Archive pages to return the first block of content from a post.
   def summary(input)
