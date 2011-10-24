@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "yui/compressor"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -46,12 +47,30 @@ end
 # Working with Jekyll #
 #######################
 
+desc "Minifies JavaScript files"
+task :jsmin do
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  raise "### Java needs to be installed to run YUICompressor" unless system("java -version > /dev/null") == true
+  puts "## Minifying JavaScript"
+
+  compressor = YUI::JavaScriptCompressor.new
+  Dir["#{source_dir}/javascripts/*.js"].each do |file|
+    File.open(file, 'r') do |fread|
+      File.open(file.sub(/#{source_dir}/, public_dir), 'w') do |fwrite|
+        puts "- #{file}"
+        fwrite.write( compressor.compress(fread) )
+      end
+    end
+  end
+end
+
 desc "Generate jekyll site"
 task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system "jekyll"
+  Rake::Task[:jsmin].execute
 end
 
 desc "Watch the site and regenerate when it changes"
