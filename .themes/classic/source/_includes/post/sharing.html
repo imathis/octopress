@@ -8,4 +8,7 @@
   {% if site.facebook_like %}
     <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
   {% endif %}
+  {% if site.flattr_user %}
+    {% include post/flattr_button.html %}
+  {% endif %}
 </div>
