@@ -9,7 +9,7 @@ footer: false
 
 Octopress ships with the following plugins. Many have been written specially for Octopress, but some have been selected from the Jekyll community with various changes and improvements.
 
-- [HTML5 Video Tag](/docs/plugins/video-tag/) - *easily post images with class names and titles*
+- [HTML5 Video Tag](/docs/plugins/video-tag/) - *embeds mp4 encoded HTML5 videos*
 - [Backtick Code Block](/docs/plugins/backtick-codeblock/) - *for simple lightweight code sharing*
 - [Code Block](/docs/plugins/codeblock/) - *for sharing code with titles and links*
 - [Include Code](/docs/plugins/include-code/) - *embed code from your filesystem with a download link*
