@@ -67,7 +67,7 @@ These configurations are used by Jekyll and Plugins. If you're not familiar with
 If you want to change the way permalinks are written for your blog posts, see [Jekyll's permalink docs](https://github.com/mojombo/jekyll/wiki/Permalinks).
 
 **Note:** Jekyll has a `baseurl` config which offers mock subdirectory publishing support by adding a redirect to Jekyll's WEBrick server. **Please don't use this.**
-If you want to publish your site to a subdirectory, [(see Deploying Octopress to a Subdirectory)](/docs/deploying/#deploy_subdir).
+If you want to publish your site to a subdirectory, [(see Deploying Octopress to a Subdirectory)](/docs/deploying/rsync/#deploy_subdir).
 
 <h3 id="third_party">3rd Party Settings</h3>
 These third party integrations are already set up for you. Simply fill in the configurations and they'll be added to your site.
