@@ -1,3 +1,5 @@
+require 'octopress/deployment_amazon'
+
 module Deployment
   module ClassMethods
 
@@ -43,8 +45,9 @@ module Deployment
 
 
     def deploy_amazon
-      raise "## TODO: Integration of AWS, see https://github.com/imathis/octopress/pull/107"
+      Amazon.send("deploy_amazon_#{config['service']}", self.config)
     end
-
+    
+    
   end
 end

@@ -121,14 +121,28 @@ CONFIG
       set_deployment_config(deploy_config)
     end
 
+
     def setup_amazon
       deploy_config = __method__.to_s.sub('setup_', '')
-      service = ask("Choose Amazon service", ['aws', 'cloudfront'])
+      service = ask("Choose Amazon service", ['s3', 'cloudfront'])
+      
+      aws_access_key_id = ask("Amazon Access Key ID", "");
+      aws_secret_access_key = ask("Amazon Secret Key", "");
+      
+      managedDNS = ask("Run your DNS server on Amazon Route 53?", 'y/n');
 
-      File.open("#{deploy_config}.yml", 'w') { |f| f.write "service: #{service}" }
+      File.open("#{deploy_config}.yml", 'w') { |f|
+        f.write <<-CONFIG
+service: #{service}
+aws_access_key_id: #{aws_access_key_id}
+aws_secret_access_key: #{aws_secret_access_key}
+managed_dns: #{managedDNS}
+        CONFIG
+      }
       set_deployment_config(deploy_config)
       puts "## Now you can deploy to #{service} with `rake deploy`"
     end
+    
 
   end
 end
