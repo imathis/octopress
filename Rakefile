@@ -17,7 +17,7 @@ source_dir      = config['source']          # source file directory
 blog_index_dir  = config['blog_index_dir']  # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
 new_post_ext    = config['new_post_ext']    # default new post file extension when using the new_post task
 new_page_ext    = config['new_page_ext']    # default new page file extension when using the new_page task
-server_port     = config['4000']            # port for preview server eg. localhost:4000
+server_port     = config['server_port']     # port for preview server eg. localhost:4000
 
 
 ## -- Misc Rakefile Configs -- ##
