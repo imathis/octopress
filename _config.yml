@@ -38,6 +38,7 @@ category_dir: blog/categories
 new_post_ext: markdown
 new_page_ext: markdown
 server_port: 4000
+jekyll_config: source/_config.yml
 
 markdown: rdiscount
 pygments: false       # default python pygments have been replaced by pygments.rb
