@@ -14,15 +14,15 @@ module Octopress
         config_file = File.expand_path "../_baseconfig.yml", File.dirname(__FILE__)
         config = YAML::load(File.open(config_file))
 
+        # Include optional configuration containing local settings
+        localconfig_file = File.expand_path "../_localconfig.yml", File.dirname(__FILE__)
+        config.merge! YAML::load(File.open(localconfig_file)) if File.exists?(localconfig_file)
+
         # Include optional configuration file for deployment settings
         if config['deploy_config']
           deployconfig_file = File.expand_path "../#{config['deploy_config']}.yml", File.dirname(__FILE__)
           config.merge! YAML::load(File.open(deployconfig_file)) if File.exists?(deployconfig_file)
         end
-
-        # Include optional configuration containing local settings
-        localconfig_file = File.expand_path "../_localconfig.yml", File.dirname(__FILE__)
-        config.merge! YAML::load(File.open(localconfig_file)) if File.exists?(localconfig_file)
 
         # Write out a combined configuration file (for jekyllL)
         combined_config_file = File.expand_path "../_config.yml", File.dirname(__FILE__)
