@@ -224,7 +224,10 @@ task :copydot do
   exclusions = [".", "..", ".DS_Store"]
   Dir["#{source_dir}/**/.*"].each do |file|
     if !File.directory?(file) && !exclusions.include?(File.basename(file))
-      cp(file, file.gsub(/#{source_dir}/, "#{public_dir}"));
+      copied_file = file.gsub(/#{source_dir}/, "#{public_dir}")
+      if File.directory?(copied_file)
+        cp(file, copied_file)
+      end
     end
   end
 end
