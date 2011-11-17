@@ -1,0 +1,19 @@
+# ------------------------------ #
+#      Local Configuration       #
+# ------------------------------ #
+
+#
+# The purpose of this file is to optionally keep track of your
+# configuration outside of _baseconfig.yml.
+#
+# Any value that you could otherwise set in _baseconfig.yml
+# can be set here as well.
+#
+# To use, copy _localconfig.yml.dist to _localconfig.yml and
+# issue any rake command.
+#
+
+#url: http://yourfancyurl.com
+#title: My Fancy Blog
+#subtitle: A fancy blogging framework for hackers.
+#author: Your Fancy Name
