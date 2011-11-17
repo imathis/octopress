@@ -4,7 +4,6 @@
 .gist-cache
 .pygments-cache
 _config.yml
-_localconfig.yml
 _deploy
 public
 sass.old
