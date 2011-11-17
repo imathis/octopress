@@ -51,14 +51,14 @@ task :generate do
   raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{style_dir.sub(/#{public_dir}/, source_dir)}"
-  system "jekyll"
+  system "jekyll #{source_dir} #{public_dir}"
 end
 
 desc "Watch the site and regenerate when it changes"
 task :watch do
   raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Starting to watch source with Jekyll and Compass."
-  jekyllPid = Process.spawn("jekyll --auto")
+  jekyllPid = Process.spawn("jekyll --auto #{source_dir} #{public_dir}")
   compassPid = Process.spawn("compass watch")
 
   trap("INT") {
