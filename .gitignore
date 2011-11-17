@@ -3,11 +3,11 @@
 .sass-cache
 .gist-cache
 .pygments-cache
-_config.yml
 _deploy
 public
 sass.old
 source.old
+source/_config.yml
 source/_stash
 source/stylesheets/screen.css
 vendor
