@@ -7,6 +7,7 @@ layout: nil
   <title>{{ site.title }}</title>
   <link href="{{ site.url }}/atom.xml" rel="self"/>
   <link href="{{ site.url }}/"/>
+  {% if site.hub_url %}<link href="{{ site.hub_url }}" rel="hub"/>{% endif %}
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.url }}/</id>
   <author>
