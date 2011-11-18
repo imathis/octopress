@@ -21,10 +21,10 @@ octopress_core_path: .
 octopress_project_path: .
 
 octopress_core_destination_name: public
-octopress_core_stylesheets_name: stylesheets
 octopress_core_plugins_name: plugins
 octopress_core_themes_name: .themes
 octopress_project_source_name: source
+octopress_project_stylesheets_name: stylesheets
 octopress_project_sass_dir_name: sass
 octopress_project_sass_images_dir_name: images
 octopress_project_sass_fonts_dir_name: fonts

@@ -27,7 +27,7 @@ module Octopress
         
         config['octopress_paths_source'] = File.expand_path "#{config['octopress_project_path']}/#{config['octopress_project_source_name']}", dir_string
         config['octopress_paths_public'] = File.expand_path "#{config['octopress_core_path']}/#{config['octopress_core_destination_name']}", dir_string
-        config['octopress_paths_stylesheets'] = File.expand_path "#{config['octopress_paths_public']}/#{config['octopress_core_stylesheets_name']}", dir_string
+        config['octopress_paths_stylesheets'] = File.expand_path "#{config['octopress_paths_source']}/#{config['octopress_project_stylesheets_name']}", dir_string
         config['octopress_paths_plugins'] = File.expand_path "#{config['octopress_core_path']}/#{config['octopress_core_plugins_name']}", dir_string
         config['octopress_paths_jekyll_config'] = File.expand_path "#{config['octopress_project_path']}/#{config['octopress_project_source_name']}/_config.yml", dir_string
         config['octopress_paths_sass'] = File.expand_path "#{config['octopress_project_path']}/#{config['octopress_project_sass_dir_name']}", dir_string
@@ -37,6 +37,7 @@ module Octopress
         config['octopress_sass_fonts_dir_name'] = config['octopress_project_sass_fonts_dir_name']
         config['octopress_paths_themes'] = File.expand_path "#{config['octopress_core_path']}/#{config['octopress_core_themes_name']}"
         config['octopress_source_dir_name'] = config['octopress_project_source_name']
+        config['octopress_stylesheets_dir_name'] = config['octopress_project_stylesheets_name']
         config['source'] = config['octopress_paths_source']
         config['plugins'] = config['octopress_paths_plugins']
         config['destination'] = config['octopress_paths_plugins']

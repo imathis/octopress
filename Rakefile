@@ -51,7 +51,7 @@ desc "Generate jekyll site"
 task :generate do
   raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
-  system "compass compile --css-dir #{style_dir.sub(/#{public_dir}/, source_dir)}"
+  system "compass compile"
   system "jekyll #{source_dir} #{public_dir}"
 end
 
@@ -60,7 +60,7 @@ task :watch do
   raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Starting to watch source with Jekyll and Compass."
   jekyllPid = Process.spawn("jekyll --auto #{source_dir} #{public_dir}")
-  compassPid = Process.spawn("compass watch --css-dir #{style_dir.sub(/#{public_dir}/, source_dir)}")
+  compassPid = Process.spawn("compass watch")
 
   trap("INT") {
     [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
@@ -75,7 +75,7 @@ task :preview do
   raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
   jekyllPid = Process.spawn("jekyll --auto #{source_dir} #{public_dir}")
-  compassPid = Process.spawn("compass watch --css-dir #{style_dir.sub(/#{public_dir}/, source_dir)}")
+  compassPid = Process.spawn("compass watch")
   rackupPid = Process.spawn("rackup --port #{server_port}")
 
   trap("INT") {

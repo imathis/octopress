@@ -13,6 +13,7 @@ project_type     = :stand_alone
 http_path        = config['root']
 http_images_path = "#{root_dir}/#{config['octopress_sass_images_dir_name']}"
 http_fonts_path  = "#{root_dir}/#{config['octopress_sass_fonts_dir_name']}"
+css_dir          = "#{config['octopress_source_dir_name']}/#{config['octopress_stylesheets_dir_name']}"
 
 # Local development paths
 project_path     = config['octopress_paths_sass_project_path']
