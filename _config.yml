@@ -92,3 +92,6 @@ disqus_short_name:
 
 # Google Analytics
 google_analytics_tracking_id:
+
+# pubsubhubbub
+hub_url: 
