@@ -8,7 +8,8 @@ module Octopress
   extend SetupDeployment::ClassMethods
   extend Deployment::ClassMethods
   
-  def self.config
+  def self.config(dir_string = nil)
+    dir_string ||= File.dirname(File.dirname(__FILE__))
     @config ||= lambda do
       begin
         config_file = File.expand_path "../_config.yml", File.dirname(__FILE__)
@@ -23,9 +24,25 @@ module Octopress
           deployconfig_file = File.expand_path "../#{config['deploy_config']}.yml", File.dirname(__FILE__)
           config.merge! YAML::load(File.open(deployconfig_file)) if File.exists?(deployconfig_file)
         end
+        
+        config['octopress_paths_source'] = File.expand_path "#{config['octopress_project_path']}/#{config['octopress_project_source_name']}", dir_string
+        config['octopress_paths_public'] = File.expand_path "#{config['octopress_core_path']}/#{config['octopress_core_destination_name']}", dir_string
+        config['octopress_paths_stylesheets'] = File.expand_path "#{config['octopress_paths_public']}/#{config['octopress_core_stylesheets_name']}", dir_string
+        config['octopress_paths_plugins'] = File.expand_path "#{config['octopress_core_path']}/#{config['octopress_core_plugins_name']}", dir_string
+        config['octopress_paths_jekyll_config'] = File.expand_path "#{config['octopress_project_path']}/#{config['octopress_project_source_name']}/_config.yml", dir_string
+        config['octopress_paths_sass'] = File.expand_path "#{config['octopress_project_path']}/#{config['octopress_project_sass_dir_name']}", dir_string
+        config['octopress_paths_sass_project_path'] = File.expand_path "#{config['octopress_project_path']}", dir_string
+        config['octopress_sass_dir_name'] = config['octopress_project_sass_dir_name']
+        config['octopress_sass_images_dir_name'] = config['octopress_project_sass_images_dir_name']
+        config['octopress_sass_fonts_dir_name'] = config['octopress_project_sass_fonts_dir_name']
+        config['octopress_paths_themes'] = File.expand_path "#{config['octopress_core_path']}/#{config['octopress_core_themes_name']}"
+        config['octopress_source_dir_name'] = config['octopress_project_source_name']
+        config['source'] = config['octopress_paths_source']
+        config['plugins'] = config['octopress_paths_plugins']
+        config['destination'] = config['octopress_paths_plugins']
 
         # Write out a combined configuration file (for jekyllL)
-        combined_config_file = File.expand_path config['jekyll_config'], File.dirname(File.dirname(__FILE__))
+        combined_config_file = config['octopress_paths_jekyll_config']
         if !File.exists?(File.dirname(combined_config_file))
           mkdir_p File.dirname(combined_config_file)
         end
