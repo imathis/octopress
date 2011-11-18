@@ -42,7 +42,7 @@ module Octopress
         # These settings are very important to Jekyll.
         config['source'] = config['octopress_paths_source']
         config['plugins'] = config['octopress_paths_plugins']
-        config['destination'] = config['octopress_paths_plugins']
+        config['destination'] = config['octopress_paths_public']
 
         # Write out a combined configuration file (for jekyllL)
         combined_config_file = config['octopress_paths_jekyll_config']
