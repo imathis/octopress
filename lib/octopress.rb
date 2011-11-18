@@ -38,6 +38,8 @@ module Octopress
         config['octopress_paths_themes'] = File.expand_path "#{config['octopress_core_path']}/#{config['octopress_core_themes_name']}"
         config['octopress_source_dir_name'] = config['octopress_project_source_name']
         config['octopress_stylesheets_dir_name'] = config['octopress_project_stylesheets_name']
+
+        # These settings are very important to Jekyll.
         config['source'] = config['octopress_paths_source']
         config['plugins'] = config['octopress_paths_plugins']
         config['destination'] = config['octopress_paths_plugins']
