@@ -1,0 +1,38 @@
+@mixin microblog-loading($imgbase) {
+  .loading {
+    background: inline-image($imgbase + '_32_gray.png') no-repeat center .5em;
+    color: darken($sidebar-bg, 18);
+    text-shadow: $main-bg 0 1px;
+    text-align: center;
+    padding: 2.5em 0 .5em;
+    &.error {
+      background: inline-image($imgbase + '_32_gray_fail.png') no-repeat center .5em;
+    }
+  }
+}
+
+@mixin microblog-generic {
+  p {
+    position: relative;
+    padding-right: 1em;
+  }
+}
+
+@mixin microblog-tweet-link {
+    float: right;
+    padding: 0 0 .1em 1em;
+    position: relative; right: -1.3em;
+    text-shadow: #fff 0 1px;
+    font-size: .7em;
+    span { font-size: 1.5em; }
+    text-decoration: none;
+    &:hover {
+      color: $sidebar-link-color-subdued-hover;
+      text-decoration: none;
+    }
+}
+
+@mixin microblog-tag-link {
+    @extend .aside-alt-link;
+    @include hover-link;
+}
