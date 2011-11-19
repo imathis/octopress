@@ -46,6 +46,9 @@ titlecase: true       # Converts page and post titles to tilecase
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
 default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
 
+# other asides available, but not included by default:
+#  -- /asides/identica.html
+
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
 # blog_index_asides:
@@ -69,6 +72,11 @@ twitter_show_replies: false
 twitter_follow_button: true
 twitter_show_follower_count: false
 twitter_tweet_button: true
+
+# Identi.ca
+identica_user:
+identica_tweet_count: 4
+identica_show_replies: false
 
 # Google +1
 google_plus_one: false
