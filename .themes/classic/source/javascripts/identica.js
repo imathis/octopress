@@ -39,21 +39,19 @@ function prettyDate(time) {
     day_diff > 7 && Math.ceil(day_diff / 7) + say.weeks_ago;
 }
 
-function linkifyTweet(text) {
-  // Linkify urls, usernames, hashtags
-  text = text.replace(/(https?:\/\/)([\w\-:;?&=+.%#\/]+)/gi, '<a href="$1$2">$2</a>')
-    .replace(/(^|\W)@(\w+)/g, '$1<a href="http://identi.ca/$2">@$2</a>')
-    .replace(/(^|\W)#(\w+)/g, '$1<a href="http://identi.ca/tag/$2">#$2</a>');
+function linkifyNotice(html) {
+  // Display images
+  // html = html.replace( TODO );
 
-  return text
+  return html
 }
 
-function showIdenticaFeed(tweets, identica_user) {
+function showIdenticaFeed(notices, identica_user) {
   var timeline = document.getElementById('notices'),
       content = '';
 
-  for (var t in tweets) {
-    content += '<li>'+'<p>'+'<a href="http://identi.ca/notice/'+tweets[t].id+'">'+prettyDate(tweets[t].created_at)+'</a>'+linkifyTweet(tweets[t].text.replace(/\n/g, '<br>'))+'</p>'+'</li>';
+  for (var t in notices) {
+    content += '<li>'+'<p>'+'<a href="http://identi.ca/notice/'+notices[t].id+'">'+prettyDate(notices[t].created_at)+'</a>'+linkifyNotice(notices[t].statusnet_html.replace(/\n/g, '<br>'))+'</p>'+'</li>';
   }
   timeline.innerHTML = content;
 }
