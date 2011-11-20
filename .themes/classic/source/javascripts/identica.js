@@ -42,8 +42,7 @@ function prettyDate(time) {
 function embedThumbnails(html) {
   // Replace text of thumbnail links with actual <img>
   // html = html.replace( TODO );
-  html.replace(/(<a href="([^"]+)" title="([^"]+)" class="attachment thumbnail"[^>]*>)\2/g, '$1<img src="$3" class="statusnet-thumbnail" alt="$2" />');
-  return html
+  return html.replace(/(<a href="([^"]+)" title="([^"]+)" class="attachment thumbnail"[^>]*>)\2/g, '$1<img src="$3" class="statusnet-thumbnail" alt="$2" />');
 }
 
 function showIdenticaFeed(notices, identica_user) {
