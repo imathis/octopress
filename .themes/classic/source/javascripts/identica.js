@@ -39,10 +39,10 @@ function prettyDate(time) {
     day_diff > 7 && Math.ceil(day_diff / 7) + say.weeks_ago;
 }
 
-function linkifyNotice(html) {
-  // Display images
+function embedThumbnails(html) {
+  // Replace text of thumbnail links with actual <img>
   // html = html.replace( TODO );
-
+  html.replace(/(<a href="([^"]+)" title="([^"]+)" class="attachment thumbnail"[^>]*>)\2/g, '$1<img src="$3" class="statusnet-thumbnail" alt="$2" />');
   return html
 }
 
@@ -51,7 +51,7 @@ function showIdenticaFeed(notices, identica_user) {
       content = '';
 
   for (var t in notices) {
-    content += '<li>'+'<p>'+'<a href="http://identi.ca/notice/'+notices[t].id+'">'+prettyDate(notices[t].created_at)+'</a>'+linkifyNotice(notices[t].statusnet_html.replace(/\n/g, '<br>'))+'</p>'+'</li>';
+    content += '<li>'+'<p>'+'<a href="http://identi.ca/notice/'+notices[t].id+'">'+prettyDate(notices[t].created_at)+'</a>'+embedThumbnails(notices[t].statusnet_html)+'</p>'+'</li>';
   }
   timeline.innerHTML = content;
 }
