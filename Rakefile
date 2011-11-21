@@ -161,7 +161,7 @@ end
 
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
 task :clean do
-  rm_rf [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
+  ["#{config['octopress_paths_cache']}/**", "#{style_dir}/screen.css"].each { |dir| rm_rf Dir.glob(dir) }
 end
 
 desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"

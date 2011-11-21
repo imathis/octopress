@@ -9,14 +9,16 @@ require 'cgi'
 require 'digest/md5'
 require 'net/https'
 require 'uri'
+require './lib/octopress.rb'
 
 module Jekyll
   class GistTag < Liquid::Tag
     def initialize(tag_name, text, token)
       super
+      config = Octopress.config
       @text           = text
       @cache_disabled = false
-      @cache_folder   = File.expand_path "../.gist-cache", File.dirname(__FILE__)
+      @cache_folder   = "#{config['octopress_paths_cache']}/gist-cache"
       FileUtils.mkdir_p @cache_folder
     end
 

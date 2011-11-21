@@ -32,6 +32,7 @@ module Octopress
         end
 
         config['octopress_paths_source'] = File.expand_path "#{config['octopress_project_path']}/#{config['octopress_project_source_name']}", dir_string
+        config['octopress_paths_cache'] = File.expand_path "#{config['octopress_project_path']}/#{config['octopress_project_cache_name']}", dir_string
         config['octopress_paths_public'] = File.expand_path "#{config['octopress_project_path']}/#{config['octopress_project_destination_name']}", dir_string
         config['octopress_paths_stylesheets'] = File.expand_path "#{config['octopress_paths_source']}/#{config['octopress_project_stylesheets_name']}", dir_string
         config['octopress_paths_plugins'] = File.expand_path "#{config['octopress_core_path']}/#{config['octopress_core_plugins_name']}", dir_string

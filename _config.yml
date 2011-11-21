@@ -24,6 +24,7 @@ octopress_core_plugins_name: plugins
 octopress_core_themes_name: .themes
 octopress_project_destination_name: public
 octopress_project_source_name: source
+octopress_project_cache_name: .cache
 octopress_project_stylesheets_name: stylesheets
 octopress_project_sass_dir_name: sass
 octopress_project_sass_images_dir_name: images

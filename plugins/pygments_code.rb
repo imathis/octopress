@@ -5,7 +5,7 @@ require './lib/octopress.rb'
 
 config = Octopress.config
 
-PYGMENTS_CACHE_DIR = "#{config['octopress_project_path']}/.pygments-cache"
+PYGMENTS_CACHE_DIR = "#{config['octopress_paths_cache']}/pygments-cache"
 FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)
 
 module HighlightCode
