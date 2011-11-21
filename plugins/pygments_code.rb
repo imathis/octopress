@@ -1,8 +1,11 @@
 require 'pygments'
 require 'fileutils'
 require 'digest/md5'
+require './lib/octopress.rb'
 
-PYGMENTS_CACHE_DIR = File.expand_path('../../.pygments-cache', __FILE__)
+config = Octopress.config
+
+PYGMENTS_CACHE_DIR = "#{config['octopress_project_path']}/.pygments-cache"
 FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)
 
 module HighlightCode

@@ -1,3 +1,6 @@
+require 'rake/dsl_definition'
+require 'rake'
+
 # Polyfill for __method__ for Ruby versions older than 1.9
 __method__ ||= lambda do
   caller[0] =~ /`([^']*)'/ and $1
