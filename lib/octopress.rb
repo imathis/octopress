@@ -45,6 +45,18 @@ module Octopress
         config['octopress_paths_themes'] = File.expand_path "#{config['octopress_core_path']}/#{config['octopress_core_themes_name']}"
         config['octopress_source_dir_name'] = config['octopress_project_source_name']
         config['octopress_stylesheets_dir_name'] = config['octopress_project_stylesheets_name']
+        core_tasks_dir = File.expand_path "#{config['octopress_core_path']}/#{config['octopress_core_tasks_name']}", dir_string
+        project_tasks_dir = File.expand_path "#{config['octopress_project_path']}/#{config['octopress_project_tasks_name']}", dir_string
+        config['octopress_paths_tasks'] = [core_tasks_dir]
+        puts "core: #{core_tasks_dir}"
+        puts "project: #{project_tasks_dir}"
+        if core_tasks_dir != project_tasks_dir
+          config['octopress_paths_tasks'].push(project_tasks_dir)
+        end
+#config['octopress_paths_tasks'] = [File.expand_path "#{config['octopress_core_path']}/#{config['octopress_core_tasks_name']}", dir_string]
+#if config['octopress_core_path'] != config['octopress_project_path']
+#config['octopress_paths_tasks'].push(File.expand_path "#{config['octopress_project_path']}/#{config['octopress_project_tasks_name']}", dir_string)
+#end
 
         # These settings are very important to Jekyll.
         config['source'] = config['octopress_paths_source']
