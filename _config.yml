@@ -14,6 +14,24 @@ subscribe_email:
 # RSS feeds can list your email address if you like
 email:
 
+# Where the Octopress code lives
+octopress_core_path: .
+
+# Where the project lives
+octopress_project_path: .
+
+octopress_core_plugins_name: plugins
+octopress_core_themes_name: .themes
+octopress_core_tasks_name: tasks
+octopress_project_destination_name: public
+octopress_project_source_name: source
+octopress_project_cache_name: .cache
+octopress_project_tasks_name: tasks
+octopress_project_stylesheets_name: stylesheets
+octopress_project_sass_dir_name: sass
+octopress_project_sass_images_dir_name: images
+octopress_project_sass_fonts_dir_name: fonts
+
 # ----------------------- #
 #       Deployment        #
 # ----------------------- #
@@ -28,16 +46,17 @@ deploy_config:
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 root: /
 permalink: /blog/:year/:month/:day/:title/
-source: source
-destination: public
-stylesheets: public/stylesheets
-plugins: plugins
+#source: source
+#destination: public
+#stylesheets: public/stylesheets
+#plugins: plugins
 blog_index_dir: source
 code_dir: downloads/code
 category_dir: blog/categories
 new_post_ext: markdown
 new_page_ext: markdown
 server_port: 4000
+jekyll_config: source/_config.yml
 
 markdown: rdiscount
 pygments: false       # default python pygments have been replaced by pygments.rb
@@ -92,3 +111,6 @@ disqus_short_name:
 
 # Google Analytics
 google_analytics_tracking_id:
+
+# pubsubhubbub
+hub_url: 

@@ -3,7 +3,7 @@ require "bundler/setup"
 require "stringex"
 require "./lib/octopress.rb"
 
-config          = Octopress.config
+config          = Octopress.config File.dirname(__FILE__)
 
 # --------------------------------- #
 #   get configs from _config.yml    #
@@ -11,9 +11,10 @@ config          = Octopress.config
 #
 deploy_config   = config['deploy_config']
 
-public_dir      = config['destination']     # compiled site directory
-style_dir       = config['stylesheets']     # stylesheet directory
-source_dir      = config['source']          # source file directory
+public_dir      = config['octopress_paths_public']      # compiled site directory
+style_dir       = config['octopress_paths_stylesheets'] # stylesheet directory
+source_dir      = config['octopress_paths_source']      # source file directory
+sass_dir        = config['octopress_paths_sass']        # sass directory
 blog_index_dir  = config['blog_index_dir']  # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
 new_post_ext    = config['new_post_ext']    # default new post file extension when using the new_post task
 new_page_ext    = config['new_page_ext']    # default new page file extension when using the new_page task
@@ -22,22 +23,22 @@ server_port     = config['server_port']     # port for preview server eg. localh
 
 ## -- Misc Rakefile Configs -- ##
 
-themes_dir      = '.themes'   # directory for blog files
-stash_dir       = '_stash'    # directory to stash posts for speedy generation
-posts_dir       = '_posts'    # directory for blog files
+themes_dir      = config['octopress_paths_themes']    # directory for blog files
+stash_dir       = '_stash'                            # directory to stash posts for speedy generation
+posts_dir       = '_posts'                            # directory for blog files
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
-  if File.directory?(source_dir) || File.directory?("sass")
+  if File.directory?(source_dir) || File.directory?(sass_dir)
     abort("rake aborted!") if Octopress.ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
   end
   # copy theme into working Jekyll directories
   theme = args.theme || 'classic'
-  puts "## Copying "+theme+" theme into ./#{source_dir} and ./sass"
+  puts "## Copying "+theme+" theme into #{source_dir} and #{sass_dir}"
   mkdir_p source_dir
   cp_r "#{themes_dir}/#{theme}/source/.", source_dir
-  mkdir_p "sass"
-  cp_r "#{themes_dir}/#{theme}/sass/.", "sass"
+  mkdir_p sass_dir
+  cp_r "#{themes_dir}/#{theme}/sass/.", sass_dir
   mkdir_p "#{source_dir}/#{posts_dir}"
   mkdir_p public_dir
 end
@@ -50,15 +51,15 @@ desc "Generate jekyll site"
 task :generate do
   raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
-  system "compass compile --css-dir #{style_dir.sub(/#{public_dir}/, source_dir)}"
-  system "jekyll"
+  system "compass compile"
+  system "jekyll #{source_dir} #{public_dir}"
 end
 
 desc "Watch the site and regenerate when it changes"
 task :watch do
   raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Starting to watch source with Jekyll and Compass."
-  jekyllPid = Process.spawn("jekyll --auto")
+  jekyllPid = Process.spawn("jekyll --auto #{source_dir} #{public_dir}")
   compassPid = Process.spawn("compass watch")
 
   trap("INT") {
@@ -73,7 +74,7 @@ desc "preview the site in a web browser"
 task :preview do
   raise "!! You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
-  jekyllPid = Process.spawn("jekyll --auto")
+  jekyllPid = Process.spawn("jekyll --auto #{source_dir} #{public_dir}")
   compassPid = Process.spawn("compass watch")
   rackupPid = Process.spawn("rackup --port #{server_port}")
 
@@ -160,7 +161,7 @@ end
 
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
 task :clean do
-  rm_rf [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
+  ["#{config['octopress_paths_cache']}/**", "#{style_dir}/screen.css"].each { |dir| rm_rf Dir.glob(dir) }
 end
 
 desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"
@@ -224,7 +225,10 @@ task :copydot do
   exclusions = [".", "..", ".DS_Store"]
   Dir["#{source_dir}/**/.*"].each do |file|
     if !File.directory?(file) && !exclusions.include?(File.basename(file))
-      cp(file, file.gsub(/#{source_dir}/, "#{public_dir}"));
+      copied_file = file.gsub(/#{source_dir}/, "#{public_dir}")
+      if File.directory?(copied_file)
+        cp(file, copied_file)
+      end
     end
   end
 end
@@ -254,6 +258,11 @@ end
 
 def ok_failed(condition)
   puts condition ? "OK" : "FAILED"
+end
+
+
+config['octopress_paths_tasks'].each do |tasks_dir|
+  Dir.glob("#{tasks_dir}/*.rake").each { |r| import r }
 end
 
 
