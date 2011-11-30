@@ -8,103 +8,159 @@ function getNav(){
     if (event.target.value) window.location.href = event.target.value;
   });
 }
+
 function addSidebarToggler() {
-  $('#content').append('<span class="toggle-sidebar"></span>');
-  $('.toggle-sidebar').bind('click', function(e){
-    e.preventDefault();
-    if($('body').hasClass('collapse-sidebar')){
-      $('body').removeClass('collapse-sidebar');
-    } else {
-      $('body').addClass('collapse-sidebar');
-    }
-  });
-  sections = $('aside[role=sidebar] > section')
-  if(sections.length > 1){
-    sections.each(function(section, index){
-      if ((sections.length >= 3) && index % 3 == 0) {
-        $(section).addClass("first");
-      }
-      count = ((index +1) % 2) ? "odd" : "even";
-      $(section).addClass(count);
+	
+	function isCollapsed(){
+		return $('body').hasClass('collapse-sidebar');
+	}
+	
+	function collapse(){
+        $('body').addClass('collapse-sidebar');
+		setState('collapsed');
+	}
+	
+	function inflate(){
+        $('body').removeClass('collapse-sidebar');	
+		setState('inflated');	
+	}
+	
+	function getState(){
+		if(window.localStorage){
+			var currentState = window.localStorage.getItem('sidebar');
+			return currentState && currentState === 'collapsed' ? 'collapsed' : 'inflated';
+		}
+	}
+	function setState(state){
+		if(window.localStorage){
+			window.localStorage.setItem('sidebar', state);
+		}
+	}
+	
+	if(getState() === 'collapsed'){
+		collapse();
+	}
+	
+    $('#content').append('<span class="toggle-sidebar"></span>');
+
+    $('.toggle-sidebar').bind('click', function (e) {
+        e.preventDefault();
+
+        if (isCollapsed()) {
+			inflate();
+        } else {
+			collapse();
+        }
     });
-  }
-  if(sections.length >= 3){ $('aside[role=sidebar]').addClass('thirds') }
+
+    var sections = $('aside[role=sidebar] > section'),
+		count;
+    if (sections.length > 1) {
+        sections.each(function (section, index) {
+            if ((sections.length >= 3) && index % 3 === 0) {
+                $(section).addClass("first");
+            }
+            count = ((index + 1) % 2) ? "odd" : "even";
+            $(section).addClass(count);
+        });
+    }
+    if (sections.length >= 3) {
+        $('aside[role=sidebar]').addClass('thirds')
+    }
 }
+
 function testFeatures() {
-  var features = ['maskImage'];
-  $(features).map(function(feature){
-    if (Modernizr.testAllProps(feature)) {
-      $('html').addClass(feature);
+	
+    var features = ['maskImage'];
+    $(features).map(function (feature) {
+        if (Modernizr.testAllProps(feature)) {
+            $('html').addClass(feature);
+        } else {
+            $('html').addClass('no-' + feature);
+        }
+    });
+
+    if ("placeholder" in document.createElement("input")) {
+        $('html').addClass('placeholder');
     } else {
-      $('html').addClass('no-'+feature);
+        $('html').addClass('no-placeholder');
     }
-  });
-  if ("placeholder" in document.createElement("input")) {
-    $('html').addClass('placeholder');
-  } else {
-    $('html').addClass('no-placeholder');
-  }
 }
 
-function addCodeLineNumbers(){
-  if (navigator.appName == 'Microsoft Internet Explorer') { return }
-  $('div.gist-highlight').each(function(code){
-    var tableStart = '<table cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter">';
-    var lineNumbers = '<pre class="line-numbers">';
-    var tableMiddle = '</pre></td><td class="code" width="100%">';
-    var tableEnd = '</td></tr></tbody></table>';
-    var count = $('div.line', code).length;
-    for (i=1;i<=count; i++){
-      lineNumbers += '<span class="line">'+i+'</span>\n';
+function addCodeLineNumbers() {
+
+    if (navigator.appName == 'Microsoft Internet Explorer') {
+        return
     }
-    table = tableStart + lineNumbers + tableMiddle + '<pre>'+$('pre', code).html()+'</pre>' + tableEnd;
-    $(code).html(table);
-  });
+
+    $('div.gist-highlight').each(function (code) {
+        var tableStart = '<table cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter">',
+            lineNumbers = '<pre class="line-numbers">',
+            tableMiddle = '</pre></td><td class="code" width="100%">',
+            tableEnd = '</td></tr></tbody></table>',
+            count = $('div.line', code).length,
+            table;
+
+        for (i = 1; i <= count; i++) {
+            lineNumbers += '<span class="line">' + i + '</span>\n';
+        }
+
+        table = tableStart + lineNumbers + tableMiddle + '<pre>' + $('pre', code).html() + '</pre>' + tableEnd;
+        $(code).html(table);
+    });
 }
 
-function flashVideoFallback(){
-  var flashplayerlocation = "/assets/jwplayer/player.swf",
-  flashplayerskin = "/assets/jwplayer/glow/glow.xml";
-  $('video').each(function(video){
-    video = $(video);
-    if(!Modernizr.video.h264 && swfobject.getFlashPlayerVersion() || window.location.hash.indexOf("flash-test") != -1){
-      video.children('source[src$=mp4]').first().map(function(source){;
-        var src = $(source).attr('src'),
-        id = 'video_'+Math.round(1 + Math.random()*(100000)),
-        width = video.attr('width'),
-        height = parseInt(video.attr('height')) + 30;
-        video.after('<div class="flash-video"><div><div id='+id+'>');
-        swfobject.embedSWF(flashplayerlocation, id, width, height + 30, "9.0.0",
-          { file : src, image : video.attr('poster'), skin : flashplayerskin } ,
-          { movie : src, wmode : "opaque", allowfullscreen : "true" });
-      });
-      video.remove();
-    }
-  });
+function flashVideoFallback() {
+    var flashplayerlocation = "/assets/jwplayer/player.swf",
+        flashplayerskin = "/assets/jwplayer/glow/glow.xml";
+
+    $('video').each(function (video) {
+        video = $(video);
+        if (!Modernizr.video.h264 && swfobject.getFlashPlayerVersion() || window.location.hash.indexOf("flash-test") != -1) {
+            video.children('source[src$=mp4]').first().map(function (source) {;
+                var src = $(source).attr('src'),
+                    id = 'video_' + Math.round(1 + Math.random() * (100000)),
+                    width = video.attr('width'),
+                    height = parseInt(video.attr('height')) + 30;
+
+                video.after('<div class="flash-video"><div><div id=' + id + '>');
+                swfobject.embedSWF(flashplayerlocation, id, width, height + 30, "9.0.0", {
+                    file: src,
+                    image: video.attr('poster'),
+                    skin: flashplayerskin
+                }, {
+                    movie: src,
+                    wmode: "opaque",
+                    allowfullscreen: "true"
+                });
+            });
+            video.remove();
+        }
+    });
 }
 
-function wrapFlashVideos(){
-  $('object').each(function(object){
-    object = $(object);
-    if(object.children('param[name=movie]')){
-      var wrapper = object.before('<div class="flash-video"><div>').previous();
-      $(wrapper).children().append(object);
-    }
-  });
-  $('iframe[src*=vimeo],iframe[src*=youtube]').each(function(iframe){
-    iframe = $(iframe);
-    var wrapper = iframe.before('<div class="flash-video"><div>').previous();
-    $(wrapper).children().append(iframe);
-  });
+function wrapFlashVideos() {
+    $('object').each(function (object) {
+        object = $(object);
+        if (object.children('param[name=movie]')) {
+            var wrapper = object.before('<div class="flash-video"><div>').previous();
+            $(wrapper).children().append(object);
+        }
+    });
+    $('iframe[src*=vimeo],iframe[src*=youtube]').each(function (iframe) {
+        iframe = $(iframe);
+        var wrapper = iframe.before('<div class="flash-video"><div>').previous();
+        $(wrapper).children().append(iframe);
+    });
 }
 
-$.domReady(function(){
-  testFeatures();
-  wrapFlashVideos();
-  flashVideoFallback();
-  addCodeLineNumbers();
-  getNav();
-  addSidebarToggler();
+$.domReady(function () {
+    testFeatures();
+    wrapFlashVideos();
+    flashVideoFallback();
+    addCodeLineNumbers();
+    getNav();
+    addSidebarToggler();
 });
 
 // iOS scaling bug fix
