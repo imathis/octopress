@@ -2,6 +2,7 @@
 require './plugins/backtick_code_block'
 require './plugins/post_filters'
 require './plugins/raw'
+require './plugins/date'
 require 'rubypants'
 
 module OctopressFilters
@@ -33,6 +34,8 @@ end
 
 
 module OctopressLiquidFilters
+  include Octopress::Date
+
   # Used on the blog index to split posts on the <!--more--> marker
   def excerpt(input)
     if input.index(/<!--\s*more\s*-->/i)
@@ -76,6 +79,33 @@ module OctopressLiquidFilters
     end
   end
 
+  # Improved version of Liquid's truncate:
+  # - Doesn't cut in the middle of a word.
+  # - Uses typographically correct ellipsis (…) insted of '...'
+  def truncate(input, length)
+    if input.length > length && input[0..(length-1)] =~ /(.+)\b.+$/im
+      $1.strip + ' &hellip;'
+    else
+      input
+    end
+  end
+
+  # Improved version of Liquid's truncatewords:
+  # - Uses typographically correct ellipsis (…) insted of '...'
+  def truncatewords(input, length)
+    truncate = input.split(' ')
+    if truncate.length > length
+      truncate[0..length-1].join(' ').strip + ' &hellip;'
+    else
+      input
+    end
+  end
+
+  # Condenses multiple spaces and tabs into a single space
+  def condense_spaces(input)
+    input.gsub(/\s{2,}/, ' ')
+  end
+
   # Removes trailing forward slash from a string for easily appending url segments
   def strip_slash(input)
     if input =~ /(.+)\/$|^\/$/
@@ -96,33 +126,6 @@ module OctopressLiquidFilters
     input.titlecase
   end
 
-  # Returns a datetime if the input is a string
-  def datetime(date)
-    if date.class == String
-      date = Time.parse(date)
-    end
-    date
-  end
-
-  # Returns an ordidinal date eg July 22 2007 -> July 22nd 2007
-  def ordinalize(date)
-    date = datetime(date)
-    "#{date.strftime('%b')} #{ordinal(date.strftime('%e').to_i)}, #{date.strftime('%Y')}"
-  end
-
-  # Returns an ordinal number. 13 -> 13th, 21 -> 21st etc.
-  def ordinal(number)
-    if (11..13).include?(number.to_i % 100)
-      "#{number}<span>th</span>"
-    else
-      case number.to_i % 10
-      when 1; "#{number}<span>st</span>"
-      when 2; "#{number}<span>nd</span>"
-      when 3; "#{number}<span>rd</span>"
-      else    "#{number}<span>th</span>"
-      end
-    end
-  end
 end
 Liquid::Template.register_filter OctopressLiquidFilters
 
