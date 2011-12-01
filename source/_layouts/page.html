@@ -3,10 +3,10 @@ layout: default
 ---
 
 <div>
-<article>
+<article role="article">
   {% if page.title %}
   <header>
-    <h1 class="entry-title">{{ page.title | titlecase }}</h1>
+    <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
     {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
   </header>
   {% endif %}
@@ -27,12 +27,12 @@ layout: default
 {% if site.disqus_short_name and page.comments == true %}
   <section>
     <h1>Comments</h1>
-    <div id="disqus_thread">{% include post/disqus_thread.html %}</div>
+    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
   </section>
 {% endif %}
 </div>
 {% unless page.sidebar == false %}
-<aside role=sidebar>
+<aside class="sidebar">
   {% if site.page_asides.size %}
     {% include_array page_asides %}
   {% else %}
