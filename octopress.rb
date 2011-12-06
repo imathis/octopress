@@ -58,6 +58,36 @@ module Octopress
       end
     end
 
+    desc "new_page", "Create a new page in source/(filename)/index.markdown"
+    def new_page(filename = "new-page")
+      raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+      page_dir = source_dir
+      if filename =~ /(^.+\/)?([\w_-]+)(\.)?(.+)?/
+        page_dir += $4 ? "/#{$1}" : "/#{$1}#{$2}/"
+        name = $4 ? $2 : "index"
+        extension = $4 || "#{new_page_ext}"
+        filename = "#{name}.#{extension}"
+        mkdir_p page_dir
+        file = page_dir + filename
+        if File.exist?(file)
+          abort("thor aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+        end
+        puts "Creating new page: #{file}"
+        open(file, 'w') do |page|
+          page.puts "---"
+          page.puts "layout: page"
+          page.puts "title: \"#{$2.gsub(/[-_]/, ' ')}\""
+          page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+          page.puts "comments: true"
+          page.puts "sharing: true"
+          page.puts "footer: true"
+          page.puts "---"
+        end
+      else
+        puts "Syntax error: #{filename} contains unsupported characters"
+      end
+    end
+
     private
     def method_missing(method_name, *args)
       if config.key? method_name.to_s
