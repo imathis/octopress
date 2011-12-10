@@ -7,7 +7,7 @@ comments: false
 footer: false
 ---
 
-Octopress offers some rake tasks to create post and pages preloaded with metadata and according to Jekyll's naming conventions.
+Octopress offers some rake tasks to create post and pages preloaded with metadata and according to Jekyll's naming conventions. It also generates a global and a category based feed for your posts (You can find them in `atom.xml` and `blog/categories/<category>/atom.xml`).
 
 ## Blog Posts
 Blog posts must be stored in the `source/_posts` directory and named according to Jekyll's naming conventions: `YYYY-MM-DD-post-title.markdown`. The name of the file will be used
@@ -107,6 +107,8 @@ Inserting a `<!-- more -->` comment into your post will prevent the post content
     rake watch      # Watches source/ and sass/ for changes and regenerates
     rake preview    # Watches, and mounts a webserver at http://localhost:4000
 ```
+
+If you want to work on posts without publishing them, you can add a `published: false` to your post's YAML header. You can preview these posts with `rake preview` on your local server, but they won't get published by `rake generate`.
 
 Using the `rake preview` server is nice, but If you're a [POW](http://pow.cx) user, you can set up your Octopress site like this.
 
