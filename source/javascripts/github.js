@@ -9,14 +9,14 @@ var github = (function(){
   }
   return {
     showRepos: function(options){
-      var feed = new jXHR();
-      feed.onerror = function (msg,url) {
-        $(options.target + ' li.loading').addClass('error').text("Error loading feed");
-      };
-      feed.onreadystatechange = function(data) {
-        if (feed.readyState === 4) {
+      $.ajax({
+          url: "http://github.com/api/v2/json/repos/show/"+options.user+"?callback=?"
+        , type: 'jsonp'
+        , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
+        , success: function(data) {
           var repos = [];
-          for (var i = 0; i < data.repositories.length; i++){
+          if (!data || !data.repositories) { return; }
+          for (var i = 0; i < data.repositories.length; i++) {
             if (options.skip_forks && data.repositories[i].fork) { continue; }
             repos.push(data.repositories[i]);
           }
@@ -31,9 +31,7 @@ var github = (function(){
           if (options.count) { repos.splice(options.count); }
           render(options.target, repos);
         }
-      };
-      feed.open("GET","http://github.com/api/v2/json/repos/show/"+options.user+"?callback=?");
-      feed.send();
+      });
     }
   };
 })();

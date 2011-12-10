@@ -1,20 +1,29 @@
 $blockquote: $type-border !default;
-$mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+$sans: "PT Sans", "Helvetica Neue", Arial, sans-serif !default;
+$serif: "PT Serif", Georgia, Times, "Times New Roman", serif !default;
+$mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
+$heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
+$header-title-font-family: $heading-font-family !default;
+$header-subtitle-font-family: $heading-font-family !default;
 
 // Fonts
 .heading {
-  font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif;
+  font-family: $heading-font-family;
 }
-.sans { font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif; }
-.serif { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; }
+.sans { font-family: $sans; }
+.serif { font-family: $serif; }
 .mono { font-family: $mono; }
 
 body > header h1 {
   font-size: 2.2em;
   @extend .heading;
+  font-family: $header-title-font-family;
   font-weight: normal;
   line-height: 1.2em;
   margin-bottom: 0.6667em;
+}
+body > header h2 {
+  font-family: $header-subtitle-font-family;
 }
 
 body {
@@ -56,12 +65,12 @@ h6, section h5, section section h4, section section section h3 {
 p, blockquote, ul, ol { margin-bottom: 1.5em; }
 
 ul { list-style-type: disc;
-  ul { list-style-type: circle;
-    ul { list-style-type: square; }}}
+  ul { list-style-type: circle; margin-bottom: 0px;
+    ul { list-style-type: square; margin-bottom: 0px; }}}
 
 ol { list-style-type: decimal;
-  ol { list-style-type: lower-alpha;
-    ol { list-style-type: lower-roman; }}}
+  ol { list-style-type: lower-alpha; margin-bottom: 0px;
+    ol { list-style-type: lower-roman; margin-bottom: 0px; }}}
 
 ul, ol { &, ul, ol { margin-left: 1.3em; }}
 
@@ -115,7 +124,8 @@ blockquote {
   }
 }
 
-.has-pullquote:before {
+.pullquote-right:before,
+.pullquote-left:before {
   /* Reset metrics. */
   padding: 0;
   border: none;
@@ -134,6 +144,13 @@ blockquote {
   font-size: 1.4em;
   line-height: 1.45em;
 }
+
+.pullquote-left:before {
+  /* Make left pullquotes align properly. */
+  float: left;
+  margin: .5em 1.5em 1em 0;
+}
+
 /* @extend this to force long lines of continuous text to wrap */
 .force-wrap {
   white-space: -moz-pre-wrap;
