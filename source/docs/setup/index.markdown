@@ -14,7 +14,7 @@ If that sounds daunting, Octopress probably isn't for you.
 
 You'll need to [install Git](http://git-scm.com/) and set up your Ruby environment.
 **Octopress requires Ruby 1.9.2** wich you can easily install with [RVM](http://rvm.beginrescueend.com) or [rbenv](https://github.com/sstephenson/rbenv).
-You can't use both rbenv and RVM on the same system, so choose one.
+You can't use both rbenv and RVM on the same system, as they are competing Ruby environment managers, so choose one.
 
 ### Using RVM
 
@@ -46,6 +46,7 @@ Next, install dependencies.
 
 ```sh
 gem install bundler
+rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command
 bundle install
 ```
 
