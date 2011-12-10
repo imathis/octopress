@@ -7,7 +7,7 @@ comments: false
 footer: false
 ---
 
-Octopress offers some rake tasks to create post and pages preloaded with metadata and according to Jekyll's naming conventions.
+Octopress offers some rake tasks to create post and pages preloaded with metadata and according to Jekyll's naming conventions. It also generates a global and a category based feed for your posts (You can find them in `atom.xml` and `blog/categories/<category>/atom.xml`).
 
 ## Blog Posts
 Blog posts must be stored in the `source/_posts` directory and named according to Jekyll's naming conventions: `YYYY-MM-DD-post-title.markdown`. The name of the file will be used
@@ -94,12 +94,21 @@ Like with the new post task, the default file extension is `markdown` but you ca
 
 The title is derived from the filename so you'll likely want to change that. This is very similar to the post yaml except it doesn't include categories, and you can toggle sharing and comments or remove the footer altogether. If you don't want to show a date on your page, just remove it from the yaml.
 
+## Content
+
+The page and post content will be rendered by whichever markup engine you have specified in the site configuration file.  Additionally, you can use any of the [liquid template features](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) that are described in the [Jekyll docs](https://github.com/mojombo/jekyll/wiki/Template-Data).
+
+Inserting a `<!-- more -->` comment into your post will prevent the post content below this mark from being displayed on the index page for the blog posts, a "Continue →" button links to the full post.
+
 ## Generate & Preview
+
 ``` sh
     rake generate   # Generates posts and pages into the public directory
     rake watch      # Watches source/ and sass/ for changes and regenerates
     rake preview    # Watches, and mounts a webserver at http://localhost:4000
 ```
+
+If you want to work on posts without publishing them, you can add a `published: false` to your post's YAML header. You can preview these posts with `rake preview` on your local server, but they won't get published by `rake generate`.
 
 Using the `rake preview` server is nice, but If you're a [POW](http://pow.cx) user, you can set up your Octopress site like this.
 
