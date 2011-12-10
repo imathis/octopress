@@ -94,6 +94,12 @@ Like with the new post task, the default file extension is `markdown` but you ca
 
 The title is derived from the filename so you'll likely want to change that. This is very similar to the post yaml except it doesn't include categories, and you can toggle sharing and comments or remove the footer altogether. If you don't want to show a date on your page, just remove it from the yaml.
 
+## Content
+
+The page and post content will be rendered by whichever markup engine you have specified in the site configuration file.  Additionally, you can use any of the liquid template features that are described in the [Jeckyll docs](https://github.com/mojombo/jekyll/wiki/Template-Data).  For example, you can embed a link in a blog post to the "previous" post with the `&#x7b;page.previous.url&#x7d;` template tag.
+
+Inserting a `<!-- more -->` comment into your post will prevent any of the post content from being displayed on the index page for the blog posts. Instead the content will be replaced with a "Continue →" button link to the full post.
+
 ## Generate & Preview
 ``` sh
     rake generate   # Generates posts and pages into the public directory
