@@ -26,7 +26,7 @@ rake deploy     # Syncs your blog via ssh
 
 in your terminal, your `public` directory will be synced to your server's document root.
 
-### Regarding rsync delete
+<h2 id="delete">Regarding rsync delete</h2>
 
 If you choose to delete on sync, rsync will create a 1:1 match. Files will be added, updated *and deleted* from your deploy directory to mirror your local copy.
 
@@ -41,7 +41,7 @@ If you would like to keep your Octopress files synced but also want the convenie
 
 When syncing, rsync can exclude files or directories locally or on the server. Simply add an `rsync-exclude` file to the root directory of your project like this:
 
-```sh
+```sh rsync-exclude
 some-file.txt
 some-directory/
 *.mp4
