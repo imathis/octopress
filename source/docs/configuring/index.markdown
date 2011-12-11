@@ -33,6 +33,7 @@ In the `_config.yml` there are three sections for configuring your Octopress Blo
     subtitle:           # A description used in the header
     author:             # Your name, for RSS, Copyright, Metadata
     simple_search:      # Search engine for simple site search
+    description:        # A default meta description for your site
     subscribe_rss:      # Url for your blog's feed, defauts to /atom.xml
     subscribe_email:    # Url to subscribe by email (service required)
     email:              # Email address for the RSS feed if you want it.
@@ -67,7 +68,7 @@ These configurations are used by Jekyll and Plugins. If you're not familiar with
 If you want to change the way permalinks are written for your blog posts, see [Jekyll's permalink docs](https://github.com/mojombo/jekyll/wiki/Permalinks).
 
 **Note:** Jekyll has a `baseurl` config which offers mock subdirectory publishing support by adding a redirect to Jekyll's WEBrick server. **Please don't use this.**
-If you want to publish your site to a subdirectory, [(see Deploying Octopress to a Subdirectory)](/docs/deploying/#deploy_subdir).
+If you want to publish your site to a subdirectory, [(see Deploying Octopress to a Subdirectory)](/docs/deploying/subdir/).
 
 <h3 id="third_party">3rd Party Settings</h3>
 These third party integrations are already set up for you. Simply fill in the configurations and they'll be added to your site.
