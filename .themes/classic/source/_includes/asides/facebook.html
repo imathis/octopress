@@ -1,0 +1,10 @@
+{% if site.facebook_user %}
+<section class="facebook{% if site.facebook_hidden %} facebook-hidden{% endif %}">
+  <h1>
+    <a href="https://facebook.com/{{ site.facebook_user }}">
+      <img src="/images/social/facebook.png" width="32" height="32">
+      Facebook
+    </a>
+  </h1>
+</section>
+{% endif %}
