@@ -2,7 +2,7 @@
   @include microblog-loading(bird);
   @include microblog-generic;
 
-  a[href*=status] {
+  a[href*=status]:first-child {
     color: $twitter-status-link;
     @include microblog-tweet-link;
   }
