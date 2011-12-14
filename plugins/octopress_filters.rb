@@ -15,6 +15,8 @@ module OctopressFilters
     end
   end
   def post_filter(input)
+    # replace the <!-- more --> tag with an anchor
+    input.gsub!(/<!--\s*more\s*-->/,'<!-- more --><a id="octojump"></a>')
     input = unwrap(input)
     RubyPants.new(input).to_html
   end
