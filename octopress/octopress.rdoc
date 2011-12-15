@@ -1,0 +1,5 @@
+= octopress
+
+Generate this with
+    octopress rdoc
+After you have described your command line interface

@@ -1,0 +1,6 @@
+= octopress
+
+Describe your project here
+
+:include:octopress.rdoc
+

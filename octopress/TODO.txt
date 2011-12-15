@@ -1,0 +1,52 @@
+octopress --global-option command -d myblog
+
+octopress --path /my/blog post --option new "Hello"
+
+todo -f /path/to/file.txt add -f "Call brandon"
+
+
+# Replace the install command of the Rakefile
+octopress
+ create [DIRECTORY]                    # Create a new Jekyll blog.
+   --theme=classic  (aliases -t)
+   --deploy={rsync,github,aws,heroku}
+   --root-dir=/
+
+ clean                    # Clean out caches: .pygments-cache,
+.gist-cache, .sass-cache
+
+ deploy                   # Deploy compiled site
+   --default={rsync,github,aws,heroku}
+   --rsync
+   --github
+   --aws
+   --heroku
+
+ generate
+
+ octopress new-page TITLE
+
+ SYNOPSIS
+     octopress new-post [-s]
+       -s FILENAME, --slug
+       -i, --isolate
+
+ SYNOPSIS
+     git add [-n] [-v] [--force | -f] [--interactive | -i] [--patch | -p]
+               [--edit | -e] [--all | [--update | -u]] [--intent-to-add | -N]
+               [--refresh] [--ignore-errors] [--ignore-missing] [--]
+               [<filepattern>...]
+
+
+
+ isolate TITLE
+
+ integrate
+
+ preview
+
+ theme update
+ theme install
+ theme create
+
+ watch
