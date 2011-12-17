@@ -1,13 +1,17 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require 'yaml'
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 ssh_user       = "user@domain.com"
 ssh_port       = "22"
-document_root  = "~/website.com/"
+document_root = { 
+  'development' => "~/sandbox.website.com/",
+  'production' => "~/website.com/" }
 deploy_default = "rsync"
+deploy_mode = 'development'   # One of 'development' or 'production'
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
@@ -16,10 +20,11 @@ deploy_branch  = "gh-pages"
 
 public_dir      = "public"    # compiled site directory
 source_dir      = "source"    # source file directory
-blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
+blog_index_dir  = 'source/blog'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
 deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
+data_dir	= '_data'     # directory where database equivalent files are kept (eg. products JSON file)
 themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
@@ -47,9 +52,10 @@ end
 #######################
 
 desc "Generate jekyll site"
-task :generate do
+task :generate, [:mode] => [:gen_config] do |t,args|
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  puts "## Generating Site with Jekyll"
+  args.with_defaults( :mode => 'development' )
+  puts "## Generating #{args[:mode]} site using Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system "jekyll"
 end
@@ -194,18 +200,37 @@ task :update_source, :theme do |t, args|
   puts "## Updated #{source_dir} ##"
 end
 
+desc "Generate _config.yml file from _config_default.yml and _config_MODE.yml."
+task :gen_config, :mode do |t,args|
+  args.with_defaults( :mode => 'development' )
+  ofile = '_config.yml'
+  dfile = 'config-default.yml'
+  mfile = "config-#{args['mode']}.yml"
+  puts "## Generating #{ofile} from #{dfile} and #{mfile}"
+  config = YAML::load( File.open(dfile) )
+  config_mode = YAML::load( File.open(mfile) )
+  config.merge!( config_mode )
+  File.open( ofile, 'w') do |f|
+    f.puts("# Generated file. Do not edit")
+    f.write(config.to_yaml)
+  end
+end
+
 ##############
 # Deploying  #
 ##############
 
 desc "Default deploy task"
-task :deploy do
+task :deploy, :mode do |t,args|
+  args.with_defaults( :mode => 'development' )
+  puts "## Deployment mode: #{args[:mode]}"
   Rake::Task[:copydot].invoke(source_dir, public_dir)
-  Rake::Task["#{deploy_default}"].execute
+  Rake::Task["#{deploy_default}"].execute(args)
 end
 
 desc "Generate website and deploy"
-task :gen_deploy => [:integrate, :generate, :deploy] do
+task :gen_deploy, [:mode] => [:integrate, :generate, :deploy] do
+  args.with_defaults( :mode => 'development' )
 end
 
 desc "copy dot files for deployment"
@@ -219,9 +244,10 @@ task :copydot, :source, :dest do |t, args|
 end
 
 desc "Deploy website via rsync"
-task :rsync do
-  puts "## Deploying website via Rsync"
-  ok_failed system("rsync -avze 'ssh -p #{ssh_port}' --delete #{public_dir}/ #{ssh_user}:#{document_root}")
+task :rsync, :mode do |t,args|
+  raise "### You must specify rsync mode: choose development or production." unless args[:mode]
+  puts "## Deploying #{args[:mode]} website via Rsync"
+  ok_failed system("rsync -avze 'ssh -p #{ssh_port}' --delete #{public_dir}/ #{ssh_user}:#{document_root[args[:mode]]}")
 end
 
 desc "deploy public directory to github pages"
@@ -265,11 +291,11 @@ task :set_root_dir, :dir do |t, args|
     File.open('config.rb', 'w') do |f|
       f.write compass_config
     end
-    jekyll_config = IO.read('_config.yml')
+    jekyll_config = IO.read('config-default.yml')
     jekyll_config.sub!(/^destination:.+$/, "destination: public#{dir}")
     jekyll_config.sub!(/^subscribe_rss:\s*\/.+$/, "subscribe_rss: #{dir}/atom.xml")
     jekyll_config.sub!(/^root:.*$/, "root: /#{dir.sub(/^\//, '')}")
-    File.open('_config.yml', 'w') do |f|
+    File.open('config-default.yml', 'w') do |f|
       f.write jekyll_config
     end
     rm_rf public_dir
@@ -304,9 +330,9 @@ task :setup_github_pages do
   end
   url = "http://#{user}.github.com"
   url += "/#{project}" unless project == ''
-  jekyll_config = IO.read('_config.yml')
+  jekyll_config = IO.read('config-default.yml')
   jekyll_config.sub!(/^url:.*$/, "url: #{url}")
-  File.open('_config.yml', 'w') do |f|
+  File.open('config-default.yml', 'w') do |f|
     f.write jekyll_config
   end
   rm_rf deploy_dir
@@ -343,7 +369,8 @@ end
 
 def ask(message, valid_options)
   if valid_options
-    answer = get_stdin("#{message} #{valid_options.to_s.gsub(/"/, '').gsub(/, /,'/')} ") while !valid_options.include?(answer)
+    tva = valid_options.to_s.gsub(/\"/, '').gsub(/, /,'/')
+    answer = get_stdin("#{message} #{tva} ") while !valid_options.include?(answer)
   else
     answer = get_stdin(message)
   end
