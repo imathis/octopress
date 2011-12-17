@@ -5,13 +5,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://botanicorganic.com   # Replaced by mode-specific setting
-title: Botanic Organic
-subtitle: Natural Skincare
-author: Botanic Organic
-author_legal: Botanic Organic, LLC
+url: http://yoursite.com
+title: My Octopress Blog
+subtitle: A blogging framework for hackers.
+author: Your Name
 simple_search: http://google.com/search
-version: 3.0.4
+description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -31,15 +30,11 @@ email:
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 root: /
-permalink: /blog/:year/:month/:title/
+permalink: /blog/:year/:month/:day/:title/
 source: source
 destination: public
 plugins: plugins
 code_dir: downloads/code
-data_dir: _data
-data_product_file: products.json
-products_src_dir: _products       # Location of source page files
-category_dir: blog/categories
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
 
@@ -52,7 +47,7 @@ titlecase: true       # Converts page and post titles to tilecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [ asides/recent_posts.html, asides/github.html, asides/twitter.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html, asides/facebookpage.html, asides/categories.html ]
+default_asides: [ asides/recent_posts.html, asides/github.html, asides/twitter.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html ]
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
@@ -71,7 +66,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user: botanicorganic
+twitter_user:
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
@@ -79,13 +74,13 @@ twitter_show_follower_count: false
 twitter_tweet_button: true
 
 # Google +1
-google_plus_one: true
+google_plus_one: false
 google_plus_one_size: medium
 
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
-googleplus_user: botanicorganic
-googleplus_hidden: true
+googleplus_user: 
+googleplus_hidden: false
 
 # Pinboard
 pinboard_user:
@@ -96,18 +91,11 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: botanicorganic
-disqus_show_comment_count: true
+disqus_short_name: 
+disqus_show_comment_count: false
 
 # Google Analytics. Recomend using different tracking numbers for development and production.
 google_analytics_tracking_id: 
 
 # Facebook Like
-facebook_like: true
-facebook_pagelink: http://www.facebook.com/pages/Botanic-Organic/177301188989409
-
-# Google Checkout
-google_checkout_merchant_id: 525623249975242
-
-# Amazon Checkout
-amazon_checkout_merchant_id: # M_BOTANICORG_1005701
+facebook_like: false
