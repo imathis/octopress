@@ -1,0 +1,13 @@
+## config-production.yml Jekyll configuration file
+## This is merged with config-default to generate _config.yml
+
+url: http://botanicorganic.com
+
+# Disqus Comments
+disqus_short_name: botanicorganic
+disqus_show_comment_count: true
+
+# Google Analytics
+google_analytics_tracking_id: UA-23251533-1
+
+
