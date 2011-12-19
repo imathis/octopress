@@ -7,7 +7,6 @@ title: Octopress
 subtitle: A blogging framework for hackers.
 author: Brandon Mathis
 simple_search: http://google.com/search
-# Add a default site-wide description
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
