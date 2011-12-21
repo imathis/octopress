@@ -3,7 +3,7 @@
 $: << File.expand_path(File.dirname(File.realpath(__FILE__)) + '/../lib')
 require 'rubygems'
 require 'gli'
-require 'octopress_version'
+require 'octopress'
 
 include GLI
 
@@ -29,11 +29,7 @@ command :create do |c|
   c.default_value 'default'
   c.flag :f
   c.action do |global_options,options,args|
-    puts "Hello!"
-    # Your command logic here
-     
-    # If you have any errors, just raise them
-    # raise "that command made no sense"
+    Octopress::Commands::Create.new(args[0] || '.').execute
   end
 end
 
