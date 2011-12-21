@@ -1,4 +1,5 @@
 .highlight, html .gist .gist-file .gist-syntax .gist-highlight {
+  table td.code { width: 100%; }
   .line-numbers {
     text-align: right;
     font-size: 13px;
@@ -20,17 +21,19 @@
   }
   border: 1px solid $pre-border !important;
 }
+figure.code, .gist-file, pre {
+  @include box-shadow(rgba(#000, .06) 0 0 10px);
+  .highlight pre { @include box-shadow(none); }
+}
+
 html .gist .gist-file {
   margin-bottom: 1.8em;
   position: relative;
   border: none;
   padding-top: image-height("code_bg.png") !important;
   .gist-syntax {
-    @if $solarized == dark {
-      border-bottom: 1px solid $base03 !important;
-    } @else if $solarized == light {
-      border-bottom: 0px;
-    }
+    border-bottom: 0 !important;
+    background: none !important;
     .gist-highlight{
       background: $base03 !important;
       pre {
@@ -45,6 +48,7 @@ html .gist .gist-file {
    font-size: .7em !important;
    @if $solarized == light {
      background: lighten($base03, 2) $noise-bg;
+     border: 1px solid $pre-border !important;
      border-top: 1px solid lighten($base03, 2) !important;
    } @else {
      background: $base02 $noise-bg;
@@ -85,19 +89,21 @@ h3.filename {
   + pre { @include border-top-radius(0px); }
 }
 
-p code,
-li code {
-  @extend .mono;
-  display: inline-block;
-  white-space: no-wrap;
-  background: #fff;
-  font-size: .8em;
-  line-height: 1.5em;
-  color: #555;
-  border: 1px solid #ddd;
-  @include border-radius(.4em);
-  padding: 0 .3em;
-  margin: -1px 0;
+p, li {
+  code {
+    @extend .mono;
+    display: inline-block;
+    white-space: no-wrap;
+    background: #fff;
+    font-size: .8em;
+    line-height: 1.5em;
+    color: #555;
+    border: 1px solid #ddd;
+    @include border-radius(.4em);
+    padding: 0 .3em;
+    margin: -1px 0;
+  }
+  pre code { font-size: 1em !important; background: none; border: none; }
 }
 
 .pre-code {
@@ -177,7 +183,7 @@ li code {
   .s1     { color: $solar-cyan !important; }                                             /* Literal.String.Single */
   //.ss     { color: #990073 }                                          /* Literal.String.Symbol */
   //.il     { color: #009999 }                                          /* Literal.Number.Integer.Long */
-  div { .gd, .gd .x, .gi, .gi .x { display: block; }}
+  div { .gd, .gd .x, .gi, .gi .x { display: inline-block; width: 100%; }}
 }
 
 .highlight, .gist-highlight {
@@ -201,7 +207,7 @@ pre, .highlight, .gist-highlight {
 }
 
 .highlight code { @extend .pre-code; background: #000;}
-figure[role=code] {
+figure.code {
   background: none;
   padding: 0;
   border: 0;
@@ -216,6 +222,7 @@ figure[role=code] {
     margin-bottom: 0;
   }
 }
+
 .code-title {
   text-align: center;
   font-size: 13px;
@@ -243,3 +250,4 @@ figure[role=code] {
   text-shadow: #cbcccc 0 1px 0;
   padding-left: 3em;
 }
+

@@ -24,7 +24,7 @@
 #
 # Output:
 #
-# <figure role=code>
+# <figure class='code'>
 # <figcaption><span>Got pain? painrelief.sh</span> <a href="http://site.com/painrelief.sh">Download it!</a>
 # <div class="highlight"><pre><code class="sh">
 # -- nicely escaped highlighted code --
@@ -37,23 +37,30 @@
 # <sarcasm>Ooooh, sarcasm... How original!</sarcasm>
 # {% endcodeblock %}
 #
-# <figure role=code>
+# <figure class='code'>
 # <pre><code>&lt;sarcasm> Ooooh, sarcasm... How original!&lt;/sarcasm></code></pre>
 # </figure>
 #
 require './plugins/pygments_code'
+require './plugins/raw'
 
 module Jekyll
 
   class CodeBlock < Liquid::Block
     include HighlightCode
+    include TemplateWrapper
     CaptionUrlTitle = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)\s+(.+)/i
     CaptionUrl = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)/i
     Caption = /(\S[\S\s]*)/
     def initialize(tag_name, markup, tokens)
       @title = nil
       @caption = nil
+      @filetype = nil
       @highlight = true
+      if markup =~ /\s*lang:(\w+)/i
+        @filetype = $1
+        markup = markup.sub(/lang:\w+/i,'')
+      end
       if markup =~ CaptionUrlTitle
         @file = $1
         @caption = "<figcaption><span>#{$1}</span><a href='#{$2 + $3}'>#{$4}</a></figcaption>"
@@ -64,7 +71,7 @@ module Jekyll
         @file = $1
         @caption = "<figcaption><span>#{$1}</span></figcaption>\n"
       end
-      if @file =~ /\S[\S\s]*\.(\w+)/
+      if @file =~ /\S[\S\s]*\w+\.(\w+)/ && @filetype.nil?
         @filetype = $1
       end
       super
@@ -73,18 +80,17 @@ module Jekyll
     def render(context)
       output = super
       code = super.join
-      source = "<div><figure role=code>"
+      source = "<figure class='code'>"
       source += @caption if @caption
-      source = context['pygments_prefix'] + source if context['pygments_prefix']
       if @filetype
-        @filetype = 'objc' if @filetype == 'm'
-        @filetype = 'perl' if @filetype == 'pl'
-        @filetype = 'yaml' if @filetype == 'yml'
-        source += " #{highlight(code, @filetype)}</figure></div>"
+        source += " #{highlight(code, @filetype)}</figure>"
       else
-        source += "<pre><code>" + code.lstrip.rstrip.gsub(/</,'&lt;') + "</code></pre></figure></div>"
+        source += "#{tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'))}</figure>"
       end
+      source = safe_wrap(source)
+      source = context['pygments_prefix'] + source if context['pygments_prefix']
       source = source + context['pygments_suffix'] if context['pygments_suffix']
+      source
     end
   end
 end

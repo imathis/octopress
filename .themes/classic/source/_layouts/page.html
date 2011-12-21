@@ -3,17 +3,19 @@ layout: default
 ---
 
 <div>
-<article>
+<article role="article">
+  {% if page.title %}
   <header>
-    <h1 class="entry-title">{{ page.title | titlecase }}</h1>
-    {% if page.date %}<p class="meta">{% include post/date.html %}</p>{% endif %}
+    <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+    {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
   </header>
+  {% endif %}
   {{ content }}
   {% unless page.footer == false %}
     <footer>
       {% if page.date or page.author %}<p class="meta">
         {% if page.author %}{% include post/author.html %}{% endif %}
-        {% include post/date.html %}
+        {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
         {% if page.categories %}{% include post/categories.html %}{% endif %}
       </p>{% endif %}
       {% unless page.sharing == false %}
@@ -25,12 +27,12 @@ layout: default
 {% if site.disqus_short_name and page.comments == true %}
   <section>
     <h1>Comments</h1>
-    <div id="disqus_thread">{% include post/disqus_thread.html %}</div>
+    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
   </section>
 {% endif %}
 </div>
 {% unless page.sidebar == false %}
-<aside role=sidebar>
+<aside class="sidebar">
   {% if site.page_asides.size %}
     {% include_array page_asides %}
   {% else %}

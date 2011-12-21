@@ -14,6 +14,10 @@ $sidebar-width-wide: 300px !default;
 
 $indented-lists: false !default;
 
+$header-font-size: 1em !default;
+$header-padding-top: 1.5em !default;
+$header-padding-bottom: 1.5em !default;
+
 .group { @include pie-clearfix; }
 
 @mixin collapse-sidebar {
@@ -32,7 +36,10 @@ $indented-lists: false !default;
   &.thirds section {
     width: 30%;
     margin-left: 5%;
-    &.first { margin-left: 0; }
+    &.first {
+      margin-left: 0;
+      clear: both;
+    }
   }
 }
 
@@ -41,7 +48,7 @@ body {
   max-width: $max-width;
   position: relative;
   margin: 0 auto;
-  > header, > nav, > footer, #content > article, #content > div > article, #content > div > section, nav[role=pagination] {
+  > header, > nav, > footer, #content > article, #content > div > article, #content > div > section {
     @extend .group;
     padding-left: $pad-min;
     padding-right: $pad-min;
@@ -58,16 +65,33 @@ body {
       padding-right: $pad-wide;
     }
   }
+  div.pagination {
+    @extend .group;
+    margin-left: $pad-min;
+    margin-right: $pad-min;
+    @media only screen and (min-width: 480px) {
+      margin-left: $pad-narrow;
+      margin-right: $pad-narrow;
+    }
+    @media only screen and (min-width: 768px) {
+      margin-left: $pad-medium;
+      margin-right: $pad-medium;
+    }
+    @media only screen and (min-width: 992px) {
+      margin-left: $pad-wide;
+      margin-right: $pad-wide;
+    }
+  }
   > header {
-    font-size: 1em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    font-size: $header-font-size;
+    padding-top: $header-padding-top;
+    padding-bottom: $header-padding-bottom;
   }
 }
 
 #content { > div, > article { width: 100%; }}
 
-aside[role=sidebar] {
+aside.sidebar {
   float: none;
   padding: 0 $pad-min 1px;
   background-color: lighten($sidebar-bg, 2);
@@ -75,25 +99,34 @@ aside[role=sidebar] {
   @extend .group;
 }
 
+.flex-content { max-width: 100%; height: auto; }
+
+.basic-alignment {
+  &.left { float: left; margin-right: 1.5em; }
+  &.right { float: right; margin-left: 1.5em; }
+  &.center { display:block; margin: 0 auto 1.5em; }
+  &.left, &.right { margin-bottom: .8em; }
+}
+
 .toggle-sidebar { &, .no-sidebar & { display: none; }}
 
 body.sidebar-footer {
   @media only screen and (min-width: 750px) {
-    aside[role=sidebar]{ @include collapse-sidebar; }
+    aside.sidebar{ @include collapse-sidebar; }
   }
   #content { margin-right: 0px; }
   .toggle-sidebar { display: none; }
 }
 
 @media only screen and (min-width: 550px) {
-  body > header { font-size: 1em; }
+  body > header { font-size: $header-font-size; }
 }
 @media only screen and (min-width: 750px) {
-  aside[role=sidebar] { @include collapse-sidebar; }
+  aside.sidebar { @include collapse-sidebar; }
 }
 @media only screen and (min-width: 768px) {
   body { -webkit-text-size-adjust: auto; }
-  body > header { font-size: 1.2em; }
+  body > header { font-size: $header-font-size * 1.2; }
   #main {
     @extend .group;
     padding: 0;
@@ -103,7 +136,7 @@ body.sidebar-footer {
     @extend .group;
     margin-right: $sidebar-width-medium;
     position: relative;
-    .no-sidebar & { margin-right: 0; }
+    .no-sidebar & { margin-right: 0; border-right: 0; }
     .collapse-sidebar & { margin-right: 20px; }
     > div, > article {
       padding-top: $pad-medium/2;
@@ -111,7 +144,7 @@ body.sidebar-footer {
       float: left;
     }
   }
-  aside[role=sidebar] {
+  aside.sidebar {
     @extend .group;
     width: $sidebar-width-medium - $sidebar-pad-medium*2;
     padding: 0 $sidebar-pad-medium $sidebar-pad-medium;
@@ -130,7 +163,7 @@ body.sidebar-footer {
 }
 
 @media only screen and (min-width: 992px) {
-  body > header { font-size: 1.3em; }
+  body > header { font-size: $header-font-size * 1.3; }
   #content { margin-right: $sidebar-width-wide; }
   #content {
     > div, > article {
@@ -138,7 +171,7 @@ body.sidebar-footer {
       padding-bottom: $pad-wide/2;
     }
   }
-  aside[role=sidebar] {
+  aside.sidebar {
     width: $sidebar-width-wide - $sidebar-pad-wide*2;
     padding: 1.2em $sidebar-pad-wide $sidebar-pad-wide;
     .collapse-sidebar & {

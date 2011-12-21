@@ -1,7 +1,7 @@
 .side-shadow-border {
   @include box-shadow(lighten($sidebar-bg, 5) 0 1px);
 }
-aside[role=sidebar] {
+aside.sidebar {
   color: $sidebar-color;
   text-shadow: lighten($sidebar-bg, 8) 0 1px;
   a { @extend .force-wrap; }
@@ -19,6 +19,11 @@ aside[role=sidebar] {
         padding-top: .4em;
       }
     }
+  }
+  img {
+    @extend .flex-content;
+    @extend .basic-alignment;
+    @include shadow-box($border: #fff .3em solid);
   }
   ul {
     margin-bottom: 0.5em;
