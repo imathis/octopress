@@ -8,10 +8,10 @@ ssh_user       = "imathis@octopress.org"
 document_root  = "~/octopress.org/"
 ssh_port       = "22"
 rsync_delete   = true
-deploy_default = "rsync"
+deploy_default = "push"
 
 # This will be configured for you when you run config_deploy
-deploy_branch  = "gh-pages"
+deploy_branch  = "master"
 
 ## -- Misc Configs -- ##
 
