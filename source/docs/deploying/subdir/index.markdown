@@ -1,4 +1,10 @@
-<h2 id="deploy_subdir">Deploying to a Subdirectory</h2>
+---
+layout: page
+title: "Deploying to a Subdirectory"
+date: 2011-09-10 17:53
+sidebar: false
+footer: false
+---
 
 If you're deploying to a subdirectory on your site, or if you're using Github's project pages, make sure you set up your urls correctly in your configs.
 You can do this *almost* automatically:

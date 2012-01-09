@@ -18,7 +18,7 @@ Short answer: Everything. Octopress is now based on [mojombo/jekyll](http://gith
 Octopress comes with:
 
 - A semantic HTML5 template
-- A Mobile friendly responsive ([320 and up](http://stuffandnonsense.co.uk/projects/320andup/)) layout (rotate, or resize your browser and see)
+- A Mobile first responsive layout (rotate, or resize your browser and see)
 - Built in 3rd party support for Twitter, Google Plus One, Disqus Comments, Pinboard, Delicious, and Google Analytics
 - An easy deployment strategy using Github pages or Rsync
 - Built in support for POW and Rack servers

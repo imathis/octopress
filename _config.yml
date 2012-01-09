@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://octopress.org
+url: http://octopress.github.com
 title: Octopress
 subtitle: A blogging framework for hackers.
 author: Brandon Mathis
