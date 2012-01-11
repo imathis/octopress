@@ -247,6 +247,20 @@ multitask :push do
   Rake::Task[:copydot].invoke(public_dir, deploy_dir)
   puts "\n## copying #{public_dir} to #{deploy_dir}"
   cp_r "#{public_dir}/.", deploy_dir
+  unless File.exist?("#{deploy_dir}/.git")
+    puts "ERROR: You do not have a git repository in the _deploy directory."
+    puts "If you cloned your blog from github on another system, the root cause is"
+    puts "a second git repo with master branch needs to be present in _deploy dir."
+    puts "Possible work around:"
+    puts "1) remove all files in _deploy (copy first to a backup, just in case)"
+    puts "   (e.g. $ rm -rf _deploy/*)"
+    puts "2) git clone the master branch of the github repo in _deploy"
+    puts "   (e.g. $ git clone git@github.com:<username>/<blog_repo> _deploy)"
+    puts "3) run `rake generate` again"
+    puts "4) `cd _deploy; git diff` to validate what changed"
+    puts "5) try again to deploy `cd .. ; rake deploy`"
+    exit 1
+  end
   cd "#{deploy_dir}" do
     system "git add ."
     system "git add -u"
