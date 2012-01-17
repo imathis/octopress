@@ -1,0 +1,22 @@
+---
+layout: page
+title: "Textile"
+date: 2011-08-01 08:13
+comments: true
+sharing: true
+footer: true
+---
+
+<notextile>
+``` coffeescript
+    _Tweets_ = 1
+
+    module.exports = Tweets
+```
+</notextile>
+
+``` coffeescript
+    Tweets = 1
+    foo && bar
+    module.exports = Tweets
+```
