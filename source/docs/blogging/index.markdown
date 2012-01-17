@@ -94,6 +94,8 @@ Like with the new post task, the default file extension is `markdown` but you ca
 
 The title is derived from the filename so you'll likely want to change that. This is very similar to the post yaml except it doesn't include categories, and you can toggle sharing and comments or remove the footer altogether. If you don't want to show a date on your page, just remove it from the yaml.
 
+To navigate to your newly created page, you need to add the path manually. In an out-of-the-box setup, the source code is found in `source/_includes/custom/navigation.html`. My code looks like this ```<li><a href="{{ root_url }}/about">About</a></li>``` which now includes a button that links to public/about/index.html from my public/index.html page.
+
 ## Content
 
 The page and post content will be rendered by whichever markup engine you have specified in the site configuration file.  Additionally, you can use any of the [liquid template features](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) that are described in the [Jekyll docs](https://github.com/mojombo/jekyll/wiki/Template-Data).
