@@ -19,7 +19,9 @@ bin/octopress
   s.executables << 'octopress'
   s.add_dependency('gli', '~> 1.4.0')
   s.add_dependency('jekyll', '~> 0.11.0')
+  s.add_dependency('rubyzip', '~> 0.9.5')
   s.add_development_dependency('rake')
   s.add_development_dependency('rdoc')
-  s.add_development_dependency('aruba', '~> 0.4.9')
+  s.add_development_dependency('fakefs')
+  s.add_development_dependency('aruba', '0.4.10')
 end
