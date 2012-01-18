@@ -1,0 +1,6 @@
+# Core plugins. This list identifies the plugins that should be installed by
+# the octopress executable. It is maintained here so that the plugins may have
+# their own release schedule.
+#
+---
+- https://github.com/octopress/plugin-titlecase/zipball/master
