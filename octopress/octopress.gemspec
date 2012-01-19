@@ -23,5 +23,6 @@ bin/octopress
   s.add_development_dependency('rake')
   s.add_development_dependency('rdoc')
   s.add_development_dependency('fakefs')
-  s.add_development_dependency('aruba', '0.4.10')
+  s.add_development_dependency('webmock')
+  s.add_development_dependency('aruba', '0.4.11')
 end
