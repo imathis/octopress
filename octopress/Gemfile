@@ -1,17 +1,23 @@
-source 'http://rubygems.org'
+source :rubygems
+gemspec
 
-# The gems you'll need for generating your site on your development machine.
-# The deployment strategy you use determines what you need in production, if
-# anything.
-#
-group :development do
-  gem 'jekyll', '~> 0.11.0'
-  gem 'compass', '~> 0.11.0'
-end
+gem 'rake'
+gem 'rdoc'
 
-# If your deployment target has you running Ruby, you might have some gems
-# listed here. This will be the case if you deploy to Heroku.
-#
-group :production do
+# group :debug do
+#   gem 'ruby-debug19'
+# end
 
+group :test do
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'fakefs'
+  gem 'webmock'
+  gem 'aruba', '~> 0.4.11'
+  #if we are on travis ci ignore these
+  unless ENV["CI"]
+    gem 'rb-fsevent'
+    gem 'ruby_gntp', '~> 0.3.4'
+  end
 end
