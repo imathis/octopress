@@ -1,5 +1,22 @@
 source :rubygems
 gemspec
 
-gem 'fakefs', git:'git://github.com/defunkt/fakefs.git'
-gem 'ruby-debug19'
+group :debug do
+  gem 'ruby-debug19'
+end
+
+group :test do
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+
+  gem 'fakefs', git:'git://github.com/defunkt/fakefs.git'
+  
+  #if we are on travis ci ignore these
+  unless ENV["CI"]
+    gem 'rb-fsevent'
+    gem 'ruby_gntp', '~> 0.3.4'
+  end
+end
+
+
