@@ -1,4 +1,5 @@
 source :rubygems
 gemspec
 
+gem 'fakefs', git:'git://github.com/defunkt/fakefs.git'
 gem 'ruby-debug19'

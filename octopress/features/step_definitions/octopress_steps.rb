@@ -11,6 +11,7 @@ Then /a theme-classic project structure should exist/ do
     .rbenv-version
     _config.yml
     Gemfile
+    _plugins/titlecase.rb
   ), true)
 
   # Classic theme files
