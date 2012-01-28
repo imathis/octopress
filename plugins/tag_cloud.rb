@@ -32,7 +32,7 @@ module Jekyll
             dir = context['site']['tag_dir'] || 'tag'
             rank = CLOUD_MAX_RANKS - (Math.log(sorted[index][1].length - min_count + 1) * factor).to_i
             s << "<span class='rank-#{rank}'>"
-            s << "<a href='/#{dir}/#{sorted[index][0]}'>#{sorted[index][0]}</a>"
+            s << "<a href='/#{dir}/#{sorted[index][0].gsub(/_|\W/, '-')}'>#{sorted[index][0]}</a>"
             s << "</span> "
           end
         end
