@@ -1,12 +1,17 @@
 require 'bundler/setup'
 require 'sinatra/base'
+require 'yaml'
 
 # The project root directory
 $root = ::File.dirname(__FILE__)
 
 class SinatraStaticServer < Sinatra::Base  
+  root = YAML.load_file('_config.yml')['root'] || '/'
+
   get(/.+/) do
-    send_sinatra_file(request.path) {404}
+    path = request.path
+    path = path.sub(root, '') unless root == '/'
+    send_sinatra_file(path) {404}
   end
 
   not_found do
