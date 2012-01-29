@@ -6,7 +6,8 @@ require 'yaml'
 $root = ::File.dirname(__FILE__)
 
 class SinatraStaticServer < Sinatra::Base  
-  root = YAML.load_file('_config.yml')['root'] || '/'
+  config = File.join($root, '_config.yml')
+  root = YAML.load_file(config)['root'] || '/'
 
   get(/.+/) do
     path = request.path
