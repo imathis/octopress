@@ -7,6 +7,14 @@ var github = (function(){
     }
     t.innerHTML = fragment;
   }
+  function repoInBlacklist(repo, blacklist) {
+    if (blacklist) {
+      for (var i=0; i<blacklist.length; ++i) {
+        if (blacklist[i] == repo.name) { return true; }
+      }
+    }
+    return false;
+  }
   return {
     showRepos: function(options){
       $.ajax({
@@ -18,6 +26,7 @@ var github = (function(){
           if (!data || !data.repositories) { return; }
           for (var i = 0; i < data.repositories.length; i++) {
             if (options.skip_forks && data.repositories[i].fork) { continue; }
+            if (repoInBlacklist(data.repositories[i], options.blacklist)) { continue; }
             repos.push(data.repositories[i]);
           }
           repos.sort(function(a, b) {

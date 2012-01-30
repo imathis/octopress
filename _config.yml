@@ -62,6 +62,11 @@ github_user:
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
+github_blacklist:
+# You can optionally blacklist repos from being displayed by putting their
+# names in the github_blacklist array, e.g.:
+#
+# github_blacklist: [dotfiles, username.github.com]
 
 # Twitter
 twitter_user:
