@@ -115,7 +115,7 @@ task :new_post, :title do |t, args|
     post.puts "published: false"
     post.puts "---"
   end
-  if #{editor}
+  if editor
     system "#{editor} #{filename}"
   end
 end
