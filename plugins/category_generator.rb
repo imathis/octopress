@@ -148,12 +148,7 @@ module Jekyll
     # Returns string
     #
     def category_links(categories)
-      dir = @context.registers[:site].config['category_dir']
-      categories = categories.sort!.map do |item|
-        url = item.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
-        url = "#{dir}/#{url}" unless dir.nil? or dir.empty?
-        "<a class='category' href='/#{url}/'>#{item}</a>"
-      end
+      categories = categories.sort!.map { |c| category_link c }
 
       case categories.length
       when 0
@@ -162,6 +157,21 @@ module Jekyll
         categories[0].to_s
       else
         "#{categories[0...-1].join(', ')}, #{categories[-1]}"
+      end
+    end
+
+    # Outputs a single category as an <a> link.
+    #
+    #  +category+ is a category string to format as an <a> link
+    #
+    # Returns string
+    #
+    def category_link(category)
+      dir = @context.registers[:site].config['category_dir']
+      categories = categories.sort!.map do |item|
+        url = item.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
+        url = "#{dir}/#{url}" unless dir.nil? or dir.empty?
+        "<a class='category' href='/#{url}/'>#{item}</a>"
       end
     end
 
