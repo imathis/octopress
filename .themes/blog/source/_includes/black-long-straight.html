@@ -1,0 +1,17 @@
+<!-- 黑长直 -->
+<nav class="black-long-straight">
+  <ul>
+    <li><a href="{{ root_url }}/">Home</a></li>
+    <li><a href="/blog/archives">Archives</a></li>
+    <li><a href="{{ site.subscribe_rss }}">RSS</a></li>
+    <li><a href="http://switchable.mrzhang.me/" class="switchable" target="_blank">jQuery.Switchable</a></li>
+    {% if site.simple_search %}
+    <li>
+      <form action="{{ site.simple_search }}" method="get" target="_blank">
+        <input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}" />
+        <input type="text" name="q" class="search" placeholder="Search" x-webkit-speech />
+      </form>
+    </li>
+    {% endif %}
+  </ul>
+</nav>

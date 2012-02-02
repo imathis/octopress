@@ -8,7 +8,7 @@ ssh_user       = "user@domain.com"
 ssh_port       = "22"
 document_root  = "~/website.com/"
 rsync_delete   = true
-deploy_default = "rsync"
+deploy_default = "push"
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
@@ -22,8 +22,8 @@ deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
 themes_dir      = ".themes"   # directory for blog files
-new_post_ext    = "markdown"  # default new post file extension when using the new_post task
-new_page_ext    = "markdown"  # default new page file extension when using the new_page task
+new_post_ext    = "haml"  # default new post file extension when using the new_post task
+new_page_ext    = "haml"  # default new page file extension when using the new_page task
 server_port     = "4000"      # port for preview server eg. localhost:4000
 
 
@@ -95,7 +95,7 @@ task :new_post, :title do |t, args|
   mkdir_p "#{source_dir}/#{posts_dir}"
   args.with_defaults(:title => 'new-post')
   title = args.title
-  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  filename = "#{source_dir}/#{posts_dir}/#{Time.now.localtime.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -104,7 +104,8 @@ task :new_post, :title do |t, args|
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "date: #{Time.now.localtime.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "meta: true"
     post.puts "comments: true"
     post.puts "categories: "
     post.puts "---"
@@ -139,10 +140,8 @@ task :new_page, :filename do |t, args|
       page.puts "---"
       page.puts "layout: page"
       page.puts "title: \"#{title}\""
-      page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+      page.puts "date: #{Time.now.localtime.strftime('%Y-%m-%d %H:%M')}"
       page.puts "comments: true"
-      page.puts "sharing: true"
-      page.puts "footer: true"
       page.puts "---"
     end
   else
@@ -180,7 +179,7 @@ task :update_style, :theme do |t, args|
   mv "sass", "sass.old"
   puts "## Moved styles into sass.old/"
   cp_r "#{themes_dir}/"+theme+"/sass/", "sass"
-  cp_r "sass.old/custom/.", "sass/custom"
+  cp_r "sass.old/custom/.", "sass/custom" if File.directory?("sass.old/custom")
   puts "## Updated Sass ##"
 end
 
@@ -195,8 +194,8 @@ task :update_source, :theme do |t, args|
   cp_r "#{source_dir}/.", "#{source_dir}.old"
   puts "## Copied #{source_dir} into #{source_dir}.old/"
   cp_r "#{themes_dir}/"+theme+"/source/.", source_dir, :remove_destination=>true
-  cp_r "#{source_dir}.old/_includes/custom/.", "#{source_dir}/_includes/custom/", :remove_destination=>true
-  cp "#{source_dir}.old/favicon.png", source_dir
+  cp_r "#{source_dir}.old/_includes/custom/.", "#{source_dir}/_includes/custom/", :remove_destination=>true if File.directory?("#{source_dir}.old/_includes/custom")
+  cp "#{source_dir}.old/favicon.png", source_dir if File.exists?("#{source_dir}.old/favicon.png")
   mv "#{source_dir}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != source_dir
   cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir && File.exists?("#{source_dir}.old/index.html")
   puts "## Updated #{source_dir} ##"
@@ -250,8 +249,8 @@ multitask :push do
   cd "#{deploy_dir}" do
     system "git add ."
     system "git add -u"
-    puts "\n## Commiting: Site updated at #{Time.now.utc}"
-    message = "Site updated at #{Time.now.utc}"
+    puts "\n## Commiting: Site updated at #{Time.now.localtime}"
+    message = "Site updated at #{Time.now.localtime}"
     system "git commit -m \"#{message}\""
     puts "\n## Pushing generated #{deploy_dir} website"
     system "git push origin #{deploy_branch} --force"

@@ -1,0 +1,54 @@
+@charset 'UTF-8';
+@import 'compass/css3';
+$experimental-support-for-microsoft: false;
+$default-font-family: 'Lucida Grande', arial, sans-serif;
+
+/**
+ * Reset
+ */
+* { margin:0; padding:0; }
+
+body,
+button, input, select, textarea { font:14px/1.5 $default-font-family; }
+
+button, input, select, textarea { font-size:100%; }
+
+address, em { font-style:normal; }
+ul, ol { list-style:none; }
+
+a {
+  text-decoration:none;
+  &:hover {
+    text-decoration:underline;
+  }
+  img { border:0; }
+}
+
+
+/* Clearfix */
+// 此处忌用 &, 否则被别处 @extend 后会生成多余的标签
+.clearfix { *zoom:1; }
+.clearfix:before {
+  content:'\20';
+  display:table;
+}
+.clearfix:after {
+  @extend .clearfix:before;
+  clear:both;
+}
+
+
+/* Common Styles */
+.nowrap { white-space:nowrap; }
+.disabled { cursor:default; }
+.float-left { float:left; }
+.float-right { float:right; }
+.align-left { text-align:left; }
+.align-right { text-align:right; }
+.input {
+  padding:5px;
+  border:1px solid #c6c6c6;
+  border-radius:3px;
+  @include box-shadow(1px 1px #f0f0f0 inset);
+  line-height:1em;
+}
