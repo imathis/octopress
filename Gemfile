@@ -1,18 +1,19 @@
-source "http://rubygems.org"
+source 'http://ruby.taobao.org'
 
 group :development do
   gem 'rake'
   gem 'rack'
   gem 'jekyll'
-  gem 'rdiscount'
-  gem 'pygments.rb'
-  gem 'RedCloth'
-  gem 'haml', '>= 3.1'
-  gem 'compass', '>= 0.11'
+  # gem 'rdiscount'     # Markdown
+  gem 'pygments.rb'     # Highlight
+  # gem 'RedCloth'      # Textile
+  gem 'haml'
+  gem 'compass', :git => 'git://github.com/chriseppstein/compass', :branch => 'master'
+  # gem 'oily_png'      # Native mixin to speed up ChunkyPNG
   gem 'rubypants'
-  gem 'rb-fsevent'
-  gem 'stringex'
-  gem 'liquid', '2.2.2'
+  gem 'rb-fsevent'      # FSEvents API with signals handled (without RubyCocoa)
+  gem 'stringex'        # 'Hello World'.to_url => 'hello-world'
+  gem 'liquid', '2.2.2' # Template => {{ Tag }}
 end
 
 gem 'sinatra', '1.2.6'

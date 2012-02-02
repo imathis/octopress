@@ -1,0 +1,5 @@
+<h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+<p class="meta">
+  {% include post/date.html %}{{ time }}
+  {% include post/categories.html %}
+</p>

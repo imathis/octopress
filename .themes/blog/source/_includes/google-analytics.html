@@ -1,0 +1,3 @@
+{% if site.google_analytics_tracking_id %}
+<script>var _gaq=_gaq||[];_gaq.push(["_setAccount","{{ site.google_analytics_tracking_id }}"]),_gaq.push(["_addOrganic","baidu","wd"]),_gaq.push(["_trackPageview"]),location.hostname!=="localhost"&&function(){var a=document.createElement("script");a.async=!0,a.src="http://www.google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}();</script>
+{% endif %}
