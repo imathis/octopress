@@ -24,7 +24,7 @@ module Jekyll
 
     def render(context)
       source = "<pre class='sh_#{ @lang }'>"
-      code = CGI.escapeHTML super.join.lstrip.rstrip
+      code = CGI.escapeHTML super.lstrip.rstrip
       code.lines.each do |line|
         source += "<code>#{ line }</code>"
       end
