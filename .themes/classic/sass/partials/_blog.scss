@@ -18,8 +18,10 @@ article {
       margin: 0;
       &.meta {
         @extend .sans;
-        text-transform: uppercase;
         position: absolute; top: 0;
+      }
+      time {
+        text-transform: uppercase;
       }
     }
     @media only screen and (min-width: 768px) {
@@ -80,7 +82,14 @@ article {
       @extend .separator;
     }
   }
-
+  a[rel=bookmark]{
+    text-decoration: none;
+  }
+  .linklog-marker {
+    color: $text-color-light;
+    font-size: .8em;
+    line-height: 1em;
+  }
 }
 article + article {
   .blog-index & {
@@ -94,6 +103,10 @@ article + article {
   article h1 {
     font-size: 2.2em;
     a { color: inherit; &:hover { color: $link-color-hover; } }
+  }
+  header a[href*='http'] {
+    text-decoration: underline;
+    font-size: .85em;
   }
   a[rel=full-article] {
     background: darken($main-bg, 5);
@@ -139,3 +152,4 @@ article + article {
     }
   }
 }
+
