@@ -17,7 +17,6 @@
     font-size: 1.5em;
     a {
       @include hover-link;
-      color: inherit;
       &:hover { color: $link-color-hover; }
       font-weight: normal;
       display: inline-block;
@@ -36,7 +35,6 @@
     .month { text-transform: uppercase; }
   }
   p { margin-bottom: 1em; }
-  &, .entry-content { a { @include link-colors(inherit, $link-color-hover); }}
   a:hover { color: $link-color-hover; }
   @media only screen and (min-width: 550px) {
     article { margin-left: 5em; }

@@ -1,0 +1,16 @@
+{% if page.external-url %}
+  {% capture linklog %}{{ page.external-url }}{% endcapture %}
+{% elsif post.external-url %}
+  {% capture linklog %}{{ post.external-url }}{% endcapture %}
+{% endif %}
+{% if post.url %}{% assign index = true %}{% endif %}
+{% capture permalink %}{% if index %}{{ root_url }}{{ post.url }}{% else %}{{ root_url }}{{ page.url }}{% endif %}{% endcapture %}
+{% capture title_url %}{% if linklog %}{{ linklog }}{% else %}{{ permalink }}{% endif %}{% endcapture %}
+{% capture article_title %}{% if index %}{{ post.title }}{% else %}{{ page.title }}{% endif %}{% endcapture %}
+{% capture linklog_marker %}<span class='linklog-marker'>{{ site.linklog_marker }}</span>{% endcapture %}
+
+<h1 class="entry-titile">
+{% if linklog and site.linklog_marker and site.linklog_marker_position == 'before' %}{{ linklog_marker }}{% endif %}
+{% if index or linklog %}<a href="{{ title_url }}">{% endif %}{% if site.titlecase %}{{ article_title | titlecase }}{% else %}{{ article_title }}{% endif %}{% if index or linklog %}</a>{% endif %}
+{% if linklog and site.linklog_marker and site.linklog_marker_position == 'after' %}{{ linklog_marker }}{% endif %}
+</h1>
