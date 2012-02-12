@@ -45,6 +45,7 @@ permalink_label_feed: "&infin; Permalink"
 linklog_marker: "&rarr;"
 linklog_marker_position: after
 linklog_marker_position_feed: after
+standard_post_marker:
 
 titlecase: true       # Converts page and post titles to tilecase
 
