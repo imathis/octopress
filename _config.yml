@@ -42,7 +42,7 @@ recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 permalink_label: "&infin;"
 permalink_label_feed: "&infin; Permalink"
-linklog_marker: &rarr;
+linklog_marker: "&rarr;"
 linklog_marker_position: after
 linklog_marker_position_feed: after
 
