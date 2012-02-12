@@ -205,10 +205,10 @@ task :update_source, :theme do |t, args|
   mv "#{source_dir}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != source_dir
   cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir && File.exists?("#{source_dir}.old/index.html")
   if File.exists?("#{source_dir}/archives/index.html")
-    cp "#{source_dir}/blog/archives/index.html", "#{source_dir}/archives/index.html", :remove_destination=>true
-    rm "#{source_dir}/blog/archives/index.html", :secure=>true
-    rm_r "#{source_dir}/blog/archives", :secure=>true if Dir["#{source_dir}/blog/archives"].empty?
-    rm_r "#{source_dir}/blog", :secure=>true if Dir["#{source_dir}/blog"].empty?
+    rm "#{source_dir}/archives/index.html"
+    mv "#{source_dir}/blog/archives/index.html", "#{source_dir}/archives/index.html"
+    rm_r "#{source_dir}/blog/archives"
+    rm_r "#{source_dir}/blog" if Dir.entries("#{source_dir}/blog").join == "..."
   end
   puts "## Updated #{source_dir} ##"
 end
