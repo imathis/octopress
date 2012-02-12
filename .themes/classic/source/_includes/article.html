@@ -5,7 +5,7 @@
       <p class="meta">
         {% include post/date.html %}{{ time }}
         {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %}
-         &bull; <a href="{% if post.url %}{{ permalink }}{% endif %}#disqus_thread">Comments</a>
+         &bull; <a href="{% if index %}{{ permalink }}{% endif %}#disqus_thread">Comments</a>
         {% endif %}
          &bull; <a rel="bookmark" href="{{ permalink }}">{{ site.permalink_label }}</a>
       </p>
@@ -13,7 +13,7 @@
   </header>
 {% endunless %}
 {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
-{% if post.url and excerpted %}
+{% if index and excerpted %}
   <div class="entry-content">{{ content | excerpt }}</div>
   <footer>
     <a rel="full-article" href="{{ permalink }}">{{ site.excerpt_link }}</a>

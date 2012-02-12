@@ -4,7 +4,8 @@ single: true
 ---
 
 <div>
-<article class="hentry" role="article">
+{% include post/variables.html %}
+<article class="hentry" role="article" {% if linklog %}data-linklog{% endif %}>
   {% include article.html %}
   <footer>
     <p class="meta">
@@ -41,3 +42,4 @@ single: true
   {% endif %}
 </aside>
 {% endunless %}
+

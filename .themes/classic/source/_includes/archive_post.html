@@ -2,8 +2,11 @@
 {% include post/title.html %}
 <time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "<span class='month'>%b</span> <span class='day'>%d</span> <span class='year'>%Y</span>"}}</time>
 <footer>
+  {% if linklog %}
   <a rel="bookmark" href="{{ permalink }}">{{ site.permalink_label }}</a>
+  {% endif %}
   {% if category != '0' %}
-  &bull; <span class="categories">posted in {{ post.categories | category_links }}</span>
+  {% if linklog %} &bull; {% endif %}
+  <span class="categories">posted in {{ post.categories | category_links }}</span>
   {% endif %}
 </footer>
