@@ -8,9 +8,9 @@ sharing: false
 footer: false
 ---
 
-A linklog is a blogging format where the post titles link directly to an external site and the content of the post offers commentary on the linked piece. This is commonly referred to as a "linked list" because of the [The Daring Fireball Linked List](http://daringfireball.net/linked/) which helped to popularize the format.
+A linklog is a blogging format where the post titles link directly to an external site and the content of the post offers commentary on the linked piece. This is commonly referred to as a "linked list" like the [The Daring Fireball Linked List](http://daringfireball.net/linked/) which helped popularize the format.
 
-To publish a linklog with Octopress simply add the url for the item you want to write about to the `external-url` variable in the yaml front matter of a blog post.
+To publish linked posts with Octopress simply add the url for the item you want to write about to the `external-url` variable in the yaml front matter of a blog post.
 
 ``` yml Sample Yaml Front Matter
 ---
@@ -24,7 +24,7 @@ external-url: http://opinionguy.com/post/uninformed-rant-vs-straw-man/
 
 When you generate your blog, the title link will point to the external url. Also, each post will show it's own permalink, and in the feed there will be a permalink at the end of linklog posts.
 
-## Customization
+## Customizing titles
 
 In the `_config.yml` there are some configurations you can change if you like.
 
@@ -37,9 +37,9 @@ linklog_marker_position_feed: after
 standard_post_marker:
 ```
 
-The default settings were inspired by [Marco Arment](http://marco.org) with one exception, in his RSS feed the linklog marker comes before the title to help readers better distinguish which posts are linklogs. To use that style simply change `linklog_marker_position_feed` to `before`.
+The default settings were inspired by [Marco Arment](http://marco.org) with one exception, in his RSS feed the linklog marker comes before the title to help readers better distinguish linked posts from normal posts. To use that style simply change `linklog_marker_position_feed` to `before`.
 
-John Gruber takes a different approach than Marco. Rather than mark his linklog posts, he adds the &#9733; character to the beginning of each of his standard posts. So for example if you wanted to copy [Daring Fireball's](http://daringfireball.net) style, you'd set it up like this.
+John Gruber's [Daring Fireball](http://daringfireball.net) takes a different approach than Marco. Rather than mark his linked posts, he adds &#9733; to the beginning of each of his standard posts. If you wanted to copy that style, you'd set it up like this.
 
 ``` yml Linklog settings like Daring Fireball
 permalink_label: "&#9733;"
@@ -48,4 +48,26 @@ linklog_marker:
 linklog_marker_position:
 linklog_marker_position_feed:
 standard_post_marker: "&#9733; "
+```
+
+## Styling
+
+To help distinguish them from standard posts, linked posts have a smaller font size in addition to the linklog marker. When an article is a linked post it is marked with the html5 attribute `data-linklog` to give you a hook to customize styles if you like. If you wanted to set a different color for linked post titles you could add this css to your `sass/custom/styles.scss`.
+
+``` scss Customized linked post title
+article[data-linklog] .entry-title a {
+  color: lime;
+}
+```
+
+Styles for linklog markers and permalinks can also be customized.
+
+``` scss Customize permalink styles
+.entry-title:hover .linklog-marker {
+  color: $link-color-hover;
+}
+
+article a[rel=bookmark] {
+  font-size: 1.2em;
+}
 ```
