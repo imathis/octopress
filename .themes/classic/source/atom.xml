@@ -24,7 +24,7 @@ layout: nil
     <link href="{{ title_url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>{{ site.url }}{{ post.id }}</id>
-    {% capture content %}{{ post.content | expand_urls: site.url | cdata_escape }}{% if linklog %}<p><a rel="bookmark" href="{{ site.url }}{{ post.url }}">{{ site.feed_permalink_label }}</a></p>{% endif %}{% endcapture %}
+    {% capture content %}{{ post.content | expand_urls: site.url | cdata_escape }}<p><a rel="bookmark" href="{{ site.url }}{{ post.url }}">{{ site.feed_permalink_label }}</a></p>{% endcapture %}
     <content type="html"><![CDATA[{{ content }}]]></content>
   </entry>
   {% endfor %}
