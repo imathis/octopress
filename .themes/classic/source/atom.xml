@@ -21,6 +21,7 @@ layout: nil
     <link href="{{ site.url }}{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>{{ site.url }}{{ post.id }}</id>
+    {% for category in post.categories %}<category term="{{ category }}" />{% endfor %}
     <content type="html"><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></content>
   </entry>
   {% endfor %}
