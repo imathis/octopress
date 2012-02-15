@@ -78,7 +78,7 @@ strong { font-weight: bold; }
 
 em { font-style: italic; }
 
-sup, sub { font-size: 0.8em; position: relative;  display: inline-block; }
+sup, sub { vertical-align: baseline; font-size: 0.8em; position: relative; }
 sup { top: -.5em; }
 sub { bottom: -.5em; }
 
