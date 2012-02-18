@@ -2,6 +2,7 @@
   #content > div { &, > article { padding-top: 0; } }
 }
 #blog-archives {
+  color: $text-color-light;
   article {
     padding: 1em 0 1em;
     position: relative;
@@ -9,25 +10,31 @@
     &:last-child {
       background: none;
     }
-    footer { padding: 0; margin: 0;}
+    footer {
+      padding: 0; margin: 0;
+      font-size: .85em;
+      line-height: 1em;
+    }
   }
-  h1 { color: $text-color; margin-bottom: .3em; }
   h2 { display: none; }
-  h1 {
-    font-size: 1.5em;
+  .entry-title {
+    color: $text-color; margin-bottom: .3em;
+    font-size: $h3;
     a {
       @include hover-link;
-      color: inherit;
       &:hover { color: $link-color-hover; }
       font-weight: normal;
       display: inline-block;
     }
   }
+  article[data-linklog] .entry-title {
+    font-size: $h4;
+    a { text-decoration: underline; }
+  }
   a.category, time {
     @extend .sans;
     color: $text-color-light;
   }
-  color: $text-color-light;
   .entry-content { display: none; }
   time {
     font-size: .9em;
@@ -36,10 +43,13 @@
     .month { text-transform: uppercase; }
   }
   p { margin-bottom: 1em; }
-  &, .entry-content { a { @include link-colors(inherit, $link-color-hover); }}
   a:hover { color: $link-color-hover; }
+
   @media only screen and (min-width: 550px) {
-    article { margin-left: 5em; }
+    article {
+      padding: { left: 4.5em; bottom: .7em;}
+      margin-left: 5em;
+    }
     h2 {
       margin-bottom: .3em;
       font-weight: normal;
@@ -55,12 +65,7 @@
       top: 1.8em;
     }
     .year { display: none; }
-    article {
-      padding:{left: 4.5em; bottom: .7em;}
-    }
-  a.category {
-    line-height: 1.1em;
-    }
+    a.category { line-height: 1.1em; }
   }
 }
 #content > .category {
