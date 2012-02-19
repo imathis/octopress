@@ -1,8 +1,9 @@
 ---
-layout: help
+layout: page
 title: "Octopress Help"
 date: 2011-08-02 14:03
 footer: false
+sidebar: false
 ---
 
 Don't feel like reading the documentation? You've come to the right place! Actually no, please don't do that. If you have questions or problems I'm happy to help, but be sure you've read through some of these pages first.
