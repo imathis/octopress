@@ -82,7 +82,7 @@ module Jekyll
       https.verify_mode = OpenSSL::SSL::VERIFY_NONE
       request           = Net::HTTP::Get.new raw_uri.request_uri
       data              = https.request request
-      if data.code != 200
+      if Integer(data.code) != 200
           raise RuntimeError, "Gist replied with #{data.code} for #{gist_url}"
       end
       data              = data.body
