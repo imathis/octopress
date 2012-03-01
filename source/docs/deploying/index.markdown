@@ -24,3 +24,9 @@ If you have web hosting service you can probably deploy with [Rsync](http://en.w
 If your host doesn't offer SSH access, and you're looking for one that does, check out [Dreamhost](http://www.dreamhost.com/r.cgi?109007) (I've been a happy customer since 2005).
 
 [Deploying with Rsync &raquo;](/docs/deploying/rsync)
+
+## S3
+[Amazon S3](http://aws.amazon.com/s3/) is not free, but it's close, and has very good performance and availability. 
+
+[Deploying to S3 &raquo;](/docs/deploying/s3)
+
