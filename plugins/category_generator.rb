@@ -143,6 +143,7 @@ module Jekyll
     def category_links(categories)
       dir = @context.registers[:site].config['category_dir']
       categories = categories.sort!.map do |item|
+        # XXX microformat category
         "<a class='category' href='/#{dir}/#{item.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase}/'>#{item}</a>"
       end
 
@@ -161,6 +162,7 @@ module Jekyll
     #  +date+ is the date object to format as HTML.
     #
     # Returns string
+    # XXX microformat time
     def date_to_html_string(date)
       result = '<span class="month">' + date.strftime('%b').upcase + '</span> '
       result += date.strftime('<span class="day">%d</span> ')
