@@ -1,6 +1,7 @@
 ---
 date: '2011-11-27 22:04:33'
 layout: post
+comments: true
 slug: announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum
 status: publish
 title: Announcing Ribbot.com - build your own Reddit/Hacker News style discussion

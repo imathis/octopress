@@ -1,6 +1,7 @@
 ---
 date: '2011-01-22 23:34:37'
 layout: post
+comments: true
 slug: being-controversial-is-good-marketing
 status: publish
 title: Being Controversial Is Good Marketing

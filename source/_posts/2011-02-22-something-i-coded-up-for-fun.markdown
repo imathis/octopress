@@ -1,6 +1,7 @@
 ---
 date: '2011-02-22 02:33:45'
 layout: post
+comments: true
 slug: something-i-coded-up-for-fun
 status: publish
 title: Something I coded up for fun...

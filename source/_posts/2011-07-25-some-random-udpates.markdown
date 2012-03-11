@@ -1,6 +1,7 @@
 ---
 date: '2011-07-25 06:13:25'
 layout: post
+comments: true
 slug: some-random-udpates
 status: publish
 title: Some random udpates...

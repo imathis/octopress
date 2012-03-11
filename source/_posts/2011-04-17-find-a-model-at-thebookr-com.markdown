@@ -1,6 +1,7 @@
 ---
 date: '2011-04-17 06:02:16'
 layout: post
+comments: true
 slug: find-a-model-at-thebookr-com
 status: publish
 title: Find a model at TheBookr.com

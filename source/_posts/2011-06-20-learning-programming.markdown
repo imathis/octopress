@@ -1,6 +1,7 @@
 ---
 date: '2011-06-20 13:46:54'
 layout: post
+comments: true
 slug: learning-programming
 status: publish
 title: Learning Programming

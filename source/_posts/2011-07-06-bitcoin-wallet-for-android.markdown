@@ -1,6 +1,7 @@
 ---
 date: '2011-07-06 07:26:16'
 layout: post
+comments: true
 slug: bitcoin-wallet-for-android
 status: publish
 title: Bitcoin Wallet for Android

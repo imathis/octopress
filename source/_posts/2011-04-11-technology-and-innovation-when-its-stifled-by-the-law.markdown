@@ -1,6 +1,7 @@
 ---
 date: '2011-04-11 04:26:50'
 layout: post
+comments: true
 slug: technology-and-innovation-when-its-stifled-by-the-law
 status: publish
 title: Technology and Innovation - Is It Being Stifled By The Law?
