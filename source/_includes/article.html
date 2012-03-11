@@ -24,5 +24,35 @@
     </footer>
   {% endif %}
 {% else %}
-<div class="entry-content">{{ content }}</div>
+  {% if page.wordpress_id %}
+    <div style="float: right; padding-left: 15px; padding-botom: 15px; ">
+      <script type="text/javascript"><!--
+      google_ad_client = "ca-pub-7721655128098525";
+      /* Blog Main */
+      google_ad_slot = "7466725066";
+      google_ad_width = 336;
+      google_ad_height = 280;
+      //-->
+      </script>
+      <script type="text/javascript"
+      src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
+    </div>
+  {% endif %}
+  
+  <div class="entry-content">{{ content }}</div>
+
+  {% if page.wordpress_id %}
+    <script type="text/javascript"><!--
+    google_ad_client = "ca-pub-7721655128098525";
+    /* Blog Bottom */
+    google_ad_slot = "4562123819";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
+    </script>
+    <script type="text/javascript"
+    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+  {% endif %}
 {% endif %}
