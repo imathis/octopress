@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Wealth | Brian Armstrong]]></title>
   <link href="http://brianarmstrong.org/blog/categories/wealth/atom.xml" rel="self"/>
   <link href="http://brianarmstrong.org/"/>
-  <updated>2012-03-11T15:50:24-07:00</updated>
+  <updated>2012-03-11T16:18:08-07:00</updated>
   <id>http://brianarmstrong.org/</id>
   <author>
     <name><![CDATA[Brian Armstrong]]></name>
@@ -14,155 +14,245 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How To Understand (and Create) A Personal Financial Statement Each Month In 5 Minutes]]></title>
-    <link href="http://brianarmstrong.org/blog/how-to-understand-and-create-a-personal-financial-statement-each-month-in-5-minutes/"/>
-    <updated>2008-02-06T13:39:48-08:00</updated>
-    <id>http://brianarmstrong.org/blog/how-to-understand-and-create-a-personal-financial-statement-each-month-in-5-minutes</id>
-    <content type="html"><![CDATA[<p><a href="http://s3.amazonaws.com/oldbloguploads/2008/02/istock_000004878226xsmall1.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2008/02/istock_000004878226xsmall1-150x150.jpg" alt="Creating Financial Statements" /></a>A lot of people shy away from any talk about "finance" or "accounting" because (1) its boring (2) it involves math and (3) its hard work.</p>
+    <title type="html"><![CDATA[TurboTax Alternatives]]></title>
+    <link href="http://brianarmstrong.org/blog/turbotax-alternatives/"/>
+    <updated>2010-04-13T07:06:11-07:00</updated>
+    <id>http://brianarmstrong.org/blog/turbotax-alternatives</id>
+    <content type="html"><![CDATA[<p><strong>Update</strong>: Yes, I'm aware that ads for TurboTax are showing up on this article occasionally, and I think it's awesome :)</p>
 
-<p>Well it's not as bad as you think.  I'm going to show you how to understand financial statements in about 5 minutes.  Then I'm going to give you some Excel templates to create your own. (See the video demo at the end.)</p>
+<p>Tax time is definitely a pain.</p>
 
-<p>But first...</p>
+<p>The U.S. tax code is a lengthy document (over 50,000 pages at last count) that few people can really understand (including our current <a href="http://en.wikipedia.org/wiki/Timothy_Geithner#Tax_scandal">Secretary Of The Treasury</a> which is somewhat frightening).</p>
 
-<p><strong>Why Should You Create A Personal Financial Statement?</strong></p>
+<p>It's riddled with puzzling (and at times hilarious) questions such as these gems which I encountered over the weekend:</p>
 
-<p>If you wanted to lose weight, you'd have to weigh yourself right?  If you wanted to be a great race car driver, you'd have to time your laps.</p>
+<blockquote><p>Did you rent a farm and receive part of the crop instead of cash for the rent?</p></blockquote>
 
-<p>Well if you want to get rich (or become financially free), you have to create financial statements.</p>
+<p>Why yes I did!  I'm sure glad someone at the IRS thought to include this question otherwise I might have missed it.  And this one:</p>
 
-<p>You are a business.  You have money come in and you have money going out.  You have things that you own and things that you owe.</p>
+<blockquote><p>Enter the amount of any gambling losses, but only to the extent of gambling winnings. It is important to keep an accurate diary or similar record of your gambling winnings and losses.</p></blockquote>
 
-<p>If you don't have a way to MEASURE progress and COMPARE what works and what doesn't, then you are just wandering blindly in the dark.</p>
+<p>Umm....ok, nice to see the government giving gambling advice.</p>
 
-<p>Robert Kiyosaki talks a lot about this, how rich people are "financially literate" and how this should be taught in schools.  That way we wouldn't have so many Americans in credit card debt, losing their homes, and retiring flat broke only to become a burden on their families.</p>
+<p>But I guess I can't get too upset at the government acting very...well, government like.  They don't know any better.</p>
 
-<p>But that is another story.  The thing to remember is that something MAGICAL happens when you start to measure your progress.  Your success rate goes through the roof.</p>
-
-<p>If you aren't looking at your financials about once a month then you quite simply AREN'T serious about becoming rich.  (You can pay a bookkeeper or accountant to do it as well if you don't want to go through the process below.)</p>
-
-<p><strong>Understanding Financial Statements In 5 Minutes</strong></p>
-
-<p>I've tutored about a dozen people in MBA level finance and accounting courses.  Here is the explanation that seems to work the best.</p>
-
-<p>There are only two types of financial statements that you really need to know: a balance sheet and an income statement.</p>
-
-<p><a href="http://s3.amazonaws.com/oldbloguploads/2008/02/balance_sheet11.gif"><img src="http://s3.amazonaws.com/oldbloguploads/2008/02/balance_sheet11-150x150.gif" alt="Example Balance Sheet" /></a>
-BALANCE SHEET</p>
+<p>But a private company...well that's another story.  And this is what I always found especially infuriating about Intuit's TurboTax product.  It's not just that it's a bad piece of software - it's that it's bad yet so darn successful!</p>
 
 <ul>
-<li><p>Shows what you own (assets) and what you owe (liabilities)</p></li>
-<li><p>The difference between these two (assets - liabilities) is your net worth.</p></li>
-<li><p>Shows one particular MOMENT in time, a "snapshot" if you will.</p></li>
+<li><p>It gets <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.com%2Fs%3Fie%3DUTF8%26x%3D0%26ref_%3Dnb%5Fsb%5Fnoss%26y%3D0%26field-keywords%3Dturbotax%26url%3Dsearch-alias%253Daps&amp;tag=httpwwwstartb-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=390957">TONS of negative reviews</a> on Amazon.com, but since there are over 40 different versions listed (they put up new ones each year) their bad reviews keep getting pushed down.</p></li>
+<li><p>It has "designed obsolescence" - which means they went out of their way to break it every year so you'd have to buy it again.</p></li>
+<li><p>It's user interface looks like it was designed by programmers and accountants instead of normal people.</p></li>
 </ul>
 
 
-<p>Click the thumbnail to the right to see an example.  As you can see, the money in your bank account, the market value of any property you own, your car (if you own it outright), and stocks are all examples of assets.  Mortgages, car payments, credit card debt, and other loans are all liabilities.  The difference is your net worth.  Notice how it says a specific day in January and not just "January 2008" because a balance sheet refers to one moment in time, not a period of time like a month.</p>
+<p>This is why I was so excited to see someone finally come along and clean TurboTax's clock.</p>
 
-<p>February and March haven't been filled out yet, but if you spent a few minutes once a month putting in those numbers you can see how easy it would be to track your progress month to month.</p>
+<p>The last two years I've used <a href="http://www.TaxACT.com">TaxACT.com</a> and it is a breath of fresh air.  It is fast, clean, simple, and makes sense out of incomprehensible IRS documents (perhaps their most impressive feat).</p>
 
-<p><a href="http://s3.amazonaws.com/oldbloguploads/2008/02/income_statement1.png"><img src="http://s3.amazonaws.com/oldbloguploads/2008/02/income_statement1-150x150.png" alt="Example Income Statement" /></a>
-INCOME STATEMENT</p>
+<p>By the way, I'm not getting paid to recommend them.  They are just that awesome that I wanted to tell people about it.</p>
 
-<ul>
-<li><p>Shows where money is coming in (income) and where money is going out (expenses)</p></li>
-<li><p>The difference between these two (income - expenses) is your net income.</p></li>
-<li><p>Shows what happened over a PERIOD of time, instead of how things are at one moment like a balance sheet.</p></li>
-</ul>
+<p>Best of all, it is way cheaper than TurboTax.  Filing your federal return is FREE.  If you want to do a state return it's just $9.95.</p>
 
+<p>Overall, I'm so impressed with these guys - they nailed a great freemium product, probably put up with TONS of hassle getting it to work with the IRS, and have a product that really beats the pants off TurboTax.</p>
 
-<p>Again, click the thumbnail to the right to see an example income statement.  For most people the primary source of income is their job so you might have that first.  After that you can see the income from those two properties listed on the balance sheet, as well as income from a small business you started, just as an example.  Secondly, you see expenses broken down by category and net income at the end.  I'll show you how to quickly categorize your expenses in a minute.</p>
+<p>Even if you have been using TurboTax for YEARS, it's time to BREAK the <a href="http://www.youtube.com/watch?v=R706isyDrqI">addiction</a>, stop paying your money to Intuit each year for their inferior product, and make the switch to <a href="http://www.TaxACT.com">TaxACT.com</a>.</p>
 
-<p>Notice how in the second month your cash flow is negative and the number appears red.  Negative cash flow is bad!  It means you are spending more than you're earning, and that is the way toward bankruptcy, not financial freedom.  If you hadn't made your financial statement that month would you have ever know this?  Probably not.</p>
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/04/turbotax_fail_3.jpg" alt="" /></p>
 
-<p>Thats it.  Not as scary as you thought right?  On corporate financial statements you will sometimes see some strange terminology, but the basic concept is the same as for this personal financial statement.  Balance sheet: what you own, what you owe.  Income statement: what you made, what you spent.</p>
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/04/turbotax.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2010/04/turbotax.jpg" alt="" /></a></p>
 
-<p><strong>Why Quicken and Microsoft Money Suck</strong></p>
-
-<p>Let me take a minute here and rant about how bad these two pieces of software are (in case you don't know, they are the two most popular "personal finance" programs out there).  I think part of the reason so many people are afraid of getting their financial statements together is that at some point in time they booted up one of these two programs, spent several hours or days fiddling with things, and eventually got so frustrated that they never took another look at it.  At the very least the "pain" of using these programs causes people to subconsciously avoid doing their financial statements each month, and they rarely get done.</p>
-
-<p>To me this is such a shame.  I could literally write an entire book on each one of these programs listing all the flaws in their design.  They should be used as case studies in every user interface design class in the country on how NOT to design software.  People tend to make excuses for them, saying that finance is complicated, or blaming themselves.  Nope, its just embarrassingly poor software design, end of story.</p>
-
-<p>Is it any coincidence that an entire industry has been born of "Quicken Certified Professionals" who are basically consultants that went through enough classes to learn to use the program?</p>
-
-<p>I mean, imagine if Google had designed a personal finance program.  The first time I used GMail I didn't have to attend a class or hire a certified consultant to figure out how to use it.  It just worked.</p>
-
-<p><strong>No Need For Reconciliation</strong></p>
-
-<p>So ANYWAY (rant over)...how do we get around it?  Well, Quicken and MS Money are centered around this idea of <em>reconciliation</em>, which basically means you list all the things you spent money on and earned money from and then try to match each one to a line in your bank statement.  To me this is incredibly tedious, and you always find yourself in a situation where you are saying "ok I know that line on my bank statement is valid, but I don't know how to account for it in this damn program, so its saying all my numbers are wrong".  Then you give up.</p>
-
-<p>To me, reconciliation is the worst part of the whole process, and the whole point of it is to make sure that no mistakes have been made (either by the bank, or on your part).  Well, I have a much easier solution to that problem:  JUST SCAN YOUR BANK STATEMENT AND SEE IF ANYTHING LOOKS OUT OF PLACE.</p>
-
-<p>I can do that in about 30 seconds.  Sure its not as robust, and it would never work in a huge publicly traded company, but for me it works just great.  I don't need to enter my $6.50 burrito and then match it to a line on my bank statement.  I know its supposed to be there so I just move on.</p>
-
-<p>After all, I'm not really that concerned about the bank making mistakes or people illegally charging my card.  It rarely happens, and when it does its really easy to call and tell them it was a mistake and boom the money is back in your account.  They are really good about that these days.  So why spend 90% of your time (on reconciliation) worrying about a rare problem that is easily fixable?</p>
-
-<p>I'm far more concerned about these questions:</p>
-
-<ul>
-<li><p>Did I make enough income to cover my expenses this month?</p></li>
-<li><p>Am I continuing to grow my passive income (like from real estate), instead of relying on earned income (from a job)?</p></li>
-<li><p>What am I spending money on and should I try to reduce/increase any of those areas?</p></li>
-<li><p>Is my net worth increasing?</p></li>
-<li><p>Am I taking on good debt (such as loans to buy houses that pay me each month) as opposed to bad debt (car payment, boats, vacation homes, etc which cost me money each month)?</p></li>
-</ul>
-
-
-<p>Instead of using Quicken or MS Money, we going to use a program you probably already own to answer these questions: good old Excel.</p>
-
-<p><strong>How To Use Excel To Create Your Financial Statements</strong></p>
-
-<p>I've created a video below to show you how to create your financial statements in just a few minutes.</p>
-
-<p>Here are the basic steps:</p>
-
-<p>Note that for many of these steps I say "log on to such and such website" to get a statement.  You can use paper statements that you get in the mail to do this, but I like to use online banking because the information is more up to date and you are guaranteed to have it all in one place instead of waiting for statements to arrive.  But do it however is most convenient to you.</p>
-
-<p>BALANCE SHEET</p>
-
-<ol>
-<li><p>Open your balance sheet template in Excel and log on to your bank website</p></li>
-<li><p>Take the account totals for each of your bank accounts and put them in the template</p></li>
-<li><p>If you own any real estate, log in to your mortgage website and see what your principal is at now.  It should go down a little bit each month, reducing your liability.</p></li>
-<li><p>(Only need to do this step every 3 months or so, otherwise just copy the figure from the previous month over.)  Ask your real estate agent to get the current market value of any real estate you own.  This will update in the asset column.  It is an estimate, you won't know for sure until you go to sell it, which is why we don't update it every month.</p></li>
-<li><p>Log in to your brokerage account if you own any stocks or bonds.  Update the current value of your stocks in the asset column.</p></li>
-<li><p>Check the outstanding balances on any credit cards, student loans, car loans, etc that you still owe money on and update them in the liability column.  Hopefully these should go down each month.</p></li>
-</ol>
-
-
-<p>Moving on to the INCOME STATEMENT</p>
-
-<ol>
-<li><p>Open up your Income Sheet template in excel and log back in to your bank's website.</p></li>
-<li><p>Download the transactions for the previous month as a CSV file (this will open in a separate Excel file)</p></li>
-<li><p>(See video for further details.)  Categorize each item on the bank statement and find the totals using Data->filter->autofilter and AutoSum.</p></li>
-<li><p>Input each category of expense and income to your income statement.</p></li>
-</ol>
-
-
-<p><strong>Download The Excel Templates</strong></p>
-
-<p>By the way I did not make these excel templates.  I have modified them, but the original templates came from the excellent <a href="http://www.consumerismcommentary.com/2006/07/10/excel-template-for-net-worth-report-balance-sheet/">Consumerism Commentary blog</a>.  They deserve all the credit.</p>
-
-<p><a href="http://s3.amazonaws.com/oldbloguploads/2008/02/balance-sheet-template1.xls">>>>Download the Excel Balance Sheet Template&lt;&lt;&lt;</a></p>
-
-<p><a href="http://s3.amazonaws.com/oldbloguploads/2008/02/income-statement-template1.xls">>>>Download the Excel Income Statement Template&lt;&lt;&lt;</a></p>
-
-<p><strong>Conclusion</strong></p>
-
-<p>Remember that financial statements are not scary, they are easy.</p>
-
-<p>A balance sheet is just a list of what you own and what you owe at a particular moment in time.  Subtract one from the other and you see your net worth.  Make it grow!</p>
-
-<p>An income statement is nothing more than a list of what money you earned and what money you spent over a period of time.  Subtract one from the other and you see your net income.  Make it grow!</p>
-
-<p>And of course, as a bigger picture goal, you should be trying to get more and more <a href="http://brianarmstrong.org/posts/how-to-disappear-from-your-job-for-a-year-and-continue-to-earn-money/">assets that GENERATE INCOME (like real estate) and start businesses</a> so that you eventually won't have to have a job to cover your expenses each month.  In other words, you should be "breaking free".</p>
-
-<p>I hope you've seen the importance of financial statements now.  Only whats measured gets done, and if you aren't measuring your financial health each month, then the chances of you blindly stumbling upon wealth one day are not high.</p>
-
-<p>Best of luck, and if you have any questions or comments please leave them in the comment box below.</p>
-
-<p>Thank you,
+<p>Until next time, keep breaking free!
 Brian Armstrong</p>
+
+<p>P.S. Doing your taxes is way easier if you've been doing your <a href="http://brianarmstrong.org/posts/how-to-understand-and-create-a-personal-financial-statement-each-month-in-5-minutes/">financial statements</a> each month!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How To Finally Get Your Finances Under Control]]></title>
+    <link href="http://brianarmstrong.org/blog/how-to-finally-get-your-finances-under-control/"/>
+    <updated>2009-11-04T18:29:36-08:00</updated>
+    <id>http://brianarmstrong.org/blog/how-to-finally-get-your-finances-under-control</id>
+    <content type="html"><![CDATA[<p>Check out this page Ramit Sethi put together about <a href="http://www.startbreakingfree.com/go/iwtytbr/">getting your finances under control</a>.  It's generally great advice and I do quite a lot of it already, like setting up automatic deposits to my ING Direct savings accounts.</p>
+
+<p>Here is an email he got from a reader...</p>
+
+<blockquote><p>"I want to earn more (I know, who doesn't)</p>
+
+<p>I keep reading all these finance books and like any other lazy American, I haven't done shit. I'm 30 and a little behind on saving for the future, plus my boyfriend is a post-doc and not making a ton, so I'm kinda saving for both of us... yadda yadda) Essentially, I love the automation idea, I am just not sure how to start automating my life...</p>
+
+<p>I have the (Roth) 401K, I also have a Roth IRA, but haven't set up an automatic deposit into that - I know I should, I've just been sending in the lump sum every year... bad Leah, bad! Other than those two, I have no idea what to invest in. I like the idea of keeping a close tab on the 401K but let's face it, I just put it in a lifecycle fund and haven't touched it since. What else do I invest in? Basically, I just want out of the rat race."</p></blockquote>
+
+<p>If it sounds familiar then check out what his <a href="http://www.startbreakingfree.com/go/iwtytbr/">response</a> was.  Financial education is too important to be left to chance.  Speaking of which, have you done your <a href="http://brianarmstrong.org/posts/how-to-understand-and-create-a-personal-financial-statement-each-month-in-5-minutes/">financial statements</a> for October?</p>
+
+<p><a href="http://www.startbreakingfree.com/go/iwtytbr/"><img src="http://s3.amazonaws.com/oldbloguploads/2009/11/1-investing.jpg" alt="Investing" /></a></p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Art Of The Next Big Thing: From Printing Press To Internet]]></title>
+    <link href="http://brianarmstrong.org/blog/the-art-of-the-next-big-thing-from-printing-press-to-internet/"/>
+    <updated>2009-06-11T19:21:25-07:00</updated>
+    <id>http://brianarmstrong.org/blog/the-art-of-the-next-big-thing-from-printing-press-to-internet</id>
+    <content type="html"><![CDATA[<p>I was thinking the other day about the times in history where there have been opportunities to generate huge amounts of wealth.</p>
+
+<p>It seems to be when a new piece of technology comes along that is a TOTAL game changer.</p>
+
+<p>In recent memory of course is the internet, and all the things it has enabled. A small example being distribution of media such as music and video, and reducing the cost of publishing content to basically zero.</p>
+
+<p>But this trend is not new and has been going on throughout history.</p>
+
+<p><a href="http://en.wikipedia.org/wiki/List_of_most_wealthy_historical_figures"><img src="http://s3.amazonaws.com/oldbloguploads/2009/06/picture-3.png" alt="Picture 3.png" /></a></p>
+
+<p>What about the printing press? It was basically the first internet. Even before that, what about the first civilization to create an alphabet or writing?</p>
+
+<p>What about when everyone was using coal and then oil came along? HUGE amounts of wealth generated.</p>
+
+<p>What about when everyone was running around on horses and then railroads came along? COMPLETE game changer.</p>
+
+<p>What about when everyone was using blocks of ice and then refrigeration was invented?</p>
+
+<p>Steel? Plastic? Agriculture? The wheel? Flight?</p>
+
+<p>Wikipedia actually has a <a href="http://en.wikipedia.org/wiki/List_of_most_wealthy_historical_figures">list of the wealthiest people in history</a> (adjusted for inflation) and you can see that aside from Royalty (which doesn't really count as earning it since you're born into it) most of them are people who got in early on a complete game changing technology.</p>
+
+<p>The trick is getting in at the right time.</p>
+
+<p><strong>Coming in too early:</strong> There are also lots of "next big things" which turn out to never materialize, like the <a href="http://en.wikipedia.org/wiki/Flying_car_(aircraft">flying car</a>) or a battery which lasts a long time. People have been waiting for those for 50 years. So it's definitely not easy to bet on the next big thing and be right. You have to hedge your bets.</p>
+
+<p><strong>Coming in too late:</strong> The market for oil and automobiles is very mature today. It would be very difficult to build the next great oil company today, or shoe manufacturing company, or any other mature industry where there are strong incumbents. So it pays to be looking for the NEXT big one, not ones that have already passed. If you can be the only expert around when it does hit then you're positioned well to capitalize. This requires you to toil away in a particular industry when a lot of people probably think you're wasting your time.</p>
+
+<p>I feel like the internet still has lots of untapped potential, and it's probably one of your best opportunities for generating wealth today. But it's starting to feel a bit mature at times.</p>
+
+<p><strong>So that begs the question: what do you think is going to be the next big thing?</strong></p>
+
+<p>For me I see some of these being complete game changers where people will build huge amounts of wealth. See if you agree with my predictions. Maybe you can get in early on one of these...</p>
+
+<ul>
+<li><p>genetic engineering (crops, bacteria for various purposes, and most importantly humans to prevent various diseases)</p></li>
+<li><p>robotics (the military will increasingly become unmanned - casualties are more acceptable if they're robots)</p></li>
+<li><p>artificial intelligence (I think <a href="http://en.wikipedia.org/wiki/Jeff_Hawkins">Jeff Hawkins</a> and his company Numenta have a good chance of solving this in the next 5-10 years, btw it will not be like terminator, the part of our brain which accounts for desires and motives is very old and easy to replicate or leave out of a robot, the hard part is the neo-cortex which other mammals don't have and is good at learning to make good <em>predictions</em> - this would definitely be a game changer - for more check out his excellent book <a href="http://www.amazon.com/gp/product/0805078533?ie=UTF8&amp;tag=httpwwwstartb-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0805078533">On Intelligence</a>)</p></li>
+<li><p>Renewable energy, in particular solar and electric vehicles</p></li>
+</ul>
+
+
+<p><strong>What do you think will be the next big thing?</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Big Annoucement Coming Up Later This Week!]]></title>
+    <link href="http://brianarmstrong.org/blog/big-annoucement-coming-up-later-this-week/"/>
+    <updated>2009-04-15T03:09:28-07:00</updated>
+    <id>http://brianarmstrong.org/blog/big-annoucement-coming-up-later-this-week</id>
+    <content type="html"><![CDATA[<p>Hey Folks,</p>
+
+<p>Now that UniversityTutor.com has the <a href="http://brianarmstrong.org/posts/video-of-the-new-billing-feature-on-universitytutorcom/">billing/invoice system setup and running</a> (more and more people are starting to use it) I've had a few days to work on a project I've been pondering for a long time.</p>
+
+<p>I don't want to give away too many details yet, but here's what I can tell you:</p>
+
+<ul>
+<li><p>It's a web app</p></li>
+<li><p>Whereas UniversityTutor.com focuses on a specific niche (tutoring) this new app will have a MUCH broader appeal and potential if it takes off - something on the order of Twitter, Wikipedia, etc.</p></li>
+<li><p>In the <a href="http://brianarmstrong.org/posts/should-i-charge-for-my-product-or-make-money-off-ads/">pay vs. ad-supported debate</a> this one will be completely free for right now. To be honest I don't have the business model really figured out yet for this, but it's something that would be REALLY awesome whether it makes money or not and deserves to be free for the world.</p></li>
+<li><p>I've been thinking about it for probably at least two years, but I've just recently seen some developments which really made it come together in my mind.</p></li>
+<li><p>I worked till 3 or 4 am the last few days on this, and even after trying to go to sleep last night I couldn't because it was racing through my mind! I had to pace on the balcony at 5am and watch the cars to calm myself down.</p></li>
+<li><p>This is a website that I've found myself wanting a number of times over the past year. This is really the best kind of business in some ways because you are creating it for yourself and understand the target market. Some people refer to this as <a href="http://en.wikipedia.org/wiki/Eat_one%27s_own_dog_food">dogfooding</a>.</p></li>
+<li><p>I will be asking YOU to help me test it out and try it later this week when I announce it. As always, I would love to get your feedback.</p></li>
+<li><p>I am following my own <a href="http://brianarmstrong.org/posts/46-ways-to-start-a-business-with-no-money/">advice</a> on this project and launching the whole thing QUICKLY and INEXPENSIVELY to test out the idea. As you may remember, I launched UniversityTutor.com in one month for less than $100 (to be fair I did the programming myself which I know isn't an option for everyone, but there are <a href="http://brianarmstrong.org/posts/how-to-get-a-business-website-built-for-cheap-or-free/">alternatives</a> to that if you're interested). This project will be even better by those measures: I'll have it done in ONE WEEK and for only 7 DOLLARS AND 95 CENTS. Literally my only expense so far has been the domain name and I don't plan on spending a single cent more to launch this website (not even for web hosting). I'll show you how I did that later this week.</p></li>
+</ul>
+
+
+<p>And to top it all off I'm <a href="http://brianarmstrong.org/posts/oh-snap-im-moving-to-south-america/">leaving for Argentina</a> in about 2 and half weeks! Today I sold my car, and I'm wrapping up various loose ends on that front as well (insurance, selling furniture, putting gym/phone/etc on hold).</p>
+
+<p>I was really reminded today of my <a href="http://brianarmstrong.org/posts/the-secret-to-working-less-producing-more-and-getting-rich/">post</a> from a few weeks back about how time is your most precious resource. <a href="http://www.UniversityTutor.com">UniversityTutor.com</a> is turning into a great "water wheel" for me. It is running almost entirely on auto-pilot now with new tutors and students signing up daily. It's making money and growing every day while I'm busy already working on the next water wheel!</p>
+
+<p>These are exciting times to say the least. Stay tuned for the announcement later this week...I think you'll really like it!</p>
+
+<p>Brian</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Video Of The New Billing Feature On UniversityTutor.com]]></title>
+    <link href="http://brianarmstrong.org/blog/video-of-the-new-billing-feature-on-universitytutorcom/"/>
+    <updated>2009-04-07T01:43:43-07:00</updated>
+    <id>http://brianarmstrong.org/blog/video-of-the-new-billing-feature-on-universitytutorcom</id>
+    <content type="html"><![CDATA[<p>Hey Folks,</p>
+
+<p>Here is the video as promised of the new billing features on UniversityTutor.com.</p>
+
+<p>For those just joining us, this represented a <a href="http://brianarmstrong.org/posts/progress-on-universitytutorcom/">big change</a> in the business model.  Previously I was charging tutors $10/month to keep their profiles on the site.</p>
+
+<p>With the new business model, tutors can now have a free account, but the client pays a 15% fee on any money they earn.  For tutors who use the site a lot and don't want their clients to have the 15% fee, they can still pay $10/month (for a Pro Account) and then the markup is only 5%.  This is similar to the <a href="http://www.guru.com/help/pro/membership_chart.cfm">Guru.com business model</a> which I think balances nicely between the free and pro account.</p>
+
+<p>There were a couple important points I wanted to reinforce to the tutors:</p>
+
+<ul>
+<li><p>The <em>client</em> pays the 15% markup and not you.  I stole this idea from odesk.com by the way, and it's slightly different than how elance.com or guru.com does it, where they charge the tutor.</p></li>
+<li><p>Clients can only leave you a positive review if you complete the transaction online.</p></li>
+<li><p>Similarly, your number of hours of tutoring (aka your tutoring experience) will only get updated if you complete the transaction online.</p></li>
+<li><p>You don't have to pay up front for "contacts" from potential students anymore.  Now, we only make money if you make money - which seems more fair.</p></li>
+</ul>
+
+
+<p>Here it the video on Veoh (which has slightly better resolution).  <a href="http://www.veoh.com/browse/videos/category/educational_and_howto/watch/v18167024yyXeg8yc">Click here if you don't see it below</a>.</p>
+
+<p>Or if you are international here is the same <a href="http://www.youtube.com/watch?v=1t03syGAv28">video on YouTube</a>.</p>
+
+<p>As you can see, it ended up remarkably close to my drawings from a few weeks ago:</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/screen21.jpg" alt="screen2.jpg" /></p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/screen31.jpg" alt="screen3.jpg" /></p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/screen11.jpg" alt="screen1.jpg" /></p>
+
+<p>I launched the feature this weekend, and sent emails out to about 5,000 tutors explaining the change and how it would (hopefully) benefit them.  A handful of the tutors wrote back and were pretty upset about the change (which was to be expected when sending to this many people).  But I wrote them back right away thanking them for the feedback and telling them it was still a work in progress and that really using the invoicing was optional for right now.  They could still get paid with cash/checks if they wanted - clients just wouldn't be able to leave them a review after.</p>
+
+<p>Here is an example of one of the emails I got:</p>
+
+<blockquote><p>Subject: Silly</p></blockquote>
+
+<p>While I feel that it is justifiable for the website to make money and operating costs, the website should find another way to make these costs.  Advertising to both the potential tutees and tutors could be a much better option.  It could include specially directed advertisements based on
+-info given about potential tutees
+-Area
+-Major and area of tutoring (of college students)</p>
+
+<p>Additionally, I am concerned about the method of payment.  Would it be through pay pall?  That would be bad for me.  My students have been very reliable with their checks.</p>
+
+<p>Sincerely,
+A disgruntled student</p>
+
+<p>And my response:</p>
+
+<blockquote><p>Hi[NAME REMOVED],</p></blockquote>
+
+<p>Thanks for the feedback you make some very valid points!  It is still a work in progress and nothing is set in stone yet so we're definitely taking everyones feedback seriously.</p>
+
+<p>To answer your question, the student can pay via credit card which is more common online, so no, Paypal is not required.  In addition, you are not required to use our online payment method at all.  If you prefer to keep using checks or cash that is ok with us, and you wouldn't pay us any markup in that case.</p>
+
+<p>For your current clients it may be easier to just continue doing this.  Just keep in mind that to build a reputation on the site (reviews and hours) it might be better long term to transition over, but it is still totally optional, and to be honest right now it won't make much of a difference since nobody has any hours recorded yet anyway.</p>
+
+<p>But hope this helps and we'll continue working on it.  Thanks again!</p>
+
+<p>Thank you,</p>
+
+<h2>Brian Armstrong</h2>
+
+<p>www.UniversityTutor.com</p>
+
+<p>Her mood changed instantly when she wrote back:</p>
+
+<blockquote><p>Thank you for answering my questions.
+I am actually quite excited about using the online system now!</p></blockquote>
+
+<p>Success!  I'm really excited about it and hopefully it helps make the site much more profitable over the new few months as people start using it.</p>
+
+<p>What do you think?   Feel free to send me your feedback in the comments...</p>
 ]]></content>
   </entry>
   

@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Announcing Ribbot.com - build your own Reddit/Hacker News style discussion forum - Brian Armstrong</title>
+  <meta name="author" content="Brian Armstrong">
+
+  
+  <meta name="description" content="Announcing Ribbot.com - Build Your Own Reddit/Hacker News Style Discussion Forum Nov 27th, 2011 <!-- google_ad_client = "ca-pub-7721655128098525 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://brianarmstrong.org/blog/announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum">
+  <link href="/favicon.ico" rel="icon">
+  
+  <link href="/assets/bootstrap/css/spacelab.min.css" rel="stylesheet" type="text/css">
+  <link href="/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+  <link href="/assets/bootstrap/css/custom.css" rel="stylesheet" type="text/css">
+  <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+  
+  <link href="http://feeds.feedburner.com/brianarmstrong/vTOG" rel="alternate" title="Brian Armstrong" type="application/atom+xml">
+  
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-387546-20']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    data-spy="scroll">
+
+  <div class="container">
+    <header class="jumbotron subhead" id="overview">
+      <div class="subscribe">
+  <table>
+    <tr>
+      <td><span>Get Updates: &nbsp;</span></td>
+      <td><a href="#" onclick="window.open('http://feedburner.google.com/fb/a/mailverify?uri=brianarmstrong/vTOG','FeedBurner','menubar=no,width=600,height=600,toolbar=no'); return false;" class="btn"><i class="icon-envelope"></i> By Email</a></td>
+      <td><a href="http://feeds.feedburner.com/brianarmstrong/vTOG" class="btn"><i class="icon-cog"></i> By RSS</a></td>
+      <td><a href="http://twitter.com/brian_armstrong" class="btn"><i class="icon-twitter-sign"></i> On Twitter</a></td>
+    </tr>
+  </table>
+</div>
+<h1 class="title">Brian Armstrong</h1>
+
+      <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container" style="width: auto;">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/archives">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        
+          <form action="http://google.com/search" method="get" class="navbar-search pull-left">
+            <fieldset role="search">
+              <input type="hidden" name="q" value="site:brianarmstrong.org" />
+              <input type="text" name="q" results="0" placeholder="Search" class="search-query span2" />
+            </fieldset>
+          </form>
+        
+        <ul class="nav pull-right">
+          <li>
+            <a style="padding: 7px 0 0 0;" href="http://feeds.feedburner.com/brianarmstrong/vTOG"><img src="http://feeds.feedburner.com/~fc/brianarmstrong/vTOG?bg=a1cefc&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>            
+          </li>
+        </ul>
+      </div><!-- /.nav-collapse -->
+    </div>
+  </div><!-- /navbar-inner -->
+</div>
+
+    </header>
+    <div id="main">
+      <div id="content">
+        <div class="row">
+  <div class="span8">
+    
+  <header>
+    
+      <h1 class="entry-title">Announcing Ribbot.com - Build Your Own Reddit/Hacker News Style Discussion Forum</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-27T22:04:33-08:00" pubdate data-updated="true">Nov 27<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  
+    <div style="float: right; padding-left: 15px; padding-botom: 15px; ">
+      <script type="text/javascript"><!--
+      google_ad_client = "ca-pub-7721655128098525";
+      /* Blog Main */
+      google_ad_slot = "7466725066";
+      google_ad_width = 336;
+      google_ad_height = 280;
+      //-->
+      </script>
+      <script type="text/javascript"
+      src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
+    </div>
+  
+  
+  <div class="entry-content"><p>I launched a new site about a week ago - <a href="http://ribbot.com">Ribbot.com</a> .  It allows you to create better discussion forums online.</p>
+
+<p><a href="http://ribbot.com"><img src="http://s3.amazonaws.com/oldbloguploads/2011/11/Screen-Shot-2011-11-26-at-7.27.19-PM-500x377.png" alt="" /></a></p>
+
+<p>If you&#8217;ve ever used Hacker News, Reddit, StackOverflow, or 37Signals Answers - these are all examples of a new breed of forum that has emerged online and tends to be much better than than traditional forums.</p>
+
+<p>Traditional forums often have low quality discussions, and are a place for a vocal minority to rant online.  Many companies avoid user discussion forums because they&#8217;re worried about giving people a public place to rant.</p>
+
+<p>Ribbot allows anyone to create one of these new types of discussion forums (like the sites mentioned above) with the following features:</p>
+
+<ul>
+<li><p>User voting and reputation</p></li>
+<li><p>Threaded comments</p></li>
+<li><p>Post and comment ranking algorithms</p></li>
+</ul>
+
+
+<p><a href="http://ribbot.com"><img src="http://s3.amazonaws.com/oldbloguploads/2011/11/Screen-Shot-2011-11-26-at-7.27.39-PM-500x377.png" alt="" /></a></p>
+
+<p>Here&#8217;s how they work: if someone posts something off-topic or unproductive then they are quickly down-voted by the community, and their content is less likely to be seen.  Likewise, if someone posts something helpful or insightful, they are quickly up-voted by the community and their content is more likely to be seen.  The net result of this is that (with enough users) you are more likely to see good content when you visit the forum, and hopefully contribute some yourself.</p>
+
+<p>Who might want a new forum like this?  You never quite know (and I&#8217;m eager to find out) but my hunch is this might be useful for:</p>
+
+<ul>
+<li><p><strong>Businesses</strong>: most companies would like to have user discussion forums because they are a great way to reduce customer support costs. Instead of having customer support reps answering the same questions over and over, users can answer each other&#8217;s questions - and those answers become public for all to find later (Ribbot lets you search old content easily).  Traditionally, most businesses have been skittish about user discussion forums because they become a public place for a vocal minority of users to rant (see Google Groups). But I believe this new style of forum with the features mentioned above largely solves this quality problem, and businesses will be more likely to adopt it (or their users will for them).</p></li>
+<li><p><strong>Question &amp; Answer sites</strong>: these have become very popular lately (see StackExchange and Quora) but there still isn&#8217;t an easy way for people to start their own QA site on any topic. StackExchange originally started with this vision but they decided to cut off the long tail of smaller topic sites (a mistake in my opinion). Ribbot would allow any special interest group or company to create their own.</p></li>
+<li><p><strong>Link aggregation sites</strong>: many community sites have grown up around sharing relevant or interesting links on a particular topic (Hacker News is an example of this where the majority of posts are links to external sites with some discussion around them happening in the comments). These are more oriented around timely &#8220;latest news and events&#8221; links.</p></li>
+<li><p><strong>Special interest groups</strong>: these could be around health (people with some particular  condition), sports, hobbies, tech stuff (open source projects), classes &amp; learning, etc.  Basically, anything people are using Google Groups for now could work better on Ribbot.</p></li>
+</ul>
+
+
+<p>Ribbot is a good fit for the use cases above because it&#8217;s customizable.  You can change the terminology of the site to reflect questions and answers, link submissions, posts and comments, or anything you&#8217;d like.  You can also allow only certain types of submission (links, posts, questions, etc).  Three other features allow customization (some of these are still under development):</p>
+
+<ul>
+<li><p><strong>Themes</strong>: Ribbot supports custom themes (much like Tumblr) which I hope will eventually create many diverse and beautiful sites.  Any designer can share (and sell) a custom theme on Ribbot.</p></li>
+<li><p><strong>Custom domains</strong>: By default Ribbot gives you a subdomain site (again, like Tumblr). But you will soon be able to host the forum on any custom domain of your choosing.</p></li>
+<li><p><strong>Monetization options</strong>: Ribbot is completely free if you are ok with some ads on the site. But I wanted a way for forum owners and moderators to monetize their sites and be compensated for their work. So with the paid option (see pricing <a href="http://ribbot.com/pricing">here</a>) you are able to run your own ads and turn a profit. My hope is that a number of forums will generate sufficient traction so that their owners can eventually make it a full time gig. For others, I imagine it could make a nice side income or hobby project.  Many businesses I suspect will keep the paid option and run it entirely without ads - the customer support savings would make it more than worth it.</p></li>
+</ul>
+
+
+<p>In short, I think Ribbot will help people build better discussion forums online across a variety of topics.</p>
+
+<h3>Final notes:</h3>
+
+<p>Ribbot is still in an early beta.</p>
+
+<p>To give Ribbot a try you can <strong><a href="http://support.ribbot.com">visit the Ribbot support forum</a></strong>. This is both the support forum for the site and a demo of the product itself.</p>
+
+<p>As always, <strong>please send me your feedback and first impressions in the support forum or in the comments below</strong>. I always love to hear feedback from people on how/if it can be useful to them (or why it&#8217;s not).</p>
+
+<p>And finally, you can create your own Ribbot forum <a href="http://ribbot.com">right here on the homepage</a> if you want to try it out.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+</div>
+
+  
+    <script type="text/javascript"><!--
+    google_ad_client = "ca-pub-7721655128098525";
+    /* Blog Bottom */
+    google_ad_slot = "4562123819";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
+    </script>
+    <script type="text/javascript"
+    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+  
+
+
+    <footer>
+      <p class="meta">
+        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Brian Armstrong</span></span>
+
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-27T22:04:33-08:00" pubdate data-updated="true">Nov 27<span>th</span>, 2011</time>
+        
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/business-ideas/'>Business Ideas</a>, <a class='category' href='/blog/categories/updates/'>Updates</a>
+  
+</span>
+
+
+      </p>
+      
+        <div class="sharing">
+  <br/>
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://brianarmstrong.org/blog/announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum/" data-via="brian_armstrong" data-counturl="http://brianarmstrong.org/blog/announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum/" >Tweet</a>
+  
+  
+  
+</div>
+
+      
+      <p class="meta">
+        
+          <a class="basic-alignment left" href="/blog/some-random-udpates/" title="Previous Post: Some random udpates...">&laquo; Some random udpates...</a>
+        
+        
+      </p>
+    </footer>
+    
+    
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      </section>
+    
+  </div>
+
+  
+  <div class="span4 sidebar">
+    <div class="well">
+      
+        <section>
+  <h2>Recent Posts</h2>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum/">Announcing Ribbot.com - build your own Reddit/Hacker News style discussion forum</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/some-random-udpates/">Some random udpates...</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/bitcoin-wallet-for-android/">Bitcoin Wallet for Android</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/learning-programming/">Learning Programming</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/find-a-model-at-thebookr-com/">Find a model at TheBookr.com</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h2>Latest Tweets</h2>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+    <a href="http://twitter.com/brian_armstrong" class="twitter-follow-button" data-show-count="true">Follow @brian_armstrong</a>
+  
+</section>
+
+
+
+
+
+      
+    </div>
+  </div>
+
+</div>
+
+
+      </div>
+    </div>
+    <footer class="footer"><p>
+  Copyright &copy; 2012 - Brian Armstrong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> -
+  
+    <span class="credit">Theme by <a href="https://github.com/barmstrong/octopress-bootstrap">Brian Armstrong</a></span>
+  
+</p>
+</footer>
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'brianarmstrong';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://brianarmstrong.org/blog/announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum/';
+        var disqus_url = 'http://brianarmstrong.org/blog/announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+    
+    $(document).ready(function(){
+      getTwitterFeed("brian_armstrong", 4, false);
+    });
+  </script>
+
+
+  </div>
+</body>
+</html>

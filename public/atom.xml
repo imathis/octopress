@@ -4,7 +4,7 @@
   <title><![CDATA[Brian Armstrong]]></title>
   <link href="http://brianarmstrong.org/atom.xml" rel="self"/>
   <link href="http://brianarmstrong.org/"/>
-  <updated>2012-03-11T15:50:24-07:00</updated>
+  <updated>2012-03-11T16:18:08-07:00</updated>
   <id>http://brianarmstrong.org/</id>
   <author>
     <name><![CDATA[Brian Armstrong]]></name>
@@ -14,178 +14,992 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How To Understand (and Create) A Personal Financial Statement Each Month In 5 Minutes]]></title>
-    <link href="http://brianarmstrong.org/blog/how-to-understand-and-create-a-personal-financial-statement-each-month-in-5-minutes/"/>
-    <updated>2008-02-06T13:39:48-08:00</updated>
-    <id>http://brianarmstrong.org/blog/how-to-understand-and-create-a-personal-financial-statement-each-month-in-5-minutes</id>
-    <content type="html"><![CDATA[<p><a href="http://s3.amazonaws.com/oldbloguploads/2008/02/istock_000004878226xsmall1.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2008/02/istock_000004878226xsmall1-150x150.jpg" alt="Creating Financial Statements" /></a>A lot of people shy away from any talk about &#8220;finance&#8221; or &#8220;accounting&#8221; because (1) its boring (2) it involves math and (3) its hard work.</p>
+    <title type="html"><![CDATA[Announcing Ribbot.com - build your own Reddit/Hacker News style discussion forum]]></title>
+    <link href="http://brianarmstrong.org/blog/announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum/"/>
+    <updated>2011-11-27T22:04:33-08:00</updated>
+    <id>http://brianarmstrong.org/blog/announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum</id>
+    <content type="html"><![CDATA[<p>I launched a new site about a week ago - <a href="http://ribbot.com">Ribbot.com</a> .  It allows you to create better discussion forums online.</p>
 
-<p>Well it&#8217;s not as bad as you think.  I&#8217;m going to show you how to understand financial statements in about 5 minutes.  Then I&#8217;m going to give you some Excel templates to create your own. (See the video demo at the end.)</p>
+<p><a href="http://ribbot.com"><img src="http://s3.amazonaws.com/oldbloguploads/2011/11/Screen-Shot-2011-11-26-at-7.27.19-PM-500x377.png" alt="" /></a></p>
 
-<p>But first&#8230;</p>
+<p>If you&#8217;ve ever used Hacker News, Reddit, StackOverflow, or 37Signals Answers - these are all examples of a new breed of forum that has emerged online and tends to be much better than than traditional forums.</p>
 
-<p><strong>Why Should You Create A Personal Financial Statement?</strong></p>
+<p>Traditional forums often have low quality discussions, and are a place for a vocal minority to rant online.  Many companies avoid user discussion forums because they&#8217;re worried about giving people a public place to rant.</p>
 
-<p>If you wanted to lose weight, you&#8217;d have to weigh yourself right?  If you wanted to be a great race car driver, you&#8217;d have to time your laps.</p>
-
-<p>Well if you want to get rich (or become financially free), you have to create financial statements.</p>
-
-<p>You are a business.  You have money come in and you have money going out.  You have things that you own and things that you owe.</p>
-
-<p>If you don&#8217;t have a way to MEASURE progress and COMPARE what works and what doesn&#8217;t, then you are just wandering blindly in the dark.</p>
-
-<p>Robert Kiyosaki talks a lot about this, how rich people are &#8220;financially literate&#8221; and how this should be taught in schools.  That way we wouldn&#8217;t have so many Americans in credit card debt, losing their homes, and retiring flat broke only to become a burden on their families.</p>
-
-<p>But that is another story.  The thing to remember is that something MAGICAL happens when you start to measure your progress.  Your success rate goes through the roof.</p>
-
-<p>If you aren&#8217;t looking at your financials about once a month then you quite simply AREN&#8217;T serious about becoming rich.  (You can pay a bookkeeper or accountant to do it as well if you don&#8217;t want to go through the process below.)</p>
-
-<p><strong>Understanding Financial Statements In 5 Minutes</strong></p>
-
-<p>I&#8217;ve tutored about a dozen people in MBA level finance and accounting courses.  Here is the explanation that seems to work the best.</p>
-
-<p>There are only two types of financial statements that you really need to know: a balance sheet and an income statement.</p>
-
-<p><a href="http://s3.amazonaws.com/oldbloguploads/2008/02/balance_sheet11.gif"><img src="http://s3.amazonaws.com/oldbloguploads/2008/02/balance_sheet11-150x150.gif" alt="Example Balance Sheet" /></a>
-BALANCE SHEET</p>
+<p>Ribbot allows anyone to create one of these new types of discussion forums (like the sites mentioned above) with the following features:</p>
 
 <ul>
-<li><p>Shows what you own (assets) and what you owe (liabilities)</p></li>
-<li><p>The difference between these two (assets - liabilities) is your net worth.</p></li>
-<li><p>Shows one particular MOMENT in time, a &#8220;snapshot&#8221; if you will.</p></li>
+<li><p>User voting and reputation</p></li>
+<li><p>Threaded comments</p></li>
+<li><p>Post and comment ranking algorithms</p></li>
 </ul>
 
 
-<p>Click the thumbnail to the right to see an example.  As you can see, the money in your bank account, the market value of any property you own, your car (if you own it outright), and stocks are all examples of assets.  Mortgages, car payments, credit card debt, and other loans are all liabilities.  The difference is your net worth.  Notice how it says a specific day in January and not just &#8220;January 2008&#8221; because a balance sheet refers to one moment in time, not a period of time like a month.</p>
+<p><a href="http://ribbot.com"><img src="http://s3.amazonaws.com/oldbloguploads/2011/11/Screen-Shot-2011-11-26-at-7.27.39-PM-500x377.png" alt="" /></a></p>
 
-<p>February and March haven&#8217;t been filled out yet, but if you spent a few minutes once a month putting in those numbers you can see how easy it would be to track your progress month to month.</p>
+<p>Here&#8217;s how they work: if someone posts something off-topic or unproductive then they are quickly down-voted by the community, and their content is less likely to be seen.  Likewise, if someone posts something helpful or insightful, they are quickly up-voted by the community and their content is more likely to be seen.  The net result of this is that (with enough users) you are more likely to see good content when you visit the forum, and hopefully contribute some yourself.</p>
 
-<p><a href="http://s3.amazonaws.com/oldbloguploads/2008/02/income_statement1.png"><img src="http://s3.amazonaws.com/oldbloguploads/2008/02/income_statement1-150x150.png" alt="Example Income Statement" /></a>
-INCOME STATEMENT</p>
+<p>Who might want a new forum like this?  You never quite know (and I&#8217;m eager to find out) but my hunch is this might be useful for:</p>
 
 <ul>
-<li><p>Shows where money is coming in (income) and where money is going out (expenses)</p></li>
-<li><p>The difference between these two (income - expenses) is your net income.</p></li>
-<li><p>Shows what happened over a PERIOD of time, instead of how things are at one moment like a balance sheet.</p></li>
+<li><p><strong>Businesses</strong>: most companies would like to have user discussion forums because they are a great way to reduce customer support costs. Instead of having customer support reps answering the same questions over and over, users can answer each other&#8217;s questions - and those answers become public for all to find later (Ribbot lets you search old content easily).  Traditionally, most businesses have been skittish about user discussion forums because they become a public place for a vocal minority of users to rant (see Google Groups). But I believe this new style of forum with the features mentioned above largely solves this quality problem, and businesses will be more likely to adopt it (or their users will for them).</p></li>
+<li><p><strong>Question &amp; Answer sites</strong>: these have become very popular lately (see StackExchange and Quora) but there still isn&#8217;t an easy way for people to start their own QA site on any topic. StackExchange originally started with this vision but they decided to cut off the long tail of smaller topic sites (a mistake in my opinion). Ribbot would allow any special interest group or company to create their own.</p></li>
+<li><p><strong>Link aggregation sites</strong>: many community sites have grown up around sharing relevant or interesting links on a particular topic (Hacker News is an example of this where the majority of posts are links to external sites with some discussion around them happening in the comments). These are more oriented around timely &#8220;latest news and events&#8221; links.</p></li>
+<li><p><strong>Special interest groups</strong>: these could be around health (people with some particular  condition), sports, hobbies, tech stuff (open source projects), classes &amp; learning, etc.  Basically, anything people are using Google Groups for now could work better on Ribbot.</p></li>
 </ul>
 
 
-<p>Again, click the thumbnail to the right to see an example income statement.  For most people the primary source of income is their job so you might have that first.  After that you can see the income from those two properties listed on the balance sheet, as well as income from a small business you started, just as an example.  Secondly, you see expenses broken down by category and net income at the end.  I&#8217;ll show you how to quickly categorize your expenses in a minute.</p>
-
-<p>Notice how in the second month your cash flow is negative and the number appears red.  Negative cash flow is bad!  It means you are spending more than you&#8217;re earning, and that is the way toward bankruptcy, not financial freedom.  If you hadn&#8217;t made your financial statement that month would you have ever know this?  Probably not.</p>
-
-<p>Thats it.  Not as scary as you thought right?  On corporate financial statements you will sometimes see some strange terminology, but the basic concept is the same as for this personal financial statement.  Balance sheet: what you own, what you owe.  Income statement: what you made, what you spent.</p>
-
-<p><strong>Why Quicken and Microsoft Money Suck</strong></p>
-
-<p>Let me take a minute here and rant about how bad these two pieces of software are (in case you don&#8217;t know, they are the two most popular &#8220;personal finance&#8221; programs out there).  I think part of the reason so many people are afraid of getting their financial statements together is that at some point in time they booted up one of these two programs, spent several hours or days fiddling with things, and eventually got so frustrated that they never took another look at it.  At the very least the &#8220;pain&#8221; of using these programs causes people to subconsciously avoid doing their financial statements each month, and they rarely get done.</p>
-
-<p>To me this is such a shame.  I could literally write an entire book on each one of these programs listing all the flaws in their design.  They should be used as case studies in every user interface design class in the country on how NOT to design software.  People tend to make excuses for them, saying that finance is complicated, or blaming themselves.  Nope, its just embarrassingly poor software design, end of story.</p>
-
-<p>Is it any coincidence that an entire industry has been born of &#8220;Quicken Certified Professionals&#8221; who are basically consultants that went through enough classes to learn to use the program?</p>
-
-<p>I mean, imagine if Google had designed a personal finance program.  The first time I used GMail I didn&#8217;t have to attend a class or hire a certified consultant to figure out how to use it.  It just worked.</p>
-
-<p><strong>No Need For Reconciliation</strong></p>
-
-<p>So ANYWAY (rant over)&#8230;how do we get around it?  Well, Quicken and MS Money are centered around this idea of <em>reconciliation</em>, which basically means you list all the things you spent money on and earned money from and then try to match each one to a line in your bank statement.  To me this is incredibly tedious, and you always find yourself in a situation where you are saying &#8220;ok I know that line on my bank statement is valid, but I don&#8217;t know how to account for it in this damn program, so its saying all my numbers are wrong&#8221;.  Then you give up.</p>
-
-<p>To me, reconciliation is the worst part of the whole process, and the whole point of it is to make sure that no mistakes have been made (either by the bank, or on your part).  Well, I have a much easier solution to that problem:  JUST SCAN YOUR BANK STATEMENT AND SEE IF ANYTHING LOOKS OUT OF PLACE.</p>
-
-<p>I can do that in about 30 seconds.  Sure its not as robust, and it would never work in a huge publicly traded company, but for me it works just great.  I don&#8217;t need to enter my $6.50 burrito and then match it to a line on my bank statement.  I know its supposed to be there so I just move on.</p>
-
-<p>After all, I&#8217;m not really that concerned about the bank making mistakes or people illegally charging my card.  It rarely happens, and when it does its really easy to call and tell them it was a mistake and boom the money is back in your account.  They are really good about that these days.  So why spend 90% of your time (on reconciliation) worrying about a rare problem that is easily fixable?</p>
-
-<p>I&#8217;m far more concerned about these questions:</p>
+<p>Ribbot is a good fit for the use cases above because it&#8217;s customizable.  You can change the terminology of the site to reflect questions and answers, link submissions, posts and comments, or anything you&#8217;d like.  You can also allow only certain types of submission (links, posts, questions, etc).  Three other features allow customization (some of these are still under development):</p>
 
 <ul>
-<li><p>Did I make enough income to cover my expenses this month?</p></li>
-<li><p>Am I continuing to grow my passive income (like from real estate), instead of relying on earned income (from a job)?</p></li>
-<li><p>What am I spending money on and should I try to reduce/increase any of those areas?</p></li>
-<li><p>Is my net worth increasing?</p></li>
-<li><p>Am I taking on good debt (such as loans to buy houses that pay me each month) as opposed to bad debt (car payment, boats, vacation homes, etc which cost me money each month)?</p></li>
+<li><p><strong>Themes</strong>: Ribbot supports custom themes (much like Tumblr) which I hope will eventually create many diverse and beautiful sites.  Any designer can share (and sell) a custom theme on Ribbot.</p></li>
+<li><p><strong>Custom domains</strong>: By default Ribbot gives you a subdomain site (again, like Tumblr). But you will soon be able to host the forum on any custom domain of your choosing.</p></li>
+<li><p><strong>Monetization options</strong>: Ribbot is completely free if you are ok with some ads on the site. But I wanted a way for forum owners and moderators to monetize their sites and be compensated for their work. So with the paid option (see pricing <a href="http://ribbot.com/pricing">here</a>) you are able to run your own ads and turn a profit. My hope is that a number of forums will generate sufficient traction so that their owners can eventually make it a full time gig. For others, I imagine it could make a nice side income or hobby project.  Many businesses I suspect will keep the paid option and run it entirely without ads - the customer support savings would make it more than worth it.</p></li>
 </ul>
 
 
-<p>Instead of using Quicken or MS Money, we going to use a program you probably already own to answer these questions: good old Excel.</p>
+<p>In short, I think Ribbot will help people build better discussion forums online across a variety of topics.</p>
 
-<p><strong>How To Use Excel To Create Your Financial Statements</strong></p>
+<h3>Final notes:</h3>
 
-<p>I&#8217;ve created a video below to show you how to create your financial statements in just a few minutes.</p>
+<p>Ribbot is still in an early beta.</p>
 
-<p>Here are the basic steps:</p>
+<p>To give Ribbot a try you can <strong><a href="http://support.ribbot.com">visit the Ribbot support forum</a></strong>. This is both the support forum for the site and a demo of the product itself.</p>
 
-<p>Note that for many of these steps I say &#8220;log on to such and such website&#8221; to get a statement.  You can use paper statements that you get in the mail to do this, but I like to use online banking because the information is more up to date and you are guaranteed to have it all in one place instead of waiting for statements to arrive.  But do it however is most convenient to you.</p>
+<p>As always, <strong>please send me your feedback and first impressions in the support forum or in the comments below</strong>. I always love to hear feedback from people on how/if it can be useful to them (or why it&#8217;s not).</p>
 
-<p>BALANCE SHEET</p>
+<p>And finally, you can create your own Ribbot forum <a href="http://ribbot.com">right here on the homepage</a> if you want to try it out.</p>
 
-<ol>
-<li><p>Open your balance sheet template in Excel and log on to your bank website</p></li>
-<li><p>Take the account totals for each of your bank accounts and put them in the template</p></li>
-<li><p>If you own any real estate, log in to your mortgage website and see what your principal is at now.  It should go down a little bit each month, reducing your liability.</p></li>
-<li><p>(Only need to do this step every 3 months or so, otherwise just copy the figure from the previous month over.)  Ask your real estate agent to get the current market value of any real estate you own.  This will update in the asset column.  It is an estimate, you won&#8217;t know for sure until you go to sell it, which is why we don&#8217;t update it every month.</p></li>
-<li><p>Log in to your brokerage account if you own any stocks or bonds.  Update the current value of your stocks in the asset column.</p></li>
-<li><p>Check the outstanding balances on any credit cards, student loans, car loans, etc that you still owe money on and update them in the liability column.  Hopefully these should go down each month.</p></li>
-</ol>
-
-
-<p>Moving on to the INCOME STATEMENT</p>
-
-<ol>
-<li><p>Open up your Income Sheet template in excel and log back in to your bank&#8217;s website.</p></li>
-<li><p>Download the transactions for the previous month as a CSV file (this will open in a separate Excel file)</p></li>
-<li><p>(See video for further details.)  Categorize each item on the bank statement and find the totals using Data->filter->autofilter and AutoSum.</p></li>
-<li><p>Input each category of expense and income to your income statement.</p></li>
-</ol>
-
-
-<p><strong>Download The Excel Templates</strong></p>
-
-<p>By the way I did not make these excel templates.  I have modified them, but the original templates came from the excellent <a href="http://www.consumerismcommentary.com/2006/07/10/excel-template-for-net-worth-report-balance-sheet/">Consumerism Commentary blog</a>.  They deserve all the credit.</p>
-
-<p><a href="http://s3.amazonaws.com/oldbloguploads/2008/02/balance-sheet-template1.xls">>>>Download the Excel Balance Sheet Template&lt;&lt;&lt;</a></p>
-
-<p><a href="http://s3.amazonaws.com/oldbloguploads/2008/02/income-statement-template1.xls">>>>Download the Excel Income Statement Template&lt;&lt;&lt;</a></p>
-
-<p><strong>Conclusion</strong></p>
-
-<p>Remember that financial statements are not scary, they are easy.</p>
-
-<p>A balance sheet is just a list of what you own and what you owe at a particular moment in time.  Subtract one from the other and you see your net worth.  Make it grow!</p>
-
-<p>An income statement is nothing more than a list of what money you earned and what money you spent over a period of time.  Subtract one from the other and you see your net income.  Make it grow!</p>
-
-<p>And of course, as a bigger picture goal, you should be trying to get more and more <a href="http://brianarmstrong.org/posts/how-to-disappear-from-your-job-for-a-year-and-continue-to-earn-money/">assets that GENERATE INCOME (like real estate) and start businesses</a> so that you eventually won&#8217;t have to have a job to cover your expenses each month.  In other words, you should be &#8220;breaking free&#8221;.</p>
-
-<p>I hope you&#8217;ve seen the importance of financial statements now.  Only whats measured gets done, and if you aren&#8217;t measuring your financial health each month, then the chances of you blindly stumbling upon wealth one day are not high.</p>
-
-<p>Best of luck, and if you have any questions or comments please leave them in the comment box below.</p>
-
-<p>Thank you,
+<p>Until next time, keep breaking free!
 Brian Armstrong</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How A Board Game (Like Monopoly) Can Teach You Financial Freedom]]></title>
-    <link href="http://brianarmstrong.org/blog/how-a-board-game-like-monopoly-can-teach-you-financial-freedom/"/>
-    <updated>2007-07-28T15:10:51-07:00</updated>
-    <id>http://brianarmstrong.org/blog/how-a-board-game-like-monopoly-can-teach-you-financial-freedom</id>
-    <content type="html"><![CDATA[<p><a href="http://s3.amazonaws.com/oldbloguploads/2007/07/cashflow-202-board-game1.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2007/07/cashflow-202-board-game1-150x150.jpg" alt="Cash Flow Robert Kiyosaki Financial Freedom" /></a>I&#8217;m really starting to embrace this passive income idea.  Right now I&#8217;m relaxing by the pool with my laptop and my only goal for the entire day has been to cook some pan cakes, watch some Entourage, and go to a birthday party tonight.</p>
+    <title type="html"><![CDATA[Some random udpates...]]></title>
+    <link href="http://brianarmstrong.org/blog/some-random-udpates/"/>
+    <updated>2011-07-25T06:13:25-07:00</updated>
+    <id>http://brianarmstrong.org/blog/some-random-udpates</id>
+    <content type="html"><![CDATA[<p>The launch of our <strong><a href="http://brianarmstrong.org/posts/bitcoin-wallet-for-android/">Bitcoin Wallet</a></strong> app for Android went fairly well.  It got about 800 installs in the first week and <a href="http://www.wired.com/gadgetlab/2011/07/bitcoin-android-app/">Wired</a> ran a small piece on it which was pretty cool.  We&#8217;ve also gotten a handful of open source contributions, and the app was translated into Russian, Chinese, and German within the first week!</p>
 
-<p>But I thought I&#8217;d take a minute to write a quick post here about a game I&#8217;ve been playing lately called <a href="http://www.amazon.com/gp/product/B000KIELPC?ie=UTF8&amp;tag=httpwwwstartb-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B000KIELPC">Cash Flow</a> (aff).</p>
+<p>I&#8217;ve been experimenting with <strong><a href="http://MyBestPic.org">MyBestPic.org</a></strong> a bit here and there with some excellent advice from Gabriel Weinberg and Naseem Hakim.  This was my experiment in inherent virality.  It hasn&#8217;t gone viral yet but I&#8217;ve been measuring the <a href="http://mybestpic.org/kfactor">k-factor</a> in various tests and learning a lot in the process.  Hopefully some more updates on this soon.</p>
 
-<p>It&#8217;s an educational board game created by Robert Kiyosaki, of Rich Dad Poor Dad fame, that is designed to teach you financial literacy.  People get intense when playing it, pulling out calculators, and negotiating deals&#8230;sort of like monopoly on steroids.</p>
+<p>Joyce Hu&#8217;s <strong><a href="http://thebookr.com/">thebookr.com</a></strong> has been growing nicely and getting some real bookings, so this is huge for her.  I&#8217;ve fixed a few things on the site here and there but for the most part it&#8217;s off and running nicely now, and I think her business is going to do really well.  Investors, get in early on this one.  She is going to be oversubscribed soon :)</p>
 
-<p>I don&#8217;t recommend buying the game, because it&#8217;s expensive and you&#8217;ll probably have trouble finding people who want to play it with you anyway, but you may want to check if there is a cash flow <a href="http://www.meetup.com">Meetup.com</a> group in your area that plays it.</p>
+<p><strong><a href="http://www.airbnb.com">Airbnb</a></strong> has been an incredible ride, and I&#8217;ve learned so much from the brilliant people there, making tons of friends already.  I&#8217;ve been heading up their fraud prevention effort and I&#8217;m about to launch a big machine learning solution (built entirely in the cloud using the Google Prediction API).  Oh and they just announced their B-round of <a href="http://blogs.wsj.com/venturecapital/2011/07/25/airbnb-from-y-combinator-to-112m-funding-in-three-years/?mod=google_news_blog">funding</a> ($112M).  With press and celebrities in the office weekly (along with our personal chef), this is the definition of what it feels like to work at a hot startup.  Revenue and bookings are growing 30% month over month.</p>
 
-<p>When I first played it, I underestimated how complex it was (it seemed too easy).</p>
+<p>And I finally got a chance to catch up with a few <strong><a href="http://carwoo.com">CarWoo!</a></strong> guys (Tommy and Erik) this weekend in San Francisco for a good old fashioned night on the town.  CarWoo! is doing quite well itself and they&#8217;ve got some big deals in the works.  Always good to keep in touch with these folks, and converse with talented entrepreneurs.  Apparently Erik is driving <a href="http://gallery.viperclub.org/data/500/medium/4794Viper_GTS_ACR_Orange_by_Dan_Berndt_1001a.jpg">this</a> to work now.</p>
 
-<p>But it actually does a great job of teaching you balance sheets, income statements, evaluating deals, and the difference between investing for capital gains vs. cash flow.</p>
+<p>Have been doing yoga every week, and rock climbing on Tuesdays.  Can&#8217;t wait to get back in the office tomorrow&#8230;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bitcoin Wallet for Android]]></title>
+    <link href="http://brianarmstrong.org/blog/bitcoin-wallet-for-android/"/>
+    <updated>2011-07-06T07:26:16-07:00</updated>
+    <id>http://brianarmstrong.org/blog/bitcoin-wallet-for-android</id>
+    <content type="html"><![CDATA[<p>Tonight a buddy of mine (who works at Google) and I released an open source application.</p>
 
-<p>Before playing the game, I understood all of those concepts enough to pass an exam in school.  But after playing the game a few times, I feel like I understand it one level deeper.  Enough to use those terms in casual conversation and even think one level beyond, if that makes sense.</p>
+<p>It&#8217;s an <a href="https://market.android.com/details?id=com.bitcoinandroid">Android app for Bitcoin</a> that allows you to have a digital &#8220;wallet&#8221; on your phone.  Here are a few screenshots:</p>
 
-<p>Take a minute to find a group that plays it in your area&#8230;.it will change the way you think about getting out of the rat race.</p>
+<p><img src="http://i.imgur.com/aqF3p.png" alt="" /></p>
+
+<p><img src="http://i.imgur.com/ilvNp.png" alt="" /></p>
+
+<p><img src="http://i.imgur.com/ObBth.png" alt="" /></p>
+
+<p><img src="http://i.imgur.com/TsZc7.png" alt="" /></p>
+
+<p>Simply put, the app allows you to send and receive bitcoins from your Android phone.</p>
+
+<p>If you&#8217;ve never heard of bitcoin then you aren&#8217;t alone.  It is a very new technology.  After reading about bitcoin I still wasn&#8217;t sure what might become of it, but I wanted to learn more and figured the best way would be to dive in and build something with it!</p>
+
+<p>If I had to sum up bitcoin in one sentence I&#8217;d say it is a &#8220;distributed peer-to-peer currency&#8221;.  But what does this mean and why is it important?</p>
+
+<p>I think it&#8217;s most important features are that it&#8230;</p>
+
+<ul>
+<li><p>allows you to send money without transactions fees</p></li>
+<li><p>allows you to send money instantly, anywhere in the world</p></li>
+<li><p>and (it appears) it can do this securely</p></li>
+</ul>
+
+
+<p>If you contrast this with how most payments work today, most merchants pay 2-3% as a transaction fee to Visa or Mastercard (and this fee is partially passed on to you as a consumer). In addition, whenever you want to move money between accounts it can take up to 3 business days. With bitcoin, there are no transaction fees and money can be moved instantly, anywhere in the world. This is a potentially very disruptive technology, even if it <a href="http://cdixon.org/2010/01/03/the-next-big-thing-will-start-out-looking-like-a-toy/">looks like a toy</a> today.</p>
+
+<p>Bitcoin accomplishes this using cryptography across a large number of servers on the internet, and doesn&#8217;t rely on one trusted third party (a bank) to control the money.</p>
+
+<p><strong>It&#8217;s also important to realize that bitcoin is not a new product or service, it is a new platform.</strong>  Much like email or the internet itself, it has no centralized servers and many products and companies can be built on top of it (our app is just one).  It&#8217;s also an open source project itself so anyone can see how it works and it isn&#8217;t owned by anyone. In fact, thousands of computer scientists around the world have looked at it at this point.  This gives it a lot of potential to survive and adapt over the years.</p>
+
+<p>Whether it ever becomes mainstream or not is still very much an open question (I have mixed thoughts on this).  However, at present there is already about $100M in real money tied up in the bitcoin economy, so it has certainly shown some early promise. There are already a few <a href="http://starburst.hackerfriendly.com/?p=1530">stores starting to pop up</a> who accept bitcoin.</p>
+
+<p><strong>I think a day will come very soon where we no longer need to carry a physical wallet, and our smart-phones will take over that job.</strong>  I also think it would be great for the economy to not pay a tax of 2-3% on each transaction to Visa or Mastercard (both for businesses and consumers).</p>
+
+<p>For a glimpse of how this might work, checkout this little demo video we put together.  It shows us instantly transferring money between two phones using just the internet and a distributed network of computers around the world.</p>
+
+<p>The <a href="http://en.wikipedia.org/wiki/QR_code">QR codes</a> you see used there could be on a point of sale device in a store, a mobile device like a phone, or a sticker on the wall.</p>
+
+<p>It&#8217;s important to realize that those two phones could have been anywhere in the world.  If you&#8217;d like to send money to another country today, Western Union takes a hefty fee and will take days.  Even Paypal charges 2-3% and will take 3 business days to move money in and out of an account.  Bitcoin is instant, and has zero transaction fees. You can do it from any computer, including a smart phone like the one shown here.</p>
+
+<p>Anyway, I&#8217;ll see if I can post more about this in the future.  But let me know what you think in the comments below.  And if you have an Android Device, <a href="https://market.android.com/details?id=com.bitcoinandroid">you can download it from the Android Market here</a>. It is 100% free and open source.</p>
+
+<p><a href="https://market.android.com/details?id=com.bitcoinandroid"><img src="http://s3.amazonaws.com/oldbloguploads/2011/07/Screen-shot-2011-07-05-at-11.25.05-PM-500x367.png" alt="" /></a></p>
+
+<p>Finally, if you are a developer, here is a link to the <a href="https://github.com/barmstrong/bitcoin-android">github project page</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Programming]]></title>
+    <link href="http://brianarmstrong.org/blog/learning-programming/"/>
+    <updated>2011-06-20T13:46:54-07:00</updated>
+    <id>http://brianarmstrong.org/blog/learning-programming</id>
+    <content type="html"><![CDATA[<p>I was tutoring someone in web app development recently, and the monumental task in front of him really hit me. <strong>He was trying to learn and use nine new languages at the same time</strong>.</p>
+
+<p>In our case it was:</p>
+
+<ul>
+<li><p>Ruby</p></li>
+<li><p>Rails</p></li>
+<li><p>MySQL</p></li>
+<li><p>Bash (command line usage)</p></li>
+<li><p>HTML</p></li>
+<li><p>CSS</p></li>
+<li><p>Javascript</p></li>
+<li><p>JQuery</p></li>
+<li><p>Git</p></li>
+<li><p>(Capistrano, Yaml, nginx, ??)</p></li>
+</ul>
+
+
+<p>Even though some of these aren&#8217;t true languages in the traditional sense, they appear this way to newcomers since they are each a new syntax to learn.</p>
+
+<p>If you slowly built up these skills over 15 years, they are clearly separate concepts in your mind. But for a newcomer trying to use them, it&#8217;s not even clear which one is which.</p>
+
+<p>Is that a Ruby method or a Rails method?</p>
+
+<p>Is &#8220;script/server&#8221; a shell command or is &#8220;ls&#8221; part of rails?</p>
+
+<p>Is this file html, js, or css? (actually a mix of all three)</p>
+
+<p>He made a comment along the lines of &#8220;wouldn&#8217;t it be great if you could build an entire web app in one language&#8221;, and I started thinking about it.</p>
+
+<p>GWT (Google Website Toolkit), ActiveRecord, CoffeeScript, and Heroku are all steps in this direction. You could classify them generally as trying to &#8220;eliminate a language in the stack&#8221; or allowing you to do a piece of the stack in a language you already know.</p>
+
+<p>Obviously there is a trade off here between power and simplicity, but I&#8217;m wondering - would it be possible or desirable to get an entire web app down to just one language? If not that how few could you use?</p>
+
+<p>Btw, I think there are benefits to seasoned developers here as well. I remember Lars Rasmussen (creator of Google Maps and Wave) mentioned something to this effect at Google IO in 2009, that GWT allowed him to spend his mental CPU cycles at a higher level and be more creative (not having to worry about cross browser css or js). So the benefits of higher abstraction may not only be for newcomers.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Find a model at TheBookr.com]]></title>
+    <link href="http://brianarmstrong.org/blog/find-a-model-at-thebookr-com/"/>
+    <updated>2011-04-17T06:02:16-07:00</updated>
+    <id>http://brianarmstrong.org/blog/find-a-model-at-thebookr-com</id>
+    <content type="html"><![CDATA[<p><a href="http://thebookr.com">Thebookr.com</a> is a site I was contracted to build last year, and it has finally launched!</p>
+
+<p>Joyce and I met up at a hacker meetup in Mountain View, CA last year.  She was looking for a developer to make the idea a reality.  I liked the business idea and technically it was somewhat similar to UniversityTutor, so we worked out a price and I went to work.</p>
+
+<p>I think it turned out really well.</p>
+
+<p><a href="http://thebookr.com"><img src="http://s3.amazonaws.com/oldbloguploads/2011/03/Screen-shot-2011-03-27-at-12.52.21-PM-500x341.png" alt="" /></a></p>
+
+<p>There are a few reasons I think this could be a really good business for her.</p>
+
+<p>First, the idea of building a marketplace online has turned out to be one of the best types of businesses.  Whether it&#8217;s Airbnb, iStockPhoto, eBay, or CarWoo!, the internet has made plenty of markets more efficient.</p>
+
+<p>Second, the fashion industry is one of the few industries that hasn&#8217;t been disrupted yet.  There are still brick and mortar agencies taking outrageous fees (about 40%) as commissions and slowing down communication between bookers and talent.</p>
+
+<p>The site is perfect for retailers or people doing commercial work to find talent for their next shoot.  Or models (even if it&#8217;s not their full time job) looking for additional work.</p>
+
+<p>If you know anyone who might be interested, have them <a href="http://thebookr.com">check out the site here to find a model or become a model</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Technology and Innovation - Is It Being Stifled By The Law?]]></title>
+    <link href="http://brianarmstrong.org/blog/technology-and-innovation-when-its-stifled-by-the-law/"/>
+    <updated>2011-04-11T04:26:50-07:00</updated>
+    <id>http://brianarmstrong.org/blog/technology-and-innovation-when-its-stifled-by-the-law</id>
+    <content type="html"><![CDATA[<p>The term &#8220;disruption&#8221; gets thrown around a lot in entrepreneurship circles.</p>
+
+<p>Entrepreneurs like to talk about disrupting an industry or its incumbent players as a buzzword for innovation, and there is even a startup conference called Techcrunch Disrupt.</p>
+
+<p>So what does it mean to disrupt an industry?  On the one hand it means you are making your customer&#8217;s lives better with a faster/better/cheaper alternative.  On the other hand it means <strong>you are putting someone else out of business.</strong></p>
+
+<p>This is one of the darker sides of entrepreneurship - competition means an ever present threat where someone can come along and take you out.  It&#8217;s a kill or be killed world.  Well, not in terms of bodily harm, but certainly in terms of jobs and fortunes.</p>
+
+<p>To an outsider this may sound cold hearted, but in the world of business I wouldn&#8217;t have it any other way.  Competition means that I&#8217;m continually kept on my toes trying to provide the best product at the best price.  Customers don&#8217;t owe me anything, I actually have to earn their business.  And this motivation, in it&#8217;s purest form, is what drives innovation and human progress across a wide range of industries.</p>
+
+<p>In other words it&#8217;s a meritocracy.</p>
+
+<p>Henry Ford&#8217;s Model T was a brilliant invention that undoubtedly changed the world for the better.  But he had to put a lot of horse and buggy makers out of business to do it.  Some jobs were lost and some were gained.  But people chose which they preferred by voting with their dollars, buying cars instead of buggies.</p>
+
+<p>So it&#8217;s somewhat discouraging whenever I see companies NOT competing on quality or price, but instead by competing in the courtroom - trying to outlaw their competition.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2011/04/Law_and_Justice_Courthouse1.jpg" alt="" /></p>
+
+<p>A few examples I&#8217;ve seen lately.</p>
+
+<p><strong>Newspapers</strong></p>
+
+<p>The crumbling newspaper industry reached out to the government to seek special protection back in 2010, naming Google amongst the sources of it&#8217;s troubles.  Google <a href="http://googlepublicpolicy.blogspot.com/2010/07/business-problems-need-business.html">responded</a> pointing out that.</p>
+
+<blockquote><p>The large profit margins newspapers enjoyed in the past were built on an artificial scarcity: Limited choice for advertisers as well as readers. With the Internet, that scarcity has been taken away and replaced by abundance. No policy proposal will be able to restore newspaper revenues to what they were before the emergence of online news. It is not a question of analog dollars versus digital dimes, but rather a realistic assessment of how to make money in a world of abundant competitors and consumer choice.</p></blockquote>
+
+<p><strong>Uber</strong></p>
+
+<p>Uber is a startup disrupting the cab industry - they allow you to hail a driver from an iPhone or Android app, rate the driver, and pay electronically - tip included.  In many cities, like San Francisco, there is unmet demand for taxis during peak hours and Uber originally planned to allow anyone to sign up as a driver with their personal vehicle (the Airbnb of taxis, if you will).  That is until the city of San Francisco issued them a <a href="http://blog.uber.com/2010/10/25/ubers-cease-desist/">cease and desist</a>, saying they were operating an unlicensed cab service.  The cab drivers union isn&#8217;t too happy about Uber and claims it&#8217;s unsafe.  Of course, it&#8217;s sort of a silly argument since nobody is being forced to ride in an Uber cab, and consumers can make up their own mind.  So it&#8217;s more likely cab drivers simply don&#8217;t want to compete with Uber and are using the law to try and put down a competitor.</p>
+
+<p>Uber has found a loophole and is now operating with licensed black car services.  My hope is that they are using this to gain momentum and save up some cash for the big push where they eventually get back into letting anyone work as a cab driver.  This would be hugely beneficial to consumers by the way,  both in the availability of cabs and driving down the cost.  Uber will have some big legal bills in the process so I don&#8217;t blame them for saving up before the fight.  But really, why should a startup be forced to compete in the courtroom?  Why not let consumers decide?</p>
+
+<p><strong>Paypal</strong></p>
+
+<p>When Paypal was starting up, existing banks were not too happy about a new competitor on the scene and wanted Paypal to be regulated as a bank just like they were - even though Paypal didn&#8217;t engage in fractional reserve lending.  Existing bank legislation would have made it difficult or impossible for Paypal to operate.  When I saw Reid Hoffman speak at startup school, he mentioned there was some sort of rule where you had to submit any new product or business idea through an approval process that could take a year at the federal level.  For a tech startup this wasn&#8217;t feasible.  Paypal eventually found its own loophole, and incorporated itself as a <a href="http://en.wikipedia.org/wiki/PayPal#Bank_status">bank in Luxembourg</a>, while only becoming licensed as a money transmitter in the U.S.  Paypal probably wouldn&#8217;t have existed today without finding this loophole.</p>
+
+<p>&#8230;</p>
+
+<p>Anyway, I&#8217;m continually surprised at how often the law is a barrier in entrepreneurship - and how existing companies have built moats around their business not from having better products, but from lobbying the government.  It seems to come most often near the end of a company or industry&#8217;s lifetime, when they are feeling threatened by new upstarts and sense some change on the horizon.  It often comes wrapped in the guise of consumer protection or jobs for America (worked for Chrysler), but in reality they are simply trying to save their own profits without earning them in an open market.</p>
+
+<p>Make no mistake, competition is certainly cut throat for businesses - but the consumer is the beneficiary of these battles as companies keep trying to win their business with new products at lower prices.</p>
+
+<p><strong>Quick thought experiment:</strong> which industries are doing the WORST at innovation?  Which have the worst customer service?  Which seem most behind the times in terms of technology?</p>
+
+<p>Off the top of my head&#8230;cable companies, real estate, healthcare, cars, education?  You can probably think of others.</p>
+
+<p>I don&#8217;t think it&#8217;s a coincidence that these also happen to be the industries with the most laws and lobbyists, and consequently the fewest startups.</p>
+
+<p>Do you agree that companies competing in the courtroom instead of the market has stifled innovation?  Have you seen any other examples?  Feel free to leave a comment below.</p>
+
+<p>Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Something I coded up for fun...]]></title>
+    <link href="http://brianarmstrong.org/blog/something-i-coded-up-for-fun/"/>
+    <updated>2011-02-22T02:33:45-08:00</updated>
+    <id>http://brianarmstrong.org/blog/something-i-coded-up-for-fun</id>
+    <content type="html"><![CDATA[<p>I put <a href="http://mybestpic.org">this website</a> together over the last few weeks that I thought you might like.</p>
+
+<p>It&#8217;s quite simple.  Basically you can hold a &#8220;photo contest&#8221; and see which photo your friends like best.</p>
+
+<p>Here are a few examples&#8230;</p>
+
+<ol>
+<li>Choose a photo of yourself.</li>
+</ol>
+
+
+<p><a href="http://mybestpic.org/lTmQAr"><img src="http://s3.amazonaws.com/oldbloguploads/2011/02/Screen-shot-2011-02-21-at-6.24.24-PM-500x360.png" alt="" /></a></p>
+
+<ol>
+<li>Choose artwork or travel photos.</li>
+</ol>
+
+
+<p><a href="http://mybestpic.org/0AbTrQ"><img src="http://s3.amazonaws.com/oldbloguploads/2011/02/Screen-shot-2011-02-21-at-6.22.17-PM-500x360.png" alt="" /></a></p>
+
+<ol>
+<li>For downright silliness.</li>
+</ol>
+
+
+<p><a href="http://mybestpic.org/ac8crN"><img src="http://s3.amazonaws.com/oldbloguploads/2011/02/Screen-shot-2011-02-21-at-6.23.10-PM-500x360.png" alt="" /></a></p>
+
+<p>I&#8217;ll do a follow up post in a week or so with more details on the idea and results of the site.  But for now&#8230;</p>
+
+<h1><a href="http://mybestpic.org">Try it out</a> and let me know what you think!</h1>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Being Controversial Is Good Marketing]]></title>
+    <link href="http://brianarmstrong.org/blog/being-controversial-is-good-marketing/"/>
+    <updated>2011-01-22T23:34:37-08:00</updated>
+    <id>http://brianarmstrong.org/blog/being-controversial-is-good-marketing</id>
+    <content type="html"><![CDATA[<p>I started thinking about this topic lately.  Here are 3 random examples I&#8217;ve noticed - see if you can draw any conclusions or find others.</p>
+
+<h1>1. Ricky Gervais</h1>
+
+<p>He caused an uproar lately by insulting lots of famous people while hosting the Golden Globes.  Backstory <a href="http://www.youtube.com/watch?v=flBFagW5vC8">here</a>.</p>
+
+<p><a href="http://www.youtube.com/watch?v=flBFagW5vC8"><img src="http://s3.amazonaws.com/oldbloguploads/2011/01/Screen-shot-2011-01-22-at-2.37.13-PM-500x306.png" alt="" /></a></p>
+
+<p>There is no doubt he angered a bunch of people.  But did this hurt or help his career?</p>
+
+<p>On the one hand he may not be invited back to host the Golden Globes again next year.  On the other hand, most Americans probably didn&#8217;t know who he was before this week.  They do now, and his appeal as a comedian just went way up.</p>
+
+<p>Apparently, there are lots of people out there who also think Hollywood is ridiculous and full of itself.  These people rushed to his defense and became loyal fans overnight.</p>
+
+<p><strong>Being polarizing means for every enemy you make you gain a devoted fan.  When you remain neutral and try to appeal to both sides, you offend no one but also aren&#8217;t remembered by anyone.</strong></p>
+
+<p>He might not have had a fun week, but I bet his career just had a net win.</p>
+
+<h1>2. OkCupid.com</h1>
+
+<p>Their blog seems almost entirely centered on the idea of controversy as a marketing tool.  Here are a few of their headlines lately:</p>
+
+<ul>
+<li><p><a href="http://blog.okcupid.com/index.php/the-real-stuff-white-people-like/">The Real Stuff White People Like</a></p></li>
+<li><p><a href="http://blog.okcupid.com/index.php/rape-fantasies-and-hygiene-by-state/">Rape Fantasies and Hygiene By State</a></p></li>
+<li><p><a href="http://blog.okcupid.com/index.php/your-race-affects-whether-people-write-you-back/">How Your Race Affects Whether People Write You Back</a></p></li>
+<li><p><a href="http://webcache.googleusercontent.com/search?q=cache:WJ1dKFMXD-AJ:blog.okcupid.com/index.php/why-you-should-never-pay-for-online-dating/+why+you+should+never+pay+for+online+dating&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=us">Why You Should Never Pay For Online Dating</a> (where they argue quite convincingly why most online dating sites are a scam)</p></li>
+</ul>
+
+
+<p>Their posts average probably 500 comments and are massively reposted all over the internet.</p>
+
+<p>However, there is one key difference between their posts and most controversial discussions on the net: <strong>their posts are based on hard data, not opinion</strong>.</p>
+
+<p>The guys behind the blog are huge math nerds, and have a wealth of data at their disposal from the dating site (people fill out profiles etc).  So most of their posts take the tone of &#8220;we&#8217;re not saying this is right or wrong, but here is the truth about what the world is like&#8221;.</p>
+
+<p>This is a powerful position to come from because if someone wants to disagree they have to argue with your math, and can&#8217;t appeal to emotion.  So I think there is a good lesson here: <strong>if you&#8217;re going to be controversial, back it up with hard data.</strong></p>
+
+<h1>3. Apple</h1>
+
+<p>Steve jobs puts it a different way in this classic video where he lays out Apple&#8217;s marketing strategy.</p>
+
+<p>He says every great brand isn&#8217;t afraid to stand for something.</p>
+
+<p><a href="http://www.youtube.com/watch?v=vmG9jzCHtSQ"><img src="http://s3.amazonaws.com/oldbloguploads/2011/01/Screen-shot-2011-01-22-at-3.09.43-PM-500x307.png" alt="" /></a></p>
+
+<p>&#8220;Stand for something&#8221; is less pejorative than being controversial, but it&#8217;s really the same thing.  If you stand for something, then you aren&#8217;t afraid to disagree and you think the other way of doing it is wrong.</p>
+
+<p>And they live it by building opinionated software and hardware.  Want more than one USB drive on your MacBook air?  Sorry can&#8217;t have it.  Want a discount Apple computer under $500?  They don&#8217;t want your business.</p>
+
+<p>I think the lesson here is clear.  <strong>In business, trying to be all things to all people just makes you unremarkable to everyone.</strong> People become loyal fans of companies that stand for something.  By polarizing people you&#8217;ll wins fans (along with the enemies) and stick in people&#8217;s minds.</p>
+
+<p>I think a healthy dose of speaking your mind can be a great tool to jumpstart any brand.  What do you think?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Selling Bridesmaid Dresses Online]]></title>
+    <link href="http://brianarmstrong.org/blog/selling-bridesmaid-dresses-online/"/>
+    <updated>2011-01-15T21:12:47-08:00</updated>
+    <id>http://brianarmstrong.org/blog/selling-bridesmaid-dresses-online</id>
+    <content type="html"><![CDATA[<p>My friend Ilana recently launched a startup selling <a href="http://www.weddingtonway.com/">bridesmaid dresses</a> online.  It&#8217;s called <a href="http://www.WeddingtonWay.com">WeddingtonWay.com</a></p>
+
+<p><a href="http://www.WeddingtonWay.com"><img src="http://s3.amazonaws.com/oldbloguploads/2011/01/Screen-shot-2011-01-15-at-12.54.25-PM-500x335.png" alt="" /></a></p>
+
+<p>There are a few reasons I like her chances with this business:</p>
+
+<ul>
+<li><p><a href="http://www.gettingmoreawesome.com/2011/01/how-squishable-wins-online.html">Amazon doesn&#8217;t sell</a> bridesmaid dresses (at least not well).  A good start for any e-commerce shop.</p></li>
+<li><p>People don&#8217;t buy bridesmaid dresses like most products.  The bride has to choose some styles, invite bridesmaids to come review them, handle billing to multiple parties, etc.  In other words it doesn&#8217;t lend itself well to the typical checkout process and there are multiple decision makers involved.</p></li>
+<li><p>This gives WeddingtonWay a big opportunity to nail the niche they are in and improve the user experience for an already stressed out bride (they appear to have done this with a guided process for the bride).</p></li>
+<li><p>I imagine the margins on bridesmaid dresses are good.</p></li>
+<li><p>The site has a high level of polish and top notch design/user interface.  I think this will help them target the higher end of the market.</p></li>
+</ul>
+
+
+<p>The e-commerce game has largely been played out and won by a few major players at this point.  But I think there are still a few cases where it makes sense to do an e-commerce startup.  This feels like one of those cases.</p>
+
+<p>Any other successful e-commerce startups you&#8217;ve seen lately?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How To Track Your Keyword Rankings]]></title>
+    <link href="http://brianarmstrong.org/blog/how-to-track-your-keyword-rankings/"/>
+    <updated>2011-01-09T05:13:43-08:00</updated>
+    <id>http://brianarmstrong.org/blog/how-to-track-your-keyword-rankings</id>
+    <content type="html"><![CDATA[<p>Remember <a href="http://brianarmstrong.org/posts/get-your-website-to-1-in-google-with-seoaholic-com/">Seoaholic.com</a>?</p>
+
+<p>It was an SEO tool  that my friend Chad DePue contracted me to build while I was living down in Argentina.</p>
+
+<p>Chad has since rebranded it (with what I must say is a much better name :) and relaunched it as <a href="http://inboxseo.com/?q=1">InboxSEO.com</a>.</p>
+
+<p>There are some new features, it&#8217;s faster and more reliable, and the interface looks a lot better.  He&#8217;s done a great job on it.</p>
+
+<p><a href="http://inboxseo.com/?q=1"><img src="http://s3.amazonaws.com/oldbloguploads/2011/01/Screen-shot-2011-01-08-at-8.54.46-PM-500x383.png" alt="" /></a></p>
+
+<p>InboxSEO tells you how your site is ranking in search engines for a variety of keywords, and delivers a report right to your inbox on a daily/monthly/weekly basis (however often you&#8217;d like).</p>
+
+<p>I&#8217;ve actually been using it on my own projects, both for CarWoo.com and UniversityTutor.com, and it has come in handy.</p>
+
+<p>One thing that is really useful is if I make some site wide changes (either in the headers or in the structure of a large number of pages) then I can see what the effect is overall in Google.  Individual pages tend to fluctuate a lot, but the overall change is often visible in InboxSEO.</p>
+
+<p>I&#8217;ve also used this to watch a bunch of my pages go into the &#8220;Google sandbox&#8221; and then come back out a month later.  (The Google Sanbox is simply a manual review process that Google sometimes puts new pages through.)</p>
+
+<p>Anyway, it&#8217;s not free but the cheapest plan is only $9/month - and you can try it free for 30 days.  Head on over and <a href="http://inboxseo.com/?q=1">check it out</a>.  And if you have any feedback for Chad feel free to leave a comment below.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Simple Trumps Complete]]></title>
+    <link href="http://brianarmstrong.org/blog/simple-trumps-complete/"/>
+    <updated>2010-12-22T10:07:08-08:00</updated>
+    <id>http://brianarmstrong.org/blog/simple-trumps-complete</id>
+    <content type="html"><![CDATA[<p>Three articles I&#8217;ve read in the past month.  All with the same lesson about what makes a web application &#8220;catch on&#8221;.</p>
+
+<ol>
+<li>Wayne Ting, a guy who started a Facebook-like app at Columbia University around the same time as Facebook explains how they lost to Facebook: <a href="http://www.bbc.co.uk/blogs/thereporters/rorycellanjones/2010/12/wayne_ting_nearly_a_billionair.html">they had too many features</a>.</li>
+</ol>
+
+
+<blockquote><p>&#8220;A good website should have functionalities that 70 or 80% of users want to use. We had functions that only 10% wanted&#8221;</p></blockquote>
+
+<ol>
+<li>Marc Hedlund, a guy who started Wesabe (a competitor which lost to Mint.com) thinks they lost because <a href="http://blog.precipice.org/why-wesabe-lost-to-mint">they gave users too much work</a>.</li>
+</ol>
+
+
+<blockquote><p>Mint focused on making the user do almost no work at all, by automatically editing and categorizing their data, reducing the number of fields in their signup form, and giving them immediate gratification as soon as they possibly could</p></blockquote>
+
+<ol>
+<li>Netflix&#8217;s Chief Product Officer summed up the entirety of his years of testing various designs in <a href="http://www.quora.com/What-types-of-things-does-Netflix-A-B-test-aside-from-member-sign-up">just 3 words</a>.</li>
+</ol>
+
+
+<blockquote><p>If I had to summarize our learnings in three words: &#8220;simple trumps complete.&#8221;</p></blockquote>
+
+<p>I think we&#8217;re seeing a pattern here.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Peter Thiel's Thoughts On Tech Entrepreneurship]]></title>
+    <link href="http://brianarmstrong.org/blog/peter-thiels-thoughts-on-tech-entrepreneurship/"/>
+    <updated>2010-12-01T08:17:44-08:00</updated>
+    <id>http://brianarmstrong.org/blog/peter-thiels-thoughts-on-tech-entrepreneurship</id>
+    <content type="html"><![CDATA[<p>Tonight I went to go see <a href="http://en.wikipedia.org/wiki/Peter_Thiel">Peter Thiel</a> speak at Stanford University.  He co-founded Paypal, was an early investor in a bunch of companies (Facebook, LinkedIn, etc), and is a billionaire.</p>
+
+<p>I jotted down some notes from the talk which I thought were interesting.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/12/582px-Peter_Thiel-291x300.jpg" alt="" /></p>
+
+<ul>
+<li><strong>Intensive vs. Extensive</strong>
+He spent a bunch of time comparing these two types of innovation.  Intensive is building something new and truly innovative.  An example would be the Macintosh or Paypal - both blazed a trail to create something that had never been created before.  It&#8217;s carries a higher risk of failure but also greater rewards.  Extensive is building on ideas which are already in place.  It can be  a safer way to build a company, but not as lucrative.  An example would be putting accounting software online.  Or doing another social network.</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li><p><strong>China</strong>
+He compared China and the U.S. saying that China&#8217;s next 20 years of growth are clearly extensive.  They can simply copy the model which is the U.S. and grow rapidly (build this many airports, this many steel mills, etc).  The U.S. can&#8217;t afford to do that and has the much harder job of pursuing intensive growth.  We can&#8217;t just make more doctors, lawyers, bankers, and houses.  To grow we need to build stuff the world has never seen (technology).</p></li>
+<li><p><strong>There is a lack of focus on intensive innovation</strong>
+It was clear from his talk that intensive is where he&#8217;d like to see more focus in the U.S.  Especially Silicon Valley is full of too many people copying old ideas, and not breaking new ground.  He said this field of tech startups (their current generation) feels saturated and there are too many people making clones, or investing in poor ideas.</p></li>
+<li><p><strong>The car industry 1920 - 1960
+</strong>The 1920&#8217;s saw a boom in automotive  with 300 U.S. car companies.  By 1960 there were only three.  This boom and consolidation is a natural cycle with new industries.  He said the internet and web companies aren&#8217;t quite to 1960 yet, but we certainly aren&#8217;t in 1920 any more.  He feels while there will certainly be successful web companies started in the next 10 years, but more and more of the profits will go toward the established players (Google, Facebook, Amazon, etc).</p></li>
+<li><p><strong>Emerging Categories</strong>
+So if the web is maturing, where should entrepreneurs focus?  He said there is a boom yet to come in a number of emerging industries - artificial intelligence, bio-tech, energy, space stuff, etc.  But this isn&#8217;t the right way to think about it - don&#8217;t think in categories.  Think about something you are passionate about or something that would be cool &amp; useful - then build that.  The passion is what&#8217;s important, not the category.</p></li>
+<li><p><strong>Mobile is not the next big thing</strong>
+Internet was a big thing because established media companies (New York Times, Disney) could not make the jump.  It was just too different for them to adapt.  This left the field wide open for startups.  But he thinks mobile internet is similar enough to other internet that todays companies will make the jump.  The #1 social network on mobile will be Facebook, the #1 ad network on mobile will be Google, mobile payments on Paypal, and on down the line.</p></li>
+<li><p><strong>CEO Salary = best predictor of success
+</strong>If CEO makes &lt; $120k  he likes their chances.  If CEO makes > $160k he doesn&#8217;t like their chances.  When management is working for equity, incentives are aligned.</p></li>
+<li><p><strong>Redundancy = Conflict</strong>
+People and relationships (investors, employees, etc) were the hardest problem for him and where he made the most mistakes.  One thing he learned, many sources of problems come from two people (experts) working on the same thing.  So find people with complementing skills and don&#8217;t duplicate people&#8217;s skills.  Redundancy will lead to conflict.</p></li>
+<li><p><strong>Go where there isn&#8217;t competition
+</strong>Everyone is doing web startups now.  Go work on quantum computing - you will have almost zero competition.  Key to success: you&#8217;re passionate about it, few others are working on it, and it matters if you solve it.</p></li>
+<li><p><strong>Social Entrepreneurship Doesn&#8217;t Work</strong>
+Somebody asked about social entrepreneurship.  He gave a candid answer: he doesn&#8217;t believe in it.  He said non-profits can be excellent, and for-profits can be excellent.  The intersection is small.  If there are starving kids in Africa, there is no profitable business there - you just need to get them food.  (Interesting I wrote something <a href="http://brianarmstrong.org/posts/innocent-smoothies-richard-reed-inspiring-entrepreneur/">similar</a> a while back.)****</p></li>
+</ul>
+
+
+<p>It was thought provoking overall.  I&#8217;ve got 3 business ideas I&#8217;d like to bounce off him given the opportunity, but he got bum rushed after the talk.  Peter - if you&#8217;re reading this <a href="http://www.startbreakingfree.com/contact/">message</a> me, would love to do a quick call.</p>
+
+<p><strong>What do you think?  Agree or disagree on the state of tech entrepreneurship?</strong></p>
+
+<p>Leave me a comment below.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong<strong> </strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Classical Music]]></title>
+    <link href="http://brianarmstrong.org/blog/classical-music/"/>
+    <updated>2010-11-23T23:12:12-08:00</updated>
+    <id>http://brianarmstrong.org/blog/classical-music</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve seen the story below repeated in a few places now: amazing violinist plays in a subway station - nobody notices.</p>
+
+<p>People draw all sorts of inspiring conclusions from it (and apparently it has brought some people to tears).</p>
+
+<p>I think they are missing the point.  To me it just shows:</p>
+
+<ol>
+<li><p>Most people don&#8217;t care about classical music</p></li>
+<li><p>Many who do like the <em>idea</em> of it (dressing up, feeling sophisticated, saying smart things to their friends) perhaps more than the music itself</p></li>
+</ol>
+
+
+<p>There are a lot of similarities to classical music and expensive wine.  Many people probably can&#8217;t tell the difference between a $100 and $20 bottle of wine, but they still like the <em>idea</em> of drinking a $100 bottle of wine - the main benefit of consuming it is not the wine itself.</p>
+
+<p>Or in psychology terms, we overly rely on price as an indicator of quality.</p>
+
+<p>Related note: A Snickers bar tastes better than 99% of See&#8217;s candy, is 1/10th the cost, and doesn&#8217;t require you to play Russian Roulette with your taste buds.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/11/classical-music.jpg" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Something About Wednesdays]]></title>
+    <link href="http://brianarmstrong.org/blog/something-about-wednesdays/"/>
+    <updated>2010-11-20T22:24:29-08:00</updated>
+    <id>http://brianarmstrong.org/blog/something-about-wednesdays</id>
+    <content type="html"><![CDATA[<p>I thought I was imagining things.</p>
+
+<p>It seemed like on Wednesdays more tutors became paying customers on <a href="http://www.universitytutor.com">UniversityTutor</a>.</p>
+
+<p>So I ran a quick query and it turns out it&#8217;s true.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/11/Screen-shot-2010-11-20-at-1.40.16-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/11/Screen-shot-2010-11-20-at-1.40.16-PM-500x332.png" alt="" /></a></p>
+
+<p>So&#8230;.tutors are more than twice as likely to start paying on a Wednesday vs a Saturday?</p>
+
+<p>Seems like such a big difference I hardly believe it.  But there it is.</p>
+
+<p><strong>Any idea why this might be?  Would love to hear your theory in the comments below :)</strong></p>
+
+<p>Btw, here is the Ruby code I used to get the data.  The graph is created in Keynote.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Punishing Nigerian Scammers]]></title>
+    <link href="http://brianarmstrong.org/blog/punishing-nigerian-scammers/"/>
+    <updated>2010-11-08T02:52:07-08:00</updated>
+    <id>http://brianarmstrong.org/blog/punishing-nigerian-scammers</id>
+    <content type="html"><![CDATA[<p>I started getting complaints recently from some tutors on <a href="http://www.UniversityTutor.com">UniversityTutor.com</a> that they were receiving scam emails.</p>
+
+<p>I looked into it and the scam is the same one you commonly see on Craigslist and numerous other sites.  It usually goes like this:</p>
+
+<ul>
+<li><p>Someone contacts you pretending to be interested in your services (tutoring in this case)</p></li>
+<li><p>They offer to pre-pay a large amount up front and send you a money order</p></li>
+<li><p>Next, they say they&#8217;ve changed their mind and would like a refund (minus some small fee for your trouble)</p></li>
+<li><p>You refund them with real money before realizing the money order is fake</p></li>
+</ul>
+
+
+<p>These scams all have some common themes which make them fairly easy to spot, but they can still catch you unaware if you haven&#8217;t seen it before.  There are some red flags.  For example, the &#8220;buyer&#8221;&#8230;</p>
+
+<ul>
+<li><p>Usually resides in a foreign country</p></li>
+<li><p>Doesn&#8217;t write/speak English very well</p></li>
+<li><p>Wants to be refunded via Western Union</p></li>
+<li><p>Is reluctant or unwilling to meet in person or talk on the phone</p></li>
+</ul>
+
+
+<p>Western Union seems to be used in most of these scams because the person can pick up the money in any country with just a confirmation code.  And since they&#8217;re in a foreign country <strong>you have ZERO legal recourse to go after them</strong>.  The U.S. isn&#8217;t going to be extraditing anybody for for less than probably $100,000 and most of these scams are for $1,000 or less.</p>
+
+<p>I would be curious to know what percent of Western Union&#8217;s business is from people caught up in these scams (and people laundering money).  It wouldn&#8217;t surprise me at all if it&#8217;s 25% or 50%.  Their fee seems to be high enough that you&#8217;re unlikely to use it unless anonymity was essential to you.  If that is true, then Western Union is a prime target for a class action lawsuit - and I hope somebody does take them down.  They&#8217;re enabling a worldwide network of criminals, and profiting from it, which makes them very uncool in my book.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/11/Screen-shot-2010-11-07-at-5.19.39-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/11/Screen-shot-2010-11-07-at-5.19.39-PM-500x305.png" alt="" /></a></p>
+
+<p>Anyway, I checked out my Google Analytics stats and 1,759 people from Nigeria visited the site last month, which is a little strange given that I have no tutors listed there.</p>
+
+<p>There could be scammers residing elsewhere too, but this jumped out at me as new and probably one source of the problem.</p>
+
+<h2>How To Get Scammers Off Your Site</h2>
+
+<p>So here are some steps I&#8217;ve taken (or looked into) for blocking these guys - and how scammers can get around them.  You&#8217;re never going to make it completely impossible for them - the goal is just to make it difficult enough so they&#8217;ll spend their time elsewhere.  They are listed roughly in order of difficulty to implement.</p>
+
+<h2>1. Captchas</h2>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/11/captchas.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2010/11/captchas.jpg" alt="" /></a></p>
+
+<p>These are everywhere online now and a great first start.  They don&#8217;t prevent humans from messing with your site, but they do block computers (bots or automated scripts that people write).  And this is important because bots can spam hundreds of thousands of users in a few hours on your site before you catch it, whereas a human can only spam a few dozen people in an hour.  Captchas are your first line of defense.</p>
+
+<p><strong>How they can beat it</strong>: hire dumb people to fill out captchas all day.  I think the going rate for this is maybe $0.05 to fill out a captcha, which isn&#8217;t much - but at least it&#8217;s costing them <em>something</em> now and they can&#8217;t just automate the whole thing.  This one step alone will reduce probably 90% of the spam on your site.</p>
+
+<h2>2. Rate Limiting</h2>
+
+<p>The next step is to setup some checks to limit the number of messages any given user can send in a day.  Right now if a client tries to contact more than 15 tutors in a day, they&#8217;ll get a message saying they are sending too many messages and need to slow down.</p>
+
+<p><strong>How they can beat it:</strong> they can create new accounts.  If a new email address is needed for this (which it should be), then this takes them another few minutes to setup a new email address at Gmail or Hotmail (who use their own captchas).  Not a huge deal, but remember - the goal is just to waste enough of their time so they eventually give up and go somewhere else.</p>
+
+<h2>3. Tell All Your Users What To Watch Out For</h2>
+
+<p>Low tech, but effective.  Every time a student contacts a tutor through the site, I&#8217;ve included a note in the email warning them about these scams and linking them to <a href="http://www.universitytutor.com/about/scams">this information page</a> if they want to read more.</p>
+
+<p>If you use Craigslist, you&#8217;ve probably seen similar warnings all over their site.  An educated user base is a great defense.  The only downside is that it uglies up your website and your users still have to read the stupid emails, so it wastes their time even if they don&#8217;t actually fall for the scam.</p>
+
+<p><strong>How they can beat it:</strong> they can&#8217;t really prevent you from educating your user base - it just means they now have to contact 10x as many people to find one who will fall for it.</p>
+
+<h2>4. Geocode Their IP Addresses</h2>
+
+<p>You can map an IP address to a country, and block entire countries from using your site.  This worked well in my case because I could block Nigeria (I have no real tutors listed there so no loss).  However, this doesn&#8217;t work as well if your scammers are mixed in the same countries with your real users.  IP address geocoding isn&#8217;t exact, so you could accidentally block your real users along with the scammers.  It&#8217;s important to remember that an IP address does not correspond to one person or one computer (in fact thousands of people can share the same IP address behind a university or corporate firewall) so it&#8217;s not an all encompassing solution.</p>
+
+<p><strong>How they can beat it: </strong>if they find out you&#8217;re doing it, they can proxy their IP address through another country or spoof it (which again, takes a little more time and possibly money).</p>
+
+<blockquote><p>This brings me to an important point: if you are going to block them, <strong>don&#8217;t TELL them you are blocking them</strong>.  Try to make it totally transparent to the user.  For example, if they come to your site and see a warning message saying &#8220;UniversityTutor is not available in your country&#8221; or &#8220;you are sending messages too fast&#8221;, then they know they&#8217;ve been caught and will start trying the above mentioned solutions.  Once they see the error message go away, they know their solution has worked and they&#8217;ll continue spamming.  Don&#8217;t give them any information to test solutions!</p></blockquote>
+
+<p>So if I detect the user is spamming, I still show the exact same success message back to them (your message has been sent!).  I just don&#8217;t actually send the message in the background.  This way they happily go on their way, wasting their time filling out forms on my site all day long (which do nothing).</p>
+
+<p>For some reason I really like this idea that spammers are like mice on a treadmill, working away on my site all day without realizing they are going nowhere.  I even thought about starting a dashboard showing how many spammers I&#8217;ve tricked into filling out completely useless forms on my site, but I haven&#8217;t yet.</p>
+
+<h2>5. Hidden Cookies</h2>
+
+<p>In addition to the rate limiting mentioned above, you can also set another random cookie which survives the user&#8217;s session on your site.  This way if they logout and log back in with a new account they&#8217;ve created (creating lots of new accounts to get around your rate limiting) you can still track how many messages they are sending overall and not send more messages.  As mentioned above, don&#8217;t tell them when their message isn&#8217;t sent.</p>
+
+<p><strong>How they can beat it:</strong> they can simply clear their browser cookies.  The key here is that if they don&#8217;t know something is wrong, they may not think to do it.  Even if they do, it adds one more step to they process.</p>
+
+<h2>6. <a href="http://samy.pl/evercookie/">Evercookie</a></h2>
+
+<p>This is a neat little hack that a programmer put together.  It uses about 7 different methods to store cookie data all over the user&#8217;s browser and computer.  Some of them are very clever and hard to detect.  If one or more of the storage mechanisms gets deleted, Evercookie recreates all of them the next time it runs.  The result is a persistent browser cookie that is VERY difficult to get rid of (you can&#8217;t just clear your cookies).  As with many tools, this one could potentially be abused - but here is a case where it ends up working for good (blocking scammers).</p>
+
+<p><strong>How they can beat it:</strong> they&#8217;d have to spend quite a bit of time figuring out how to prevent it.  I&#8217;ve heard some reports that Google Chrome&#8217;s incognito mode is safe from it, but I&#8217;ve never tested it.  I suppose they could just boot up a new virtualized operating system every time, but in general, this is probably beyond what most scammers would be willing to do.</p>
+
+<h2>7. <a href="http://panopticlick.eff.org/">Panopticlick</a></h2>
+
+<p>Panopticlick attempts to identify an individual user of a website based on a hash of all their public user data.  Surprisingly, it claims to work about 85% of the time.  This could accidentally block a few of your legitimate users (false positives) in the worst case, but it could be worth it depending on how bad your spam problem is.</p>
+
+<p><strong>How they can beat it: </strong>they&#8217;d have to adjust something in their browser settings before each message to keep trying to get a unique identifier.  They could run out of settings after a while.  If anyone knows of this being used in production anywhere, please let me know in the comments.</p>
+
+<h2>8. Bayesian Filters</h2>
+
+<p>Currently the nuclear weapon in the fight against spam (the most technically sophisticated, but also the most powerful) - this applies equally well to blocking scam messages.  This is what Gmail uses for their spam filter, and it works quite well.</p>
+
+<p>You&#8217;ll need a decent sample size of data (scam messages and real messages separated) and it will improve/learn over time.  You don&#8217;t even need to write the whole thing from scratch.  There are some nice <a href="https://github.com/search?q=bayesian&amp;type=Everything&amp;repo=&amp;langOverride=&amp;start_value=1">open source libraries</a> that you can drop right in, depending on what language you are using.</p>
+
+<p><strong>How they can beat it: </strong>they&#8217;d have to start changing the messages they send to not get caught in the filter.  This might include learning to speak English correctly, not using the word &#8220;money order&#8221; etc - which are non-trivial.  The algorithm would learn over time so they&#8217;d have to continually change it up.  Their weak point is their message: they are always going to have to say something slightly different than legitimate users.</p>
+
+<h2>Conclusion</h2>
+
+<p>The war against scammers is an ongoing game of cat and mouse that is never going to be completely over.  They might be annoying, but luckily they are just that - annoying - and rarely actually trick people out of money now days.  As people become more internet savvy (and start to recognize the words &#8220;Western Union&#8221; as a red flag), scammers will become less and less important.</p>
+
+<p>Did I miss any other techniques?  Please let me know in the comments!</p>
+
+<p>Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Shutting Down FeedmailPro.com]]></title>
+    <link href="http://brianarmstrong.org/blog/shutting-down-feedmailpro-com/"/>
+    <updated>2010-10-24T05:19:04-07:00</updated>
+    <id>http://brianarmstrong.org/blog/shutting-down-feedmailpro-com</id>
+    <content type="html"><![CDATA[<p>Had a bit of a sad moment today as I finally shut down FeedmailPro (or at least began the transition process to do so).</p>
+
+<p>I&#8217;d been contemplating this move for a while, and finally bit the bullet.  Why?  Well the short answer is that I don&#8217;t have enough time to work on it, and it never took off the way I&#8217;d hoped.  Actually, Email Service Providers have gotten a lot better since I created FeedmailPro (the narcissist in me would like to think I had something to do with that - pushing the competition in the right direction - but it&#8217;s probably totally unrelated).</p>
+
+<p>Since I created it, 800 blogs have come to depend on it (albeit only 20 were paying customers) so clearly, communicating this news to the users of FeedmailPro is no small task.  I fully expect to upset some people in doing this, but there is definitely a right and wrong way to go about doing it.  Probably the biggest thing I was able to do was setup an excellent transition process for all the users to move over to MailChimp.  So hopefully this will be a step in the right direciton.  Below I&#8217;ve included some excerpts from <a href="http://feedmailpro.com/mailchimp">the page I created on FeedmailPro</a> to explain the transition to all the users.</p>
+
+<p>I also made an effort give as much transparency as possible on the page.  I spoke in the first person and used the words &#8220;I&#8217;m sorry&#8221; (as opposed to &#8221;<a href="http://37signals.com/svn/posts/1528-the-bullshit-of-outage-language">we apologize for any inconvenience</a>&#8221; or hedging language like that).</p>
+
+<p>The transition page is displayed below.</p>
+
+<p>Until next time, keep breaking free (even when it means making difficult decisions),
+Brian Armstrong</p>
+
+<p>P.S. If you are ever facing a similar dilema on sticking with a project or dropping it, one of my favorite books on the subject is Seth Godin&#8217;s <a href="http://www.amazon.com/gp/product/1591841666?ie=UTF8&amp;tag=httpwwwstartb-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1591841666">The Dip: A Little Book That Teaches You When to Quit (and When to Stick)</a><img src="http://www.assoc-amazon.com/e/ir?t=httpwwwstartb-20&amp;l=as2&amp;o=1&amp;a=1591841666" alt="" />.</p>
+
+<p>=================================================================</p>
+
+<h1>FeedmailPro Is Closing!</h1>
+
+<p>On December 1st, 2010, FeedmailPro will permanently shutdown and stop sending email.</p>
+
+<p>It&#8217;s recommended for all current FeedmailPro customers to export their data and transition their email lists over to <a href="http://www.mailchimp.com/signup/h?pid=feedmailpro&amp;source=website">MailChimp</a>, who we are working with to handle this transition.</p>
+
+<p>This page will try to answer any questions you may have about the change, and assist you in the transition process.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/10/transfer-500x97.png" alt="" /></p>
+
+<h3>Why is FeedmailPro closing?</h3>
+
+<p>First just let me say: I&#8217;m sorry.  I realize closing FeedmailPro will inconvenience a large number of people, so I want to be as candid as possible in explaining the sudden closure.</p>
+
+<p>The main reason is that as a sole developer, I no longer have time to work on the site.  It started as a side project to meet my own needs, and has since grown beyond my ability.  With a full time job and another larger startup to run, I was lucky to work even a few hours a month on FeedmailPro.</p>
+
+<p>Although over 800 blogs are now using FeedmailPro, only about 20 of those ever reached the threshold of needing to pay for the service.  Therefore, with a total revenue of around $200 per month I can&#8217;t justify the amount of time it takes to maintain and run the site.  This may have been a miscalculation on my part in the business model (this whole thing has been a learning experience business wise, and I&#8217;ve certainly made some errors along the way).</p>
+
+<p>Bottom line, I was trying to do too many projects at once, and if I didn&#8217;t consolidate them a bit I was in danger of doing them all poorly.  Something had to give, and after weighing my options that turned out to be FeedmailPro.</p>
+
+<h3>Can&#8217;t you leave the site running even if you don&#8217;t have time to work on it?</h3>
+
+<p>I&#8217;d like to do this but unfortunately it is somewhat dangerous to leave a large email server operating entirely on it&#8217;s own.  There are now over half a million emails in the FeedmailPro database which makes it a target for hackers and spammers.  And mail server reputation fluctuates over time.  If for some reason the server were to be blacklisted I&#8217;d have a fairly big emergency on my hands (and potentially lawsuits) that would require lots of work to get fixed (especially with so many people depending on it).  I can&#8217;t afford to have that liability waiting to strike at any moment given my other responsibilities.</p>
+
+<h3>Could you sell or donate FeedmailPro to someone else to keep it running?</h3>
+
+<p>I contemplated this as well but ultimately decided against it because the internals of FeedmailPro are complex enough that it would be time consuming to bring someone else up to speed.  It&#8217;s also not a very forgiving system (a small bug could accidentally email millions of people) so it&#8217;s not a good candidate to pass on to someone who only understood it at a high level.</p>
+
+<p>In addition, the functionality offered by FeedmailPro is now provided by more established service providers (like MailChimp) so there isn&#8217;t much reason to duplicate the functionality (granted the low cost of FeedmailPro was an important difference, but some steps have been taken to mitigate this - see the question on cost below).</p>
+
+<h3>Why MailChimp?</h3>
+
+<p>I&#8217;ve been tracking their service for a while and simply put, they know what they are doing.  They also have a large team and infrastructure that is capable of handling the sort of volume and potential emergencies that come from running a service like this.  They are a world class Email Service Provider, and they aren&#8217;t going anywhere.</p>
+
+<p>In fact, with the features they&#8217;ve been adding over the past few years (especially the same 1000 subscribers for free accounts) their service is quite a bit better than FeedmailPro (certainly more full featured), so there is really no reason not to use them.  I suspect their deliverability is also better than FeedmailPro, so this will be a nice bonus when switching over.</p>
+
+<p>I reached out to MailChimp about a month ago when I realized the predicament I was in, and they agreed to assist in the transition of all FeedmailPro customers (even with the large number of free users). They&#8217;ve been great to work with so far which only gives me more confidence in transferring FeedmailPro users to their service.</p>
+
+<h3>What is the schedule for shutting down?</h3>
+
+<p><strong>10/23/2010</strong></p>
+
+<ul>
+<li>notice to current FeedmailPro customers of upcoming changes, new accounts no longer accepted on FeedmailPro, service continues for existing customers as usual</li>
+</ul>
+
+
+<p><strong>11/1/2010</strong></p>
+
+<ul>
+<li>second notice goes out to all customers about upcoming shutdown</li>
+</ul>
+
+
+<p><strong>11/23/2010</strong></p>
+
+<ul>
+<li>final notice of upcoming shutdown</li>
+</ul>
+
+
+<p><strong>12/1/2010</strong></p>
+
+<ul>
+<li>no more emails will be sent from FeedmailPro, website will still be accessible to export data</li>
+</ul>
+
+
+<p><strong>1/1/2011</strong></p>
+
+<ul>
+<li>last day to access website and export data</li>
+</ul>
+
+
+<p>They key date to remember is <strong>December 1st, 2010</strong>.  You should have your list migrated over to MailChimp by this date to avoid any interruption in service.</p>
+
+<h3>What does MailChimp cost compared to FeedmailPro?</h3>
+
+<p>If you&#8217;re a free user of FeedmailPro then MailChimp will also be free.  They have the same 1,000 subscriber limit on free accounts.</p>
+
+<p>If you&#8217;re a paying customer of FeedmailPro (as of 10/22/2010), MailChimp has graciously agreed to &#8220;grandfather&#8221; you in at the same rate you were paying at FeedmailPro.  This means your price won&#8217;t change.  Be sure to sign up using the link on this page and try to use the same email address (from your FeedmailPro account) when signing up with MailChimp to make this process as easy as possible.  Note that you may need to sign up with MailChimp at the regular price to get started since the special discount may not be applied right away.  You can email FeedmailPro Support if it still hasn&#8217;t changed after a few weeks.</p>
+
+<p>All paying customers of FeedmailPro will have their Paypal subscriptions canceled as of 10/23/2010 so you won&#8217;t be charged again by FeedmailPro after that date.</p>
+
+<h2>Ready to start the transition?</h2>
+
+<p>Head over to <a href="http://www.mailchimp.com/signup/h?pid=feedmailpro&amp;source=website">MailChimp</a> to create your account.</p>
+
+<p>You will need to complete this process <strong>before December 1st, 2010</strong> to ensure there is no interruption in delivery to your subscribers.</p>
+
+<p>Note: if you don&#8217;t already have a MailChimp account you should sign up using the MailChimp link on this page so they know you are a former FeedmailPro customer.</p>
+
+<p>If possible, please use the same email address to create your account at MailChimp that you used at FeedmailPro.</p>
+
+<h2>Detailed <a href="http://www.youtube.com/watch?v=geqF5B1il9c">video walkthrough</a> of the transition process:</h2>
+
+<p>Tip: set to fullscreen and 720p resolution for best viewing experience.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Best Way To Buy A New Car (Plus Startup Announcement) ]]></title>
+    <link href="http://brianarmstrong.org/blog/the-best-way-to-buy-a-new-car-plus-startup-announcement/"/>
+    <updated>2010-10-13T16:25:12-07:00</updated>
+    <id>http://brianarmstrong.org/blog/the-best-way-to-buy-a-new-car-plus-startup-announcement</id>
+    <content type="html"><![CDATA[<p>Buying a new car still sucks.</p>
+
+<p>In person negotiations at car dealerships feel out of date and are unpleasant for many consumers.  And websites aren&#8217;t much better: while there are a plenty of good car <em>research</em> websites, you can&#8217;t actually complete the transaction online.</p>
+
+<p>In fact, the state of the art in online car buying hasn&#8217;t changed in 10 years: the ubiquitous &#8220;request a quote&#8221; form that asks you to enter a make, model, and zip code.</p>
+
+<p>Many consumers don&#8217;t realize that by filling out a &#8220;request a quote&#8221; form your contact information has been sold to about 5 different car dealers for $20 each, and you&#8217;re about to start getting lots of spam emails (auto-generated offers at uncompetitive prices) and unwanted phone calls.  Those dealers are trained to try and get you in the dealership and won&#8217;t give you their best offers online.</p>
+
+<ul>
+<li><p>Where is the competition in this market?</p></li>
+<li><p>Why can&#8217;t you see how other consumers have rated a dealer before walking into a dealership?</p></li>
+<li><p>Why can&#8217;t you compare all your offers side-by-side in the same format?</p></li>
+<li><p>Why is the final price you&#8217;ll pay to get the car off the lot still so unclear?</p></li>
+</ul>
+
+
+<p>The new start-up I <a href="http://brianarmstrong.org/posts/im-moving-to-the-san-francisco-bay-area/">recently joined in California</a> is solving this problem.  The company is <a href="http://CarWoo.com">CarWoo.com</a> and we&#8217;re making a better car buying process where <strong>dealers compete for your business</strong>.</p>
+
+<p>Here is the new homepage (be sure to <a href="http://carwoo.com/">check out the video for some more details</a>):</p>
+
+<p><a href="http://carwoo.com"><img src="http://s3.amazonaws.com/oldbloguploads/2010/10/Screen-shot-2010-10-13-at-9.05.38-AM-500x336.png" alt="" /></a></p>
+
+<p>We just officially launched this morning after more than a year in private beta.</p>
+
+<p>And we just completed an A-round raising $4.5M from some <a href="http://carwoo.com/investors">outstanding investors</a>.</p>
+
+<p>And the <a href="http://carwoo.com/press">press</a> is starting to roll in.  This is going to be an exciting day!   The whole team is camped out in a big house in Las Vegas where we are attending the Digital Dealer conference.  It&#8217;s been really exciting to see this process from the ground up!</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Greater levels of abstraction]]></title>
+    <link href="http://brianarmstrong.org/blog/greater-levels-of-abstraction/"/>
+    <updated>2010-09-30T08:09:11-07:00</updated>
+    <id>http://brianarmstrong.org/blog/greater-levels-of-abstraction</id>
+    <content type="html"><![CDATA[<p>At the risk of oversimplifying, the entire history of computer programming could be summarized as a series of higher and higher levels of abstraction.</p>
+
+<p>Early computers just had individual bits you could flip on and off.</p>
+
+<p>Then came assembly languages that allowed you to manipulate numbers.</p>
+
+<p>C made strings, arrays, and all sorts of things possible.</p>
+
+<p>Further evolutions came with C++, Java, Ruby, etc.</p>
+
+<p>With each iteration the languages produced less efficient code at the bit level, but programmers could write better stuff because it was easier to think at higher levels.  Processors kept getting faster so this made up for the slower code.</p>
+
+<p>It&#8217;s sort of funny because debates still occur constantly in the tech community about the merits of various languages.  Usually one nerd will say &#8220;real programmers use X technology - it&#8217;s just so much more efficient.  Sure Y is newer but it&#8217;s just a toy, it doesn&#8217;t scale in the real world&#8221; while another nerd will say &#8220;not true - so and so is using Y now, it&#8217;s web scale and the way of the future!&#8221;</p>
+
+<p>It&#8217;s important to keep history in perspective.  With Moore&#8217;s law continuing for the foreseeable future, it&#8217;s hard to imagine programming NOT continuing to move toward higher and higher levels of abstraction.</p>
+
+<p><strong>As with all trends you have to time it right, so not every technology is right today.  But if you had to pick one to win over time I&#8217;d pick higher abstraction over speed of code every time.</strong></p>
+
+<p>When C came out there was probably some hardcore assembly programmer who said &#8220;bah - C is a nice idea but will never be fast enough on real machines&#8221;.</p>
+
+<p>And in 10 years, there will probably be some kid who says &#8220;you still use Ruby?  that&#8217;s so low level!&#8221;</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/PROG-LAN.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reflections on world travel]]></title>
+    <link href="http://brianarmstrong.org/blog/reflections-on-world-travel/"/>
+    <updated>2010-09-29T07:28:59-07:00</updated>
+    <id>http://brianarmstrong.org/blog/reflections-on-world-travel</id>
+    <content type="html"><![CDATA[<p>Since I <a href="http://brianarmstrong.org/posts/oh-snap-im-moving-to-south-america/">spent a year</a> in Buenos Aires, Argentina people sometimes ask me what my experience was and if I&#8217;d recommend it.</p>
+
+<p>For example, here is a recent reader question and my response:</p>
+
+<blockquote><p>Hey Brian,</p></blockquote>
+
+<p>Did you like being in Argentina? Is it as good as its cracked up to be and as cost-effective? How much does it cost (US dollars) to live really well down there?
+R.D.</p>
+
+<p><strong>My response:</strong></p>
+
+<p><em>Hi R.D.,</em></p>
+
+<p>_ _</p>
+
+<p><em>I don&#8217;t want to oversell it as I think some people have online.  Outside the city there is some serious poverty.  But inside there are some nice areas and certainly a different cool sort of European culture you can find with very nice people and good food.  I&#8217;d say you can live comfortably there on anywhere from $1000-$2000 a month, but of course this varies a lot based on your taste.  Things are not drastically cheaper there (some more, some less) but I&#8217;d say on average prices are about 25-50% cheaper than the U.S.  (of course you may not be earning as many U.S. dollars while you are down there).</em></p>
+
+<p><em>Overall I&#8217;m very glad I did it, and I think it&#8217;s one of those life experiences that has helped me grow as a person.  But don&#8217;t buy into the tales of travel as some mystical experience.  It is a city just like anywhere else, with good people and bad people.  Take it for what it&#8217;s worth and enjoy it as a fun experience either with a partner or as a process of self discovery on your own.</em></p>
+
+<p><em>Compared to other places I&#8217;ve traveled in the world, BA is definitely up there in the top 3.</em></p>
+
+<p><em>Thank you,
+Brian Armstrong</em></p>
+
+<p>====================================</p>
+
+<p><strong>Further Thoughts</strong></p>
+
+<p>One surprising result after traveling abroad is that I definitely developed a much bigger appreciation of the U.S.</p>
+
+<p>People tend to romanticize foreign countries by saying the people there appreciate the important things in life, or are happier with what they have, or generally lead simpler lives that aren&#8217;t based on rushing around, checking your email 20 times a day, and being so career oriented.</p>
+
+<p>It can be nice to experience this as a temporary reprieve from a busy life, but for locals who actually live abroad this romanticized idea quickly evaporates.  Greater corruption exists (I witnessed both bribing of police and city inspectors while in Buenos Aires), taxes are higher (creating a large grey market), and there is plenty of counterfeit money and petty theft.  For people with fewer opportunities in life, crime is an attractive option.</p>
+
+<p>The U.S. has many flaws, but strictly in terms of economic opportunity I haven&#8217;t seen a better place to live yet.  For me at least this is a trump card, although clearly everyone has difference priorities.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/coca-on-Fernando-Perdomo.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/coca-on-Fernando-Perdomo-500x334.jpg" alt="" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[UniversityTutor Races Past 200 Paying Customers]]></title>
+    <link href="http://brianarmstrong.org/blog/universitytutor-races-past-200-paying-customers/"/>
+    <updated>2010-09-07T06:50:20-07:00</updated>
+    <id>http://brianarmstrong.org/blog/universitytutor-races-past-200-paying-customers</id>
+    <content type="html"><![CDATA[<p>UniversityTutor.com hit a little milestone this past week: 200 paying tutors!</p>
+
+<p>At $10/month each this might not sound like a lot (and it really isn&#8217;t) but for me it was pretty cool because this was my original goal for myself way back <a href="http://brianarmstrong.org/posts/from-new-idea-to-business-launch-in-two-weeks-with-pictures/">when I first started the site</a>, more than 2 years ago.</p>
+
+<p>In fact, (this is really silly but) during that entire time I&#8217;ve had this little stickie note on my computer desktop with that goal written down:</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-10.50.47-PM.png" alt="" /></p>
+
+<p>When I started I thought it would take maybe 6 months tops to reach this.  Now it&#8217;s finally done - it only took about two years longer to accomplish than I thought it would! :)  (With some nice <a href="http://brianarmstrong.org/posts/universitytutor-revenues-fall-by-50/">setbacks</a> along the way.)</p>
+
+<p>My daily stats dashboard:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/monthly_report.jpeg"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/monthly_report-500x375.jpg" alt="" /></a></p>
+
+<p>I took the occasion to implement a change I&#8217;ve been thinking about for a while on the site: making the free account unlimited.</p>
+
+<p>Below is a summary of the changes and some screenshots of the new signup process I recently deployed.</p>
+
+<p><strong>Old business model:</strong></p>
+
+<ol>
+<li><p>Tutor signs up</p></li>
+<li><p>First 3 times they are contacted on the site it is free</p></li>
+<li><p>After the third contact, I ask them to upgrade (conversion rate around 1.8%).  Those tutors who don&#8217;t upgrade can no longer use the site.</p></li>
+</ol>
+
+
+<p><strong>New business model:</strong></p>
+
+<ol>
+<li><p>Tutor signs up</p></li>
+<li><p>Right after filling out their profile they are asked to choose a free listing or featured listing</p></li>
+<li><p>Featured listing gives you top placement in search results, featured on the homepage, etc (conversion rate currently at 4%).</p></li>
+</ol>
+
+
+<p>Main difference is that now you can keep the free listing forever if you want (you never get kicked off).  Instead, the incentive to upgrade is getting more tutoring inquiries with a featured listing (show up on homepage, first in search results, badge on your profile, etc).</p>
+
+<p>Here are some screenshots of the new signup flow:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.08.27-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.08.27-PM-500x367.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.09.04-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.09.04-PM-500x367.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.10.21-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.10.21-PM-500x367.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.10.31-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.10.31-PM-500x367.png" alt="" /></a></p>
+
+<p>You can see all the benefits listed on the final signup page.  This is the most important one.</p>
+
+<p>And here here are some examples of &#8220;featured&#8221; tutors:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/featured1.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/featured1-500x367.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/featured2.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/featured2-500x367.png" alt="" /></a></p>
+
+<p><strong>Random thoughts on the change:</strong></p>
+
+<ul>
+<li><p>I was sort of worried about making the free listing unlimited because it creates less of an incentive for tutors to upgrade.  But so far this looks like it was nothing to worry about - conversion rate to paid is actually better (need more data to say for sure here).</p></li>
+<li><p>I think the new signup flow where it asks them to upgrade from the beginning (but doesn&#8217;t prevent them from doing it later) is mostly responsible for this.  Tutors no longer have to wait for their &#8220;free trial&#8221; to expire for me to ask them to upgrade.</p></li>
+<li><p>I changed the wording from a &#8220;Free Account&#8221; vs a &#8220;Pro Account&#8221;  to a &#8220;Free Listing&#8221; vs a &#8220;Featured Listing&#8221;.  This wording change seems to work better here since &#8220;pro&#8221; is an ambiguous term, but a &#8220;featured listing&#8221; makes it clear exactly what they are paying for.</p></li>
+<li><p>I also added language to the page saying &#8220;Featured listings receive 4x as many inquiries as free listings on average&#8221; which is true (I ran some numbers).</p></li>
+<li><p>In large part, this new signup flow is modeled after the <a href="http://www.Sortfolio.com">Sortfolio.com</a> signup flow which I really like.  So they deserve a shout out here.</p></li>
+</ul>
+
+
+<p>If you think about the freemium business model as a spectrum (crude diagram below), then this change is definitely a shift to the left (towards more free):</p>
+
+<p>[100% Free &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; Freemium &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211; 100% Paid ]</p>
+
+<p>But it seems to have worked well here in earning more (ironically).  The tricky part about Freemium is where to draw the line between free and paid and the decision is different for every business.  I read a great piece of advice recently which said (I&#8217;m paraphrasing) &#8220;If your site benefits from network effects (basically that the value of the site grows with the number of users) then you should give more things away for free, and if it doesn&#8217;t benefit from network effects then you should make more things paid.&#8221;</p>
+
+<p>That advice was helpful to me in this case - a tutoring directory definitely seems like it has some network effects.  I didn&#8217;t want to be losing those ~98% of tutors from the site who tried it out but didn&#8217;t want to upgrade.  This allows me to capture both groups and build a bigger site.</p>
+
+<p>The site is growing even faster now that I made this change and it&#8217;s already over 220 paying tutors as I write this.  So this may turn out really well (too early to say for sure).  What are your predictions on this change?</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+
+<p>P.S. To read up on the whole UniversityTutor story, you can <a href="http://www.startbreakingfree.com/category/universitytutor-com/">view the category page here</a>.</p>
 ]]></content>
   </entry>
   

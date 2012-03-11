@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Advice | Brian Armstrong]]></title>
+  <link href="http://brianarmstrong.org/blog/categories/advice/atom.xml" rel="self"/>
+  <link href="http://brianarmstrong.org/"/>
+  <updated>2012-03-11T16:18:08-07:00</updated>
+  <id>http://brianarmstrong.org/</id>
+  <author>
+    <name><![CDATA[Brian Armstrong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Simple Trumps Complete]]></title>
+    <link href="http://brianarmstrong.org/blog/simple-trumps-complete/"/>
+    <updated>2010-12-22T10:07:08-08:00</updated>
+    <id>http://brianarmstrong.org/blog/simple-trumps-complete</id>
+    <content type="html"><![CDATA[<p>Three articles I've read in the past month.  All with the same lesson about what makes a web application "catch on".</p>
+
+<ol>
+<li>Wayne Ting, a guy who started a Facebook-like app at Columbia University around the same time as Facebook explains how they lost to Facebook: <a href="http://www.bbc.co.uk/blogs/thereporters/rorycellanjones/2010/12/wayne_ting_nearly_a_billionair.html">they had too many features</a>.</li>
+</ol>
+
+
+<blockquote><p>"A good website should have functionalities that 70 or 80% of users want to use. We had functions that only 10% wanted"</p></blockquote>
+
+<ol>
+<li>Marc Hedlund, a guy who started Wesabe (a competitor which lost to Mint.com) thinks they lost because <a href="http://blog.precipice.org/why-wesabe-lost-to-mint">they gave users too much work</a>.</li>
+</ol>
+
+
+<blockquote><p>Mint focused on making the user do almost no work at all, by automatically editing and categorizing their data, reducing the number of fields in their signup form, and giving them immediate gratification as soon as they possibly could</p></blockquote>
+
+<ol>
+<li>Netflix's Chief Product Officer summed up the entirety of his years of testing various designs in <a href="http://www.quora.com/What-types-of-things-does-Netflix-A-B-test-aside-from-member-sign-up">just 3 words</a>.</li>
+</ol>
+
+
+<blockquote><p>If I had to summarize our learnings in three words: "simple trumps complete."</p></blockquote>
+
+<p>I think we're seeing a pattern here.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Peter Thiel's Thoughts On Tech Entrepreneurship]]></title>
+    <link href="http://brianarmstrong.org/blog/peter-thiels-thoughts-on-tech-entrepreneurship/"/>
+    <updated>2010-12-01T08:17:44-08:00</updated>
+    <id>http://brianarmstrong.org/blog/peter-thiels-thoughts-on-tech-entrepreneurship</id>
+    <content type="html"><![CDATA[<p>Tonight I went to go see <a href="http://en.wikipedia.org/wiki/Peter_Thiel">Peter Thiel</a> speak at Stanford University.  He co-founded Paypal, was an early investor in a bunch of companies (Facebook, LinkedIn, etc), and is a billionaire.</p>
+
+<p>I jotted down some notes from the talk which I thought were interesting.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/12/582px-Peter_Thiel-291x300.jpg" alt="" /></p>
+
+<ul>
+<li><strong>Intensive vs. Extensive</strong>
+He spent a bunch of time comparing these two types of innovation.  Intensive is building something new and truly innovative.  An example would be the Macintosh or Paypal - both blazed a trail to create something that had never been created before.  It's carries a higher risk of failure but also greater rewards.  Extensive is building on ideas which are already in place.  It can be  a safer way to build a company, but not as lucrative.  An example would be putting accounting software online.  Or doing another social network.</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li><p><strong>China</strong>
+He compared China and the U.S. saying that China's next 20 years of growth are clearly extensive.  They can simply copy the model which is the U.S. and grow rapidly (build this many airports, this many steel mills, etc).  The U.S. can't afford to do that and has the much harder job of pursuing intensive growth.  We can't just make more doctors, lawyers, bankers, and houses.  To grow we need to build stuff the world has never seen (technology).</p></li>
+<li><p><strong>There is a lack of focus on intensive innovation</strong>
+It was clear from his talk that intensive is where he'd like to see more focus in the U.S.  Especially Silicon Valley is full of too many people copying old ideas, and not breaking new ground.  He said this field of tech startups (their current generation) feels saturated and there are too many people making clones, or investing in poor ideas.</p></li>
+<li><p><strong>The car industry 1920 - 1960
+</strong>The 1920's saw a boom in automotive  with 300 U.S. car companies.  By 1960 there were only three.  This boom and consolidation is a natural cycle with new industries.  He said the internet and web companies aren't quite to 1960 yet, but we certainly aren't in 1920 any more.  He feels while there will certainly be successful web companies started in the next 10 years, but more and more of the profits will go toward the established players (Google, Facebook, Amazon, etc).</p></li>
+<li><p><strong>Emerging Categories</strong>
+So if the web is maturing, where should entrepreneurs focus?  He said there is a boom yet to come in a number of emerging industries - artificial intelligence, bio-tech, energy, space stuff, etc.  But this isn't the right way to think about it - don't think in categories.  Think about something you are passionate about or something that would be cool &amp; useful - then build that.  The passion is what's important, not the category.</p></li>
+<li><p><strong>Mobile is not the next big thing</strong>
+Internet was a big thing because established media companies (New York Times, Disney) could not make the jump.  It was just too different for them to adapt.  This left the field wide open for startups.  But he thinks mobile internet is similar enough to other internet that todays companies will make the jump.  The #1 social network on mobile will be Facebook, the #1 ad network on mobile will be Google, mobile payments on Paypal, and on down the line.</p></li>
+<li><p><strong>CEO Salary = best predictor of success
+</strong>If CEO makes &lt; $120k  he likes their chances.  If CEO makes > $160k he doesn't like their chances.  When management is working for equity, incentives are aligned.</p></li>
+<li><p><strong>Redundancy = Conflict</strong>
+People and relationships (investors, employees, etc) were the hardest problem for him and where he made the most mistakes.  One thing he learned, many sources of problems come from two people (experts) working on the same thing.  So find people with complementing skills and don't duplicate people's skills.  Redundancy will lead to conflict.</p></li>
+<li><p><strong>Go where there isn't competition
+</strong>Everyone is doing web startups now.  Go work on quantum computing - you will have almost zero competition.  Key to success: you're passionate about it, few others are working on it, and it matters if you solve it.</p></li>
+<li><p><strong>Social Entrepreneurship Doesn't Work</strong>
+Somebody asked about social entrepreneurship.  He gave a candid answer: he doesn't believe in it.  He said non-profits can be excellent, and for-profits can be excellent.  The intersection is small.  If there are starving kids in Africa, there is no profitable business there - you just need to get them food.  (Interesting I wrote something <a href="http://brianarmstrong.org/posts/innocent-smoothies-richard-reed-inspiring-entrepreneur/">similar</a> a while back.)****</p></li>
+</ul>
+
+
+<p>It was thought provoking overall.  I've got 3 business ideas I'd like to bounce off him given the opportunity, but he got bum rushed after the talk.  Peter - if you're reading this <a href="http://www.startbreakingfree.com/contact/">message</a> me, would love to do a quick call.</p>
+
+<p><strong>What do you think?  Agree or disagree on the state of tech entrepreneurship?</strong></p>
+
+<p>Leave me a comment below.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong<strong> </strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Punishing Nigerian Scammers]]></title>
+    <link href="http://brianarmstrong.org/blog/punishing-nigerian-scammers/"/>
+    <updated>2010-11-08T02:52:07-08:00</updated>
+    <id>http://brianarmstrong.org/blog/punishing-nigerian-scammers</id>
+    <content type="html"><![CDATA[<p>I started getting complaints recently from some tutors on <a href="http://www.UniversityTutor.com">UniversityTutor.com</a> that they were receiving scam emails.</p>
+
+<p>I looked into it and the scam is the same one you commonly see on Craigslist and numerous other sites.  It usually goes like this:</p>
+
+<ul>
+<li><p>Someone contacts you pretending to be interested in your services (tutoring in this case)</p></li>
+<li><p>They offer to pre-pay a large amount up front and send you a money order</p></li>
+<li><p>Next, they say they've changed their mind and would like a refund (minus some small fee for your trouble)</p></li>
+<li><p>You refund them with real money before realizing the money order is fake</p></li>
+</ul>
+
+
+<p>These scams all have some common themes which make them fairly easy to spot, but they can still catch you unaware if you haven't seen it before.  There are some red flags.  For example, the "buyer"...</p>
+
+<ul>
+<li><p>Usually resides in a foreign country</p></li>
+<li><p>Doesn't write/speak English very well</p></li>
+<li><p>Wants to be refunded via Western Union</p></li>
+<li><p>Is reluctant or unwilling to meet in person or talk on the phone</p></li>
+</ul>
+
+
+<p>Western Union seems to be used in most of these scams because the person can pick up the money in any country with just a confirmation code.  And since they're in a foreign country <strong>you have ZERO legal recourse to go after them</strong>.  The U.S. isn't going to be extraditing anybody for for less than probably $100,000 and most of these scams are for $1,000 or less.</p>
+
+<p>I would be curious to know what percent of Western Union's business is from people caught up in these scams (and people laundering money).  It wouldn't surprise me at all if it's 25% or 50%.  Their fee seems to be high enough that you're unlikely to use it unless anonymity was essential to you.  If that is true, then Western Union is a prime target for a class action lawsuit - and I hope somebody does take them down.  They're enabling a worldwide network of criminals, and profiting from it, which makes them very uncool in my book.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/11/Screen-shot-2010-11-07-at-5.19.39-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/11/Screen-shot-2010-11-07-at-5.19.39-PM-500x305.png" alt="" /></a></p>
+
+<p>Anyway, I checked out my Google Analytics stats and 1,759 people from Nigeria visited the site last month, which is a little strange given that I have no tutors listed there.</p>
+
+<p>There could be scammers residing elsewhere too, but this jumped out at me as new and probably one source of the problem.</p>
+
+<h2>How To Get Scammers Off Your Site</h2>
+
+<p>So here are some steps I've taken (or looked into) for blocking these guys - and how scammers can get around them.  You're never going to make it completely impossible for them - the goal is just to make it difficult enough so they'll spend their time elsewhere.  They are listed roughly in order of difficulty to implement.</p>
+
+<h2>1. Captchas</h2>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/11/captchas.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2010/11/captchas.jpg" alt="" /></a></p>
+
+<p>These are everywhere online now and a great first start.  They don't prevent humans from messing with your site, but they do block computers (bots or automated scripts that people write).  And this is important because bots can spam hundreds of thousands of users in a few hours on your site before you catch it, whereas a human can only spam a few dozen people in an hour.  Captchas are your first line of defense.</p>
+
+<p><strong>How they can beat it</strong>: hire dumb people to fill out captchas all day.  I think the going rate for this is maybe $0.05 to fill out a captcha, which isn't much - but at least it's costing them <em>something</em> now and they can't just automate the whole thing.  This one step alone will reduce probably 90% of the spam on your site.</p>
+
+<h2>2. Rate Limiting</h2>
+
+<p>The next step is to setup some checks to limit the number of messages any given user can send in a day.  Right now if a client tries to contact more than 15 tutors in a day, they'll get a message saying they are sending too many messages and need to slow down.</p>
+
+<p><strong>How they can beat it:</strong> they can create new accounts.  If a new email address is needed for this (which it should be), then this takes them another few minutes to setup a new email address at Gmail or Hotmail (who use their own captchas).  Not a huge deal, but remember - the goal is just to waste enough of their time so they eventually give up and go somewhere else.</p>
+
+<h2>3. Tell All Your Users What To Watch Out For</h2>
+
+<p>Low tech, but effective.  Every time a student contacts a tutor through the site, I've included a note in the email warning them about these scams and linking them to <a href="http://www.universitytutor.com/about/scams">this information page</a> if they want to read more.</p>
+
+<p>If you use Craigslist, you've probably seen similar warnings all over their site.  An educated user base is a great defense.  The only downside is that it uglies up your website and your users still have to read the stupid emails, so it wastes their time even if they don't actually fall for the scam.</p>
+
+<p><strong>How they can beat it:</strong> they can't really prevent you from educating your user base - it just means they now have to contact 10x as many people to find one who will fall for it.</p>
+
+<h2>4. Geocode Their IP Addresses</h2>
+
+<p>You can map an IP address to a country, and block entire countries from using your site.  This worked well in my case because I could block Nigeria (I have no real tutors listed there so no loss).  However, this doesn't work as well if your scammers are mixed in the same countries with your real users.  IP address geocoding isn't exact, so you could accidentally block your real users along with the scammers.  It's important to remember that an IP address does not correspond to one person or one computer (in fact thousands of people can share the same IP address behind a university or corporate firewall) so it's not an all encompassing solution.</p>
+
+<p><strong>How they can beat it: </strong>if they find out you're doing it, they can proxy their IP address through another country or spoof it (which again, takes a little more time and possibly money).</p>
+
+<blockquote><p>This brings me to an important point: if you are going to block them, <strong>don't TELL them you are blocking them</strong>.  Try to make it totally transparent to the user.  For example, if they come to your site and see a warning message saying "UniversityTutor is not available in your country" or "you are sending messages too fast", then they know they've been caught and will start trying the above mentioned solutions.  Once they see the error message go away, they know their solution has worked and they'll continue spamming.  Don't give them any information to test solutions!</p></blockquote>
+
+<p>So if I detect the user is spamming, I still show the exact same success message back to them (your message has been sent!).  I just don't actually send the message in the background.  This way they happily go on their way, wasting their time filling out forms on my site all day long (which do nothing).</p>
+
+<p>For some reason I really like this idea that spammers are like mice on a treadmill, working away on my site all day without realizing they are going nowhere.  I even thought about starting a dashboard showing how many spammers I've tricked into filling out completely useless forms on my site, but I haven't yet.</p>
+
+<h2>5. Hidden Cookies</h2>
+
+<p>In addition to the rate limiting mentioned above, you can also set another random cookie which survives the user's session on your site.  This way if they logout and log back in with a new account they've created (creating lots of new accounts to get around your rate limiting) you can still track how many messages they are sending overall and not send more messages.  As mentioned above, don't tell them when their message isn't sent.</p>
+
+<p><strong>How they can beat it:</strong> they can simply clear their browser cookies.  The key here is that if they don't know something is wrong, they may not think to do it.  Even if they do, it adds one more step to they process.</p>
+
+<h2>6. <a href="http://samy.pl/evercookie/">Evercookie</a></h2>
+
+<p>This is a neat little hack that a programmer put together.  It uses about 7 different methods to store cookie data all over the user's browser and computer.  Some of them are very clever and hard to detect.  If one or more of the storage mechanisms gets deleted, Evercookie recreates all of them the next time it runs.  The result is a persistent browser cookie that is VERY difficult to get rid of (you can't just clear your cookies).  As with many tools, this one could potentially be abused - but here is a case where it ends up working for good (blocking scammers).</p>
+
+<p><strong>How they can beat it:</strong> they'd have to spend quite a bit of time figuring out how to prevent it.  I've heard some reports that Google Chrome's incognito mode is safe from it, but I've never tested it.  I suppose they could just boot up a new virtualized operating system every time, but in general, this is probably beyond what most scammers would be willing to do.</p>
+
+<h2>7. <a href="http://panopticlick.eff.org/">Panopticlick</a></h2>
+
+<p>Panopticlick attempts to identify an individual user of a website based on a hash of all their public user data.  Surprisingly, it claims to work about 85% of the time.  This could accidentally block a few of your legitimate users (false positives) in the worst case, but it could be worth it depending on how bad your spam problem is.</p>
+
+<p><strong>How they can beat it: </strong>they'd have to adjust something in their browser settings before each message to keep trying to get a unique identifier.  They could run out of settings after a while.  If anyone knows of this being used in production anywhere, please let me know in the comments.</p>
+
+<h2>8. Bayesian Filters</h2>
+
+<p>Currently the nuclear weapon in the fight against spam (the most technically sophisticated, but also the most powerful) - this applies equally well to blocking scam messages.  This is what Gmail uses for their spam filter, and it works quite well.</p>
+
+<p>You'll need a decent sample size of data (scam messages and real messages separated) and it will improve/learn over time.  You don't even need to write the whole thing from scratch.  There are some nice <a href="https://github.com/search?q=bayesian&amp;type=Everything&amp;repo=&amp;langOverride=&amp;start_value=1">open source libraries</a> that you can drop right in, depending on what language you are using.</p>
+
+<p><strong>How they can beat it: </strong>they'd have to start changing the messages they send to not get caught in the filter.  This might include learning to speak English correctly, not using the word "money order" etc - which are non-trivial.  The algorithm would learn over time so they'd have to continually change it up.  Their weak point is their message: they are always going to have to say something slightly different than legitimate users.</p>
+
+<h2>Conclusion</h2>
+
+<p>The war against scammers is an ongoing game of cat and mouse that is never going to be completely over.  They might be annoying, but luckily they are just that - annoying - and rarely actually trick people out of money now days.  As people become more internet savvy (and start to recognize the words "Western Union" as a red flag), scammers will become less and less important.</p>
+
+<p>Did I miss any other techniques?  Please let me know in the comments!</p>
+
+<p>Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Shutting Down FeedmailPro.com]]></title>
+    <link href="http://brianarmstrong.org/blog/shutting-down-feedmailpro-com/"/>
+    <updated>2010-10-24T05:19:04-07:00</updated>
+    <id>http://brianarmstrong.org/blog/shutting-down-feedmailpro-com</id>
+    <content type="html"><![CDATA[<p>Had a bit of a sad moment today as I finally shut down FeedmailPro (or at least began the transition process to do so).</p>
+
+<p>I'd been contemplating this move for a while, and finally bit the bullet.  Why?  Well the short answer is that I don't have enough time to work on it, and it never took off the way I'd hoped.  Actually, Email Service Providers have gotten a lot better since I created FeedmailPro (the narcissist in me would like to think I had something to do with that - pushing the competition in the right direction - but it's probably totally unrelated).</p>
+
+<p>Since I created it, 800 blogs have come to depend on it (albeit only 20 were paying customers) so clearly, communicating this news to the users of FeedmailPro is no small task.  I fully expect to upset some people in doing this, but there is definitely a right and wrong way to go about doing it.  Probably the biggest thing I was able to do was setup an excellent transition process for all the users to move over to MailChimp.  So hopefully this will be a step in the right direciton.  Below I've included some excerpts from <a href="http://feedmailpro.com/mailchimp">the page I created on FeedmailPro</a> to explain the transition to all the users.</p>
+
+<p>I also made an effort give as much transparency as possible on the page.  I spoke in the first person and used the words "I'm sorry" (as opposed to "<a href="http://37signals.com/svn/posts/1528-the-bullshit-of-outage-language">we apologize for any inconvenience</a>" or hedging language like that).</p>
+
+<p>The transition page is displayed below.</p>
+
+<p>Until next time, keep breaking free (even when it means making difficult decisions),
+Brian Armstrong</p>
+
+<p>P.S. If you are ever facing a similar dilema on sticking with a project or dropping it, one of my favorite books on the subject is Seth Godin's <a href="http://www.amazon.com/gp/product/1591841666?ie=UTF8&amp;tag=httpwwwstartb-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1591841666">The Dip: A Little Book That Teaches You When to Quit (and When to Stick)</a><img src="http://www.assoc-amazon.com/e/ir?t=httpwwwstartb-20&amp;l=as2&amp;o=1&amp;a=1591841666" alt="" />.</p>
+
+<p>=================================================================</p>
+
+<h1>FeedmailPro Is Closing!</h1>
+
+<p>On December 1st, 2010, FeedmailPro will permanently shutdown and stop sending email.</p>
+
+<p>It's recommended for all current FeedmailPro customers to export their data and transition their email lists over to <a href="http://www.mailchimp.com/signup/h?pid=feedmailpro&amp;source=website">MailChimp</a>, who we are working with to handle this transition.</p>
+
+<p>This page will try to answer any questions you may have about the change, and assist you in the transition process.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/10/transfer-500x97.png" alt="" /></p>
+
+<h3>Why is FeedmailPro closing?</h3>
+
+<p>First just let me say: I'm sorry.  I realize closing FeedmailPro will inconvenience a large number of people, so I want to be as candid as possible in explaining the sudden closure.</p>
+
+<p>The main reason is that as a sole developer, I no longer have time to work on the site.  It started as a side project to meet my own needs, and has since grown beyond my ability.  With a full time job and another larger startup to run, I was lucky to work even a few hours a month on FeedmailPro.</p>
+
+<p>Although over 800 blogs are now using FeedmailPro, only about 20 of those ever reached the threshold of needing to pay for the service.  Therefore, with a total revenue of around $200 per month I can't justify the amount of time it takes to maintain and run the site.  This may have been a miscalculation on my part in the business model (this whole thing has been a learning experience business wise, and I've certainly made some errors along the way).</p>
+
+<p>Bottom line, I was trying to do too many projects at once, and if I didn't consolidate them a bit I was in danger of doing them all poorly.  Something had to give, and after weighing my options that turned out to be FeedmailPro.</p>
+
+<h3>Can't you leave the site running even if you don't have time to work on it?</h3>
+
+<p>I'd like to do this but unfortunately it is somewhat dangerous to leave a large email server operating entirely on it's own.  There are now over half a million emails in the FeedmailPro database which makes it a target for hackers and spammers.  And mail server reputation fluctuates over time.  If for some reason the server were to be blacklisted I'd have a fairly big emergency on my hands (and potentially lawsuits) that would require lots of work to get fixed (especially with so many people depending on it).  I can't afford to have that liability waiting to strike at any moment given my other responsibilities.</p>
+
+<h3>Could you sell or donate FeedmailPro to someone else to keep it running?</h3>
+
+<p>I contemplated this as well but ultimately decided against it because the internals of FeedmailPro are complex enough that it would be time consuming to bring someone else up to speed.  It's also not a very forgiving system (a small bug could accidentally email millions of people) so it's not a good candidate to pass on to someone who only understood it at a high level.</p>
+
+<p>In addition, the functionality offered by FeedmailPro is now provided by more established service providers (like MailChimp) so there isn't much reason to duplicate the functionality (granted the low cost of FeedmailPro was an important difference, but some steps have been taken to mitigate this - see the question on cost below).</p>
+
+<h3>Why MailChimp?</h3>
+
+<p>I've been tracking their service for a while and simply put, they know what they are doing.  They also have a large team and infrastructure that is capable of handling the sort of volume and potential emergencies that come from running a service like this.  They are a world class Email Service Provider, and they aren't going anywhere.</p>
+
+<p>In fact, with the features they've been adding over the past few years (especially the same 1000 subscribers for free accounts) their service is quite a bit better than FeedmailPro (certainly more full featured), so there is really no reason not to use them.  I suspect their deliverability is also better than FeedmailPro, so this will be a nice bonus when switching over.</p>
+
+<p>I reached out to MailChimp about a month ago when I realized the predicament I was in, and they agreed to assist in the transition of all FeedmailPro customers (even with the large number of free users). They've been great to work with so far which only gives me more confidence in transferring FeedmailPro users to their service.</p>
+
+<h3>What is the schedule for shutting down?</h3>
+
+<p><strong>10/23/2010</strong></p>
+
+<ul>
+<li>notice to current FeedmailPro customers of upcoming changes, new accounts no longer accepted on FeedmailPro, service continues for existing customers as usual</li>
+</ul>
+
+
+<p><strong>11/1/2010</strong></p>
+
+<ul>
+<li>second notice goes out to all customers about upcoming shutdown</li>
+</ul>
+
+
+<p><strong>11/23/2010</strong></p>
+
+<ul>
+<li>final notice of upcoming shutdown</li>
+</ul>
+
+
+<p><strong>12/1/2010</strong></p>
+
+<ul>
+<li>no more emails will be sent from FeedmailPro, website will still be accessible to export data</li>
+</ul>
+
+
+<p><strong>1/1/2011</strong></p>
+
+<ul>
+<li>last day to access website and export data</li>
+</ul>
+
+
+<p>They key date to remember is <strong>December 1st, 2010</strong>.  You should have your list migrated over to MailChimp by this date to avoid any interruption in service.</p>
+
+<h3>What does MailChimp cost compared to FeedmailPro?</h3>
+
+<p>If you're a free user of FeedmailPro then MailChimp will also be free.  They have the same 1,000 subscriber limit on free accounts.</p>
+
+<p>If you're a paying customer of FeedmailPro (as of 10/22/2010), MailChimp has graciously agreed to "grandfather" you in at the same rate you were paying at FeedmailPro.  This means your price won't change.  Be sure to sign up using the link on this page and try to use the same email address (from your FeedmailPro account) when signing up with MailChimp to make this process as easy as possible.  Note that you may need to sign up with MailChimp at the regular price to get started since the special discount may not be applied right away.  You can email FeedmailPro Support if it still hasn't changed after a few weeks.</p>
+
+<p>All paying customers of FeedmailPro will have their Paypal subscriptions canceled as of 10/23/2010 so you won't be charged again by FeedmailPro after that date.</p>
+
+<h2>Ready to start the transition?</h2>
+
+<p>Head over to <a href="http://www.mailchimp.com/signup/h?pid=feedmailpro&amp;source=website">MailChimp</a> to create your account.</p>
+
+<p>You will need to complete this process <strong>before December 1st, 2010</strong> to ensure there is no interruption in delivery to your subscribers.</p>
+
+<p>Note: if you don't already have a MailChimp account you should sign up using the MailChimp link on this page so they know you are a former FeedmailPro customer.</p>
+
+<p>If possible, please use the same email address to create your account at MailChimp that you used at FeedmailPro.</p>
+
+<h2>Detailed <a href="http://www.youtube.com/watch?v=geqF5B1il9c">video walkthrough</a> of the transition process:</h2>
+
+<p>Tip: set to fullscreen and 720p resolution for best viewing experience.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[QUOTE: If it's not a 10x improvement, is it really worth doing?]]></title>
+    <link href="http://brianarmstrong.org/blog/quote-if-its-not-a-10x-improvement-is-it-really-worth-doing/"/>
+    <updated>2010-06-02T02:21:37-07:00</updated>
+    <id>http://brianarmstrong.org/blog/quote-if-its-not-a-10x-improvement-is-it-really-worth-doing</id>
+    <content type="html"><![CDATA[<p>Mark Andreessen talks about the <a href="http://ecorner.stanford.edu/authorMaterialInfo.html?mid=2459">3 criteria to judge a new business idea</a>, including the idea that it has to be a major improvement over existing solutions.</p>
+
+<blockquote><p>If it's not a 10x improvement, is it really worth doing?</p></blockquote>
+
+<p><a href="http://ecorner.stanford.edu/authorMaterialInfo.html?mid=2459"><img src="http://s3.amazonaws.com/oldbloguploads/2010/06/Screen-shot-2010-06-01-at-7.15.31-PM.png" alt="" /></a></p>
+
+<p>I tend to agree.</p>
+]]></content>
+  </entry>
+  
+</feed>

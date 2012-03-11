@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Technology | Brian Armstrong]]></title>
+  <link href="http://brianarmstrong.org/blog/categories/technology/atom.xml" rel="self"/>
+  <link href="http://brianarmstrong.org/"/>
+  <updated>2012-03-11T16:18:08-07:00</updated>
+  <id>http://brianarmstrong.org/</id>
+  <author>
+    <name><![CDATA[Brian Armstrong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bitcoin Wallet for Android]]></title>
+    <link href="http://brianarmstrong.org/blog/bitcoin-wallet-for-android/"/>
+    <updated>2011-07-06T07:26:16-07:00</updated>
+    <id>http://brianarmstrong.org/blog/bitcoin-wallet-for-android</id>
+    <content type="html"><![CDATA[<p>Tonight a buddy of mine (who works at Google) and I released an open source application.</p>
+
+<p>It's an <a href="https://market.android.com/details?id=com.bitcoinandroid">Android app for Bitcoin</a> that allows you to have a digital "wallet" on your phone.  Here are a few screenshots:</p>
+
+<p><img src="http://i.imgur.com/aqF3p.png" alt="" /></p>
+
+<p><img src="http://i.imgur.com/ilvNp.png" alt="" /></p>
+
+<p><img src="http://i.imgur.com/ObBth.png" alt="" /></p>
+
+<p><img src="http://i.imgur.com/TsZc7.png" alt="" /></p>
+
+<p>Simply put, the app allows you to send and receive bitcoins from your Android phone.</p>
+
+<p>If you've never heard of bitcoin then you aren't alone.  It is a very new technology.  After reading about bitcoin I still wasn't sure what might become of it, but I wanted to learn more and figured the best way would be to dive in and build something with it!</p>
+
+<p>If I had to sum up bitcoin in one sentence I'd say it is a "distributed peer-to-peer currency".  But what does this mean and why is it important?</p>
+
+<p>I think it's most important features are that it...</p>
+
+<ul>
+<li><p>allows you to send money without transactions fees</p></li>
+<li><p>allows you to send money instantly, anywhere in the world</p></li>
+<li><p>and (it appears) it can do this securely</p></li>
+</ul>
+
+
+<p>If you contrast this with how most payments work today, most merchants pay 2-3% as a transaction fee to Visa or Mastercard (and this fee is partially passed on to you as a consumer). In addition, whenever you want to move money between accounts it can take up to 3 business days. With bitcoin, there are no transaction fees and money can be moved instantly, anywhere in the world. This is a potentially very disruptive technology, even if it <a href="http://cdixon.org/2010/01/03/the-next-big-thing-will-start-out-looking-like-a-toy/">looks like a toy</a> today.</p>
+
+<p>Bitcoin accomplishes this using cryptography across a large number of servers on the internet, and doesn't rely on one trusted third party (a bank) to control the money.</p>
+
+<p><strong>It's also important to realize that bitcoin is not a new product or service, it is a new platform.</strong>  Much like email or the internet itself, it has no centralized servers and many products and companies can be built on top of it (our app is just one).  It's also an open source project itself so anyone can see how it works and it isn't owned by anyone. In fact, thousands of computer scientists around the world have looked at it at this point.  This gives it a lot of potential to survive and adapt over the years.</p>
+
+<p>Whether it ever becomes mainstream or not is still very much an open question (I have mixed thoughts on this).  However, at present there is already about $100M in real money tied up in the bitcoin economy, so it has certainly shown some early promise. There are already a few <a href="http://starburst.hackerfriendly.com/?p=1530">stores starting to pop up</a> who accept bitcoin.</p>
+
+<p><strong>I think a day will come very soon where we no longer need to carry a physical wallet, and our smart-phones will take over that job.</strong>  I also think it would be great for the economy to not pay a tax of 2-3% on each transaction to Visa or Mastercard (both for businesses and consumers).</p>
+
+<p>For a glimpse of how this might work, checkout this little demo video we put together.  It shows us instantly transferring money between two phones using just the internet and a distributed network of computers around the world.</p>
+
+<p>The <a href="http://en.wikipedia.org/wiki/QR_code">QR codes</a> you see used there could be on a point of sale device in a store, a mobile device like a phone, or a sticker on the wall.</p>
+
+<p>It's important to realize that those two phones could have been anywhere in the world.  If you'd like to send money to another country today, Western Union takes a hefty fee and will take days.  Even Paypal charges 2-3% and will take 3 business days to move money in and out of an account.  Bitcoin is instant, and has zero transaction fees. You can do it from any computer, including a smart phone like the one shown here.</p>
+
+<p>Anyway, I'll see if I can post more about this in the future.  But let me know what you think in the comments below.  And if you have an Android Device, <a href="https://market.android.com/details?id=com.bitcoinandroid">you can download it from the Android Market here</a>. It is 100% free and open source.</p>
+
+<p><a href="https://market.android.com/details?id=com.bitcoinandroid"><img src="http://s3.amazonaws.com/oldbloguploads/2011/07/Screen-shot-2011-07-05-at-11.25.05-PM-500x367.png" alt="" /></a></p>
+
+<p>Finally, if you are a developer, here is a link to the <a href="https://github.com/barmstrong/bitcoin-android">github project page</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Programming]]></title>
+    <link href="http://brianarmstrong.org/blog/learning-programming/"/>
+    <updated>2011-06-20T13:46:54-07:00</updated>
+    <id>http://brianarmstrong.org/blog/learning-programming</id>
+    <content type="html"><![CDATA[<p>I was tutoring someone in web app development recently, and the monumental task in front of him really hit me. <strong>He was trying to learn and use nine new languages at the same time</strong>.</p>
+
+<p>In our case it was:</p>
+
+<ul>
+<li><p>Ruby</p></li>
+<li><p>Rails</p></li>
+<li><p>MySQL</p></li>
+<li><p>Bash (command line usage)</p></li>
+<li><p>HTML</p></li>
+<li><p>CSS</p></li>
+<li><p>Javascript</p></li>
+<li><p>JQuery</p></li>
+<li><p>Git</p></li>
+<li><p>(Capistrano, Yaml, nginx, ??)</p></li>
+</ul>
+
+
+<p>Even though some of these aren't true languages in the traditional sense, they appear this way to newcomers since they are each a new syntax to learn.</p>
+
+<p>If you slowly built up these skills over 15 years, they are clearly separate concepts in your mind. But for a newcomer trying to use them, it's not even clear which one is which.</p>
+
+<p>Is that a Ruby method or a Rails method?</p>
+
+<p>Is "script/server" a shell command or is "ls" part of rails?</p>
+
+<p>Is this file html, js, or css? (actually a mix of all three)</p>
+
+<p>He made a comment along the lines of "wouldn't it be great if you could build an entire web app in one language", and I started thinking about it.</p>
+
+<p>GWT (Google Website Toolkit), ActiveRecord, CoffeeScript, and Heroku are all steps in this direction. You could classify them generally as trying to "eliminate a language in the stack" or allowing you to do a piece of the stack in a language you already know.</p>
+
+<p>Obviously there is a trade off here between power and simplicity, but I'm wondering - would it be possible or desirable to get an entire web app down to just one language? If not that how few could you use?</p>
+
+<p>Btw, I think there are benefits to seasoned developers here as well. I remember Lars Rasmussen (creator of Google Maps and Wave) mentioned something to this effect at Google IO in 2009, that GWT allowed him to spend his mental CPU cycles at a higher level and be more creative (not having to worry about cross browser css or js). So the benefits of higher abstraction may not only be for newcomers.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Punishing Nigerian Scammers]]></title>
+    <link href="http://brianarmstrong.org/blog/punishing-nigerian-scammers/"/>
+    <updated>2010-11-08T02:52:07-08:00</updated>
+    <id>http://brianarmstrong.org/blog/punishing-nigerian-scammers</id>
+    <content type="html"><![CDATA[<p>I started getting complaints recently from some tutors on <a href="http://www.UniversityTutor.com">UniversityTutor.com</a> that they were receiving scam emails.</p>
+
+<p>I looked into it and the scam is the same one you commonly see on Craigslist and numerous other sites.  It usually goes like this:</p>
+
+<ul>
+<li><p>Someone contacts you pretending to be interested in your services (tutoring in this case)</p></li>
+<li><p>They offer to pre-pay a large amount up front and send you a money order</p></li>
+<li><p>Next, they say they've changed their mind and would like a refund (minus some small fee for your trouble)</p></li>
+<li><p>You refund them with real money before realizing the money order is fake</p></li>
+</ul>
+
+
+<p>These scams all have some common themes which make them fairly easy to spot, but they can still catch you unaware if you haven't seen it before.  There are some red flags.  For example, the "buyer"...</p>
+
+<ul>
+<li><p>Usually resides in a foreign country</p></li>
+<li><p>Doesn't write/speak English very well</p></li>
+<li><p>Wants to be refunded via Western Union</p></li>
+<li><p>Is reluctant or unwilling to meet in person or talk on the phone</p></li>
+</ul>
+
+
+<p>Western Union seems to be used in most of these scams because the person can pick up the money in any country with just a confirmation code.  And since they're in a foreign country <strong>you have ZERO legal recourse to go after them</strong>.  The U.S. isn't going to be extraditing anybody for for less than probably $100,000 and most of these scams are for $1,000 or less.</p>
+
+<p>I would be curious to know what percent of Western Union's business is from people caught up in these scams (and people laundering money).  It wouldn't surprise me at all if it's 25% or 50%.  Their fee seems to be high enough that you're unlikely to use it unless anonymity was essential to you.  If that is true, then Western Union is a prime target for a class action lawsuit - and I hope somebody does take them down.  They're enabling a worldwide network of criminals, and profiting from it, which makes them very uncool in my book.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/11/Screen-shot-2010-11-07-at-5.19.39-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/11/Screen-shot-2010-11-07-at-5.19.39-PM-500x305.png" alt="" /></a></p>
+
+<p>Anyway, I checked out my Google Analytics stats and 1,759 people from Nigeria visited the site last month, which is a little strange given that I have no tutors listed there.</p>
+
+<p>There could be scammers residing elsewhere too, but this jumped out at me as new and probably one source of the problem.</p>
+
+<h2>How To Get Scammers Off Your Site</h2>
+
+<p>So here are some steps I've taken (or looked into) for blocking these guys - and how scammers can get around them.  You're never going to make it completely impossible for them - the goal is just to make it difficult enough so they'll spend their time elsewhere.  They are listed roughly in order of difficulty to implement.</p>
+
+<h2>1. Captchas</h2>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/11/captchas.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2010/11/captchas.jpg" alt="" /></a></p>
+
+<p>These are everywhere online now and a great first start.  They don't prevent humans from messing with your site, but they do block computers (bots or automated scripts that people write).  And this is important because bots can spam hundreds of thousands of users in a few hours on your site before you catch it, whereas a human can only spam a few dozen people in an hour.  Captchas are your first line of defense.</p>
+
+<p><strong>How they can beat it</strong>: hire dumb people to fill out captchas all day.  I think the going rate for this is maybe $0.05 to fill out a captcha, which isn't much - but at least it's costing them <em>something</em> now and they can't just automate the whole thing.  This one step alone will reduce probably 90% of the spam on your site.</p>
+
+<h2>2. Rate Limiting</h2>
+
+<p>The next step is to setup some checks to limit the number of messages any given user can send in a day.  Right now if a client tries to contact more than 15 tutors in a day, they'll get a message saying they are sending too many messages and need to slow down.</p>
+
+<p><strong>How they can beat it:</strong> they can create new accounts.  If a new email address is needed for this (which it should be), then this takes them another few minutes to setup a new email address at Gmail or Hotmail (who use their own captchas).  Not a huge deal, but remember - the goal is just to waste enough of their time so they eventually give up and go somewhere else.</p>
+
+<h2>3. Tell All Your Users What To Watch Out For</h2>
+
+<p>Low tech, but effective.  Every time a student contacts a tutor through the site, I've included a note in the email warning them about these scams and linking them to <a href="http://www.universitytutor.com/about/scams">this information page</a> if they want to read more.</p>
+
+<p>If you use Craigslist, you've probably seen similar warnings all over their site.  An educated user base is a great defense.  The only downside is that it uglies up your website and your users still have to read the stupid emails, so it wastes their time even if they don't actually fall for the scam.</p>
+
+<p><strong>How they can beat it:</strong> they can't really prevent you from educating your user base - it just means they now have to contact 10x as many people to find one who will fall for it.</p>
+
+<h2>4. Geocode Their IP Addresses</h2>
+
+<p>You can map an IP address to a country, and block entire countries from using your site.  This worked well in my case because I could block Nigeria (I have no real tutors listed there so no loss).  However, this doesn't work as well if your scammers are mixed in the same countries with your real users.  IP address geocoding isn't exact, so you could accidentally block your real users along with the scammers.  It's important to remember that an IP address does not correspond to one person or one computer (in fact thousands of people can share the same IP address behind a university or corporate firewall) so it's not an all encompassing solution.</p>
+
+<p><strong>How they can beat it: </strong>if they find out you're doing it, they can proxy their IP address through another country or spoof it (which again, takes a little more time and possibly money).</p>
+
+<blockquote><p>This brings me to an important point: if you are going to block them, <strong>don't TELL them you are blocking them</strong>.  Try to make it totally transparent to the user.  For example, if they come to your site and see a warning message saying "UniversityTutor is not available in your country" or "you are sending messages too fast", then they know they've been caught and will start trying the above mentioned solutions.  Once they see the error message go away, they know their solution has worked and they'll continue spamming.  Don't give them any information to test solutions!</p></blockquote>
+
+<p>So if I detect the user is spamming, I still show the exact same success message back to them (your message has been sent!).  I just don't actually send the message in the background.  This way they happily go on their way, wasting their time filling out forms on my site all day long (which do nothing).</p>
+
+<p>For some reason I really like this idea that spammers are like mice on a treadmill, working away on my site all day without realizing they are going nowhere.  I even thought about starting a dashboard showing how many spammers I've tricked into filling out completely useless forms on my site, but I haven't yet.</p>
+
+<h2>5. Hidden Cookies</h2>
+
+<p>In addition to the rate limiting mentioned above, you can also set another random cookie which survives the user's session on your site.  This way if they logout and log back in with a new account they've created (creating lots of new accounts to get around your rate limiting) you can still track how many messages they are sending overall and not send more messages.  As mentioned above, don't tell them when their message isn't sent.</p>
+
+<p><strong>How they can beat it:</strong> they can simply clear their browser cookies.  The key here is that if they don't know something is wrong, they may not think to do it.  Even if they do, it adds one more step to they process.</p>
+
+<h2>6. <a href="http://samy.pl/evercookie/">Evercookie</a></h2>
+
+<p>This is a neat little hack that a programmer put together.  It uses about 7 different methods to store cookie data all over the user's browser and computer.  Some of them are very clever and hard to detect.  If one or more of the storage mechanisms gets deleted, Evercookie recreates all of them the next time it runs.  The result is a persistent browser cookie that is VERY difficult to get rid of (you can't just clear your cookies).  As with many tools, this one could potentially be abused - but here is a case where it ends up working for good (blocking scammers).</p>
+
+<p><strong>How they can beat it:</strong> they'd have to spend quite a bit of time figuring out how to prevent it.  I've heard some reports that Google Chrome's incognito mode is safe from it, but I've never tested it.  I suppose they could just boot up a new virtualized operating system every time, but in general, this is probably beyond what most scammers would be willing to do.</p>
+
+<h2>7. <a href="http://panopticlick.eff.org/">Panopticlick</a></h2>
+
+<p>Panopticlick attempts to identify an individual user of a website based on a hash of all their public user data.  Surprisingly, it claims to work about 85% of the time.  This could accidentally block a few of your legitimate users (false positives) in the worst case, but it could be worth it depending on how bad your spam problem is.</p>
+
+<p><strong>How they can beat it: </strong>they'd have to adjust something in their browser settings before each message to keep trying to get a unique identifier.  They could run out of settings after a while.  If anyone knows of this being used in production anywhere, please let me know in the comments.</p>
+
+<h2>8. Bayesian Filters</h2>
+
+<p>Currently the nuclear weapon in the fight against spam (the most technically sophisticated, but also the most powerful) - this applies equally well to blocking scam messages.  This is what Gmail uses for their spam filter, and it works quite well.</p>
+
+<p>You'll need a decent sample size of data (scam messages and real messages separated) and it will improve/learn over time.  You don't even need to write the whole thing from scratch.  There are some nice <a href="https://github.com/search?q=bayesian&amp;type=Everything&amp;repo=&amp;langOverride=&amp;start_value=1">open source libraries</a> that you can drop right in, depending on what language you are using.</p>
+
+<p><strong>How they can beat it: </strong>they'd have to start changing the messages they send to not get caught in the filter.  This might include learning to speak English correctly, not using the word "money order" etc - which are non-trivial.  The algorithm would learn over time so they'd have to continually change it up.  Their weak point is their message: they are always going to have to say something slightly different than legitimate users.</p>
+
+<h2>Conclusion</h2>
+
+<p>The war against scammers is an ongoing game of cat and mouse that is never going to be completely over.  They might be annoying, but luckily they are just that - annoying - and rarely actually trick people out of money now days.  As people become more internet savvy (and start to recognize the words "Western Union" as a red flag), scammers will become less and less important.</p>
+
+<p>Did I miss any other techniques?  Please let me know in the comments!</p>
+
+<p>Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Greater levels of abstraction]]></title>
+    <link href="http://brianarmstrong.org/blog/greater-levels-of-abstraction/"/>
+    <updated>2010-09-30T08:09:11-07:00</updated>
+    <id>http://brianarmstrong.org/blog/greater-levels-of-abstraction</id>
+    <content type="html"><![CDATA[<p>At the risk of oversimplifying, the entire history of computer programming could be summarized as a series of higher and higher levels of abstraction.</p>
+
+<p>Early computers just had individual bits you could flip on and off.</p>
+
+<p>Then came assembly languages that allowed you to manipulate numbers.</p>
+
+<p>C made strings, arrays, and all sorts of things possible.</p>
+
+<p>Further evolutions came with C++, Java, Ruby, etc.</p>
+
+<p>With each iteration the languages produced less efficient code at the bit level, but programmers could write better stuff because it was easier to think at higher levels.  Processors kept getting faster so this made up for the slower code.</p>
+
+<p>It's sort of funny because debates still occur constantly in the tech community about the merits of various languages.  Usually one nerd will say "real programmers use X technology - it's just so much more efficient.  Sure Y is newer but it's just a toy, it doesn't scale in the real world" while another nerd will say "not true - so and so is using Y now, it's web scale and the way of the future!"</p>
+
+<p>It's important to keep history in perspective.  With Moore's law continuing for the foreseeable future, it's hard to imagine programming NOT continuing to move toward higher and higher levels of abstraction.</p>
+
+<p><strong>As with all trends you have to time it right, so not every technology is right today.  But if you had to pick one to win over time I'd pick higher abstraction over speed of code every time.</strong></p>
+
+<p>When C came out there was probably some hardcore assembly programmer who said "bah - C is a nice idea but will never be fast enough on real machines".</p>
+
+<p>And in 10 years, there will probably be some kid who says "you still use Ruby?  that's so low level!"</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/PROG-LAN.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>

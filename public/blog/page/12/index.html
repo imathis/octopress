@@ -1,0 +1,877 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Brian Armstrong</title>
+  <meta name="author" content="Brian Armstrong">
+
+  
+  <meta name="description" content="A few days ago I wrote about a new feature I added to my passive income business, UniversityTutor.com: map based searching. I got some really great &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://brianarmstrong.org/blog/page/12">
+  <link href="/favicon.ico" rel="icon">
+  
+  <link href="/assets/bootstrap/css/spacelab.min.css" rel="stylesheet" type="text/css">
+  <link href="/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+  <link href="/assets/bootstrap/css/custom.css" rel="stylesheet" type="text/css">
+  <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+  
+  <link href="http://feeds.feedburner.com/brianarmstrong/vTOG" rel="alternate" title="Brian Armstrong" type="application/atom+xml">
+  
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-387546-20']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    data-spy="scroll">
+
+  <div class="container">
+    <header class="jumbotron subhead" id="overview">
+      <div class="subscribe">
+  <table>
+    <tr>
+      <td><span>Get Updates: &nbsp;</span></td>
+      <td><a href="#" onclick="window.open('http://feedburner.google.com/fb/a/mailverify?uri=brianarmstrong/vTOG','FeedBurner','menubar=no,width=600,height=600,toolbar=no'); return false;" class="btn"><i class="icon-envelope"></i> By Email</a></td>
+      <td><a href="http://feeds.feedburner.com/brianarmstrong/vTOG" class="btn"><i class="icon-cog"></i> By RSS</a></td>
+      <td><a href="http://twitter.com/brian_armstrong" class="btn"><i class="icon-twitter-sign"></i> On Twitter</a></td>
+    </tr>
+  </table>
+</div>
+<h1 class="title">Brian Armstrong</h1>
+
+      <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container" style="width: auto;">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/archives">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        
+          <form action="http://google.com/search" method="get" class="navbar-search pull-left">
+            <fieldset role="search">
+              <input type="hidden" name="q" value="site:brianarmstrong.org" />
+              <input type="text" name="q" results="0" placeholder="Search" class="search-query span2" />
+            </fieldset>
+          </form>
+        
+        <ul class="nav pull-right">
+          <li>
+            <a style="padding: 7px 0 0 0;" href="http://feeds.feedburner.com/brianarmstrong/vTOG"><img src="http://feeds.feedburner.com/~fc/brianarmstrong/vTOG?bg=a1cefc&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>            
+          </li>
+        </ul>
+      </div><!-- /.nav-collapse -->
+    </div>
+  </div><!-- /navbar-inner -->
+</div>
+
+    </header>
+    <div id="main">
+      <div id="content">
+        <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/implementing-a-suggestion-from-a-reader/">Implementing a Suggestion From a Reader</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-17T17:12:15-08:00" pubdate data-updated="true">Feb 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A few days ago I wrote about a <a href="http://brianarmstrong.org/posts/new-features-and-tests-on-my-passive-income-business/">new feature</a> I added to my passive income business, UniversityTutor.com: map based searching.</p>
+
+<p>I got some really great feedback from a Breaking Free reader by the name of Tylor who said:</p>
+
+<blockquote><p>Looks good! If you wanted a little user interaction feedback: my first intention, immediately upon landing on the page, was to start double clicking on my state and zoom into my area. I didn’t see any people and just thought that there weren’t any tutors. It wasn’t until I read the sidebar (which obviously was a last resort) that I saw that I needed to search first.</p></blockquote>
+
+<p>I just thought it might be helpful for you. It looks great.</p>
+
+<p>I think Tylor&#8217;s comment was spot on.  Another person who I saw use the site had the exact same reaction.  I also received a similar email from, of all people, MY MOTHER making the same suggestion.</p>
+
+<p><strong>Old Homepage:</strong>
+<a href="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-71.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-71.png" alt="" /></a></p>
+
+<p><strong>New Homepage:</strong>
+<a href="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-811.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-811.png" alt="" /></a></p>
+
+<p>I think the change was a good one.  The empty map took up so much screen real estate on the old home page that people&#8217;s eyes were naturally drawn to it.  This is a huge realization I came to about a year ago: you need to be thinking about people&#8217;s first impressions of a web page and WHERE THEIR EYES WILL GO.</p>
+
+<p>In the new homepage, the image is more clearly a screen shot (not something to be clicked) and the orange button draws more attention which is what I really want people to be doing (filling out those two fields and clicking the orange button).</p>
+
+<p>If you aren&#8217;t deliberately having your user&#8217;s eyes move from one place to the next to the next, then you are losing people.  Dan Kennedy also described this as a &#8220;well oiled chute&#8221; where there is only a single path that your prospect can do down.  Read more about <a href="http://www.useit.com/alertbox/reading_pattern.html">eye tracking studies</a> to get a taste of this.</p>
+
+<p>One benefit of these screen shots is that it allows your to &#8220;zoom out&#8221; and see where you eye might naturally go.  There is no reason you can&#8217;t do this just by standing back from your monitor and getting the same effect.  It&#8217;s a worthwhile exercise.  Is there a clear path to take on your website even while standing back to the point where you can&#8217;t read the text?</p>
+
+<p>Anyway, these sorts of incremental improvements can have a big effect over time.  Watching users interact with your site can be a fascinating experience because they often don&#8217;t act how you&#8217;d assume.  Google is great at this by the way and I personally believe it&#8217;s a big reason for their success: they do extensive and regular user studies where they just sit back and silently watch people use their software.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/are-all-work-from-home-ads-scams/">Are All &#8220;Work From Home&#8221; Ads Scams?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-13T20:48:33-08:00" pubdate data-updated="true">Feb 13<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Got this message from a reader today:</p>
+
+<blockquote><p>Hi Brian,
+I just signed up to your blog and find it interesting and worthwhile to follow through. You come across as a knowledgeable person who doesn&#8217;t mind to share your findings with anyone who asks and this Brian&#8230;as you know, brings instant credibility and builds a positive brand identity to your product and services. However I have a question which pertains to third parties products announced in your site. Do you check the legitimacy of those offers? Specially with so many &#8220;work from home&#8221; scams in the Internet nowadays. Wouldn&#8217;t this compromise the trust you are building among your readers and subscribers to your blog?
+Best,
+E</p></blockquote>
+
+<p>Hi E,</p>
+
+<p>Very valid question&#8230;and the answer is no, I don&#8217;t check the legitimacy of the ads on my site.  And yes, I do believe that 99% of &#8220;work at home&#8221; ads on the internet ARE scams.  As a matter of policy, I personally do not buy anything sold on the internet with a typical long, hypish sales letter.  I find them annoying, actually.</p>
+
+<p>So the banner ads which appear on the site I can&#8217;t vouch for.  This probably does reduce the credibility of my website, but I also feel it&#8217;s worthwhile to make money from it, so this is a tradeoff for me personally.  In many cases if people just click an ad, I get paid something, even if they have the good sense not to buy whatever the ad is selling.   I may reduce the number of ads in the future, especially if I see a better way to monetize the site.</p>
+
+<p>All ads that run on Google Adwords aren&#8217;t scams of course.  I have personally used them a number of times to market various things.  But for some reason, this particular industry of &#8220;make money at home&#8221; seems to attract a lot of losers so you have to be careful.  The world of internet marketing in general is not something I&#8217;d advise people to get too involved in.  There is something to be learned from all people (and I&#8217;ve learned a lot about marketing from reading various books, etc), but if you get too involved in it you can end up with a business you aren&#8217;t proud of.</p>
+
+<p>Here is an example of a website which uses good fundamentals of marketing (strong benefits, call to action, credibility indicators, lead capturing, testimonials, etc) and manages to keep it classy:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-42.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-42.png" alt="" /></a></p>
+
+<p>Now here is a site by someone who has gone to too many internet marketing seminars advertising a &#8220;work at home&#8221; product:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-31.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-31.png" alt="" /></a></p>
+
+<p>If you ever do see a product like that second one sold online, I&#8217;d advise you not to buy it.  Just remember, if those guys really were that rich, why would they need to create this silly product to sell online?  Wouldn&#8217;t they have better things to do?</p>
+
+<p>Anyway, you&#8217;ve caused me to do some soul searching with this question.  Maybe it is time to find some better monetization strategies or get rid of some ads.  I&#8217;ll have to think on that one.  In the mean time, hopefully this was insightful - and if you&#8217;d like to avoid the ads, try subscribing to the <a href="http://feeds.feedburner.com/BreakingFree">RSS feed</a> which has hardly any.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/new-features-and-tests-on-my-passive-income-business/">New Features and Tests on My Passive Income Business</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-10T23:45:02-08:00" pubdate data-updated="true">Feb 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hey Folks,</p>
+
+<p>The past week or so I&#8217;ve been working on a cool new feature for my passive income business, <a href="http://www.universitytutor.com">UniversityTutor.com</a>: MAP BASED SEARCHING FOR TUTORS!</p>
+
+<p>This is using some Google Maps technology underneath to integrate with my site and hopefully it will make it much easier for people to find tutors based on their location.</p>
+
+<p>Check out the screenshot below or <a href="http://www.universitytutor.com">click here to try it for yourself</a>:</p>
+
+<p><a href="http://www.universitytutor.com"><img src="http://s3.amazonaws.com/oldbloguploads/2009/02/universitytutor-screen21.gif" alt="universitytutor.com screenshot map based tutor search" /></a></p>
+
+<p>As you might recall, in the past I was using <a href="http://brianarmstrong.org/posts/how-to-use-domain-names-to-improve-your-google-rankings/">subdomains for each city</a> to help people narrow their search.  So people looking for tutors in New York City would visit <a href="http://newyork.universitytutor.com">http://newyork.universitytutor.com</a>.</p>
+
+<p>Here is an <a href="http://newyork.universitytutor.com/">example</a> of what it looked like:</p>
+
+<p><a href="http://newyork.universitytutor.com/"><img src="http://s3.amazonaws.com/oldbloguploads/2009/02/universitytutor-screenshot1.gif" alt="universitytutor.com screenshot" /></a></p>
+
+<p>It was more difficult to find tutors near you with this method.  And it also had the unfortunate side affect that many metropolitan areas (which really should have been grouped under one subdomain) were spread out across multiple subdomains.  With 1,600 cities in the database, I would have taken me months to figure out how to group them via endless googling.  And even then it wouldn&#8217;t have worked very well, because you still wouldn&#8217;t have been able to search by zip code or street address, etc.</p>
+
+<p>However, this old method did have an important SEO benefit because Google could index these pages better.  They are largely text and having the city name as a keyword in the subdomain gave a huge boost in my rankings.  This was currently driving about 500 people per day to the site (for free) just from search engine traffic alone.  I obviously didn&#8217;t want to lose this benefit by switching to a largly AJAX &amp; image based site.</p>
+
+<p>In case you don&#8217;t know, Google has a tough time reading image based sites and figuring out what they are about so they tend to rank lower in search engines, everything else being equal.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-91.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-91.png" alt="UniversityTutor.com search engine traffic" /></a></p>
+
+<p>So I decided to do both.  I would keep the subdomain sites with their text content which were already ranking well in search engines.  And I would set the homepage to use the new map based searching feature.  I&#8217;ll probably put a big link on the subdomain sites to the &#8220;new map based view&#8221; so that people who come there from the search engine find out about the main site and hopefully bookmark it or remember it for next time.</p>
+
+<p><strong>Next steps?  Keep evolving the business model!</strong></p>
+
+<p>The next step I&#8217;ve been thinking about is setting up a way for tutors to invoice clients and get paid through the website (right now they handle all payment with the client on their own via cash or check).</p>
+
+<p>The <a href="http://brianarmstrong.org/posts/the-evolution-of-a-business-model-never-stop-testing/">current business model</a> of offering a free trial and then asking tutors to upgrade to a monthly subscription is working fairly well (about 20% of tutors who go through the free trial end up subscribing for $10/month).</p>
+
+<p>However, it&#8217;s still a tough sell and 80% of people don&#8217;t do it.  I&#8217;ve discovered that people are psychologically very resistant to &#8220;paying&#8221; for a job (a job is supposed to pay <em>you</em> right).  It smacks of a scam or some other internet scheme.  Some universities have even refused to list my tutoring positions after seeing that tutors are charged a fee.</p>
+
+<p>Yet people seem to be perfectly happy giving up a small percentage of earned money through a transaction fee.  They have no risk to try it up front, and I only get paid if they get paid.  It doesn&#8217;t FEEL like their money since they are just getting it (minus my fee) whereas ten bucks up front definitely FEELS like their money coming out of their account.</p>
+
+<p>The other day I was checking out Guru.com&#8217;s business model and I think they may have nailed it.  For new users who just want to try out the site for the first time there is zero monthly fee.  It is a totally &#8220;free account&#8221; with no time limit or anything.  For this they take 10% of any money you make.  But at the same time, if you start earning a lot of money through the site and want to pay a smaller percentage then you can pay a small monthly fee (about $10/month) and the percentage drops to just 5%.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-101.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-101.png" alt="" /></a></p>
+
+<p>To me this sounds like the right balance.  My guess is that the 20% of people who I&#8217;m getting to sign up right now are the same 20% who would upgrade to the &#8220;pro account&#8221; for $10/month.  And the other 80% (who I&#8217;m earning zero from right now and quickly get kicked out of my site when their free trial ends) are the casual users who would continue using the site and pay the 10% fee.</p>
+
+<p><strong>Won&#8217;t People Pay Offline To Avoid The Transaction Fee?</strong></p>
+
+<p>Probably my biggest concern with this model (and the only reason I hadn&#8217;t thought about trying it until now) was the fear that people would just pay offline (under the table) to avoid the fee.</p>
+
+<p>But I got a clue from Guru.com on this as well.  Here is how they do it: the ONLY way to get reviews and build your experience on their site is to complete the transaction through their site.</p>
+
+<p>Obviously, people are less likely to hire you for jobs if your profile on the site shows that you are brand new and have never done any work there before.  But more experienced service providers can charge higher rates.  This was a big key: show the number of hours this person has completed through your site as an indicator of their experience.  And also only allow clients to leave reviews AFTER they&#8217;ve completed a transaction through your site.  A tutor with several positive reviews and 50 hours of tutoring completed would be able to charge a lot more.  Hopefully enough to make it worth it for them to complete the transaction through my site.</p>
+
+<p>What do you think?  Will it work?</p>
+
+<p>I&#8217;ll be looking into this and testing it out.  As always, I&#8217;ll share with you how it goes and keep you updated!</p>
+
+<p>Finally, it sure feels great to be working <strong>on</strong> my business instead of <strong>in</strong> it.  I was watching this lady have lunch today and it was obvious she was on her lunch break from Office Depot.  She looked so drained, savoring every moment of her lunch break.  I could just tell she must have been bored out of her mind stuck in that store all day working <strong>in</strong> a business.  It made me realize how lucky I am.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/reader-question-i-have-capital-but-no-time-how-do-i-break-free/">Reader Question: I Have Capital but No Time - How Do I Break Free?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-28T19:11:53-08:00" pubdate data-updated="true">Jan 28<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>Hi Brian,</p></blockquote>
+
+<p>I have been a long time RSS subscriber to your blog (since the 30 day marketing series – I guess it worked) and I would really appreciate your input on something. A little bit of background first: I am 24 year old software developer in New York City making $120k/year. I paid off all my school loans and do not have any debt. Professionally, I like what I do. It’s interesting work, and it pays damn good money. But, I also want to “break free”.</p>
+
+<p>I have been reading your articles for some time, and the way that I see it, they mainly focus on how to convert time into passive income while using a nominal amount of capital. I’m coming from the other side of the spectrum. I have plenty of capital (I should have around $50k in the bank or in minor investments by the end of the year), but very little time. There are plenty of books and articles which talk about finding good real estate deals or starting businesses, but all those things require time. I have not been able to find anything really useful that investigates the possibilities from the other side of the fence. There is always the stock market, but with the current economic conditions, I am not quite sure that is the best option. Real estate is the other option, but that has also come to a standstill in this economy.</p>
+
+<p>What do you think I should do? I feel that for me, personally, trying to convert my earned income into passive income is the way to go. I am perfectly content to save and invest $50k a year at a good return rate for several years. The question is, what is the best starting point?</p>
+
+<p>Thanks,
+A</p>
+
+<p>Hi A,</p>
+
+<p>I think you&#8217;re right, if you have lots of capital then no need to start your own business if you don&#8217;t want to.  You can invest this wisely!  Real estate is by far my favorite here because it generates cash flow (money you can actually spend each month) instead of just capital gains.  I hate stocks.  Plus income from real estate is largely tax free.  Also, you are right that the real estate market has slowed - but this does not mean it&#8217;s a bad time to invest.  When home prices are depreciated its a great time to buy (and not to sell).  So there are two sides to this, no matter which way the market swings it&#8217;s not a bad time for real estate necessarily, it&#8217;s either a bad time to buy or a bad time to sell but not both.</p>
+
+<p>Also, when people are unable to purchase houses they have to rent, so home prices and rents are inversely correlated.  You can ride out any recession in real estate if you keep your properties rented out and they cash flow each month&#8230;you might have huge capital gain shifts during this time but it doesn&#8217;t matter because they are generating income you can spend every month.  Then when the market shifts the other way and prices are inflated, you can sell at the perfect moment.</p>
+
+<p>Real estate is by no means risk free and there are probably 100 ways to lose money doing it (like buying speculative investments - high end town homes, new construction/development, flipping, etc) and I have lost money on some deals.  But there is also a safer way to do it and it takes some learning just like anything else.  Buying foreclosed 3/2/2 starter homes at a steep discount and renting them, for example, and possibly eventually doing bigger deals with apartments that are more hands off, etc.  If you want to go this route, my suggestion is to read some of those books (Rich Dad Poor Dad, The Automatic Millionaire Homeowner, etc), join some local real estate investment clubs to get around the right people, and find a good mentor (someone who has already done this and is RICH, not someone who is still learning).</p>
+
+<p>Btw, not sure I answered your question about real estate taking time.  Yes, investing in single family homes will take time both to find the deals and keep them rented.  But maybe not as much as you&#8217;d think, lots of people do this with a full time job for example.  I spend about 3-4 hours per month dealing with my 3 houses although they took a lot of time up front to get going.  Once you get into bigger real estate deals, for example being a passive investor in a multi-family deal, you can be completely hands off but this can require larger sums of money (around $100k or so) and I don&#8217;t have much experience there.</p>
+
+<p>Millionaires own lots of real estate and they are a great source of passive income!</p>
+
+<p>Hope that helps,
+Brian Armstrong</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/how-to-use-google-website-optimizer/">How to Use Google Website Optimizer</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-27T18:23:14-08:00" pubdate data-updated="true">Jan 27<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yesterday I <a href="http://brianarmstrong.org/posts/my-website-improved-14-changing-one-sentence/">posted</a> about how I used Google WSO and changed one sentence to get a 14% improvement on my business website.</p>
+
+<p>In case you are wondering how to use it on your own website, here is a great <a href="http://www.youtube.com/watch?v=GZlGy2auvFo&amp;eurl=http://www.shoemoney.com/&amp;feature=player_embedded">video from Google</a> about how to use WSO:</p>
+
+<p>The video makes it look easy but in my experience it&#8217;s definitely not simple to use (very uncharacteristic for a Google product).  This is especially true for dynamically generated websites like my own where I frequently don&#8217;t have plain text that I&#8217;d like to test - it&#8217;s dynamically generated.  I&#8217;ve been <a href="http://www.google.com/support/forum/p/websiteoptimizer/thread?fid=11a2583205f65b910004617c680b0028&amp;hl=en">talking with some Google folks</a> about this and they seem very responsive on improving it.</p>
+
+<p><strong>So what do you think I should test next on <a href="http://www.universitytutor.com/">my site</a>?  Suggestions?</strong></p>
+
+<p>I have a few ideas for suggestions that I&#8217;ll be posting about over the next few weeks.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/my-website-improved-14-changing-one-sentence/">My Website Improved 14% Changing One Sentence</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-26T16:50:59-08:00" pubdate data-updated="true">Jan 26<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hey Folks,</p>
+
+<p>I decided to do a video blog today to show you a recent change I made to my passive income business, <a href="http://www.universitytutor.com">UniversityTutor.com</a>.  For those of you who haven&#8217;t been following the blog for a while, I launched this business in <a href="http://brianarmstrong.org/posts/from-new-idea-to-business-launch-in-two-weeks-with-pictures/">about 1 month with $100</a>.</p>
+
+<p>I only changed one sentence on the website - and this led to a 14% improvement in my conversion rate.  Imagine if you could get a 14% raise at your job for changing one sentence?</p>
+
+<p><a href="http://www.veoh.com/videos/v17333233kae9xnct">Check out the video</a> to see how I did it (watch in fullscreen for best view).</p>
+
+<p>Watch <a href="http://www.veoh.com/videos/v17333233kae9xnct">Website Improves 14% Changing One Sentence</a> in <a href="http://www.veoh.com/browse/videos.html?category=category_educational_and_howto">How to Videos</a> | View More <a href="http://www.veoh.com/">Free Videos Online at Veoh.com</a></p>
+
+<p>Takeaways:</p>
+
+<ul>
+<li><p>Put yourself in the mindset of your customer</p></li>
+<li><p>Try to look at your website with &#8220;fresh eyes&#8221; or show it to new people and get them to &#8220;think out loud&#8221; as they go through it.  No helping them when they can&#8217;t figure something out!  You have to watch in silence which will be very difficult but revealing.</p></li>
+<li><p>Test, test, test - little ongoing improvements like this can end up being huge contributors to your bottom line as they add up quickly.</p></li>
+</ul>
+
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/why-im-delusional-about-success-and-you-should-be-too/">Why I&#8217;m Delusional (About Success) and You Should Be Too</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-22T16:38:09-08:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>First, let me start with a trick:  Here is a great experiment you can do to someone to demonstrate the power of beliefs:</p>
+
+<p>Ask them to look around the room wherever they are and notice everything that is red in the room.  Take inventory of it.  Then ask them to close their eyes and tell you all the red things they saw.  They will name a bunch.</p>
+
+<p><a href="http://labs.ideeinc.com/multicolr/#colors=951406,fee855,829b40,3626af;"><img src="http://s3.amazonaws.com/oldbloguploads/2009/01/picture-81.png" alt="" /></a></p>
+
+<p>Then (with their eyes still closed) ask them to tell you anything they also saw in the room which was yellow.  They often won&#8217;t be able to name a single yellow item.  Yet, when they open their eyes they will see a bunch of yellow items all around them.</p>
+
+<p>How did they not see them the first time?  It&#8217;s almost as if they were &#8220;blind&#8221; to any yellow items even though their eyes passed right over them.</p>
+
+<p>Well, if you set out looking for something, you will almost surely find evidence of it - even to the point of excluding other facts.  Human beings are great at finding evidence for what we already believe (or are looking for)!</p>
+
+<p>This is the same paranoia we have all felt when our hair is a little funky and it seems like EVERYONE in the room is staring.  Or when we&#8217;ve done something wrong and it seems like everyone is making little snide remarks hinting at it.  In reality it&#8217;s probably our brains LOOKING desperately for evidence which isn&#8217;t really there because that&#8217;s all we can focus on.</p>
+
+<p>It&#8217;s the kind of irrationality that could make someone think even the <a href="http://skepticblog.org/2009/01/22/the-us-airways-hudson-river-conspiracy/">US Airways Hudson River Landing is a conspiracy</a>.  If that&#8217;s what you believe in by default (conspiracies) then you&#8217;ll find one.</p>
+
+<p>Sometimes this is also referred to as the <a href="http://en.wikipedia.org/wiki/Experimenter%27s_bias">experimenter&#8217;s bias</a>.  We all have it.</p>
+
+<p><strong>So our brains are easily fooled.  How can we use this to our advantage?</strong></p>
+
+<p>In most matters of fact, we should be aware of this limitation and try to keep an open mind on important issues.</p>
+
+<p>But where can it be beneficial in life to be a little bit delusional?  How about changing your beliefs about success?</p>
+
+<p><a href="http://www.flickr.com/photos/orinrobertjohn/13068719/"><img src="http://s3.amazonaws.com/oldbloguploads/2009/01/13068719_7936bac2051.jpg" alt="" /></a></p>
+
+<p>The thing is, success has no clear truth to it in the way that the Hudson River landing does (yes he really landed there).  Whether or not you are going to be successful is totally up in the air.</p>
+
+<p>If you believe that you&#8217;re just NOT smart/young/educated/rich enough to start your own business and become financially free, then your brain will constantly be finding evidence to back this up and reinforce the belief for you.  You will only see the red.</p>
+
+<p>If, on the other hand, you are absolutely convinced that you are going to be successful (even to the point of being somewhat delusional and ignoring evidence to the contrary) you are more likely to try in the first place, less likely to give up, and therefore more likely to succeed.</p>
+
+<p>Success can be a self-fulfilling prophecy.  If you belief you can do it, then you are half way there.</p>
+
+<p>Remember the Apollo 13 mission?  Their oxygen tank exploded and all electricity went off in the space shuttle thousands of miles from earth.  A completely fair and unbiased assessment of their situation would have concluded that they were totally screwed.  Their air was going to run out in a matter of hours, nobody had ever survived an accident of this magnitude in space, etc.  But this was a good time to be delusional and keep irrational hope that things would be ok.  Because if you &#8220;incorrectly&#8221; believed things would work out&#8230;then you might keep looking for the solution which ultimately saved their lives.</p>
+
+<p>So yes, I am delusional about success.  I don&#8217;t really believe there is a recession going on right now.  I assume by default that everyone I meet really likes me and considers me a pretty swell guy.  And I belief the world is generally a really happy place full of opportunities to make tons of money.  I see evidence for these things because I look for it, and ignore everything else.</p>
+
+<p>Sure, I&#8217;m probably a little bit delusional.  But you should be too.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/barack-obama-is-a-blogger/">Barack Obama Is a Blogger!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-20T14:56:01-08:00" pubdate data-updated="true">Jan 20<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.whitehouse.gov/">WhiteHouse.gov</a> went through a major transition today during the inauguration.</p>
+
+<p>In a section of the site called &#8220;the briefing room&#8221; you will now find a <a href="http://www.whitehouse.gov/blog/">blog</a> and, perhaps most importantly, a section for a &#8221;<a href="http://www.whitehouse.gov/weekly_address/">weekly video address</a>&#8221; by Barack Obama himself.</p>
+
+<p>We&#8217;ve come a long way since Roosevelt&#8217;s <a href="http://en.wikipedia.org/wiki/Fireside_chats">Fireside Chats</a> and if there was any doubts about the power of blogging, I think they can be put to rest now that even the president has one!</p>
+
+<p><a href="http://www.WhiteHouse.gov"><img src="http://s3.amazonaws.com/oldbloguploads/2009/01/picture-51.png" alt="" /></a></p>
+
+<p>In the age of getting information second hand through media, I think this will be a great tool for transparency in government.</p>
+
+<p>And now after a day full of rhetoric (really, why are we reading poetry and having benedictions when the country is on the verge of bankruptcy?) hopefully Barack can get down to business.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/oh-snap-im-moving-to-south-america/">Oh Snap! I&#8217;m Moving to South America&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-20T02:32:52-08:00" pubdate data-updated="true">Jan 20<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>One of the greatest things about working for yourself is the mobility.</p>
+
+<p>Freedom comes in a lot of forms:  Free time for doing things you really enjoy.  Freedom to make your own decisions without a boss.  And freedom to travel at will.  It&#8217;s great to know that I don&#8217;t have to ask people for time off or count sick days and I need to start taking advantage of this more.</p>
+
+<p>That&#8217;s why I&#8217;ve been spending the last year or so transitioning my business and income to <a href="http://brianarmstrong.org/posts/how-i-almost-accomplished-my-passive-income-goal-for-2008/">be more passive</a> and more online because I&#8217;ve had this goal in mind for a long time: I&#8217;d like to travel the world and earning money doing it!</p>
+
+<p>The idea of traveling around the world on a shoe-string budget picking up odd jobs and staying on couches doesn&#8217;t really appeal to me.  What DOES appeal to me is having a business that will continue to grow and thrive as I travel the world.  The internet has made this possible.</p>
+
+<p><strong>What city are you going to?</strong>
+I&#8217;m going to Buenos Aires Argentina first just because I&#8217;ve heard it&#8217;s amazing.  I&#8217;ll probably just drop into a hostel there and figure it out from there.  I eventually hope to see a bunch of places around Argentina, but I&#8217;m deliberately leaving it unplanned.  I don&#8217;t want to have the deadline looming of a pre-purchased flight or anything like that.  I want to just explore as I go.</p>
+
+<p><strong>When are you going?</strong>
+Probably around early May after attending a friend&#8217;s wedding in the states.</p>
+
+<p><strong>Why Buenos Aires?</strong>
+I first heard about this place from <a href="http://www.fourhourworkweek.com/blog/">Tim Ferriss</a> (this trip is very Tim Ferriss-esque overall) and have since read a great deal about it.  Here are a few things I like about it:</p>
+
+<ul>
+<li><p>It&#8217;s called the Paris of South America - gorgeous city, cafes, clubs, shops, etc</p></li>
+<li><p>Extremely safe and welcoming of foreigners</p></li>
+<li><p>Still inexpensive</p></li>
+<li><p>Beautiful women</p></li>
+<li><p>Fast and widely available internet</p></li>
+</ul>
+
+
+<p>Basically the only bad thing I can find about it is that people are allowed to smoke in bars and clubs there.</p>
+
+<p><a href="http://www.flickr.com/photos/pinguinolab/261686053/"><img src="http://s3.amazonaws.com/oldbloguploads/2009/01/ba31.jpg" alt="" /></a></p>
+
+<p><a href="http://www.flickr.com/photos/thomashobbs/363201423/"><img src="http://s3.amazonaws.com/oldbloguploads/2009/01/ba21.jpg" alt="" /></a></p>
+
+<p><a href="http://www.flickr.com/photos/sebastian-silva/2207382770/"><img src="http://s3.amazonaws.com/oldbloguploads/2009/01/ba11.jpg" alt="" /></a></p>
+
+<p>I plan to go to a bunch of other places after Bueones Aires as well.</p>
+
+<p><strong>How can you afford to travel the world?</strong>
+It&#8217;s not that expensive.  Most people think of world travel like a vacation - and that&#8217;s not the right way to think about it.</p>
+
+<p>Vacations are expensive because you still have all your expenses back home (mortgage/rent, car payment, gym, cell phone, etc) to make in ADDITION to the new expenses you just rang up (plane ticket, hotels, etc).  It&#8217;s basically like living in two cities at once.</p>
+
+<p>But I&#8217;m not taking a VACATION to South America - I&#8217;m actually MOVING there.  This means I will not be paying any living expenses in the U.S., I will be selling my car, and will be canceling or putting on hold all other expenses (phone, gym, etc).</p>
+
+<p>I won&#8217;t be staying in hotels there or paying tourist prices.  I will be renting an apartment (probably month to month).  The plane ticket to get there isn&#8217;t cheap (about $1,000) but once there most travel around South America can be done on buses or trains (or even short plane trips city to city) very inexpensively.</p>
+
+<p><strong>How (in)expensive is it to live there? </strong>
+Well, I&#8217;m told you can rent a fully furnished apartment with AC and internet included for around $400/month US which is just ridiculous.  There is an elaborate subway and bus system in Beunos Aires (which costs I think 25 cents to ride?) so you don&#8217;t need a car.  And the best steak dinner you&#8217;ve ever had in your life is about $5.</p>
+
+<p>And that is living a rather nice lifestyle.  You can also stay in shared Hostels for about $7 per night and eat more modest meals.  This would bring your total living expenses in Buenos Aires down to about $15 per day or $450 per month if you really wanted to.</p>
+
+<p>In short, I actually plan to be spending MUCH LESS than I currently do to live in the U.S.  (Perhaps with the plane ticket the first month might about break even with U.S. expenses.)</p>
+
+<p><strong>What are you going to bring with you?</strong>
+As little as possible.  Basically a backpack a few clothes, my laptop, and a camera.  <a href="http://www.fourhourworkweek.com/blog/2007/07/11/how-to-travel-the-world-with-10-pounds-or-less-plus-how-to-negotiate-convertibles-and-luxury-treehouses/">This post</a> helped me out a lot and a number of things I&#8217;ve read have convinced of the wisdom of traveling light.  I still need to get a good backpack.</p>
+
+<p><strong>What will you do with all your stuff?</strong>
+Sell it or give it away on Craigslist.com most likely, aside from a few boxes my current roommate might let me keep in the closet.  If you live in Houston and want a pet tarantula send me an email.  I have two!</p>
+
+<p><strong>How will you be making money?</strong>
+The same way I make money in Houston.  I will have to give my properties to a management company most likely (which will reduce the cash flow).  But otherwise it won&#8217;t change much.</p>
+
+<p><strong>Ever heard of geo-arbitrage?</strong>
+Yes.  For those who don&#8217;t know, one awesome thing about making money on the internet is what&#8217;s sometimes referred to as &#8220;geo-arbitrage&#8221;.  For the first time in history, the internet has allowed people to not have to reside in the same city where they earn a living.  That means you can EARN money in dollars or euros and SPEND it in a currency that offers a good exchange rate (like Argentine pesos) - in effect, instantly increasing the value of your money.</p>
+
+<p><strong>Who are you going with?</strong>
+No one!  I&#8217;m going by myself.  This will be a good process of self discovery and force me to meet new people I&#8217;m sure.  I&#8217;ve done trips in the past with groups and it&#8217;s hard to really get the feel for a culture since you just stay together all the time (and ultimately end up getting on each others nerves a bit by the end).</p>
+
+<p>If you happen to be in the same city when I am though I&#8217;m always up for meeting.  Drop me a line.</p>
+
+<p>Actually, a big shout out is owed to <a href="http://www.manuelzeh.de/">Manuel Zeh</a> - a friend who is currently traveling the world (and in Honduras?) who has been traveling for years and gave me a ton of tips.  Hopefully our paths will cross somewhere down there!</p>
+
+<p><strong>Won&#8217;t you get bored and lonely?</strong>
+Well, honestly I have no idea.  Maybe.  That&#8217;s why I&#8217;m leaving it unplanned.  I might stay there for a year and come back, or eventually head to another continent, or travel indefinitely, or be back in a month.</p>
+
+<p>But I doubt I&#8217;ll get bored or lonely.  After all, it&#8217;s not like I&#8217;ll be visiting museums or laying on a beach.  I&#8217;m going to be LIVING there.  So I&#8217;ll still be working a lot on my business, playing sports, joining clubs, meeting other entrepreneurs, partying, etc.  I&#8217;ll be doing many of the things I do in Houston and hopefully lots more.  I plan on taking up a few new hobbies.  Also, I can be <a href="http://www.lifehack.org/articles/communication/how-to-make-a-bunch-of-new-friends-in-any-new-city.html">pretty outgoing</a> when I need to be.</p>
+
+<p>I don&#8217;t have plans to stay in Houston long term, so I figure world travel will be a good way to try a bunch of new cities and ultimately decide where I might want to live.</p>
+
+<p><strong>How is your Spanish?</strong>
+Hablo un poco espanol.  Necesito practicar y creo que Buenos Aires es un lugar perfecto!</p>
+
+<p><strong>Can you send a postcard?</strong>
+I&#8217;ll be blogging my way throughout the journey (and the preparation leading up to it - the trip isn&#8217;t until May this year) with lots of photos so stay tuned.  As always, I&#8217;d love to hear your suggestions or tips if you&#8217;ve had a similar adventure or know the area well.</p>
+
+<p>I think this will be an excellent experiment in truly Breaking Free, and I hope to share as much of it as I can with you!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/the-power-of-thank-you-notes/">The Power of Thank-You Notes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-01-14T00:45:07-08:00" pubdate data-updated="true">Jan 14<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have to credit my mother with instilling in me the importance of thank you notes from a young age.  As a young man I absolutely HATED writing my thank you notes after Christmas but she would still force me to do it.</p>
+
+<p>I remember one year (I was about eight I think) I had put off writing them for as long as possible.  When she threatened some major action, I decided I would do it - but it would be in my own way.  I proceeded to write thank you notes to all my aunts and uncles explaining that although I truly WAS thankful for their gift, I was being forced under threat of punishment to write these thank you notes which really removed any true meaning from them.  I sealed up the envelopes and presented them to my mother to send off.  Needless to say she got some interesting phone calls from my aunts and uncles shortly thereafter :)</p>
+
+<p>Anyway, while I still can&#8217;t say that I ENJOY writing thank you notes - I do write them more often now and also see them as a valuable business tool.  I&#8217;ve used them on a number of occasions to make connections with people who otherwise would not have remembered me.  After all, a hand written thank you note is quite a rarity these days and takes only a second.  People often save them on a shelf at work which helps them remember you at some point in the future.  This can also be a great way to <a href="http://brianarmstrong.org/posts/how-to-get-a-good-mentor/">get a mentor</a> or get in touch with high profile people.</p>
+
+<p>Anyway, I sometimes like to make my thank you notes stand out a little more by doing funny or weird things like drawing pictures or using my bizarre sense of humor.  Here are a few examples for you to check out.  Hopefully they inspire you to write your thank you notes if you haven&#8217;t already!</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/01/thankyou11.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/01/thankyou11.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/01/thankyou21.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/01/thankyou21.png" alt="" /></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/13/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/11/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h2>Recent Posts</h2>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum/">Announcing Ribbot.com - build your own Reddit/Hacker News style discussion forum</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/some-random-udpates/">Some random udpates&#8230;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/bitcoin-wallet-for-android/">Bitcoin Wallet for Android</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/learning-programming/">Learning Programming</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/find-a-model-at-thebookr-com/">Find a model at TheBookr.com</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h2>Latest Tweets</h2>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+    <a href="http://twitter.com/brian_armstrong" class="twitter-follow-button" data-show-count="true">Follow @brian_armstrong</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+      </div>
+    </div>
+    <footer class="footer"><p>
+  Copyright &copy; 2012 - Brian Armstrong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> -
+  
+    <span class="credit">Theme by <a href="https://github.com/barmstrong/octopress-bootstrap">Brian Armstrong</a></span>
+  
+</p>
+</footer>
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'brianarmstrong';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+    
+    $(document).ready(function(){
+      getTwitterFeed("brian_armstrong", 4, false);
+    });
+  </script>
+
+
+  </div>
+</body>
+</html>
