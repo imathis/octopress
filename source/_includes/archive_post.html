@@ -1,0 +1,10 @@
+<td class="day">
+  <h3><small><time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "<span class='month'>%b</span> <span class='day'>%d</span>"}}</time></small></h3>
+</td>
+<td>
+  {% capture category %}{{ post.categories | size }}{% endcapture %}
+  <h3><a href="{{ root_url }}{{ post.url }}">{{post.title}}</a></h3>
+  {% if category != '0' %}
+  <h3><small>posted in {{ post.categories | category_links }}</small></h3>
+  {% endif %}
+</td>

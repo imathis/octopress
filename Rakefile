@@ -15,16 +15,16 @@ deploy_branch  = "gh-pages"
 
 ## -- Misc Configs -- ##
 
-public_dir      = "public"    # compiled site directory
-source_dir      = "source"    # source file directory
-blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
-deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
-stash_dir       = "_stash"    # directory to stash posts for speedy generation
-posts_dir       = "_posts"    # directory for blog files
-themes_dir      = "themes"   # directory for blog files
-new_post_ext    = "markdown"  # default new post file extension when using the new_post task
-new_page_ext    = "markdown"  # default new page file extension when using the new_page task
-server_port     = "4000"      # port for preview server eg. localhost:4000
+public_dir      = "public"      # compiled site directory
+source_dir      = "source"      # source file directory
+blog_index_dir  = 'source/blog' # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
+deploy_dir      = "_deploy"     # deploy directory (for Github pages deployment)
+stash_dir       = "_stash"      # directory to stash posts for speedy generation
+posts_dir       = "_posts"      # directory for blog files
+themes_dir      = "themes"      # directory for blog files
+new_post_ext    = "markdown"    # default new post file extension when using the new_post task
+new_page_ext    = "markdown"    # default new page file extension when using the new_page task
+server_port     = "4000"        # port for preview server eg. localhost:4000
 
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
