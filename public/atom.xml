@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Brian Armstrong]]></title>
+  <link href="http://brianarmstrong.org/atom.xml" rel="self"/>
+  <link href="http://brianarmstrong.org/"/>
+  <updated>2012-03-10T23:18:30-08:00</updated>
+  <id>http://brianarmstrong.org/</id>
+  <author>
+    <name><![CDATA[Brian Armstrong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing Ribbot.com - build your own Reddit/Hacker News style discussion forum]]></title>
+    <link href="http://brianarmstrong.org/blog/announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum/"/>
+    <updated>2011-11-27T22:04:33-08:00</updated>
+    <id>http://brianarmstrong.org/blog/announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum</id>
+    <content type="html"><![CDATA[<p>I launched a new site about a week ago - <a href="http://ribbot.com">Ribbot.com</a> .  It allows you to create better discussion forums online.</p>
+
+<p><a href="http://ribbot.com"><img src="http://s3.amazonaws.com/oldbloguploads/2011/11/Screen-Shot-2011-11-26-at-7.27.19-PM-500x377.png" alt="" /></a></p>
+
+<p>If you&#8217;ve ever used Hacker News, Reddit, StackOverflow, or 37Signals Answers - these are all examples of a new breed of forum that has emerged online and tends to be much better than than traditional forums.</p>
+
+<p>Traditional forums often have low quality discussions, and are a place for a vocal minority to rant online.  Many companies avoid user discussion forums because they&#8217;re worried about giving people a public place to rant.</p>
+
+<p>Ribbot allows anyone to create one of these new types of discussion forums (like the sites mentioned above) with the following features:</p>
+
+<ul>
+<li><p>User voting and reputation</p></li>
+<li><p>Threaded comments</p></li>
+<li><p>Post and comment ranking algorithms</p></li>
+</ul>
+
+
+<p><a href="http://ribbot.com"><img src="http://s3.amazonaws.com/oldbloguploads/2011/11/Screen-Shot-2011-11-26-at-7.27.39-PM-500x377.png" alt="" /></a></p>
+
+<p>Here&#8217;s how they work: if someone posts something off-topic or unproductive then they are quickly down-voted by the community, and their content is less likely to be seen.  Likewise, if someone posts something helpful or insightful, they are quickly up-voted by the community and their content is more likely to be seen.  The net result of this is that (with enough users) you are more likely to see good content when you visit the forum, and hopefully contribute some yourself.</p>
+
+<p>Who might want a new forum like this?  You never quite know (and I&#8217;m eager to find out) but my hunch is this might be useful for:</p>
+
+<ul>
+<li><p><strong>Businesses</strong>: most companies would like to have user discussion forums because they are a great way to reduce customer support costs. Instead of having customer support reps answering the same questions over and over, users can answer each other&#8217;s questions - and those answers become public for all to find later (Ribbot lets you search old content easily).  Traditionally, most businesses have been skittish about user discussion forums because they become a public place for a vocal minority of users to rant (see Google Groups). But I believe this new style of forum with the features mentioned above largely solves this quality problem, and businesses will be more likely to adopt it (or their users will for them).</p></li>
+<li><p><strong>Question &amp; Answer sites</strong>: these have become very popular lately (see StackExchange and Quora) but there still isn&#8217;t an easy way for people to start their own QA site on any topic. StackExchange originally started with this vision but they decided to cut off the long tail of smaller topic sites (a mistake in my opinion). Ribbot would allow any special interest group or company to create their own.</p></li>
+<li><p><strong>Link aggregation sites</strong>: many community sites have grown up around sharing relevant or interesting links on a particular topic (Hacker News is an example of this where the majority of posts are links to external sites with some discussion around them happening in the comments). These are more oriented around timely &#8220;latest news and events&#8221; links.</p></li>
+<li><p><strong>Special interest groups</strong>: these could be around health (people with some particular  condition), sports, hobbies, tech stuff (open source projects), classes &amp; learning, etc.  Basically, anything people are using Google Groups for now could work better on Ribbot.</p></li>
+</ul>
+
+
+<p>Ribbot is a good fit for the use cases above because it&#8217;s customizable.  You can change the terminology of the site to reflect questions and answers, link submissions, posts and comments, or anything you&#8217;d like.  You can also allow only certain types of submission (links, posts, questions, etc).  Three other features allow customization (some of these are still under development):</p>
+
+<ul>
+<li><p><strong>Themes</strong>: Ribbot supports custom themes (much like Tumblr) which I hope will eventually create many diverse and beautiful sites.  Any designer can share (and sell) a custom theme on Ribbot.</p></li>
+<li><p><strong>Custom domains</strong>: By default Ribbot gives you a subdomain site (again, like Tumblr). But you will soon be able to host the forum on any custom domain of your choosing.</p></li>
+<li><p><strong>Monetization options</strong>: Ribbot is completely free if you are ok with some ads on the site. But I wanted a way for forum owners and moderators to monetize their sites and be compensated for their work. So with the paid option (see pricing <a href="http://ribbot.com/pricing">here</a>) you are able to run your own ads and turn a profit. My hope is that a number of forums will generate sufficient traction so that their owners can eventually make it a full time gig. For others, I imagine it could make a nice side income or hobby project.  Many businesses I suspect will keep the paid option and run it entirely without ads - the customer support savings would make it more than worth it.</p></li>
+</ul>
+
+
+<p>In short, I think Ribbot will help people build better discussion forums online across a variety of topics.</p>
+
+<h3>Final notes:</h3>
+
+<p>Ribbot is still in an early beta.</p>
+
+<p>To give Ribbot a try you can <strong><a href="http://support.ribbot.com">visit the Ribbot support forum</a></strong>. This is both the support forum for the site and a demo of the product itself.</p>
+
+<p>As always, <strong>please send me your feedback and first impressions in the support forum or in the comments below</strong>. I always love to hear feedback from people on how/if it can be useful to them (or why it&#8217;s not).</p>
+
+<p>And finally, you can create your own Ribbot forum <a href="http://ribbot.com">right here on the homepage</a> if you want to try it out.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Some random udpates...]]></title>
+    <link href="http://brianarmstrong.org/blog/some-random-udpates/"/>
+    <updated>2011-07-25T06:13:25-07:00</updated>
+    <id>http://brianarmstrong.org/blog/some-random-udpates</id>
+    <content type="html"><![CDATA[<p>The launch of our <strong><a href="http://brianarmstrong.org/posts/bitcoin-wallet-for-android/">Bitcoin Wallet</a></strong> app for Android went fairly well.  It got about 800 installs in the first week and <a href="http://www.wired.com/gadgetlab/2011/07/bitcoin-android-app/">Wired</a> ran a small piece on it which was pretty cool.  We&#8217;ve also gotten a handful of open source contributions, and the app was translated into Russian, Chinese, and German within the first week!</p>
+
+<p>I&#8217;ve been experimenting with <strong><a href="http://MyBestPic.org">MyBestPic.org</a></strong> a bit here and there with some excellent advice from Gabriel Weinberg and Naseem Hakim.  This was my experiment in inherent virality.  It hasn&#8217;t gone viral yet but I&#8217;ve been measuring the <a href="http://mybestpic.org/kfactor">k-factor</a> in various tests and learning a lot in the process.  Hopefully some more updates on this soon.</p>
+
+<p>Joyce Hu&#8217;s <strong><a href="http://thebookr.com/">thebookr.com</a></strong> has been growing nicely and getting some real bookings, so this is huge for her.  I&#8217;ve fixed a few things on the site here and there but for the most part it&#8217;s off and running nicely now, and I think her business is going to do really well.  Investors, get in early on this one.  She is going to be oversubscribed soon :)</p>
+
+<p><strong><a href="http://www.airbnb.com">Airbnb</a></strong> has been an incredible ride, and I&#8217;ve learned so much from the brilliant people there, making tons of friends already.  I&#8217;ve been heading up their fraud prevention effort and I&#8217;m about to launch a big machine learning solution (built entirely in the cloud using the Google Prediction API).  Oh and they just announced their B-round of <a href="http://blogs.wsj.com/venturecapital/2011/07/25/airbnb-from-y-combinator-to-112m-funding-in-three-years/?mod=google_news_blog">funding</a> ($112M).  With press and celebrities in the office weekly (along with our personal chef), this is the definition of what it feels like to work at a hot startup.  Revenue and bookings are growing 30% month over month.</p>
+
+<p>And I finally got a chance to catch up with a few <strong><a href="http://carwoo.com">CarWoo!</a></strong> guys (Tommy and Erik) this weekend in San Francisco for a good old fashioned night on the town.  CarWoo! is doing quite well itself and they&#8217;ve got some big deals in the works.  Always good to keep in touch with these folks, and converse with talented entrepreneurs.  Apparently Erik is driving <a href="http://gallery.viperclub.org/data/500/medium/4794Viper_GTS_ACR_Orange_by_Dan_Berndt_1001a.jpg">this</a> to work now.</p>
+
+<p>Have been doing yoga every week, and rock climbing on Tuesdays.  Can&#8217;t wait to get back in the office tomorrow&#8230;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bitcoin Wallet for Android]]></title>
+    <link href="http://brianarmstrong.org/blog/bitcoin-wallet-for-android/"/>
+    <updated>2011-07-06T07:26:16-07:00</updated>
+    <id>http://brianarmstrong.org/blog/bitcoin-wallet-for-android</id>
+    <content type="html"><![CDATA[<p>Tonight a buddy of mine (who works at Google) and I released an open source application.</p>
+
+<p>It&#8217;s an <a href="https://market.android.com/details?id=com.bitcoinandroid">Android app for Bitcoin</a> that allows you to have a digital &#8220;wallet&#8221; on your phone.  Here are a few screenshots:</p>
+
+<p><img src="http://i.imgur.com/aqF3p.png" alt="" /></p>
+
+<p><img src="http://i.imgur.com/ilvNp.png" alt="" /></p>
+
+<p><img src="http://i.imgur.com/ObBth.png" alt="" /></p>
+
+<p><img src="http://i.imgur.com/TsZc7.png" alt="" /></p>
+
+<p>Simply put, the app allows you to send and receive bitcoins from your Android phone.</p>
+
+<p>If you&#8217;ve never heard of bitcoin then you aren&#8217;t alone.  It is a very new technology.  After reading about bitcoin I still wasn&#8217;t sure what might become of it, but I wanted to learn more and figured the best way would be to dive in and build something with it!</p>
+
+<p>If I had to sum up bitcoin in one sentence I&#8217;d say it is a &#8220;distributed peer-to-peer currency&#8221;.  But what does this mean and why is it important?</p>
+
+<p>I think it&#8217;s most important features are that it&#8230;</p>
+
+<ul>
+<li><p>allows you to send money without transactions fees</p></li>
+<li><p>allows you to send money instantly, anywhere in the world</p></li>
+<li><p>and (it appears) it can do this securely</p></li>
+</ul>
+
+
+<p>If you contrast this with how most payments work today, most merchants pay 2-3% as a transaction fee to Visa or Mastercard (and this fee is partially passed on to you as a consumer). In addition, whenever you want to move money between accounts it can take up to 3 business days. With bitcoin, there are no transaction fees and money can be moved instantly, anywhere in the world. This is a potentially very disruptive technology, even if it <a href="http://cdixon.org/2010/01/03/the-next-big-thing-will-start-out-looking-like-a-toy/">looks like a toy</a> today.</p>
+
+<p>Bitcoin accomplishes this using cryptography across a large number of servers on the internet, and doesn&#8217;t rely on one trusted third party (a bank) to control the money.</p>
+
+<p><strong>It&#8217;s also important to realize that bitcoin is not a new product or service, it is a new platform.</strong>  Much like email or the internet itself, it has no centralized servers and many products and companies can be built on top of it (our app is just one).  It&#8217;s also an open source project itself so anyone can see how it works and it isn&#8217;t owned by anyone. In fact, thousands of computer scientists around the world have looked at it at this point.  This gives it a lot of potential to survive and adapt over the years.</p>
+
+<p>Whether it ever becomes mainstream or not is still very much an open question (I have mixed thoughts on this).  However, at present there is already about $100M in real money tied up in the bitcoin economy, so it has certainly shown some early promise. There are already a few <a href="http://starburst.hackerfriendly.com/?p=1530">stores starting to pop up</a> who accept bitcoin.</p>
+
+<p><strong>I think a day will come very soon where we no longer need to carry a physical wallet, and our smart-phones will take over that job.</strong>  I also think it would be great for the economy to not pay a tax of 2-3% on each transaction to Visa or Mastercard (both for businesses and consumers).</p>
+
+<p>For a glimpse of how this might work, checkout this little demo video we put together.  It shows us instantly transferring money between two phones using just the internet and a distributed network of computers around the world.</p>
+
+<p>The <a href="http://en.wikipedia.org/wiki/QR_code">QR codes</a> you see used there could be on a point of sale device in a store, a mobile device like a phone, or a sticker on the wall.</p>
+
+<p>It&#8217;s important to realize that those two phones could have been anywhere in the world.  If you&#8217;d like to send money to another country today, Western Union takes a hefty fee and will take days.  Even Paypal charges 2-3% and will take 3 business days to move money in and out of an account.  Bitcoin is instant, and has zero transaction fees. You can do it from any computer, including a smart phone like the one shown here.</p>
+
+<p>Anyway, I&#8217;ll see if I can post more about this in the future.  But let me know what you think in the comments below.  And if you have an Android Device, <a href="https://market.android.com/details?id=com.bitcoinandroid">you can download it from the Android Market here</a>. It is 100% free and open source.</p>
+
+<p><a href="https://market.android.com/details?id=com.bitcoinandroid"><img src="http://s3.amazonaws.com/oldbloguploads/2011/07/Screen-shot-2011-07-05-at-11.25.05-PM-500x367.png" alt="" /></a></p>
+
+<p>Finally, if you are a developer, here is a link to the <a href="https://github.com/barmstrong/bitcoin-android">github project page</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Programming]]></title>
+    <link href="http://brianarmstrong.org/blog/learning-programming/"/>
+    <updated>2011-06-20T13:46:54-07:00</updated>
+    <id>http://brianarmstrong.org/blog/learning-programming</id>
+    <content type="html"><![CDATA[<p>I was tutoring someone in web app development recently, and the monumental task in front of him really hit me. <strong>He was trying to learn and use nine new languages at the same time</strong>.</p>
+
+<p>In our case it was:</p>
+
+<ul>
+<li><p>Ruby</p></li>
+<li><p>Rails</p></li>
+<li><p>MySQL</p></li>
+<li><p>Bash (command line usage)</p></li>
+<li><p>HTML</p></li>
+<li><p>CSS</p></li>
+<li><p>Javascript</p></li>
+<li><p>JQuery</p></li>
+<li><p>Git</p></li>
+<li><p>(Capistrano, Yaml, nginx, ??)</p></li>
+</ul>
+
+
+<p>Even though some of these aren&#8217;t true languages in the traditional sense, they appear this way to newcomers since they are each a new syntax to learn.</p>
+
+<p>If you slowly built up these skills over 15 years, they are clearly separate concepts in your mind. But for a newcomer trying to use them, it&#8217;s not even clear which one is which.</p>
+
+<p>Is that a Ruby method or a Rails method?</p>
+
+<p>Is &#8220;script/server&#8221; a shell command or is &#8220;ls&#8221; part of rails?</p>
+
+<p>Is this file html, js, or css? (actually a mix of all three)</p>
+
+<p>He made a comment along the lines of &#8220;wouldn&#8217;t it be great if you could build an entire web app in one language&#8221;, and I started thinking about it.</p>
+
+<p>GWT (Google Website Toolkit), ActiveRecord, CoffeeScript, and Heroku are all steps in this direction. You could classify them generally as trying to &#8220;eliminate a language in the stack&#8221; or allowing you to do a piece of the stack in a language you already know.</p>
+
+<p>Obviously there is a trade off here between power and simplicity, but I&#8217;m wondering - would it be possible or desirable to get an entire web app down to just one language? If not that how few could you use?</p>
+
+<p>Btw, I think there are benefits to seasoned developers here as well. I remember Lars Rasmussen (creator of Google Maps and Wave) mentioned something to this effect at Google IO in 2009, that GWT allowed him to spend his mental CPU cycles at a higher level and be more creative (not having to worry about cross browser css or js). So the benefits of higher abstraction may not only be for newcomers.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Find a model at TheBookr.com]]></title>
+    <link href="http://brianarmstrong.org/blog/find-a-model-at-thebookr-com/"/>
+    <updated>2011-04-17T06:02:16-07:00</updated>
+    <id>http://brianarmstrong.org/blog/find-a-model-at-thebookr-com</id>
+    <content type="html"><![CDATA[<p><a href="http://thebookr.com">Thebookr.com</a> is a site I was contracted to build last year, and it has finally launched!</p>
+
+<p>Joyce and I met up at a hacker meetup in Mountain View, CA last year.  She was looking for a developer to make the idea a reality.  I liked the business idea and technically it was somewhat similar to UniversityTutor, so we worked out a price and I went to work.</p>
+
+<p>I think it turned out really well.</p>
+
+<p><a href="http://thebookr.com"><img src="http://s3.amazonaws.com/oldbloguploads/2011/03/Screen-shot-2011-03-27-at-12.52.21-PM-500x341.png" alt="" /></a></p>
+
+<p>There are a few reasons I think this could be a really good business for her.</p>
+
+<p>First, the idea of building a marketplace online has turned out to be one of the best types of businesses.  Whether it&#8217;s Airbnb, iStockPhoto, eBay, or CarWoo!, the internet has made plenty of markets more efficient.</p>
+
+<p>Second, the fashion industry is one of the few industries that hasn&#8217;t been disrupted yet.  There are still brick and mortar agencies taking outrageous fees (about 40%) as commissions and slowing down communication between bookers and talent.</p>
+
+<p>The site is perfect for retailers or people doing commercial work to find talent for their next shoot.  Or models (even if it&#8217;s not their full time job) looking for additional work.</p>
+
+<p>If you know anyone who might be interested, have them <a href="http://thebookr.com">check out the site here to find a model or become a model</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Technology and Innovation - Is It Being Stifled By The Law?]]></title>
+    <link href="http://brianarmstrong.org/blog/technology-and-innovation-when-its-stifled-by-the-law/"/>
+    <updated>2011-04-11T04:26:50-07:00</updated>
+    <id>http://brianarmstrong.org/blog/technology-and-innovation-when-its-stifled-by-the-law</id>
+    <content type="html"><![CDATA[<p>The term &#8220;disruption&#8221; gets thrown around a lot in entrepreneurship circles.</p>
+
+<p>Entrepreneurs like to talk about disrupting an industry or its incumbent players as a buzzword for innovation, and there is even a startup conference called Techcrunch Disrupt.</p>
+
+<p>So what does it mean to disrupt an industry?  On the one hand it means you are making your customer&#8217;s lives better with a faster/better/cheaper alternative.  On the other hand it means <strong>you are putting someone else out of business.</strong></p>
+
+<p>This is one of the darker sides of entrepreneurship - competition means an ever present threat where someone can come along and take you out.  It&#8217;s a kill or be killed world.  Well, not in terms of bodily harm, but certainly in terms of jobs and fortunes.</p>
+
+<p>To an outsider this may sound cold hearted, but in the world of business I wouldn&#8217;t have it any other way.  Competition means that I&#8217;m continually kept on my toes trying to provide the best product at the best price.  Customers don&#8217;t owe me anything, I actually have to earn their business.  And this motivation, in it&#8217;s purest form, is what drives innovation and human progress across a wide range of industries.</p>
+
+<p>In other words it&#8217;s a meritocracy.</p>
+
+<p>Henry Ford&#8217;s Model T was a brilliant invention that undoubtedly changed the world for the better.  But he had to put a lot of horse and buggy makers out of business to do it.  Some jobs were lost and some were gained.  But people chose which they preferred by voting with their dollars, buying cars instead of buggies.</p>
+
+<p>So it&#8217;s somewhat discouraging whenever I see companies NOT competing on quality or price, but instead by competing in the courtroom - trying to outlaw their competition.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2011/04/Law_and_Justice_Courthouse1.jpg" alt="" /></p>
+
+<p>A few examples I&#8217;ve seen lately.</p>
+
+<p><strong>Newspapers</strong></p>
+
+<p>The crumbling newspaper industry reached out to the government to seek special protection back in 2010, naming Google amongst the sources of it&#8217;s troubles.  Google <a href="http://googlepublicpolicy.blogspot.com/2010/07/business-problems-need-business.html">responded</a> pointing out that.</p>
+
+<blockquote><p>The large profit margins newspapers enjoyed in the past were built on an artificial scarcity: Limited choice for advertisers as well as readers. With the Internet, that scarcity has been taken away and replaced by abundance. No policy proposal will be able to restore newspaper revenues to what they were before the emergence of online news. It is not a question of analog dollars versus digital dimes, but rather a realistic assessment of how to make money in a world of abundant competitors and consumer choice.</p></blockquote>
+
+<p><strong>Uber</strong></p>
+
+<p>Uber is a startup disrupting the cab industry - they allow you to hail a driver from an iPhone or Android app, rate the driver, and pay electronically - tip included.  In many cities, like San Francisco, there is unmet demand for taxis during peak hours and Uber originally planned to allow anyone to sign up as a driver with their personal vehicle (the Airbnb of taxis, if you will).  That is until the city of San Francisco issued them a <a href="http://blog.uber.com/2010/10/25/ubers-cease-desist/">cease and desist</a>, saying they were operating an unlicensed cab service.  The cab drivers union isn&#8217;t too happy about Uber and claims it&#8217;s unsafe.  Of course, it&#8217;s sort of a silly argument since nobody is being forced to ride in an Uber cab, and consumers can make up their own mind.  So it&#8217;s more likely cab drivers simply don&#8217;t want to compete with Uber and are using the law to try and put down a competitor.</p>
+
+<p>Uber has found a loophole and is now operating with licensed black car services.  My hope is that they are using this to gain momentum and save up some cash for the big push where they eventually get back into letting anyone work as a cab driver.  This would be hugely beneficial to consumers by the way,  both in the availability of cabs and driving down the cost.  Uber will have some big legal bills in the process so I don&#8217;t blame them for saving up before the fight.  But really, why should a startup be forced to compete in the courtroom?  Why not let consumers decide?</p>
+
+<p><strong>Paypal</strong></p>
+
+<p>When Paypal was starting up, existing banks were not too happy about a new competitor on the scene and wanted Paypal to be regulated as a bank just like they were - even though Paypal didn&#8217;t engage in fractional reserve lending.  Existing bank legislation would have made it difficult or impossible for Paypal to operate.  When I saw Reid Hoffman speak at startup school, he mentioned there was some sort of rule where you had to submit any new product or business idea through an approval process that could take a year at the federal level.  For a tech startup this wasn&#8217;t feasible.  Paypal eventually found its own loophole, and incorporated itself as a <a href="http://en.wikipedia.org/wiki/PayPal#Bank_status">bank in Luxembourg</a>, while only becoming licensed as a money transmitter in the U.S.  Paypal probably wouldn&#8217;t have existed today without finding this loophole.</p>
+
+<p>&#8230;</p>
+
+<p>Anyway, I&#8217;m continually surprised at how often the law is a barrier in entrepreneurship - and how existing companies have built moats around their business not from having better products, but from lobbying the government.  It seems to come most often near the end of a company or industry&#8217;s lifetime, when they are feeling threatened by new upstarts and sense some change on the horizon.  It often comes wrapped in the guise of consumer protection or jobs for America (worked for Chrysler), but in reality they are simply trying to save their own profits without earning them in an open market.</p>
+
+<p>Make no mistake, competition is certainly cut throat for businesses - but the consumer is the beneficiary of these battles as companies keep trying to win their business with new products at lower prices.</p>
+
+<p><strong>Quick thought experiment:</strong> which industries are doing the WORST at innovation?  Which have the worst customer service?  Which seem most behind the times in terms of technology?</p>
+
+<p>Off the top of my head&#8230;cable companies, real estate, healthcare, cars, education?  You can probably think of others.</p>
+
+<p>I don&#8217;t think it&#8217;s a coincidence that these also happen to be the industries with the most laws and lobbyists, and consequently the fewest startups.</p>
+
+<p>Do you agree that companies competing in the courtroom instead of the market has stifled innovation?  Have you seen any other examples?  Feel free to leave a comment below.</p>
+
+<p>Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Something I coded up for fun...]]></title>
+    <link href="http://brianarmstrong.org/blog/something-i-coded-up-for-fun/"/>
+    <updated>2011-02-22T02:33:45-08:00</updated>
+    <id>http://brianarmstrong.org/blog/something-i-coded-up-for-fun</id>
+    <content type="html"><![CDATA[<p>I put <a href="http://mybestpic.org">this website</a> together over the last few weeks that I thought you might like.</p>
+
+<p>It&#8217;s quite simple.  Basically you can hold a &#8220;photo contest&#8221; and see which photo your friends like best.</p>
+
+<p>Here are a few examples&#8230;</p>
+
+<ol>
+<li>Choose a photo of yourself.</li>
+</ol>
+
+
+<p><a href="http://mybestpic.org/lTmQAr"><img src="http://s3.amazonaws.com/oldbloguploads/2011/02/Screen-shot-2011-02-21-at-6.24.24-PM-500x360.png" alt="" /></a></p>
+
+<ol>
+<li>Choose artwork or travel photos.</li>
+</ol>
+
+
+<p><a href="http://mybestpic.org/0AbTrQ"><img src="http://s3.amazonaws.com/oldbloguploads/2011/02/Screen-shot-2011-02-21-at-6.22.17-PM-500x360.png" alt="" /></a></p>
+
+<ol>
+<li>For downright silliness.</li>
+</ol>
+
+
+<p><a href="http://mybestpic.org/ac8crN"><img src="http://s3.amazonaws.com/oldbloguploads/2011/02/Screen-shot-2011-02-21-at-6.23.10-PM-500x360.png" alt="" /></a></p>
+
+<p>I&#8217;ll do a follow up post in a week or so with more details on the idea and results of the site.  But for now&#8230;</p>
+
+<h1><a href="http://mybestpic.org">Try it out</a> and let me know what you think!</h1>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Being Controversial Is Good Marketing]]></title>
+    <link href="http://brianarmstrong.org/blog/being-controversial-is-good-marketing/"/>
+    <updated>2011-01-22T23:34:37-08:00</updated>
+    <id>http://brianarmstrong.org/blog/being-controversial-is-good-marketing</id>
+    <content type="html"><![CDATA[<p>I started thinking about this topic lately.  Here are 3 random examples I&#8217;ve noticed - see if you can draw any conclusions or find others.</p>
+
+<h1>1. Ricky Gervais</h1>
+
+<p>He caused an uproar lately by insulting lots of famous people while hosting the Golden Globes.  Backstory <a href="http://www.youtube.com/watch?v=flBFagW5vC8">here</a>.</p>
+
+<p><a href="http://www.youtube.com/watch?v=flBFagW5vC8"><img src="http://s3.amazonaws.com/oldbloguploads/2011/01/Screen-shot-2011-01-22-at-2.37.13-PM-500x306.png" alt="" /></a></p>
+
+<p>There is no doubt he angered a bunch of people.  But did this hurt or help his career?</p>
+
+<p>On the one hand he may not be invited back to host the Golden Globes again next year.  On the other hand, most Americans probably didn&#8217;t know who he was before this week.  They do now, and his appeal as a comedian just went way up.</p>
+
+<p>Apparently, there are lots of people out there who also think Hollywood is ridiculous and full of itself.  These people rushed to his defense and became loyal fans overnight.</p>
+
+<p><strong>Being polarizing means for every enemy you make you gain a devoted fan.  When you remain neutral and try to appeal to both sides, you offend no one but also aren&#8217;t remembered by anyone.</strong></p>
+
+<p>He might not have had a fun week, but I bet his career just had a net win.</p>
+
+<h1>2. OkCupid.com</h1>
+
+<p>Their blog seems almost entirely centered on the idea of controversy as a marketing tool.  Here are a few of their headlines lately:</p>
+
+<ul>
+<li><p><a href="http://blog.okcupid.com/index.php/the-real-stuff-white-people-like/">The Real Stuff White People Like</a></p></li>
+<li><p><a href="http://blog.okcupid.com/index.php/rape-fantasies-and-hygiene-by-state/">Rape Fantasies and Hygiene By State</a></p></li>
+<li><p><a href="http://blog.okcupid.com/index.php/your-race-affects-whether-people-write-you-back/">How Your Race Affects Whether People Write You Back</a></p></li>
+<li><p><a href="http://webcache.googleusercontent.com/search?q=cache:WJ1dKFMXD-AJ:blog.okcupid.com/index.php/why-you-should-never-pay-for-online-dating/+why+you+should+never+pay+for+online+dating&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=us">Why You Should Never Pay For Online Dating</a> (where they argue quite convincingly why most online dating sites are a scam)</p></li>
+</ul>
+
+
+<p>Their posts average probably 500 comments and are massively reposted all over the internet.</p>
+
+<p>However, there is one key difference between their posts and most controversial discussions on the net: <strong>their posts are based on hard data, not opinion</strong>.</p>
+
+<p>The guys behind the blog are huge math nerds, and have a wealth of data at their disposal from the dating site (people fill out profiles etc).  So most of their posts take the tone of &#8220;we&#8217;re not saying this is right or wrong, but here is the truth about what the world is like&#8221;.</p>
+
+<p>This is a powerful position to come from because if someone wants to disagree they have to argue with your math, and can&#8217;t appeal to emotion.  So I think there is a good lesson here: <strong>if you&#8217;re going to be controversial, back it up with hard data.</strong></p>
+
+<h1>3. Apple</h1>
+
+<p>Steve jobs puts it a different way in this classic video where he lays out Apple&#8217;s marketing strategy.</p>
+
+<p>He says every great brand isn&#8217;t afraid to stand for something.</p>
+
+<p><a href="http://www.youtube.com/watch?v=vmG9jzCHtSQ"><img src="http://s3.amazonaws.com/oldbloguploads/2011/01/Screen-shot-2011-01-22-at-3.09.43-PM-500x307.png" alt="" /></a></p>
+
+<p>&#8220;Stand for something&#8221; is less pejorative than being controversial, but it&#8217;s really the same thing.  If you stand for something, then you aren&#8217;t afraid to disagree and you think the other way of doing it is wrong.</p>
+
+<p>And they live it by building opinionated software and hardware.  Want more than one USB drive on your MacBook air?  Sorry can&#8217;t have it.  Want a discount Apple computer under $500?  They don&#8217;t want your business.</p>
+
+<p>I think the lesson here is clear.  <strong>In business, trying to be all things to all people just makes you unremarkable to everyone.</strong> People become loyal fans of companies that stand for something.  By polarizing people you&#8217;ll wins fans (along with the enemies) and stick in people&#8217;s minds.</p>
+
+<p>I think a healthy dose of speaking your mind can be a great tool to jumpstart any brand.  What do you think?</p>
+]]></content>
+  </entry>
+  
+</feed>
