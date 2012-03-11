@@ -36,6 +36,14 @@ module Jekyll
         @filetype = $1
         markup = markup.strip.sub(/lang:\w+/i,'')
       end
+      if markup.strip =~ /start:(\d+)/
+        @start_line = $1.to_i || 0
+        markup = markup.strip.sub(/start:(\d+)/, '')
+      end
+      if markup.strip =~ /end:(\d+)/
+        @end_line = $1.to_i || 0
+        markup = markup.strip.sub(/end:(\d+)/, '')
+      end
       if markup.strip =~ /(.*)?(\s+|^)(\/*\S+)/i
         @title = $1 || nil
         @file = $3
@@ -57,9 +65,15 @@ module Jekyll
       end
 
       Dir.chdir(code_path) do
-        code = file.read
+        lines = file.readlines
+
+        start_line = @start_line || 1
+        end_line = @end_line && @end_line >= start_line ? @end_line : lines.size
+        code = lines[(start_line-1)..(end_line-1)].join("")
+
         @filetype = file.extname.sub('.','') if @filetype.nil?
-        title = @title ? "#{@title} (#{file.basename})" : file.basename
+        start_end_title = ", line #{start_line} to #{end_line}" if @start_line || @end_line
+        title = @title ? "#{@title} (#{file.basename}#{start_end_title})" : file.basename
         url = "/#{code_dir}/#{@file}"
         source = "<figure class='code'><figcaption><span>#{title}</span> <a href='#{url}'>download</a></figcaption>\n"
         source += " #{highlight(code, @filetype)}</figure>"
