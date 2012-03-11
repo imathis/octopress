@@ -1,0 +1,17 @@
+---
+layout: page
+title: Whoops I couldn't find that page
+footer: true
+---
+
+It looks like you have requested a page which no longer exists.
+
+Here are some recent posts instead.  Or you may want to [visit the homepage](/).
+
+<div id="blog-archives" class="missing">
+  {% for post in site.posts limit: 10 %}
+  <article>
+    {% include archive_post.html %}
+  </article>
+  {% endfor %}
+</div>
