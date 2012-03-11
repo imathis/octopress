@@ -51,6 +51,41 @@ footer p { font-size: 12px; color: #999; }
   background-color: #2d6987;
 }
 
+#tweets { margin: 0; }
+#tweets li { list-style: none; }
+#tweets li p { font-size: 13px; border-bottom: 1px solid #ccc; padding-bottom: 8px; }
+#tweets li a:first-child { float: right; font-size: 10px; padding-left: 10px; color: #999; }
+/*
+#tweets .loading {
+  background: inline-image('bird_32_gray.png') no-repeat center .5em;
+  color: darken($sidebar-bg, 18);
+  text-shadow: $main-bg 0 1px;
+  text-align: center;
+  padding: 2.5em 0 .5em;
+}
+#tweets .loading.error {
+  background: inline-image('bird_32_gray_fail.png') no-repeat center .5em;
+}
+#tweets p {
+  position: relative;
+  padding-right: 1em;
+}
+#tweets a[href*=status]:first-child {
+  color: $twitter-status-link;
+  float: right;
+  padding: 0 0 .1em 1em;
+  position: relative; right: -1.3em;
+  text-shadow: #fff 0 1px;
+  font-size: .7em;
+  span { font-size: 1.5em; }
+  text-decoration: none;
+}
+#tweets a[href*=status]:first-child:hover {
+  color: $sidebar-link-color-subdued-hover;
+  text-decoration: none;
+}*/
+
+
 /*
   Bootstrap's documentation styles
   Special styles for presenting Bootstrap's documentation and examples
