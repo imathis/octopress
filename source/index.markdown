@@ -17,7 +17,7 @@ footer: true
 * Lived in Buenos Aires, Argentina for a year
 * Studied computer science (MCS) and economics (BA) at Rice University in Houston, TX
 
-I love <a href="/projects">building new things with technology</a> and working with startups.  My strength is in engineering web and mobile apps (Rails, jQuery, SQL) and bringing new product ideas to market.
+I love <a href="/projects">building new things with technology</a> and working with startups.  My strength is in engineering web and mobile apps and bringing new product ideas to market.
 
 Here are some (tiny) pages on [talks](/talks) and [press](/press).  Hopefully those will grow over time!
 
