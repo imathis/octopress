@@ -3,3 +3,10 @@
 {% include google_plus_one.html %}
 {% include twitter_sharing.html %}
 {% include custom/after_footer.html %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="{{ root_url }}/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    getTwitterFeed("{{site.twitter_user}}", {{site.twitter_tweet_count}}, {{site.twitter_show_replies}});
+  });
+</script>
