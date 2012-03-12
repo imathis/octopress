@@ -4,9 +4,9 @@ title: Whoops I couldn't find that page
 footer: true
 ---
 
-It looks like you have requested a page which no longer exists.
+You may want to try a search above, or [visit the homepage](/).
 
-Here are some recent posts instead.  Or you may want to [visit the homepage](/).
+Also, here are some recent posts:
 
 <div id="blog-archives" class="missing">
   {% for post in site.posts limit: 10 %}
