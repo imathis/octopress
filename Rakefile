@@ -155,8 +155,9 @@ desc "Move all other posts than the one currently being worked on to a temporary
 task :isolate, :filename do |t, args|
   stash_dir = "#{source_dir}/#{stash_dir}"
   FileUtils.mkdir(stash_dir) unless File.exist?(stash_dir)
+  regex = args.filename.split(/\W/).join(".*") rescue nil
   Dir.glob("#{source_dir}/#{posts_dir}/*.*") do |post|
-    FileUtils.mv post, stash_dir unless post =~ /#{args.filename.split(/\W/).join(".*")}/i
+    FileUtils.mv post, stash_dir unless !regex.nil? and post =~ /#{regex}/i
   end
 end
 
