@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Success Stories | Brian Armstrong]]></title>
+  <link href="http://brianarmstrong.org/blog/categories/success-stories/atom.xml" rel="self"/>
+  <link href="http://brianarmstrong.org/"/>
+  <updated>2012-03-12T10:52:39-07:00</updated>
+  <id>http://brianarmstrong.org/</id>
+  <author>
+    <name><![CDATA[Brian Armstrong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[UniversityTutor Races Past 200 Paying Customers]]></title>
+    <link href="http://brianarmstrong.org/blog/universitytutor-races-past-200-paying-customers/"/>
+    <updated>2010-09-07T06:50:20-07:00</updated>
+    <id>http://brianarmstrong.org/blog/universitytutor-races-past-200-paying-customers</id>
+    <content type="html"><![CDATA[<p>UniversityTutor.com hit a little milestone this past week: 200 paying tutors!</p>
+
+<p>At $10/month each this might not sound like a lot (and it really isn't) but for me it was pretty cool because this was my original goal for myself way back <a href="http://brianarmstrong.org/posts/from-new-idea-to-business-launch-in-two-weeks-with-pictures/">when I first started the site</a>, more than 2 years ago.</p>
+
+<p>In fact, (this is really silly but) during that entire time I've had this little stickie note on my computer desktop with that goal written down:</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-10.50.47-PM.png" alt="" /></p>
+
+<p>When I started I thought it would take maybe 6 months tops to reach this.  Now it's finally done - it only took about two years longer to accomplish than I thought it would! :)  (With some nice <a href="http://brianarmstrong.org/posts/universitytutor-revenues-fall-by-50/">setbacks</a> along the way.)</p>
+
+<p>My daily stats dashboard:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/monthly_report.jpeg"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/monthly_report-500x375.jpg" alt="" /></a></p>
+
+<p>I took the occasion to implement a change I've been thinking about for a while on the site: making the free account unlimited.</p>
+
+<p>Below is a summary of the changes and some screenshots of the new signup process I recently deployed.</p>
+
+<p><strong>Old business model:</strong></p>
+
+<ol>
+<li><p>Tutor signs up</p></li>
+<li><p>First 3 times they are contacted on the site it is free</p></li>
+<li><p>After the third contact, I ask them to upgrade (conversion rate around 1.8%).  Those tutors who don't upgrade can no longer use the site.</p></li>
+</ol>
+
+
+<p><strong>New business model:</strong></p>
+
+<ol>
+<li><p>Tutor signs up</p></li>
+<li><p>Right after filling out their profile they are asked to choose a free listing or featured listing</p></li>
+<li><p>Featured listing gives you top placement in search results, featured on the homepage, etc (conversion rate currently at 4%).</p></li>
+</ol>
+
+
+<p>Main difference is that now you can keep the free listing forever if you want (you never get kicked off).  Instead, the incentive to upgrade is getting more tutoring inquiries with a featured listing (show up on homepage, first in search results, badge on your profile, etc).</p>
+
+<p>Here are some screenshots of the new signup flow:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.08.27-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.08.27-PM-500x367.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.09.04-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.09.04-PM-500x367.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.10.21-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.10.21-PM-500x367.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.10.31-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.10.31-PM-500x367.png" alt="" /></a></p>
+
+<p>You can see all the benefits listed on the final signup page.  This is the most important one.</p>
+
+<p>And here here are some examples of "featured" tutors:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/featured1.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/featured1-500x367.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/featured2.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/featured2-500x367.png" alt="" /></a></p>
+
+<p><strong>Random thoughts on the change:</strong></p>
+
+<ul>
+<li><p>I was sort of worried about making the free listing unlimited because it creates less of an incentive for tutors to upgrade.  But so far this looks like it was nothing to worry about - conversion rate to paid is actually better (need more data to say for sure here).</p></li>
+<li><p>I think the new signup flow where it asks them to upgrade from the beginning (but doesn't prevent them from doing it later) is mostly responsible for this.  Tutors no longer have to wait for their "free trial" to expire for me to ask them to upgrade.</p></li>
+<li><p>I changed the wording from a "Free Account" vs a "Pro Account"  to a "Free Listing" vs a "Featured Listing".  This wording change seems to work better here since "pro" is an ambiguous term, but a "featured listing" makes it clear exactly what they are paying for.</p></li>
+<li><p>I also added language to the page saying "Featured listings receive 4x as many inquiries as free listings on average" which is true (I ran some numbers).</p></li>
+<li><p>In large part, this new signup flow is modeled after the <a href="http://www.Sortfolio.com">Sortfolio.com</a> signup flow which I really like.  So they deserve a shout out here.</p></li>
+</ul>
+
+
+<p>If you think about the freemium business model as a spectrum (crude diagram below), then this change is definitely a shift to the left (towards more free):</p>
+
+<p>[100% Free -------------------- Freemium -------------------- 100% Paid ]</p>
+
+<p>But it seems to have worked well here in earning more (ironically).  The tricky part about Freemium is where to draw the line between free and paid and the decision is different for every business.  I read a great piece of advice recently which said (I'm paraphrasing) "If your site benefits from network effects (basically that the value of the site grows with the number of users) then you should give more things away for free, and if it doesn't benefit from network effects then you should make more things paid."</p>
+
+<p>That advice was helpful to me in this case - a tutoring directory definitely seems like it has some network effects.  I didn't want to be losing those ~98% of tutors from the site who tried it out but didn't want to upgrade.  This allows me to capture both groups and build a bigger site.</p>
+
+<p>The site is growing even faster now that I made this change and it's already over 220 paying tutors as I write this.  So this may turn out really well (too early to say for sure).  What are your predictions on this change?</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+
+<p>P.S. To read up on the whole UniversityTutor story, you can <a href="http://www.startbreakingfree.com/category/universitytutor-com/">view the category page here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Most AWESOME Interview I've Ever Done - With Captain Australia]]></title>
+    <link href="http://brianarmstrong.org/blog/the-most-awesome-interview-ive-ever-done-with-captain-australia/"/>
+    <updated>2009-12-08T03:17:33-08:00</updated>
+    <id>http://brianarmstrong.org/blog/the-most-awesome-interview-ive-ever-done-with-captain-australia</id>
+    <content type="html"><![CDATA[<p>Ok, so about a week ago I received an email from a Breaking Free reader.</p>
+
+<p>He began "Dear Citizen Brian" and went on to explain that yes, he was in fact a real life super hero who dressed in costume and patrolled various areas of Australia, intimidating the criminal element.  He also wanted help spreading his message and building his blog.</p>
+
+<p>I wasn't quite sure what to make of this email, so I clicked through to his <a href="http://www.captainaustralia.net/">website</a> and instantly fell in love.  There it was, a person who had a crazy idea of what he wanted to do and JUST WENT FOR IT, not giving a damn what anyone else thought.</p>
+
+<p>He wanted to prevent crime, and had literally adopted a secret identity as a super hero.  Let me say it again: yes, he is actually serious.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/12/Picture-6.png" alt="Captain Australia" /></p>
+
+<p>I quickly added a new item to my list of things I MUST do before I die: interview this man and find out more about him.</p>
+
+<p>Why? Because he is an example of someone who has truly broken free and pursued his passion.  If he can become a real life super hero, when what excuse do you and I have for not accomplishing our goals?</p>
+
+<p>If you want some background first, you can check out his <a href="http://www.captainaustralia.net/faqs/">awesome FAQs</a>, including more info on his <a href="http://www.captainaustralia.net/armoury/">armoury</a> (which includes mace and an iPhone) and <a href="http://www.captainaustralia.net/hero-profile/">super powers</a> (such as photographic memory).</p>
+
+<p>Without further ado, here is my interview with the real life super hero, Captain Australia. (He took the liberty of recording some video responses as well.)  Enjoy!</p>
+
+<p><strong>1. Please introduce yourself to my readers and tell us a bit about your mission</strong></p>
+
+<p>I am Captain Australia, and I am on a Quest to make the world a better place.  My mission in a nutshell: To fight evil.</p>
+
+<p>What is evil ?  It’s everywhere .. evil has been with us of old.  My job is to fight it – the big evil: criminality, paedophilia, rape of the environment, and the little evil – apathy, selfishness, greed.  Basically my mission is as much about being an example and inspiration as it is about actively fighting crime.</p>
+
+<p>So, to articulate my goals in a simple list, with simple examples:</p>
+
+<ol>
+<li><p>Patrol, and directly intimidate the criminal element (eg, drug dealers and prostitutes move out of neighbourhoods I patrol)</p></li>
+<li><p>Directly intervene if I see a crime, and solve crimes I become aware of (eg, if I see someone being robbed or assaulted, I must stop it)</p></li>
+<li><p>Help others.  (that simple, I want to find ways to help people, Nelson Hendersen said “The true meaning of life is to plant trees under whose shade you do not expect to sit”)</p></li>
+<li><p>Inspire people.  (eg, by putting other people ahead of my own personal safety, by taking a stand against evil, I hope to inspire others to stand up and make the world better, Martin Luther King Jr said “…I just want .. love and .. justice and .. truth and .. commitment to others, so that we can make of this old world a new world”)</p></li>
+</ol>
+
+
+<p><strong> 2. What’s the most common reaction you get from people at first?  How do you convince them you’re serious?</strong></p>
+
+<p>Most people are amused.  They want photographs, as if I’m some kind of celebrity.  I don’t mind, so much – if I can’t inspire people the first time I meet them, I can at least reach out to them, and I can settle for amusing them.  If they then see me, witness my mission, and come to understand what I do, then it is my hope that it will influence them.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/12/Guest-Comments-300x168.jpg" alt="Captain Australia" /></p>
+
+<p>So far, people tend to fall into a few different categories (I personally like #4 the most, it makes me smile):</p>
+
+<ol>
+<li><p>Avoidance or Apathy: some people seem shocked or scared, and simply look away, they simply lower their gaze and shuffle past as fast as they can.  (These are the sleep-walkers that I hope to wake up)</p></li>
+<li><p>Curious:  some people are engaged and interested (maybe amused), and ask me questions about what I’m doing &amp; why.  I see these people as genuine potential evangelists, people who can see value in what I’m doing and maybe allow it to influence the way they live their lives somehow.</p></li>
+<li><p>Photo Op: some people simply see me as a novelty and want a photo with me.  Where I can, I try to explain my mission, and turn them into a #2</p></li>
+<li><p>genuinely puzzled: some people simply openly stare at me, jaw dropping, every manner of their posture screaming out to me “WTF?!”, sometimes the reaction is so strong, it’s almost as if a spaceship landed in front of them, Ronald McDonald sprang out from the cockpit &amp; started singing “Happy Birthday to You”</p></li>
+</ol>
+
+
+<p>With respect to the second half of your question – <strong>how do I convince them I’m serious</strong> – well, that’s complicated.  At first I was more interested in seeking out crime – people’s reactions didnt really matter to me.  Now I realise that connecting with people, helping &amp; inspiring people is a critical part of my mission.  So when I meet someone who is Curious, I explain to them what I’m doing and why.  I give them a calling card, and let them know that if they need my help, they should contact me.</p>
+
+<p>Only short-fall – I have one cellphone – and giving it out to Citizens will compromise my secret identity.  I’m just going to have to absorb the operating cost and get a second phone so that people can ring Captain Australia when they need his help or advice .. so far the calling cards just have Email, Twitter &amp; Web contacts, which seems slow if they want to talk to me while I’m out on patrol.</p>
+
+<p><strong>3. How often do you go out on patrol in full costume?  How do you choose locations?</strong></p>
+
+<p>If I were untethered by any other consideration than Captain Australia, I’d actually choose hotspots around the world (based on crime, poverty, apathy – basically profile possible areas to base out of).  I’d patrol daily, doing whatever I can to demonstrate my commitment to changing lives in that area.  Every few months, I’d move on to another area.  As it stands, I operate out of Brisbane Australia, and when my employer requires me to travel, I also tear open my corporate shirt &amp; tie revealing the bold @ underneath – so sometimes I get the opportunity to patrol in Sydney, Melbourne, Perth or New Zealand (and hopefully at some stage Singapore, where I know that organised crime and prostitution has a real underbelly).</p>
+
+<p>For now, I simply base my choice on known areas of crime in Brisbane, or areas known for homelessness (to help where I can), finally, I might just patrol a public area to achieve a level of visibility – as a deterrent and to spread the inspirational message.  With my work obligations, I can only really patrol once per week.  And the last few weeks Ive been on hiatus while I get my health right (I actually injured my foot with Version1 boots while Parkour Street Running, and the nail of my big toe came off .. so while I’m waiting on Boots Version2 – being ordered from the USA – I havent been patrolling weekly, but I’ll resume that as soon as the boots arrive).<strong> </strong></p>
+
+<p><strong>4. Why do you feel it is important to protect your identity?</strong></p>
+
+<p>My family.  I don’t wear a mask out of shame, I wear it purely to protect my family (and make a statement).I know that I may not achieve a notable impact against crime, that is largely about luck &amp; circumstance.  But I do know that its possible that my interference could offend drug dealers, pimps, gangs, thugs – my own safety is secondary, but I simply cannot face putting my family at risk.  Also, it’s loosely possible that I might attract crazies – some loony out there might consider me to be their ‘nemesis’ and decide that they need to track me down and teach me about suffering.  Again, I can handle myself, but God help the person who tries to reach past me to harm my family.</p>
+
+<p>I won’t compromise my secret identity by giving any significant detail on this point.</p>
+
+<p><strong>5. Many of our readers are interested in “breaking free” – meaning doing what they are passionate about in life, as you obviously have – but money often holds people back.  Do you have a “real job” during the day (Clark Kent worked at the Daily Planet, Bruce Wayne had Wayne Enterprises) or how do you fund Captain Australia’s endeavors?</strong></p>
+
+<p>Short answer: Yes.  Although I’ve hardly broken free from it – in fact, being Captain Australia isn’t cheap - I would absolutely love to fund some higher tech equipment and a costume that really affords me some protection against weaponry – but as it is, I have to fund what I’m doing.  I have a reasonably lucrative career. I won’t give too much detail, again to protect my secret identity, but it’s basically a middle->high level management position in corporate australia.  Its more than adequate to support my personal life and my expenses so far as Captain Australia.</p>
+
+<p><strong>6. Clearly making money is not the primary goal with a project like this, but do you view the blog as potentially a means of financial support (Captain Australia t-shirts, ad-support, donations from concerned citizens, etc) or solely as a means to spread the word?</strong></p>
+
+<p>I have thought about that.  I would love to find a way to fund this full-time (and ideally unlock travel to some of the bleaker places of the world – places of socio-economic depression where I can rally people).  Ultimately it is secondary though, I’ve thought about the possibility of maybe getting some T-shirts done up, or maybe a graphic novel – I don’t really know – honestly though, it does open up the dream of committing myself full-time to my mission, which I find immensely appealing.  I dont like the idea of donations at all (unless maybe Bill Gates flicked 2M my way – I think 2M is all I would need to invest to permanently fund my efforts as Captain Australia – just use it to generate income from the interest).  Maybe advertising or some kind of merchandise – but it’s really not what I’m about – it’s just a daydream to be able to do this full time.</p>
+
+<p><strong>7. I like your choice of “weapons” – spray can of mace, camera, pen and paper, etc and you strike me as someone who uses violence as a last resort.  Although I have a concealed handgun license, I personally believe these non-lethal methods of self-defense can be more effective.  Please tell our readers about your philosophy in the best way to prevent crimes, what level of violence is appropriate/necessary in what situation, and how our readers can best protect themselves.</strong></p>
+
+<p>Confidence is your best weapon.  Most criminals are cowards.  I know that sounds like a naive cliche, but I promise you, it’s true.  They generally won’t act unless the odds are in their favour.  That’s what makes me powerful.  I will move forward -despite- the odds.  I will put my personal safety to one side and challenge anybody that I feel is evil.  I will never stand idly by and watch someone who is innocent be victimised. Is violence an effective tool ?  Yes, it can be.  But you have to use it fearlessly.  You have to act quickly and deliberately.  Personally, except for totally random incidents, I think that your best tool is actually politics – using negotiation skills to defuse hostile situations, using respect to get potentially violent people to calm down and articulate their views without hostility.</p>
+
+<p>Since putting on Captain Australia’s mask, I havent had to be violent.  I’ll address my martial arts training in one of the questions to follow – but I do sincerely think violence is a last resort.  As far as serious advice goes – unless the odds are clearly in your favour, if someone threatens you: talk calmly to them while you conduct a risk assessment.  Look them over and the environment, and make a determination as to whether you should fight or run.  If they have already threatened you and are just toying with you or trying to intimidate you, use the element of surprise before you act.  Do 1 of 2 things:  attack fast &amp; hard, or attack suddenly and then immediately run.  (If you slap someone in the face, or kick their knee or in-step, the surprise will often give you a few valuable seconds.  Don’t scream or yell when you run, put all your wind into sprinting).</p>
+
+<p>Weapons arent the way forward.  The human tendency to reach for a weapon is driven out of cowardice and a craving for power.  It’s putting down our weapons that takes true courage.</p>
+
+<p><strong>8. What are your views on firearms and do you believe an armed population prevents crime or creates more of it?  There have been several high profile cases (at least in the U.S.) of citizens killing criminals (see <a href="http://en.wikipedia.org/wiki/Joe_Horn_shooting_controversy">Joe Horn</a> and <a href="http://en.wikipedia.org/wiki/Bernhard_Goetz">Bernhard Goetz</a>).  They’ve subsequently been called everything from heroes to criminals themselves.  What are your views?</strong></p>
+
+<p>Fundamentally, I believe in complying with Rule of Law, it’s basically the collectively agreed set of rules that we all have to live by: and people who knowingly take a gun and shoot someone else are committing an unlawful act.  They have no jurisdictional right to execute anybody.  I think its quite clear that they are criminals.It’s my sincere belief that taking another human life for anything other than a grim and high duty is morally wrong.  I’d have to pose – do these guys who pump bullets into criminals get a rush when they do it ?  Do you think sometimes at night they think about it as they go to sleep, and smile ?  I think that you can work within the confines of the law and still have perfectly reasonable methods to interfere with criminals.</p>
+
+<p>If someone breaks into your home in the still of night, I think its completely acceptable to use deadly force to protect your family.  But personally, I condemn someone who will strap on a gun and go out looking for people to kill.  I understand that the US legal system (and Australian) could be described as unreliable, but that doesnt mean that I personally am any better.</p>
+
+<p>If you see someone being attacked, you jump in and incapacitate the assailant.  You dont need a chainsaw, bazooka, machete, or a .357 magnum to do that.</p>
+
+<p>I’d prefer to lay down my own life than risk killing an innocent person.  Again, I think putting down a weapon takes a whole lot more courage than picking one up.</p>
+
+<p><strong>9. You appear to be a martial arts expert.  Which style of martial arts should people learn if they are primarily concerned with self defense?</strong></p>
+
+<p>I’ve been learning since child-hood.  I’m expert in Judo, Ju-jitsu, Karate, Wing Chun &amp; Ton Long Kung fu.  I also have some experience with boxing (which is actually quite handy – I think it helps you to learn how to take a punch and not fear it, the other martial arts styles try to avoid being hit).If I had to recommend a fighting style for self defense, I think Ju-jitsu is extremely practical.  It teaches grapples and strikes – ways to move your hands and body to lock up your attacker and minimise their ability to hurt you.  Someone who has really trained in ju-jitsu can easily hold one assailant by the wrist, using pain to steer him around using him as a shield against a second combatant while he kicks the third in the instep and incapacitates him.  Its a very practical fighting form.</p>
+
+<p>But if you’re only interested in self protection, you can avoid the training and get various non-lethal sprays and personal alarms.</p>
+
+<p><strong>10. What would be an ideal contact for you to make (TV interview, speaking to a class of children, profile on major website, etc) to further your mission?  Perhaps one of our readers can make the introduction.</strong></p>
+
+<p>I dont know.  I’m currently arranging to spend some time with sick kids in critical care, to cheer them up and amuse them – basically I’m struggling to find the correct path for me to be walking.  If I thought about it purely in terms of exposure, I guess getting into the mainstream media would be useful, but what I really want, more so than fame, is the individual engagement – helping people and spreading my message that we must all take a personal stand to brighten the world.  (Which can start with a single candle).<strong> </strong></p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/12/Standing-238x300.jpg" alt="Standing-238x300" /><strong>Thank you Captain Australia for making time for this interview!</strong></p>
+
+<p><strong> If you haven't already, make sure to <a href="http://feeds.feedburner.com/captainaustralia/chvN">subscribe to his website</a></strong><strong> and show your support for Captain Australia.</strong></p>
+
+<p><strong>I would not be surprised if Captain Australia becomes an internet sensation and you're not going to want to miss his rise to fame- I think this could be big.</strong></p>
+
+<p><strong>Finally Captain Australia has asked for your support in the following ways:</strong></p>
+
+<ul>
+<li><p>Please <a href="http://www.captainaustralia.net/report-a-crime-2/">send him suggestions</a> and tips on how he can better accomplish his mission</p></li>
+<li><p>Please <a href="http://www.captainaustralia.net/seek-my-help/">ask for his help</a> if you need support or wish to <a href="http://www.captainaustralia.net/comments/">report a crime/disturbance</a> in your neighborhood (especially if you live in Australia)</p></li>
+</ul>
+
+
+<p>Captain Australia, we salute you!  Until next time, keep breaking free,
+Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Entrepreneur/Hacker Meetup In Buenos Aires]]></title>
+    <link href="http://brianarmstrong.org/blog/entrepreneurhacker-meetup-in-buenos-aires/"/>
+    <updated>2009-11-19T16:07:33-08:00</updated>
+    <id>http://brianarmstrong.org/blog/entrepreneurhacker-meetup-in-buenos-aires</id>
+    <content type="html"><![CDATA[<p><a href="http://mixergy.com/about/">Andrew Warner</a> and I put together a little entrepreneur meetup last night which turned out really well.</p>
+
+<p>Well actually, I emailed Andrew when I saw on his blog that he was in Buenos Aires, and he had the great idea to post the meeting to <a href="http://news.ycombinator.com/item?id=940180">Hacker News</a>.  It ended up being a pretty good turnout.</p>
+
+<p>Buenos Aires is turning into quite the little tech entrepreneur scene.  As I wrote on Hacker News...</p>
+
+<blockquote><p>It does seem like something is brewing here. I think it got popular with Tim Ferriss' The Four Hour Work Week where he talks about Buenos Aires...lots of founders came down here. It's easier to bootstrap a web business because:</p></blockquote>
+
+<ol>
+<li><p>costs are much lower here</p></li>
+<li><p>earning in dollars and spending in pesos means your money goes a long way (geo-arbitrage)</p></li>
+</ol>
+
+
+<p>It's by no means huge yet, but there is a band of renegade expat coder/entrepreneurs I've met up with here that are doing some impressive stuff.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/11/zero.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/11/zero.png" alt="Entrepreneur Meetup BA" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/11/three.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/11/three.png" alt="Entrepreneur Meetup BA" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/11/two.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/11/two.png" alt="Entrepreneur Meetup BA" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/11/one.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/11/one.png" alt="Entrepreneur Meetup BA" /></a></p>
+
+<p>Here is a sampling of the attendees (in alphabetical order) and the projects they're working on.  Take a minute to check out their sites, there is some pretty impressive work being done by this group...</p>
+
+<ul>
+<li><p><strong>Andrew Warner</strong> <a href="http://Mixergy.com">Mixergy.com</a> (awesome interviews with entrepreneurs - and he's a highly successful entrepreneur to boot, check out his about page)</p></li>
+<li><p><strong>Andy Cary</strong> from <a href="http://becomeacelebrityjournalist.com/">BecomeACelebrityJournalist.com</a> (new ebook that just came out)</p></li>
+<li><p><strong>Brian Cary</strong> from <a href="http://palermo.infusedindustries.com/">InfusedIndustries.com</a> (they make a shopping cart that fits right in a banner ad)</p></li>
+<li><p><strong>Chad Depue</strong> from <a href="http://www.RubyRescue.com">RubyRescue.com</a> (heads up a kick ass Rails dev team)</p></li>
+<li><p><strong>Eric Knudtson</strong> from <a href="http://buenosaires.expatqa.com/">ExpatQA.com</a> (an awesome question and answer community for ex-pats, the format of the site is addictive, way better than a typical forum, and is built on the <a href="http://stackexchange.com/">StackExchange</a> platform) and <a href="http://ericknudtson.com/">EricKnudtson.com</a></p></li>
+<li><p><strong>Fernando Parra</strong> <a href="http://fparra.com.ar/">http://fparra.com.ar/</a></p></li>
+<li><p><strong>James Cox</strong> <a href="http://twitter.com/imajes">http://twitter.com/imajes</a></p></li>
+<li><p><strong>Javier Sitaker</strong> <a href="http://www.dist-exp.com">http://www.dist-exp.com</a> (computer consultants and also check here if you want to know how to deal with the <em>bureaucrazy</em> in starting a business in Argentina)</p></li>
+<li><p><strong>Leonard Lin</strong> <a href="http://sched.org">sched.org</a> (an agenda builder for conferences and great domain name)</p></li>
+<li><p><strong>Mike Manning</strong> <a href="http://www.gobigmike.com/">GoBigMike.com</a> (holy crap he traveled to 28 countries last year?!) and <a href="http://www.trackyourhours.com/">TrackYourHours.com</a> (700 paying customers!)</p></li>
+<li><p><strong>Manuel</strong> <a href="http://twitter.com/mergoc">http://twitter.com/mergoc</a></p></li>
+<li><p><strong>Taylor McKnight </strong>also from <a href="http://sched.org">sched.org</a></p></li>
+<li><p><strong>Tom Aadland</strong> from <a href="http://www.BuenaCarta.com">BuenaCarta.com</a> (a soon to be launched restaurant review site for Buenos Aires)</p></li>
+<li><p><strong>Simon Bottling</strong> <a href="http://www.enbuenosaires.com">EnBuenosAires.com</a> (an MLS system for real estate in Buenos Aires)</p></li>
+<li><p><strong>Vik Duggal</strong> from <a href="http://www.vikduggal.com">VikDuggal.com</a> (check out his video blog) and <a href="http://konstructr.com/">Konstructr.com</a></p></li>
+</ul>
+
+
+<p>There was a lot of talent in the room.  Sorry if I didn't get a chance to talk with some of you!  Feel free to add your info in the comments if you want to be invited to the next one.  Thanks!</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Made It To Buenos Aires!!]]></title>
+    <link href="http://brianarmstrong.org/blog/made-it-to-buenos-aires/"/>
+    <updated>2009-05-09T13:28:21-07:00</updated>
+    <id>http://brianarmstrong.org/blog/made-it-to-buenos-aires</id>
+    <content type="html"><![CDATA[<p>For those you of you who were wondering, I made it safe and sound to Buenos Aires, and the last 5 days have been a wild ride!</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/05/31.jpg" alt="3.jpg" /></p>
+
+<p>I won't lie - when I was taking the bus into town from the airport (after 17 hours of traveling and sleeping very little on the plane) I was a little scared.</p>
+
+<p>There are some serious slums outside Buenos Aires, and as I was driving through them I started to wonder what I had gotten myself into. This was really the third world - patchwork sheet metal roofs with a maze of electrical wires, random objects on fire, burned out cars and buildings, women breast feeding in the streets, and abundant stray dogs going through piles of trash.</p>
+
+<p>It did NOT exactly look like the <a href="http://brianarmstrong.org/posts/oh-snap-im-moving-to-south-america/">pictures</a> on the internet. Every time the bus would stop, I remember thinking "please don't let this be where we are getting out".</p>
+
+<p>But eventually, I started to get into the city and things started looking up. Huge glass skyscrapers, signs of civilization, etc.</p>
+
+<p>I had chosen a hostel while waiting in the Houston airport for my connecting flight off <a href="http://www.hostelworld.com/">http://www.hostelworld.com/</a> and I had a rough idea of where I was going, but not really.</p>
+
+<p>The bus dropped me on an INCREDIBLY busy street where my hostel supposedly was. The street was so busy with people walking that if you stopped, you were likely to get run over. Actually, this picture doesn't do it justice. It's the kind of street where you could be walking with your friend side by side, and a second later lose them in the crowd because people are so close together.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/05/1276221.jpg" alt="127622.jpg" /></p>
+
+<p>I asked the bus driver (in broken Spanish) where the hostel was because I didn't see it. He told me half a block down (media cuadra).</p>
+
+<p>I got out, and the bus took off. Luckily, it was right where he said it was (I don't know what I would have done if it wasn't). I checked in and went to sleep.</p>
+
+<p>The hostel is actually really cool and I'd recommend it. You can check out their <a href="http://www.hostelsuites.com/hostel.php?Hostel+Suites+Florida&amp;id_hostel=30&amp;idioma=1">youtube video</a> here. The girl in the video was actually there to greet me when I got there. Pretty funny because I was just watching her YouTube video on the other side of the world a few hours prior. I told her she was world famous.</p>
+
+<p><strong>Figuring stuff out...</strong></p>
+
+<p>Now that I've had a few days to learn the city I'm starting to feel much better.</p>
+
+<p>For the first few days I basically felt like a helpless child in the city. I had no phone, didn't know how to go anywhere, was afraid of getting lost, didn't know how to pay for anything, etc. And the city is freakin huge.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/05/2009050913401.jpg" alt="200905091340.jpg" /></p>
+
+<p>A couple memorable moments so far that have allowed me to feel like a complete idiot:</p>
+
+<ul>
+<li><p>The elevators here have two manual doors that you have to open. If you are like me, you will probably either (1) open the door at the wrong time causing there to be a one foot drop when you get off the elevator or (2) exit the elevator and forget to close the door behind you (which prevents it from going to any other floor). Both of these cause people to laugh at your for being a silly American after you try explaining to them that you thought it would close itself. "Haha! Why would it close itself?" ...like they'd never heard something so ridiculous.</p></li>
+<li><p>I managed to get the entire bathroom wet while trying to figure out how to use a bidet. Enough said.</p></li>
+</ul>
+
+
+<p>Lot's of people at the Hostel spoke English so that was good, and I've already made about a dozen friends.</p>
+
+<p>List of random stuff I've done over the last 5 days:</p>
+
+<ul>
+<li><p>Went to a live Jazz club with some Brazilians</p></li>
+<li><p>Drank some Mate tea and Argentine wine</p></li>
+<li><p>Went to a Tango class (just watched)</p></li>
+<li><p>Did a pub crawl with some ex-pats</p></li>
+<li><p>Saw the <a href="http://akworld.net/BAweekly/wp-content/uploads/2007/01/japenese_garden3.jpg">Japanese Gardens</a>, Capital, <a href="http://alojargentina.com/blog/visitando_buenos_aires/files/2008/10/obelisco.gif">Obelisco</a> etc</p></li>
+<li><p>Went to get ice cream with Argentine girl, still not sure if it was a date</p></li>
+<li><p>Went to some trendy bars in Palermo (with a guy I met on the plane ride over and his girlfriend) and walked through the posh Recoleta</p></li>
+<li><p>Figured out how to use an ATM in Spanish with an American debit card - this took a good hour. Also, realizing that the max you could withdraw was 300 pesos and that the error message I was seeing did not mean my my card was frozen. This required an interesting collect call to Chase in the U.S.</p></li>
+<li><p>Got a SIM card (tarjeta) for my Blackberry and figured out how phone numbers work in BA.  I also had to figure out how to recharge (recargá) my phone with minutes and check remaining minutes in Spanish.</p></li>
+<li><p>Rode the subway, and bought a prepaid card with trips (viajes) on it, about $0.30 each</p></li>
+</ul>
+
+
+<p>My Spanish has already improved dramatically over the last few days. It's pretty funny when I try to talk to people - they usually look at me for a second with this blank expression like "what the hell did he just say...he must be messing with me or something....(awkward silence)....oh god....he's not joking he actually talks like that...I should probably respond now but I forgot what he said". Then they respond with something really fast I can't understand, and I have to ask them to slow down :)</p>
+
+<p><strong>Food and Prices</strong></p>
+
+<p>Some things here are very cheap and the rumors are true. Other things are not really that cheap and I think people have overhyped this a bit (groceries for example, are about U.S. prices). The exchange rate is 3.6 Argentine pesos to 1 USD right now, but you don't get 3 times as much for your money.</p>
+
+<p>The prices are basically like New York City (very high), except in pesos. So for me coming from Houston where things are much cheaper than New York, the net is maybe a 20-50% savings for most items.</p>
+
+<p>Here are some photos I took over the last few days to give you an idea:</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/05/11.jpg" alt="1.jpg" /></p>
+
+<p>This lunch cost 9 pesos (about $2.50 USD) and was a good deal. They call the meat ham Milonesa and it's really good.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/05/71.jpg" alt="7.jpg" /></p>
+
+<p>I got this lunch at a high end bookstore right smack in the middle of downtown. It was 29 pesos $8 for the sandwich, pastry, and coffee combined.</p>
+
+<p>You can get pretty good street food (meat empañadas, hot dogs (panchos) for a little less than $1 US).</p>
+
+<p>Glasses of nice Argentine wine (Malbec) at a pretty nice restaurant I went to were $3 US and the pizza was $5.</p>
+
+<p>One thing I haven't done yet is try the steak, which apparently is legendary and huge portions. These are about 20 pesos $5.50 US.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/05/01.jpg" alt="0.jpg" /></p>
+
+<p>This pasta was my first meal in Buenos Aires and it was sort of weird. I forget how much I paid for it (was barely awake). They seem to like to put ham in everything here, even their pasta.</p>
+
+<p><strong>Renting an Apartment</strong></p>
+
+<p>Anyway, my latest journey has been to find a room to rent. I walked around Palermo (people told me this was a cool neighborhood) armed with only a map, and tried not to look like a tourist. I visited about 4 different places that I found on craigslist. The people were all cool and very nice but the neighborhood was all a bit run down. I was surprised because this was supposedly a "good" neighborhood in BA.</p>
+
+<p>Maybe I'm just spoiled coming from the U.S. but I really was not impressed with Palermo. It definitely looked a bit ghetto in a bunch of parts, although around the squares (plazas) there were some cool bar areas. A very hippy culture as well with lots of dreadlocks and playing guitar on the streets. Fun, but not really my scene.</p>
+
+<p>One house I walked to was in the middle of nowhere. It was night time so I was a little worried, but I will say that BA has been very safe for me so far. They have a TON of police officers patrolling, and even on these streets they have an officer stationed about every other block. He just stands on that block for the whole night. This was pretty reassuring to see, since you are basically within shouting distance (policia!!) at all times.</p>
+
+<p>Anyway, the next neighborhood I went to was Recoleta. Everyone told me this was the best neighborhood in BA, and it definitely lived up to it's reputation. It is much more like what I hoped BA to be. Posh shops, beautiful women, European architecture, etc.</p>
+
+<p>So after some more calling on Craigslist, I finally found a room to rent in Recoleta. It is in an AWESOME old house that is huge and it's in the best neighborhood. Private bathroom, balcony overlooking Recoleta, spacious room, fully furnished kitchen, etc. Free wifi, weekly maid, all utilities included. It's $500 per month US.</p>
+
+<p>The house is shared with other foreigners which is pretty cool. There are a couple Brazilians who speak very little English, an American guy doing a similar sort of web business thing (he was working on two laptops at the same time when I came in, so I have a feeling we'll get along), and another girl from Poland. The house is huge. A private apartment probably would have been more like $2,000 per month in Recoleta, but that was too much for me plus I wanted to live with some cool people so I'd have a few friends in the city.</p>
+
+<p>So anyway, that's it for now. Tomorrow I'll be moving into the apartment and I feel like I've finally started to figure this city out.</p>
+
+<p>It's definitely a bit rough around the edges and is a much bigger city than I'm used to living in (a poor man's New York City is the best way to describe it). I definitely don't want to overhype it like I think some people have online. It's got some nice parts and I'm going to enjoy living here for a while, but you are still in the third world and it's obvious at times.</p>
+
+<p>I'll keep you updated, so far this has been a great adventure in "breaking free"!
+Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[BIG ANNOUNCEMENT: BuyersVote.com]]></title>
+    <link href="http://brianarmstrong.org/blog/big-announcement-buyersvotecom/"/>
+    <updated>2009-04-22T02:51:00-07:00</updated>
+    <id>http://brianarmstrong.org/blog/big-announcement-buyersvotecom</id>
+    <content type="html"><![CDATA[<p>The announcement is finally here! In the last week I launched <a href="http://buyersvote.com">BuyersVote.com</a>.</p>
+
+<p>Here is the description from the <a href="http://buyersvote.com/about">about</a> page which describes the site:<a href="http://buyersvote.com"></a></p>
+
+<p><a href="http://buyersvote.com"><img src="http://s3.amazonaws.com/oldbloguploads/2009/04/picture-11.png" alt="BuyersVote.com" /></a></p>
+
+<p>=====================================</p>
+
+<h3>Friends help you make buying decisions every day...</h3>
+
+<blockquote><p>This phone is great!</p>
+
+<p>That mechanic is a crook!</p></blockquote>
+
+<p>We know we can trust our friends (unlike advertisements) because they aren't selling us anything.</p>
+
+<p>Wouldn't it be great if you could ask a friend about EVERY product you wanted to buy before you bought it?</p>
+
+<p>Wouldn't it be even better if dozens or hundreds of people could tell you about their experience with it and any related products too? One person might be biased or get it wrong but surely if you could AVERAGE the reviews of hundreds of people you could know which was best.</p>
+
+<h3>The power is now in YOUR hands (the consumer)...</h3>
+
+<p>The internet has enabled consumers from all around the world to COLLABORATE - sharing their collective experiences to let each other know what is good and what is bad.</p>
+
+<p>Online reviews are nothing new of course. You can find a great book on Amazon, a great hotel on TripAdvisor, and a great digital camera on CNet - all from reading opinions of real people who have already used the product.</p>
+
+<p>But what about the myriad of other products that DON'T have a dedicated, trusted, portal on the web?</p>
+
+<p>If you aren't searching for a major consumer good on a website you already trust, you'll often get back junk pages full of affiliate links, biased reviews by one person, or endless forum posts that you don't have time to read and summarize.</p>
+
+<blockquote><p>What if there was a site that was <strong>community editable</strong> - just like Wikipedia - so that ANYBODY and EVERYBODY could create reviews for any product they wanted?</p></blockquote>
+
+<p>And what if it was completely free?</p>
+
+<p>What I have just described of course is BuyersVote.com - a community editable site where anybody can create and edit pages for any product, service, or company in the world.</p>
+
+<p>A trusted, portal site can now be formed for <strong>niche products</strong>, <strong>mainstream products</strong>, <strong>local products</strong>, <strong>individual service providers</strong> and anything else that people or companies want to rate and review.</p>
+
+<p>Imagine...</p>
+
+<ul>
+<li><p>Choosing a bank, credit card, or cell phone company based on thousands of votes from their real customers</p></li>
+<li><p>Doctors and hospitals making more informed purchases of medical equipment</p></li>
+<li><p>Accountants collaborating to choose the right software</p></li>
+<li><p>Finding the right lawyer, wedding planner, plumber, or realtor in your neighborhood based on reviews from actual customers</p></li>
+<li><p>Companies being able to choose the right vendors and suppliers based on past performance</p></li>
+<li><p>Mothers rating private schools</p></li>
+<li><p>Motorcycle riders rating biker bars</p></li>
+<li><p>Exotic pet lovers describing their favorite species of tarantula</p></li>
+</ul>
+
+
+<p>The sky is really the limit here.</p>
+
+<blockquote><p>People and businesses have millions of different interests, needs, and areas of expertise. Now they have a place to read and create trusted reviews on ANY topic they'd like.</p></blockquote>
+
+<p>They could even end up creating a way to rate things which aren't products (charities, blogs, speakers at a conference, etc). That is part of the beauty - BuyersVote so open ended that I have no idea WHAT people will do with it and that is great.</p>
+
+<p>YOU are in control on this site, YOU are the editor, and YOU can create whatever you'd like.</p>
+
+<h3>Quality Control And Reputation</h3>
+
+<p>We've also taken things one step further than Wikipedia by building a reputation system - a quality control if you will - right into BuyersVote.</p>
+
+<blockquote><p>When you make an edit or post a review on BuyersVote, other users will be able mark your contributions as helpful or not. Over time, you will build a reputation on BuyersVote (the little number by your username) which is an indication of how much the community trusts you.</p></blockquote>
+
+<p>This is great for a few reasons. First, it means that the community is "self-policing". If a malicious user tries to deface a page or insert their opinion where facts should go (a major problem on Wikipedia), the community will vote them down and their editing privileges will be removed.</p>
+
+<p>Second, it means that well trusted contributors will gain new privileges and will essentially be full administrators of BuyersVote. They will be able to delete pages, flag them, re-categorize them, combine them, etc.</p>
+
+<h3>Consumer Reports, Wikipedia, and the Better Business Bureau In One</h3>
+
+<p>One of the most exciting parts about this website for me personally is the idea that it can not only help good companies rise to the top and be rewarded - but also that it will ensure bad companies get punished and won't be able to keep taking advantage of new consumers.</p>
+
+<p>Almost everyone has had a BAD experience at some point in their life with a product or service. Maybe it was a piece of junk and they refused to honor the warranty. Maybe it was an individual or company who took your money and never delivered the result.</p>
+
+<p>Taking them to court can be a hassle, so you might be stuck - only able to warn your friends about it and share your story. The company might lose one or two new customers (depending on how many friends you have) but chances are they wouldn't feel the effect and would go right on doing the same thing to other people.</p>
+
+<p>But what if you had several MILLION "friends" who could now read about your experience online? What if when people typed the company's name into Google your review came up at the top? I bet that shady company might start to listen.</p>
+
+<blockquote><p>The next time a company or individual treats your poorly, do the world a favor and make a PUBLIC RECORD of your experience on BuyersVote.com. Let the world know how you were treated and you might just save someone else the same fate!</p></blockquote>
+
+<p>If we all work together we can actually eliminate unethical companies by making this information freely available. Bad companies will either have to clean up their act or go out of business once it's public knowledge how bad they really are.</p>
+
+<p>In fact, I suggest that when creating a page on BuyersVote you use the individual or company's REAL NAME. If their name is John Smith and they are a realtor, make a page for them called "John Smith (Realtor)". If they are a company, write their actual company name.</p>
+
+<p>Why? Because when someone does a Google search for this person or company's name, you want your review to come up first telling the world to beware.</p>
+
+<h3>Final Thoughts...</h3>
+
+<p>By no means should BuyersVote ONLY be a negative place for bad reviews. It should also be a place to highlight the BEST in any field and help people make the right buying decisions.</p>
+
+<p>The vast majority of people and companies in the world are good and I hope the site will reflect that. Overall I'm very excited for what BuyersVote.com will become.</p>
+
+<p>Remember that...</p>
+
+<ul>
+<li><p>BuyersVote is a "wiki" just like Wikipedia - meaning that anyone can create or edit a page on this site</p></li>
+<li><p>Anyone can write a review on this site</p></li>
+<li><p>BuyersVote is 100% FREE</p></li>
+<li><p>The next time you need some information on what to buy, do a search for it here first</p></li>
+<li><p>If you have a specific interest or experience (good or bad) with a certain product, service, or company - create a page for it</p></li>
+</ul>
+
+
+<p>Thank you so much, and I'll see you around BuyersVote!
+Brian Armstrong</p>
+
+<p>=====================================</p>
+
+<p>I'll be describing more about the site over the next few weeks on this blog such as:</p>
+
+<ul>
+<li><p>How I developed it quickly using Ruby on Rails and plugins</p></li>
+<li><p>How I got the web hosting for free</p></li>
+<li><p>The design</p></li>
+<li><p>The philosophy behind easy logins</p></li>
+<li><p>And more...</p></li>
+</ul>
+
+
+<p><strong>But for right now please do me a favor and <a href="http://buyersvote.com">click here to view the site</a>.</strong></p>
+
+<p><strong>Then please try <a href="http://buyersvote.com/pages/new">adding a page to the site</a>. It can be on any product or service you have used recently, perhaps an area you have a particular interest or specialized knowledge in, or someone you've had a particularly good/bad experience with.</strong></p>
+
+<p><strong>There is no login required to add a page, but if you want to login you can do so <a href="http://buyersvote.com/user_session/new">with an existing account</a> you already have (Google, Yahoo, Facebook, Aol, etc).</strong></p>
+
+<p>Please post feedback in the comments below on...</p>
+
+<ul>
+<li><p>Your first impression (whether bad or good)</p></li>
+<li><p>What is confusing or unclear about it</p></li>
+<li><p>What you like, what you dislike</p></li>
+</ul>
+
+
+<p>Thank you so much!</p>
+
+<p>Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+</feed>

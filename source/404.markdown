@@ -1,0 +1,17 @@
+---
+layout: page
+title: Whoops I couldn't find that page
+footer: true
+---
+
+You may want to try a search above, or [visit the homepage](/).
+
+Also, here are some recent posts:
+
+<div id="blog-archives" class="missing">
+  {% for post in site.posts limit: 10 %}
+  <article>
+    {% include archive_post.html %}
+  </article>
+  {% endfor %}
+</div>

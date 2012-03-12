@@ -1,0 +1,22 @@
+---
+layout: page
+title: Blog Archive
+footer: false
+---
+
+<div id="blog-archives">
+  <table>
+    {% for post in site.posts reverse %}
+      <tr>
+        <td class="year">
+          {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+          {% unless year == this_year %}
+            {% assign year = this_year %}
+            <h3><small><strong>{{ year }}</strong></small></h3>
+          {% endunless %}
+        </td>
+        {% include archive_post.html %}
+      </tr>
+    {% endfor %}
+  </table>
+</div>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: UniversityTutor.com | Brian Armstrong]]></title>
+  <link href="http://brianarmstrong.org/blog/categories/universitytutor-com/atom.xml" rel="self"/>
+  <link href="http://brianarmstrong.org/"/>
+  <updated>2012-03-12T10:52:39-07:00</updated>
+  <id>http://brianarmstrong.org/</id>
+  <author>
+    <name><![CDATA[Brian Armstrong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Something About Wednesdays]]></title>
+    <link href="http://brianarmstrong.org/blog/something-about-wednesdays/"/>
+    <updated>2010-11-20T22:24:29-08:00</updated>
+    <id>http://brianarmstrong.org/blog/something-about-wednesdays</id>
+    <content type="html"><![CDATA[<p>I thought I was imagining things.</p>
+
+<p>It seemed like on Wednesdays more tutors became paying customers on <a href="http://www.universitytutor.com">UniversityTutor</a>.</p>
+
+<p>So I ran a quick query and it turns out it's true.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/11/Screen-shot-2010-11-20-at-1.40.16-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/11/Screen-shot-2010-11-20-at-1.40.16-PM-500x332.png" alt="" /></a></p>
+
+<p>So....tutors are more than twice as likely to start paying on a Wednesday vs a Saturday?</p>
+
+<p>Seems like such a big difference I hardly believe it.  But there it is.</p>
+
+<p><strong>Any idea why this might be?  Would love to hear your theory in the comments below :)</strong></p>
+
+<p>Btw, here is the Ruby code I used to get the data.  The graph is created in Keynote.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Punishing Nigerian Scammers]]></title>
+    <link href="http://brianarmstrong.org/blog/punishing-nigerian-scammers/"/>
+    <updated>2010-11-08T02:52:07-08:00</updated>
+    <id>http://brianarmstrong.org/blog/punishing-nigerian-scammers</id>
+    <content type="html"><![CDATA[<p>I started getting complaints recently from some tutors on <a href="http://www.UniversityTutor.com">UniversityTutor.com</a> that they were receiving scam emails.</p>
+
+<p>I looked into it and the scam is the same one you commonly see on Craigslist and numerous other sites.  It usually goes like this:</p>
+
+<ul>
+<li><p>Someone contacts you pretending to be interested in your services (tutoring in this case)</p></li>
+<li><p>They offer to pre-pay a large amount up front and send you a money order</p></li>
+<li><p>Next, they say they've changed their mind and would like a refund (minus some small fee for your trouble)</p></li>
+<li><p>You refund them with real money before realizing the money order is fake</p></li>
+</ul>
+
+
+<p>These scams all have some common themes which make them fairly easy to spot, but they can still catch you unaware if you haven't seen it before.  There are some red flags.  For example, the "buyer"...</p>
+
+<ul>
+<li><p>Usually resides in a foreign country</p></li>
+<li><p>Doesn't write/speak English very well</p></li>
+<li><p>Wants to be refunded via Western Union</p></li>
+<li><p>Is reluctant or unwilling to meet in person or talk on the phone</p></li>
+</ul>
+
+
+<p>Western Union seems to be used in most of these scams because the person can pick up the money in any country with just a confirmation code.  And since they're in a foreign country <strong>you have ZERO legal recourse to go after them</strong>.  The U.S. isn't going to be extraditing anybody for for less than probably $100,000 and most of these scams are for $1,000 or less.</p>
+
+<p>I would be curious to know what percent of Western Union's business is from people caught up in these scams (and people laundering money).  It wouldn't surprise me at all if it's 25% or 50%.  Their fee seems to be high enough that you're unlikely to use it unless anonymity was essential to you.  If that is true, then Western Union is a prime target for a class action lawsuit - and I hope somebody does take them down.  They're enabling a worldwide network of criminals, and profiting from it, which makes them very uncool in my book.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/11/Screen-shot-2010-11-07-at-5.19.39-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/11/Screen-shot-2010-11-07-at-5.19.39-PM-500x305.png" alt="" /></a></p>
+
+<p>Anyway, I checked out my Google Analytics stats and 1,759 people from Nigeria visited the site last month, which is a little strange given that I have no tutors listed there.</p>
+
+<p>There could be scammers residing elsewhere too, but this jumped out at me as new and probably one source of the problem.</p>
+
+<h2>How To Get Scammers Off Your Site</h2>
+
+<p>So here are some steps I've taken (or looked into) for blocking these guys - and how scammers can get around them.  You're never going to make it completely impossible for them - the goal is just to make it difficult enough so they'll spend their time elsewhere.  They are listed roughly in order of difficulty to implement.</p>
+
+<h2>1. Captchas</h2>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/11/captchas.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2010/11/captchas.jpg" alt="" /></a></p>
+
+<p>These are everywhere online now and a great first start.  They don't prevent humans from messing with your site, but they do block computers (bots or automated scripts that people write).  And this is important because bots can spam hundreds of thousands of users in a few hours on your site before you catch it, whereas a human can only spam a few dozen people in an hour.  Captchas are your first line of defense.</p>
+
+<p><strong>How they can beat it</strong>: hire dumb people to fill out captchas all day.  I think the going rate for this is maybe $0.05 to fill out a captcha, which isn't much - but at least it's costing them <em>something</em> now and they can't just automate the whole thing.  This one step alone will reduce probably 90% of the spam on your site.</p>
+
+<h2>2. Rate Limiting</h2>
+
+<p>The next step is to setup some checks to limit the number of messages any given user can send in a day.  Right now if a client tries to contact more than 15 tutors in a day, they'll get a message saying they are sending too many messages and need to slow down.</p>
+
+<p><strong>How they can beat it:</strong> they can create new accounts.  If a new email address is needed for this (which it should be), then this takes them another few minutes to setup a new email address at Gmail or Hotmail (who use their own captchas).  Not a huge deal, but remember - the goal is just to waste enough of their time so they eventually give up and go somewhere else.</p>
+
+<h2>3. Tell All Your Users What To Watch Out For</h2>
+
+<p>Low tech, but effective.  Every time a student contacts a tutor through the site, I've included a note in the email warning them about these scams and linking them to <a href="http://www.universitytutor.com/about/scams">this information page</a> if they want to read more.</p>
+
+<p>If you use Craigslist, you've probably seen similar warnings all over their site.  An educated user base is a great defense.  The only downside is that it uglies up your website and your users still have to read the stupid emails, so it wastes their time even if they don't actually fall for the scam.</p>
+
+<p><strong>How they can beat it:</strong> they can't really prevent you from educating your user base - it just means they now have to contact 10x as many people to find one who will fall for it.</p>
+
+<h2>4. Geocode Their IP Addresses</h2>
+
+<p>You can map an IP address to a country, and block entire countries from using your site.  This worked well in my case because I could block Nigeria (I have no real tutors listed there so no loss).  However, this doesn't work as well if your scammers are mixed in the same countries with your real users.  IP address geocoding isn't exact, so you could accidentally block your real users along with the scammers.  It's important to remember that an IP address does not correspond to one person or one computer (in fact thousands of people can share the same IP address behind a university or corporate firewall) so it's not an all encompassing solution.</p>
+
+<p><strong>How they can beat it: </strong>if they find out you're doing it, they can proxy their IP address through another country or spoof it (which again, takes a little more time and possibly money).</p>
+
+<blockquote><p>This brings me to an important point: if you are going to block them, <strong>don't TELL them you are blocking them</strong>.  Try to make it totally transparent to the user.  For example, if they come to your site and see a warning message saying "UniversityTutor is not available in your country" or "you are sending messages too fast", then they know they've been caught and will start trying the above mentioned solutions.  Once they see the error message go away, they know their solution has worked and they'll continue spamming.  Don't give them any information to test solutions!</p></blockquote>
+
+<p>So if I detect the user is spamming, I still show the exact same success message back to them (your message has been sent!).  I just don't actually send the message in the background.  This way they happily go on their way, wasting their time filling out forms on my site all day long (which do nothing).</p>
+
+<p>For some reason I really like this idea that spammers are like mice on a treadmill, working away on my site all day without realizing they are going nowhere.  I even thought about starting a dashboard showing how many spammers I've tricked into filling out completely useless forms on my site, but I haven't yet.</p>
+
+<h2>5. Hidden Cookies</h2>
+
+<p>In addition to the rate limiting mentioned above, you can also set another random cookie which survives the user's session on your site.  This way if they logout and log back in with a new account they've created (creating lots of new accounts to get around your rate limiting) you can still track how many messages they are sending overall and not send more messages.  As mentioned above, don't tell them when their message isn't sent.</p>
+
+<p><strong>How they can beat it:</strong> they can simply clear their browser cookies.  The key here is that if they don't know something is wrong, they may not think to do it.  Even if they do, it adds one more step to they process.</p>
+
+<h2>6. <a href="http://samy.pl/evercookie/">Evercookie</a></h2>
+
+<p>This is a neat little hack that a programmer put together.  It uses about 7 different methods to store cookie data all over the user's browser and computer.  Some of them are very clever and hard to detect.  If one or more of the storage mechanisms gets deleted, Evercookie recreates all of them the next time it runs.  The result is a persistent browser cookie that is VERY difficult to get rid of (you can't just clear your cookies).  As with many tools, this one could potentially be abused - but here is a case where it ends up working for good (blocking scammers).</p>
+
+<p><strong>How they can beat it:</strong> they'd have to spend quite a bit of time figuring out how to prevent it.  I've heard some reports that Google Chrome's incognito mode is safe from it, but I've never tested it.  I suppose they could just boot up a new virtualized operating system every time, but in general, this is probably beyond what most scammers would be willing to do.</p>
+
+<h2>7. <a href="http://panopticlick.eff.org/">Panopticlick</a></h2>
+
+<p>Panopticlick attempts to identify an individual user of a website based on a hash of all their public user data.  Surprisingly, it claims to work about 85% of the time.  This could accidentally block a few of your legitimate users (false positives) in the worst case, but it could be worth it depending on how bad your spam problem is.</p>
+
+<p><strong>How they can beat it: </strong>they'd have to adjust something in their browser settings before each message to keep trying to get a unique identifier.  They could run out of settings after a while.  If anyone knows of this being used in production anywhere, please let me know in the comments.</p>
+
+<h2>8. Bayesian Filters</h2>
+
+<p>Currently the nuclear weapon in the fight against spam (the most technically sophisticated, but also the most powerful) - this applies equally well to blocking scam messages.  This is what Gmail uses for their spam filter, and it works quite well.</p>
+
+<p>You'll need a decent sample size of data (scam messages and real messages separated) and it will improve/learn over time.  You don't even need to write the whole thing from scratch.  There are some nice <a href="https://github.com/search?q=bayesian&amp;type=Everything&amp;repo=&amp;langOverride=&amp;start_value=1">open source libraries</a> that you can drop right in, depending on what language you are using.</p>
+
+<p><strong>How they can beat it: </strong>they'd have to start changing the messages they send to not get caught in the filter.  This might include learning to speak English correctly, not using the word "money order" etc - which are non-trivial.  The algorithm would learn over time so they'd have to continually change it up.  Their weak point is their message: they are always going to have to say something slightly different than legitimate users.</p>
+
+<h2>Conclusion</h2>
+
+<p>The war against scammers is an ongoing game of cat and mouse that is never going to be completely over.  They might be annoying, but luckily they are just that - annoying - and rarely actually trick people out of money now days.  As people become more internet savvy (and start to recognize the words "Western Union" as a red flag), scammers will become less and less important.</p>
+
+<p>Did I miss any other techniques?  Please let me know in the comments!</p>
+
+<p>Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[UniversityTutor Races Past 200 Paying Customers]]></title>
+    <link href="http://brianarmstrong.org/blog/universitytutor-races-past-200-paying-customers/"/>
+    <updated>2010-09-07T06:50:20-07:00</updated>
+    <id>http://brianarmstrong.org/blog/universitytutor-races-past-200-paying-customers</id>
+    <content type="html"><![CDATA[<p>UniversityTutor.com hit a little milestone this past week: 200 paying tutors!</p>
+
+<p>At $10/month each this might not sound like a lot (and it really isn't) but for me it was pretty cool because this was my original goal for myself way back <a href="http://brianarmstrong.org/posts/from-new-idea-to-business-launch-in-two-weeks-with-pictures/">when I first started the site</a>, more than 2 years ago.</p>
+
+<p>In fact, (this is really silly but) during that entire time I've had this little stickie note on my computer desktop with that goal written down:</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-10.50.47-PM.png" alt="" /></p>
+
+<p>When I started I thought it would take maybe 6 months tops to reach this.  Now it's finally done - it only took about two years longer to accomplish than I thought it would! :)  (With some nice <a href="http://brianarmstrong.org/posts/universitytutor-revenues-fall-by-50/">setbacks</a> along the way.)</p>
+
+<p>My daily stats dashboard:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/monthly_report.jpeg"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/monthly_report-500x375.jpg" alt="" /></a></p>
+
+<p>I took the occasion to implement a change I've been thinking about for a while on the site: making the free account unlimited.</p>
+
+<p>Below is a summary of the changes and some screenshots of the new signup process I recently deployed.</p>
+
+<p><strong>Old business model:</strong></p>
+
+<ol>
+<li><p>Tutor signs up</p></li>
+<li><p>First 3 times they are contacted on the site it is free</p></li>
+<li><p>After the third contact, I ask them to upgrade (conversion rate around 1.8%).  Those tutors who don't upgrade can no longer use the site.</p></li>
+</ol>
+
+
+<p><strong>New business model:</strong></p>
+
+<ol>
+<li><p>Tutor signs up</p></li>
+<li><p>Right after filling out their profile they are asked to choose a free listing or featured listing</p></li>
+<li><p>Featured listing gives you top placement in search results, featured on the homepage, etc (conversion rate currently at 4%).</p></li>
+</ol>
+
+
+<p>Main difference is that now you can keep the free listing forever if you want (you never get kicked off).  Instead, the incentive to upgrade is getting more tutoring inquiries with a featured listing (show up on homepage, first in search results, badge on your profile, etc).</p>
+
+<p>Here are some screenshots of the new signup flow:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.08.27-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.08.27-PM-500x367.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.09.04-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.09.04-PM-500x367.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.10.21-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.10.21-PM-500x367.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.10.31-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/Screen-shot-2010-09-06-at-11.10.31-PM-500x367.png" alt="" /></a></p>
+
+<p>You can see all the benefits listed on the final signup page.  This is the most important one.</p>
+
+<p>And here here are some examples of "featured" tutors:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/featured1.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/featured1-500x367.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/09/featured2.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/09/featured2-500x367.png" alt="" /></a></p>
+
+<p><strong>Random thoughts on the change:</strong></p>
+
+<ul>
+<li><p>I was sort of worried about making the free listing unlimited because it creates less of an incentive for tutors to upgrade.  But so far this looks like it was nothing to worry about - conversion rate to paid is actually better (need more data to say for sure here).</p></li>
+<li><p>I think the new signup flow where it asks them to upgrade from the beginning (but doesn't prevent them from doing it later) is mostly responsible for this.  Tutors no longer have to wait for their "free trial" to expire for me to ask them to upgrade.</p></li>
+<li><p>I changed the wording from a "Free Account" vs a "Pro Account"  to a "Free Listing" vs a "Featured Listing".  This wording change seems to work better here since "pro" is an ambiguous term, but a "featured listing" makes it clear exactly what they are paying for.</p></li>
+<li><p>I also added language to the page saying "Featured listings receive 4x as many inquiries as free listings on average" which is true (I ran some numbers).</p></li>
+<li><p>In large part, this new signup flow is modeled after the <a href="http://www.Sortfolio.com">Sortfolio.com</a> signup flow which I really like.  So they deserve a shout out here.</p></li>
+</ul>
+
+
+<p>If you think about the freemium business model as a spectrum (crude diagram below), then this change is definitely a shift to the left (towards more free):</p>
+
+<p>[100% Free -------------------- Freemium -------------------- 100% Paid ]</p>
+
+<p>But it seems to have worked well here in earning more (ironically).  The tricky part about Freemium is where to draw the line between free and paid and the decision is different for every business.  I read a great piece of advice recently which said (I'm paraphrasing) "If your site benefits from network effects (basically that the value of the site grows with the number of users) then you should give more things away for free, and if it doesn't benefit from network effects then you should make more things paid."</p>
+
+<p>That advice was helpful to me in this case - a tutoring directory definitely seems like it has some network effects.  I didn't want to be losing those ~98% of tutors from the site who tried it out but didn't want to upgrade.  This allows me to capture both groups and build a bigger site.</p>
+
+<p>The site is growing even faster now that I made this change and it's already over 220 paying tutors as I write this.  So this may turn out really well (too early to say for sure).  What are your predictions on this change?</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+
+<p>P.S. To read up on the whole UniversityTutor story, you can <a href="http://www.startbreakingfree.com/category/universitytutor-com/">view the category page here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How To Get Your Customers To Refer Their Friends]]></title>
+    <link href="http://brianarmstrong.org/blog/how-to-get-your-customers-to-refer-their-friends/"/>
+    <updated>2010-04-25T19:41:06-07:00</updated>
+    <id>http://brianarmstrong.org/blog/how-to-get-your-customers-to-refer-their-friends</id>
+    <content type="html"><![CDATA[<p>I was reading <a href="http://bit.ly/9x5THt">this presentation by the Dropbox.com Founder</a>, Drew Houston, the other day and the most interesting part about it was that most of their marketing with Adwords and conventional approaches completely failed.</p>
+
+<p>Yet Dropbox has over 4 million users.  So how did they do it?</p>
+
+<p>Apparently it was almost entirely word of mouth - but they did it in a smart way.</p>
+
+<p><a href="http://bit.ly/9x5THt"><img src="http://s3.amazonaws.com/oldbloguploads/2010/04/Screen-shot-2010-04-25-at-12.12.31-PM.png" alt="" /></a></p>
+
+<p>You can click above to see the full set of slides (they are worth reading).  But one important point that stood out to me was the 2-sided incentive for referrals that he mentioned above.</p>
+
+<p>I logged in to Dropbox to see what it looked like and here it is:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/04/Screen-shot-2010-04-25-at-12.16.51-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/04/Screen-shot-2010-04-25-at-12.16.51-PM.png" alt="" /></a></p>
+
+<p>The key here is that he is giving them more <strong>storage</strong> as the reward and not <strong>money</strong>.  I like this for a few reasons:</p>
+
+<ol>
+<li><p>It's closer to what Dropbox users actually want.</p></li>
+<li><p>It's cheaper for Dropbox to give this away because they are dealing in trade.</p></li>
+</ol>
+
+
+<p>It's sort of like if you ask your friend to give you a ride to the airport, and when you get there you pull out your wallet and give him $10.  He'd probably feel insulted - it cheapens the act of kindness.  But if you give him a ride the next time he needs one, or return the favor in some other way that isn't money, then it's all good.</p>
+
+<p>Sometimes money isn't the best gift.</p>
+
+<p>So with this in mind I started thinking about how I could improve my own site, <a href="http://www.universitytutor.com">UniversityTutor</a>.  My current referral program pays tutors $3/month to refer other tutors.  But those other tutors not only have to signup, they also have to upgrade - which only 1-2% of them do.  So it's tough for tutors to make much doing this, and $3 isn't very motivating.</p>
+
+<p>This weekend I took a few hours to change UniversityTutor's referral program to more of a Dropbox model.  The free account on UniversityTutor is based on the number of job requests you get (first 3 are free, after that you can upgrade) instead of storage like Dropbox.  So now when a tutor refers a friend they both get another free job request up to a maximum of 20.</p>
+
+<p>It will be interesting to see if this is more effective than money.  My hunch is that it will be - when tutors reach the end of their free account, the conversation in their head is much more around how to get more tutoring jobs, not how to get $3.  What do you think?</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How To Get More Links To Your Website With User Badges]]></title>
+    <link href="http://brianarmstrong.org/blog/how-to-get-more-links-to-your-website-with-user-badges/"/>
+    <updated>2009-10-22T15:45:14-07:00</updated>
+    <id>http://brianarmstrong.org/blog/how-to-get-more-links-to-your-website-with-user-badges</id>
+    <content type="html"><![CDATA[<p>I had an interesting conversation with <a href="http://www.quicksprout.com/">Neil Patel</a> earlier this week.  I called him to get some advice on <a href="http://www.UniversityTutor.com">UniversityTutor.com</a> and how I could take it to the next level.  Neil is a really successful guy in the web business space, so I figured it'd be a good brainstorm.</p>
+
+<p>His biggest advice was to get more incoming links to the site.  This is probably the most important thing you can do to rank well in search engines, because Google (and others) place a high value on how many sites link to you.  It's also a great barrier to entry against competitors because an established site will have lots of incoming links built up over time and it will be very difficult for a new startup to outrank them in search engines.</p>
+
+<p>I'm already ranking well for some local searches (such as <a href="http://www.google.com/search?q=biology+tutor+austin&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-US:official&amp;client=firefox-a">biology tutor austin</a>)  but not so well in other (such as <a href="http://www.google.com/search?hl=en&amp;safe=off&amp;client=firefox-a&amp;rls=org.mozilla%3Aen-US%3Aofficial&amp;hs=YBf&amp;q=find+a+tutor&amp;aq=f&amp;oq=&amp;aqi=g-s10">find a tutor</a>).  This is largely due to how long those sites have been around and how many incoming links they have.</p>
+
+<p>So obviously getting more links is good, but HOW was the big question.  Neil's advice was to follow the same model <a href="http://www.Yelp.com">Yelp.com</a> used with their <a href="http://www.yelp.com/bling">user badges</a>.  This lets Yelp users display their reviews on their own blog or website.  They get to show off their work, and Yelp get's an incoming link.  You just have to provide users with a little snippet of code and an incentive to paste it into their site.</p>
+
+<p>So a day later I had launched tutor "bling" that my tutors can add to their own websites (blogs, school websites, facebook profiles, etc).  Since a lot of the tutors are university students, it would be particularly great if I got some incoming .edu links (these carry a particularly high value) but we'll have to see on that.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/10/Picture-4.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/10/Picture-4.png" alt="Tutor Bling" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/10/Picture-5.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/10/Picture-5.png" alt="Picture 5" /></a></p>
+
+<p>As an added incentive I built in my <a href="http://www.universitytutor.com/about/affiliate">UniversityTutor affiliate program</a> so all the pre-generated links contain a tutor's affiliate code (they can track it using the stats at the bottom).  Using this they can not only advertise their profile, but also get paid for any new tutors they refer.</p>
+
+<p><strong>One More Idea....</strong></p>
+
+<p>This wasn't related to my conversation with Neil, but I thought about it after reading a story on Hotmail.com.  Hotmail got popular FAST (something like 2 million users in 18 months) almost entirely because they forced you to include a line in the bottom of every email that said "Get A Free Email Account At Hotmail.com", or something to that effect.</p>
+
+<p>There are over 100 contact messages going through UniversityTutor.com every day now, so I decided to add a line to the bottom of their contact emails reminding them of the opportunity to refer new tutors and get paid for it.  You can see the new line in the email below.  This is more for word of mouth than SEO because I don't think Google will index links from someone's Facebook profile.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/10/Picture-13.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/10/Picture-13.png" alt="Referral Email" /></a></p>
+
+<p>So what do you think, will it work?  Here is a graph of search engine traffic to UniversityTutor.com over the last three months (traffic from search engines makes up about 50% of total traffic).</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/10/Picture-6.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/10/Picture-6.png" alt="Search Engine Traffic" /></a></p>
+
+<p>It will probably take a month or two to have any effect (if it works), but we'll see!</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+</feed>

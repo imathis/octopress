@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Productivity | Brian Armstrong]]></title>
+  <link href="http://brianarmstrong.org/blog/categories/productivity/atom.xml" rel="self"/>
+  <link href="http://brianarmstrong.org/"/>
+  <updated>2012-03-12T10:52:39-07:00</updated>
+  <id>http://brianarmstrong.org/</id>
+  <author>
+    <name><![CDATA[Brian Armstrong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[TurboTax Alternatives]]></title>
+    <link href="http://brianarmstrong.org/blog/turbotax-alternatives/"/>
+    <updated>2010-04-13T07:06:11-07:00</updated>
+    <id>http://brianarmstrong.org/blog/turbotax-alternatives</id>
+    <content type="html"><![CDATA[<p><strong>Update</strong>: Yes, I'm aware that ads for TurboTax are showing up on this article occasionally, and I think it's awesome :)</p>
+
+<p>Tax time is definitely a pain.</p>
+
+<p>The U.S. tax code is a lengthy document (over 50,000 pages at last count) that few people can really understand (including our current <a href="http://en.wikipedia.org/wiki/Timothy_Geithner#Tax_scandal">Secretary Of The Treasury</a> which is somewhat frightening).</p>
+
+<p>It's riddled with puzzling (and at times hilarious) questions such as these gems which I encountered over the weekend:</p>
+
+<blockquote><p>Did you rent a farm and receive part of the crop instead of cash for the rent?</p></blockquote>
+
+<p>Why yes I did!  I'm sure glad someone at the IRS thought to include this question otherwise I might have missed it.  And this one:</p>
+
+<blockquote><p>Enter the amount of any gambling losses, but only to the extent of gambling winnings. It is important to keep an accurate diary or similar record of your gambling winnings and losses.</p></blockquote>
+
+<p>Umm....ok, nice to see the government giving gambling advice.</p>
+
+<p>But I guess I can't get too upset at the government acting very...well, government like.  They don't know any better.</p>
+
+<p>But a private company...well that's another story.  And this is what I always found especially infuriating about Intuit's TurboTax product.  It's not just that it's a bad piece of software - it's that it's bad yet so darn successful!</p>
+
+<ul>
+<li><p>It gets <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.com%2Fs%3Fie%3DUTF8%26x%3D0%26ref_%3Dnb%5Fsb%5Fnoss%26y%3D0%26field-keywords%3Dturbotax%26url%3Dsearch-alias%253Daps&amp;tag=httpwwwstartb-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=390957">TONS of negative reviews</a> on Amazon.com, but since there are over 40 different versions listed (they put up new ones each year) their bad reviews keep getting pushed down.</p></li>
+<li><p>It has "designed obsolescence" - which means they went out of their way to break it every year so you'd have to buy it again.</p></li>
+<li><p>It's user interface looks like it was designed by programmers and accountants instead of normal people.</p></li>
+</ul>
+
+
+<p>This is why I was so excited to see someone finally come along and clean TurboTax's clock.</p>
+
+<p>The last two years I've used <a href="http://www.TaxACT.com">TaxACT.com</a> and it is a breath of fresh air.  It is fast, clean, simple, and makes sense out of incomprehensible IRS documents (perhaps their most impressive feat).</p>
+
+<p>By the way, I'm not getting paid to recommend them.  They are just that awesome that I wanted to tell people about it.</p>
+
+<p>Best of all, it is way cheaper than TurboTax.  Filing your federal return is FREE.  If you want to do a state return it's just $9.95.</p>
+
+<p>Overall, I'm so impressed with these guys - they nailed a great freemium product, probably put up with TONS of hassle getting it to work with the IRS, and have a product that really beats the pants off TurboTax.</p>
+
+<p>Even if you have been using TurboTax for YEARS, it's time to BREAK the <a href="http://www.youtube.com/watch?v=R706isyDrqI">addiction</a>, stop paying your money to Intuit each year for their inferior product, and make the switch to <a href="http://www.TaxACT.com">TaxACT.com</a>.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/04/turbotax_fail_3.jpg" alt="" /></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/04/turbotax.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2010/04/turbotax.jpg" alt="" /></a></p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+
+<p>P.S. Doing your taxes is way easier if you've been doing your <a href="http://brianarmstrong.org/posts/how-to-understand-and-create-a-personal-financial-statement-each-month-in-5-minutes/">financial statements</a> each month!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Stop Talking About It And Just Build It]]></title>
+    <link href="http://brianarmstrong.org/blog/stop-talking-about-it-and-just-build-it/"/>
+    <updated>2009-07-22T20:08:08-07:00</updated>
+    <id>http://brianarmstrong.org/blog/stop-talking-about-it-and-just-build-it</id>
+    <content type="html"><![CDATA[<p>Saw this great video about Facebook's development team today.  Got me thinking...more companies need to think like this.  Focused, uninterrupted work is the greatest gift you have...but how often do we really do it?</p>
+
+<p>Generally speaking, if you are answering your phone, opening snail mail, chatting, emailing, even talking with other people at all...you are NOT working.  Sorry to say it but you're not.  Work is when you are alone, by yourself in your room, with all communication devices turned off.  20 minutes later you'll actually be in the zone and then you're really working.  That's when you get real writing done.  That's when you can strategize about the next moves for your company.  That's when you can design great marketing.  That's when you can design great art or great engineering.  That's where breakthroughs happen.  That's when you see connections between completely different ideas and how they could be better together.  That's when you really produce instead of just reacting to things all day.</p>
+
+<p>It's a fragile state that you can be broken out of easily too with any sort of interruption.  Doing this type of intense mental focus isn't easy, and it's quite rare to do it for 8 hours a day (it's like sprinting for 8 hours a day - you'll need a long recovery period).  But it's totally reasonable to do this for maybe 3 or 4 hours a day, staggered with periods of rest.  Most people have huge mental routines to prepare themselves for these intense sessions, and we avoid them psychologically.  Ok...first get coffee, then browse headlines, ok finally settling in for some work...put on favorite soundtrack.....avoid a dozen other temptations...and GO.  And usually every 90 minutes or so you'll have to break out of that state and take a mental breather for 20 minutes.  You need the breaks to recover mentally and physically to keep blood sugar up etc.  It's a mental marathon.  But it's also the only way to get real work done.</p>
+
+<p><a href="http://www.facebook.com/video/video.php?v=238358730483&amp;ref=nf">Link to the video here.</a></p>
+
+<p>Try to have more of these intense mental sessions every day on something you love and have the potential to one day be the best in the world at.  It could be practicing guitar, or it could be building the next great web company.  Stop talking about doing something and go do it today in an intense, focused session.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How To Make Your Business More Passive]]></title>
+    <link href="http://brianarmstrong.org/blog/how-to-make-your-business-more-passive/"/>
+    <updated>2008-11-09T22:39:41-08:00</updated>
+    <id>http://brianarmstrong.org/blog/how-to-make-your-business-more-passive</id>
+    <content type="html"><![CDATA[<p>If your goal is to make a passive business, sometimes you have to find creative ways to <em>automate</em> tasks which would otherwise be performed by a human being.</p>
+
+<p>Case in point: someone recently started spamming my <a href="http://www.universitytutor.com/">tutoring site</a> with messages like these:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2008/11/picture-61.png"><img src="http://s3.amazonaws.com/oldbloguploads/2008/11/picture-61.png" alt="" /></a></p>
+
+<p>This type of scam shows up often on CraigsList.com and it just recently hit my site for the first time.</p>
+
+<p>By the way, if you haven't seen it before it goes like this: the person makes an offer to pre-pay a large amount up front.  They send you a phony money order.  After you've received the fake money order they say they are going to have to cancel and ask for a partial refund.  You send them a refund (with real money), and a week later the bank comes back to inform you that the money order you tried to deposit was fake.</p>
+
+<p>You can spot these because usually (1) the person is out of country (2) the grammar is poor (3) they will refuse to talk to you on the phone (3) they want to make a large payment up front.</p>
+
+<p><strong>Manual Process vs. Automated Process</strong></p>
+
+<p>It's annoying for the tutors to receive these messages, and it might be tempting at this point to create a "manual review" process where a human being would look at each tutor request before it gets sent.</p>
+
+<p>This however, wouldn't be very passive.</p>
+
+<p>Instead, you can often use your "community" of users to be a police force for you.  Wikipedia (and a number of other sites) have employed this model very successfully with a self policing community.</p>
+
+<p>The solution I came up with was to add this line to the end of all emails:</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2008/11/picture-71.png"><img src="http://s3.amazonaws.com/oldbloguploads/2008/11/picture-71.png" alt="" /></a></p>
+
+<p>Then I built a little system so that if enough people report the spammer, the account will get deleted and they won't be able to bother anyone else.</p>
+
+<p>Some interesting things to think about when building a system like this:</p>
+
+<ol>
+<li><p>If you notify the spammer that their account has been banned/blocked.  They will probably start using new email addresses or be more motivated to get around your system.  Instead, I set it up so the spammer gets NO INDICATION that their messages are being blocked.  That means they will happily go about trying to send new messages and working hard...UTTERLY WASTING THEIR TIME as punishment.  Maybe this subtle form of punishment will eventually cause them to reconsider their line of work since it will accomplish nothing.</p></li>
+<li><p>You don't want to ban the person if just one person flags them as a spammer.  The tutor could use this maliciously if they want to avoid getting negative reviews or block the user for any other reason.  Therefore you must try to get a "consensus" from the community by getting a few different opinions.  The exact right number is debatable, but the more people mark them as a spammer the more confident you can be about banning them.</p></li>
+</ol>
+
+
+<p>Most business owners don't think about the cost of answering one extra phone or email.  "It will just take a second" they say.  It makes them feel busy (which is very different than being productive) to solve easy problems.  Instead, they should be working "on" their business, not "in" it.</p>
+
+<p>If you want to make a truly passive business, you need to put systems in place to handle 99% of whatever might happen automatically.  Even if your automated solution works only 90% as well as the human solution, it will still be worth it.  Every phone call or email DOES count, because you want to scale your business up to 100 or 1,000 times it's current level without hiring any employees.  Hiring employees isn't the answer (managing/hiring/firing them is just another job and isn't passive).  Instead, focus on building business systems to automate as many tasks as possible.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+
+<p><strong>What part of your business do you wish you could automate?  Post a comment below.</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The News Is An Utter Waste Of Time]]></title>
+    <link href="http://brianarmstrong.org/blog/the-news-is-an-utter-waste-of-time/"/>
+    <updated>2008-05-07T16:50:32-07:00</updated>
+    <id>http://brianarmstrong.org/blog/the-news-is-an-utter-waste-of-time</id>
+    <content type="html"><![CDATA[<p>Hey Folks,</p>
+
+<p>This is going to be my first video blog.  I'm trying out a new format.  Please let me know which one you like better (written or video) in the comments!</p>
+
+<p>**A couple things I noticed on the video that I think could be improved:  I'd like to keep it shorter and denser with information.  Also I realized that I never sound very EXCITING when I talk.  I think doing more video blogs over time I'll get better.  Probably a combination of video and some written outline or graphs could be a good combination.  Let me know what you think!</p>
+
+<p>Here is the written equivalent...**</p>
+
+<p>I've practiced this for a long time myself, but it just occurred to me again the other day and I thought I'd post about it: in general the mainstream news (television, radio, and print) is an utter waste of your time.  And worse than that, it's probably preventing you from becoming successful.</p>
+
+<p>There are a few reasons why...</p>
+
+<p><strong>1. The News Is Full of Negative Stuff</strong></p>
+
+<p>The old saying in media is true that "if it bleeds it leads".  The news tends to overreport negative events like murders and crashes because it gets ratings.  You can't help but have these things affect you over time, and it slowly but surely starts to make you think the city is dangerous, or that the world is hostile, or that opportunity isn't out there.  All of course are incorrect, but whatever you spend time watching and reading becomes your reality.</p>
+
+<p><strong>2. The News Is Designed To Scare You As Entertainment</strong></p>
+
+<p>The story of the little girl who was kidnapped is addictive to watch.  It robs you of your time.  The story is designed just like an entertainment show, to keep you hooked waiting for what will happen next.</p>
+
+<p>Some people would say its important to watch this because it gives you valuable safety information.  We can prove to ourselves that this isn't true by looking at the statistics.</p>
+
+<p>Statistically, you are very unlikely to get kidnapped, die in a plane crash, or to choke on a small plastic toy.  Yet this is what gets the media attention.  I wrote about this a <a href="http://brianarmstrong.org/posts/">while back</a>, how humans are bad at estimating risk.  After 9/11 many people were scared to fly, and this perception caused about 1.4 million people to drive instead of fly to their holiday destination, effectively killing about 1000 people in additional auto fatalities (you're much more likely to be killed in a car crash than a plane crash).</p>
+
+<p>The news isn't giving you valuable safety information on things that are likely to kill you (it's boring to report on heart disease), its designed to scare and keep you watching.</p>
+
+<p><strong>3. It's Biased</strong></p>
+
+<p>I couldn't believe it the other day when I accidentally spent a few minutes on Fox News and then on CNN as I flipped through the channels.  Fox news was essentially crucifying Obama while CNN was vigorously defending him.  Of course not directly, but by the guests and hosts on the show.</p>
+
+<p>I couldn't believe how blatant it was.  In theory the news should just report the facts and let us make up our own minds, but they (mainstream media) can't even do that today it seems.</p>
+
+<p><strong>4. It's For The Most Part, Irrelevant</strong></p>
+
+<p>99% of the stories you see on the news can never, and will never affect your life, period.</p>
+
+<p>The reason is that its tailored to a wide audience.  So you will have to wade through all sorts of junk you don't care about that wastes you time to get 1 or 2 nuggets of useful information.</p>
+
+<p><strong>The Solution</strong></p>
+
+<p>So if mainstream news is a colossal waste of time that is polluting your brain with negative thoughts, what is the solution?</p>
+
+<p>The first step is to spend as little time on it as possible.  Reading a book on marketing could make you an extra $100,000 this year whereas watching a show on a tornado 1000 miles away will never affect your life one bit.</p>
+
+<p>So, I spend about 20 seconds (literally) per day reading the news.  This is no joke.</p>
+
+<p>I do it with a new aggregator service that delivers articles to my inbox (I use Yahoo News, but Google News is great too).  I just scan the first 5 headlines or so (they are ordered by importance) and delete.  If I see something that is interesting or could really affect me (which is rare), I read deeper.  This is better for a few reasons...</p>
+
+<p>Its fast.  With about 20 seconds per day of scanning headlines, you can know enough to know what's happening in the world.  At least as much as any reasonable, intelligent person needs to know.</p>
+
+<p>Its unbiased.  News aggregator services send out news based on what is being said in hundreds or thousands of news sources.  You get the most important based on collective thought, not one person's agenda.</p>
+
+<p>Its more targeted.  You can get email updates on specific areas like business, sports, or whatever is important to you.</p>
+
+<p>Try it out.  And with all your extra free time you should start reading and watching material that is WAY better than the news.  You should be watching speeches by important innovative leaders in your field, blogs in areas that interest you, and listening to audio books in your car instead of the radio.</p>
+
+<p>In fact, every morning while I'm eating breakfast I don't read the newspaper.  I read blogs (in <a href="http://reader.google.com">Google Reader</a>) like <a href="http://www.37signals.com/svn/">Signal vs. Noise</a>, <a href="http://sethgodin.typepad.com/">Seth Godin's Blog</a>, and <a href="http://www.fourhourworkweek.com/blog/">The Four Hour Work Week</a> to fill my mind with relevant, though provoking, educational, motivating material.  And then I go take on the day.  Because of this I'm much more effective during the day than if I'd started it by watching a story on Britney's trip to rehab.  Blogs in many ways are the new unbiased, educational, positive newspapers for successful people I think.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Single Most Important Thing To Do In 2008]]></title>
+    <link href="http://brianarmstrong.org/blog/the-single-most-important-thing-to-do-in-2008/"/>
+    <updated>2007-12-16T19:09:25-08:00</updated>
+    <id>http://brianarmstrong.org/blog/the-single-most-important-thing-to-do-in-2008</id>
+    <content type="html"><![CDATA[<p>I like goals, and especially new years resolutions.</p>
+
+<p>I went back and reviewed some of my 2007 new years resolutions.  Some I had accomplished (buying my first investment property and making it cash flow) and some are still in progress (sale of a business).  But in all honesty, the majority of them I had not accomplished, primarily because they are no longer goals.  I guess my goals change often.</p>
+
+<p>Nevertheless, I think its awfully worthwhile to write your goals down (and far more often than once a year!).  Here are a few tips on your 2008 resolutions:</p>
+
+<ul>
+<li><p><strong>Write them down</strong>
+Goals in your head are no more than ideas.  Writing them forces you to get all the details.  (Yes, typing counts)</p></li>
+<li><p><strong>Make them measurable</strong>
+Saying "I want to earn more" isn't measurable.  You can never know if you actually achieved it or not.  Saying "I want to earn $76,500 in the year 2008" is measurable.</p></li>
+<li><p><strong>Don't forget the how</strong>
+Careful what you wish for.  Saying "I want to weight 146 lbs" doesn't specify how.  There are some unhealthy ways to accomplish that, and you want to be specific.</p></li>
+<li><p><strong>Keep it positive</strong>
+Focus on what you want, not what you don't want.  Instead of saying "I stop hating my boss", try "I get a raise and promotion".</p></li>
+<li><p><strong>Use the present tense</strong>
+Saying "I'm going to..." or "I will try..." is weak.  Write the goal as if it has already taken place.  "I date Heidi Klum."</p></li>
+<li><p><strong>Make them ambitious yet possible</strong>
+Force yourself to reach, but if you make them too ambitious you'll be disappointed.  There should probably about a 50/50 chance of accomplishing it in your own mind.</p></li>
+<li><p><strong>Make them public</strong>
+I don't always recommend telling your goals to people who won't be supportive, but making them public in a supportive place will help you stay on track.  We're more likely to follow through with peer pressure, which is why...</p></li>
+</ul>
+
+
+<p><strong>You have the opportunity to write your #1 goal to accomplish in 2008 below.  Please leave a comment (sticking as best you can to the guidelines above, doesn't have to be perfect).  If you leave your email, I promise I'll check up on you before the end of 2008 to see how things are going!</strong></p>
+]]></content>
+  </entry>
+  
+</feed>

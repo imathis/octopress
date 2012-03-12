@@ -1,0 +1,19 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+<body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %} data-spy="scroll">
+
+  <div class="container">
+    <header class="jumbotron subhead" id="overview">
+      {% include header.html %}
+      {% include navigation.html %}
+    </header>
+    <div id="main">
+      <div id="content">
+        {{ content | expand_urls: root_url }}
+      </div>
+    </div>
+    <footer class="footer">{% include footer.html %}</footer>
+    {% include after_footer.html %}
+  </div>
+</body>
+</html>

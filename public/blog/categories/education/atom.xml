@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Education | Brian Armstrong]]></title>
+  <link href="http://brianarmstrong.org/blog/categories/education/atom.xml" rel="self"/>
+  <link href="http://brianarmstrong.org/"/>
+  <updated>2012-03-12T10:52:39-07:00</updated>
+  <id>http://brianarmstrong.org/</id>
+  <author>
+    <name><![CDATA[Brian Armstrong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Simple Trumps Complete]]></title>
+    <link href="http://brianarmstrong.org/blog/simple-trumps-complete/"/>
+    <updated>2010-12-22T10:07:08-08:00</updated>
+    <id>http://brianarmstrong.org/blog/simple-trumps-complete</id>
+    <content type="html"><![CDATA[<p>Three articles I've read in the past month.  All with the same lesson about what makes a web application "catch on".</p>
+
+<ol>
+<li>Wayne Ting, a guy who started a Facebook-like app at Columbia University around the same time as Facebook explains how they lost to Facebook: <a href="http://www.bbc.co.uk/blogs/thereporters/rorycellanjones/2010/12/wayne_ting_nearly_a_billionair.html">they had too many features</a>.</li>
+</ol>
+
+
+<blockquote><p>"A good website should have functionalities that 70 or 80% of users want to use. We had functions that only 10% wanted"</p></blockquote>
+
+<ol>
+<li>Marc Hedlund, a guy who started Wesabe (a competitor which lost to Mint.com) thinks they lost because <a href="http://blog.precipice.org/why-wesabe-lost-to-mint">they gave users too much work</a>.</li>
+</ol>
+
+
+<blockquote><p>Mint focused on making the user do almost no work at all, by automatically editing and categorizing their data, reducing the number of fields in their signup form, and giving them immediate gratification as soon as they possibly could</p></blockquote>
+
+<ol>
+<li>Netflix's Chief Product Officer summed up the entirety of his years of testing various designs in <a href="http://www.quora.com/What-types-of-things-does-Netflix-A-B-test-aside-from-member-sign-up">just 3 words</a>.</li>
+</ol>
+
+
+<blockquote><p>If I had to summarize our learnings in three words: "simple trumps complete."</p></blockquote>
+
+<p>I think we're seeing a pattern here.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Peter Thiel's Thoughts On Tech Entrepreneurship]]></title>
+    <link href="http://brianarmstrong.org/blog/peter-thiels-thoughts-on-tech-entrepreneurship/"/>
+    <updated>2010-12-01T08:17:44-08:00</updated>
+    <id>http://brianarmstrong.org/blog/peter-thiels-thoughts-on-tech-entrepreneurship</id>
+    <content type="html"><![CDATA[<p>Tonight I went to go see <a href="http://en.wikipedia.org/wiki/Peter_Thiel">Peter Thiel</a> speak at Stanford University.  He co-founded Paypal, was an early investor in a bunch of companies (Facebook, LinkedIn, etc), and is a billionaire.</p>
+
+<p>I jotted down some notes from the talk which I thought were interesting.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/12/582px-Peter_Thiel-291x300.jpg" alt="" /></p>
+
+<ul>
+<li><strong>Intensive vs. Extensive</strong>
+He spent a bunch of time comparing these two types of innovation.  Intensive is building something new and truly innovative.  An example would be the Macintosh or Paypal - both blazed a trail to create something that had never been created before.  It's carries a higher risk of failure but also greater rewards.  Extensive is building on ideas which are already in place.  It can be  a safer way to build a company, but not as lucrative.  An example would be putting accounting software online.  Or doing another social network.</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li><p><strong>China</strong>
+He compared China and the U.S. saying that China's next 20 years of growth are clearly extensive.  They can simply copy the model which is the U.S. and grow rapidly (build this many airports, this many steel mills, etc).  The U.S. can't afford to do that and has the much harder job of pursuing intensive growth.  We can't just make more doctors, lawyers, bankers, and houses.  To grow we need to build stuff the world has never seen (technology).</p></li>
+<li><p><strong>There is a lack of focus on intensive innovation</strong>
+It was clear from his talk that intensive is where he'd like to see more focus in the U.S.  Especially Silicon Valley is full of too many people copying old ideas, and not breaking new ground.  He said this field of tech startups (their current generation) feels saturated and there are too many people making clones, or investing in poor ideas.</p></li>
+<li><p><strong>The car industry 1920 - 1960
+</strong>The 1920's saw a boom in automotive  with 300 U.S. car companies.  By 1960 there were only three.  This boom and consolidation is a natural cycle with new industries.  He said the internet and web companies aren't quite to 1960 yet, but we certainly aren't in 1920 any more.  He feels while there will certainly be successful web companies started in the next 10 years, but more and more of the profits will go toward the established players (Google, Facebook, Amazon, etc).</p></li>
+<li><p><strong>Emerging Categories</strong>
+So if the web is maturing, where should entrepreneurs focus?  He said there is a boom yet to come in a number of emerging industries - artificial intelligence, bio-tech, energy, space stuff, etc.  But this isn't the right way to think about it - don't think in categories.  Think about something you are passionate about or something that would be cool &amp; useful - then build that.  The passion is what's important, not the category.</p></li>
+<li><p><strong>Mobile is not the next big thing</strong>
+Internet was a big thing because established media companies (New York Times, Disney) could not make the jump.  It was just too different for them to adapt.  This left the field wide open for startups.  But he thinks mobile internet is similar enough to other internet that todays companies will make the jump.  The #1 social network on mobile will be Facebook, the #1 ad network on mobile will be Google, mobile payments on Paypal, and on down the line.</p></li>
+<li><p><strong>CEO Salary = best predictor of success
+</strong>If CEO makes &lt; $120k  he likes their chances.  If CEO makes > $160k he doesn't like their chances.  When management is working for equity, incentives are aligned.</p></li>
+<li><p><strong>Redundancy = Conflict</strong>
+People and relationships (investors, employees, etc) were the hardest problem for him and where he made the most mistakes.  One thing he learned, many sources of problems come from two people (experts) working on the same thing.  So find people with complementing skills and don't duplicate people's skills.  Redundancy will lead to conflict.</p></li>
+<li><p><strong>Go where there isn't competition
+</strong>Everyone is doing web startups now.  Go work on quantum computing - you will have almost zero competition.  Key to success: you're passionate about it, few others are working on it, and it matters if you solve it.</p></li>
+<li><p><strong>Social Entrepreneurship Doesn't Work</strong>
+Somebody asked about social entrepreneurship.  He gave a candid answer: he doesn't believe in it.  He said non-profits can be excellent, and for-profits can be excellent.  The intersection is small.  If there are starving kids in Africa, there is no profitable business there - you just need to get them food.  (Interesting I wrote something <a href="http://brianarmstrong.org/posts/innocent-smoothies-richard-reed-inspiring-entrepreneur/">similar</a> a while back.)****</p></li>
+</ul>
+
+
+<p>It was thought provoking overall.  I've got 3 business ideas I'd like to bounce off him given the opportunity, but he got bum rushed after the talk.  Peter - if you're reading this <a href="http://www.startbreakingfree.com/contact/">message</a> me, would love to do a quick call.</p>
+
+<p><strong>What do you think?  Agree or disagree on the state of tech entrepreneurship?</strong></p>
+
+<p>Leave me a comment below.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong<strong> </strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I Just Saw The Future Of Education, And It's Online]]></title>
+    <link href="http://brianarmstrong.org/blog/i-just-saw-the-future-of-education-and-its-online/"/>
+    <updated>2010-05-17T09:00:10-07:00</updated>
+    <id>http://brianarmstrong.org/blog/i-just-saw-the-future-of-education-and-its-online</id>
+    <content type="html"><![CDATA[<p>I just came across some really exciting material this weekend.  Apparently the biggest "school" in the world right now is run and taught by one person.  I put school in quotes because it's not a school in the traditional sense - it is just one guy who started making tutoring videos for his cousins on YouTube.</p>
+
+<p>1,400 videos later it is now the largest open courseware project in the world with more views than MIT, Stanford, Berkeley or any other school - and 200,000 monthly users.</p>
+
+<p>Here is a video of Sal Khan's talk where he discusses what the "Khan Academy" has turned into.</p>
+
+<p><a href="http://vimeo.com/11731351"><img src="http://s3.amazonaws.com/oldbloguploads/2010/05/Screen-shot-2010-05-17-at-1.26.15-AM.png" alt="" /></a></p>
+
+<p>It's easy to dismiss this as just a web phenomenon that isn't comparable to regular education.  After all, there is no interaction in a YouTube video so you can't ask the teacher a question.  There are no discussions amongst students, no written papers, and no grades.</p>
+
+<p>Yet it also comes with some non-obvious advantages.  For example, each student can go at their own pace, there are fewer distractions (each video features just a simple blackboard), and students can easily review material several times without needing to take notes.</p>
+
+<p>Perhaps more importantly, <strong>a truly great teacher can now reach 200,000 students a month instead of 20</strong>.</p>
+
+<p>It's hard to overstate the importance of this last point.  Imagine how many students are sitting right now, bored out of their mind, in a classroom with a sub par teacher (or worse, in a developing country without a teacher at all)?  What if they instead had access to one of the best teachers in the world?</p>
+
+<p>The implications of that are really staggering.</p>
+
+<p>Sal Khan is one of those people with a natural gift for teaching.  After watching the video above, I went to <a href="http://www.youtube.com/user/khanacademy">check out his page on YouTube</a>.  What's amazing is that I actually found myself engrossed in several topics that I hated in school.  Watching YouTube videos is just too easy!</p>
+
+<p>And he is great at breaking complex ideas down into simple parts.  Just as an example, check out his series on banking and the <a href="http://www.youtube.com/user/khanacademy#p/p/CECDA315A8848B99/23/8SAMey9Gl5I">fractional reserve system</a>.  In just 10 minutes I feel like I understand our current financial crisis more fully.</p>
+
+<p><a href="http://www.youtube.com/user/khanacademy#p/p/CECDA315A8848B99/23/8SAMey9Gl5I"><img src="http://s3.amazonaws.com/oldbloguploads/2010/05/Screen-shot-2010-05-17-at-1.45.43-AM.png" alt="" /></a></p>
+
+<p>What do kids like to do when they aren't doing their homework?  Watch YouTube videos.  Now they may be one and the same.</p>
+
+<p><strong>Sal Khan may have just done the impossible: made learning fun.  And I'll make a tall claim: his simple YouTube videos could actually be more effective than the vast majority of public school education that is being delivered today.</strong></p>
+
+<p>Yes, it's still a new technology and not a drop in replacement for schools...yet.  But I think we're witnessing the birth of something big here, and I'll be watching it closely.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+
+<p>P.S. In other education related news, check out <a href="http://www.ted.com/talks/dan_meyer_math_curriculum_makeover.html">this math teacher's novel approach</a>.  The education space is evolving rapidly.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How To Sell Your Company]]></title>
+    <link href="http://brianarmstrong.org/blog/how-to-sell-your-company/"/>
+    <updated>2010-05-04T06:43:50-07:00</updated>
+    <id>http://brianarmstrong.org/blog/how-to-sell-your-company</id>
+    <content type="html"><![CDATA[<p>John Warrillow sent me a copy of his book recently (one of the perks of having a business blog) and it was surprisingly good.</p>
+
+<p>The book is titled "<a href="http://www.amazon.com/gp/product/0986480304?ie=UTF8&amp;tag=httpwwwstartb-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0986480304">Built To Sell</a>" - which actually turned me off a bit at first.  It reminded me of "Built To Last", the famous business book by Jim Collins, except quick flips have a negative connotation to me.</p>
+
+<p>So I started it with a bit of skepticism.  But this quickly disappeared as I got into the story.  Built To Sell is told in a parable format (somewhat like Rich Dad, Poor Dad or The E-Myth Revealed) which made it really easy to read and very engaging.  I finished it within 24 hours.</p>
+
+<p><a href="http://www.amazon.com/gp/product/0986480304?ie=UTF8&amp;tag=httpwwwstartb-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0986480304"><img src="http://s3.amazonaws.com/oldbloguploads/2010/05/Screen-shot-2010-05-03-at-11.31.27-PM.png" alt="" /></a></p>
+
+<p>The book goes through the story of Alex, a small business owner who decides he wants to sell his company one day and realizes he can't because he has built a service business that is dependent on him.</p>
+
+<p>Luckily he has a mentor named Ted, who takes him through the process of converting his company to one that can be sold.  This is based on mentors the author has had in real life, and it was clear from reading it that he has walked the walk.</p>
+
+<p>It covers a bit of accounting, negotiation, business brokers, cash flow, etc.  I guess I left with the feeling that this kind of information could only have come from long meetings with lots of real mentors.  These are the kind of mistakes I wouldn't want to have to learn the hard way.</p>
+
+<p>Check it out if you get a chance.  After reading it, I mailed it to a friend of mine in Houston who runs a service business.  It was the kind of information I wanted to <a href="http://www.amazon.com/gp/product/0986480304?ie=UTF8&amp;tag=httpwwwstartb-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0986480304">share</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Behind The Scenes Numbers From UniversityTutor.com (Revenue & Expenses)]]></title>
+    <link href="http://brianarmstrong.org/blog/behind-the-scenes-numbers-from-universitytutor-com-revenue-expenses/"/>
+    <updated>2010-02-15T04:32:33-08:00</updated>
+    <id>http://brianarmstrong.org/blog/behind-the-scenes-numbers-from-universitytutor-com-revenue-expenses</id>
+    <content type="html"><![CDATA[<p>Things have been growing nicely at my business, <a href="http://www.UniversityTutor.com">UniversityTutor.com</a>, in the last few months.</p>
+
+<p>Here are a few graphs that I have auto-generated each week to see what's going on.  I really like the idea of having a "dashboard" for your business like this to help you see the cycles and spot anomalies early on.  If you can't measure it then you don't know how close you are getting to your goal, so I recommend having something like this for your business if you don't already.  These I custom programmed but you could have your programmer do something similar or make them in Google Analytics or Excel.</p>
+
+<p><strong>These show daily totals for a bunch of different metrics that I track, and a cumulative total for number of paying subscribers</strong>.</p>
+
+<h2>The last month:</h2>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/02/week.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/02/month.png" alt="" /></a></p>
+
+<h2>The last quarter:</h2>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/02/quarter.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/02/quarter.png" alt="" /></a></p>
+
+<h2>A few points...</h2>
+
+<ul>
+<li><p>If you are wondering what happened around Jan 1st to cause subscribers to go up, I don't really know.  I think it was just the new year.  December was sluggish.</p></li>
+<li><p>I did do some marketing to get new tutors (hence the spike in the yellow line) but I don't think this  is what caused the whole subscriber increase - it was probably just from tutors starting the new year and wanting to get new jobs.</p></li>
+<li><p>At $10 per month, the subscribers is the main metric I watch.  To get an idea of the business model you can check out the <a href="http://www.universitytutor.com/tutoring_jobs">tutoring jobs</a> page.  So you can multiply $10 times the number of subscribers to get an idea of the monthly revenue.</p></li>
+<li><p>The expenses are almost nil, about $70 per month in web hosting cost and sometimes I play around with different marketing expenses but these aren't much.  So the profit margin is high and it's been cash flow positive since almost the first month I launched it.</p></li>
+<li><p>It is now <a href="http://brianarmstrong.org/posts/from-new-idea-to-business-launch-in-two-weeks-with-pictures/">two years ago</a> that I started this project and I have to say I thought it would have grown much faster than it did.  Two years is a long time!  But then again I'm always impatient and there were some <a href="http://brianarmstrong.org/posts/universitytutor-revenues-fall-by-50/">failed experiments</a> along the way which slowed things down.</p></li>
+<li><p>On the plus side, it is truly passive at this point (I spend probably an hour per week on it) and it is growing nicely so it could become a popular site and valuable asset over time.</p></li>
+</ul>
+
+
+<p>Probably the best thing that can help the site grow at this point is to start ranking better in search engines for some tutoring related keywords (to draw in more parents and students).  The site ranks really well in some cities, but not so well in others, so hopefully as it continues to garner new links it will build reputation with Google.</p>
+
+<p>Hopefully this helps give you get an idea of what goes on behind the scenes in a business like this.   If there is anything else you want to see, just let me know in the comments.  And if you have any ideas on how I could take it the next level, I'm always curious to hear people's feedback on <a href="http://www.universitytutor.com">the site</a>.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+</feed>

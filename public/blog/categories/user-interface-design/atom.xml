@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: User Interface Design | Brian Armstrong]]></title>
+  <link href="http://brianarmstrong.org/blog/categories/user-interface-design/atom.xml" rel="self"/>
+  <link href="http://brianarmstrong.org/"/>
+  <updated>2012-03-12T10:52:39-07:00</updated>
+  <id>http://brianarmstrong.org/</id>
+  <author>
+    <name><![CDATA[Brian Armstrong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Insight: the path of least resistance in user-interface design is...]]></title>
+    <link href="http://brianarmstrong.org/blog/insight-the-path-of-least-resistance-in-user-interface-design-is/"/>
+    <updated>2010-06-04T00:14:03-07:00</updated>
+    <id>http://brianarmstrong.org/blog/insight-the-path-of-least-resistance-in-user-interface-design-is</id>
+    <content type="html"><![CDATA[<p>...displaying data exactly how it's represented in the database, instead of how humans think of it.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2010/06/Screen-shot-2010-06-03-at-5.05.37-PM.png"><img src="http://s3.amazonaws.com/oldbloguploads/2010/06/Screen-shot-2010-06-03-at-5.05.37-PM.png" alt="" /></a></p>
+
+<p>This person might just  want a "new" Honda Accord and doesn't care if it's a 2010 or 2011.</p>
+
+<p>It's harder to build technology based on how humans think, but it tends to be better when you do.  Google does a great job of "understanding" what you meant with fuzzy matching, for example.</p>
+
+<p>The example above really isn't even that bad (some people want to choose  a year).  What other examples of "database driven user-interfaces" have you come across?</p>
+
+<p>Related: <a href="http://blog.carwoo.com/what-should-i-really-pay-for-a-new-car-who-kn">What should I pay for a car?</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New Features On BuyersVote (Plus A Few Announcements)]]></title>
+    <link href="http://brianarmstrong.org/blog/new-features-on-buyersvote-plus-a-few-announcements/"/>
+    <updated>2010-01-15T15:14:40-08:00</updated>
+    <id>http://brianarmstrong.org/blog/new-features-on-buyersvote-plus-a-few-announcements</id>
+    <content type="html"><![CDATA[<p>Over the last month or so I've quietly rolled out some changes to <a href="http://buyersvote.com">BuyersVote</a>.  These were little things I discovered that I wanted while using the site.</p>
+
+<p>Take note: this is one of the best reasons to build something (in a startup) that you actually want to use for yourself!  If you're an actual user, the software will be way better because when something is annoying or difficult you'll fix it right away.</p>
+
+<h2>Address, Phone, and Websites on Items</h2>
+
+<p><a href="http://buyersvote.com/items/florida-auto-brokers-reviews"><img src="http://s3.amazonaws.com/oldbloguploads/2010/01/Picture-2.png" alt="" /></a></p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/01/Picture-3.png" alt="" /></p>
+
+<p>Now you can enter an address, phone number, and website for an item.</p>
+
+<p>This was really annoying before (especially for websites) - where you'd have to enter the website right in the title of the item because there was no other field for it.</p>
+
+<p>Now if you enter these extra fields while editing an item, it will appear on the show page allowing you to visit the "External Site" with just one click, or Google Map it, etc.</p>
+
+<h2>Badges</h2>
+
+<p><a href="http://buyersvote.com/categories/the-best-merchant-account-providers"><img src="http://s3.amazonaws.com/oldbloguploads/2010/01/Picture-1.png" alt="" /></a></p>
+
+<p>Now on item pages there is a small badge that people can copy and paste into their website.  This would mainly be useful if it was your product and you wanted to show off reviews you were getting or encourage people to post more reviews.</p>
+
+<p>There is also an SEO benefit to this to try and get more incoming links to the site.  This is something Neil Patel suggested to me a while back (check out my other post on <a href="http://brianarmstrong.org/posts/how-to-get-more-links-to-your-website-with-user-badges/">user badges</a>).</p>
+
+<h2>Improved Search</h2>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/01/Picture-4.png" alt="" /></p>
+
+<p>The search I had before sucked, and it wouldn't find variations of words.  So for example if you were searching for "property managers" but the only listing in BuyersVote was for "property management companies" your search would return zero results.</p>
+
+<p>Search is a hard problem.  A lot of websites try to implement their own which I think is a mistake (one I was guilty of).  It's usually better to use <a href="http://www.google.com/cse/">Google Custom Search</a> and integrate it into your website, so that's what I did here.  This gives you the full power of Google search right on your own website.</p>
+
+<p>So the search is a lot smarter now.</p>
+
+<h2>Revenue Generation (Affiliate links and Ads)</h2>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/01/Picture-5.png" alt="" /></p>
+
+<p>See the link that says "Check Prices On Amazon"?  This is new, and is an affiliate link.  When editing an item you will now see a checkbox like this at the bottom:</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/01/Picture-7.png" alt="" /></p>
+
+<p>Checking that box will help BuyersVote generate a tiny bit of revenue when people click through to Amazon's site and buy something.  Of course, there are a great many items on BuyersVote which aren't sold on Amazon - hence the checkbox to crowd source this data.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2010/01/Picture-6.png" alt="" /></p>
+
+<p>There are also now Adsense ads in the bottom right of category pages.</p>
+
+<h2>Category Descriptions</h2>
+
+<p><a href="http://buyersvote.com/categories/the-best-subscription-billing-systems"><img src="http://s3.amazonaws.com/oldbloguploads/2010/01/Picture-8.png" alt="" /></a></p>
+
+<p>There is also now an optional field on categories to add a short description.  Some categories weren't quite clear without this.</p>
+
+<p><a href="http://buyersvote.com/categories/the-best-subscription-billing-systems"><img src="http://s3.amazonaws.com/oldbloguploads/2010/01/Picture-9.png" alt="" /></a></p>
+
+<p>This is how it looks on the actual page.</p>
+
+<h2>Contributor Pages</h2>
+
+<p><a href="http://buyersvote.com/contributors/6"><img src="http://s3.amazonaws.com/oldbloguploads/2010/01/Picture-10.png" alt="" /></a></p>
+
+<p>Contributor pages were pretty plain before.  Now they show all the most recent reviews a contributor has left in one place (along with a link to their personal website and a little about them).  <a href="http://buyersvote.com/contributors/6">Dave</a> is currently the top contributor on BuyersVote (as voted by other users - see his reputation).  <a href="http://lifestyledesignforyou.com/">Gordie Rogers</a> has contributed a ton also.  Thanks guys!  For more info on how reputation works check <a href="http://buyersvote.com/help">here</a>.</p>
+
+<h2>Conclusion</h2>
+
+<p>There are a few more features I'd like to add eventually, namely an "Awards" page that highlights the best and worst rated products across all categories for the last month, year, all time, etc.  This would be great link bait.</p>
+
+<h2>Odds &amp; Ends</h2>
+
+<p>Finally, few announcements.  I have a new web app (in the SEO space) coming out in a week or two here.  I'll be sure to post here on the blog when it's ready.</p>
+
+<p>Also, I'll be heading back to the San Francisco and leaving Buenos Aires in February!  While there for Christmas I met up with an awesome group of guys who are doing a Y-Combinator startup, and they asked me to join them in February.  It's a really cool product and group, so I think it will be a great step for me.  So far I've been operating mostly on the fringe of the tech entrepreneurship scene (doing my own thing, traveling the world).  This has certainly had it's advantages, but being in the valley and surrounding myself with the top tech entrepreneurs in the world will be a welcome change.  It's really amazing what's happening over there right now - in terms of potential to change the world (certainly technology wise) you'd be hard pressed to find a better place than the SF Bay Area.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+]]></content>
+  </entry>
+  
+</feed>

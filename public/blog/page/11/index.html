@@ -1,0 +1,985 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Brian Armstrong</title>
+  <meta name="author" content="Brian Armstrong">
+
+  
+  <meta name="description" content="Hey folks&#8230;no blog updates yet since I&#8217;m still busy finishing the new billing feature for UniversityTutor.com. It&#8217;s getting pretty &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://brianarmstrong.org/blog/page/11">
+  <link href="/favicon.ico" rel="icon">
+  
+  <link href="/assets/bootstrap/css/spacelab.min.css" rel="stylesheet" type="text/css">
+  <link href="/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+  <link href="/assets/bootstrap/css/custom.css" rel="stylesheet" type="text/css">
+  <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+  
+  <link href="http://feeds.feedburner.com/brianarmstrong/vTOG" rel="alternate" title="Brian Armstrong" type="application/atom+xml">
+  
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-387546-20']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    data-spy="scroll">
+
+  <div class="container">
+    <header class="jumbotron subhead" id="overview">
+      <div class="subscribe">
+  <table>
+    <tr>
+      <td><span>Get Updates: &nbsp;</span></td>
+      <td><a href="#" onclick="window.open('http://feedburner.google.com/fb/a/mailverify?uri=brianarmstrong/vTOG','FeedBurner','menubar=no,width=600,height=600,toolbar=no'); return false;" class="btn"><i class="icon-envelope"></i> By Email</a></td>
+      <td><a href="http://feeds.feedburner.com/brianarmstrong/vTOG" class="btn"><i class="icon-cog"></i> By RSS</a></td>
+      <td><a href="http://twitter.com/brian_armstrong" class="btn"><i class="icon-twitter-sign"></i> On Twitter</a></td>
+    </tr>
+  </table>
+</div>
+<h1 class="title">Brian Armstrong</h1>
+
+      <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container" style="width: auto;">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/archives">Blog</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        
+          <form action="http://google.com/search" method="get" class="navbar-search pull-left">
+            <fieldset role="search">
+              <input type="hidden" name="q" value="site:brianarmstrong.org" />
+              <input type="text" name="q" results="0" placeholder="Search" class="search-query span2" />
+            </fieldset>
+          </form>
+        
+        <ul class="nav pull-right">
+          <li>
+            <a style="padding: 7px 0 0 0;" href="http://feeds.feedburner.com/brianarmstrong/vTOG"><img src="http://feeds.feedburner.com/~fc/brianarmstrong/vTOG?bg=a1cefc&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>            
+          </li>
+        </ul>
+      </div><!-- /.nav-collapse -->
+    </div>
+  </div><!-- /navbar-inner -->
+</div>
+
+    </header>
+    <div id="main">
+      <div id="content">
+        <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/how-to-solve-tough-problems/">How to Solve Tough Problems</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-01T01:32:10-07:00" pubdate data-updated="true">Apr 1<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hey folks&#8230;no blog updates yet since I&#8217;m still busy finishing the new billing feature for UniversityTutor.com. It&#8217;s getting pretty crazy&#8230;I&#8217;ve mostly finished coding up the hand drawn screens that I showed you last week, so I should have a video of them for you soon. They are all ajaxy and look amazing.</p>
+
+<p>I also got approved with a payment processor: www.achdirect.com. This is great news and means I&#8217;m getting very close.</p>
+
+<p>Only trouble is that they don&#8217;t have a Ruby library (UniversityTutor.com is developed using Ruby on Rails) so I&#8217;m having to code this up myself so my site can talk to their payment gateway. I&#8217;ll contribute the code to the open source community (as part of the <a href="http://www.activemerchant.org/">Active Merchant</a> plugin) when it&#8217;s done so other people can use it.</p>
+
+<p>Needless to say I am learning about all sorts of programming mumbo jumbo (PCI compliance, SSL encryption, WSDL web services, POST/GET/PUT, etc, etc, etc) and I was reminded that when I hit a tough problem and I&#8217;m just not making any progress, here is what I usually do:</p>
+
+<ul>
+<li><p>do 30 minutes of either exercise, walking, or mindless television</p></li>
+<li><p>eat something</p></li>
+</ul>
+
+
+<p>Then come back and things just seem to start working. Try it next time. It really works. After a certain point, pushing yourself further is a downward spiral. But with 30 minutes to reset - clearing the mental calculator if you will - and some sugar your brain will be a high performing machine once again.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/progress-on-universitytutorcom/">Progress on UniversityTutor.com</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-22T23:20:54-07:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ok so this week I&#8217;ve been working on the new business model for UniversityTutor.com that I discussed in the second half of <a href="http://brianarmstrong.org/posts/new-features-and-tests-on-my-passive-income-business/">this post</a>. Basically, charging a percent of each transaction instead of a monthly fee for tutors.</p>
+
+<p>I&#8217;m hoping this will be better in the long run as most people prefer to avoid monthly recurring fees, and it&#8217;s more fair to only pay for what you really use (instead of a month going by where you got no real jobs but still had to pay).</p>
+
+<p>How it will work though I&#8217;m not really sure - so this is a test.</p>
+
+<p><strong>Designing The Process</strong></p>
+
+<p>Part of the challenge in designing something like this is to make it easy and convenient so people will actually use it. It has to help them more than it annoys them. A lot of this comes down to good user interface design and choosing the right words to explain things succinctly and clearly.</p>
+
+<p>Here is the basic process I have in mind:</p>
+
+<ul>
+<li><p>Tutor and student meet through website and do some tutoring</p></li>
+<li><p>Afterwards, the tutor logs into their account and sends student an invoice</p></li>
+<li><p>Student pays with credit card, tutor receive funds via direct deposit or paypal</p></li>
+</ul>
+
+
+<p><strong>Who Should Pay The Service Fee?</strong></p>
+
+<p>Let&#8217;s say you are going to do a markup of 10% just as an example. Should the tutor pay this fee or the student?</p>
+
+<p>When trying to figure something out I like to see what other people are already doing that is working, and copy it (trying to reinvent the wheel when you first learning a topic is often a mistake - only innovate once you are an expert).</p>
+
+<p>Sites like eLance.com and guru.com both have the service provider (tutor in my case) pay. If the service provider sets a price of $100, the tutor actually only receives $90.</p>
+
+<p>Sites like odesk.com and crowdspring.com do the opposite and have the buyer (student in my case) pay the fee. If the service provider sets a price of $100, the website charges the client $110 and sends the provider their $100.</p>
+
+<p>The difference is really one of semantics - if the service provider wanted to get $100 in the first example, he could just set his price to $110 - but perception can often make a big difference in how people use a service.</p>
+
+<p>I guess it comes down to who has a bigger incentive to circumvent the system and pay offline (which means I&#8217;d get zero fee). For right now I think I&#8217;m going to try the second method used by odesk.com and crowdspring.com. Buyers will simply see the tutoring price as $110 and won&#8217;t be reminded of the breakdown. This information will be available on the website of course (probably in an FAQ) if they really wanted it, but there is no reason to advertise the fact you are taking 10% in every bill they get - I think this would just reinforce a negative in their mind.</p>
+
+<p>Tutors on the other hand will be told that &#8220;the client pays the fee, not you&#8221; so hopefully this will minimize their incentive to get paid offline.</p>
+
+<p>Some further incentives:</p>
+
+<ul>
+<li><p>The only way for the tutor to get positive reviews from students is if the student completes the transaction online.</p></li>
+<li><p>The number of hours that the tutor has worked will be publicly displayed on their profile as an indicator of how experienced they are. Only when completing the transaction online will their experience go up.</p></li>
+</ul>
+
+
+<p><strong>Processing Payments</strong></p>
+
+<p>Probably the toughest part of this so far has been figuring out how to setup direct deposit with my web app. For some reason the online payment processing industry hasn&#8217;t figured out how to make this easy yet. And in general the industry is overly complicated and full of shady companies.</p>
+
+<p>It&#8217;s common to setup credit card processing on a website and there are tons of tools for this.</p>
+
+<p>The less common part is also being able to SEND payments into people&#8217;s bank accounts.</p>
+
+<p>This is known as a &#8220;marketplace&#8221; app in some circles - think the iPhone app store or ebay where you have buyers and sellers of some service. You need something called a payment gateway which your website can talk to and do everything (bill credit cards, send direct deposits, etc).</p>
+
+<p>The terminology for this whole thing is just nuts and I&#8217;ve had a lot of conversations with people over the last few weeks who sounded very confused. Just as an example, there are about 4 different names just for direct deposit: ACH, EFT (electronic funds transfers), eCheck, and direct deposit itself. These all means slightly different things but are often used interchangeably and most people don&#8217;t know the difference.</p>
+
+<p>There are also payroll processing companies who provide this service manually - but when I tell them I want my server to be able to connect to theirs (an API) to automate this process of sending out payments each night they don&#8217;t really get it (you mean like Quickbooks? no, not like Quickbooks).</p>
+
+<p>It&#8217;s really surprising to me that this is actually this difficult - I&#8217;m sure I&#8217;m not the first one who has needed something like this?</p>
+
+<p>Anyway, here are a few folks with the capability: <a href="http://www.braintreepaymentsolutions.com/">BrainTree</a>, <a href="http://www.ach-payments.com/">Ach-Payments.com</a>, and <a href="http://www.trustcommerce.com/">TrustCommerce</a>. Can&#8217;t say for sure who (if any) of these I&#8217;d recommend, but I&#8217;m talking to all of them now.</p>
+
+<p>Amazon.com also came out with a brilliant payment service designed for marketplace apps that you can read about <a href="http://aws.amazon.com/fps/">here</a>. The one downer? It requires both buyer and seller to have or create an Amazon account. This is a deal breaker for me since it won&#8217;t fully integrate with my website and will confuse people. I really hope they find a way to change this in the future though.</p>
+
+<p>If all else fails I may get up and running with just Paypal. They have a decent API to send people money, but I would prefer to offer direct deposit as well if possible since it will be cheaper and more professional.</p>
+
+<p><strong>Designing The User Interface</strong></p>
+
+<p>So while waiting to hear back from these payment processors (they have a long application process and underwriting - believe it or not) I started sketching out and implementing the screens where tutors will get paid and students will make payments.</p>
+
+<p>The best way to do it? Take out a pen and blank sheet of paper. To me this is still the best form of website design because it frees you up creatively. If you start trying to design it in photoshop, or heaven forbid, just starting to code it up - the technology gets in your way and really limits your creativity.</p>
+
+<p>If you are having someone else do your web development - just send them the drawings.</p>
+
+<p>For any larger block of text though (say a few sentences or paragraphs explaining how something works) I prefer to type in a text editor instead of writing it by hand. It&#8217;s important to get the wording right on these sort of things and that means lots of scratching out, moving words around, etc. It becomes a jumbled mess by hand.</p>
+
+<p>Here are a few of my drawings for the new screens so you can get an idea:</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/screen11.jpg" alt="screen1.jpg" /></p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/screen21.jpg" alt="screen2.jpg" /></p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/screen31.jpg" alt="screen3.jpg" /></p>
+
+<p>I&#8217;ll keep you updated on progress - especially how it changes the revenue once I launch it! Right now I have about 50 subscribers so the site is making about $500/month in profit. With current traffic I&#8217;m hoping this percentage based model will push it over $2,000/month almost immediately. Of course it should grow pretty much on it&#8217;s own from there with little additional work. We&#8217;ll see how it goes!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/the-secret-to-working-less-producing-more-and-getting-rich/">The Secret to Working Less, Producing More, and Getting Rich</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-16T15:40:45-07:00" pubdate data-updated="true">Mar 16<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>There is only so much you as one person can produce in a day. Your time and mental energy are, in some sense, your most precious resource. You have a limited supply that you can use in a focused and uninterrupted way each day.</p>
+
+<p>So the question becomes, what is the most effective way to spend your time and mental energy?</p>
+
+<p>Think for a minute about a person carrying buckets of water for their crops. There is a direct correlation between how much they work and how much water they get. If they want more water, they have to carry more buckets.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/carry-buckets11.jpg" alt="CHINA-DROUGHT/" /></p>
+
+<p>Now compare this to someone who uses their time and energy to build a machine instead. This machine is &#8220;passive&#8221; in that it works whether it&#8217;s owner is there or not.</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/waterwheel811.jpg" alt="waterwheel8.jpg" /></p>
+
+<p>Obviously there is great leverage in having a machine such as this. It can work day and night while your time is preserved to build new machines or relax.</p>
+
+<p>In the modern day of the knowledge worker, we no longer need to carry buckets of water with manual labor. But there is certainly the mental manual labor of a 9-to-5 job, copying and pasting in Excel, or whatever it is that you do. It really is no different in the sense that there is a direct correlation between your time and how much your earn. If you want to earn more, you need to put in more hours and continue working each week.</p>
+
+<p>Now, if you are surrounded by people who carry mental buckets for a living, the idea of building a machine might sound pretty silly to them. I&#8217;m sure the first person who built a water wheel felt the same way. It is more difficult to build, costs money for wood and nails, and might not even work.</p>
+
+<p>While you are messing around trying to get your machine working, your bucket carrying counterparts will probably get a lot more water carried in the short term. They might think you are pretty silly spending all your time and money on a machine that might not even work while they are getting consistent progress each and every day carrying buckets.</p>
+
+<p>But at some point you&#8217;ll get your machine working, and it will start to match the output you were able to accomplish manually. Even if your machine is only producing the equivalent of what you could do manually, you still have a very significant advantage: your time and mental energy are still available.</p>
+
+<p>Because they have been preserved, you can now go on to build a second machine, and another, and another. When you have 15 machines running simultaneously your output will be far greater than any one person could produce (or earn in a job).</p>
+
+<p>This is the real key: preserve your most precious resource (your time and mental energy). Build systems and machines that work when you aren&#8217;t there.  Avoid mental manual labor that require your time for output.</p>
+
+<p>What are the best modern examples of these machines? Owning and investing in businesses, income generating <a href="http://brianarmstrong.org/posts/how-i-made-a-113-return-in-one-month-with-real-estate/">real estate</a>, some <a href="http://brianarmstrong.org/posts/from-new-idea-to-business-launch-in-two-weeks-with-pictures/">web businesses</a>, etc. With these machines in place you can produce far more than any one individual could with manual labor, and get rich in the process.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/television-reaches-new-low-produces-hot-girls-in-scary-places/">Television Reaches New Low - Produces &#8220;Hot Girls in Scary Places&#8221;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-15T14:52:05-07:00" pubdate data-updated="true">Mar 15<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Right after I get done telling people <a href="http://brianarmstrong.org/posts/how-to-watch-any-tv-show-or-movie-for-free-without-commercials/">how bad TV is</a>, they go and prove me right.</p>
+
+<p>E! decided to produce a show called <a href="http://www.thrfeed.com/2009/02/e-orders-hot-girls-in-scary-places.html">Hot Girls In Scary Places</a>.</p>
+
+<p>Yes, you guessed it&#8230;this is literally a show where some cute girls go into haunted houses carrying pink flashlights. And&#8230;.well, they film it.</p>
+
+<p>Somebody actually had to pitch this idea to a room full of executives and somebody signed off on it, thinking it was a good idea, presumably investing a lot of money in it. I mean, can you imagine how this meeting went?</p>
+
+<p>&#8220;Ok&#8230;well it&#8217;s sort of a show about haunted houses.&#8221;</p>
+
+<p>&#8220;Jim, I just don&#8217;t know&#8230;I mean it&#8217;s needs something raw and fresh, it&#8217;s gotta pop on screen.&#8221;</p>
+
+<p>&#8220;What if we add hot girls?&#8221;</p>
+
+<p>&#8220;Done!&#8221;</p>
+
+<p><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/hot-girls-scary-places1.jpg" alt="hot_girls_scary_places.jpg" /></p>
+
+<p>Have you ever seen the movie Idiocracy? It actually really reminds me of that&#8230;a future in which entertainment is so dumbed down that you can produce an entire TV show with just clips of a guy getting hit in the crotch.</p>
+
+<p>Speaking of which&#8230;.I&#8217;m pretty sure Spike TV has a show that is even closer to that, which is basically about things blowing up. I think it&#8217;s actually called &#8220;Things Blowing Up&#8221; or something like that.</p>
+
+<p>Other signs of our coming intellectual demise?</p>
+
+<p>The other day the news reported that a <a href="http://news.nationalgeographic.com/news/2009/03/090310-vampire-graves.html">vampire skull was discovered</a>.</p>
+
+<p>Now this is totally false of course (there was some indication that the people who buried the body thought it was a vampire - which is not really newsworthy - we&#8217;ve been well aware that lots of cultures have believed in vampires, just like people burned witches in Winston-Salem etc).</p>
+
+<p>But that is not how the news reported it of course&#8230;they strongly implied an actual vampire skull was discovered merely for the sensational value and to get people to keep watching. It was completely intellectually dishonest.</p>
+
+<p>Anyway, as I wrote about a while back the <a href="http://brianarmstrong.org/posts/the-news-is-an-utter-waste-of-time/">news is an utter waste of time</a> and if you are watching it for any other reason than entertainment value you are kidding yourself.</p>
+
+<p>Mark my words: TV is going to go the way of the Newspaper here pretty soon. When your average YouTube clip produces by some people with zero budget and a little free time is of higher quality than 90% of professionally produced television, people are going to stop watching.</p>
+
+<p>Even today, you can install the <a href="http://www.stumbleupon.com/">StumbleUpon</a> toolbar in your web browser and tell it what topics you are interested in. Then you can &#8220;stumble&#8221; across different video clips - the results are often better then watching television. Give it a try!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/how-to-watch-any-tv-show-or-movie-for-free-without-commercials/">How to Watch Any TV Show or Movie for Free Without Commercials</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-08T20:19:45-07:00" pubdate data-updated="true">Mar 8<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For a while now I&#8217;ve been watching less and less actual television and turning to the internet to get around old fashioned media distribution methods.</p>
+
+<p>In this article I&#8217;m going to show you how I have finally gotten the right home theater system setup that I am 95% happy with, which will allow you to&#8230;</p>
+
+<ul>
+<li><p>Get any TV or movie that you want to see for free, automatically downloaded for you in some cases</p></li>
+<li><p>Watch them whenever you&#8217;d like, no more tuning in at a specific time</p></li>
+<li><p>Skip any commercials</p></li>
+<li><p>Watch it on your television as it should be (instead of a computer monitor)</p></li>
+</ul>
+
+
+<p>Full disclosure: depending on what content you download you may be breaking copyright law.  It doesn&#8217;t bother me much if you do since the industry is so backwards, but I figured I should mention it.  The irony is that this setup is a better user experience than anything you could buy.</p>
+
+<p>As a side note/rant on movie theaters, why do people even go to these any more?  You have to listen to other people talk and make stupid comments during the movie, you have to sit through 20 minutes of forced advertising at the beginning, you can&#8217;t drink wine/beer, you can&#8217;t cuddle with a significant other, you can&#8217;t pause it to take a leak, you can&#8217;t pay anything less than a 300% markup on candy.  The list goes on and on.  And perhaps the last remaining reason to go (larger screen/better sound) is largely disappearing with today&#8217;s home theater systems.</p>
+
+<p>Anyway, moving on&#8230;</p>
+
+<p><strong>What You&#8217;ll Need</strong></p>
+
+<ol>
+<li><p>An old computer you don&#8217;t use (doesn&#8217;t matter if it&#8217;s slow, the one I&#8217;m using has an 800Mhz processor and a pitiful 384MB RAM, but it does have to have an <a href="http://static.commentcamarche.net/en.kioskea.net/faq/images/0-rwyU11bT-edoc3114-s-.png">s-video out port</a>)</p></li>
+<li><p>A TV that accepts S-video input (most modern flat screens support this)</p></li>
+<li><p>An S-video cable</p></li>
+<li><p>An audio cable <a href="http://lindy-computer-connection-technology-in.amazonwebstore.com/Audio-Cable-Stereo-3m/M/B000I2JVZA.htm?traffic_src=froogle&amp;utm_medium=organic&amp;utm_source=froogle">like this</a> which takes your computer audio and splits it into two cables for your TV</p></li>
+<li><p>A wireless mouse/keyboard (not absolutely necessary but makes it a lot nicer so you can do everything from the couch, I have <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.com%2FLogitech-Cordless-Desktop-EX110-967561-0403%2Fdp%2FB0009V6TL4%3Fie%3DUTF8%26s%3Delectronics%26qid%3D1236555510%26sr%3D8-1&amp;tag=httpwwwstartb-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=9325">this logitech one</a> and it works pretty well).</p></li>
+</ol>
+
+
+<p>You might be able to find both of those cables laying around the house by the way, they are commonly included with various electronic devices like camcorders, etc.</p>
+
+<p><strong>Step 1: Install Ubuntu Linux</strong></p>
+
+<p>While you could do this with an old Windows machine also, it uses more memory and crashes more often.  This is very doable on Mac as well if you have an old Mac around (I use Mac for my day to day work and love it).  However Ubuntu is a free operating system, uses very little memory, and is actually much better than Windows so that&#8217;s the option I chose.</p>
+
+<p>Visit the <a href="http://www.ubuntu.com/getubuntu/download">Ubuntu download page</a> and get the latest version (8.10 at the time of this writing).  Burn the file to a blank cd and pop it into the CD drive on your old pc.  Turn it on and you should get an Ubuntu install screen.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/03/ubuntu01.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/ubuntu01.png" alt="" /></a></p>
+
+<p>Note you may have to use safe graphics mode (I did) since you are using the S-video cable.  Go through the steps and in about 20 minutes you&#8217;ll have a shiny new Ubuntu desktop.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/03/ubuntu1.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/ubuntu1.jpg" alt="" /></a></p>
+
+<p>One final tricky step to configure Ubuntu: I had to <a href="http://www.ubuntugeek.com/fix-for-all-pulseaudio-related-issues.html">remove pulseaudio</a> because it caused some problems later.  Basically, open the sound configuration panel (System > Preferences > Sound), set everything to &#8220;ALSA&#8221;, then open a terminal window (Applications > Accessories > Terminal) and enter the following commands: &#8220;sudo apt-get remove pulseaudio&#8221; and &#8220;sudo apt-get install esound&#8221;.</p>
+
+<p><strong>Step 2: Install Miro</strong></p>
+
+<p><a href="http://www.getmiro.com/">Miro</a> is an awesome free piece of software which will download all your TV shows for you.  What&#8217;s really cool is that in the next step we will tell Miro which shows we like, and it will AUTOMATICALLY go out and download them for us whenever new ones air.  This is basically like free Tivo.</p>
+
+<p>If you want to get technical, Miro is actually a bit torrent client.  Bit torrents are basically a technology that says &#8220;instead of downloading a single big file from one place, download little pieces from a whole bunch of places&#8221;.  This allows you to get the data faster and more reliably since it&#8217;s distributed (like the internet) and has no single point of failure.  It is also a very good idea to &#8220;participate&#8221; in this process by sending your little file pieces to other people once you have a file downloaded.  Miro does all this for you of course so you don&#8217;t have to really know or care about all this, but I thought I&#8217;d throw it in for the fellow geeks in the audience.</p>
+
+<p>Anyway, head over to the Miro download page.  The <a href="http://www.getmiro.com/download/for-ubuntu/">Ubuntu instructions</a> are a little different if you&#8217;ve never installed something in linux before.  There are lots of different versions of Ubuntu.  If you followed the instructions above you have the Intrepid version, but if you aren&#8217;t sure you can always goto Applications -> Accessories -> Terminal and type &#8220;lsb_release -a&#8221; to find out for sure.  Then you have to tell it where to look in the Synaptic package manager, and then reload it and pick Miro to install.  The instructions the Miro page are quite good.</p>
+
+<p>Pretty soon you&#8217;ll have something like this running:
+<a href="http://s3.amazonaws.com/oldbloguploads/2009/03/miro09911.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/miro09911.jpg" alt="" /></a></p>
+
+<p>You&#8217;ll probably want to install <a href="https://help.ubuntu.com/community/RestrictedFormats/">all these codecs</a> to make sure you can play all the videos.  Just run &#8220;sudo apt-get install ubuntu-restricted-extras&#8221; from the terminal.</p>
+
+<p><strong>Step 3: Add TV Shows with TVRSS.net</strong></p>
+
+<p>Next you&#8217;ll want to add all the TV shows you want to watch to Miro.  I&#8217;ll re-post the key steps from this article at <a href="http://freetvreviews.com/tutorials/miro-tutorial-how-to-add-a-channel/">FreeTvReviews.com</a> which already describes it quite well.</p>
+
+<ul>
+<li><p>Visit <a href="http://www.tvrss.net/">tvRSS.net</a></p></li>
+<li><p>Click the <a href="http://www.tvrss.net/shows/">Shows</a> link</p></li>
+</ul>
+
+
+<p><img src="http://freetvreviews.com/wp-content/uploads/2008/02/miro-tut.jpg" alt="Miro Tutorial" /></p>
+
+<ul>
+<li><p>Navigate to a show you want to watch</p></li>
+<li><p>Right-click &#8220;Search-based RSS Feed&#8221;</p></li>
+</ul>
+
+
+<p><img src="http://freetvreviews.com/wp-content/uploads/2008/02/miro-tut2.jpg" alt="Miro Tutorial" /></p>
+
+<ul>
+<li><p>Click &#8220;Copy Link Location&#8221; in Firefox to copy the location of the link.</p></li>
+<li><p>Launch Miro. At the top menu, click &#8220;Channels&#8221; -> &#8220;Add Channel&#8221;</p></li>
+</ul>
+
+
+<p><img src="http://freetvreviews.com/wp-content/uploads/2008/02/miro-tut3.jpg" alt="Miro Tutorial" /></p>
+
+<ul>
+<li><p>Paste in the link you copied from tvRSS.net and press Enter</p></li>
+<li><p>Right click the channel and click &#8220;rename&#8221; to name it something more meaningful, such as the name of the show.  This will help you keep it organized.</p></li>
+</ul>
+
+
+<p>Basically, you&#8217;ll add each show&#8217;s RSS feed to Miro and it will then download the new shows (using bit torrent files) as them come out.  (A lot of jargon, I know&#8230;don&#8217;t worry about it too much, it works.)  You can also download old episodes from the feed.</p>
+
+<p>One more tip: in the Miro options I&#8217;d recommend setting the maximum upload speed to about 10Kb/second.  On most DSL/cable modems this will drastically improve your download speed since it won&#8217;t be trying to upload at your maximum speed.</p>
+
+<p><strong>Step 4: Getting Movies</strong></p>
+
+<p>Many movies are also available as bit torrent files.  Miro can download them for you or you can even install another bit torrent client on Ubuntu if you&#8217;d like.</p>
+
+<p>The best places to search for bit torrent movies?  I like to use <a href="http://www.mininova.org/">mininova.org</a>.  Once you do a search, sort the results by number of &#8220;seeds&#8221; to get the best results.  This means the number of people uploading pieces of the file.  The more seeds, the faster your download will go and typically the better the quality of the movie (there are a lot of bad copies floating around sites like this so it&#8217;s not quite as easy to get good movies as it is TV shows).</p>
+
+<p>Also, you will often have to wait until a movie comes out on DVD to get a good bit torrent copy.  Before then, most of the copies are from people bringing video cameras into movie theaters and the quality is horrible.  I normally just wait for a DVD copy to come out on mininova.</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/03/picture-21.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/picture-21.png" alt="" /></a></p>
+
+<p>An alternative site you can try is <a href="http://thepiratebay.org/">thepiratebay.org</a> also but they don&#8217;t let you sort by number of &#8220;seeds&#8221;.</p>
+
+<p><strong>Step 5: Getting a Killer Experience with XBMC</strong></p>
+
+<p>This final step is optional.  You can watch all the movies/TV shows above in Miro or with another video player like <a href="http://www.videolan.org/vlc/">VLC media player</a> which is excellent.</p>
+
+<p>But if you want to take it one step further and REALLY pimp out your system, consider getting <a href="http://xbmc.org/">XBMC</a> installed along side Miro.  This thing is GORGEOUS and makes a cool display to show all your content: TV shows, movies, pictures, music&#8230;it even does weather and a bunch of other stuff (for example, there is a plugin for getting hulu.com shows).</p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/03/xbmc11.png"><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/xbmc11.png" alt="" /></a></p>
+
+<p><a href="http://s3.amazonaws.com/oldbloguploads/2009/03/xbmc21.jpg"><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/xbmc21.jpg" alt="" /></a></p>
+
+<p>Once you have it installed, go to the &#8216;video&#8217; section and click &#8216;add source&#8217;.  You&#8217;ll want to point it to the directory where Miro is downloading your TV shows.  Now you can view all your TV shows in XBMC.</p>
+
+<p>You may also want to enable deleting of files in the XBMC options.  Then when you&#8217;re done watching a TV show/movie you can clean it off your hard drive to save space.</p>
+
+<p>With your <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=http%3A%2F%2Fwww.amazon.com%2FLogitech-Cordless-Desktop-EX110-967561-0403%2Fdp%2FB0009V6TL4%3Fie%3DUTF8%26s%3Delectronics%26qid%3D1236555510%26sr%3D8-1&amp;tag=httpwwwstartb-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=9325">wireless keyboard</a> you can control the whole thing and it is AWESOME!  Check out these <a href="http://dhrandy.blogspot.com/2008/09/xbmc-keyboard-controls.html">XBMC keyboard controls</a> for more tips.</p>
+
+<p>Here is a video demonstrating <a href="http://www.youtube.com/watch?v=5QfjFlQrgXY">XBMC on Ubuntu</a> (it would of course be in full screen mode when you actually use it so you won&#8217;t see the the computer desktop around it):</p>
+
+<p><strong>Conclusion</strong>
+Parts of this can still be a bit tricky unless you are a computer nerd, obviously.  But it&#8217;s getting easier all the time.  If you run into problems, post them below and maybe everyone here can help you figure it out.</p>
+
+<p>We are quickly reaching a point where downloading media like this over the internet is actually easier and much more enjoyable than traditional distribution models like cable television or mailing DVD&#8217;s.  As usual, big slow companies are behind the times with this and out of touch with what consumers would like.  About 95% of what&#8217;s on TV is complete crap and really annoying, so this is a good way to filter out the junk.  It&#8217;s also a huge opportunity for entrepreneurs to come in and make a killing!</p>
+
+<p>Hope you find this useful or at least educational if you don&#8217;t plan to do it yourself!
+Brian Armstrong</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/how-to-get-a-great-design-for-your-next-website/">How to Get a Great Design for Your Next Website</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-06T21:53:42-08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A few days ago I wrote about how you can <a href="http://brianarmstrong.org/posts/how-to-get-a-business-website-built-for-cheap-or-free/">get a business website built for cheap or free</a>.  Several people (correctly) pointed out that you often get what you pay for in these type of situations.</p>
+
+<p>They are absolutely right about that.  If you go the inexpensive/free route you can easily get bogged down in mysterious wordpress errors as you try to hack plugins together, or deal with incompetent contractors abroad.</p>
+
+<p>If you are on a budget, then that is the way to go, but it doesn&#8217;t mean it&#8217;s necessarily going to be easy.</p>
+
+<p>(Note: In my own experience, about 1 in 5 contractors that I use through sites like eLance.com and Guru.com are really good.  So my solution is to give them a small project up front to evaluate them before deciding who to work with.  It only costs a few bucks each.)</p>
+
+<p>But if you have a little bit of money to spend (and we&#8217;re still talking relatively small amounts here - hundreds, not thousands) you can often get a really great design done for you without the hassle.</p>
+
+<p>One site I&#8217;ve seen recently who is doing a great job is <a href="http://www.startbreakingfree.com/go/crowdspring">CrowdSpring.com</a>.  What&#8217;s unique about this is that designers don&#8217;t just BID on your project, they actually SUBMIT a preliminary design as their bid.  This is really cool because it allows you to pick from a whole bunch of designers before deciding who to pay.</p>
+
+<p><a href="http://www.startbreakingfree.com/go/crowdspring"><img src="http://s3.amazonaws.com/oldbloguploads/2009/03/picture-11.png" alt="" /></a></p>
+
+<p>Right now they only do graphic design, and not programming, but it&#8217;s a good start.</p>
+
+<p>Incidentally, <a href="http://www.startbreakingfree.com/go/crowdspring">CrowdSpring</a> is a good example of a passive income business.  They are also doing a percentage based business model similar to what I am <a href="http://brianarmstrong.org/posts/new-features-and-tests-on-my-passive-income-business/">contemplating</a> for UniversityTutor.com, where they take a percentage of each booking.</p>
+
+<p>Very impressive site&#8230;<a href="http://www.startbreakingfree.com/go/crowdspring">check them out</a> for your next design project.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/how-to-get-a-business-website-built-for-cheap-or-free/">How to Get a Business Website Built for Cheap or Free</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-01T17:18:32-08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Breaking Free reader &#8220;tormcgraw&#8221; posted this excellent question to the <a href="http://www.startbreakingfree.com/?page_id=418&amp;forumaction=doeditpost&amp;forum=4&amp;thread=45&amp;start=0&amp;forumpost=152">Breaking Free Forum</a>.  I thought others might find it useful:</p>
+
+<blockquote><p>I have had an idea for a website business very similar to universitytutor.com but with a different industry. I have conducted research with parties that would utilize this service and indication is they would utilize the service. My fear is that since I do not have web design experience, it will cost thousands of dollars (that I don’t have) to produce the site. And because it will involve profiles, ratings, driving directions, etc., I would guess it would be expensive! Is there any advice or potential services that would be helpful. Thanks and any feedback would be greatly appreciated.</p></blockquote>
+
+<p>Here is my response:</p>
+
+<p>Hi Torrey,</p>
+
+<p>I have a few ideas that could allow you to get it done for cheap or for free:</p>
+
+<p><strong>Cheap</strong>
+You may want to look at outsourcing websites like <a href="http://www.odesk.com">odesk.com</a> or <a href="http://www.guru.com">guru.com</a>. These will allow you to post your idea and get bids from programmers all over the world to build it.  Some bids will be cheaper than you might expect since they live in countries like India and the Philippines (maybe as low as $5 per hour).  The quality varies here though, so read their feedback and give them a small project first to see how good they are. It could potentially be done for less than $1000, depending on what you need.</p>
+
+<p><strong>Cheaper</strong>
+You could try a pre-built tool like <a href="http://wordpress.org/">Wordpress</a> and then add a “ratings” plugin for it like <a href="http://lesterchan.net/wordpress/readme/wp-postratings.html">this one</a>.  There are actually tons of plugins for wordpress so you might be able to put together a lot of those features you mentioned.  It&#8217;s open source software so it is for the most part entirely free.  The only downside to this is two fold: (1) It won&#8217;t be as customizable as designing it from scratch - you might not be able to get EXACTLY what you want but pretty close.  (2) You need to be somewhat tech savvy to get all these plugins working.  You won&#8217;t need to be a programmer, but tech savvy yes.  If it gets too crazy, you can always hire someone as in the first option but only for a few hours to help you with wordpress so it should be much cheaper.</p>
+
+<p><strong>Free</strong>
+Find a programmer and offer him equity (percent ownership in the business) in exchange for building the site.  I would look for a current college student (computer science major) to do this - college students are great programmers but still young and hungry and would go for this type of thing more than a programmer who already has a job at a big company.</p>
+
+<p>None of these methods will be an overnight instant success, but few things worth doing in life are.  If it was easy then someone probably would have already done it by now, and would be raking in all the cash from YOUR idea :)  The fact that it&#8217;s a little bit difficult is actually great, it makes a barrier to all those other people who don&#8217;t want it as badly as you do!</p>
+
+<p>Hope this helps,
+Brian</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/how-to-stay-motivated-when-starting-a-company/">How to Stay Motivated When Starting a Company</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-25T17:21:29-08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Great <a href="http://www.inc.com/magazine/20090301/how-hard-could-it-be-start-up-static.html?partner=fogcreek">article out today by Joel Spoelsky</a> on the emotional management necessary for entrepreneurship.  The reason why startups fail is simple: the founder gets tired of &#8220;playing with the dials&#8221; and gives up before finding the right combination.</p>
+
+<blockquote><p>This is what it&#8217;s like when you&#8217;re creating a business. There&#8217;s the initial burst of excitement when you come up with the idea and another surge in momentum when you make your first few sales. (At this point, you&#8217;re so dang cocky that you have too much wine at Thanksgiving dinner and pointedly remind your mother-in-law about how rude she was to dismiss your start-up idea and how, when you&#8217;re making millions of dollars, there will be nothing for her &#8211; she can bloody well eat frozen government cheese.)</p></blockquote>
+
+<p>As the business progresses, you start trying to turn all the various knobs on your fancy radio set in order to get better reception or to find a station you like. And fortunately, in business, we founders have a lot of knobs to play with. There&#8217;s price. Location. Employees. Marketing. Advertising. Return policies. Trade shows. Products. Search-engine optimization. And every item in your budget.</p>
+
+<p><strong>You can <a href="http://www.inc.com/magazine/20090301/how-hard-could-it-be-start-up-static.html?partner=fogcreek">read the rest of the article here</a>.</strong></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/will-entrepreneurs-be-fleeing-the-us/">Will Entrepreneurs Be Fleeing the U.S.?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-23T16:00:57-08:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It seems lately that everyone is arguing about where to spend the &#8220;stimulus&#8221; money for the auto industry.</p>
+
+<p>Some think they should stop manufacturing cars and just <a href="http://www.techcrunch.com/2008/11/29/a-modest-proposal-for-the-auto-industry-stop-building-cars/">design</a> them.  Some think they should take all the stimulus money and give it <a href="http://www.nytimes.com/2009/02/22/opinion/22friedman.html?_r=1&amp;partner=rss&amp;emc=rss">venture capitalists</a>.  Some think the car companies should fix their <a href="http://scobleizer.com/2008/11/22/why-i-love-the-us-auto-industry/">PR</a>.  And some even think they should recruit <a href="http://www.techcrunch.com/2009/02/22/letter-to-obama-what-the-car-industry-needs-is-a-steve-jobs/">Steve Jobs</a> to be the car czar!</p>
+
+<p><a href="http://www.flickr.com/photos/trashd/143455600/"><img src="http://s3.amazonaws.com/oldbloguploads/2009/02/143455600_0e03a086a41.jpg" alt="" /></a></p>
+
+<p>Everyone is missing the point: <strong>we don&#8217;t need to guess!</strong></p>
+
+<p>Some of those ideas have potential, some are really stupid.  But it doesn&#8217;t matter.  We shouldn&#8217;t have to pick one.  There is already a time tested, guaranteed, method which has worked for hundreds of years which will determine the best way to fix the problem.  It&#8217;s called the free market.</p>
+
+<p>Individual people can sometimes get it wrong.  We bring our personal biases, our own background, etc.  If one person (or a small group of people) decides how to spend the money, they COULD get it wrong (and often do).</p>
+
+<p>But if instead of a few people deciding, thousands or millions of individual people decided by &#8220;voting with their dollars&#8221;, all competing against one another, then we could try those solutions and thousands more simultaneously.  The free market would name a winner based on who got the most &#8220;votes&#8221; (dollars) and came out profitable.  The lure of financial gain would motivate these entrepreneurs to compete in this race to find the best solution.</p>
+
+<p>But by having the government decide for us, we&#8217;ve nipped that race in the bud and placed our fate in the hands of a few people deciding for us (more on the qualifications of those people at the end).</p>
+
+<p>Imagine if the government had to pick a winner for renewable energy and decide what to invest in?  Would it be solar, wind, bio-diesel, nuclear, etc, etc, etc?  The truth is that nobody knows what will ultimately end up on top.  And if you give a handful of &#8220;expert bureaucrats&#8221;, especially with all the special interests and lobbing going on in Washington, the right to choose for you, you&#8217;re in trouble.  Thousands of entrepreneurs trying their own solutions in a true merit based competition to see whose works best is the way America became great.</p>
+
+<p><strong>Some final thoughts&#8230;</strong></p>
+
+<p>Want to know more about the team of &#8220;experts&#8221; who will be deciding how to spend your money to &#8220;stimulate&#8221; the auto industry?  <a href="http://www.texasstartupblog.com/2009/02/23/how-not-to-build-an-advisory-board/">Alexander Muse writes</a> about how not a single one of them has auto-industry experience, and of the 18, only 2 drive American cars.  Nice!</p>
+
+<p>I&#8217;m reminded of something Milton Friedman would say: You always spend your own money more carefully than you spend someone else&#8217;s.</p>
+
+<p>Finally, there a number of world organizations that rank countries by their <a href="http://en.wikipedia.org/wiki/List_of_countries_by_economic_freedom">economic</a> <a href="http://en.wikipedia.org/wiki/Index_of_Economic_Freedom_historical_rankings">freedoms</a>.  Historically, the U.S. has consistently been in the top three.  It&#8217;s what differentiated America from everywhere else in the world and made our economy great.  But in the last 10-20 years or so the U.S. has moved more toward socialism and fallen as low as 8th or 9th in the world.  Personally, I find it rather annoying that the average business income tax rate in the U.S. is now around 45%, which means the government owns about 45% of the production of our economy.  We are about 45% socialist by that measure.</p>
+
+<p><strong>What is the alternative?</strong></p>
+
+<p>If this keeps up, do you think entrepreneurs will continue to incorporate in the U.S.?  For myself, I&#8217;m thinking that after Buenos Aires I might try moving to Hong Kong and seeing what it&#8217;s like there.  As a citizen of the world, I&#8217;m more interested in going where I can prosper the most instead of trying to change the U.S. (a futile effort) or waiting for it to come to it&#8217;s senses.</p>
+
+<p>Guess what the business tax rate is in Hong Kong?  A flat 16%.</p>
+
+<p>Here&#8217;s to discovering new ways to break free!
+Brian Armstrong</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/adding-gasoline-to-your-rocket-ship/">Adding Gasoline to Your Rocket Ship</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-20T03:57:33-08:00" pubdate data-updated="true">Feb 20<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I went to a pretty interesting talk yesterday at the Houston Technology Center where <a href="http://www.bijoygoswami.com/">Bijoy Goswami</a> was speaking.  It was a great chance to network with a bunch of other entrepreneurs.</p>
+
+<p><a href="http://www.bijoygoswami.com/"><img src="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-411.png" alt="" /></a></p>
+
+<p>One of the biggest take aways I got from the talk was when he outlined the 3 basic types of startups that you can do:</p>
+
+<ol>
+<li><p><strong>The Cookie Cutter</strong>
+This is a startup where the business model is tried and true.  It has been done a million times and is usually lower risk and lower reward.  Think franchises like Subway or real estate investing.  You may even be able to get funding for something like this from a bank.</p></li>
+<li><p><strong>The Funded Model</strong>
+This is where you are trying to something no one has done before.  It&#8217;s big.  Think Twitter.  It has a low chance of success but if it does, man you are going to rake in the cash.  Typically you&#8217;d seek funding from a VC or angel investor for an idea like this.</p></li>
+<li><p><strong>The Bootstrap</strong>
+This is where you aren&#8217;t seeking any funding.  You are just putting your ideas out there as soon as possible and letting early users start to give you feedback.  Obviously this is very low risk and works well with web based businesses which require little capital.</p></li>
+</ol>
+
+
+<p>The idea of getting funding has a negative connotation for me personally.  If you fail, you could wind up in a lot of debt/bankruptcy or with some venture capitalists/angel investors taking your company away from you.  Think it can&#8217;t happen?  Ask Steve Jobs at Apple.</p>
+
+<p>So of course I&#8217;m a big fan of the bootstrap, as Bijoy was.  Most of my ideas don&#8217;t work so I like to test out lots of them quickly with low risk.</p>
+
+<blockquote><p>One other nugget of wisdom I remember from the talk: He said getting funding can be the death of a company.  It&#8217;s like adding gasoline to your rocket ship.  If it&#8217;s pointed in the right direction (i.e. you&#8217;ve got your business model right) then it can be great but otherwise it&#8217;s just going to take you in the WRONG direction faster.</p></blockquote>
+
+<p>Bootstrapping is all about testing and refining your business model constantly.  You&#8217;ll know when you&#8217;ve got it right because your customers will start PAYING you.  It doesn&#8217;t matter if they SAY they like it, wait until they actually &#8220;vote with their dollars&#8221;.  It pays to get this right before seeking any funding.</p>
+
+<p><strong>South By Southwest Conference Pre-Party</strong></p>
+
+<p><a href="http://sxsw.com/interactive">South by Southwest interactive</a> is a huge entrepreneurship conference in Austin that I&#8217;m considering going to, and they threw an awesome pre-party in Houston a few days ago to generate some buzz.  They also do music and film at this conference, but it&#8217;s huge for tech as well - or &#8216;interactive&#8217; as they call it.</p>
+
+<p><a href="http://sxsw.com/interactive"><img src="http://s3.amazonaws.com/oldbloguploads/2009/02/picture-51.png" alt="" /></a></p>
+
+<p>This was a great opportunity to network again.  One person I ran into (for the second or third time) was Carl Walker, who is president of the Houston Angel Network.  The Houston Angel Network is the largest network of angel investors in Texas.  Basically they are a bunch of old rich guys who have made their money and now enjoy investing in startups.</p>
+
+<p>I&#8217;m not looking for any investors at the moment but Carl seemed like he might be a good mentor for me because he has a lot of experience.  Plus, as part of the angel network he gets to see a TON of business plans.  I wanted to get his feedback on my UniversityTutor.com site, so we set up coffee for next week.  Hopefully it will be refreshing for him to know I&#8217;m not trying to pitch him or get any investments, so we can just relax and talk business.</p>
+
+<p><strong>Final thoughts&#8230;</strong></p>
+
+<p>Get yourself around like-minded people and other entrepreneurs!  It will do wonders to your motivation.  I&#8217;ve been really surprised with the number of entrepreneurial organizations I&#8217;ve discovered in just the last week.</p>
+
+<p>Entrepreneurship is hard.  You&#8217;ll probably give up or lose interest at some point unless you have the right support group around you.  Look for business or marketing classes at your local universities.  Visit SBA and SCORE events.  Go to South by Southwest.  Look for groups on MeetUp.com.  Get on emails lists.  Try to setup a regular meeting once a week or month with some other entrepreneurs.  And get some good mentors - people who have ALREADY done what you&#8217;re trying to accomplish.</p>
+
+<p>Until next time, keep breaking free!
+Brian Armstrong</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/12/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/10/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h2>Recent Posts</h2>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/announcing-ribbot-com-build-your-own-reddithacker-news-style-discussion-forum/">Announcing Ribbot.com - build your own Reddit/Hacker News style discussion forum</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/some-random-udpates/">Some random udpates&#8230;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/bitcoin-wallet-for-android/">Bitcoin Wallet for Android</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/learning-programming/">Learning Programming</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/find-a-model-at-thebookr-com/">Find a model at TheBookr.com</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h2>Latest Tweets</h2>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+    <a href="http://twitter.com/brian_armstrong" class="twitter-follow-button" data-show-count="true">Follow @brian_armstrong</a>
+  
+</section>
+
+<section>
+  <div id="popularthreads" class="dsq-widget">
+    <h2 class="dsq-widget-title">Popular Posts</h2>
+    <script type="text/javascript" src="http://brianarmstrong.disqus.com/popular_threads_widget.js?num_items=5"></script>
+  </div>
+</section>
+
+
+
+
+  
+</aside>
+
+      </div>
+    </div>
+    <footer class="footer"><p>
+  Copyright &copy; 2012 - Brian Armstrong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> -
+  
+    <span class="credit">Theme by <a href="https://github.com/barmstrong/octopress-bootstrap">Brian Armstrong</a></span>
+  
+</p>
+</footer>
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'brianarmstrong';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+    
+    $(document).ready(function(){
+      getTwitterFeed("brian_armstrong", 4, false);
+    });
+  </script>
+
+
+  </div>
+</body>
+</html>

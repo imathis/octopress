@@ -1,0 +1,32 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container" style="width: auto;">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><a href="{{ root_url }}/">Home</a></li>
+          <li><a href="{{ root_url }}/blog/archives">Blog</a></li>
+          <li><a href="{{ root_url }}/projects">Projects</a></li>
+          <li><a href="{{ root_url }}/contact">Contact</a></li>
+        </ul>
+        {% if site.simple_search %}
+          <form action="{{ site.simple_search }}" method="get" class="navbar-search pull-left">
+            <fieldset role="search">
+              <input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}" />
+              <input type="text" name="q" results="0" placeholder="Search" class="search-query span2" />
+            </fieldset>
+          </form>
+        {% endif %}
+        <ul class="nav pull-right">
+          <li>
+            <a style="padding: 7px 0 0 0;" href="http://feeds.feedburner.com/brianarmstrong/vTOG"><img src="http://feeds.feedburner.com/~fc/brianarmstrong/vTOG?bg=a1cefc&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>            
+          </li>
+        </ul>
+      </div><!-- /.nav-collapse -->
+    </div>
+  </div><!-- /navbar-inner -->
+</div>
