@@ -110,6 +110,7 @@ task :new_post, :title do |t, args|
       post.puts "---"
     end
     puts "Created new post: #{filename}"
+    exec "#{ENV['EDITOR']} #{filename}"
   rescue Exception => e
     puts "Aieeeee! #{e}"
   end
@@ -150,6 +151,7 @@ task :new_page, :filename do |t, args|
         page.puts "---"
       end
       puts "Created new page: #{file}"
+      exec "#{ENV['EDITOR']} #{file}"
     else
       puts "Syntax error: #{args.filename} contains unsupported characters"
     end
