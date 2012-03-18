@@ -56,6 +56,7 @@ module Jekyll
       @title = nil
       @caption = nil
       @filetype = nil
+      @start_lnr = 1
       @highlight = true
       if markup =~ /\s*lang:(\w+)/i
         @filetype = $1
