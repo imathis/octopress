@@ -4,7 +4,7 @@
   <header role="banner" itemscope itemtype="http://schema.org/WPHeader">{% include header.html %}</header>
   <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">{% include navigation.html %}</nav>
   <div id="main" itemprop="mainContentOfPage">
-    <div id="content">
+    <div id="content" {% if page.schemaorgtype %} itemscope itemtype="{{ page.schemaorgtype }}" {% endif %}>
       {{ content | expand_urls: root_url }}
     </div>
   </div>

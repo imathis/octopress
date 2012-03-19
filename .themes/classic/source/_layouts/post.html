@@ -4,7 +4,7 @@ single: true
 ---
 
 <div>
-<article class="hentry" role="article" itemscope itemtype='http://schema.org/BlogPosting'>
+<article class="hentry" role="article" {% unless page.schemaorgtype %} itemscope itemtype="http://schema.org/BlogPosting" {% endunless %}>
   {% include article.html %}
   <footer>
     <p class="meta">

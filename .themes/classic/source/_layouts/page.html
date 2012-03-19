@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div>
-<article class="page" role="article" itemscope itemtype="http://schema.org/Article">
+<article class="page" role="article" {% unless page.schemaorgtype %} itemscope itemtype="http://schema.org/Article" {% endunless %}>
   {% if page.title %}
   <header>
     <h1 class="entry-title" itemprop="headline">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
