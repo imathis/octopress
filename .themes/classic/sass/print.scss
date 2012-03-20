@@ -1,0 +1,38 @@
+@import "compass";
+@import "custom/print";
+
+// Removes unnecessary parts for print view: navigation and sidebar
+body > nav,
+aside.sidebar {
+  display: none;
+}
+
+// Body
+body {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.4;
+  word-spacing: 1.1pt;
+  letter-spacing: 0.2pt;
+  font-family: Garamond, Perpetua, "Nimbus Roman No9 L", "Times New Roman", serif;
+  color: #000;
+  background: none;
+  font-size: 11pt;
+}
+
+h1 {
+  font-size: 14pt;
+}
+h2 {
+  font-size: 13pt;
+}
+h3 {
+  font-size: 12pt;
+}
+h4,h5,h6{
+  font-size: 11pt;
+}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+  text-decoration: none !important;
+}
