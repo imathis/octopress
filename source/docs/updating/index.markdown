@@ -12,6 +12,7 @@ footer: false
 
 ``` sh
     git pull octopress master     # Get the latest Octopress
+    bundle update
     bundle install                # Keep gems updated
     rake update_source            # update the template's source
     rake update_style             # update the template's style

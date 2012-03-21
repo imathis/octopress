@@ -47,6 +47,7 @@ Next, install dependencies.
 ```sh
 gem install bundler
 rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command
+bundle update
 bundle install
 ```
 
