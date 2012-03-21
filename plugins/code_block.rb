@@ -49,30 +49,26 @@ module Jekyll
   class CodeBlock < Liquid::Block
     include HighlightCode
     include TemplateWrapper
-    CaptionUrlTitle = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)\s+(.+)/i
-    CaptionUrl = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)/i
-    Caption = /(\S[\S\s]*)/
+    CaptionUrlTitle = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)\s+(.*\S+)\s*/i
+    CaptionUrl = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)\s*/i
+    Caption = /\s*(.*\S+)\s*/
     def initialize(tag_name, markup, tokens)
       @title = nil
       @caption = nil
-      @filetype = nil
       @highlight = true
       if markup =~ /\s*lang:(\w+)/i
-        @filetype = $1
+        @lang = $1
         markup = markup.sub(/lang:\w+/i,'')
       end
-      if markup =~ CaptionUrlTitle
-        @file = $1
-        @caption = "<figcaption><span>#{$1}</span><a href='#{$2 + $3}'>#{$4}</a></figcaption>"
-      elsif markup =~ CaptionUrl
-        @file = $1
-        @caption = "<figcaption><span>#{$1}</span><a href='#{$2 + $3}'>link</a></figcaption>"
-      elsif markup =~ Caption
-        @file = $1
-        @caption = "<figcaption><span>#{$1}</span></figcaption>\n"
-      end
-      if @file =~ /\S[\S\s]*\w+\.(\w+)/ && @filetype.nil?
-        @filetype = $1
+      @caption = if markup =~ CaptionUrlTitle
+                   "<figcaption><span>#{$1}</span><a href='#{$2 + $3}'>#{$4}</a></figcaption>"
+                 elsif markup =~ CaptionUrl
+                   "<figcaption><span>#{$1}</span><a href='#{$2 + $3}'>link</a></figcaption>"
+                 elsif markup =~ Caption
+                   "<figcaption><span>#{$1}</span></figcaption>\n"
+                 end
+      if @lang.nil? || @lang.empty?
+        @filename = $1
       end
       super
     end
@@ -82,8 +78,8 @@ module Jekyll
       code = super.join
       source = "<figure class='code'>"
       source += @caption if @caption
-      if @filetype
-        source += " #{highlight(code, @filetype)}</figure>"
+      if @lang || @filename
+        source += " #{highlight(code, :lexer => @lang, :filename => @filename)}</figure>"
       else
         source += "#{tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'))}</figure>"
       end
