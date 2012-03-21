@@ -15,14 +15,12 @@ Run this command to install RVM for your user account.
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
 ```
 
-Next add RVM to your shell as a function.
+Next add RVM to your shell as a function. (Or simply close and reopen your shell.)
 
 ```sh
-echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bash_profile
 source ~/.bash_profile
 
 # If using Zsh do this instead
-echo '[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm' >> ~/.zshrc
 source ~/.zshrc
 ```
 
@@ -30,5 +28,4 @@ Install Ruby 1.9.2 and ensure RVM has the latest RubyGems.
 
 ```sh
 rvm install 1.9.2 && rvm use 1.9.2
-rvm rubygems latest
 ```
