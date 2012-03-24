@@ -2,7 +2,6 @@ source "http://rubygems.org"
 
 group :development do
   gem 'rake', '~> 0.9.2'
-  gem 'rack'
   gem 'jekyll', '~> 0.11.2'
   gem 'rdiscount'
   gem 'pygments.rb', '~> 0.2.7'
@@ -14,4 +13,4 @@ group :development do
   gem 'stringex'
 end
 
-gem 'sinatra', '1.2.6'
+gem 'sinatra', '~> 1.3.2'
