@@ -10,7 +10,7 @@ group :development do
   gem 'compass', '~> 0.12.1'
   gem 'rubypants'
   gem 'rb-fsevent', '~> 0.9.0'
-  gem 'stringex'
+  gem 'stringex', '~> 1.3.2'
 end
 
 gem 'sinatra', '~> 1.3.2'
