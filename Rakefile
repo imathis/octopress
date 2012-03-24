@@ -2,6 +2,10 @@ require "rubygems"
 require "bundler/setup"
 require "stringex"
 
+ENV['CURRENT_DIR'] ||= Dir.pwd
+
+current_dir = ENV['CURRENT_DIR']
+
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 ssh_user       = "user@domain.com"
@@ -15,16 +19,17 @@ deploy_branch  = "gh-pages"
 
 ## -- Misc Configs -- ##
 
-public_dir      = "public"    # compiled site directory
-source_dir      = "source"    # source file directory
-blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
-deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
-stash_dir       = "_stash"    # directory to stash posts for speedy generation
-posts_dir       = "_posts"    # directory for blog files
-themes_dir      = ".themes"   # directory for blog files
-new_post_ext    = "markdown"  # default new post file extension when using the new_post task
-new_page_ext    = "markdown"  # default new page file extension when using the new_page task
-server_port     = "4000"      # port for preview server eg. localhost:4000
+public_dir      = File.join(current_dir, 'public')  # compiled site directory
+source_dir      = File.join(current_dir, 'source')  # source file directory
+blog_index_dir  = File.join(current_dir, 'source')  # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
+sass_dir        = File.join(current_dir, 'sass')    # sass directory
+deploy_dir      = "_deploy"                         # deploy directory (for Github pages deployment)
+stash_dir       = "_stash"                          # directory to stash posts for speedy generation
+posts_dir       = "_posts"                          # directory for blog files
+themes_dir      = ".themes"                         # directory for blog files
+new_post_ext    = "markdown"                        # default new post file extension when using the new_post task
+new_page_ext    = "markdown"                        # default new page file extension when using the new_page task
+server_port     = "4000"                            # port for preview server eg. localhost:4000
 
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
@@ -37,8 +42,8 @@ task :install, :theme do |t, args|
   puts "## Copying "+theme+" theme into ./#{source_dir} and ./sass"
   mkdir_p source_dir
   cp_r "#{themes_dir}/#{theme}/source/.", source_dir
-  mkdir_p "sass"
-  cp_r "#{themes_dir}/#{theme}/sass/.", "sass"
+  mkdir_p sass_dir
+  cp_r "#{themes_dir}/#{theme}/sass/.", sass_dir
   mkdir_p "#{source_dir}/#{posts_dir}"
   mkdir_p public_dir
 end
@@ -116,7 +121,7 @@ desc "Create a new page in #{source_dir}/(filename)/index.#{new_page_ext}"
 task :new_page, :filename do |t, args|
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   args.with_defaults(:filename => 'new-page')
-  page_dir = [source_dir]
+  page_dir = [File.basename(source_dir)]
   if args.filename.downcase =~ /(^.+\/)?(.+)/
     filename, dot, extension = $2.rpartition('.').reject(&:empty?)         # Get filename and extension
     title = filename
@@ -128,7 +133,7 @@ task :new_page, :filename do |t, args|
     extension ||= new_page_ext
     page_dir = page_dir.map! { |d| d = d.to_url }.join('/')                # Sanitize path
     filename = filename.downcase.to_url
-
+    page_dir = File.join(current_dir, page_dir)
     mkdir_p page_dir
     file = "#{page_dir}/#{filename}.#{extension}"
     if File.exist?(file)
@@ -225,7 +230,10 @@ end
 
 desc "copy dot files for deployment"
 task :copydot, :source, :dest do |t, args|
-  FileList["#{args.source}/**/.*"].exclude("**/.", "**/..", "**/.DS_Store", "**/._*").each do |file|
+  jekyll_config = YAML.load(IO.read('_config.yml'))
+  whitelist = ['.htaccess', '**/*']
+  whitelist += jekyll_config.include?(:whitelist) if jekyll_config.include?(:whitelist)
+  FileList["#{args.source}/**/.*"].add(*whitelist).exclude("**/.", "**/.*", "**/..", "**/.DS_Store", "**/._*").each do |file|
     cp_r file, file.gsub(/#{args.source}/, "#{args.dest}") unless File.directory?(file)
   end
 end
