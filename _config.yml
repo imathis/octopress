@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
+url: http://octopress.org
+title: Octopress
 subtitle: A blogging framework for hackers.
-author: Your Name
+author: Brandon Mathis
 simple_search: http://google.com/search
 description:
 
@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: brandon@imathis.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -33,6 +33,7 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
+category_title_prefix: "Category: "
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
 
@@ -49,7 +50,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
-# blog_index_asides:
+blog_index_asides: [asides/twitter.html, asides/delicious.html, asides/pinboard.html]
 # post_asides:
 # page_asides:
 
@@ -64,7 +65,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: octopress
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
@@ -82,7 +83,7 @@ googleplus_hidden: false
 
 # Pinboard
 pinboard_user:
-pinboard_count: 3
+pinboard_count: 4
 
 # Delicious
 delicious_user:
@@ -93,7 +94,7 @@ disqus_short_name:
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-10876422-2
 
 # Facebook Like
 facebook_like: false
