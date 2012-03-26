@@ -71,12 +71,14 @@ module Jekyll
         end_line = @end_line && @end_line >= start_line ? @end_line : lines.size
         code = lines[(start_line-1)..(end_line-1)].join("")
 
+        options = {:linenostart => start_line}
+
         @filetype = file.extname.sub('.','') if @filetype.nil?
         start_end_title = ", line #{start_line} to #{end_line}" if @start_line || @end_line
         title = @title ? "#{@title} (#{file.basename}#{start_end_title})" : file.basename
         url = "/#{code_dir}/#{@file}"
         source = "<figure class='code'><figcaption><span>#{title}</span> <a href='#{url}'>download</a></figcaption>\n"
-        source += " #{highlight(code, @filetype)}</figure>"
+        source += " #{highlight(code, @filetype, options)}</figure>"
         safe_wrap(source)
       end
     end
