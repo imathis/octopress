@@ -6,9 +6,9 @@ require "stringex"
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 ssh_user       = "user@domain.com"
 ssh_port       = "22"
-document_root  = "~/website.com/"
+document_root  = "/srv/http/deriamis.net/htdocs/"
 rsync_delete   = true
-deploy_default = "rsync"
+deploy_default = "local"
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
