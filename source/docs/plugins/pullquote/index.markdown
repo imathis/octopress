@@ -21,6 +21,13 @@ When writing longform posts, I find it helpful to include pull quotes to help re
 It is important to note that {" pull quotes are merely visual in presentation and should not appear twice in the text. "} That is why it a CSS only technique for styling pull quotes is preferable. Octopress includes a handy pull quote plugin to make this easy for you.
 {% endpullquote %}
 
+Alternately, you can use "pullquote align:left" to create left-aligning pullquotes. They look like this in Markdown:
+
+	{{ "{% pullquote align:left" }} %}
+	Left-aligning pullquotes are good to alternate breaks in the text. They're
+	{" almost exactly like the default, "} right pullquotes, but a little different.  
+	{{ "{% endpullquote" }} %}
+
 **Inspect the source** and you'll see the pulled content appears in the data-pullquote attribute of the paragraph. The pull quote effect is created
 entirely with CSS, and is supported by all modern browsers as well as IE8 and up.
 

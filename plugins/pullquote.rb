@@ -18,9 +18,7 @@
 #     </span>
 #   </p>
 #
-# {% pullquote left %} will create a left-aligned pullquote instead.
-#
-# Note: this plugin now creates pullquotes with the class of pullquote-right by default
+# {% pullquote left %} will create a left-aligned pullquote as an alternate.
 
 module Jekyll
 
