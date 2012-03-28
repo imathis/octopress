@@ -23,7 +23,7 @@ It is important to note that {" pull quotes are merely visual in presentation an
 
 Alternately, you can use "pullquote align:left" to create left-aligning pullquotes. They look like this in Markdown:
 
-	{{ "{% pullquote align:left" }} %}
+	{{ "{% pullquote left" }} %}
 	Left-aligning pullquotes are good to alternate breaks in the text. They're
 	{" almost exactly like the default, "} right pullquotes, but a little different.  
 	{{ "{% endpullquote" }} %}
