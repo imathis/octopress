@@ -1,7 +1,7 @@
 @import "compass";
 @import "custom/print";
 
-// HTML5 boilerplate
+// HTML5 boilerplate: https://github.com/h5bp/html5-boilerplate/blob/master/css/style.css#L279-L292
 * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
 a, a:visited { text-decoration: underline; }
 a[href]:after { content: " (" attr(href) ")"; }
