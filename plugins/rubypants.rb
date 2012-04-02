@@ -401,8 +401,8 @@ class RubyPants < String
     # Special case if the very first character is a quote followed by
     # punctuation at a non-word-break. Close the quotes by brute
     # force:
-    str.gsub!(/^'(?=#{punct_class}\B)/, '&#8217;')
-    str.gsub!(/^"(?=#{punct_class}\B)/, '&#8221;')
+    str.gsub!(/^'(?=#{punct_class}\B)/o, '&#8217;')
+    str.gsub!(/^"(?=#{punct_class}\B)/o, '&#8221;')
 
     # Special case for double sets of quotes, e.g.:
     #   <p>He said, "'Quoted' words in a larger quote."</p>
@@ -416,19 +416,19 @@ class RubyPants < String
     dec_dashes = '&#8211;|&#8212;'
 
     # Get most opening single quotes:
-    str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)'(?=\w)/,
+    str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)'(?=\w)/o,
              '\1&#8216;')
     # Single closing quotes:
-    str.gsub!(/(#{close_class})'/, '\1&#8217;')
+    str.gsub!(/(#{close_class})'/o, '\1&#8217;')
     str.gsub!(/'(\s|s\b|$)/, '&#8217;\1')
     # Any remaining single quotes should be opening ones:
     str.gsub!(/'/, '&#8216;')
 
     # Get most opening double quotes:
-    str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)"(?=\w)/,
+    str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)"(?=\w)/o,
              '\1&#8220;')
     # Double closing quotes:
-    str.gsub!(/(#{close_class})"/, '\1&#8221;')
+    str.gsub!(/(#{close_class})"/o, '\1&#8221;')
     str.gsub!(/"(\s|s\b|$)/, '&#8221;\1')
     # Any remaining quotes should be opening ones:
     str.gsub!(/"/, '&#8220;')
