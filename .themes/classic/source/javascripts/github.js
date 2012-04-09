@@ -29,6 +29,15 @@ var github = (function(){
           });
 
           if (options.count) { repos.splice(options.count); }
+          skips = options.skip_repos.split(',');
+          if(skips.length > 0){
+            for(var i=0; i < repos.length; i++){
+                if(skips.indexOf(repos[i].name) >= 0){
+                    repos.splice(i,1);
+                }
+            }
+          }
+
           render(options.target, repos);
         }
       });
