@@ -2,6 +2,16 @@
   {% if site.twitter_tweet_button %}
   <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" >Tweet</a>
   {% endif %}
+  {% if site.hackernews_button %}
+  <a href="http://news.ycombinator.com/submit" class="hn-share-button" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}">Vote on HN</a>
+  <script>
+  (function() {
+    var hn = document.createElement('script'); hn.type = 'text/javascript';
+    hn.async = true; hn.src = 'http://hnbutton.appspot.com/static/hn.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hn, s);
+  })();
+  </script>
+  {% endif %}
   {% if site.google_plus_one %}
   <div class="g-plusone" data-size="{{ site.google_plus_one_size }}"></div>
   {% endif %}

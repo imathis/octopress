@@ -71,6 +71,9 @@ twitter_follow_button: true
 twitter_show_follower_count: false
 twitter_tweet_button: true
 
+# Hacker News
+hackernews_button: false
+
 # Google +1
 google_plus_one: false
 google_plus_one_size: medium
