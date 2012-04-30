@@ -4,9 +4,8 @@ layout: default
 
 <div class="blog-index">
   {% for post in paginator.posts %}
-    {% assign content = post.content %}
     {% include post/variables.html %}
-    <article {% if linklog %}data-linklog{% endif %}>
+    <article {% if linklog %}class="linklog"{% endif %}>
       {% include article.html %}
     </article>
   {% endfor %}

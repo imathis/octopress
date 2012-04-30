@@ -4,20 +4,19 @@
     {% unless page.meta == false %}
       <p class="meta">
         {% include post/date.html %}{{ time }}
-        {% if site.disqus_short_name and page.comments != false and site.disqus_show_comment_count == true %}
-         &bull; <a href="{% if index %}{{ permalink }}{% endif %}#disqus_thread">Comments</a>
-        {% endif %}
          &bull; <a rel="bookmark" href="{{ permalink }}">{{ site.permalink_label }}</a>
       </p>
     {% endunless %}
   </header>
 {% endunless %}
-{% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
-{% if index and excerpted != 'false' %}
-  <div class="entry-content">{{ content | excerpt }}</div>
+<div class="entry-content">{{ content }}</div>
+{% if index %}
   <footer>
-    <a rel="full-article" href="{{ permalink }}">{{ site.excerpt_link }}</a>
+    {% if site.disqus_short_name and page.comments != false and site.disqus_show_comment_count == true %}
+    <p><a class="comments-link" href="{% if index %}{{ permalink }}{% endif %}#disqus_thread">View comments &raquo;</a></p>
+    {% endif %}
+    {% if excerpted != 'false' %}
+    <p><a rel="full-article" href="{{ permalink }}">{{ site.excerpt_link }}</a></p>
+    {% endif %}
   </footer>
-{% else %}
-  <div class="entry-content">{{ content }}</div>
 {% endif %}

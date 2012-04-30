@@ -79,6 +79,17 @@ module OctopressLiquidFilters
     end
   end
 
+  # Prepend a local url with a file path
+  # remote urls and urls beginning with ! will be ignored
+  def prepend_url(input, path='')
+    path += '/' unless path.match /\/$/
+    if input.match /^!/
+      input.gsub(/^(!)(.+)/, '\2')
+    else
+      input.gsub(/^(\/)?([^:]+?)$/, "#{path}"+'\2')
+    end
+  end
+
   # Improved version of Liquid's truncate:
   # - Doesn't cut in the middle of a word.
   # - Uses typographically correct ellipsis (…) insted of '...'

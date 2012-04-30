@@ -47,7 +47,7 @@ article {
 
   .entry-content & h2:first-child, header + h2 { padding-top: 0; }
 
-  &[data-linklog] {
+  &.linklog {
     .entry-title {
       font-size: $h1;
       a { text-decoration: underline; }
@@ -63,10 +63,12 @@ article {
   }
 
   > footer {
+    @extend .sans;
     padding-bottom: 2.5em;
     margin-top: 2em;
-    @extend .sans;
     .blog-index & { margin-top: 1em; }
+  }
+  footer {
     .meta {
       margin-bottom: .8em;
       font-size: .85em;
@@ -75,6 +77,12 @@ article {
     }
     .byline + time:before, time +time:before, .comments:before, .byline ~ .categories:before {
       @extend .separator;
+    }
+    p:last-child { margin-bottom: 0; }
+    .comments-link { 
+      font-size: .8em; 
+      color: inherit;
+      &:hover, &:focus { color: $link-color-hover; }
     }
   }
 

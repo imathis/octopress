@@ -11,3 +11,4 @@
 {% capture title_url %}{% if linklog %}{{ linklog }}{% else %}{{ permalink }}{% endif %}{% endcapture %}
 {% capture article_title %}{% if index %}{% unless linklog %}{{ site.standard_post_marker }}{% endunless %}{{ post.title }}{% else %}{% unless linklog %}{{ site.standard_post_marker }}{% endunless %}{{ page.title }}{% endif %}{% endcapture %}
 {% capture linklog_marker %}<span class='linklog-marker'>{{ site.linklog_marker }}</span>{% endcapture %}
+{% capture content %}{% if index %}{% capture excerpted %}{{ post.content | has_excerpt }}{% endcapture %}{% if excerpted != 'false' %}{{ post.content | excerpt }}{% else %}{{ post.content }}{% endif %}{% else %}{{ content }}{% endif %}{% endcapture %}
