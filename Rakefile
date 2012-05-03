@@ -150,6 +150,27 @@ task :new_page, :filename do |t, args|
   end
 end
 
+# usage rake new_aside["Title of aside"]
+desc "Generates a new aside in #{source_dir}/_includes/custom/asides"
+task :new_aside, :title do |t, args|
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  mkdir_p "#{source_dir}/_includes/custom/asides"
+  args.with_defaults(:title => 'new-aside')
+  title = args.title
+  safe_filename = title.downcase.gsub(/[^\w\s_]+/, '').gsub(/(^|\b\s)\s+($|\s?\b)/, '\\1\\2').gsub(/\s+/, '_')
+  filename = "#{source_dir}/_includes/custom/asides/#{safe_filename}.html"
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  puts "Creating new aside: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "<section>"
+    post.puts "<h1>#{title.gsub(/&/,'&amp;')}</h1>"
+    post.puts "</section>"
+  end
+  puts "Aside #{filename} created. Update _config.yml to add it to site."
+end
+
 # usage rake isolate[my-post]
 desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much quicker."
 task :isolate, :filename do |t, args|
