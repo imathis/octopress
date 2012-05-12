@@ -11,6 +11,9 @@
         {% if site.disqus_short_name and page.comments != false and site.disqus_show_comment_count == true %}
          | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a>
         {% endif %}
+        {% if site.intense_debate_acct and index != true and page.comments != false and site.intense_debate_show_comment_count == true %}
+         | {% include intensedebate_commentcount.html %}
+        {% endif %}
       </p>
     {% endunless %}
   </header>
@@ -25,4 +28,5 @@
   {% endif %}
 {% else %}
 <div class="entry-content">{{ content }}</div>
+{% include intensedebate.html %}
 {% endif %}

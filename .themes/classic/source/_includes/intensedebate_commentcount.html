@@ -1,0 +1,11 @@
+{% comment %}
+Load script if intensedebate comments are enabled and page.comments is either empty (index) or set to true
+{% endcomment %}
+{% if site.intense_debate_acct and page.comments != false %}
+<script>
+var idcomments_acct = '{{ site.intense_debate_acct }}';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<script type="text/javascript" src="http://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>
+{% endif %}
