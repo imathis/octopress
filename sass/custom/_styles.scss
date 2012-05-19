@@ -51,7 +51,7 @@ body > header {
     }
     h2 {
       margin: 0 0 .3em;
-      @extend .sans;
+      font-family: $sans;
       font-size: 1.2em;
       color: $subtitle-color;
       position: relative; left: -1.6em; top: 0;
