@@ -2,6 +2,7 @@
 layout: page
 title: Blog Archive
 footer: false
+body_id: archive
 ---
 
 <div id="blog-archives">
@@ -11,7 +12,8 @@ footer: false
   {% assign year = this_year %}
   <h2>{{ year }}</h2>
 {% endunless %}
-<article>
+{% include post/variables.html %}
+<article {% if linklog %}data-linklog{% endif %}>
   {% include archive_post.html %}
 </article>
 {% endfor %}
