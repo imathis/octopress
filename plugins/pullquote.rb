@@ -32,7 +32,7 @@ module Jekyll
 
     def render(context)
       output = super
-      if output.join =~ /\{"\s*(.+)\s*"\}/
+      if output.join =~ /\{"\s*(.+?)\s*"\}/m
         #@quote = $1
         @quote = RubyPants.new($1).to_html
         #@quote = CGI.escape($1)

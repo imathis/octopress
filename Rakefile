@@ -59,8 +59,8 @@ desc "Watch the site and regenerate when it changes"
 task :watch do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass."
-  system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exist?("#{source_dir}/stylesheets/screen.css")
-  jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll --auto")
+  system "compass compile --css-dir #{source_dir}/stylesheets"
+  jekyllPid = Process.spawn("jekyll --auto")
   compassPid = Process.spawn("compass watch")
 
   trap("INT") {
@@ -75,8 +75,8 @@ desc "preview the site in a web browser"
 task :preview do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
-  system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exist?("#{source_dir}/stylesheets/screen.css")
-  jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll --auto")
+  system "compass compile --css-dir #{source_dir}/stylesheets"
+  jekyllPid = Process.spawn("jekyll --auto")
   compassPid = Process.spawn("compass watch")
   rackupPid = Process.spawn("rackup --port #{server_port}")
 
@@ -106,6 +106,7 @@ task :new_post, :title do |t, args|
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
     post.puts "comments: true"
+    post.puts "external-url: "
     post.puts "categories: "
     post.puts "---"
   end
@@ -199,6 +200,12 @@ task :update_source, :theme do |t, args|
   cp "#{source_dir}.old/favicon.png", source_dir
   mv "#{source_dir}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != source_dir
   cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir && File.exists?("#{source_dir}.old/index.html")
+  if File.exists?("#{source_dir}/archives/index.html")
+    rm "#{source_dir}/archives/index.html"
+    mv "#{source_dir}/blog/archives/index.html", "#{source_dir}/archives/index.html"
+    rm_r "#{source_dir}/blog/archives"
+    rm_r "#{source_dir}/blog" if Dir.entries("#{source_dir}/blog").join == "..."
+  end
   puts "## Updated #{source_dir} ##"
 end
 

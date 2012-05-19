@@ -6,6 +6,13 @@ $heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif
 $header-title-font-family: $heading-font-family !default;
 $header-subtitle-font-family: $heading-font-family !default;
 
+$h1: 2.2em !default;
+$h2: 1.5em !default;
+$h3: 1.3em !default;
+$h4:   1em !default;
+$h5:  .9em !default;
+$h6:  .8em !default;
+
 // Fonts
 .heading {
   font-family: $heading-font-family;
@@ -15,7 +22,7 @@ $header-subtitle-font-family: $heading-font-family !default;
 .mono { font-family: $mono; }
 
 body > header h1 {
-  font-size: 2.2em;
+  font-size: $h1;
   @extend .heading;
   font-family: $header-title-font-family;
   font-weight: normal;
@@ -31,15 +38,6 @@ body {
   color: $text-color;
   @extend .serif;
 }
-h1 {
-  font-size: 2.2em;
-  line-height: 1.2em;
-}
-
-@media only screen and (min-width: 992px) {
-  body { font-size: 1.15em; }
-  h1 { font-size: 2.6em; line-height: 1.2em; }
-}
 
 #{headings()}{
   @extend .heading;
@@ -47,21 +45,30 @@ h1 {
   margin-bottom: 1em;
   font-weight: bold;
 }
+h1 {
+  font-size: $h1;
+  line-height: 1.2em;
+}
 h2, section h1 {
-  font-size: 1.5em;
+  font-size: $h2;
 }
 h3, section h2, section section h1 {
-  font-size: 1.3em;
+  font-size: $h3;
 }
 h4, section h3, section section h2, section section section h1 {
-  font-size: 1em;
+  font-size: $h4;
 }
 h5, section h4, section section h3 {
-  font-size: .9em;
+  font-size: $h5;
 }
 h6, section h5, section section h4, section section section h3 {
-  font-size: .8em;
+  font-size: $h6;
 }
+
+@media only screen and (min-width: 992px) {
+  body { font-size: 1.15em; }
+}
+
 p, blockquote, ul, ol { margin-bottom: 1.5em; }
 
 ul { list-style-type: disc;
