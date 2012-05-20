@@ -150,11 +150,9 @@ module Jekyll
     def category_links(categories)
       dir = @context.registers[:site].config['category_dir']
       categories = categories.sort!.map do |item|
-        if dir.nil? or dir.empty?
-          "<a class='category' href='/#{item.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase}/'>#{item}</a>"
-        else
-          "<a class='category' href='/#{dir}/#{item.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase}/'>#{item}</a>"
-        end
+        url = item.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
+        url = "#{dir}/#{url}" unless dir.nil? or dir.empty?
+        "<a class='category' href='/#{url}/'>#{item}</a>"
       end
 
       case categories.length
