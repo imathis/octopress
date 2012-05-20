@@ -96,7 +96,7 @@ First you'll need to create a file named `CNAME` in the source containing your d
 echo 'your-domain.com' >> source/CNAME
 ```
 
-From [Github's Pages guide](http://pages.github.com):<br>
+From [Github's Pages guide](http://help.github.com/pages/#custom_domains):<br>
 Next, you’ll need to visit your domain registrar or DNS host and add a record for your domain name.
 For a sub-domain like `www.example.com` you would simply create a CNAME record pointing at `charlie.github.com`.
 If you are using a top-level domain like `example.com`, you must use an A record pointing to `207.97.227.245`.
