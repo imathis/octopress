@@ -10,6 +10,7 @@ module BacktickCodeBlock
     @lang = nil
     @url = nil
     @title = nil
+    input.encode!("UTF-8")
     input.gsub(/^`{3} *([^\n]+)?\n(.+?)\n`{3}/m) do
       @options = $1 || ''
       str = $2
