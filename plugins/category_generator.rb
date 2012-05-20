@@ -36,7 +36,7 @@ module Jekyll
       @name = 'index.html'
       self.process(@name)
       # Read the YAML data from the layout page.
-      self.read_yaml(File.join(base, '_layouts'), 'category_feed.xml')
+      self.read_yaml(File.join(base, '_layouts'), 'category_index.html')
       self.data['category']    = category
       # Set the title for this page.
       title_prefix             = site.config['category_title_prefix'] || 'Category: '
