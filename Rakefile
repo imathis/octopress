@@ -215,12 +215,6 @@ end
 
 desc "Default deploy task"
 task :deploy do
-  # Check if preview posts exist, which should not be published
-  if File.exists?(".preview-mode")
-    puts "## Found posts in preview mode, regenerating files ..."
-    File.delete(".preview-mode")
-    Rake::Task[:generate].execute
-  end
   Rake::Task[:copydot].invoke(source_dir, public_dir)
   Rake::Task["#{deploy_default}"].execute
 end
@@ -392,6 +386,8 @@ task :setup_github_pages, :repo do |t, args|
     puts "Finally, follow the guide at http://help.github.com/pages/#custom_domains for help pointing your domain to Github Pages"
   end
   puts "Deploy to #{repo_url} with `rake deploy`"
+  puts "Note: generated content is copied into _deploy/ which is not in version control."
+  puts "If starting with a fresh clone of this project you should re-run setup_github_pages."
   puts "========================================================"
 end
 
