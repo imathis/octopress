@@ -55,7 +55,7 @@ standard_post_marker: "&#9733; "
 To help distinguish them from standard posts, linked posts have a smaller font size in addition to the linklog marker. When an article is a linked post it is marked with the html5 attribute `data-linklog` to give you a hook to customize styles if you like. If you wanted to set a different color for linked post titles you could add this css to your `sass/custom/styles.scss`.
 
 ``` scss Customized linked post title
-article[data-linklog] .entry-title a {
+.linklog .entry-title a {
   color: lime;
 }
 ```
