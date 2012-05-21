@@ -5,7 +5,7 @@ single: true
 
 <div>
 {% include post/variables.html %}
-<article class="hentry" role="article" {% if linklog %}class="linklog"{% endif %}>
+<article class="hentry {% if linklog %}linklog{% endif %}" role="article">
   {% include article.html %}
   <footer>
     <p class="meta">
