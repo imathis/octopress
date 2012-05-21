@@ -34,8 +34,10 @@ In the `_config.yml` there are three sections for configuring your Octopress Blo
     author:             # Your name, for RSS, Copyright, Metadata
     simple_search:      # Search engine for simple site search
     description:        # A default meta description for your site
+    date_format:        # Format dates using Ruby's date strftime syntax
     subscribe_rss:      # Url for your blog's feed, defauts to /atom.xml
     subscribe_email:    # Url to subscribe by email (service required)
+    category_feeds:     # Enable per category RSS feeds (defaults to false in 2.1)
     email:              # Email address for the RSS feed if you want it.
 ```
 
@@ -73,12 +75,14 @@ If you want to publish your site to a subdirectory, [(see Deploying Octopress to
 <h3 id="third_party">3rd Party Settings</h3>
 These third party integrations are already set up for you. Simply fill in the configurations and they'll be added to your site.
 
+- **Github** - *List your github repositories in the sidebar*
 - **Twitter** - *Setup a sidebar twitter feed, follow button, and tweet button (for sharing posts and pages).*
 - **Google Plus One** - *Setup sharing for posts and pages on Google's plus one network.*
 - **Pinboard** - *Share your recent Pinboard bookmarks in the sidebar.*
 - **Delicious** - *Share your recent Delicious bookmarks in the sidebar.*
 - **Disqus Comments** - *Add your disqus short name to enable disqus comments on your site.*
 - **Google Analytics** - *Add your tracking id to enable Google Analytics tracking for your site.*
+- **Facebook** - *Add a Facebook like button*
 
 The Octopress layouts read these configurations and only include the javascript and html necessary for the enabled services.
 
