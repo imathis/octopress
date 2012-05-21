@@ -200,9 +200,14 @@ task :update_source, :theme do |t, args|
   cp "#{source_dir}.old/favicon.png", source_dir
   mv "#{source_dir}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != source_dir
   cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir && File.exists?("#{source_dir}.old/index.html")
-  if File.exists?("#{source_dir}/archives/index.html")
-    rm "#{source_dir}/archives/index.html"
-    mv "#{source_dir}/blog/archives/index.html", "#{source_dir}/archives/index.html"
+  if File.exists?("#{source_dir}/blog/archives/index.html")
+    puts "## Moving blog/archives to /archives (standard location as of 2.1) ##"
+    file = "#{source_dir}/_includes/custom/navigation.html"
+    navigation = IO.read(file)
+    navigation = navigation.gsub(/(.*)\/blog(\/archives)(.*$)/m, '\1\2\3')
+    File.open(file, 'w') do |f|
+      f.write navigation
+    end
     rm_r "#{source_dir}/blog/archives"
     rm_r "#{source_dir}/blog" if Dir.entries("#{source_dir}/blog").join == "..."
   end
