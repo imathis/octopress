@@ -55,6 +55,21 @@ task :generate do
   system "jekyll"
 end
 
+# usage rake generate_only[my-post]
+desc "Generate only the specified post (much faster)"
+task :generate_only, :filename do |t, args|
+  if args.filename
+    filename = args.filename
+  else
+    filename = get_stdin("Enter a post file name: ")
+  end
+  puts "## Stashing other posts"
+  Rake::Task["isolate"].invoke(filename)
+  Rake::Task["generate"].execute
+  puts "## Restoring stashed posts"
+  Rake::Task["integrate"].execute
+end
+
 desc "Watch the site and regenerate when it changes"
 task :watch do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
@@ -62,12 +77,10 @@ task :watch do
   system "compass compile --css-dir #{source_dir}/stylesheets"
   jekyllPid = Process.spawn("jekyll --auto")
   compassPid = Process.spawn("compass watch")
-
   trap("INT") {
     [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
-
   [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
 end
 
@@ -157,10 +170,15 @@ end
 # usage rake isolate[my-post]
 desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much quicker."
 task :isolate, :filename do |t, args|
+  if args.filename
+    filename = args.filename
+  else
+    filename = get_stdin("Enter a post file name: ")
+  end
   stash_dir = "#{source_dir}/#{stash_dir}"
   FileUtils.mkdir(stash_dir) unless File.exist?(stash_dir)
   Dir.glob("#{source_dir}/#{posts_dir}/*.*") do |post|
-    FileUtils.mv post, stash_dir unless post.include?(args.filename)
+    FileUtils.mv post, stash_dir unless post.include?(filename)
   end
 end
 
@@ -172,6 +190,14 @@ end
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
 task :clean do
   rm_rf [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
+  puts "## Cleaned Sass, Pygments and Gist caches, removed generated stylesheets ##"
+end
+
+desc "Update theme source and style"
+task :update, :theme do |t, args|
+  theme = args.theme || 'classic'
+  Rake::Task[:update_source].invoke(theme)
+  Rake::Task[:update_style].invoke(theme)
 end
 
 desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"
@@ -216,6 +242,7 @@ task :update_source, :theme do |t, args|
   end
   puts "## Updated #{source_dir} ##"
 end
+
 
 ##############
 # Deploying  #
@@ -277,9 +304,13 @@ end
 
 desc "Update configurations to support publishing to root or sub directory"
 task :set_root_dir, :dir do |t, args|
-  puts ">>> !! Please provide a directory, eg. rake config_dir[publishing/subdirectory]" unless args.dir
   if args.dir
-    if args.dir == "/"
+    dir = args.dir
+  else
+    dir = get_stdin("Please provide a directory: ")
+  end
+  if dir
+    if dir == "/"
       dir = ""
     else
       dir = "/" + args.dir.sub(/(\/*)(.+)/, "\\2").sub(/\/$/, '');
@@ -306,7 +337,10 @@ task :set_root_dir, :dir do |t, args|
     end
     rm_rf public_dir
     mkdir_p "#{public_dir}#{dir}"
-    puts "## Site's root directory is now '/#{dir.sub(/^\//, '')}' ##"
+    puts "\n========================================================"
+    puts "Site's root directory is now '/#{dir.sub(/^\//, '')}'"
+    puts "Don't forget to update your url in _config.yml"
+    puts "\n========================================================"
   end
 end
 
