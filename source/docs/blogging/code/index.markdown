@@ -40,5 +40,9 @@ Check out the [test page](/docs/blogging/code/test) to see the results.
 ## Inline Code Blocks
 {% render_partial docs/plugins/codeblock/index.markdown %}
 
+### Spaces vs. Tabs
+
+If you use tabs, there is an issue where the first level indentation is shorter than the rest. The cause is currently unknown since lots of text processors are involved. To fix, use spaces. You'll be happier anyway.
+
 Also, see [Blogging with Plugins](/docs/blogging/plugins) and [The Octopress plugins page](/docs/plugins)
 
