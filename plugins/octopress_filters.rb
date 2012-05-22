@@ -63,13 +63,6 @@ module OctopressLiquidFilters
     end
   end
 
-  # Extracts raw content DIV from template, used for page description as {{ content }}
-  # contains complete sub-template code on main page level
-  def raw_content(input)
-    /<div class="entry-content">(?<content>[\s\S]*?)<\/div>\s*<(footer|\/article)>/ =~ input
-    return (content.nil?) ? input : content
-  end
-
   # Escapes CDATA sections in post content
   def cdata_escape(input)
     input.gsub(/<!\[CDATA\[/, '&lt;![CDATA[').gsub(/\]\]>/, ']]&gt;')
@@ -114,11 +107,6 @@ module OctopressLiquidFilters
     else
       input
     end
-  end
-
-  # Condenses multiple spaces and tabs into a single space
-  def condense_spaces(input)
-    input.gsub(/\s{2,}/, ' ')
   end
 
   # Removes trailing forward slash from a string for easily appending url segments
