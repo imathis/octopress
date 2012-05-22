@@ -26,7 +26,7 @@ module Jekyll
         @video  = $1
         @width  = $5
         @height = $6
-        @poster = $7
+        @poster = $7.strip unless $7.nil?
       end
       super
     end

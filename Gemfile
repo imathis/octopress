@@ -15,4 +15,8 @@ group :development do
   gem 'liquid', '2.2.2'
 end
 
+group :test do
+  gem 'rspec'
+end
+
 gem 'sinatra', '1.2.6'
