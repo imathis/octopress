@@ -36,13 +36,15 @@ Finally, `source/index.html` can become the landing page of your wildest dreams.
 
 ## Changing the &lt;HEAD&gt;
 
-If you want to add to the `<HEAD>`take a look at `/source/_includes/custom/head.html`.
+If you want to add scripts or tags to the `<HEAD>` take a look at `/source/_includes/custom/head.html`.
 
 {% codeblock &lt;HEAD&gt; (source/_includes/custom/head.html) %}
 {% render_partial ../.themes/classic/source/_includes/custom/head.html raw %}
 {% endcodeblock %}
 
 Here you can easily change or remove the [Google Webfonts](http://google.com/webfonts), insert javascripts, etc.
+
+If you'd rather inject scripts at the bottom of the page, you can add that to `/source/_includes/custom/after_footer.html`.
 
 ### Changing the sidebar
 Octopress integrates with some [3rd party services](/docs/configuring/#third_party) like Twitter, Pinboard and Delicious which appear in the sidebar.
