@@ -78,7 +78,7 @@ Puts is a Liquid block which outputs its contents to your terminal with Ruby's `
 
 {% raw %}
     {% for post in site.posts reverse %}
-      {% puts %}{{ post.title }}{% endputs %}
+    {% puts %}Title: {{ post.title }}{% endputs %}
     {% endfor %}
 {% endraw %}
 
