@@ -7,15 +7,15 @@ sidebar: false
 ---
 
 ``` coffeescript Some Coffee Script for you http://google.com/
-    Tweets = 1
+Tweets = 1
 
-    module.exports = Tweets
+module.exports = Tweets
 ```
 
 ``` coffeescript
-    Tweets = 1
-    foo && bar
-    module.exports = Tweets
+Tweets = 1
+foo && bar
+module.exports = Tweets
 ```
 
 {% codeblock Append this to your .bashrc file. %}
@@ -31,3 +31,35 @@ unset i
 {% codeblock config lang:ruby %}
 Bunch of ruby code
 {% endcodeblock %}
+
+```
+// Spaces
+
+asd
+    asd
+        asd
+            asd
+                asd
+                    asd
+                asd
+            asd
+        asd
+    asd
+asd
+```
+
+```
+// Tabs
+
+asd
+	asd
+		asd
+			asd
+				asd
+					asd
+				asd
+			asd
+		asd
+	asd
+asd
+```
