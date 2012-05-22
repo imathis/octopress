@@ -30,6 +30,6 @@ Brisket quis velit bresaola. Pork loin pork chop beef duis. Short loin fugiat of
 
 Filler text courtesy of [Bacon Ipsum](http://baconipsum.com), Images courtesy of [Place Kitten](http://placekitten.com).
 
-{% img http://placekitten.com/300/500 150 250 "Place Kitten #4" "An image of a very cute kitten" %}
+{% img right http://placekitten.com/300/500 150 250 "Place Kitten #4" "An image of a very cute kitten" %}
 
 [&laquo; Plugins page](/docs/plugins)
