@@ -23,8 +23,14 @@ module Jekyll
     end
 
     def render(context)
-      puts ">>> {% puts %} <<<"
-      puts super.map(&:strip).join
+      # Use a block if label + output is wider than 80 characters
+      if super.length > 69
+        puts "{% puts %}"
+        puts super
+        puts "{% endputs %}"
+      else
+        puts "{% puts %} #{super}"
+      end
     end
   end
 end
