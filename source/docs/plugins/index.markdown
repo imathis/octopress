@@ -27,7 +27,6 @@ The following filters are used by Octopress, and are documented as necessary in 
 
 - Octopress filters - *liquid filters built just for Octopress*
 - Sitemap Generator - *generates an SEO friendly sitemap.xml*
-- Compass Compiler - *forces Jekyll to compile Compass on each load*
 - Haml Converter - *allows .haml pages to be processed by Jekyll*
 - Pygments Code - *converts code snippets to highlighted code and caches to speed up Jekyll processing*
 - Titlecase - *required by several plugins to automatically generate proper title captalization*
