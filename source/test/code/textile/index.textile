@@ -14,7 +14,23 @@ module.exports = Tweets
 ```
 
 ``` coffeescript
-Tweets = 1
-foo && bar
-module.exports = Tweets
+$(document).ready =>
+  bar
+  console.log "hereh"
+  val=0
+
+  rott= =>
+    val=val+1
+    $("img.logo").style.webkitTransform="rotate("+val+"deg)"
+    $("img.logo").style.mozTransform="rotate("+val+"deg)"
+
+
+
+  settimeout = =>
+    window.setTimeout 100, =>
+      console.log "rotating"
+      rott()
+      settimeout()
+
+  settimeout()
 ```
