@@ -14,7 +14,7 @@ Puts is a Liquid block which outputs its contents to your terminal with Ruby's `
     {% puts %}Optional Text: {{ some_liquid_variable }}{% endputs %}
 {% endraw %}
 
-This just outputs the contents of the block to the terminal. Note: Markdown, Textile and other converters run after liquid, so you'll see raw templating markup, not processed html.
+This just outputs the contents of the block to the terminal. Note: Markdown, Textile and other converters run after liquid, so depending on where you use the block, you may see raw templating markup, not processed html.
 
 #### Example 1
 
