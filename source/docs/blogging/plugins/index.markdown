@@ -73,4 +73,15 @@ Import files on your file system into any blog post or page. For example, to emb
 
 [Examples & documentation &raquo;](/docs/plugins/render-partial/)
 
+## Puts
+Puts is a Liquid block which outputs its contents to your terminal with Ruby's `puts` command. This really handy when you're working on a Liquid tag or a Jekyll plugin and you want to to be able to peek behind the curtain at what Liquid sees.
+
+{% raw %}
+    {% for post in site.posts reverse %}
+      {% puts %}{{ post.title }}{% endputs %}
+    {% endfor %}
+{% endraw %}
+
+[Examples & documentation &raquo;](/docs/plugins/puts/)
+
 Also see the [Octopress Plugin index](/docs/plugins) for the full list of Octopress plugins.
