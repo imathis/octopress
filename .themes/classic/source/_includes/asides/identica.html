@@ -1,0 +1,15 @@
+{% if site.identica_user %}
+<section>
+  <h1>Latest Notices</h1>
+  <ul id="notices">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getIdenticaFeed("{{site.identica_user}}", {{site.identica_tweet_count}}, {{site.identica_show_replies}});
+    });
+  </script>
+  <script src="{{ root_url }}/javascripts/identica.js" type="text/javascript"> </script>
+  <p>Follow <a href="http://identi.ca/{{site.identica_user}}">@{{ site.identica_user }}</a></p>
+</section>
+{% endif %}

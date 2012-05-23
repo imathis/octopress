@@ -1,13 +1,13 @@
-#tweets {
-  @include microblog-loading(bird);
+#notices {
+  @include microblog-loading(identica);
   @include microblog-generic;
 
-  a[href*=status]:first-child {
+  a[href*=notice]:first-child {
     color: $twitter-status-link;
     @include microblog-tweet-link;
   }
 
-  a[href*='twitter.com/search']{
+  a[href*='identi.ca/tag']{
     @include microblog-tag-link;
   }
 }
