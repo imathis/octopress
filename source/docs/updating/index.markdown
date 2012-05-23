@@ -34,6 +34,13 @@ updates and screwing up your changes.
 When you pull down changes from the Octopress repository, the latest layouts, pages, javascripts and styles are merged into your `.themes` directory.
 To update your site, you must manually merge in the new files. Before you do a spit-take, I written some Rake tasks to help out with this.
 
+### Updating the template
+In one shot, update your `/source` and `/sass` directories.
+
+    rake update
+
+This will run `update_style` and `update_source` which you can use independently if you only wish to update one part of your project.
+
 ### Updating the Template's Style
 If you've pulled in changes and you want to update your `/sass` directory, run this.
 
