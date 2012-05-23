@@ -189,7 +189,8 @@ end
 
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
 task :clean do
-  rm_rf [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
+  [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**"].each { |dir| rm_rf Dir.glob(dir) }
+  rm "source/stylesheets/screen.css"
   puts "## Cleaned Sass, Pygments and Gist caches, removed generated stylesheets ##"
 end
 
