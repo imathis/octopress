@@ -53,6 +53,10 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # post_asides:
 # page_asides:
 
+#control which posts show on the front page  
+front_page_categories: [] # A list of categories for the front page
+front_page_categories_op : 'hide' # Whether to show or hide the list of categories from front_page_categories
+
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
