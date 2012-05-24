@@ -16,19 +16,16 @@ module HighlightCode
   end
 
   def pygments(code, lang)
-    if defined?(PYGMENTS_CACHE_DIR)
-      path = File.join(PYGMENTS_CACHE_DIR, "#{lang}-#{Digest::MD5.hexdigest(code)}.html")
-      if File.exist?(path)
-        highlighted_code = File.read(path)
-      else
-        highlighted_code = render(code, lang)
-        File.open(path, 'w') {|f| f.print(highlighted_code) }
-      end
+    path = File.join(PYGMENTS_CACHE_DIR, "#{lang}-#{Digest::MD5.hexdigest(code)}.html") if defined?(PYGMENTS_CACHE_DIR)
+    if File.exist?(path)
+      highlighted_code = File.read(path)
     else
-      highlighted_code = render(code, lang)
+      highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
+      File.open(path, 'w') {|f| f.print(highlighted_code) } if path
     end
     highlighted_code
   end
+
   def tableize_code (str, lang = '')
     table = '<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers">'
     code = ''
@@ -37,9 +34,5 @@ module HighlightCode
       code  += "<span class='line'>#{line}</span>"
     end
     table += "</pre></td><td class='code'><pre><code class='#{lang}'>#{code}</code></pre></td></tr></table></div>"
-  end
-
-  def render(code, lang)
-    Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
   end
 end
