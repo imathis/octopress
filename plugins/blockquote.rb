@@ -75,7 +75,7 @@ module Jekyll
     end
 
     def paragraphize(input)
-      "<p>#{input.gsub(/\n\n/, '</p><p>').gsub(/\n/, '<br/>')}</p>"
+      "<p>#{input.lstrip.rstrip.gsub(/\n\n/, '</p><p>').gsub(/\n/, '<br/>')}</p>"
     end
   end
 end

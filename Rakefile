@@ -292,6 +292,7 @@ multitask :push do
     puts "\n## copying #{public_dir} to #{deploy_dir}"
     cp_r "#{public_dir}/.", deploy_dir
     cd "#{deploy_dir}" do
+      system "touch .nojekyll"
       system "git add ."
       system "git add -u"
       message = "Site updated at #{Time.now.utc}"
