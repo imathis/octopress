@@ -3,7 +3,7 @@
 # Description: Write codeblocks with semantic HTML5 <figure> and <figcaption> elements and optional syntax highlighting — all with a simple, intuitive interface.
 #
 # Syntax:
-# {% codeblock [title] [url] [link text] %}
+# {% codeblock [title] [url] [link text] [lang:language] [start_lnr:n] %}
 # code snippet
 # {% endcodeblock %}
 #
@@ -56,10 +56,15 @@ module Jekyll
       @title = nil
       @caption = nil
       @filetype = nil
+      @start_lnr = 1
       @highlight = true
       if markup =~ /\s*lang:(\w+)/i
         @filetype = $1
         markup = markup.sub(/lang:\w+/i,'')
+      end
+      if markup =~ /\s*start_lnr:(\w+)/i
+        @start_lnr = $1.to_i
+        markup = markup.sub(/start_lnr:\w+/i, '')
       end
       if markup =~ CaptionUrlTitle
         @file = $1
@@ -83,9 +88,9 @@ module Jekyll
       source = "<figure class='code'>"
       source += @caption if @caption
       if @filetype
-        source += " #{highlight(code, @filetype)}</figure>"
+        source += " #{highlight(code, @filetype, @start_lnr)}</figure>"
       else
-        source += "#{tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'))}</figure>"
+        source += "#{tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'), '', @start_lnr)}</figure>"
       end
       source = safe_wrap(source)
       source = context['pygments_prefix'] + source if context['pygments_prefix']
