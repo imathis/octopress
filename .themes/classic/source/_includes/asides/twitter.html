@@ -5,8 +5,12 @@
     <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("{{site.twitter_user}}", {{site.twitter_tweet_count}}, {{site.twitter_show_replies}});
+    $(document).ready(function(){
+      twitter.getFeed({
+         user: "{{site.twitter_user}}"
+       , count: {{site.twitter_tweet_count}}
+       , replies: {{site.twitter_show_replies}}
+      });
     });
   </script>
   <script src="{{ root_url }}/javascripts/twitter.js" type="text/javascript"> </script>
