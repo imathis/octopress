@@ -1,5 +1,9 @@
-// Here you can easily change your sites's color scheme.
-// To give it a try, uncomment some of the lines below rebuild your blog, and see how it works.
+/*
+  Here you can easily change your site's color scheme.
+  To give it a try, uncomment some of the lines below rebuild your blog, and see how it works.
+  Look at sass/base/_theme.scss for more colors you tweak (override them in this file)
+
+  For a handy color picker try http://hslpicker.com */
 
 //$header-bg: #263347;
 //$subtitle-color: lighten($header-bg, 58);
@@ -9,12 +13,31 @@
 //$sidebar-link-color-hover: darken(#7ab662, 9);
 
 
-//To use the light Solarized highlighting theme uncomment this block
-//$base03: $base3;
-//$base02: $base2;
-//$base01: $base1;
-//$base00: $base0;
-//$base0: $base00;
-//$base1: $base01;
-//$base2: $base02;
-//$base3: $base03;
+/* To use the light code highlighting theme uncomment the following line */
+
+//$solarized: light;
+
+/* To adjust the background color uncomment and edit the following line */
+/* If you intend to use a light background, uncomment $solarized: light; above*/
+
+//$pre-bg: $base03;
+
+
+/* For fine control over the syntax highlighting colors edit here */
+
+//$base03:          #002b36; //darkest blue
+//$base02:          #073642; //dark blue
+//$base01:          #586e75; //darkest gray
+//$base00:          #657b83; //dark gray
+//$base0:           #839496; //medium gray
+//$base1:           #93a1a1; //medium light gray
+//$base2:           #eee8d5; //cream
+//$base3:           #fdf6e3; //white
+//$solar-yellow:    #b58900;
+//$solar-orange:    #cb4b16;
+//$solar-red:       #dc322f;
+//$solar-magenta:   #d33682;
+//$solar-violet:    #6c71c4;
+//$solar-blue:      #268bd2;
+//$solar-cyan:      #2aa198;
+//$solar-green:     #859900;
