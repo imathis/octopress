@@ -5,15 +5,13 @@
   <p><a href="http://pinboard.in/u:{{ site.pinboard_user }}">My Pinboard Bookmarks &raquo;</a></p>
 </section>
 <script type="text/javascript">
-  var linkroll = 'pinboard_linkroll'; //id target for pinboard list
-  var pinboard_user = "{{ site.pinboard_user }}"; //id target for pinboard list
-  var pinboard_count = {{ site.pinboard_count }}; //id target for pinboard list
-  (function(){
-    var pinboardInit = document.createElement('script');
-    pinboardInit.type = 'text/javascript';
-    pinboardInit.async = true;
-    pinboardInit.src = '{{ root_url }}/javascripts/pinboard.js';
-    document.getElementsByTagName('head')[0].appendChild(pinboardInit);
-  })();
+  $(document).ready(function(){
+    pinboard.getFeed({
+        target: 'pinboard_linkroll' //id target for pinboard list
+      , user: "{{ site.pinboard_user }}"
+      , count: {{ site.pinboard_count }}
+    });
+  });
 </script>
+<script src="{{ root_url }}/javascripts/pinboard.js" type="text/javascript"></script>
 {% endif %}
