@@ -8,10 +8,10 @@ ssh_user       = "user@domain.com"
 ssh_port       = "22"
 document_root  = "~/website.com/"
 rsync_delete   = true
-deploy_default = "rsync"
+deploy_default = "push"
 
 # This will be configured for you when you run config_deploy
-deploy_branch  = "gh-pages"
+deploy_branch  = "master"
 
 ## -- Misc Configs -- ##
 
@@ -225,7 +225,7 @@ end
 
 desc "copy dot files for deployment"
 task :copydot, :source, :dest do |t, args|
-  FileList["#{args.source}/**/.*"].exclude("**/.", "**/..", "**/.DS_Store", "**/._*").each do |file|
+  FileList["#{args.source}/**/.*"].exclude("**/.", "**/..", "**/.DS_Store", "**/._*", "**/.git").each do |file|
     cp_r file, file.gsub(/#{args.source}/, "#{args.dest}") unless File.directory?(file)
   end
 end
