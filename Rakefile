@@ -10,6 +10,9 @@ ssh_port       = "22"
 rsync_delete   = true
 deploy_default = "push"
 
+# Hidden "dot" files that should be included with the deployed site (see task copydot)
+copy_dot_files = []
+
 # This will be configured for you when you run config_deploy
 deploy_branch  = "master"
 
@@ -261,7 +264,7 @@ end
 
 desc "copy dot files for deployment"
 task :copydot, :source, :dest do |t, args|
-  files = [".htaccess", ".nojekyll"]
+  files = [".htaccess"] | copy_dot_files
   Dir["#{args.source}/.*"].each do |file|
     if !File.directory?(file) && files.include?(File.basename(file))
       cp(file, file.gsub(/#{args.source}/, "#{args.dest}"));
