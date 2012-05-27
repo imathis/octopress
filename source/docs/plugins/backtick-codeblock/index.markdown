@@ -12,7 +12,7 @@ Simply start a line with three back ticks followed by a space and the language y
 #### Syntax
 
 
-    ``` [language] [title] [url] [link text]
+    ``` [language] [title] [url] [link text] [start:#]
     code snippet
     ```
 
@@ -43,4 +43,22 @@ class Fixnum
     ('1' * self) !~ /^1?$|^(11+?)\1+$/
   end
 end
+```
+
+#### Example with a custom starting line number
+
+    ``` coffeescript Coffeescript Tricks start:51
+    # Given an alphabet:
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+    # Iterate over part of the alphabet:
+    console.log letter for letter in alphabet[4..8]
+    ```
+
+``` coffeescript Coffeescript Tricks start:51
+# Given an alphabet:
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+# Iterate over part of the alphabet:
+console.log letter for letter in alphabet[4..8]
 ```
