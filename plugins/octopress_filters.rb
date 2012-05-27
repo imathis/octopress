@@ -9,10 +9,10 @@ module OctopressFilters
   include BacktickCodeBlock
   include TemplateWrapper
   def pre_filter(input)
-    input = render_code_block(input)
     input.gsub /(<figure.+?>.+?<\/figure>)/m do
       safe_wrap($1)
     end
+    input = render_code_block(input)
   end
   def post_filter(input)
     input = unwrap(input)
