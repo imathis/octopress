@@ -15,7 +15,7 @@ use the following tag to embed it in a post.
 
     {{ "{% include_code [title] [lang:language] path/to/file [start:#] [end:#] [range:#,#]" }} %}
 
-### Basic
+### Basic Example
 This includes a file from `source/downloads/code/test.js`.
 
     {{ "{% include_code test.js" }} %}
