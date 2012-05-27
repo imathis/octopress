@@ -21,20 +21,38 @@
 #
 
 require './plugins/pygments_code'
-require './plugins/raw'
 require 'pathname'
 
 module Jekyll
 
   class IncludeCodeTag < Liquid::Tag
     include HighlightCode
-    include TemplateWrapper
     def initialize(tag_name, markup, tokens)
       @title = nil
       @file = nil
+      @start = 1
+      @end = nil
+      @linenos = true
       if markup.strip =~ /\s*lang:(\w+)/i
         @filetype = $1
         markup = markup.strip.sub(/lang:\w+/i,'')
+      end
+      if markup.strip =~ /\s*linenos:false/i
+        @linenos = false
+        markup = markup.strip.sub(/linenos:false/i,'')
+      end
+      if markup =~ /\s*start:(\d+)/i
+        @start = $1.to_i
+        markup = markup.sub(/\s*start:\d+/i,'')
+      end
+      if markup =~ /\s*end:(\d+)/i
+        @end = $1.to_i
+        markup = markup.sub(/\s*end:\d+/i,'')
+      end
+      if markup =~ /\s*range:(\d+),(\d+)/i
+        @start = $1.to_i
+        @end = $2.to_i
+        markup = markup.sub(/\s*range:\d+,\d+/i,'')
       end
       if markup.strip =~ /(.*)?(\s+|^)(\/*\S+)/i
         @title = $1 || nil
@@ -58,12 +76,17 @@ module Jekyll
 
       Dir.chdir(code_path) do
         code = file.read
+        length = code.lines.count
+        @end ||= length
+        return "#{file} is #{length} lines long, cannot begin at line #{@start}" if @start > length
+        return "#{file} is #{length} lines long, cannot read beyond line #{@end}" if @end > length
+        if @start > 1 or @end < length
+          code = code.split(/\n/).slice(@start -1, @end + 1 - @start).join("\n")
+        end
         @filetype = file.extname.sub('.','') if @filetype.nil?
         title = @title ? "#{@title} (#{file.basename})" : file.basename
         url = "/#{code_dir}/#{@file}"
-        source = "<figure class='code'><figcaption><span>#{title}</span> <a href='#{url}'>download</a></figcaption>\n"
-        source += " #{highlight(code, @filetype)}</figure>"
-        safe_wrap(source)
+        highlight(code, @filetype, {caption: title, url: url, anchor: 'download', start: @start, linenos: @linenos})
       end
     end
   end
