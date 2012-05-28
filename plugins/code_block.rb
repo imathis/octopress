@@ -54,16 +54,19 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       @caption = nil
       @url = nil
-      @lang = nil
-      @start = 1
-      if markup =~ /\s*lang:(\w+)/i
-        @lang = $1
-        markup = markup.sub(/lang:\w+/i,'')
-      end
-      if markup =~ /\s*start:(\d+)/i
-        @start = $1.to_i
-        markup = markup.sub(/\s*start:\d+/i,'')
-      end
+      
+      @lang = get_lang(markup)
+      markup = replace_lang(markup)
+
+      @linenos = get_linenos(markup)
+      markup = replace_linenos(markup)
+
+      @mark = get_marks(markup)
+      markup = replace_marks(markup)
+      
+      @start = get_start(markup)
+      markup = replace_start(markup)
+
       if markup =~ CaptionUrlTitle
         @caption = $1
         @url = $2 + $3
@@ -82,7 +85,7 @@ module Jekyll
 
     def render(context)
       code = super.strip
-      code = highlight(code, @lang, {caption: @caption, url: @url, anchor: @anchor, start: @start})
+      code = highlight(code, @lang, {caption: @caption, url: @url, anchor: @anchor, start: @start, marks: @marks, linenos: @linenos})
       code = context['pygments_prefix'] + code if context['pygments_prefix']
       code = code + context['pygments_suffix'] if context['pygments_suffix']
       code

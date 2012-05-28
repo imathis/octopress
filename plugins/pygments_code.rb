@@ -29,12 +29,13 @@ module HighlightCode
     lang = 'perl' if lang == 'pl'
     lang = 'yaml' if lang == 'yml'
     lang = 'coffeescript' if lang == 'coffee'
-    lang = 'plain' if lang == '' or lang.nil?
+    lang = 'plain' if lang == '' or lang.nil? or !lang
 
-    caption = options[:caption]    || nil
-    url     = options[:url]        || nil
-    anchor  = options[:anchor]     || nil
-    wrap    = options[:wrap]       || true
+    caption = options[:caption]   || nil
+    url     = options[:url]       || nil
+    anchor  = options[:anchor]    || nil
+    wrap    = options[:wrap]      || true
+    marks   = options[:marks]
     linenos = options[:linenos]
     start   = options[:start]
 
@@ -49,7 +50,7 @@ module HighlightCode
       code = pygments(code, lang).match(/<pre>(.+)<\/pre>/m)[1].gsub(/ *$/, '') #strip out divs <div class="highlight">
     end
 
-    code = tableize_code(code, lang, { linenos: linenos, start: start })
+    code = tableize_code(code, lang, { linenos: linenos, start: start, marks: marks })
     caption = captionize(caption, url, anchor) if caption
 
     figure = "<figure class='code'>#{caption}#{code}</figure>"
@@ -65,20 +66,104 @@ module HighlightCode
 
   def tableize_code (code, lang, options = {})
     start = options[:start]
-    lines = options[:linenos] || true
+    lines = options[:linenos].nil? ? true : options[:linenos]
+    marks = options[:marks]   || []
     table = "<div class='highlight'><table>"
-    table += number_lines(start, code.lines.count) if lines
+    table += number_lines(start, code.lines.count, marks) if lines
     table += "<td class='code'><pre><code class='#{lang}'>"
-    table += code.gsub /^((.+)?(\n?))/, '<span class=\'line\'>\1</span>'
+    if marks.size
+      code.lines.each_with_index do |line,index|
+        table += "<span class='line#{' marked' if marks.include? index + start}'>#{line}</span>"
+      end
+    else
+      table += code.gsub /^((.+)?(\n?))/, '<span class=\'line\'>\1</span>'
+    end
     table +="</code></pre></td></tr></table></div>"
   end
 
-  def number_lines (start, count)
+  def number_lines (start, count, marks)
     start ||= 1
     lines = "<td class='gutter'><pre class='line-numbers'>"
     count.times do |index|
-      lines += "<span class='line-number'>#{index + start}</span>\n"
+      lines += "<span class='line-number#{' marked' if marks.include? index + start}'>#{index + start}</span>\n"
     end
     lines += "</pre></td>"
+  end
+
+  def get_lang (input)
+    lang = nil
+    if input =~ /\s*lang:(\w+)/i
+      lang = $1
+    end
+    lang
+  end
+
+  def replace_lang (input)
+    input.sub /\s*lang:\w+/i, ''
+  end
+
+  def get_marks (input)
+    # Matches pattern for line marks and returns array of line numbers to mark
+    # Example input mark:1,5-10,2
+    # Outputs: [1,2,5,6,7,8,9,10]
+    marks = []
+    if input =~ /\s*mark:(\d\S*)/i
+      marks = $1.gsub /(\d+)-(\d+)/ do
+        ($1.to_i..$2.to_i).to_a.join(',')
+      end
+      marks = marks.split(',').collect {|s| s.to_i}.sort
+    end
+    marks
+  end
+
+  def replace_marks (input)
+    input.sub(/\s*mark:\d\S*/i,'')
+  end
+
+  def get_linenos (input)
+    linenos = true
+    if input =~ /\s*linenos:false/i
+      linenos = false
+    end
+    linenos
+  end
+
+  def replace_linenos (input)
+    input.sub(/\s*linenos:false/i,'')
+  end
+
+  def get_start (input)
+    start = 1
+    if input =~ /\s*start:(\d+)/i
+      start = $1.to_i
+    end
+    start
+  end
+
+  def replace_start (input)
+    input.sub(/\s*start:\d+/i,'')
+  end
+
+  def get_end (input)
+    endline = nil
+    if input =~ /\s*end:(\d+)/i
+      endline = $1.to_i
+    end
+    endline
+  end
+
+  def replace_end (input)
+    input.sub(/\s*end:\d+/i,'')
+  end
+
+  def get_range (input, start, endline)
+    if input =~ /\s*range:(\d+),(\d+)/i
+      start = $1.to_i
+      eneline = $2.to_i
+    end
+    {start: start, end: endline}
+  end
+  def replace_range (input)
+    input.sub(/\s*range:\d+,\d+/i,'')
   end
 end

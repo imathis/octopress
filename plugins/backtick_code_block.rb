@@ -8,23 +8,23 @@ module BacktickCodeBlock
     input.encode!("UTF-8")
     input.gsub /^`{3}(.+?)`{3}/m do
       str = $1.to_s
-      linenos = true
-      start = 1
       str.gsub /([^\n]+)?\n(.+?)\Z/m do
-        @options = $1 || ''
+        markup = $1 || ''
         code = $2.to_s
-        if @options =~ /\s*linenos:false/i
-          linenos = false
-          @options = @options.sub(/\s*linenos:false/i,'')
-        end
-        if @options =~ /\s*start:(\d+)/i
-          start = $1.to_i
-          @options = @options.sub(/\s*start:\d+/i,'')
-        end
-        if @options =~ AllOptions
-          highlight(code, $1, {caption: $2, url: $3, anchor: $4 || 'Link', linenos: linenos, start: start})
-        elsif @options =~ LangCaption
-          highlight(code, $1, {caption: $2 || '', linenos: linenos, start: start})
+
+        linenos = get_linenos(markup)
+        markup = replace_linenos(markup)
+
+        marks = get_marks(markup)
+        markup = replace_marks(markup)
+        
+        start = get_start(markup)
+        markup = replace_start(markup)
+
+        if markup =~ AllOptions
+          highlight(code, $1, {caption: $2, url: $3, anchor: $4 || 'Link', linenos: linenos, start: start, marks: marks})
+        elsif markup =~ LangCaption
+          highlight(code, $1, {caption: $2 || '', linenos: linenos, start: start, marks: marks})
         else
           highlight(code, 'plain', {linenos: linenos, start: start})
         end
