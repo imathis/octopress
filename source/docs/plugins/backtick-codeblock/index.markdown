@@ -23,7 +23,7 @@ Simply start a line with three back ticks followed by a space and the language y
     $ sudo make me a sandwich
     ```
 
-```
+``` linenos:false
 $ sudo make me a sandwich
 ```
 
@@ -47,7 +47,7 @@ end
 
 #### Example with a custom starting line number
 
-    ``` coffeescript Coffeescript Tricks start:51
+    ``` coffeescript Coffeescript Tricks start:51 mark:52,54-55
     # Given an alphabet:
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
@@ -55,7 +55,7 @@ end
     console.log letter for letter in alphabet[4..8]
     ```
 
-``` coffeescript Coffeescript Tricks start:51
+``` coffeescript Coffeescript Tricks start:51 mark:52,54-55
 # Given an alphabet:
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
