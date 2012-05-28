@@ -30,30 +30,27 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       @title = nil
       @file = nil
-      @start = 1
-      @end = nil
-      @linenos = true
-      if markup.strip =~ /\s*lang:(\w+)/i
-        @filetype = $1
-        markup = markup.strip.sub(/lang:\w+/i,'')
-      end
-      if markup.strip =~ /\s*linenos:false/i
-        @linenos = false
-        markup = markup.strip.sub(/linenos:false/i,'')
-      end
-      if markup =~ /\s*start:(\d+)/i
-        @start = $1.to_i
-        markup = markup.sub(/\s*start:\d+/i,'')
-      end
-      if markup =~ /\s*end:(\d+)/i
-        @end = $1.to_i
-        markup = markup.sub(/\s*end:\d+/i,'')
-      end
-      if markup =~ /\s*range:(\d+),(\d+)/i
-        @start = $1.to_i
-        @end = $2.to_i
-        markup = markup.sub(/\s*range:\d+,\d+/i,'')
-      end
+
+      @lang = get_lang(markup)
+      markup = replace_lang(markup)
+
+      @linenos = get_linenos(markup)
+      markup = replace_linenos(markup)
+
+      @marks = get_marks(markup)
+      markup = replace_marks(markup)
+      
+      @start = get_start(markup)
+      markup = replace_start(markup)
+
+      @end = get_end(markup)
+      markup = replace_end(markup)
+
+      range = get_range(markup, @start, @end)
+      @start = range[:start]
+      @end = range[:start]
+      markup = replace_range(markup)
+
       if markup.strip =~ /(.*)?(\s+|^)(\/*\S+)/i
         @title = $1 || nil
         @file = $3
@@ -83,10 +80,10 @@ module Jekyll
         if @start > 1 or @end < length
           code = code.split(/\n/).slice(@start -1, @end + 1 - @start).join("\n")
         end
-        @filetype = file.extname.sub('.','') if @filetype.nil?
+        @lang = file.extname.sub('.','') unless @lang
         title = @title ? "#{@title} (#{file.basename})" : file.basename
         url = "/#{code_dir}/#{@file}"
-        highlight(code, @filetype, {caption: title, url: url, anchor: 'download', start: @start, linenos: @linenos})
+        highlight(code, @lang, {caption: title, url: url, anchor: 'download', start: @start, marks: @marks, linenos: @linenos })
       end
     end
   end
