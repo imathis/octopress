@@ -216,6 +216,7 @@ task :update_style, :theme do |t, args|
   cp_r "#{themes_dir}/"+theme+"/sass/", "sass"
   cp_r "sass.old/custom/.", "sass/custom"
   puts "## Updated Sass ##"
+  rm_r ".sass-cache", :secure=>true if File.directory?(".sass-cache")
 end
 
 desc "Move source to source.old, install source theme updates, replace source/_includes/navigation.html with source.old's navigation"
