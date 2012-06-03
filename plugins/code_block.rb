@@ -61,7 +61,7 @@ module Jekyll
       @linenos = get_linenos(markup)
       markup = replace_linenos(markup)
 
-      @mark = get_marks(markup)
+      @marks = get_marks(markup)
       markup = replace_marks(markup)
       
       @start = get_start(markup)

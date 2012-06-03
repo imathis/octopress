@@ -28,8 +28,9 @@ module Jekyll
   class IncludeCodeTag < Liquid::Tag
     include HighlightCode
     def initialize(tag_name, markup, tokens)
-      @title = nil
       @file = nil
+      @title = nil
+      @title_old = nil
 
       @lang = get_lang(markup)
       markup = replace_lang(markup)
@@ -48,12 +49,15 @@ module Jekyll
 
       range = get_range(markup, @start, @end)
       @start = range[:start]
-      @end = range[:start]
+      @end = range[:end]
       markup = replace_range(markup)
 
-      if markup.strip =~ /(.*)?(\s+|^)(\/*\S+)/i
-        @title = $1 || nil
-        @file = $3
+      if markup.strip =~ /(^\S*\.\S+) *(.+)?/i
+        @file = $1
+        @title = $2 || nil
+      elsif markup.strip =~ /(.*?)(\S*\.\S+)\Z/i # Title before file is deprecated in 2.1
+        @title_old = $1 || nil
+        @file = $2
       end
       super
     end
@@ -63,11 +67,22 @@ module Jekyll
       code_path = (Pathname.new(context.registers[:site].source) + code_dir).expand_path
       file = code_path + @file
 
+      unless @title_old.nil?
+        @title = @title_old
+        puts "### ------------ WARNING ------------ ###"
+        puts "This include_code syntax is deprecated "
+        puts "Correct syntax: path/to/file.ext [title]"
+        puts "Update include for #{file}"
+        puts "### --------------------------------- ###"
+      end
+      
       if File.symlink?(code_path)
+        puts "Code directory '#{code_path}' cannot be a symlink"
         return "Code directory '#{code_path}' cannot be a symlink"
       end
 
       unless file.file?
+        puts "File #{file} could not be found"
         return "File #{file} could not be found"
       end
 
