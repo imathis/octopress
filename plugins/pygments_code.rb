@@ -73,7 +73,13 @@ module HighlightCode
     table += "<td class='code'><pre><code class='#{lang}'>"
     if marks.size
       code.lines.each_with_index do |line,index|
-        table += "<span class='line#{' marked' if marks.include? index + start}'>#{line}</span>"
+        classes = 'line'
+        if marks.include? index + start
+          classes += ' marked'
+          classes += ' start' unless marks.include? index - 1 + start
+          classes += ' end' unless marks.include? index + 1 + start
+        end
+        table += "<span class='#{classes}'>#{line}</span>"
       end
     else
       table += code.gsub /^((.+)?(\n?))/, '<span class=\'line\'>\1</span>'
@@ -99,7 +105,7 @@ module HighlightCode
   end
 
   def replace_lang (input)
-    input.sub /\s*lang:\w+/i, ''
+    input.sub(/ *lang:\w+/i, '')
   end
 
   def get_marks (input)
@@ -107,7 +113,7 @@ module HighlightCode
     # Example input mark:1,5-10,2
     # Outputs: [1,2,5,6,7,8,9,10]
     marks = []
-    if input =~ /\s*mark:(\d\S*)/i
+    if input =~ / *mark:(\d\S*)/i
       marks = $1.gsub /(\d+)-(\d+)/ do
         ($1.to_i..$2.to_i).to_a.join(',')
       end
@@ -117,53 +123,53 @@ module HighlightCode
   end
 
   def replace_marks (input)
-    input.sub(/\s*mark:\d\S*/i,'')
+    input.sub(/ *mark:\d\S*/i,'')
   end
 
   def get_linenos (input)
     linenos = true
-    if input =~ /\s*linenos:false/i
+    if input =~ / *linenos:false/i
       linenos = false
     end
     linenos
   end
 
   def replace_linenos (input)
-    input.sub(/\s*linenos:false/i,'')
+    input.sub(/ *linenos:false/i,'')
   end
 
   def get_start (input)
     start = 1
-    if input =~ /\s*start:(\d+)/i
+    if input =~ / *start:(\d+)/i
       start = $1.to_i
     end
     start
   end
 
   def replace_start (input)
-    input.sub(/\s*start:\d+/i,'')
+    input.sub(/ *start:\d+/i,'')
   end
 
   def get_end (input)
     endline = nil
-    if input =~ /\s*end:(\d+)/i
+    if input =~ / *end:(\d+)/i
       endline = $1.to_i
     end
     endline
   end
 
   def replace_end (input)
-    input.sub(/\s*end:\d+/i,'')
+    input.sub(/ *end:\d+/i,'')
   end
 
   def get_range (input, start, endline)
-    if input =~ /\s*range:(\d+),(\d+)/i
+    if input =~ / *range:(\d+)-(\d+)/i
       start = $1.to_i
-      eneline = $2.to_i
+      endline = $2.to_i
     end
     {start: start, end: endline}
   end
   def replace_range (input)
-    input.sub(/\s*range:\d+,\d+/i,'')
+    input.sub(/ *range:\d+-\d+/i,'')
   end
 end
