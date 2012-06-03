@@ -26,6 +26,24 @@ figure.code, .gist-file, pre {
   .highlight pre { @include box-shadow(none); }
 }
 
+pre .line.marked {
+  position: relative;
+  display: block;
+  &:after {
+    content: "";
+    position: absolute;
+    background: $marker-bg;
+    left: -.8em; top: 0; bottom: 0; right: -.8em;
+    border: 1px solid { left-color: $marker-border-left; left-width: 2px; right-color: $marker-border; top: 0; bottom: 0; }
+  }
+  &.start:after {
+    border-top: 1px solid $marker-border;
+  }
+  &.end:after {
+    border-bottom: 1px solid $marker-border;
+  }
+}
+
 html .gist .gist-file {
   margin-bottom: 1.8em;
   position: relative;
