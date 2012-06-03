@@ -8,79 +8,87 @@ footer: false
 
 With this plugin you can write blocks of code directly in your posts and optionally add titles and links.
 
-#### Syntax
+## Syntax
 
-    {{ "{% codeblock [title] [lang:language] [start:#] [url] [link text]" }} %}
+    {{ "{% codeblock [lang:language] [title] [url] [link text] [start:#] [mark:#,#-#] [linenos:false]" }} %}
     code snippet
     {{ "{% endcodeblock" }} %}
 
-#### Example 1
+### Basic options
 
-    {{ "{% codeblock" }} %}
-    Awesome code snippet
-    {{ "{% endcodeblock" }} %}
+- `[lang:language]` - Choose a language for the syntax highlighter. Passing 'plain' disables highlighting.
+- `[title]` - Add a figcaption to your code block.
+- `[url]` - Download or reference link for your code.
+- `[link text]` - Text for the link, defaults to 'link'.
+
+{% render_partial docs/plugins/_partials/options.markdown %}
+
+## Examples
+
+**1.** Here's an example without setting the language.
 
 {% codeblock %}
 Awesome code snippet
 {% endcodeblock %}
 
-#### Syntax highlighting
+*The source:*
 
-You can also add syntax highlighting like this.
+    {{ "{% codeblock" }} %}
+    Awesome code snippet
+    {{ "{% endcodeblock" }} %}
 
-    {% raw %}{% codeblock lang:objc %}
-    [rectangle setX: 10 y: 10 width: 20 height: 20];
-    {% endcodeblock %}{% endraw %}
+**2.** This example uses syntax highlighting.
 
 {% codeblock lang:objc %}
 [rectangle setX: 10 y: 10 width: 20 height: 20];
 {% endcodeblock %}
 
-#### Syntax highlighting, alternate method
+*The source:*
 
-Including a file extension in the title enables highlighting
+    {% raw %}{% codeblock lang:objc %}
+    [rectangle setX: 10 y: 10 width: 20 height: 20];
+    {% endcodeblock %}{% endraw %}
 
-    {{ "{% codeblock Time to be Awesome - awesome.rb" }} %}
-    puts "Awesome!" unless lame
-    {{ "{% endcodeblock" }} %}
+**3.** Including a file extension in the title can also trigger highlighting.
 
 {% codeblock Time to be Awesome - awesome.rb %}
 puts "Awesome!" unless lame
 {% endcodeblock %}
 
-#### Force highlighting
+*The source:*
 
-Pygments supports many languages, but doesn't recognize some file extensions.
-Add `lang:your_language` to force highlighting if the filename doesn't work.
-
-    {{ "{% codeblock Here's an example .rvmrc file. lang:ruby" }} %}
-    rvm ruby-1.8.6 # ZOMG, seriously? We still use this version?
+    {{ "{% codeblock Time to be Awesome - awesome.rb" }} %}
+    puts "Awesome!" unless lame
     {{ "{% endcodeblock" }} %}
 
-{% codeblock Here's an example .rvmrc file. lang:ruby %}
-rvm ruby-1.8.6 # ZOMG, seriously? We still use this version?
-{% endcodeblock %}
 
-#### Add a URL
-
-Add an optional URL to enable downloading or linking to source.
-
-    {% raw %}{% codeblock Javascript Array Syntax lang:js http://j.mp/pPUUmW MDN Documentation %}
-    var arr1 = new Array(arrayLength);
-    var arr2 = new Array(element0, element1, ..., elementN);
-    {% endcodeblock %}{% endraw %}
+**4.** Add an optional URL for downloading or linking to a source.
 
 {% codeblock Javascript Array Syntax lang:js http://j.mp/pPUUmW MDN Documentation %}
 var arr1 = new Array(arrayLength);
 var arr2 = new Array(element0, element1, ..., elementN);
 {% endcodeblock %}
 
-The last argument `link_text` is optional. You may want to link to a source for download file, or documentation on some other site.
+*The source:*
 
+    {% raw %}{% codeblock Javascript Array Syntax lang:js http://j.mp/pPUUmW MDN Documentation %}
+    var arr1 = new Array(arrayLength);
+    var arr2 = new Array(element0, element1, ..., elementN);
+    {% endcodeblock %}{% endraw %}
 
-#### Start on a custom line number
+**5.** This example uses a custom starting line number and marks lines 52 and 54 through 55.
 
-    {% raw %}{% codeblock Coffeescript Tricks lang:coffeescript start:51 %}
+{% codeblock lang:coffeescript Coffeescript Tricks start:51 mark:51,54-55 %}
+# Given an alphabet:
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+# Iterate over part of the alphabet:
+console.log letter for letter in alphabet[4..8]
+{% endcodeblock %}
+
+*The source:*
+
+    {% raw %}{% codeblock Coffeescript Tricks lang:coffeescript start:51 mark:51,54-55 %}
     # Given an alphabet:
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
@@ -88,10 +96,6 @@ The last argument `link_text` is optional. You may want to link to a source for 
     console.log letter for letter in alphabet[4..8]
     {% endcodeblock %}{% endraw %}
 
-{% codeblock lang:coffeescript Coffeescript Tricks start:51 %}
-# Given an alphabet:
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
+### Other ways to embed code snippets
 
-# Iterate over part of the alphabet:
-console.log letter for letter in alphabet[4..8]
-{% endcodeblock %}
+You might also like to [use back tick code blocks](/docs/plugins/backtick-codeblock), [embed code from a file](/docs/plugins/include-code), or [embed GitHub gists](/docs/plugins/gist-tag).
