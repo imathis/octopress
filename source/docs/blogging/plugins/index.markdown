@@ -62,7 +62,7 @@ Easily embed gists in your posts or pages.
 ## Include Code
 Import files on your filesystem into any blog post as embedded code snippets with syntax highlighting and a download link.
 
-{% include_code Testing include_code test.js %}
+{% include_code test.js Testing include_code %}
 
 [Examples & documentation &raquo;](/docs/plugins/include-code/)
 

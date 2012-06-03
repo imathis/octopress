@@ -5,7 +5,7 @@ footer: false
 sidebar: false
 ---
 
-{% include_code test.js range:5,10 %}
+{% include_code test.js range:5-10 %}
 
 ``` html
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">

@@ -17,14 +17,6 @@ Octopress makes it way better. Here's how.
 - Insert code snippets from your filesystem with a download link.
 - Easy inline code blocks with `<figure>` and `<figcaption>` and optional download links.
 - Pygments caching - a [Jekyll community plugin](https://github.com/rsim/blog.rayapps.com/blob/master/_plugins/pygments_cache_patch.rb).
-- Table based line numbers added with javascript.
-
-## Solarized Highlighting
-
-[Solarized](http://ethanschoonover.com/solarized) has a beautiful syntax highlighting color scheme, but reproducing it requires a highly sophisticated highlighting engine.
-[Pygments](http://pygments.org) (the highlighter Jekyll uses) processes code snippets into styleable HTML, but it isn't nearly as powerful as the highlighting engine in Vim for example.
-In order to port Solarized theme to octopress, I processed its [test files](https://github.com/altercation/solarized/tree/master/utils/tests) with Pygments and styled the output with Sass while comparing
-them to the Vim rendered versions.
 
 Check out the [test page](/docs/blogging/code/test) to see the results.
 
@@ -39,6 +31,13 @@ Check out the [test page](/docs/blogging/code/test) to see the results.
 
 ## Inline Code Blocks
 {% render_partial docs/plugins/codeblock/index.markdown %}
+
+## Solarized Highlighting
+
+[Solarized](http://ethanschoonover.com/solarized) has a beautiful syntax highlighting color scheme, but reproducing it requires a highly sophisticated highlighting engine.
+[Pygments](http://pygments.org) (the highlighter Jekyll uses) processes code snippets into styleable HTML, but it isn't nearly as powerful as the highlighting engine in Vim for example.
+In order to port Solarized theme to octopress, I processed its [test files](https://github.com/altercation/solarized/tree/master/utils/tests) with Pygments and styled the output with Sass while comparing
+them to the Vim rendered versions.
 
 ### Spaces vs. Tabs
 
