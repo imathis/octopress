@@ -13,15 +13,21 @@
 //$sidebar-link-color-hover: darken(#7ab662, 9);
 
 
-/* To use the light code highlighting theme uncomment the following line */
+/* To use the dark code highlighting theme uncomment the following line */
 
-//$solarized: light;
+//$solarized: dark;
 
 /* To adjust the background color uncomment and edit the following line */
-/* If you intend to use a light background, uncomment $solarized: light; above*/
+/* If you intend to use a dark background, uncomment $solarized: dark; above*/
 
-//$pre-bg: $base03;
+//$pre-bg: #252525;
 
+/* To change the color of the code markers, uncomment and change the following lines */
+
+//$marker:        rgba(#00baff, .5);
+//$marker-bg:     rgba($marker, .03);
+//$marker-border: rgba($marker, .13);
+//$marker-border-left:   $marker;
 
 /* For fine control over the syntax highlighting colors edit here */
 
