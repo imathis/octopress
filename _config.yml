@@ -43,8 +43,8 @@ pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 excerpt_in_feed: false # Truncate excerpted articles in the atom feed
-permalink_label: "&infin;"
-permalink_label_feed: "&infin; Permalink"
+permalink_label: "Permalink"
+permalink_label_feed: "&#9875; Permalink"
 linklog_marker: "&rarr;"
 linklog_marker_position: after
 linklog_marker_position_feed: after
@@ -65,6 +65,9 @@ blog_index_asides: [asides/twitter.html, asides/delicious.html, asides/pinboard.
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
+
+# Use text links instead of Javascript widgets for Twitter, Facebook and Google Plus
+do_not_track: false
 
 # Github repositories
 github_user:
