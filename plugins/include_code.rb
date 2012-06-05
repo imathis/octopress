@@ -15,7 +15,7 @@
 # Example 2:
 # You can also include an optional title for the <figcaption>
 #
-# {% include_code Example 2 javascripts/test.js %}
+# {% include_code javascripts/test.js Example 2 %}
 #
 # will output a figcaption with the title: Example 2 (test.js)
 #
