@@ -65,8 +65,9 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 #   3rd Party Settings    #
 # ----------------------- #
 
-# Use text links instead of Javascript widgets for Twitter, Facebook and Google Plus
-do_not_track: false
+# Javascript social buttons often generate lots of http requests and may track viewers browsing history
+# Show respect for privacy and bandwidth with simple links for Twitter, Facebook and Google Plus.
+respectfully_social: true
 
 # Github repositories
 github_user:
