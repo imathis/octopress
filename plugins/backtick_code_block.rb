@@ -24,7 +24,7 @@ module BacktickCodeBlock
         if markup =~ AllOptions
           highlight(code, $1, {caption: $2, url: $3, anchor: $4 || 'Link', linenos: linenos, start: start, marks: marks})
         elsif markup =~ LangCaption
-          highlight(code, $1, {caption: $2 || '', linenos: linenos, start: start, marks: marks})
+          highlight(code, $1, {caption: $2 || nil, linenos: linenos, start: start, marks: marks})
         else
           highlight(code, 'plain', {linenos: linenos, start: start})
         end
