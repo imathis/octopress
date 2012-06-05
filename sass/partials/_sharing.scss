@@ -11,7 +11,6 @@
       width: image-width($img);
       height: image-height($img);
       position: absolute; left: 3px;
-      top: 3px;
     }
   } @else if $icon {
     padding-left: icon-sprite-width($icon) + 6px;
@@ -19,7 +18,6 @@
       vertical-align: middle;
       @extend .icon-#{$icon};
       position: absolute; left: 3px;
-      top: 3px;
     }
   }
 }
@@ -67,12 +65,18 @@
 .googleplus-share {
   @extend .simple-social-button;
   @include social-button-bg('googleplus', #db583b);
+  &:before { top: 5px; }
 }
 .facebook-share {
   @extend .simple-social-button;
   @include social-button-bg('facebook', #4e5a9b);
+  &:before { top: 3px; }
 }
 .twitter-share, .sidebar a.twitter-follow-button {
   @extend .simple-social-button;
   @include social-button-bg('twitter');
+}
+.sidebar .github-follow {
+  @extend .simple-social-button;
+  @include social-button-bg('github');
 }

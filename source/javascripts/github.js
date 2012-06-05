@@ -1,18 +1,18 @@
 var github = (function(){
-  function render(target, repos){
-    var i = 0, fragment = '', t = $(target)[0];
+  function render(target, data){
+    var i = 0, repos = '';
 
-    for(i = 0; i < repos.length; i++) {
-      fragment += '<li><a href="'+repos[i].html_url+'">'+repos[i].name+'</a><p>'+repos[i].description+'</p></li>';
+    for(i = 0; i < data.length; i++) {
+      repos += '<li><a href="'+data[i].html_url+'">'+data[i].name+'</a><p>'+data[i].description+'</p></li>';
     }
-    t.innerHTML = fragment;
+    target.html(repos);
   }
   return {
     showRepos: function(options){
       $.ajax({
           url: "https://api.github.com/users/"+options.user+"/repos?callback=?"
         , dataType: 'jsonp'
-        , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
+        , error: function (err) { options.target.find('.loading').addClass('error').text("Error loading feed"); }
         , success: function(data) {
           var repos = [];
           if (!data.data) { return; }
@@ -35,3 +35,14 @@ var github = (function(){
     }
   };
 })();
+
+$(document).ready(function(){
+  g = $('#gh_repos');
+
+  github.showRepos({
+      user: g.attr('data-user')
+    , count: parseInt(g.attr('data-count'))
+    , skip_forks: g.attr('data-skip') == 'true'
+    , target: g
+  });
+});

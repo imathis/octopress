@@ -72,7 +72,8 @@ var twitter = (function(){
 
   return {
     getFeed: function(options){
-      count = parseInt(options.count, 10);
+      count = options.count;
+      console.log(options);
       $.ajax({
           url: "http://api.twitter.com/1/statuses/user_timeline/" + options.user + ".json?trim_user=true&count=" + (count + 20) + "&include_entities=1&exclude_replies=" + (options.replies ? "0" : "1") + "&callback=?"
         , dataType: 'jsonp'
@@ -82,3 +83,12 @@ var twitter = (function(){
     }
   }
 })();
+
+$(document).ready(function(){
+  t = $('#tweets');
+  twitter.getFeed({
+     user: t.attr('data-user')
+   , count: parseInt(t.attr('data-count'), 10)
+   , replies: t.attr('data-replies') == 'true'
+  });
+});
