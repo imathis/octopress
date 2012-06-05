@@ -65,7 +65,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 #   3rd Party Settings    #
 # ----------------------- #
 
-# Javascript social buttons often generate lots of http requests and may track viewers browsing history
+# Javascript social buttons often generate lots of http requests and may track your viewer's browsing history
 # Show respect for privacy and bandwidth with simple links for Twitter, Facebook and Google Plus.
 respectfully_social: true
 
