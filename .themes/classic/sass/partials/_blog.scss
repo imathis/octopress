@@ -19,7 +19,7 @@ article {
     }
     .blog-index & { background: none; padding-bottom: 0; }
     p {
-      font-size: .9em;
+      font-size: .8em;
       margin: 0;
       color: $text-color-light;
       &.meta { @extend .sans; position: absolute; top: 0; }

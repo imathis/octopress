@@ -1,5 +1,7 @@
 {% include disqus.html %}
+{% unless site.do_not_track %}
 {% include facebook_like.html %}
 {% include google_plus_one.html %}
 {% include twitter_sharing.html %}
+{% endunless %}
 {% include custom/after_footer.html %}

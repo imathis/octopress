@@ -1,3 +1,37 @@
+@mixin social-button-bg($img, $color: #444) {
+  color: $color;
+  &:visited, &:hover, &:visited:hover { color: $color; }
+  position: relative;
+  padding-left: image-width($img) + 6px;
+  &:before {
+    content: "";
+    background: image-url($img) no-repeat center center;
+    width: image-width($img);
+    height: image-height($img);
+    display: inline-block;
+    position: absolute; left: 3px;
+    top: 3px;
+  }
+}
+
+.simple-social-button {
+  display: inline-block;
+  border: 1px solid #ccc;
+  background-color: #e5e5e5;
+  @include background-image(linear-gradient(#fff, #ddd));
+  &:hover {
+    @include background-image(linear-gradient(#f5f5f5, #ccc));
+    border-color: #b5b5b5;
+    background-color: #ddd;
+  }
+  padding: .2em .5em .1em; line-height: 1.45em;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: #fff 0 1px;
+  @include border-radius(.3em);
+}
+
 .sharing {
   p.meta + & {
     padding: { top: 1em; left: 0; }
@@ -6,3 +40,16 @@
 }
 
 #fb-root { display: none; }
+
+.googleplus-share {
+  @extend .simple-social-button;
+  @include social-button-bg('googleplus.png', #db583b);
+}
+.facebook-share {
+  @extend .simple-social-button;
+  @include social-button-bg('facebook.png', #4e5a9b);
+}
+.twitter-share, .sidebar a.twitter-follow-button {
+  @extend .simple-social-button;
+  @include social-button-bg('twitter.png');
+}
