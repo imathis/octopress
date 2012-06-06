@@ -9,9 +9,8 @@ single: true
   {% include article.html %}
   <footer>
     <p class="meta">
-      {% include post/author.html %}
-      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-      {% include post/categories.html %}
+      {% include post/meta.html %}
+      {% include custom/post_meta.html %}
     </p>
     {% unless page.sharing == false %}
       {% include post/sharing.html %}
@@ -26,12 +25,7 @@ single: true
     </p>
   </footer>
 </article>
-{% if site.disqus_short_name and page.comments == true %}
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
-  </section>
-{% endif %}
+{% if page.comments == true %}{% include comments.html %}{% endif %}
 </div>
 {% unless page.sidebar == false %}
 <aside class="sidebar">
@@ -42,4 +36,3 @@ single: true
   {% endif %}
 </aside>
 {% endunless %}
-
