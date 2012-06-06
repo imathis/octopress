@@ -1,0 +1,7 @@
+<section>
+  <h1>Comments</h1>
+  {% include custom/comments.html %}
+  {% if site.disqus_short_name %}
+    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+  {% endif %}
+</section>
