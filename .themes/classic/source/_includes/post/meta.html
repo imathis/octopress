@@ -1,0 +1,5 @@
+<p class="meta">
+{% include post/author.html %}
+{% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+{% if page.categories %}{% include post/categories.html %}{% endif %}
+</p>

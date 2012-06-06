@@ -13,23 +13,15 @@ layout: default
   {{ content }}
   {% unless page.footer == false %}
     <footer>
-      {% if page.date or page.author %}<p class="meta">
-        {% if page.author %}{% include post/author.html %}{% endif %}
-        {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-        {% if page.categories %}{% include post/categories.html %}{% endif %}
-      </p>{% endif %}
+      <p class="meta">{% include post/meta.html %}{% include custom/page-meta.html %}</p>
       {% unless page.sharing == false %}
         {% include post/sharing.html %}
       {% endunless %}
     </footer>
   {% endunless %}
 </article>
-{% if site.disqus_short_name and page.comments == true %}
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
-  </section>
-{% endif %}
+{% include custom/after_page.html %}
+{% if page.comments == true %}{% include comments.html %}{% endif %}
 </div>
 {% unless page.sidebar == false %}
 <aside class="sidebar">
