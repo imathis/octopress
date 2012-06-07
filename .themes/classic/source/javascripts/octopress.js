@@ -1,15 +1,14 @@
 var octopress = (function(){
   return {
-    getNav: function() {
+    addMobileNav: function () {
       var mainNav = $('ul.main-navigation, ul[role=main-navigation]').before('<fieldset class="mobile-nav">')
       var mobileNav = $('fieldset.mobile-nav').append('<select>');
       mobileNav.find('select').append('<option value="">Navigate&hellip;</option>');
-      mainNav.find('a').each(function() {
-        mobileNav.find('select').append('<option value="'+this.href+'">&raquo; '+this.text+'</option>');
-      });
-      $('ul.subscription a').each(function() {
-        mobileNav.find('select').append('<option value="'+this.href+'">&raquo; '+this.text+'</option>');
-      });
+      var addOption = function() {
+        mobileNav.find('select').append('<option value="' + this.href + '">&raquo; ' + $(this).text() + '</option>');
+      }
+      mainNav.find('a').each(addOption);
+      $('ul.subscription a').each(addOption);
       mobileNav.find('select').bind('change', function(event) {
         if (event.target.value) { window.location.href = event.target.value; }
       });
@@ -248,7 +247,7 @@ $(document).ready(function() {
   octopress.testFeatures();
   octopress.flashVideoFallback();
   octopress.addCodeLineNumbers();
-  octopress.getNav();
+  octopress.addMobileNav();
   octopress.addSidebarToggler();
   octopress.twitter.getFeed('#tweets')
   octopress.github.showRepos('#gh_repos');
