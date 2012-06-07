@@ -25,4 +25,3 @@
   $text-color: if($text-color >= 150, $dark, $light);
   @return $text-color;
 }
-
