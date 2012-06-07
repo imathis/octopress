@@ -54,12 +54,23 @@ var octopress = (function(){
       });
     }
 
-    , testFeatures: function () {
-      if (Modernizr.testAllProps('maskImage')) {
-        $('html').addClass('maskimage')
-      } else {
-        $('html').addClass('no-maskimage')
+    , testFeature: function (features) {
+      getTestClasses = function (tests) {
+        classes = '';
+        if (typeof(tests.join) == 'function') {
+          for (var i=0; i < features.length; i++)
+            classes += getClass(features[i]) + ' ';
+        } else {
+          classes = getClass(tests);
+        }
+        return classes;
       }
+
+      getClass = function (test) {
+        return ((Modernizr.testAllProps(test) ? test : "no-"+features[i]).toLowerCase())
+      }
+
+      $('html').addClass(getTestClasses(features));
     }
 
     , flashVideoFallback: function (){
@@ -244,7 +255,7 @@ var octopress = (function(){
 
 $(document).ready(function() {
   octopress.wrapFlashVideos();
-  octopress.testFeatures();
+  octopress.testFeature(['maskImage', 'transform']);
   octopress.flashVideoFallback();
   octopress.addCodeLineNumbers();
   octopress.addMobileNav();
