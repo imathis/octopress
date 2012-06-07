@@ -1,6 +1,3 @@
-@import "icon/*.png";/**/
-@include all-icon-sprites($dimensions: true);
-
 @mixin social-button-bg($icon: false, $color: #333, $img: false) {
   color: $color;
   &:visited, &:hover, &:visited:hover { color: $color; }
@@ -20,12 +17,6 @@
       position: absolute; left: 3px;
     }
   }
-}
-
-@mixin icon-bg($icon, $align: middle) {
-  display: inline-block;
-  vertical-align: $align;
-  @extend .icon-#{$icon};
 }
 
 .simple-social-button {
