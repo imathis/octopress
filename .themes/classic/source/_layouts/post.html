@@ -25,6 +25,7 @@ single: true
     </p>
   </footer>
 </article>
+{% include custom/after_post.html %}
 {% if page.comments == true %}{% include comments.html %}{% endif %}
 </div>
 {% unless page.sidebar == false %}
