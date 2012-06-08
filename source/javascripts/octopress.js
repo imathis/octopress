@@ -67,7 +67,7 @@ var octopress = (function(){
       }
 
       getClass = function (test) {
-        return ((Modernizr.testAllProps(test) ? test : "no-"+features[i]).toLowerCase())
+        return ((Modernizr.testAllProps(test) ? test : "no-"+test).toLowerCase())
       }
 
       $('html').addClass(getTestClasses(features));
