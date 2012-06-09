@@ -1,0 +1,35 @@
+#+BEGIN_HTML
+---
+title:             "Nastiest Hack I've Seen In Awhile"
+description:       "I just stumbled upon some very nasty su tricks and this one took the cake."
+date:              "2012-02-01 Wed 20:40:51"
+layout:            post
+categories:        [tech,coding]
+comments:          true          
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+I was reading about [[http://code.google.com/p/android-scripting][SL4A]], also known as [[http://android.com][Android]] [[http://en.wikipedia.org/wiki/Scripting_language][Scripting Languages]]. They are a set of [[http://en.wikipedia.org/wiki/Quick_and_dirty][quick-and-dirty]] ports of programming languages to the Android that interact with the Android [[http://en.wikipedia.org/wiki/Operating_system][OS]]. I just stumbled upon this "[[http://code.google.com/p/android-scripting/issues/detail?id=184][issue page]]" (it's more like a [[http://en.wikipedia.org/wiki/Internet_forum][forum]] than a bug report). 
+
+The developer is trying to run something on his Android, which is basically [[http://en.wikipedia.org/wiki/Linux][Linux]], that requires [[http://en.wikipedia.org/wiki/Superuser][superuser]] permissions. As the responses started to build upon each other, one user suggested starting his shell script with the following lines (the actual posting was in Android's flavor of [[http://en.wikipedia.org/wiki/Python_%28programming_language%29][Python]] but I've converted it to [[http://linux.die.net/man/1/su][bash(1)]] to make it more accessible):
+
+#+BEGIN_SRC -n -r -l "shell-script"
+#!/bin/sh
+if [ "$USER" != "root" ]; then
+    exec sudo $SHELL -c "`cat /proc/$$/cmdline | tr '\000' ' '`" root
+fi
+#+END_SRC
+
+I simply couldn't help being entertained at how revolting but equally brilliant that code is. But, I started thinking (always something dangerous) about how much I hate having to deal with stupid commands. For example, this is the output of running [[http://linux.die.net/man/8/apt-get][apt-get(8)]] without proper permission:
+
+#+BEGIN_EXAMPLE
+$ apt-get install foobar
+E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+#+END_EXAMPLE
+
+Being as I often write shell scripts with calls to [[http://linux.die.net/man/8/sudo][sudo(8)]] in the script, I decided that imitation is the best response to being revolted (I know my mom said something like that :-).
+
+So I expanded upon the existing code, making it a full shell script utility. You can look the code or grab a copy at my [[https://github.com][GitHub]] [[https://github.com/Neil-Smithline][page]] in the [[https://github.com/Neil-Smithline/rerunasroot][rerunasroot]] repository. I'll be using it in the future.

@@ -1,0 +1,128 @@
+#+BEGIN_HTML
+---
+layout:         post
+title:          "Org-Mode + t Makes Tweeting Easy"
+date:           2012-05-27 18:23
+comments:       true
+categories:     [twitter, projects, blogging-tech, emacs, orgmode]
+published:      true
+---
+
+#+END_HTML
+
+#+MACRO: relative_link           @<a href="{{ root_url }}$1" title="$2">$3@</a>
+#+MACRO: absolute_link           @<a href="http:/$1" title="$2">$3@</a>
+
+*** Update <2012-06-04 Mon 00:57> 
+You can download the code from its [[http://cnet.co/M2O9L8][Github repository]].
+
+* Motivation
+After yesterday's {{{relative_link(/blog/2012/05/26/octopress-is-pretty-great, Posting about Octopress, ranting about Octopress)}}}, it occurred to me that while I now own the content of my blog postings, I don't own the content of my [[http://bit.ly/JvoqLE][tweets]]. I'm sure that there's some way to convince [[http://bit.ly/Jvotaj][Twitter]] to give me my tweets, but why should I rely on them to store my tweets.
+
+The obvious answer is that my tweets should be created on my computer and then sent to Twitter. 
+
+It should be noted that I'm not interested in implementing a full Twitter client. There are more than enough of those. I'm interested in having my tweets, or at least the bulk of my tweets, in a simple and easily accessible format.
+
+* The Answer Must Be Cheap
+While I want to author and store my tweets locally, it is not a high priority task for me. Whatever solution I come up with must add little or no overhead to my tweeting workflow, must be simple to implement, and cannot require ongoing tinkering to keep working.
+
+Being that my relationship with [[http://bit.ly/zhYdcB][Org Mode]] is rather simple: The more I learn about it the more of my life I want to be based on Org Mode. Org Mode just seems to make everything easier. So I decided to use Org Mode for the author, publication, and storage of my tweets. The system I'm describing has these properties:
+  - It took me just a few hours to design, implement, test, and begin using it for tweeting.
+  - Besides not adding overhead to my tweeting, it has made tweeting dramatically simpler.
+  - The entire implementation is a single file of [[http://bit.ly/wTaGtn][elisp]] that is 120 lines long. 50 of those lines are standard Emacs header comments that are automatically created. The implementation, along with its documentation, is only 70 lines long. While a small code base isn't one of my goals, not needing ongoing tinkering is. It is hard to imagine that 70 lines of code will require too much tinkering.
+#+HTML: <!-- more -->
+
+* Advantages Of Org Mode
+Before continuing, you should know a few facts about Org Mode:
+  - At its core, Org Mode is an [[http://bit.ly/MSMf12][outliner]] on steroids. This works great for me as I tend to organize my thoughts as trees. I'm obvious not alone as the [[http://bit.ly/MSMf12][outliner]] page on [[http://bit.ly/KWo5OA][Wikipedia]] has a list of many outliner applications along with [[http://bit.ly/KWoa4F][references]] to many outliners that are designed to implement specific functionality. 
+  - Org Mode augments its outlining functionality with a [[http://bit.ly/MSKKjm][task management system]] ([[http://bit.ly/MSKKjm][details]]).
+  - Org Mode has a [[http://bit.ly/MSNhKm][template]] based [[http://bit.ly/MSN7CO][data capturing]] system that allows for the easy capturing of data into a consistent format.
+  - Org Mode is implemented in [[http://bit.ly/MSNvkN][GNU Emacs]]. Besides the fact that I spend nearly all of my non-browser computer time in Emacs, Emacs has a [[http://bit.ly/MSNVrv][rich extension mechanism]]
+
+* The Storage Structure Of Tweets
+Each tweet would be an outline entry whose title would be a small description of the tweet plus some other information to be discussed later. The body for each outline entry would be the tweet. In Org Mode this would look like:
+: * My First Tweet
+:   This is my first tweet using Org Mode.
+
+While this works fine for one tweet, after 50 or 100 tweets, things are going to get pretty messy. But, as Org Mode is an outliner, it supports the nesting of outline entries via both direct data entry as well as through Org Mode's capturing mechanism. You just need to provide Org Mode with a string that describes the data you want to capture and the outline format for that data.
+
+While, for the moment, sparing you the ugliness of the capture configuration string, I'll tell you that Org Mode supports a date tree outline format.
+: * 2012
+: *** 2012-05 May
+: ***** 2012-05-26 Saturday
+: ******* My First Tweet
+:         This is my first tweet using Org Mode!
+: ***** 2012-05-27 Sunday
+: ******* My Second Tweet
+:         This is now my 2nd tweet using Org Mode!
+
+Being an outliner, Org Mode supports the [[http://bit.ly/KWoekU][folding]] of the outline. That is, you can collapse the outline to hide parts of it that you are not immediately interested in. For example, let's say that, being today is Monday, I don't want to be bothered looking at my tweets from Saturday Or Sunday. No problem. When you fold the outline headings for Saturday and Sunday, the list of tweets will look like this:
+: * 2012
+: *** 2012-05 May
+: ***** 2012-05-26 Saturday ...
+: ***** 2012-05-27 Sunday ...
+
+The "..." is Org Mode's way to let you know that this entry has been folded.
+
+Keep in mind that I get all of this storage mechanism from Org Mode for free. All I needed to do was create a single configuration string for it.
+
+* Capturing Tweets
+A simple yet highly functional storage mechanism is fine but what I'm looking for is to reduce my tweeting overhead. This means that the workflow is what I care about. 
+
+The first part of the workflow is the "capturing" of my tweets. Org Mode's capturing mechanism is rather rich. It allows me to capture data (ie: to tweet) from Emacs with a couple of keystrokes. It also allows me to capture data, including an URL and highlighted text from my browser by clicking on a bookmarklet.
+
+When I initiate a tweet capture, I'm initially prompted for a "title". That is the descriptive text for the tweet. In the above example, "My First Tweet" is a title. After entering my title, I'm given an [[http://bit.ly/KWpdBF][Emacs buffer]], basically a new Emacs window, in which to type my tweet.
+
+When I'm done typing my tweet, a couple of keystrokes tells Org Mode that it should add the tweet to my tweet file and save the file. 
+
+* Tweeting
+Now that I've captured my tweet, I need to actually tweet it. This is where some of the wonders of Emacs come into play. Emacs has lots of [[http://bit.ly/KWpRPv][hooks]] that allow you to insert code into the workflow. Org Mode adds many hooks of its own.
+
+Without boring you with the exact details, by using the appropriate hooks I have set up Emacs to take special actions whenever a file is saved that ends in "-update.org". I used the file naming convention of "-update" instead of "-tweet" in case I decide to add other types of status messages at a later date.
+
+Being as I was going for simple, I decided that Emacs would not talk directly to Twitter. Instead, I have Emacs use the wonderfully intuitive, functional, and efficient [[http://bit.ly/KGlf2s][t application]]. For my purposes, =t='s [[http://bit.ly/xOIkfJ][CLI]] is perfect. Once you've signed into Twitter with =t=, it will tweet for you with the simple command line of:
+: t update This is my tweet text.
+
+That seems about as simple as it can get.
+
+* Tracking Tweet Status 
+Being that I'm storing more than one tweet in a file, it is important that I know which tweets have been tweeted and which ones haven't. This is another place where I get to leverage the wonders of Org Mode.
+
+Beyond outlining, Org Mode supports a simple yet highly functional and customizable [[http://bit.ly/KWrJrE][task management system]]. The customizability allows you to define task states well beyond the typical "open" and "closed" states of many other task managers. 
+
+I used the task management to teach Org Mode about status update tasks. A status update task can be in one of two states: =POST= and =DONE=. When it is in the =POST= state, it needs to be posted. The =DONE= state means it has already been posted. Org Mode's slogan is 
+: Org: Your Life in Plain Text
+and they mean it.
+
+To indicate a tweet's, ie: a task's, state, you simply add the state to the outline header line. For example, using the example from above, if I had already posted my first tweet but not my second, the outline would look like this:
+: * 2012
+: *** 2012-05 May
+: ***** 2012-05-26 Saturday
+: ******* =DONE= My First Tweet
+:         This is my first tweet using Org Mode!
+: ***** 2012-05-27 Sunday
+: ******* =POST= My Second Tweet
+:         This is now my 2nd tweet using Org Mode!
+
+When I use Org Mode's capturing mechanism to add my new tweet to the file, it automatically adds the state of =POST= to each new tweet. As mentioned above, when the tweet file is saved it executes my code. While I have 70 lines of code, only two functions consisting of a total of 45 lines is needed to post my tweets. The remaining 35 lines are configuration that, via Emacs and Org Mode's hooks, makes sure that my code is called whenever the tweet file is saved. 
+
+The first function, all 9 lines of it, simply asks Org Mode to loop through all tweets (ie: outline headings) in the =POST= state and call my second function on each of those tweets. The second function calls the CLI t to execute the tweet. This 28 line function that actually does the tweeting is really rather simple. Only 10 lines of it are related to actually tweeting. The remainder of the function is error handling in case, for some reason, my tweet fails.
+
+After successfully tweeting a status update, I tell Org Mode to change the tweet's state from =POST= to =DONE=. That's all there is to it.
+
+* Some Nice Freebies
+Besides the data capturing, the ease of calling an external program, the automatic outline maintenance, the automatic state tracking (ie: =POST= and =DONE=), and the automatic execution of my tweeting code whenever the tweet file is saved, the Emacs and Org Mode's richness provide other nice features:
+- Twitter's 140 character limit per tweet is easily eyeballed while you are typing in Emacs as the editor tells you how long a line is. I have, of course, implemented a character count error check before tweeting, but it is nice to catch the problem when you are typing. 
+- Automated highlighting of tweets.
+- A common problem with the 140 character limit on tweets is that URLs can be very long. Emacs helps here with its [[http://bit.ly/wSSiWH][Bitly library]] (courtesy of me :-). This shortens URLs in Emacs, using Bitly, with two keystrokes. (Bitly happens to be my current URL shortener of choice.)
+- Org Mode has the ability to automatically record a variety of times associated with each task. I have set up Org Mode to record the time the tweet was entered by me as well as the time that it actually got tweeted.
+- Org Mode allows you to [[http://bit.ly/KWtipB][tag]] (aka: "label" or "categorize") each outline item. I have leveraged this in anticipation of extending the tweeting system to include status updates to other services than Twitter. Also, in the future I may want to be able to manage multiple Twitter accounts. I'm not sure that I'll ever implement that functionality, but thought I'd throw it in as preparing for it is essentially free. I currently label each status update with two labels. The first label describes the type of status update. In this case it is "TWEET" to designate that I want to update Twitter. The second label is "NS" to indicate that I want to update the status of my [[http://bit.ly/KWtyVp][@neil_smithline]] Twitter account.
+- Emacs is my tweet editor. For those of you who don't know Emacs as well as those of you that know Emacs and hate it, I'm sure you wouldn't want to edit tweets in Emacs. But I have been using Emacs for 25+ years and still think it is pretty slick. Besides the functionality discussed above, Emacs gives me [[http://bit.ly/KWtPb0][spell checking/correction]], the ability to easily change the case of something I've mistyped, functionality based on English grammar (eg: the ability to move, delete, or even transpose words or sentences), etc...
+
+* A Sneak Peek
+After all my blathering, I thought that a screenshot of my tweets would be nice. This screenshot shows tweets for the past three days. I have folded the tweets from Saturday so that they are easy to ignore. For the sake of this picture, I have unfolded my tweets from Sunday so that it shows what a posted tweet looks like. Finally, I have a tweet for today that is queued up to announce this blog posting. 
+
+As you look at this screenshot, remember that almost all of this is automatically generated. For example, for the final tweet I had to enter the title "Tweeting From Emacs" (this can actually be blank but I think the title makes it more useful) and the actual tweet. Everything else, including the Bitly URL shortening, comes for free.
+
+[[http://www.neilsmithline.com/assets/screen-snapshots/tweets-screenshot.png]]
+@<span style="color:#F8F8F8;">For Technorati: PHTDYXEZKM3Q@</span>

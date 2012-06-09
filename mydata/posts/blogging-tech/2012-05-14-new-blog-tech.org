@@ -1,0 +1,62 @@
+#+BEGIN_HTML
+---
+layout:         post
+title:          "YANBT: Yet Another New Blogging Technology"
+date:           2012-05-14 12:36
+comments:       true
+categories:     [blogging-tech, octopress, jekyll, nanoblogger]
+published:      true
+author:         Neil Smithline
+---
+#+END_HTML
+* NanoBlogger Was Killing Me
+[[http://bit.ly/wq2Ien][NanoBlogger]] really looked cool to me 
+(@<a href="{{ root_url }}/blog/categories/blogging-tech">my postings about why I liked it@</a>):
+  - Small
+  - Most functionality provided via plugins
+  - [[http://bit.ly/xOIkfJ][CLI]] only
+  - It is [[http://bit.ly/Mlkg9X][FOSS]].
+  - Produced a static site (ie: only serves static pages)
+  - It was built on [[http://bit.ly/JbQmzE][Bash]] -- I thought this was the coolest
+
+I liked it so much that I wrote a CLI for it that was better suited to my personal workflow. I also spent some time integrating it with Emacs. But it had endless problems.
+
+It was slow, it did not do anything automatically, frequently required rebuilding of the entire blog, was hard to view on my local machine, isn't really being maintained, doesn't have a real templating system, breaks the RSS feed on special characters such as etc...
+
+* Where Next
+Over the past few weeks I've been looking around for a new blogging system. The only real contender seemed to be [[http://bit.ly/Jm1bmc][Jekyll]]. It is written in [[http://bit.ly/KAfYv0][Ruby]] and used by Github to power Github Pages. It has so many contributors to it that its [[http://bit.ly/JetyoE][Github repository]] has, at the moment, 50+ pull requests.
+
+I had nearly chosen Jekyll when I moved to NanoBlogger. I found that the discussion about moving to Jekyll on the [[http://bit.ly/JH7cIy][0xdecafbad.com]] blog really aligned with my thoughts.
+
+But, after playing with it a bit, I found that Jekyll was difficult to configure. And I just so liked the Bash thing that NanoBlogger had that I decided to go with NanoBlogger. But now I'm wasting too much of my time fighting with Nanoblogger and I should reconsider Jekyll.
+#+HTML: <!-- more -->
+
+This time, when I was researching Jekyll, I found [[http://bit.ly/KT1aFT][Octopress]]. Octopress is Jekyll on steroids. It provides an automated configuration and maintenance system that takes the pain out of using Jekyll.
+
+So now I'm giving Octopress/Jekyll a try. I'll see how it goes. Configuring a site with a /hello world/ blog entry only took a couple of hours. Most of that was just downloading Octopress and reading the docs to figure out what to do. It turned out that configuration was running three [[http://bit.ly/KT2jxn][rake]] commands. 
+
+* Converting From Nanoblogger To Jekyll
+Because NanoBlogger blog entries are plain text with markup, converting my entire old blog to Octopress was fairly easy as Octopress also uses plain text with markup for blog entries. I ran into two snags. The first one was in Emacs' [[http://bit.ly/zhYdcB][Org Mode]], my authoring tool. It broke when you had a "+" in the path name of your input files (in my case, in the path of my blog). It took me several hours to find the bug. Once I found it, it was easy to patch and I sent my fix to be included in subsequent Org Mode releases.
+
+The second problem was a bit trickier. Octopress was breaking on some of my blog's generated HTML files. The error message gave me the line number and the character number in that line that was causing the error but it omitted to give me the file name. I believe the technical term for that is "Oops!".
+
+To find the file that was casing the problem I started to remove blog files using a [[http://bit.ly/KT3gpo][binary search]]-ish style to track the problem file down. This proved more difficult than I thought it should. After much frustration, it occurred to me that the problem was in many blog entries so the binary search wasn't so helpful. So I wiped my blog and started adding one posting at a time. 
+
+Even after I found the first posting that caused Octopress, actually Jekyll, to crash, I couldn't figure out what was wrong with the file. The error message said something about non-ASCII characters but I only had ASCII, or so I thought. It turned out that I had copied and pasted some text from my browser and it had inserted a hyphen (-) that was not the ASCII hyphen. To me, they looked identical. 
+
+Despite knowing what the problem was, I couldn't automate Emacs or grep to find the offensive hyphens. In Emacs, the search treated ASCII and non-ASCII hyphens the same. I forget the problems I had with grep but I couldn't get it to work either. This meant I was going to have to add one entry at a time to my blog to track down the other problems. Thank you -- NOT!
+
+But Jekyll is written in Ruby and Ruby is a scripting language so I have the source code for Jekyll. Being that the error message included a full stack trace, I figured I could update the error message. In the end I just ended up making Jekyll a bit more verbose: it announces which file it is about to process with the message:
+:Processing file /myfile/.
+
+Then I added all my blog entries, ran Jekyll, got the same error message with only the line and character position, but now had the name of the file it was processing when it had a problem.
+
+* Plain Text Blogs Rock!
+ After correcting a couple of entries I noticed that the problem only occurred on hyphens (-) and single quotes ('). Being that both NanoBlogger and Octopress/Jekyll use plain text files for their input, I had a whole bunch of tools to help me fix the problem. 
+
+ In the end I ended up turning Emacs failure to distinguish between the ASCII and non-ASCII versions of these characters to my advantage. I did a search-and-replace on all my blog entries replacing hyphens with hyphens and single quotes with single quotes. While Emacs' search found both ASCII and non-ASCII characters, it always replaced them with what I typed as the replacement, ASCII.
+
+Then, /voila/, there was my blog. And my blog looked way better in Octopress than NanoBlogger. Check out a NanoBlogger [[http://bit.ly/wq2Ien][sample blog]] and an Octopress [[http://bit.ly/KT1aFT][sample blog]]. Huge difference. Also, excluding the weak error message from Jekyll (I'll file a bug report on that and I suspect someone will fixed it as Jekyll is so heavily used), I didn't need to do a thing to build and publish the blog. Octopress even pushes the blog to Github automatically. I had written a script to do this automatically for NanoBlogger, but I'd much rather use someone else's perfectly good solution rather than writing my own.
+
+I think I'm going to be very happy with Octopress.
+

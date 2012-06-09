@@ -1,0 +1,36 @@
+#+BEGIN_HTML
+
+---
+layout:         page
+title:          "Other Places You Can Find Me"
+date:           2012-05-21 00:11
+comments:       true
+sharing:        true
+footer:         true
+published:      true
+---
+
+#+END_HTML
+
+#+MACRO: relative_link          @<a href="{{ root_url }}$1" title="$2">$3@</a>
+#+MACRO: absolute_link          @<a href="$1" title="$2">$3@</a>
+ 
+Besides {{{relative_link(/about/contact,,directly contacting me)}}}, you can find me at several other locations around the web.
+
+*** Github
+I've been spending a lot of time on [[http://www.wikipedia.com/Foss][FOSS]] projects. You can check out some of what I've been doing in my [[http://bit.ly/ygCNdO][Github repositories]].
+
+*** LinkedIn
+See my [[http://linkd.in/KE1CZj][LinkedIn]] page.
+
+*** Facebook
+Read up on my personal life on [[http://on.fb.me/KE1DfP][Facebook]].
+
+*** Google+
+Read about what entertains me on [[http://bit.ly/KE1Dwc][Google+]]. Due to the difference in users (G+ seems to be mostly technical types while even my mother is on FB) my G+ activity tends to be more nerdy than my Facebook activity.
+
+*** My Bookmarks
+See my bookmark cloud from [[http://bit.ly/KLIdWl][Diigo.com]] {{{relative_link(/about/diigo-tag-cloud, My Diigo Tag Cloud,bookmark cloud)}}}.
+
+*** Redistribution Of Wisdom
+While I'm sure that people have many names for my [[http://bit.ly/La2d1r][Disqus activity]], I am partial to /redistribution of wisdom/ :-).

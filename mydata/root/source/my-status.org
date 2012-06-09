@@ -1,0 +1,197 @@
+* 2012
+*** 2012-05 May
+***** 2012-05-26 Saturday
+******* DONE prepend test [2012-05-27 Sun 16:03]             :TWEET:NS:
+CLOSED: [2012-05-27 Sun 16:04]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-27 Sun 16:04]
+:END:
+test
+******* DONE org-capture <2012-05-27 Sun 12:01>              :TWEET:NS:
+CLOSED: [2012-05-27 Sun 12:44]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-27 Sun 12:44]
+- State "POST"       from "DONE"       [2012-05-27 Sun 12:16]
+- State "DONE"       from "POST"       [2012-05-27 Sun 12:15]
+:END:
+tweet test using #orgmode capture and automatic update of tweets on buffer save
+******* DONE second org-protocol [2012-05-27 Sun 12:46]            :TWEET:NS:
+CLOSED: [2012-05-27 Sun 12:46]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-27 Sun 12:46]
+:END:
+second test using org-protocol on buffer save #orgmode
+***** 2012-05-27 Sunday
+******* DONE test again [2012-05-27 Sun 16:04]                     :TWEET:NS:
+CLOSED: [2012-05-27 Sun 16:05]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-27 Sun 16:05]
+:END:
+again
+***** 2012-05-28 Monday
+******* DONE Tweeting From Emacs [2012-05-28 Mon 10:31]      :TWEET:NS:
+CLOSED: [2012-05-28 Mon 11:07]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-28 Mon 11:07]
+:END:
+Just posted a new blog entry about tweeting using #emacs, #orgmode, and #t: http://bit.ly/MXaEQH
+******* DONE Hooking? [2012-05-28 Mon 11:12]                 :TWEET:NS:
+CLOSED: [2012-05-28 Mon 11:15]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-28 Mon 11:15]
+:END:
+I have never heard anyone use the word "hooking" in quite this way http://bit.ly/KWpRPv. Perhaps I have been coding the wrong way?
+******* DONE Selective Tweets [2012-05-28 Mon 11:26]         :TWEET:NS:
+CLOSED: [2012-05-28 Mon 11:28]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-28 Mon 11:28]
+:END:
+Testing the Selective Tweets application to allow you to choose tweets to post on #fb. See http://nyti.ms/MXkXnP for info.
+******* DONE Selective Tweets Retry [2012-05-28 Mon 11:29]   :TWEET:NS:
+CLOSED: [2012-05-28 Mon 11:31]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-28 Mon 11:31]
+:END:
+Not really a problem but... It seems that the #fb tag for Selective Tweets has to be at the end of the posting #fb
+******* DONE RIM RIP 2 [2012-05-28 Mon 18:02]                :TWEET:NS:
+CLOSED: [2012-05-28 Mon 18:05]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-28 Mon 18:05]
+:END:
+Would the last person at RIM please turn out the lights? http://cnet.co/L8XAFP http://bit.ly/L8XzBO #rim #blackberry #fb
+******* DONE Bitlbee [2012-05-28 Mon 20:05]                  :TWEET:NS:
+CLOSED: [2012-05-28 Mon 20:07]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-28 Mon 20:07]
+:END:
+Put Bitlbee (http://bit.ly/KBm9N5) on my VPS(http://bit.ly/J9L3m9. Now any IRC client can connect to all my IM accounts  #bitlbee #IRC #IM
+***** 2012-05-29 Tuesday
+(setq org-status-tweet-command-format 
+******* DONE 8 Ways Of Maintaining Creativity [2012-05-29 Tue 08:53] :TWEET:NS:
+CLOSED: [2012-05-29 Tue 09:41]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-29 Tue 09:41]
+- State "DONE"       from "POST"       [2012-05-29 Tue 09:26]
+- State "POST"       from "PREDECESSOR" [2012-05-29 Tue 09:26]
+- State "PREDECESSOR" from "DONE"       [2012-05-29 Tue 09:26]
+- State "DONE"       from "POST"       [2012-05-29 Tue 09:20]
+:END:
+Good article about maintaining creativity in a fast-moving company. Key for any tech company. http://on.fb.me/KNXsh4
+******* DONE Windows 8 [2012-05-29 Tue 22:26]                :TWEET:NS:
+CLOSED: [2012-05-29 Tue 22:26]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-29 Tue 22:26]
+:END:
+Raise your hand if you still remembered that Windows was selling software #ms #windows http://ti.me/KQEKFD
+******* DONE WebOS [2012-05-29 Tue 22:49]                    :TWEET:NS:
+CLOSED: [2012-05-29 Tue 22:51]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-29 Tue 22:51]
+:END:
+Wow! I just tweeted about how dead #MS seems to me. I had no idea that #WebOS still lives - or lived as of a week ago http://ti.me/KUVCXH
+***** 2012-05-30 Wednesday
+******* DONE Tivo [2012-05-30 Wed 22:23]                     :TWEET:NS:
+CLOSED: [2012-05-30 Wed 22:27]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-30 Wed 22:27]
+:END:
+TiVo lost $21M last quarter but says new service will fix all. #TiVo has joined my get-a-clue list with #RIM & #WebOS http://engt.co/LHKM8T
+***** 2012-05-31 Thursday
+******* DONE 2-Sided Touch Panel [2012-05-31 Thu 10:17]      :TWEET:NS:
+CLOSED: [2012-05-31 Thu 10:21]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-05-31 Thu 10:21]
+:END:
+New front and back touch display. Video mediocre as it is transparent but tons of touch patterns for gaming http://engt.co/LJEVju
+*** 2012-06 June
+***** 2012-06-02 Saturday
+******* DONE Passwords - part 2 [2012-06-02 Sat 13:37]       :TWEET:NS:
+CLOSED: [2012-06-02 Sat 13:40]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-02 Sat 13:40]
+:END:
+Yesterday I posted http://bit.ly/LU6aLx says nobody picks good passwords. Today slashdot posted http://bit.ly/L4AMXH saying otherwise
+******* DONE Stuxnet [2012-06-02 Sat 22:13]                  :TWEET:NS:
+CLOSED: [2012-06-02 Sat 22:16]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-02 Sat 22:16]
+:END:
+Great article about US #cyberattacks on Iranian nuke plants. Went on for years spanning 2 US presidents & Israeli help http://nyti.ms/KWjVbc
+***** 2012-06-03 Sunday
+******* DONE Chrome == Android [2012-06-03 Sun 15:26]        :TWEET:NS:
+CLOSED: [2012-06-03 Sun 17:18]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-03 Sun 17:18]
+:END:
+#Google is talking about merging #Chrome, #ChromeOS, #Android. #MS won't matter if the platform becomes an app http://cnet.co/MagtLa
+******* DONE Bump On Android [2012-06-03 Sun 15:32]                :TWEET:NS:
+CLOSED: [2012-06-03 Sun 17:18]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-03 Sun 17:18]
+:END:
+#Bump provides #NFC-like functionality #mobile-to-mobile #and #mobile-to-desktop. Just bump your photo to your desktop http://bit.ly/Mah4fP
+******* DONE Python Data Model [2012-06-03 Sun 20:32]        :TWEET:NS:
+CLOSED: [2012-06-03 Sun 20:39]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-03 Sun 20:39]
+:END:
+@jcleblanc after #Python args, how about tackling how __dict__, __get__, __getattr__, __item__, and __getattribute__ interact ;-)
+******* DONE a [2012-06-03 Sun 21:26]                        :TWEET:NS:
+CLOSED: [2012-06-03 Sun 21:31]
+:LOGBOOK:
+:END:
+aaoust hh th th aaoust hh th th aaoust hh th th aaoust hh th th aaoust hh th th aaoust hh th th aaoust hh th th 
+******* DONE sferik thanks [2012-06-03 Sun 21:28]            :TWEET:NS:
+CLOSED: [2012-06-03 Sun 21:31]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-03 Sun 21:31]
+:END:
+@sferik Just wanted to thank you for #t. I've wired status updates into #Emacs' #orgmode. Tweeted this from Emacs. http://bit.ly/MoGKYU
+***** 2012-06-04 Monday
+******* DONE Samsung SIII [2012-06-04 Mon 00:47]                   :TWEET:NS:
+CLOSED: [2012-06-04 Mon 00:49]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-04 Mon 00:49]
+:END:
+Very sexy looking #Samsung Galaxy SIII coming soon. Look how thin that sucker is. http://cnet.co/M2O9L8
+
+******* DONE CM9 [2012-06-04 Mon 15:19]                      :TWEET:NS:
+CLOSED: [2012-06-04 Mon 15:23]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-04 Mon 15:23]
+:END:
+It's #CM9 party week. My eldest's #Cappy then my #Infuse and #TF101. Upgraded tech is almost as good as new tech :-D http://bit.ly/JPQ2LB
+******* DONE Quix [2012-06-04 Mon 16:01]                     :TWEET:NS:
+CLOSED: [2012-06-04 Mon 16:03]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-04 Mon 16:03]
+:END:
+Been using #Quix for about a year. Easy way to manage bookmarklets and reduce add-ons (memory hogs) in your browser http://bit.ly/LsMNXI
+***** 2012-06-05 Tuesday
+***** 2012-06-08 Friday
+******* DONE FF --> Chrome [2012-06-08 Fri 22:31]            :TWEET:NS:
+CLOSED: [2012-06-08 Fri 22:33]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-08 Fri 22:33]
+:END:
+It was only meant to be a quick trial but I think I've moved from #Firefox to #Chrome for good. http://bit.ly/NnoU85 discusses why.
+******* DONE Twitter -->FB [2012-06-08 Fri 23:23]            :TWEET:NS:
+CLOSED: [2012-06-08 Fri 23:24]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-08 Fri 23:24]
+:END:
+According to http://engt.co/LefuqD, posts to #Twitter can get cross-posted to #Facebook with hash tag linking and other goodies
+******* DONE Kindle Giftbox [2012-06-08 Fri 23:59]           :TWEET:NS:
+CLOSED: [2012-06-09 Sat 00:02]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-09 Sat 00:02]
+:END:
+I guess
+ the marriage of #Google #Android and #Amazon #Fire deserves the coolest gift box for a piece of electronics http://bit.ly/LehwqJ
+***** 2012-06-09 Saturday
+******* DONE Twitter --> FB for real [2012-06-09 Sat 12:18]  :TWEET:NS:
+CLOSED: [2012-06-09 Sat 12:19]
+:LOGBOOK:
+- State "DONE"       from "POST"       [2012-06-09 Sat 12:19]
+:END:
+Looks like http://bit.ly/NoQnGj took a day but is up and running today. #facebook #twitter

@@ -1,0 +1,47 @@
+#+BEGIN_HTML
+
+---
+layout:         page
+title:          "Skills"
+date:           2012-05-20 22:41
+comments:       true
+sharing:        true
+footer:         true
+published:      false
+---
+
+#+END_HTML
+
+#+MACRO: accordion-begin        #+HTML: <div id="$1">
+#+MACRO: accordion-end          #+HTML: </p></div> </div> <!-- $1 --> <p class="ignore-me" style="display:none;">
+#+MACRO: accordion-init         #+HTML: <script type="text/javascript">$(function() {$("#$1").accordion({active: false, event: 'mouseover', collapsible: true});});</script>
+#+MACRO: jquery-first-tab       #+HTML:<h$1><a href='#'>$2</a></h$1><div>
+#+MACRO: jquery-tab             #+HTML: </div><h$1><a href='#'>$2</a></h$1><div>
+
+#+HTML:    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>    <script src="http://code.jquery.com/ui/1.8.20/jquery-ui.min.js" type="text/javascript"></script>    <script src="http://jquery-ui.googlecode.com/svn/tags/latest/external/jquery.bgiframe-2.1.2.js" type="text/javascript"></script>    <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/minified/i18n/jquery-ui-i18n.min.js" type="text/javascript"></script>
+
+* My Skills
+{{{accordion-begin(myaccordion)}}}
+{{{jquery-first-tab(2,Programming Languages)}}}
+- Java
+- C++
+- C
+- Lisp
+- Scheme
+- Ruby
+{{{jquery-tab(2,Browser Programming)}}}
+- JavaScript
+- JQuery
+- Java Applets
+{{{jquery-tab(2,foo)}}}
+- something
+- something else
+- nothing
+- wait - that was something
+{{{accordion-end(myaccordion)}}}
+
+* Second top header 
+enough text already
+
+{{{accordion-init(myaccordion)}}}
+# LocalWords:  mytext myaccordion

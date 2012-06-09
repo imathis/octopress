@@ -1,0 +1,51 @@
+---
+layout:         page
+title:          "More About Me"
+date:           2012-05-17 13:24
+comments:       true
+sharing:        true
+footer:         true
+published:      false
+---
+* More About Me
+*** My Resume
+As of Thu May 17 13:35:23 2012 (-0400) I am actively looking for a contract or permanent position.  Familial obligations prevent me from relocating from the metro-Boston area. I am comfortable remotely with reasonable travel. View [[/neilsmithline][my resume]].
+
+*** Github
+See my projects on [[http://bit.ly/ygCNdO][Github]].
+
+*** LinkedIn
+Connect with me on [[http://linkd.in/KE1CZj][LinkedIn]].
+
+*** Facebook
+Read up on my personal life on [[http://on.fb.me/KE1DfP][Facebook]].
+
+*** Google+
+Read about what entertains me on [[http://bit.ly/KE1Dwc][Google+]]. This tends to be more nerdy than Facebook.
+
+*** My Bookmarks
+I keep a lot of [[/archives/2012/03/23/my_bookmark_tag_cloud][my bookmarks]] on Diigo.com.
+
+*** My Patents
+I've filed several [[/archives/2012/02/21/my_patents][patents]] related to computer science. Unfortunately, some of my patents contributed to the J2EE (JEE) API and are now being used in the [[http://bit.ly/Kk7SCx][Oracle]] [[http://bit.ly/Kk7YtF][API suit]] against [[http://bit.ly/Kk80BT][Google]]. APIs shouldn't be patentable.
+
+*** My Browser Extensions
+I've written a Firefox add-on, [[http://bit.ly/Kkbh43][AMO Up Top Version Info]], that makes finding Firefox add-ons for your browser version a little easier. By default, the Mozilla add-ons website, frequently called AMO, displays browser version compatibility only after you click on the version information box that is at the bottom of the add-on page. My add-on duplicates this information so that it is front and center.
+
+Before:
+[[/assets/screen-snapshots/AMO-Up-Top-Version-Info-Before.png]]
+
+After:
+[[/assets/screen-snapshots/AMO-Up-Top-Version-Info-After.png]]
+
+Being that [[http://bit.ly/Kkbh43][AMO Up Top Version Info]] is a restartless add-on, you can install it in just a few seconds and then visit a page on AMO such as the [[http://bit.ly/xYcpv7][Scriptish Add-On page]].
+
+I have also written several UserScripts.  
+
+*** Contact Me
+You can contact me via email at this address [[/assets/email-images/blog-neilsmithline-com.png]]. You cannot copy-and-paste the address as it is an image. This prevents spam. Sorry about the hassle :-(
+
+You can also call me courtesy of [[http://bit.ly/KkfTqQ][Google Voice]]. Simply type your phone number into the widget below and click. Your phone will ring. Once you answer your phone, my phone will ring. Very cool. (One of my tenets in life is that the best gadgets are the useful and fun ones that are also happen to be free.)
+#+BEGIN_HTML
+<object type="application/x-shockwave-flash" data="https://clients4.google.com/voice/embed/webCallButton" width="230" height="85"><param name="movie" value="https://clients4.google.com/voice/embed/webCallButton" /><param name="wmode" value="transparent" /><param name="FlashVars" value="id=eea51078ff6725b038a69d0625bee1c11137b4b1&style=0" /></object>
+#+END_HTML

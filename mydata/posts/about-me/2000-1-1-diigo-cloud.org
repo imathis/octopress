@@ -1,0 +1,21 @@
+#+BEGIN_HTML
+---
+title:             "My Bookmark Tag Cloud"
+description:       "A tag cloud of my Diigo.com bookmarks."
+layout:            post
+date:              "2000-1-1 00:10"
+categories:        [about-me]
+comments:          true        
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+I happen to be partial to [[http://www.diigo.com][Diigo]]'s bookmarking facilities. I've been using it, on-and-off, for a few years. Like most bookmarking systems, Diigo allows you to tag your bookmarks and then display the tags in a cloud. Here's my tag cloud for my Diigo bookmarks.
+
+
+#+BEGIN_HTML
+<div class="diigo-tags"><div class="diigo-banner sidebar-title" style="font: bold 12px arial;margin-bottom:5px;"><a href="http://www.diigo.com"><img src="http://www.diigo.com/images/ii_blue.gif" width="16" height="16" alt="diigo"/></a> <a href="http://www.diigo.com/cloud/neilsmithline">My Diigo Tags</a></div><script type="text/javascript" src="http://www.diigo.com/tools/tagrolls_script/neilsmithline?icon;size=15-36;color=cccccc-000000;title=My%20Diigo%20Tags;name;showadd;v=3"></script>
+
+<br/>
+#+END_HTML

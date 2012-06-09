@@ -1,0 +1,49 @@
+#+BEGIN_HTML
+---
+title:             "Blackberry's Manufacturer RIM Nearly RIP"
+description:       "While not there yet, the time seems to be quickly approaching for RIM to get acquired or go just go close up shop."
+layout:            post
+date:              2012-03-31 Sat 20:35
+categories:        [tech, litigious-trio, mobile, smartphones]
+comments:          true        
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+*RIM No Longer A Viable Company*
+
+[[http://bit.ly/HAtKtt][RIM]], arguably the manufacturer of the first successful smartphone, the [[http://bit.ly/HAub73][Blackberry]], has not only lost its market lead, but is facing a rather unpredictable future. RIM's new CEO, [[http://bit.ly/HAuOO6][Thorsten Heins]], [[http://www.washingtonpost.com/business/rim-charts-risky-survival-plan-while-opening-door-to-sale/2012/03/31/gIQAJYZRnS_story.html?tid=pm_business_pop][has stated]] that RIM is open to acquisition. At least for the short-term, his statements have led to a one-day, 5% bounce back of the stock price which was down 70% in the 12 months.
+
+*RIM's History*
+
+For those of you that are unaware of RIM's history, it got its start in [[http://en.wikipedia.org/wiki/Canada][Canada]] as a [[http://bit.ly/H9vfx5][2-way pager]] provider. In 1999, RIM moved into the smartphone market with its first Blackberry and immediately achieved market dominance. 
+
+#+HTML: <!-- more -->
+
+Factors that led to their dominance included:
+  - Intelligent Marketing: One example was a giving away pre-1.0 Blackberries to attendees of the 1999 [[http://en.wikipedia.org/wiki/JavaOne][JavaOne]] conference. I imagine that there wasn't a better set of [[http://en.wikipedia.org/wiki/Software_release_life_cycle#Beta][beta testers]] than the gadget geeks that attended JavaOne (myself include). 
+  - Sales Channels: RIM was selling its 2-way pagers to professionals who had a need to be in constant communication such as doctors, attorneys, business executives, and law enforcement. With the introduction of the Blackberry, RIM just added a better product to offer those same professionals. Sure it was more expensive, but 2-way pagers were already fairly costly. They were the perfect audience to market smartphones to.
+  - First To Market: In 1999, most mobile providers were focused on upgrading their networks from analog to digital. Once the digital networks were in place, new functionality such as internet access would be easy to providing. But upgrading networks takes time. It involves men climbing towers, FCC regulations, local zoning laws, etc. But RIM didn't have to do this.
+
+*RIM's Brilliance*
+
+In what I consider a spectacular marketing and technological move, RIM started providing internet service over their existing 2-way pager network. While only a short-term solution as the 2-way pager network was designed for low-bandwidth usage, it was instantaneous. The first Blackberry was basically a 2-way pager with a good sized screen and full QWERTY keyboard. 
+
+*What Went Wrong*
+
+RIM's mistake was that they didn't learn from prior boom-to-bust technology companies. RIM seems to have perfectly followed the (mis)steps of Digital Electronics. While IBM has survived, it lost its market dominance in a sector, twice. The first time as a manufacture of mainframes in the 1970's and then again as a PC manufacturer in the 1980's. Apollo Computers, SGI, Xerox, all leaders at one time, are either gone or no longer of interest. 
+
+All of these companies suffered from a similar set of mistakes including:
+- Overconfidence: Each company thought that they were invulnerable. IBM is perhaps the best example. In the 1970's, when an IT manager had to make a decision about what gigantic computer to buy, they often said "Nobody ever got fired for choosing IBM.". 
+- Lack of Foresight: Technology and markets change and so too must your company. Clearly RIM, along with its arch-rival Palm, both missed the boat. Phones went from being personal communication devices to be tiny, fit-in-your-pocket, computers. 
+- Unwillingness to Self-Cannibalize: In order to stay ahead of the technology market, you must be willing to come out with products that are better and cheaper than your existing products. HP and Goodyear are two companies that get this. Within a product line, HP routinely comes out with a better and cheaper printer than the one they currently have on the market. They know that it is going to kill sales of their existing printer. But HP also knows that when their customers need a new printer, it will be an HP printer. I know that Goodyear isn't considered a technology company, but their product, tires, involve high-tech materials and manufacturing processes. The CEO of Goodyear once asked how do you keep a company in business when you know that your next product is going to be cheaper, better, and last longer than your current product? While I think that HP and Goodyear would both prefer to keep selling their old products, they know better. It seems RIM didn't.
+
+*The Final Outcome*
+
+In the end, RIM, the makers of the Blackberry that was a status symbol for business executives in the 1990's, has all but been put out of business by Apple, a waning computer company in 1990, and Google, a non-existent company in 1990. 
+
+The trick to surviving in the high-tech marketplace is simple. All you need to do is realize that your market share is never safe, that there is always another company working on something that is better than what you have, and that you must act if you are fighting for your life, all-day, everyday. 
+
+
+

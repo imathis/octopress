@@ -1,0 +1,43 @@
+#+BEGIN_HTML
+---
+title:             "Blog In A Box (actually, a repo)"
+description:       "A description of how I will, hopefully, evolve my blogging technology into an easily distributable single Git repository."
+date:              "2012-02-15 Wed 22:54:25"
+layout:            post
+categories:        [tech, blogging-tech, nanoblogger]
+comments:          true          
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+As I have been developing my blog's technology, I have been surprised at the lack of a pre-packaged [[http://en.wikipedia.org/wiki/Blog][blogging]] solution for [[http://www.gnu.org/software/emacs/][Emacs]]' [[http://orgmode.org/][Org Mode]]. Org Mode is simply a wonderful tool for organizing thoughts, ideas, text, links, etc... While Org Mode has a rather difficult learning curve, its motto, /Your life in plain text./, seems to be accurate.
+
+Spurred by ideas from [[http://decafbad.com][0xDECAFBAD.com]] and code from [[http://nanoblogger.sourceforge.net/][NanoBlogger]] (NB), I've gone about creating an Org Mode-based blogging system. And, if you are reading this, it is actually working. While NB and Org Mode do all the heavy lifting, I've simply added some glue to hook them together. What I have is far from a perfect solution, but it seems to work pretty well. 
+#+HTML: <!-- more -->
+
+There is a bit of a UI problem in that the Org Mode editing has a general look-and-feel like that seems like a typical Org Mode editor with a NanoBlogger posting jammed in. That's not surprising as, to save development time, I've basically just jammed a NanoBlogger posting into an Org Mode buffer.
+
+The other problem that I have with the system is that there is no way to automatically detect the difference between postings that have been published and those that have not published (ie: drafts). Unless you take extra care when publishing your blog, all postings, whether or not they are drafts, will be posted.
+
+Once I've fixed these two problems I will have a simple but reasonably functional blog system. By "simple" I mean that it is based off of NanoBlogger, a minimal blogging platform. That being said, the [[http://nanoblogger.sourceforge.net/][goals]] of NB are simple goals compared to most blogging systems. If you want a richer blogging system then NB isn't for you.
+
+The /glue/ that I've written to connect NB with Org Mode is a shell script and some [[http://en.wikipedia.org/wiki/Elisp][elisp]] code. Combined they are only a few hundred lines of extensively-commented code. The entire NanoBlogger installation, living up to its name, is only 844K. 
+
+Being that NB is so very compact, my shell scripts and elisp code are small, everything is in plain text files, and that [[http://github.com][Github]] provides simple and free hosting of both the blogging system and the blog, I'm going to merge my entire blogging system, minus Emacs, with my blog and put it into a single Github repository. 
+
+Once that is done, anyone who wants to try my blogging technology should only have to do a few simple steps:
+  # Fork my blog to their own Github repository.
+  # Clone their copy of my blog to their computer.
+  # Delete my blog postings (I'm assuming people will want to create their own postings and not republish mine).
+  # Run emacs and load the single elisp glue file I've created.
+  # Start blogging.
+
+I believe that it will take less than 10 minutes to get a blog up-and-running. That is longer than it takes to get a hosted blog on [[http://www.blogger.com][Blogger]] but much, much faster than most self-hosted mechanisms such as [[http://www.movabletype.com/][MovableType]]. The only prerequisites for this blogging system are
+  - Bash and the other common shell script utilities that are required by NanoBlogger such as sed and awk.
+  - A reasonably modern GNU Emacs. It comes with Org Mode pre-installed.
+  - The /git/ command-line program.
+
+Being that this blogging system is only aimed at Emacs users, it is certain that they'll have Emacs already installed on their machine. It is also very likely that they'll have bash and the shell script utilities. Maybe they'll have git or maybe they'll need to install it. It is a simple installation.
+
+There is no need to install a local web server for staging. Provided you have versions from this decade, there is no need to ensure you have the right version of any of this software. Managing versions of installed software can be a major pain for many systems (eg: Python based-apps). You also have full access to your blog's data without having to export anything (everything is already in plain text files) or provide a credit card (Github is free).

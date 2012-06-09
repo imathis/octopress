@@ -1,0 +1,63 @@
+#+BEGIN_HTML
+---
+title:             "New NanoBlogger Command-Line"
+description:       "I've written a nearly-complete, new CLI for NanoBlogger, the technology behind this blog."
+date:              "2012-02-14 Tue 13:13:34"
+layout:            post
+categories:        [tech, blogging-tech, nanoblogger]
+comments:          true          
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+As I've discussed in previous [[http://www.neilsmithline.com/archives/blog][postings about this blog's technology]], this is a static blog written with NanoBlogger. NanoBlogger is a [[http://en.wikipedia.org/wiki/Command-line_interface][CLI]] driven blogging system. Alas, I have found the [[http://nanoblogger.sourceforge.net/docs/nanoblogger.html][NanoBlogger manual]] to be difficult to follow and the syntax of the CLI to be non-intuitive. (See the footnote [[https://github.com/Neil-Smithline/nbc][here]] regarding the existing CLI.) On the upside, NanoBlogger is a CLI system which makes it easy to modify. 
+
+I started out with a few small helper scripts, eventually merging them into a single helper script. As I was using that script and learning more about NanoBlogger, I found myself writing smaller helper scripts for my big helper script. Eventually, I was never calling my original, large helper script directly.
+#+HTML: <!-- more -->
+
+At this point it became clear that some refactoring was needed. So I refactored. I came up with a single shell script call /nbc.sh/ that does all the work and a series of shell scripts that simply call nbc.sh.
+
+The key idea behind nbc.sh, or simply /nbc/, is that the scripts that call it are trivial. By "trivial" I mean that each script is only a few lines long, all the side scripts have identical content, and, if not for the semantics of [[http://en.wikipedia.org/wiki/Git_%28software%29][Git]], would simply be multiple symbolic links to the same program.
+
+As you can see below, the code for the side scripts simply stores the command name, /$0/, of the side script that was called and then calls the /nbc.sh/ script that is in the same directory as the side script. 
+#+BEGIN_EXAMPLE
+#!/bin/sh
+
+# Code to load include file.
+ORIG_ARG_0="$0"
+NBDIR=${0%/*}
+. ${NBDIR}/nbc.sh
+#+END_EXAMPLE
+This means that as I continue to add functionality to nbc, all I need to do is copy one of the side scripts to the filename of the new command I added. 
+
+While I won't discuss the exact naming scheme used for these side scripts in detail in this posting, I will say that I have tried to systematic in how the scripts are named. Once you learn a few abbreviations (eg: "e" for "Entry" or "Entries", "u" for "Update") and the rules for combining those abbreviations (standard [[http://en.wikipedia.org/wiki/Reverse_Polish_Notation][RPN]]), you will know the names of all the commands, what each command does, and the type and order of arguments each command takes.
+
+I still need to write richer documentation for nbc and its side scripts, but I can finish this posting off with some concrete examples.
+
+NB supports an "update" command that essentially tells NB to rebuild the blog from scratch. The syntax of this command is:
+#+BEGIN_EXAMPLE
+nb update
+#+END_EXAMPLE
+My nbc version of this command is:
+#+BEGIN_EXAMPLE
+nbu
+#+END_EXAMPLE
+All of the commands for nbc start with the letters "nb". The letter "U" is the abbreviation for "Update". So "nbu" tells nb to run the update command. As I said, the code for nbu and the other side scripts are trivial and given above. As far as examples go, nbu is not very exciting. But the nbc's CLI for creating tags is a bit more exciting.
+
+NB's syntax for creating tags, as documented in its manual, is:
+#+BEGIN_EXAMPLE
+nb --title <tag-name> add tag
+#+END_EXAMPLE
+Gosh! That's both tough to remember and tough to type. In nbc, the command for adding a tag is /nbga/. All commands start with "nb". After that, the "g" means that we are talking about "taGs". The "a" stands for "Add". The syntax for the command is 
+#+BEGIN_EXAMPLE bash
+nbga <tag list>
+#+END_EXAMPLE
+
+Besides being much easier to type and remember, it allows a tag list as compared to a single tag name. That is, you can create multiple tags in a single command rather than needing to call nb once for each new tag.
+
+In NBC, a tag list is a comma-separated list of one or more tag names. So "tag1" is a tag list and "tag1,tag2,tag3" is also a tag list. If you prefer you can space-separate the tag list but you need to ensure that you pass the entire tag list as the first argument to nbga. 
+
+As the operations become more complex, NBC's simplifications become greater and more obvious. My next posting about NBC will discuss some of these simplifications.
+
+If you wish to use NBC, look at the source code, or tell me why NBC sucks, you can get the scripts at https://github.com/Neil-Smithline/nbc.

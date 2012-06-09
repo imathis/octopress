@@ -1,0 +1,30 @@
+
+#+BEGIN_HTML
+---
+title:             "Cloud Computing: How Expensive Is A Rainy Day?"
+description:       "How do you calculate the cost of your cloud's outages? "
+layout:            post
+date:              2012-02-29 Wed 11:42:35
+categories:        [tech, cloud-computing]
+comments:          true        
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+According to [[http://bit.ly/zc1OOr][The Register]] (via [[http://bit.ly/wzufGC][Slashdot]]), Microsoft's cloud computing platform, Azure, has been down, and I mean [[http://dictionary.reference.com/browse/kaput][kaput]], for 8+ hours. Worse yet, Azure's status page that tells its customers about outages and expected repair times, to which I won't provide a link, has now been [[http://en.wikipedia.org/wiki/Slashdotted][Slashdotted]] and is down.
+
+Less than a year ago, [[http://bit.ly/Ay7loE][AWS]] suffered a significant, though less serious, [[http://bit.ly/yNzqJy][outage]].
+
+While highly-distributed, cloud-based computing is clearly the future of IT, how can an organization understand the costs and prepare for the unavoidable outages? With the relative newness of 3^rd party cloud services, what statistics are useful.
+#+HTML: <!-- more -->
+
+For example, let's consider a fictitious service cloud service Neil's Cloud Computing or NCC. NCC is a more established cloud computing service. Its detailed records shows that it has been open for 1,701 days (approximately 4.7 years). In that time it has steadily grown to here it now runs tens of millions of instances of virtual computers, services tens of billions requests each day, and has never had a serious outage. 
+
+To be generous, let's define a /serious outage/ as any outage that renders key parts of the site unusable to a significant portion of the site's users and lasts a minimum of five minutes. We'll consider any outage less than that a /tolerable outage/. 
+
+Even with all of this information, how can you calculate the cost of moving your enterprise to a cloud computing platform in general or NCC's in specific (let's assume that NCC is the best service you can find - after all, it is named after me). Even if your is willing to ignore all costs associated with the generously named /tolerable outages/, how can you know NCC's 1,701 days of uptime mean that it will have another 4.7 years of uptime? How can you know it will be up tomorrow?
+
+The answer is simple: You can't! Just as it says on the bottom of financial documents, past performance is no guarantee of future results.
+
+But, when it comes to managing an enterprise, "can't" means things like "can't go faster than the speed of light". Everything else is just "How much?". How much does our current IT solution cost? How much would a cloud computing solution cost? How much do our current outages cost us? What are the odds of having a /serious outage/ if we moved to the cloud and how much would that cost us? Etc...

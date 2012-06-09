@@ -1,0 +1,25 @@
+#+BEGIN_HTML
+---
+title:             "Automated Gvoice And Gmail To Gcal"
+description:       "Read about my reminder system that creates calendar reminders for my Gvoice calls and texts."
+layout:            post
+date:              2012-03-31 Sat 16:14
+description:       [tech, cloud-computing, coding, organization]
+comments:          true        
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+I seem able to hold incredibly large amounts of technical details in my head. In contrast to this, I'm excited when I can remember what year my kids were born in. From my viewpoint, this is just the way I have always been. From the viewpoint of people in my personal life, it can be frustrating.
+
+Being the technophile that I am, I've incorporated many electronic assistive technologies into my life. In 1989 I got my first [[http://en.wikipedia.org/wiki/Personal_digital_assistant][PDA]]. It was about the size and weight of a half-brick. But I could carry it wherever I went and it would ring to remind me to do things. What a deal!
+
+My newest electronic assistive technology is a rather complete phone and SMS management system. Its features are:
+  - I have a permanent record of every incoming or outgoing call or SMS.
+  - My mobile phone rings whenever I get an incoming call or SMS.
+  - My home phone rings whenever I get a call.
+  - My mobile rings and gives me a notification whenever I get a call or SMS.
+  - My computer rings and gives me a pop-up whenever I get a call or SMS.
+
+/This blog entry is unfinished. It will be updated or followed up with a second blog entry shortly./

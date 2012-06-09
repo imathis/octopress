@@ -1,0 +1,48 @@
+#+BEGIN_HTML
+
+---
+layout:         page
+title:          "Personal Motivations"
+date:           2012-05-24 09:11
+comments:       true
+sharing:        true
+footer:         true
+published:      false
+---
+
+#+END_HTML
+
+In both my professional and personal life I tend to have major motivators. Of course I have other motivators, as well as de-motivators, but these two are the primary ones.
+
+*** Efficiency
+I am an efficiency fanatic. This is both professionally and personally, virtually and non-virtually. I like tools, gadgets, strategies, systems, etc... that simplify my life. While I am a gadget fanatic, I see a clear line between accomplishing goals and playing.
+
+An example from my personal life is my smartphone. It is a key tool in keeping my life organized. It allows me to store and look up information, read email, and, most importantly, set reminders. In short, I feel that the PDA-ish functionality of my smartphone is a requirement. As such, I've been carrying a PDA since 1985 (it was about the size and weight of a brick).
+
+The above not withstanding, my PDA clearly has "toy" features. Besides having games on it, it also has several scripting languages, music, ebooks, programs to tweak he phone's behavior, and other things that I don't really need but certainly enjoy.
+
+One way that my drive for efficiency is exhibited in my professional life is my desire for clean interfaces and designs. When I work on an application I try to consciously be aware that the application will (hopefully) have a lifetime longer than the next release. As such I like modularization, clean APIs between components, etc... 
+
+This desire for a tidy implementation is countered by the realization that sometimes more is less. Unless there is a need to create a new object system, why not use one that already exists? Writing a new object system may be fun, but unless it is required, it must be viewed as fun and not work.
+
+*** Curiosity
+Frequently, to the dismay of people who don't have answers, I am quite curious. I think that, rather than curiosity, saying I have "an ongoing quest for knowledge" is more accurate. I seek learning experiences in both my personal and professional life. Professionally, this has served me well. In the tech industry, you are either learning or falling behind.
+
+Fortunately for me, technology is my profession as well as one of my favorite past times. People who don't know me well are always amazed when I tell them that on of my hobbies is writing software. It is hard to explain to non-techies that some of the software I write is clearly work while other software is clearly play. 
+
+*** An Example
+The technology behind this blog is typical both my desire to maximize my productivity as well as my desire to continue learning.
+
+For example, this blog is
+   - A Jekyll blog, something I didn't even know existed a year ago.
+   - Hosted on Github, something I was aware of but hadn't really used in the past year.
+   - I composed this blog in Org Mode, an authoring system built on GNU Emacs. Another new technology for me.
+   - Some pages of this blog have been augmented with JQuery. Being that JQuery, which is just fancy JavaScript, doesn't integrate well with markup languages such as Org Mode, I've written a few Org Mode macros to 
+
+Despite this array of technologies, all of which I've learned in the past year or so, this system has virtually no overhead. This way I can spend my time writing content and not monkeying around with the technologies. 
+
+Not every project I undertook was successful. For example, I dedicated large quantity of my time working on my blog technology only to end up switching blogging technologies. If you're interested, I blogged about these @<a href="{{ root_url }}blog/categories/blogging-tech" title="Blog postings about my blogging technology">ups-and-downs@</a>.
+
+<!--
+# LocalWords:  ish
+-->

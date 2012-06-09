@@ -1,0 +1,108 @@
+#+BEGIN_HTML
+
+---
+layout:         page
+title:          "Portfolio"
+date:           2012-05-21 15:29
+comments:       true
+sharing:        true
+footer:         true
+published:      false
+---
+
+#+END_HTML
+
+#+MACRO: accordion-init         #+HTML: <script type="text/javascript">$(function() {$("#$1").accordion({collapsible: true, autoHeight: false});});</script>
+#+MACRO: accordion-begin        #+HTML: <div id="$1">
+#+MACRO: accordion-end          #+HTML: </div> <!-- jquery-tab --> </div> <!-- $1 --> 
+#+MACRO: jquery-first-tab       #+HTML: <h$1><a href='#'>$2</a></h$1><div class="jquery-first-tab jquery-tab accordion-first-tab accordion-tab">
+#+MACRO: jquery-tab             #+HTML: </div> <br/><br/><!-- jquery-tab --><h$1><a href='#'>$2</a></h$1><div class="jquery-tab accordion-tab">
+#+MACRO: jquery-header          #+HTML: <h$1 style="margin-bottom: 0;">$2</h$1>
+
+#+MACRO: relative_link          @<a href="{{ root_url }}$1" title="$2">$3@</a>
+#+MACRO: absolute_link          @<a href="$1" title="$2">$3@</a>
+#+MACRO: language_start         *Languages Used: *
+#+MACRO: language_end           .@<br/>@<br/>
+#+MACRO: language               /$1/
+
+#+HTML:    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>    <script src="http://code.jquery.com/ui/1.8.20/jquery-ui.min.js" type="text/javascript"></script>    <script src="http://jquery-ui.googlecode.com/svn/tags/latest/external/jquery.bgiframe-2.1.2.js" type="text/javascript"></script>    <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/minified/i18n/jquery-ui-i18n.min.js" type="text/javascript"></script>
+
+{{{accordion-begin(myaccordion)}}}
+
+{{{jquery-first-tab(3,Overview)}}}
+This page contains a sampling of some of the open-source projects I have contributed to or written from scratch since February 2011.
+
+{{{jquery-tab(3,Choice Of Projects)}}} 
+There were two primary reasons that led me to choose to work on these projects.
+
+The first reason is my desire to be more efficient. This can be seen throughout my virtual and non-virtual lives as well as my personal and professional life. 
+
+A second motivation that permeates my life is "curiosity" or, perhaps better, "an ongoing quest for knowledge". To facilitate this, I chose projects that would force me to learn a new language, a new platform, a new protocol, etc...
+
+For example, the page you are reading is:
+  - A page in a Jekyll blog
+  - Part of a blog that is hosted on Github
+  - Was written using Org Mode
+  - Uses JQuery via custom-written Org Mode macros
+
+Despite this array of technologies, all of which I've learned in the past year or so, this system has virtually no overhead. This way I can spend my time writing content and not monkeying around with the technologies. 
+
+Not every project I undertook was successful. For example, I dedicated a large quantity of my time working on my blog technology only to end up switching blogging technologies. If you're interested, I blogged about these @<a href="{{ root_url }}blog/categories/blogging-tech" title="Blog postings about my blogging technology">ups-and-downs@</a>.
+
+{{{jquery-tab(3,Technologies Used)}}}
+
+This is a list of technologies that I have used, some to a greater than othersextent, during the course of working on these projects. Technologies marked with an asterisk (*) are technologies that I had no exposure to prior to February 2011.
+
+- [[http://bit.ly/KfsaP3][JavaScript]]
+- [[http://bit.ly/KfsgpG][Elisp]] including [[http://bit.ly/KfswFn][GNU Emacs]]' [[http://bit.ly/KfstJB][Common Lisp]] extensions and [[http://bit.ly/KqF65A][Org Mode]]*
+- [[http://bit.ly/KfsCg4][Python]]*
+- [[http://bit.ly/KfsCg4][Ruby]]*
+- [[http://en.wikipedia.org/wiki/Lua_%28programming_language%29][Lua]]*
+- [[http://bit.ly/II0Tpm][Bash]]
+- [[http://bit.ly/KfuNQQ][Ubuntu]] (and [[http://bit.ly/wC6y67][Linux]] in general)
+- [[http://bit.ly/Kfv0n2][Mac OS X]]
+- [[http://bit.ly/Kfv4mR][IMAP]]*
+- Google's [[http://bit.ly/IQMgvI][IMAP extensions]]*
+- [[http://bit.ly/KqEPQf][Firefox]]*
+- [[http://bit.ly/KqFSzD][JQuery]]*
+- [[http://bit.ly/KqIGNb][Github]]*
+- [[http://bit.ly/JetyoE][Jekyll]]*
+
+{{{jquery-tab(3,My Projects)}}}
+
+
+***** AMO Up TopFirefox Add-On
+@<a href="{{ root_url }}portfolio/firefox-add-on" title="More about my Firefox add-on">Read More@</a>
+
+
+***** UserScripts
+ [[./userscripts][Read More]
+
+
+***** IMAPFilter
+
+This section is still under construction.
+
+***** Gmail2Gcal
+ [[./gmail2gcal][Read More]
+
+***** JQuery
+
+This section is still under construction though the accordion effects used on this page are a simple sample of JQuery usage.
+
+***** Org-Ruby Gem
+
+This section is still under construction.
+
+***** Emacs Utilities
+
+This section is still under construction.
+
+***** My Blog
+
+This section is still under construction.
+
+{{{accordion-end(myaccordion)}}}
+{{{accordion-init(myaccordion)}}}
+
+# LocalWords:  myaccordion

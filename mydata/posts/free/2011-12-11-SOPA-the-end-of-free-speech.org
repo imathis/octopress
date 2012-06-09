@@ -1,0 +1,99 @@
+#+BEGIN_HTML
+---
+title:             "SOPA: The End Of Free Speech"
+layout:            post
+date:              "Sun Dec 11 00:31:05 EST 2011"
+description:       "Two bills are snaking their way through congress that will effectively end free speech on the internet."
+categories:        [free-speech]
+comments:          true         
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+ 
+[[https://wfc2.wiredforchange.com/o/9042/p/dia/action/public/?action_KEY=8173][SOPA]], and its sister bill PROTECT-IP, are currently making their way
+through congress. I have pointers to some of the excellent sources of
+information on the bills at the end of this article.
+
+While the magnitude of these bills is staggering, this posting focuses
+on how the passage of these bills will dramatically remove the ability
+of individuals to produce and share content on the internet.
+
+While I favor reasonable enforcement and punishment of internet-based
+crimes, these bills introduce the concepts of:
+- *Guilty until proven innocent* 
+- *Guilty by association* 
+- *Whoopsy daisy legal recourse* that restricts damages (eg: going bankrupt) due to abuse of SOPA to
+  "s--- happens" response.
+
+into American law. At least to me, those concepts don't seem very
+"American".
+#+HTML: <!-- more -->
+
+The problems with this bill can best be demonstrated by a simple
+example. Let us use the consider a fictitious, non-profit website run
+by a couple of friends that is focused on internet freedom. The
+website is called /Big Brother, Back-off and Stop-It!/ with the URL
+BBBandS.org.
+
+If this bill is passed, /Big Brothers Big Sisters/ (http://bbbs.org)
+could simply write a letter to search engines such as Google, content
+distributors such as Facebook, and payment companies such as Paypal,
+claiming that they feel BBBandS.org is infringing on their /domain
+name/. Once this is done, /each/ search, content, and payment provider
+must contact BBBandS.org (remember that BBBandS.org is a couple of
+friends working out of their garage).
+
+BBBandS.org must reply to each and every provider explaining why they
+do not feel that BBBandS.org is infringing on BBBS.org's /domain
+name/. It seems clear that BBBandS.org could not accomplish this task
+in a timely fashion.
+
+For each company that BBBandS.org does not manage to provide a
+credible counterclaim to (where /credible/ is determined by the
+search, content, and payment provider companies), a fairly mechanical
+process will begin where federal courts will execute a /cease and
+desist/ to each search, content, or payment service provider
+informing them that they must stop servicing BBBandS.org.
+
+*Guilty until proven innocent:* Note that the
+simple lack of a timely response to sufficient to, by means of a
+judicial /cease and
+desist/ order, force search, and payment providers to
+become legally and financially liable if they continue to do business
+with BBBandS.org. 
+
+*Guilty by association:* Whether a service provider agrees or disagrees
+with the order, they can be held accountable if they do not "block
+access to or end financial affiliation" with BBBandS.org.
+
+To add insult to injury, the bill goes on to provide "immunity from
+liability for service providers" that follow a /cease and desist/
+order, causing clear economic harm to BBBandS.org, *even* if it is
+eventually determined that there was no infringement.
+
+*Whoopsy daisy legal recourse*: Should the /cease and desist/ order
+be determined to be incorrect via a legal process that may take years
+and cost more money than most people will ever have, this bill
+restricts BBBandS.org's legal recourse to accepting the apologies of
+the US judicial system.
+
+While I am in favor of what the bill claims to be protecting, this
+bill proposes far too high a price to pay for that protection.
+
+If you care about the rights of small organizations (eg: people like you), please:
+  - Read an excellent summary of SOPA in this [[https://wfc2.wiredforchange.com/o/9042/p/dia/action/public/?action_KEY=8173][article]]. Keep in mind
+    that the reason that the article seems ludicrous, insane, and
+    unbelievable is because it is accurately reflecting the proposed
+    legislation.
+  - Google /SOPA/ or /PROTECT-IP/.
+  - Take action via Mozilla's page [[http://bit.ly/tvIpE3][focused on this issue]].
+  - Take action via the [[https://wfc2.wiredforchange.com/o/9042/p/dia/action/public/?action_KEY=8173][EFF]].
+  - Contact your legislator using [[http://bit.ly/s0I5me][this]] [[OpenCongress.org]] page (takes
+    only a minute or so).
+  - Discuss this issue with everyone you know.
+  - Discuss this issue with people you don't know. I recommend "So what do you think
+    about SOPA?" as a pick-up line though I encourage creativity and
+    individualism as to the exact wording.
+  - Post a copy or a link to one or more articles on SOPA everywhere
+    you can.

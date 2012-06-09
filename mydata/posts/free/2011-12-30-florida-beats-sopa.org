@@ -1,0 +1,36 @@
+#+BEGIN_HTML
+---
+title:             "Florida Appeals Court More Liberal Than SOPA!"
+description:       "A recent decision by the Florida appeals court will be reversed should SOPA/ProtectIP be passed."
+date:              "2011-12-30 Fri 12:26:33"
+layout:            post
+categories:        [free-speech]
+comments:          true         
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+Earlier this week, the Florida appeals court made a ruling that even the poster of a defamatory posting on a public website could not force a website to remove the posting. While most sites allow you to remove your own postings, [[http://www.ripoffreport.com/][RipoffReport.com]], the site involved in this ruling, states that as an advocate of free speech, it never removes reports. This is clearly stated at the top of their home page and documented extensively on their [[http://en.wikipedia.org/wiki/Ripoff_Report#Non-removal_Policy][Wikipedia page]]. 
+#+HTML: <!-- more -->
+ 
+While not allowing the poster to remove or have removed a posting seems extreme, the site claims that it wishes to remain unbiased. As such, it makes no judgment calls about its content. Everything that is appropriate for the site will stay on the site, forever. RipoffReport.com is afraid that posters may be pressured by 3^rd-parties to remove articles. As such, They are simply not allowed to.
+
+While postings are never removed, the site allows anyone to post a [[http://en.wikipedia.org/wiki/Rebuttal][rebuttal]] to any posting. A poster can use this mechanism to retract their initial statement. 
+
+The court ruled that RipoffReport.com could neither be held liable for the defamatory posting nor be forced to remove it. The bottom line of all of this is that
+
+#+BEGIN_CENTER
+The supreme court of Florida, a [[http://www.gallup.com/poll/125066/State-States.aspx][middle-of-the-road state]], was willing to make a controversial ruling favored many aspects of freedom of speech. If SOPA is passed, cases like this won't even make it to courts as SOPA make it clear that if a ruling is defamatory, it is illegal.
+#+END_CENTER
+
+While Congress has delayed voting on SOPA for another month, it is still on the docket. It is unclear what the fate of SOPA will be. 
+
+One can hope that Congress pays attention to protests such as the statement]] consumers sent to [[http://www.godaddy.com][GoDaddy]] after it announced its support of SOPA. GoDaddy announced that on a Saturday (see [[http://news.slashdot.org/story/11/12/29/2053252/wikipedia-to-dump-godaddy-over-sopa][more complete chronology]]) and then lost [[http://tech.slashdot.org/story/11/12/25/1452251/go-daddy-loses-over-21000-domains-in-one-daylosing][21K domains]] on the next day. More recently, the [[http://news.slashdot.org/story/11/12/29/2053252/wikipedia-to-dump-godaddy-over-sopa][Wikipedia announced it would discontinue all use of GoDaddy]]. 
+
+Let's continue to hope that advocates of free speech, including you (see [[id:06BB29E4-D6B3-430E-B5A3-FDC6716A0ED3][SOPA: The End Of Free Speech]] for instructions as to how to help), continue to pressure our government into sane activit
+
+Copied directly from the [[http://www.slashdot.org][Slashdot]] [[http://bit.ly/vVVDLC][article]]:
+#+BEGIN_QUOTE
+[[http://www.ripoffreport.com/][RipoffReport.com]] contained an admittedly defamatory posting, by one of its users, about a person who operated a Florida corporation providing addiction treatment services. Although the site was asked by the poster herself to remove the post, it refused. A Florida appeals court has ruled that the site is absolutely immune from suit ([[http://recordingindustryvspeople.blogspot.com/2011/12/florida-appeals-court-rules.html][pdf]]), and cannot even be directed to remove the offending post, since under the [[http://www.law.cornell.edu/uscode/html/uscode47/usc_sec_47_00000230----000-.html][Communications Decency Act (47 USC 230)] 'no cause of action may be brought' against a provider of an "interactive computer service" based upon information provided by a 3rd party.
+#+END_QUOTE

@@ -1,0 +1,34 @@
+#+BEGIN_HTML
+---
+title:             "Got Tags Working Manually"
+layout:            post
+date:              "Sat Dec 10 20:09:57 EST 2011"
+description:       "Quick follow-up"
+categories:        [blogging-tech, tech, nanoblogger]
+comments:          true          
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+ 
+[[http://nanoblogger.sourceforge.net][NanoBlogger]] supports [[http://en.wikipedia.org/wiki/Tag_%28metadata%29][tags]]. While they came working out of the box,
+their UI is a bit awkward. I now have it so that I can easily tag
+entries with just a single command line. For example, I'll tag this
+posting by typing: 
+#+BEGIN_CODE
+nbeta about-this-blogs-tech 1
+#+END_CODE
+=nbeta= is my shell script to add tags to an entry. It seems a bit
+hard to remember but:
+|---------+-------------+----------------------------------------------|
+| Letters | Word        | Meaning                                      |
+|---------+-------------+----------------------------------------------|
+| nb      | NanoBlogger | This is a NanoBlogger command                |
+| e       | Entry       | This command will affect one or more entries |
+| t       | Tags        | Affects the tags, in this case, of entries   |
+| a       | Add         | We'll be adding tags                         |
+|---------+-------------+----------------------------------------------|
+
+=about-this-blogs-tech= is the tag name. =1= is the entry ID number.
+I'd like it to be the entry name but that isn't done yet and seems of
+lower priority as the newest entry is always entry #1.

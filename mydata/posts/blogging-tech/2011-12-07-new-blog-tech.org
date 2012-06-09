@@ -1,0 +1,33 @@
+#+BEGIN_HTML
+---
+title:             "My New Blogging Technology"
+layout:            post
+date:              "2011-12-07"
+description:       "A description of my new blogging technology and why I love it so. Happy at last."
+categories:        [tech, blogging-tech, nanoblogger]
+comments:          true          
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+ 
+My hope is that I can write this entry in [[http://www.gnu.org/s/emacs/][GNU Emacs]]' [[http://orgmode.org][Org Mode]] and have it auto-published into this [[http://www.neilsmithline.com][blog]]. If you are reading this, then I have succeeded.
+
+This is a [[http://en.wikipedia.org/wiki/Website#Static_website][static blog]]. That is, the server side is all [[http://en.wikipedia.org/wiki/HTML][HTML]]. It can be served by virtually any web server. This makes it incredibly convenient for testing and deploying. When I am writing blog entries, I'm just typing in Emacs. I then save the entries and use Org Mode plus some personalized tweaks to [[http://orgmode.org/org.html#Publishing][publish]] them to a local directory as something close to HTML.
+
+These HTMLish files are then fed into [[http://nanoblogger.sourceforge.net][NanoBlogger]]. NanoBlogger is the magic tool that turns a few HTMLish files into a fully functional website. NanoBlogger accepts HTML for the text af entries but wants some simply formatted [[http://en.wikipedia.org/wiki/Metadata][metadata]] added to the file.
+
+The Metadata is needed to help NanoBlogger out because, as its name implies, is a teeny-tiny blog engine. As a comparison, my installation of NanoBlogger is 768K (yes, that's "K"). I also have installations of Drupal at (14M) and Joomla (107M). 
+
+The [[http://en.wikipedia.org/wiki/.txt][.txt]] source for each NanoBlogger posting is a file with the body of the entry in HTML embedded but all the cruft that tends to come before and after the body of a web page is simply not there. The easiest way to get an understanding of it is to view the [[http://nanoblogger.sourceforge.net/articles/example.txt][metadata source]] for this [[http://nanoblogger.sourceforge.net/articles/example/][sample posting]].
+
+So you're saying "Big deal." or "Who needs yet another file format?" But it is a big deal. What most [[http://en.wikipedia.org/wiki/Younglings#Ranks_of_Jedi][younglings]] have never learned is that [[http://en.wikipedia.org/wiki/WYSIWYG][WYSIWYG]] is a distraction from actual content production. Content production is not the same as formatting and editing and, at least in my experience, uses very different parts of the brain. So the less formatting you do while producing content, the better your content will be (at least if you have my brain :-).
+
+While it has largely been lost with the popularization of the [[http://wikipedia.org][Wikipedia]], initially, [[http://en.wikipedia.org/wiki/Wikipedia:Cheatsheet][Wiki markup]] was intended to simplify editing but also served to separate the content production from formatting. While NanoBlogger expects these HTMLish files as input, it is designed to generate them from any number of simpler input formats.
+
+These simpler input formats are quite unlike HTML as they are, well they're simpler. The default input format is the rather famous [[http://daringfireball.net/projects/markdown/][Markdown]] though many other formats are supported by NanoBlogger or the community. This [[http://www.lifehack.org/articles/productivity/use-markdown-for-easy-web-writing.html][article]] seems to do a good job explaining the benefits of simple languages such as Markdown.
+
+It took me but a few hours to create a converter for [[http://www.gnu.org/s/emacs/][GNU Emacs]]' [[http://orgmode.org][Org Mode]] to NanoBlogger.
+
+While not nearly as [[http://en.wikipedia.org/wiki/Cool_%28aesthetic%29][cool]] as what I've discussed above NanoBlogger has yet another advantage: it produces a static site. On my local machine ([[http://support.apple.com/kb/SP546][17" MacBook Pro]]), I can view the entire site without running a [[http://en.wikipedia.org/wiki/Web_server][web server]]. I simply go to [[http://en.wikipedia.org/wiki/Web_server][Firefox]] (actually [[http://www.mozilla.org/en-US/firefox/aurora/][Firefox Aurora]]) and visit the [[http://en.wikipedia.org/wiki/URL][URL]], specifically, the [[http://en.wikipedia.org/wiki/File_url][file URL]] of my blog. For me, I visit =file://Users/neil/www-nb=, and then I can see my entire blog through the magic of a static websites, [[http://en.wikipedia.org/wiki/File_url][file URLs]], and [[http://en.wikipedia.org/wiki/Relative_URL#Absolute_and_relative_URLs][relative URLs]]. 
+

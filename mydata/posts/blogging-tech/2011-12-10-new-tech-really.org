@@ -1,0 +1,55 @@
+#+BEGIN_HTML
+---
+title:             "Seems It Really Works"
+layout:            post
+date:              "Sat Dec 10 01:27:23 2011"
+description:       "Quick follow-up to initial posting."
+categories:        [tech, blogging-tech, nanoblogger]
+comments:          true
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+ 
+Well, it appears this actually does work. I seem to be having a few
+issues integrating with [[http://nanoblogger.sourceforge.net][NanoBlogger]] but I'm sure I'll work those out.
+The problems that I've seen are:
+    1) It seems that adding or even updating a new entry is as costly
+       as rebuilding the entire blog from scratch. Right now, that's
+       OK. But what am I going to do when I have 10, or 100 postings?
+       I hope NanoBlogger can handle this.
+    2) NB seems to assume that its input files are hand-written in
+       some legacy text editor called [[http://www.vim.org][Vim]] or something :-). While my
+       strategy of using [[http://www.gnu.org/s/emacs/][GNU Emacs]]' [[http://orgmode.org][Org Mode]] keeps the flavor of NB in
+       that it is written in a simple markup language, it doesn't seem
+       to fit the NB model perfectly. There is nothing wrong with NB's
+       markup, it is just that Org Mode's markup can easily be
+       exported to virtually every other markup on the planet. So I
+       just need to learn Org Mode markup, write my content in Org
+       Mode, and then publish that data into whatever format I choose.
+       Seems a better solution but NB isn't quite prepared for it.
+    3) I would still like better integration with Org Mode and NB. The
+       steps I've used to produce this entry are:
+          - Ran a little shell script I wrote to create a new NB
+             entry. All I do is give the shell script the title of the
+             Org Mode file I want to store the new entry in and it
+             does its magic, leaving me with an Org Mode skeleton for
+             NB.
+          - Edit the Org Mode file just created.
+          - Use Org Mode to publish the entry. This just stores it in
+            my local NB folder.
+          - Run =nb update= to have my changes put into the local
+            copy of the blog.
+          - Run =nb preview= to view the changes before publishing.
+          - Run =nb publish= to update my blog.
+
+So, while they're are still some problems,  I have to say I love it.
+The advantages of using Org Mode and the simple NB blogging engine on
+both my local and production server is way cool.
+
+[[http://orgmode.org][Org Mode]] is actually way cool. I've only started using it in the past
+year and will likely spend years learning it as it supports so many
+features. But, like all well-designed pieces of software, you don't
+need to learn it all at once. I'll yabber about Org Mode another day.
+In any case, I'm real happy with my blog and the ease with which I can
+add postings to it.

@@ -1,0 +1,13 @@
+
+* Footnotes
+[2] If you're wondering, in the first half of 2011 I learned Lua, a simple extension language, and Python. I really like Python and find it fun to program in. That being said, I think it still needs some time to mature. For example, the [[http://bit.ly/LUZQU5][data model]] is incredibly flexible. I believe it is more powerful, easier, and just more fun to use than data models of most other languages. That's the "fun" part.
+
+The "needs some time to mature" part shows up in many different places of the language. For example, Python introduced the [[http://bit.ly/JBuvBM][set]] [[http://bit.ly/JBuD41][collection type]] in [[http://bit.ly/JBuFci][Python 2.3]] and deprecated it in [[http://bit.ly/JBuMo4][Python 2.6]]. The first few lines of the Python 2.7 [[http://bit.ly/JUBqfm][documentation for sets]], as least to me, seems to scream out that the language needs more time to mature. 
+
+While the =sets= confusion is a bit messy, it isn't terrible as programs that were written for Python 2.5 will continue to run in Python 2.6. [[http://bit.ly/JUCkID][Dot-releases]] should be [[http://bit.ly/x2NZom][backwards compatible]].
+
+On the other hand, I was rather shocked when I saw Python 2.6's introduction of [[http://bit.ly/JBvoKk][with]] as a new keyword. Adding a keyword to a language means that every program in that language that used the new keyword as an identifier for a variable, class, function, etc..., is suddenly broken. 
+
+Imagine having to change every use of the identifier =with= to something else. Being that it became a keyword, you must change every use of =with= before you can even begin to test your Python 2.5 application with Python 2.6. Ouch!
+
+Still, Python's a very cool language. 

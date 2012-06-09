@@ -1,0 +1,199 @@
+#+OPTIONS:      toc:nil num:nil todo:nil
+#+TITLE:        
+#+OPTIONS:      post:nil 
+
+#+STYLE: <style type="text/css"/> H2 { margin-bottom: -12px; } .outline-4 { margin-left: 20px; } .outline-3 { margin-left: 20px; } .outline-3 H3 { border-bottom: 1px solid black; margin: 10px 0px 2px 0px;} H4 { margin: 2px 0px -15px 0px;} UL { padding-left: 20px; } outline-text-4 { margin-left: 25px; } div#outline-container-4-1 { margin-top: 20px; }</style>
+
+#+BEGIN_CENTER
+#+HTML: <span style="text-align: center; font-weight: bold; font-size: 200%">Neil Smithline</span>
+#+HTML: <br/> 
+#+HTML: 831 Beacon St, Suite #255<br/>
+#+HTML: Newton Centre, MA 02459<br/>
+#+HTML: Voice: 408-634-5764&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fax: 206-666-5090
+#+HTML: <br/>
+#+HTML: (Most current resume and more information at <a href="http://www.neilsmithline.com" title="My Homepage" target="_blank">www.NeilSmithline.com</a>.)<br/>
+#+HTML:<img style="border:0; margin:0; padding:0;" src="http://www.neilsmithline.com/assets/email-images/jobs-neilsmithline-com.png" alt="jobs at my homepage domain (ie: 'NeilSmithline.com')"/></a>
+#+END_CENTER
+
+* Objective
+I am looking to add my experience and creativity to an exciting engineering team be part of a fast-paced, cutting-edge technology company.
+
+* General Skills 
+- Familiar with a wide variety of development processes including Waterfall, eXtreme Programming (XP), Agile Software Development, Unified Rational Development, etc...
+- Self-motivated starter.
+- Happy to adapt to new technology areas, utilize different development processes, and perform within a multitude of organizational structures.
+- Extensive experience interacting with a wide-range of domestic and international companies, in a diverse set of industries, varying in size from startups to [[http://www.forbes.com/global2000/list/][Global 2000 Companies]].
+- Comfortable working alone or as a member of a team, locally or remotely, as a technical lead or individual contributor.
+
+* Significant Technical Accomplishments
+- Enterprise architect: architected and cowrote WLS security framework[1].
+- Object oriented design and analysis experience including use of [[http://en.wikipedia.org/wiki/Rational_rose][Rational Rose]] and [[http://en.wikipedia.org/wiki/Borland_Together][TogetherJ/Borland Together]].
+- Application security expert including knowledge of Java security ([[http://en.wikipedia.org/wiki/J2ee][JEE/J2EE]] and [[http://en.wikipedia.org/wiki/J2ee][JSE/J2SE]]), identity management ([[http://en.wikipedia.org/wiki/Idm][IDM]]), web services security, [[http://en.wikipedia.org/wiki/SAML][SAML]], [[http://en.wikipedia.org/wiki/XACML][XACML]], [[http://en.wikipedia.org/wiki/Kerberos_(protocol)][Kerberos]], Firewalls, [[http://en.wikipedia.org/wiki/DMZ_(computing)][DMZs]], and many other technologies. Familiar with many national and international security guidelines including [[http://en.wikipedia.org/wiki/Common_criteria][Common Criteria]], Swiss and German Banking laws, security practices of dozens of the world's most secure companies and government agencies.
+- Intimately familiar with the concepts behind application servers: [[http://en.wikipedia.org/wiki/Oracle_WebLogic_Server][WebLogic Server]] expert, [[http://en.wikipedia.org/wiki/Websphere][WebSphere]], and [[http://en.wikipedia.org/wiki/Jrun][JRun]] experience.
+- Extensive experience with a variety of programming languages and operating systems. 
+
+* Employment
+*** Open Source Developer/Personal Leave, January 2011-Present
+**** Personal Leave, January 2011-Present
+- Single parent providing 24x7 care for a sick child requiring surgery and several multiday hospitalizations over 12+ months.
+- Child is currently healthy, undertaking rehab to recover from a year of bedrest, and looking for a part-time job prior to starting college in September 2012.
+- I am now  anxiously looking to return to the workplace.
+
+**** Open Source Developer, January 2011-Present
+- As time permitted, contributed and created multiple open source projects:
+  - Gmail2Gcal Notifier (live demo available [[http://bit.ly/JkCqW9][here]]): [[http://bit.ly/JkCqW9][Gmail2Gcal Notifier]] is an original project that converts Gmail messages deemed important into calendar appointments with notifications. When integrated with an Android phone, this combines Gmail filtering, immediate notification of important emails, and sophisticated calendar notification functionality  such as snooze and nags. A live demo can be found at Gmail2Gcal's [[http://bit.ly/JkCqW9][Github]] repository page. Languages used: /Lua/ and /Shell/.
+  - [[http://bit.ly/J7N024][IMAPFilter]]: Added additional examples and submitted a still pending [[http://bit.ly/JiAg7t][pull request]]. Languages used: /Lua/.
+  - Numerous [[http://bit.ly/J3ouNd][GNU Emacs]] extensions: Have taken over maintenance of bitly.el and rewritten it so that it now communicates with [[Bit.ly]] asynchronously, providing dramatic performance improvements. Wrote several original packages including [[http://bit.ly/JktDTW][org-defprop]], [[http://bit.ly/JktS1q][defhook]], and [[http://bit.ly/Jku3d3][org-global-link-insert]]. Languages used: /Elisp/.
+  - [[http://bit.ly/Jks8Fr][org-ruby]] (a component of [[http://bit.ly/JkshbU][Github]]): Improved Github's functionality for displaying [[http://bit.ly/zhYdcB][.org]] files. Languages used: /Ruby/.
+  - [[http://bit.ly/wq2Ien][Nanoblogger]]: Have written a [[http://bit.ly/JkAz3C][Github plugin]] and an original [[http://bit.ly/xOIkfJ][command-line]] interface, [[http://bit.ly/JkBm4v][nbc]], for Nanoblogger. Languages used: /Shell/.
+  - UserScripts: Wrote multiple [[http://bit.ly/Jkxy3f][UserScripts]] (mini add-ons for browsers) including [[http://bit.ly/JkwJHB][timely-google-search-year]] that changes the default search for Google to exclude links older than one year. Languages: /JavaScript/.
+  - [[http://bit.ly/HJCSM7][Firefox]] extension: Wrote the [[http://bit.ly/HNR3jj][AMO Up Top Version Info]] Firefox extension to make searching for compatible extensions for Mozilla products more efficient. Languages: /JavaScript/ and some minor /XML/.
+
+*** Security Contractor/Consultant (Newton, MA), June 2008-December 2011
+**** Contractor for Aspect Security, August 2011-December 2011
+- Performed security audits for multiple clients using a combination of manual code review, custom-written scripts, and [[http://bit.ly/Kq5BrJ][Fortify]]'s products.
+- Made improvements to Aspect's proprietary fault recording and report generation tool.  
+
+**** Security Consultant (multiple companies), June 2008-July 2011
+- Provided security consulting to multiple companies looking to design a security strategy for future work.
+- Author of an online application security skills assessment based on OWASP.org's 2007 Top-10 Web Vulnerabilities.
+
+*** BEA Systems (Boston, MA), October 1999-May 2008 
+***** Chief Security Architect, November 2000-May 2008
+- Responsible for all aspects of security in all of BEA’s products including tracking of relevant standards, and long-term security direction.
+- Co-architected the BEA WebLogic Server security infrastructure which has been adopted by all BEA products and, following the BEA/Oracle buyout, is being adopted by Oracle products (eg: [[http://docs.oracle.com/cd/E21764_01/web.1111/b32511/intro_ws.htm#autoId0][Oracle Web Services Manager]]).
+- Implemented major portions of the security system including Java 2 Security integration.
+- Developed security coding standards and processes used throughout BEA, created educational material and toured many of BEA's sites to educate (and learn from) the developers.
+- Created and managed BEA's vulnerability process and team. Growing it from two two people and two vulnerabilities a year to 50+ vulnerabilities a year with a company-wide team consisting of developers, management, project and product management, QA, technical publications, legal.
+- Worked hand-in-hand with key customers to help them design an effective security architecture using both BEA and non-BEA products.
+- Orchestrated all technical interactions with third party security vendors and helped them design their integration strategies with the WebLogic Server's security system.
+- Helped key customers design and implement an effective security architecture.
+
+**** Architect/Technical Lead/Senior Engineer, WebLogic Commerce Server, October 1999-October 2000 
+- Architected, designed, helped implement, and led Commerce Server team.
+- Designed webflow and pipeline subsystem - a Model-View-Controller paradigm for controlling web applications. Received a patent on this technology.
+
+*** Bowne Internet Solutions (Cambridge, MA)
+**** Technical Architect, July 1999-October 1999
+- Responsible for all aspects of interaction with clients including responding to RFP's, sales presentations and leading the development team.
+- Created a new, corporate-wide format for proposals.
+
+*** Kronos Incorporated (Waltham, MA)
+**** Architect/Technical Lead/Senior Engineer, June 1998-July 1999
+- Technical lead for a 13 person team designing and implementing a Java Servlet/HTML/JavaScript 3 tier web application.
+- Responsible for implementation tasks, product definition, application architecture, and high level design.
+- Major implementation tasks include a flexible logging package used throughout the division, the logon security sub-system and the internationalization framework.
+- Key member of division wide architecture committee responsible for defining long-term directions and resolving cross product issues.
+- Leadership responsibilities include helping others resolve design and implementation issues, resource allocation, scheduling, cross team interactions, task prioritization, and general problem solving.
+- Designed a model/view/controller server side include mechanism for HTML files.
+
+*** Remedy Corporation (Mountain View, CA)
+**** Senior Web Engineer, November 1997-May 1998
+- Technical lead and senior engineer responsible for designing and implementing a Java applet and C++ middleware for a multi-tiered client-server system.
+- Assisted in specifying product requirements from the legacy Windows front-end client.
+- Helped design and implement refactoring of the C++ legacy fat application into a multi-threaded library and a single-threaded fat UI. The multi-threaded library continued to be used in the C++ UI and was also the foundation of the model for the mode/-view-controller web application's middleware.
+- Designed and implemented sub-systems for middleware server in C++ and thin Java client.
+
+*** Sun Microsystems (Palo Alto, CA)
+**** Technical Lead for Java Workshop Internationalization, February 1997-October 1997
+- Technical lead for team internationalizing a large Java application.
+- Led major effort to quickly internationalize an existing Java program for European and Asian Languages on - Solaris and Wintel platforms.
+- Responsibilities included assigning tasks, resolution of technical problems, interfacing with other teams.
+- Designed and implemented underlying framework for all message internationalization. Optimized %use of Java - ResourceBundle to achieve ~4X performance improvements.
+- Implemented major portions of internationalization support including a tool that both checks for internationalization problems as well as modifies the code to correct the problems.
+
+**** Project Lead for Visual Java, October 1996-February 1997
+- Project lead for 6 person team on a fast-track development cycle to productize a university-built Java Beans based visual programming tool for Java.
+- Responsibilities include technical oversight of project, internationalization, and framework integration.
+
+**** Project Lead for Multi-Threaded Performance Tools, March 1995-October 1996
+- Responsible for technical leadership of five performance tools.
+- Led four person team on multi-year effort of developing a new multi-threaded performance tool.
+- Responsibilities included scheduling, project definition, design, interface reviews, C++ implementation, testing, and documentation.
+
+**** Incremental Linker Engineer, January 1994-February 1995
+- Part of two person team working on incremental linker.
+- Responsibilities included all aspects of development including designing, implementing, debugging, test writing, test suite maintenance, and scheduling.
+
+**** DBX Engineer, July 1991-December 1993
+- Chief designer and implementer of C++ support for DBX.
+- Had leadership and supervision responsibilities over other engineers working on C++ support.
+- Provided general support for all aspects of DBX.
+
+*** Kodak Research Laboratories, Eastman Kodak (Rochester, NY)
+**** Imaging Software Engineer Contractor, January 1991-June 1991
+- Member of a three member lab responsible for prototyping Kodak photoCD software.
+- Implemented a 24-bit color GUI application for displaying photoCDs.
+
+*** Computer Science Department, University of Rochester
+**** Research and Teaching Assistant, June 1986-December 1990
+- Implemented a parallel debugger for the Chrysalis parallel operating system.
+- Assisted in the implementation of the Psyche Multiprocessor Operating System and an X-window based visual debugging tool.
+
+*** Computer Science Department, University of Buffalo
+**** Laboratory Assistant, September 1985-May 1986, September 1986-May 1986
+- Responsibilities included Unix system administration, training of new assistants and application programming.
+- Designed and implemented a Modula-2 runtime library used by students and faculty.
+
+*** Grumman Aerospace Systems
+**** Summer Intern, June 1986-August 1986
+- Designed and implemented a document development system reducing duplication of data by providing automated cross-referencing during the creation of MIL-STD-2167 documents  
+** Publications, Patents, Presentations, and Open Source Contributions
+**** Publications
+- Contributor to OWASP.org's “2010 Top Ten Web Vulnerabilities”.
+- Member JSR-196: Java Authentication Service Provider Interface for Containers.
+- Member JSR-115: Java Authorization Contract for Containers
+- Participated in JSR-149: Work Area Service for J2EE, and JCA.
+- Contributor to OWASP.org's “2007 Top Ten Web Vulnerabilities”.
+- CIO Online Article: “Confidential Data: You're Giving Away Your Corporate Secrets!”, 6/2008
+- CSOOnline Article: “Attack Dangers Posed by 'Innocent' Files” 
+- Peer-reviewed "Implementation Issues for the Psyche Multiprocessor Operating System"; appearing in Computing Systems 3, 1989
+
+**** Presentations
+- Designated /must see/ presentation by JavaOne staff: “Writing Secure Web Applications”, 2005 JavaOne. 
+- "How to Secure a Web Application", WebLogic Developer's Journal October 2003.
+- “Writing Secure Web Applications”, BEAWorld 2005.
+- “WebLogic Server 9.0 Security Features”, BEAWorld 2005.
+- "So You Want to Write a Security Provider - Now What?", BEA eWorld 2004.
+- "Configuring and Administering WebLogic Security", BEA eWorld 2003.
+- "Using the New WebLogic Security Architecture", BEA eWorld 2002.
+- Numerous internal and customer training presentations.
+
+**** Patents
+- US Patent #7,979,891: [[http://1.usa.gov/7979891][Method and System for Securing Execution of Untrusted Applications]], July 2011
+   This patent, in combination with 7,814,556 defines a model for enforcing [[http://en.wikipedia.org/wiki/J2ee][J2EE]] (a.k.a: JEE) application security via [[http://en.wikipedia.org/wiki/Sandbox_(computer_security)][sandboxing]] within a single process address space.
+- US Patent #7,814,556: [[http://1.usa.gov/7814556][System and Method for Protecting APIs from Untrusted or Less Trusted Applications]], October 2010
+   See patent 7,979,891. 
+- US Patent #7,610,813: [[http://1.usa.gov/7610613][Servlet Authentication Filters]], October 2009
+  An extension of [[http://en.wikipedia.org/wiki/J2ee][J2EE]] (a.k.a: JEE) [[http://en.wikipedia.org/wiki/Java_Servlet][Servlets]] that provides an integrated and pluggable model for authentication for Servlets. [[http://jcp.org/en/jsr/detail?id=196][JSR-196]] extended J2EE via adopting, extending, and standardizing the concepts introduced in this patent.
+- US Patent #7,487,207: [[http://1.usa.gov/7487207][System and method for determining the functionality of a software application based on nodes within the software application and transitions between the nodes]], February 2009
+  Defines a [[http://en.wikipedia.org/wiki/Model–view–controller][model-view-controller]] (MVC) model for implementing web applications. [[http://en.wikipedia.org/wiki/Apache_Struts][Apache Struts]] is based on the ideas defined in this patent.
+- US Patent #7,051,069: [[http://1.usa.gov/7051069][System for managing logical process flow in an online environment]], May 2006
+  Earlier version of 7,487,207 above.
+- US Patent application pending #20,060,031,855: [[http://bit.ly/20060031855][System and Method for Runtime Interface Versioning]], February 2006
+  The concepts embodied in this patent application have been used to ensure backwards compatibility for WebLogic Server's Security [[http://en.wikipedia.org/wiki/Service_Provider_Interface][SPI]]s. The implementation of this patent allows the server to continue to add new functionality to the SPIs while maintaining forwards compatibility for security all providers written since 2002. [[http://docs.oracle.com/cd/E24329_01/apirefs.1211/e24391/weblogic/security/spi/package-summary.html][Current security SPI classes]] ending with "V2" are using this mechanism.
+- US Patent #5,787,447: [[http://1.usa.gov/5787447][Memory allocation maintaining ordering across multiple heaps]], July 1998
+  A memory allocation algorithm that supported incremental modification of [[http://en.wikipedia.org/wiki/Executable_and_Linkable_Format][ELF executables]], while maintaining the ordering required by ELF as well as existing [[http://en.wikipedia.org/wiki/Solaris_(operating_system)][Solaris]] tools (eg: [[http://en.wikipedia.org/wiki/Dbx_(debugger)][dbx]]) without requiring restarting of the application or the tools.
+
+** Open Source Contributions
+- “Contrib” UI interface plus API modifications for TKMan.
+- Emacs-style file completion for PDKSH.
+- GNU Emacs ILISP-mode modifications.
+- Numerous bug-fixes and suggestions.
+- More recent open source contributions documented [[*Open%20Source%20Developer/Personal%20Leave,%20January%202011-Present][above]].
+ 
+* Education
+- Ph.D. all but dissertation, Computer Science, September 1986-1990; University of Rochester.
+- M.S., Computer Science, May 1989; University of Rochester.
+- B.S. with honors, Computer Science, May 1987; University of Buffalo
+- University of Buffalo's President's List (4.0/4.0 GPA), Fall 1984 and Spring 1985
+- University of Buffalo's Dean's List (3.6/4.0 GPA), Fall 1986 and Fall 1987
+- New York State Regent's Scholarship Fall 1983
+- National Merit Letter of Commendation Spring 1982
+
+* Footnotes
+[1] Architected [[http://bit.ly/AF3TMb][WebLogic Server security framework]]. January 2012 marks the 11^th year that it will be the foundation of security for [[http://bit.ly/z23Zss ][BEA's WebLogic Server]] (now [[http://bit.ly/AF3TMb) ][Oracle's Fusion Middleware]]) and other [[http://en.wikipedia.org/wiki/Middleware][middleware]] products.
+
+
+
+# LocalWords:  OfflineImap Contrib

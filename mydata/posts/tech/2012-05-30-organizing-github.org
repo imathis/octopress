@@ -1,0 +1,12 @@
+#+BEGIN_HTML
+
+---
+layout:         post
+title1:         "organizing github"
+date:           2012-05-30 22:42
+comments:       true
+categories:     []
+published:      false
+---
+
+#+END_HTML

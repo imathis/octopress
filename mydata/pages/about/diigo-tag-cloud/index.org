@@ -1,0 +1,27 @@
+#+BEGIN_HTML
+
+---
+layout:         page
+title:          "Diigo Tag Cloud"
+date:           2012-05-19 00:08
+comments:       true
+sharing:        true
+footer:         true
+published:      true
+---
+
+#+END_HTML
+I happen to be partial to [[http://www.diigo.com][Diigo]]'s bookmarking facilities. I've been using it on and off for a few years. Like most bookmarking systems, Diigo allows you to tag your bookmarks and then display the tags in a cloud. Here's my tag cloud for my Diigo bookmarks.
+
+#+BEGIN_HTML
+<div class="diigo-tags"><div class="diigo-banner sidebar-title" style="font: bold 12px arial;margin-bottom:5px;"><a href="http://www.diigo.com"><img src="http://www.diigo.com/images/ii_blue.gif" width="16" height="16" alt="diigo"/></a> <a href="http://www.diigo.com/cloud/neilsmithline">My Diigo Tags</a></div><script type="text/javascript" src="http://www.diigo.com/tools/tagrolls_script/neilsmithline?icon;size=15-36;color=cccccc-000000;title=My%20Diigo%20Tags;name;showadd;v=3"></script>
+<br/>
+#+END_HTML
+
+#+HTML: <!--
+IMO, a person's bookmarks' tag cloud can tell you an awful lot about the person. Here's my 2-cent psychoanalysis of my tag cloud:
+  - *no_tag:* Prioritizes: I'd like all my bookmarks to be tagged but tagging takes time. So I prioritize and only tag the important ones (for some unspecified definition of "important"). It just doesn't make sense to expend effort up front if you are unsure if you will benefit from the effort. If I can't find a bookmark, I use Diigo's search to find it and then I tag it as, just by the fact that I've searched for it, it is an important bookmark.
+  - *programming:* Hacker by nature. It seems self explanatory.
+  - *boardgames, games, game, go:* Enjoy intellectual stimulation. I love puzzles, board games, especially board games that involve little or no luck. I like Facebook's Words With Friends. I'm a huge fan of the Gipf
+#+HTML: -->
+

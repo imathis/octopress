@@ -1,0 +1,45 @@
+
+#+BEGIN_HTML
+---
+title:             "Smartphones Everywhere"
+description:       "Some discussion about the pervasiveness of smartphones."
+layout:            post
+date:              2012-02-22 18:38:14
+categories:        [tech, mobile, smartphones]
+comments:          true        
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+Interpreting this chart from [[http://blog.nielsen.com/nielsenwire/online_mobile/survey-new-u-s-smartphone-growth-by-age-and-income/][Nielsen]] (via [[http://www.wired.com/epicenter/2012/02/smartphone-buying-machine/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+wired%2Findex+%28Wired%3A+Index+3+%28Top+Stories+2%29%29][Wired]]) does not require any great amount of effort.
+#+BEGIN_CENTER
+[[http://www.wired.com/images_blogs/epicenter/2012/02/Smartphone-Income-and-Age.jpg][Smartphone Pervasiveness]]
+#+END_CENTER
+
+It can be summarized by any of the following sentences:
+ - The greater your income the more likely you are to have a smartphone.
+ - Young adults are more likely to have smartphones than older adults.
+ - Smartphones are only for the young and get outgrown by the old. (Nah! But it is a valid interpretation of the chart.)
+
+But I think the graph can best be summarized by:
+#+BEGIN_CENTER
+*Smartphones are where it is at today; and tomorrow, even more so.*
+#+END_CENTER
+#+HTML: <!-- more -->
+Perhaps not the best grammar but I think it gets the point across. It becomes even more dramatic when you look at the number of people who have acquired smartphones in the past three months:
+#+BEGIN_CENTER
+[[http://blog.nielsen.com/nielsenwire/wp-content/uploads/2012/02/SmartPhone_Recent-acquirers-age1.png][Recent Smartphone Acquisitions]]
+#+END_CENTER
+As [[http://www.imdb.com/title/tt0059968/quotes][Robin]] would [[http://en.wikipedia.org/wiki/Batman_%28TV_series%29#.22Holy_.......2C_Batman.21.22][say]]: Holy [[http://dictionary.reference.com/browse/ubiquitous+computing?qsrc=2446][ubiquitous computing]], Batman!
+
+It seems clear that this is where the money is. This means that some subset of technologies such as [[http://en.wikipedia.org/wiki/Html5][HTML5]], [[http://en.wikipedia.org/wiki/Virtuality_%28computing%29][virtual computing]], [[http://en.wikipedia.org/wiki/Scala_%28programming_language%29][Scala]], [[http://en.wikipedia.org/wiki/Hadoop][Hadoop]], [[http://en.wikipedia.org/wiki/Amazon_Web_Services][AWS]], and [[http://en.wikipedia.org/wiki/Couchdb][CouchDB]], to name just a few, are going to be the technologies of tomorrow.
+
+In my lifetime, I have seen computers revolutionize society in several different ways.
+    - [[Http://en.wikipedia.org/wiki/Back_office][Back office]] :: Back office computerization led to the popularization of [[http://en.wikipedia.org/wiki/Automated_teller_machine][ATMs]], [[http://en.wikipedia.org/wiki/Credit_card][credit cards]], [[http://en.wikipedia.org/wiki/Fed_Ex][Fed Ex]] and its overnight delivery service, and set the stage for the online marketplace we are familiar with today.
+    - [[http://en.wikipedia.org/wiki/Personal_computer][Personal computers]] :: Personal computers introduced computing to the public. When I was in school, I would get bonus points for typing my homework assignments. Today, homework assignments must be printed from a [[http://en.wikipedia.org/wiki/Word_processor][word processor]] if not submitted electronically.
+    - [[http://en.wikipedia.org/wiki/World_wide_web][The web]] :: The web, for the first time ever, connected the back office directly to consumers in the comfort of their own home. ATMs allowed you to get 24x7 access to your bank account, but you needed to be at an ATM. PCs gave you access to many digital technologies, but having multiple computers interact was difficult, slow, and frequently expensive. But throw in the web and suddenly: *BOOM!* You have the [[http://en.wikipedia.org/wiki/Online_shopping][online shopping]], [[http://en.wikipedia.org/wiki/Video_gaming][video gaming]], and [[http://en.wikipedia.org/wiki/Video_on_demand][video on demand]] that we live in today.
+
+As a diehard nerd, I'm thrilled to have lived through these technical revolutions. Not only have I lived through them, but I've had the honor of having been an early consumer and even helped develop some of them. So, with great joy, and without trying to sound too greedy, I am joyous that the next revolutionary wave is coming to shore. And it is called /ubiquitous computing/.
+
+I don't claim to be the [[http://article.wn.com/view/2012/02/02/Did_the_Groundhog_see_his_shadow_2012_Punxsutawney_Phil_twee/][prognosticator of prognosticators]]. [[http://www.wikipedia.com][Wikipedia]]'s page on ubiquitous computing was created [[http://en.wikipedia.org/w/index.php?title=Ubiquitous_computing&action=history][two years ago]]. I'm just happy to be around to be part of it and hope that I get a chance to [[http://bit.ly/zN6qBU][surf the wave]].
