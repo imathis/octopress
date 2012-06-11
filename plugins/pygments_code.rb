@@ -39,9 +39,11 @@ module HighlightCode
     linenos = options[:linenos]
     start   = options[:start]
 
+    code = code.gsub(/{{/, '&#x7b;&#x7b;').gsub(/{%/, '&#x7b;&#x25;')
+
     if lang == 'plain'
       # Escape html tags
-      code = code.gsub('<','&lt;').gsub('>','&gt;')
+      code = code.gsub('<','&lt;')
     elsif lang.include? "-raw"
       output  = "``` #{$1.sub('-raw', '')}\n"
       output += code
