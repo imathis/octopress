@@ -38,6 +38,7 @@ var octopress = (function(){
       }
       if (sections.length >= 3){ $('aside.sidebar').addClass('thirds'); }
     }
+    
     , addCodeLineNumbers: function () {
       if (navigator.appName === 'Microsoft Internet Explorer') { return; }
       $('div.gist-highlight').each(function(index) {
@@ -208,11 +209,21 @@ var octopress = (function(){
     })()
     
     , github: (function(){
+
+      htmlEscape = function (str) {
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+      }
+
       function render(target, data){
         var i = 0, repos = '';
 
         for(i = 0; i < data.length; i++) {
-          repos += '<li><a href="'+data[i].html_url+'">'+data[i].name+'</a><p>'+data[i].description+'</p></li>';
+          repos += '<li><a href="'+data[i].html_url+'">'+htmlEscape(data[i].name)+'</a><p>'+htmlEscape(data[i].description)+'</p></li>';
         }
         target.html(repos);
       }
@@ -263,6 +274,20 @@ $(document).ready(function() {
   octopress.twitter.getFeed('#tweets')
   octopress.github.showRepos('#gh_repos');
 });
+
+var htmlEncode = (function() {
+  var entities = {
+    '&' : '&amp;'
+    , '<' : '&lt;'
+    , '"' : '&quot;'
+  };
+
+  return function(value) {
+    return value.replace(/[&<"]/g, function(c) {
+      return entities[c];
+    });
+  };
+})();
 
 // iOS scaling bug fix
 // Rewritten version
