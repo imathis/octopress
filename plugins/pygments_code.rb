@@ -1,5 +1,6 @@
-#require 'albino'
 require './plugins/raw'
+require './plugins/config'
+require 'albino'
 require 'pygments'
 require 'fileutils'
 require 'digest/md5'
@@ -9,13 +10,17 @@ FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)
 
 module HighlightCode
   include TemplateWrapper
+  include SiteConfig
   def pygments(code, lang)
     path = File.join(PYGMENTS_CACHE_DIR, "#{lang}-#{Digest::MD5.hexdigest(code)}.html") if defined?(PYGMENTS_CACHE_DIR)
     if File.exist?(path)
       highlighted_code = File.read(path)
     else
-      #highlighted_code = Albino.new(code, lang, :html)
-      highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'}) 
+      if get_config('pygments')
+        highlighted_code = Albino.new(code, lang, :html)
+      else
+        highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'}) 
+      end
       File.open(path, 'w') {|f| f.print(highlighted_code) } if path
     end
     highlighted_code.to_s

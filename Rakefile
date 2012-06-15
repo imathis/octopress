@@ -192,8 +192,9 @@ end
 
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
 task :clean do
-  [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**"].each { |dir| rm_rf Dir.glob(dir) }
-  rm "source/stylesheets/screen.css"
+  [".pygments-cache/**", ".gist-cache/**"].each { |dir| rm_rf Dir.glob(dir) }
+  rm "#{source_dir}/stylesheets/screen.css" if File.exists?("#{source_dir}/stylesheets/screen.css")
+  system "compass clean"
   puts "## Cleaned Sass, Pygments and Gist caches, removed generated stylesheets ##"
 end
 
