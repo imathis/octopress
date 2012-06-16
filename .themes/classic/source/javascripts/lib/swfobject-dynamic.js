@@ -1,5 +1,7 @@
-/*!	SWFObject v2.2 <http://code.google.com/p/swfobject/>
-	is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
+/*!	SWFObject v2.2 modified by Brandon Mathis to contain only what is necessary to dynamically embed flash objects
+  * Uncompressed source in javascripts/libs/swfobject-dynamic.js
+  * <http://code.google.com/p/swfobject/>
+	released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
 */
 
 var swfobject = function() {
