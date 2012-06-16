@@ -51,15 +51,11 @@ standard_post_marker:
 
 titlecase: true       # Converts page and post titles to titlecase
 
-# list each of the sidebar modules you want to include, in the order you want them to appear.
-# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
-
-# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
-# and add an array with the asides you want to use.
-# blog_index_asides:
-# post_asides:
-# page_asides:
+# To change the layout's default sidebar Add a new sidebar source/_includes/sidebars/your_sidebar.html
+# then make changes below, eg. post_sidebar: your_sidebar.html
+blog_index_sidebar: blog_index_default.html
+page_sidebar: page_default.html
+post_sidebar: post_default.html
 
 # ----------------------- #
 #   3rd Party Settings    #
@@ -89,8 +85,9 @@ google_plus_one_size: medium
 
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
-googleplus_user:
-googleplus_hidden: false
+google_plus_user:
+google_plus_hidden: false
+google_plus_image_size: 32
 
 # Pinboard
 pinboard_user:
