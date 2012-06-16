@@ -13,7 +13,7 @@ layout: default
   {{ content }}
   {% unless page.footer == false %}
     <footer>
-      <p class="meta">{% include post/meta.html %}{% include custom/page_meta.html %}</p>
+      <p class="meta">{% include post/meta.html %}{% include custom/page-meta.html %}</p>
       {% unless page.sharing == false %}
         {% include post/sharing.html %}
       {% endunless %}
@@ -23,12 +23,12 @@ layout: default
 {% include custom/after_page.html %}
 {% if page.comments == true %}{% include comments.html %}{% endif %}
 </div>
-{% unless page.sidebar == false %}
+{% unless page.sidebar == false or site.default_sidebar == false %}
 <aside class="sidebar">
-  {% if site.page_asides.size %}
-    {% include_array page_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
+  {% if page.sidebar == nil or page.sidebar == 'collapse' %}
+    {% include_sidebar site.page_sidebar %}
+  {% else %}
+    {% include_sidebar %}
+  {% endif %}
 </aside>
 {% endunless %}
