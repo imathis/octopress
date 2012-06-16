@@ -19,10 +19,12 @@ layout: default
     {% endif %}
   </div>
 </div>
+{% unless page.sidebar == false or site.default_sidebar == false %}
 <aside class="sidebar">
-  {% if site.blog_index_asides.size %}
-    {% include_array blog_index_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
+  {% if page.sidebar == nil or page.sidebar == 'collapse' %}
+    {% include_sidebar site.blog_index_sidebar %}
+  {% else %}
+    {% include_sidebar %}
+  {% endif %}
 </aside>
+{% endunless %}
