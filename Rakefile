@@ -61,9 +61,9 @@ task :generate do
 end
 
 Rake::Minify.new(:minify_and_combine) do
-  files = FileList.new("source/javascripts/group/*.*")
+  files = FileList.new("#{source_dir}/javascripts/group/*.*")
 
-  output_file =  "source/javascripts/octopress.min.js"
+  output_file =  "#{source_dir}/javascripts/octopress.min.js"
 
   puts "BEGIN Minifying #{output_file}"
   group(output_file) do
