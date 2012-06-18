@@ -1,1 +1,0 @@
-Neil Smithline's blog using Octopress/Jekyll.
