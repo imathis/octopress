@@ -19,6 +19,8 @@
 # - category_title_prefix: The string used before the category name in the page title (default is
 #                          'Category: ').
 
+require 'stringex'
+
 module Jekyll
 
   # The CategoryIndex class creates a single category page for the specified category.
@@ -162,7 +164,6 @@ ERR
     #
     def category_links(categories)
       categories = categories.sort!.map { |c| category_link c }
-
       case categories.length
       when 0
         ""
