@@ -65,6 +65,11 @@ post_sidebar: post_default.html
 # Show respect for privacy and bandwidth with simple links for Twitter, Facebook and Google Plus.
 respectfully_social: true
 
+# Google Translate customized content. It is optional and lets you manage your site translations.
+# The translate sidebar section would anyway be fully functional even without this ID.
+# Visit https://translate.google.com/manager/ to obtain one for your website.
+# google_translate_content: <your_content_id>
+
 # Github repositories
 github_user:
 github_repo_count: 0
