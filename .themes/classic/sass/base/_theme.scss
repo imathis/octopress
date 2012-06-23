@@ -1,6 +1,3 @@
-$noise-bg: image-url('noise.png') top left !default;
-$img-border: inline-image('dotted-border.png');
-
 // Main Link Colors
 $link-color: lighten(#165b94, 3) !default;
 $link-color-hover: adjust-color($link-color, $lightness: 10, $saturation: 25) !default;
@@ -59,12 +56,22 @@ $footer-link-color-hover: darken($footer-color, 25) !default;
 $page-border-bottom: darken($footer-bg, 5) !default;
 
 
-/* Core theme application */
+// Sprites and images
+
+@import "icon/*.png";/**/
+@include all-icon-sprites($dimensions: true);
+
+$noise-bg: image-url('noise.png') top left !default;
+$img-border: inline-image('dotted-border.png') !default;
+
+
+// Core theme application
 
 a {
+  color: $link-color;
   @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
 }
-aside.sidebar a {
+.sidebar a {
   @include link-colors($sidebar-link-color, $hover: $sidebar-link-color-hover, $focus: $sidebar-link-color-hover, $active: $sidebar-link-color-active);
 }
 a {

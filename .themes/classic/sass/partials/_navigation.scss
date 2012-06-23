@@ -117,7 +117,7 @@ body > nav {
   }
   &:hover:after { background-color: lighten($nav-color, 20); }
 }
-.maskImage {
+.maskimage {
   body > nav {
     @media only screen and (min-width: 550px) {
       ul[data-subscription$=email] + form {

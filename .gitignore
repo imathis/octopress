@@ -9,5 +9,7 @@ sass.old
 source.old
 source/_stash
 source/stylesheets/screen.css
+source/javascripts/octopress.min.js
+source/images/icon-*.png
 vendor
 node_modules

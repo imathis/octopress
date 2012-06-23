@@ -1,3 +1,49 @@
+@mixin social-button-bg($icon: false, $color: #333, $img: false) {
+  color: $color;
+  &:visited, &:hover, &:visited:hover { color: $color; }
+  @if $img {
+    padding-left: image-width($img) + 6px;
+    &:before {
+      background: image-url($img) no-repeat center center;
+      width: image-width($img);
+      height: image-height($img);
+      position: absolute; left: 3px;
+    }
+  } @else if $icon {
+    padding-left: icon-sprite-width($icon) + 6px;
+    &:before {
+      vertical-align: middle;
+      @extend .icon-#{$icon};
+      position: absolute; left: 3px;
+    }
+  }
+}
+
+.simple-social-button {
+  position: relative;
+  overflow: hidden;
+  font-family: "Lucida Grande", Helvetica, Arial, sans;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: .2em .5em; line-height: 1.45em;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: #fff 0 1px;
+  @include border-radius(.3em);
+  background-color: #e5e5e5;
+  @include background-image(linear-gradient(#fff, #ddd));
+  &:hover {
+    @include background-image(linear-gradient(#f5f5f5, #ccc));
+    border-color: #b5b5b5;
+    background-color: #ddd;
+  }
+  &:before {
+    content: "";
+    display: inline-block;
+  }
+}
+
 .sharing {
   p.meta + & {
     padding: { top: 1em; left: 0; }
@@ -6,3 +52,22 @@
 }
 
 #fb-root { display: none; }
+
+.googleplus-share {
+  @extend .simple-social-button;
+  @include social-button-bg('googleplus', #db583b);
+  &:before { top: 5px; }
+}
+.facebook-share {
+  @extend .simple-social-button;
+  @include social-button-bg('facebook', #4e5a9b);
+  &:before { top: 3px; }
+}
+.twitter-share, .sidebar a.twitter-follow-button {
+  @extend .simple-social-button;
+  @include social-button-bg('twitter');
+}
+.sidebar .github-follow {
+  @extend .simple-social-button;
+  @include social-button-bg('github');
+}

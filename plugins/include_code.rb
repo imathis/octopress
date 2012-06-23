@@ -15,30 +15,49 @@
 # Example 2:
 # You can also include an optional title for the <figcaption>
 #
-# {% include_code Example 2 javascripts/test.js %}
+# {% include_code javascripts/test.js Example 2 %}
 #
 # will output a figcaption with the title: Example 2 (test.js)
 #
 
 require './plugins/pygments_code'
-require './plugins/raw'
 require 'pathname'
 
 module Jekyll
 
   class IncludeCodeTag < Liquid::Tag
     include HighlightCode
-    include TemplateWrapper
     def initialize(tag_name, markup, tokens)
-      @title = nil
       @file = nil
-      if markup.strip =~ /\s*lang:(\w+)/i
-        @filetype = $1
-        markup = markup.strip.sub(/lang:\w+/i,'')
-      end
-      if markup.strip =~ /(.*)?(\s+|^)(\/*\S+)/i
-        @title = $1 || nil
-        @file = $3
+      @title = nil
+      @title_old = nil
+
+      @lang = get_lang(markup)
+      markup = replace_lang(markup)
+
+      @linenos = get_linenos(markup)
+      markup = replace_linenos(markup)
+
+      @marks = get_marks(markup)
+      markup = replace_marks(markup)
+      
+      @start = get_start(markup)
+      markup = replace_start(markup)
+
+      @end = get_end(markup)
+      markup = replace_end(markup)
+
+      range = get_range(markup, @start, @end)
+      @start = range[:start]
+      @end = range[:end]
+      markup = replace_range(markup)
+
+      if markup.strip =~ /(^\S*\.\S+) *(.+)?/i
+        @file = $1
+        @title = $2 || nil
+      elsif markup.strip =~ /(.*?)(\S*\.\S+)\Z/i # Title before file is deprecated in 2.1
+        @title_old = $1 || nil
+        @file = $2
       end
       super
     end
@@ -48,22 +67,38 @@ module Jekyll
       code_path = (Pathname.new(context.registers[:site].source) + code_dir).expand_path
       file = code_path + @file
 
+      unless @title_old.nil?
+        @title = @title_old
+        puts "### ------------ WARNING ------------ ###"
+        puts "This include_code syntax is deprecated "
+        puts "Correct syntax: path/to/file.ext [title]"
+        puts "Update include for #{file}"
+        puts "### --------------------------------- ###"
+      end
+      
       if File.symlink?(code_path)
+        puts "Code directory '#{code_path}' cannot be a symlink"
         return "Code directory '#{code_path}' cannot be a symlink"
       end
 
       unless file.file?
+        puts "File #{file} could not be found"
         return "File #{file} could not be found"
       end
 
       Dir.chdir(code_path) do
         code = file.read
-        @filetype = file.extname.sub('.','') if @filetype.nil?
+        length = code.lines.count
+        @end ||= length
+        return "#{file} is #{length} lines long, cannot begin at line #{@start}" if @start > length
+        return "#{file} is #{length} lines long, cannot read beyond line #{@end}" if @end > length
+        if @start > 1 or @end < length
+          code = code.split(/\n/).slice(@start -1, @end + 1 - @start).join("\n")
+        end
+        @lang = file.extname.sub('.','') unless @lang
         title = @title ? "#{@title} (#{file.basename})" : file.basename
         url = "/#{code_dir}/#{@file}"
-        source = "<figure class='code'><figcaption><span>#{title}</span> <a href='#{url}'>download</a></figcaption>\n"
-        source += " #{highlight(code, @filetype)}</figure>"
-        safe_wrap(source)
+        highlight(code, @lang, {caption: title, url: url, anchor: 'download', start: @start, marks: @marks, linenos: @linenos })
       end
     end
   end

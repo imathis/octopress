@@ -1,12 +1,20 @@
 #tweets {
   .loading {
-    background: inline-image('bird_32_gray.png') no-repeat center .5em;
+    &:before {
+      content: "";
+      display: block;
+      margin: 0 auto;
+      @extend .icon-twitter-bird;
+    }
     color: darken($sidebar-bg, 18);
     text-shadow: $main-bg 0 1px;
     text-align: center;
-    padding: 2.5em 0 .5em;
-    &.error {
-      background: inline-image('bird_32_gray_fail.png') no-repeat center .5em;
+    padding: .5em 0;
+    .transform &.error {
+      @include rotate(180deg);
+      @include box-shadow(lighten($sidebar-bg, 5) 0 -1px);
+      border-bottom: 0;
+      border-top: 1px solid $sidebar-border;
     }
   }
   p {

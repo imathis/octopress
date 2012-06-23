@@ -1,0 +1,5 @@
+<h1 class="entry-title">
+{% if linklog and site.linklog_marker and site.linklog_marker_position == 'before' %}{{ linklog_marker }}{% endif %}
+{% if index or linklog %}<a href="{{ title_url }}">{% endif %}{% if site.titlecase %}{{ article_title | titlecase }}{% else %}{{ article_title }}{% endif %}{% if index or linklog %}</a>{% endif %}
+{% if linklog and site.linklog_marker and site.linklog_marker_position == 'after' %}{{ linklog_marker }}{% endif %}
+</h1>
