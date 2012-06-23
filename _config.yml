@@ -106,4 +106,8 @@ disqus_developer: 0
 google_analytics_tracking_id:
 
 # Facebook Like
+# Note that as of June 2012, enabling the Like button will cause your
+# site to capture data for Facebook advertisements. See
+# http://bloom.bg/KJ6CI8.
 facebook_like: false
+
