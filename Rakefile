@@ -5,30 +5,30 @@ require 'rake/minify'
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "user@domain.com"
-ssh_port       = "22"
-document_root  = "~/website.com/"
-rsync_delete   = true
+ssh_user = "user@domain.com"
+ssh_port = "22"
+document_root = "~/website.com/"
+rsync_delete = true
 deploy_default = "rsync"
 
 # Hidden "dot" files that should be included with the deployed site (see task copydot)
 copy_dot_files = []
 
 # This will be configured for you when you run config_deploy
-deploy_branch  = "gh-pages"
+deploy_branch = "gh-pages"
 
 ## -- Misc Configs -- ##
 
-public_dir      = "public"    # compiled site directory
-source_dir      = "source"    # source file directory
-blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
-deploy_dir      = "_deploy"   # deploy directory (for GitHub pages deployment)
-stash_dir       = "_stash"    # directory to stash posts for speedy generation
-posts_dir       = "_posts"    # directory for blog files
-themes_dir      = ".themes"   # directory for blog files
-new_post_ext    = "markdown"  # default new post file extension when using the new_post task
-new_page_ext    = "markdown"  # default new page file extension when using the new_page task
-server_port     = "4000"      # port for preview server eg. localhost:4000
+public_dir = "public" # compiled site directory
+source_dir = "source" # source file directory
+blog_index_dir = 'source' # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
+deploy_dir = "_deploy" # deploy directory (for GitHub pages deployment)
+stash_dir = "_stash" # directory to stash posts for speedy generation
+posts_dir = "_posts" # directory for blog files
+themes_dir = ".themes" # directory for blog files
+new_post_ext = "markdown" # default new post file extension when using the new_post task
+new_page_ext = "markdown" # default new page file extension when using the new_page task
+server_port = "4000" # port for preview server eg. localhost:4000
 
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
@@ -63,7 +63,7 @@ end
 Rake::Minify.new(:minify_and_combine) do
   files = FileList.new("#{source_dir}/javascripts/group/*.*")
 
-  output_file =  "#{source_dir}/javascripts/octopress.min.js"
+  output_file = "#{source_dir}/javascripts/octopress.min.js"
 
   puts "BEGIN Minifying #{output_file}"
   group(output_file) do
@@ -160,15 +160,15 @@ task :new_page, :filename do |t, args|
   args.with_defaults(:filename => 'new-page')
   page_dir = [source_dir]
   if args.filename.downcase =~ /(^.+\/)?(.+)/
-    filename, dot, extension = $2.rpartition('.').reject(&:empty?)         # Get filename and extension
+    filename, dot, extension = $2.rpartition('.').reject(&:empty?) # Get filename and extension
     title = filename
-    page_dir.concat($1.downcase.sub(/^\//, '').split('/')) unless $1.nil?  # Add path to page_dir Array
+    page_dir.concat($1.downcase.sub(/^\//, '').split('/')) unless $1.nil? # Add path to page_dir Array
     if extension.nil?
       page_dir << filename
       filename = "index"
     end
     extension ||= new_page_ext
-    page_dir = page_dir.map! { |d| d = d.to_url }.join('/')                # Sanitize path
+    page_dir = page_dir.map! { |d| d = d.to_url }.join('/') # Sanitize path
     filename = filename.downcase.to_url
 
     mkdir_p page_dir
@@ -272,7 +272,7 @@ end
 
 
 ##############
-# Deploying  #
+# Deploying #
 ##############
 
 desc "Default deploy task"
@@ -329,7 +329,7 @@ multitask :push do
       puts "\n## GitHub Pages deploy complete"
     end
   else
-    puts "This project isn't configured for deploying to GitHub Pages\nPlease run `rake setup_github_pages[your-deployment-repo-url]`." 
+    puts "This project isn't configured for deploying to GitHub Pages\nPlease run `rake setup_github_pages[your-deployment-repo-url]`."
   end
 end
 
@@ -412,7 +412,7 @@ task :setup_github_pages, :repo do |t, args|
   cd "#{deploy_dir}" do
     system "git init"
     system "git remote add origin #{repo_url}"
-    puts   "Attempting to pull from repository"
+    puts "Attempting to pull from repository"
     system "git pull origin #{branch}"
     unless File.exist?('index.html')
       system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
@@ -430,12 +430,12 @@ task :setup_github_pages, :repo do |t, args|
     f.write rakefile
   end
 
-  # Configure published url 
+  # Configure published url
   jekyll_config = IO.read('_config.yml')
   current_url = /^url:\s?(.*$)/.match(jekyll_config)[1]
   has_cname = File.exists?("#{source_dir}/CNAME")
   if current_url == 'http://yoursite.com'
-    jekyll_config.sub!(/^url:.*$/, "url: #{url}") 
+    jekyll_config.sub!(/^url:.*$/, "url: #{url}")
     File.open('_config.yml', 'w') do |f|
       f.write jekyll_config
     end
@@ -488,6 +488,12 @@ end
 
 desc "list tasks"
 task :list do
-  puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
+  puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}\n\n"
   puts "(type rake -T for more detail)\n\n"
+end
+
+desc "default task"
+task :default do
+   puts "\nYou must call rake with a task name.\n\n"
+   Rake::Task['list'].invoke
 end
