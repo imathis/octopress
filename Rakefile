@@ -333,6 +333,11 @@ task :setup_github_pages, :repo do |t, args|
   mkdir deploy_dir
   cd "#{deploy_dir}" do
     system "git init"
+    # Preserve Git user name and email address.
+    %w[user.name user.email].each do |key|
+      value = `git config --file ../.git/config #{key}`.chomp
+      system "git config #{key} '#{value}'" unless value.empty?
+    end
     system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
     system "git add ."
     system "git commit -m \"Octopress init\""
