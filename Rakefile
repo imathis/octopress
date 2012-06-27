@@ -375,3 +375,27 @@ task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
 end
+
+# usage rake list_posts or rake list_posts[pub|unpub]
+desc "List all posts with an asterisk if it's published. Advanced usage: 'rake list_posts[pub|unpub]'"
+task :list_posts, :type do |t, args|
+  type = args.type
+  
+  result = ""
+  Dir.glob("#{source_dir}/#{posts_dir}/*.markdown").sort.each do |post|
+    file = File.read(post)
+    file =~ /^(---\s*\n.*?\n?)^(---\s*$\n?)/m
+    data = YAML.load($1)
+    
+    case type
+    when "pub" then 
+      result << "#{File.basename(post)}\n" if data['published'] || data['published'] == nil
+    when "unpub"
+      result << "#{File.basename(post)}\n" if data['published'] == false
+    else
+      status = data['published'] || data['published'] == nil ? '*' : ' '
+      result << "#{status} #{File.basename(post)}\n"
+    end
+  end
+  puts result
+end
