@@ -13,7 +13,10 @@ group :development do
   gem 'rb-fsevent', '~> 0.9'
   gem 'stringex', '~> 1.4.0'
   gem 'liquid', '~> 2.3.0'
-  gem 'rake-minify'
+  gem 'uglifier', '~> 1.2.4'
+  gem 'guard', '~> 1.1.1'
+  gem 'guard-compass', '~> 0.0.6'
+  gem 'guard-livereload', '~> 1.0.0'
 end
 
 gem 'sinatra', '~> 1.3.2'

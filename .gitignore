@@ -7,9 +7,10 @@ _deploy
 public
 sass.old
 source.old
+javascripts.old
 source/_stash
-source/stylesheets/screen.css
-source/javascripts/octopress.min.js
+source/stylesheets/*
+#source/javascripts/*
 source/images/icon-*.png
 vendor
 node_modules
