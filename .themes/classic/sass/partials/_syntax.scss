@@ -4,7 +4,7 @@
     text-align: right;
     font-size: 13px;
     line-height: 1.45em;
-    @if $solarized == light {
+    @if lightness($base03) > lightness(#555) {
       background: lighten($base03, 1) $noise-bg !important;
       border-right: 1px solid darken($base02, 2) !important;
       @include box-shadow(lighten($base03, 2) -1px 0 inset);
@@ -24,6 +24,24 @@
 figure.code, .gist-file, pre {
   @include box-shadow(rgba(#000, .06) 0 0 10px);
   .highlight pre { @include box-shadow(none); }
+}
+
+pre .line.marked {
+  position: relative;
+  display: block;
+  &:after {
+    content: "";
+    position: absolute;
+    background: $marker-bg;
+    left: -.8em; top: 0; bottom: 0; right: -.8em;
+    border: 1px solid { left-color: $marker-border-left; left-width: 2px; right-color: $marker-border; top: 0; bottom: 0; }
+  }
+  &.start:after {
+    border-top: 1px solid $marker-border;
+  }
+  &.end:after {
+    border-bottom: 1px solid $marker-border;
+  }
 }
 
 html .gist .gist-file {
@@ -46,7 +64,7 @@ html .gist .gist-file {
    border: 1px solid lighten($base02, 2) !important;
    color: $base01;
    font-size: .7em !important;
-   @if $solarized == light {
+   @if lightness($base03) > lightness(#555) {
      background: lighten($base03, 2) $noise-bg;
      border: 1px solid $pre-border !important;
      border-top: 1px solid lighten($base03, 2) !important;
@@ -107,7 +125,6 @@ p, li {
 }
 
 .pre-code {
-  @include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px);
   font-family: $mono !important;
   overflow: scroll;
   overflow-y: hidden;
@@ -196,7 +213,7 @@ p, li {
 
 $solar-scroll-bg: rgba(#fff, .15);
 $solar-scroll-thumb: rgba(#fff, .2);
-@if $solarized == light {
+@if lightness($base03) > lightness(#555) {
   $solar-scroll-bg: rgba(#000, .15);
   $solar-scroll-thumb: rgba(#000, .15);
 }
@@ -223,31 +240,50 @@ figure.code {
   }
 }
 
+pre {
+  @if $code-selection-color != false {
+    @include selection($code-selection);
+  }
+}
+
 .code-title {
   text-align: center;
   font-size: 13px;
   line-height: 2em;
-  text-shadow: #cbcccc 0 1px 0;
-  color: #474747;
   font-weight: normal;
   margin-bottom: 0;
   @include border-top-radius(5px);
   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
-  background: #aaaaaa image-url("code_bg.png") top repeat-x;
-  border: 1px solid #565656;
-  border-top-color: #cbcbcb;
-  border-left-color: #a5a5a5;
-  border-right-color: #a5a5a5;
-  border-bottom: 0;
+  background-color: #aaaaaa; // image-url("code_bg.png") top repeat-x;
+  @if lightness($base03) <= lightness(#555) {
+    text-shadow: #cbcccc 0 1px 0;
+    color: #555;
+    @include background-image(linear-gradient(
+      #e0e0e0, #cfcfcf 6%, #b1b1b1 90%, #aaaaaa
+    ));
+    border: 1px solid #a5a5a5 {
+      top-color: #cbcbcb;
+      bottom: 0;
+    }
+  }
+  @else if lightness($base03) > lightness(#555) {
+    text-shadow: #fff 0 1px 0;
+    color: #777;
+    @include background-image(linear-gradient(
+      #fff, #f0f0f0 6%, #e5e5e5 90%, #ddd
+    ));
+    border: 1px solid #c5c5c5 {
+      top-color: #d5d5d5;
+      bottom: 0;
+    }
+  }
 }
 
 .download-source {
   position: absolute; right: .8em;
   @include hover-link;
-  color: #666 !important;
+  color: inherit !important;
   z-index: 1;
   font-size: 13px;
-  text-shadow: #cbcccc 0 1px 0;
   padding-left: 3em;
 }
-

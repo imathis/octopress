@@ -9,10 +9,10 @@ module OctopressFilters
   include BacktickCodeBlock
   include TemplateWrapper
   def pre_filter(input)
-    input = render_code_block(input)
     input.gsub /(<figure.+?>.+?<\/figure>)/m do
       safe_wrap($1)
     end
+    input = render_code_block(input)
   end
   def post_filter(input)
     input = unwrap(input)
@@ -63,13 +63,6 @@ module OctopressLiquidFilters
     end
   end
 
-  # Extracts raw content DIV from template, used for page description as {{ content }}
-  # contains complete sub-template code on main page level
-  def raw_content(input)
-    /<div class="entry-content">(?<content>[\s\S]*?)<\/div>\s*<(footer|\/article)>/ =~ input
-    return (content.nil?) ? input : content
-  end
-
   # Escapes CDATA sections in post content
   def cdata_escape(input)
     input.gsub(/<!\[CDATA\[/, '&lt;![CDATA[').gsub(/\]\]>/, ']]&gt;')
@@ -80,6 +73,17 @@ module OctopressLiquidFilters
     url ||= '/'
     input.gsub /(\s+(href|src)\s*=\s*["|']{1})(\/[^\"'>]*)/ do
       $1+url+$3
+    end
+  end
+
+  # Prepend a local url with a file path
+  # remote urls and urls beginning with ! will be ignored
+  def prepend_url(input, path='')
+    path += '/' unless path.match /\/$/
+    if input.match /^!/
+      input.gsub(/^(!)(.+)/, '\2')
+    else
+      input.gsub(/^(\/)?([^:]+?)$/, "#{path}"+'\2')
     end
   end
 
@@ -103,11 +107,6 @@ module OctopressLiquidFilters
     else
       input
     end
-  end
-
-  # Condenses multiple spaces and tabs into a single space
-  def condense_spaces(input)
-    input.gsub(/\s{2,}/, ' ')
   end
 
   # Removes trailing forward slash from a string for easily appending url segments

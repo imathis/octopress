@@ -1,0 +1,11 @@
+{% if site.github_user %}
+<section>
+  <h1>On GitHub</h1>
+  <ul id="gh_repos" data-user="{{site.github_user}}" data-count="{{site.github_repo_count}}" data-skip="{{site.github_skip_forks}}">
+    <li class="loading">Status updating...</li>
+  </ul>
+  {% if site.github_show_profile_link %}
+  <a class="github-follow" href="https://github.com/{{site.github_user}}">Follow @{{site.github_user}}</a>
+  {% endif %}
+</section>
+{% endif %}

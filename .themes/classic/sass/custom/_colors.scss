@@ -1,24 +1,36 @@
-// Here you can easily change your sites's color scheme.
-// To give it a try, uncomment some of the lines below rebuild your blog, and see how it works.
-// If you need a handy color picker try http://hslpicker.com
+/*
+  Here you can easily change your site's color scheme.
+  To give it a try, uncomment some of the lines below rebuild your blog, and see how it works.
+  Look at sass/base/_theme.scss for more colors you tweak (override them in this file)
+
+  For a handy color picker try http://hslpicker.com */
 
 //$header-bg: #263347;
 //$subtitle-color: lighten($header-bg, 58);
 //$nav-bg: desaturate(lighten(#8fc17a, 18), 5);
-//$nav-bg-front: image-url('noise.png');
-//$nav-bg-back: linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11));
 //$sidebar-bg: desaturate(#eceff5, 8);
 //$sidebar-link-color: saturate(#526f9a, 10);
 //$sidebar-link-color-hover: darken(#7ab662, 9);
-//$footer-bg: #ccc !default;
-//$footer-bg-front: image-url('noise.png');
-//$footer-bg-back: linear-gradient(lighten($footer-bg, 8), $footer-bg, darken($footer-bg, 11));
 
 
-/* To use the light Solarized highlighting theme uncomment the following line */
-//$solarized: light;
+/* To use the dark code highlighting theme uncomment the following line */
 
-/* If you want to tweak the Solarized colors you can do that here */
+//$solarized: dark;
+
+/* To adjust the background color uncomment and edit the following line */
+/* If you intend to use a dark background, uncomment $solarized: dark; above*/
+
+//$pre-bg: #252525;
+
+/* To change the color of the code markers, uncomment and change the following lines */
+
+//$marker:        rgba(#00baff, .5);
+//$marker-bg:     rgba($marker, .03);
+//$marker-border: rgba($marker, .13);
+//$marker-border-left:   $marker;
+
+/* For fine control over the syntax highlighting colors edit here */
+
 //$base03:          #002b36; //darkest blue
 //$base02:          #073642; //dark blue
 //$base01:          #586e75; //darkest gray
@@ -35,9 +47,3 @@
 //$solar-blue:      #268bd2;
 //$solar-cyan:      #2aa198;
 //$solar-green:     #859900;
-
-
-/* Non highlighted code colors */
-//$pre-bg: $base03;
-//$pre-border: darken($base02, 5);
-//$pre-color: $base1;

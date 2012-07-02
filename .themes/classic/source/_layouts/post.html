@@ -4,13 +4,13 @@ single: true
 ---
 
 <div>
-<article class="hentry" role="article">
+{% include post/variables.html %}
+<article class="hentry {% if linklog %}linklog{% endif %}" role="article">
   {% include article.html %}
   <footer>
     <p class="meta">
-      {% include post/author.html %}
-      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-      {% include post/categories.html %}
+      {% include post/meta.html %}
+      {% include custom/post_meta.html %}
     </p>
     {% unless page.sharing == false %}
       {% include post/sharing.html %}
@@ -25,19 +25,15 @@ single: true
     </p>
   </footer>
 </article>
-{% if site.disqus_short_name and page.comments == true %}
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
-  </section>
-{% endif %}
+{% include custom/after_post.html %}
+{% if page.comments == true %}{% include comments.html %}{% endif %}
 </div>
-{% unless page.sidebar == false %}
+{% unless page.sidebar == false or site.default_sidebar == false %}
 <aside class="sidebar">
-  {% if site.post_asides.size %}
-    {% include_array post_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
+  {% if page.sidebar == nil or page.sidebar == 'collapse' %}
+    {% include_sidebar site.post_sidebar %}
+  {% else %}
+    {% include_sidebar %}
+  {% endif %}
 </aside>
 {% endunless %}

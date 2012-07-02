@@ -1,0 +1,9 @@
+{% assign linklog = false %}
+{% if post.external-url %}{% capture linklog %}{{ post.external-url | prepend_url: site.url }}{% endcapture %}{% endif %}
+{% capture title_url %}{% if linklog %}{{ linklog }}{% else %}{{ site.url }}{{ post.url }}{% endif %}{% endcapture %}
+{% capture title %}{% if linklog and site.linklog_marker_position_feed == 'before' %}{% unless linklog %}{{ site.standard_post_marker }}{% endunless %}{{ site.linklog_marker }} {% endif %}{{ post.title }}{% if linklog and site.linklog_marker_position_feed == 'after' %} {{ site.linklog_marker }}{% endif %}{% endcapture %}
+{% capture content %}{% if site.excerpt_in_feed %}{{ post.content | excerpt | expand_urls: site.url }}<p><a rel="bookmark" href="{{ site.url }}{{ post.url }}">{{ site.excerpt_link }}</a></p>{% else %}{{ post.content | expand_urls: site.url }}<p><a rel="bookmark" href="{{ site.url }}{{ post.url }}">{{ site.permalink_label_feed }}</a></p>{% endif %}{% endcapture %}
+<title type="html"><![CDATA[{{ title | cdata_escape }}]]></title>
+<link href="{{ title_url }}"/>
+<updated>{{ post.date | date_to_xmlschema }}</updated>
+<id>{{ site.url }}{{ post.id }}</id>

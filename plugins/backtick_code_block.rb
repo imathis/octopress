@@ -5,37 +5,28 @@ module BacktickCodeBlock
   AllOptions = /([^\s]+)\s+(.+?)(https?:\/\/\S+)\s*(.+)?/i
   LangCaption = /([^\s]+)\s*(.+)?/i
   def render_code_block(input)
-    @options = nil
-    @caption = nil
-    @lang = nil
-    @url = nil
-    @title = nil
-    input.gsub(/^`{3} *([^\n]+)?\n(.+?)\n`{3}/m) do
-      @options = $1 || ''
-      str = $2
+    input.encode!("UTF-8")
+    input.gsub /^`{3}(.+?)`{3}/m do
+      str = $1.to_s
+      str.gsub /([^\n]+)?\n(.+?)\Z/m do
+        markup = $1 || ''
+        code = $2.to_s
 
-      if @options =~ AllOptions
-        @lang = $1
-        @caption = "<figcaption><span>#{$2}</span><a href='#{$3}'>#{$4 || 'link'}</a></figcaption>"
-      elsif @options =~ LangCaption
-        @lang = $1
-        @caption = "<figcaption><span>#{$2}</span></figcaption>"
-      end
+        linenos = get_linenos(markup)
+        markup = replace_linenos(markup)
 
-      if str.match(/\A( {4}|\t)/)
-        str = str.gsub(/^( {4}|\t)/, '')
-      end
-      if @lang.nil? || @lang == 'plain'
-        code = tableize_code(str.gsub('<','&lt;').gsub('>','&gt;'))
-        "<figure class='code'>#{@caption}#{code}</figure>"
-      else
-        if @lang.include? "-raw"
-          raw = "``` #{@options.sub('-raw', '')}\n"
-          raw += str
-          raw += "\n```\n"
+        marks = get_marks(markup)
+        markup = replace_marks(markup)
+        
+        start = get_start(markup)
+        markup = replace_start(markup)
+
+        if markup =~ AllOptions
+          highlight(code, $1, {caption: $2, url: $3, anchor: $4 || 'Link', linenos: linenos, start: start, marks: marks})
+        elsif markup =~ LangCaption
+          highlight(code, $1, {caption: $2 || nil, linenos: linenos, start: start, marks: marks})
         else
-          code = highlight(str, @lang)
-          "<figure class='code'>#{@caption}#{code}</figure>"
+          highlight(code, 'plain', {linenos: linenos, start: start})
         end
       end
     end

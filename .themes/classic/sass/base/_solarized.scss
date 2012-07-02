@@ -1,11 +1,24 @@
+$solarized: light !default;
+$pre-bg: default !default;
+
 $base03:          #002b36 !default; //darkest blue
 $base02:          #073642 !default; //dark blue
 $base01:          #586e75 !default; //darkest gray
 $base00:          #657b83 !default; //dark gray
 $base0:           #839496 !default; //medium gray
 $base1:           #93a1a1 !default; //medium light gray
-$base2:           #eee8d5 !default; //cream
-$base3:           #fdf6e3 !default; //white
+// Test defaults for cream colors
+$base2:           default !default;
+$base3:           default !default;
+@if $solarized == dark {
+  @if $base2 == default { $base2: #eee8d5; } // cream
+  @if $base3 == default { $base3: #fdf6e3; } // cream white
+}
+@if $solarized == light {
+  // I prefer white and gray for the light theme
+  @if $base2 == default { $base2: #e5e5e5; } // light gray
+  @if $base3 == default { $base3: #fbfbfb; } // white
+}
 $solar-yellow:    #b58900 !default;
 $solar-orange:    #cb4b16 !default;
 $solar-red:       #dc322f !default;
@@ -15,10 +28,8 @@ $solar-blue:      #268bd2 !default;
 $solar-cyan:      #2aa198 !default;
 $solar-green:     #859900 !default;
 
-$solarized: dark !default;
-
 @if $solarized == light {
-
+  // Flipping the colors, This is the magic of Solarized.
   $_base03: $base03;
   $_base02: $base02;
   $_base01: $base01;
@@ -39,8 +50,26 @@ $solarized: dark !default;
 }
 
 /* non highlighted code colors */
-$pre-bg: $base03 !default;
+@if $pre-bg == default {
+  $pre-bg: $base03;
+} @else if $pre-bg != $base03 {
+  $base03: $pre-bg;
+  $base02: lighten($base03, 5);
+}
+
 $pre-border: darken($base02, 5) !default;
 $pre-color: $base1 !default;
 
+@if $pre-border != darken($base02, 5) {
+  $base02: lighten($pre-border, 5);
+}
+@if $pre-color != $base1 {
+  $base1: $pre-color;
+}
 
+$marker:        rgba(#00baff, .5) !default;
+$marker-bg:     rgba($marker, .03) !default;
+$marker-border: rgba($marker, .13) !default;
+$marker-border-left:   $marker !default;
+
+$code-selection-color: false !default;

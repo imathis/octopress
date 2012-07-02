@@ -27,19 +27,19 @@ module Jekyll
       @by = nil
       @source = nil
       @title = nil
-      if markup =~ FullCiteWithTitle
+      if markup.strip =~ FullCiteWithTitle
         @by = $1
         @source = $2 + $3
         @title = $4.titlecase
-      elsif markup =~ FullCite
+      elsif markup.strip =~ FullCite
         @by = $1
         @source = $2 + $3
-      elsif markup =~ Author
+      elsif markup.strip =~ Author
         if $1 =~ /([^,]+),([^,]+)/
           @by = $1
           @title = $2.titlecase
         else
-          @by = $1
+          @by = markup
         end
       end
       super
