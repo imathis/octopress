@@ -39,5 +39,9 @@ module BacktickCodeBlock
         end
       end
     end
+  rescue StandardError => e
+    puts "ERROR: Couldn't parse a code block in this post: #{input}"
+    puts "========================================================="
+    raise e
   end
 end
