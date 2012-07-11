@@ -190,3 +190,7 @@ body.sidebar-footer {
   }
 }
 
+#figfooter {
+  @include border-top-radius(0px);
+  @include border-bottom-radius(5px);
+}
