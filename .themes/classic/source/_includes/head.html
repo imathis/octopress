@@ -21,11 +21,11 @@
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{% if page.url contains site.category_dir %}/{% endif %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
   <link rel="canonical" href="{{ canonical }}">
   <link href="{{ root_url }}/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+  {% include custom/head.html %}
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="{{ root_url }}/javascripts/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="{{ root_url }}{% javascript_assets_tag %}"></script>
-  <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
-  {% include custom/head.html %}
   {% include google_analytics.html %}
   {% include gauges_analytics.html %}
   {% unless favicon %}{% capture favicon %}{{ root_url }}/octopress-favicon.png{% endcapture %} {% endunless %}
