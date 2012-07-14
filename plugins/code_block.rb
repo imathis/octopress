@@ -93,9 +93,9 @@ module Jekyll
         source += "#{tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'))}"
       end
       if !@linkTitle.nil?
-        source += "<figcaption id='figfooter'><a href='#{@linkUrl}'>#{@linkTitle}</a></figcaption>"
+        source += "<figcaption class='figfooter'><a href='#{@linkUrl}'>#{@linkTitle}</a></figcaption>"
       elsif !@linkUrl.nil?
-        source += "<figcaption id='figfooter'><a href='#{@linkUrl}'>link</a></figcaption>"
+        source += "<figcaption class='figfooter'><a href='#{@linkUrl}'>link</a></figcaption>"
       end
       source += "</figure>";
       source = safe_wrap(source)

@@ -189,8 +189,3 @@ body.sidebar-footer {
     ul, ol { margin-left: 0; }
   }
 }
-
-#figfooter {
-  @include border-top-radius(0px);
-  @include border-bottom-radius(5px);
-}
