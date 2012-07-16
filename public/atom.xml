@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[From Inspiration to realization]]></title>
+  <title><![CDATA[Avi Tzurel]]></title>
   <link href="http://avi.io/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2012-07-16T14:06:26+03:00</updated>
+  <updated>2012-07-16T14:20:21+03:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
