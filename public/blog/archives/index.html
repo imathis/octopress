@@ -9,8 +9,8 @@
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content=" Blog Archive 2012 Something about something
-Jul 05 2012 Recent Posts Something about something ">
+  <meta name="description" content="Blog Archive 2012 Something about something
+Jul 05 2012 Recent Posts Something about something Latest Tweets Status updating... $.domReady(function &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -108,6 +108,22 @@ Jul 05 2012 Recent Posts Something about something ">
 </section>
 
 
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("KensoDev", 10, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/KensoDev" class="twitter-follow-button" data-show-count="true">Follow @KensoDev</a>
+  
+</section>
+
 
 
 
@@ -128,7 +144,24 @@ Jul 05 2012 Recent Posts Something about something ">
 
 
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
 
 
 
