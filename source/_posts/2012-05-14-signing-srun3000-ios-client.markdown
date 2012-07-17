@@ -3,7 +3,10 @@ layout: post
 title: "Signing Srun3000 iOS Client"
 date: 2012-05-14 21:28
 comments: true
-categories: 
+categories:
+- iOS
+- Codesign
+
 ---
 
 学校的 Srun3000 客户端又是那种不越狱就不能装的……有 Apple 给发的证书，就自己签下名呗，谁知道一直不成功……
