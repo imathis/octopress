@@ -1,0 +1,39 @@
+---
+layout: post
+title: Android 观察
+categories:
+- Information Technology
+tags:
+- android
+- G1
+- Google
+published: true
+comments: true
+---
+<p><em>本文为 <a href="http://www.google.com/intl/zh-CN/daxue/blog2010/index.html">“首届 Google 暑期大学生博客分享大赛——2010 Android 篇”</a> 参赛文章。</em></p>
+
+<p><em>接着上篇 <a href="http://blog.leafduo.com/43/android-one-year-anniversary">Android 周年纪念</a>接着说下去：</em></p>
+
+<p>浪迹 Android 圈也一年了，要说长不长，要说短也不短了……那我就说说一年中自己对 Android 的观察和思考。Android 优秀之处<a href="http://blog.leafduo.com/43/android-one-year-anniversary">上篇</a>已经说了不少，那我来换个角度评价一下 Android，主要说说不足和问题。</p>
+
+<p><strong>先说说 <strong>Android 系统本身</strong>的问题。</strong>Android 虽然有很多令人兴奋的功能和组件，但是仍然有很多地方做得并不好，而这些地方主要在细节方面。首先是联系人的排序问题，Android 的联系人无法按照<strong>中文拼音顺序排序</strong>，这可能是由于对中文用户并不重视，（据说）已经支持对日文进行排序了。我看了几篇文章，试着自己实现，发现都不完美，国内的 ROM 可能已经实现这个功能了，我没有尝试。按理说 Android 不应该这么不重视中文用户，毕竟还特别为 Android 做了一款<a href="http://en.wikipedia.org/wiki/Droid_(font)">字体</a>。</p>
+
+<p>接着说联系人，无法修改<strong>联系人分组</strong>的问题实在很纠结，可以选择显示哪个组的联系人，就是不能改分组，难道让我在笔记本上改好吗？<strong>Ad-hoc 网络</strong>问题，为啥 Android 就不能连接 Ad-hoc 网络？虽然有<a href="http://allenss.wordpress.com/2010/02/26/milestone_and_ad-hoc/">解决方法</a>，但我觉得这是官方应该提供的。<strong>VPN 密码</strong>问题，VPN 的密码无法保存，强制的安全性扼杀了用户的便利，扼杀了用户选择的权利。我认为 Google 应当更加注重细节，细节做不好，用户体验做不好，老用户会在长期使用中感到不快，进而影响 Android 的口碑。</p>
+
+<p>这一点或许应当向苹果学习，虽然初代 iPhone 刚刚出来的时候缺少很多功能，但只要是苹果提供的功能，都力求做到最好，缺少的功能在日后补充，而不是发一个半成品出来，这样会让用户很反感。我说一个亲身经历的例子，那时候还是 Android 1.5，我在写一封邮件，得益于 G1 的实体键盘，我很快写了几百字，正当停下思考的时候不小心碰了一下 Discard 按钮，瞬间，几百字灰飞烟灭。遇到这样的事情，用户肯定会感到不快，有的还会跟身边的人说，这样不光是几百字的邮件没了，Android 的口碑也没了。升级到 1.6 之后，Discard 增加了确认，这么简单的功能为什么在 1.5 的时候没有做到呢？1.5 并不是测试版，它是真真正正发布出来给用户使用的，不应当犯这种实习生都不会犯的低级错误。</p>
+
+<p>还有一些是第三方应用的问题，挑一些大家用得比较多的来说吧。先是<strong>人人客户端</strong>，我感觉人人客户端总体来说来算不错，不过有个不能容忍的 bug，在向下划新鲜事的时候，会有上面已经看过的新鲜事出现，应该是算法有问题，还有当进入一篇日志或者相册的时候，返回时可能不在原来的位置，当你翻了很多新鲜事的时候这实在是……还会出现莫名其妙的 FC（force close）。还有 <strong>QQ</strong>，不是很常上 QQ，Android QQ 给人的印象就是非常卡，打字都会卡，可能是因为我的机型比较旧了，但我想一个 IM 软件应该不应该占用很多系统资源。<strong>支付宝</strong>至今不支持横屏，登录过程中切换横竖屏的时候会 FC……<strong>Seesmic</strong> 感觉是个挺漂亮的 twitter 客户端，但是莫名其妙地网络故障让人不得不放弃……随口一说，就有这么多问题。</p>
+
+<p>我认为出现这些问题不光是第三方开发者的问题，Google 作为管理者也应当为 Market 中应用质量普遍不高负责。首先是缺乏准入机制，我没有开发过 Android 应用，但是据观察基本没有无法进入 Market 的应用，完全没有质量的<a href="http://imtx.cn/archives/1449.html">“性感女郎”</a>之类的软件也能进入 Market，<a href="http://article.yeeyan.org/view/105279/113924">多达 144 个垃圾铃声应用和侵犯版权的应用</a>也轻松进入了 Market，严重地影响了 Android 应用的平均质量。iPhone/iPad App Store 的准入制度使得软件作者必须提高他的软件质量，才能进入市场，<a href="http://apple4.us/2010/06/2010-wwdc-wrapup.html">最起码不能频繁崩溃</a>。Google 也对应用的行为缺乏监督，举个例子，一个应用可以无视系统设置的是否允许自动转屏，自己转到横屏或者转回来，甚至这种现象出现在了 Google 自家的应用──自带的 Chrome Lite 中，当用户躺在床上的时候，他们是多么痛恨这些应用。</p>
+
+<p><strong>付费应用</strong>数量过少，只<a href="http://www.techcrunchchina.com/1419">占到 Market 里面应用数量的的 43%</a>，相比之下 iPhone/iPad 仅有 28% 的应用是免费的，75% 都是收费的。作为一个消费者，能够免费用上优质的软件当然是件好事，但是对于大部分软件作者来说，盈利是必须要考虑的事情，免费的软件也就意味着投入更少的精力，结果只能是低劣的质量。或许 AdMob 也是盈利的一个选项，但手机屏幕空间很珍贵，放一个广告很可能会影响用户体验，国内用户对流量也很敏感，而且我个人对通过 AdMob 之类的广告来盈利不是很看好。而且对国内用户来说最重要的是，通过<a href="http://tech.it168.com/a2010/0729/1083/000001083903.shtml">正常方法并不能看到 Market 中的收费应用</a>，开发者也无法发布付费应用，这让 Android 对国内用户和开发者的吸引力骤减。我认为开发者不能赚到的平台是很危险的，无法长期发展下去。</p>
+
+<p><strong>ROM 版本过多</strong>也是一个问题，每个 ROM 版本的功能、质量都不同，Market 中的应用数量和质量也不同，搭载旧版本的手机很难升级到更新版本，这就造成了<a href="http://www.cnetnews.com.cn/2010/0412/1700972.shtml">市场的分裂</a>，使得本来就不大的 Android 市场又变得四分五裂，而现在<a href="http://android-developers.blogspot.com/2010/07/how-to-have-your-cupcake-and-eat-it-too.html">运行着 2.1 以下系统的 Android 手机还有近一半</a>，这些手机无法享受到高版本 ROM 中的新功能和新的第三方应用，不能不说是个遗憾。不过还好，据说 Google 已经开始着手解决这个问题了（没找到链接，抱歉）。</p>
+
+<p><strong>多媒体</strong>应用薄弱则是另一个问题，自带的 Music 实在是无法使用，音乐的管理乱到遭，管理播放列表十分麻烦，而第三方应用也没有非常出色的，缺少一个类似 iTunes 的软件来管理，创新工场推出了一个<a href="http://wandoujia.com/">豌豆荚</a>，据称不错，不过目前只有 Windows 版本，所以我没有试用。</p>
+
+<p>最后说一说国内的特殊问题（中国特色问题？），首先是 Google 这个牌子的问题，由于<a href="http://www.google.com/press/new-approach-to-china/update.html">种种原因</a>，Google 这个牌子并不像它在美国或者世界上其他国家那样响亮了，其次还有国内特殊的情况，比如用户素质、企业文化、政策因素等等，这些引发了很多问题。其一是<a href="http://cn.engadget.com/2010/03/26/android-google-china-unicom-no-search-on-android/">很多国内的 Android 手机不选择 Google 作为搜索引擎</a>，有的甚至<a href="http://mm.10086.cn/">阉割掉了 Market 换上自己的市场</a>，我想这是 Google 不愿意看到的，也是大部分用户不愿意看到的。还有一个更严重的问题，<a href="http://tinkpad.wuyan.org/2010/01/06/android-market/">在某些地方 Market 的服务器会神奇地无法连接</a>，无法安装新应用，也无法更新，这对于 Android 用户来说无疑是致命的打击。我认为，对于某些行为明显不妥的企业，Google 应当加强监管，放出一些限制条款，不能纵容这种行为，赤裸裸的分裂长期来看对于整个社区、整个 Android 生态环境都不是好事，而对于某些神奇的问题，Google 应当加强公关能力，让这些地方的用户也用上优质的服务。</p>
+
+<p>总体来说，Android 做得最好的就是与 Google 服务的紧密结合，最需要改进的是对 Market 的监管和第三方应用的质量。</p>
+
+<p><a href="http://cn.engadget.com/2010/07/28/pour-one-out-t-mobile-g1-no-longer-for-sale/">作为 Android 元老的 G1 已经离我们远去了</a>，但是 Android 平台还会继续走下去，愿 Android 越走越好。</p>

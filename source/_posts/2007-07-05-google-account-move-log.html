@@ -1,0 +1,36 @@
+---
+layout: post
+title: Google Account迁移手记
+categories:
+- Information Technology
+tags:
+- Firefox
+- Google
+published: true
+comments: true
+---
+<p>前几天换了E-mail地址（换成了LeafDuo@gmail.com），所以就把整个一个Google Account搬移了过来。因为Google没有提供更改用户名的工具，第三方也没有类似工具，所以我就基本徒手（当然也借助工具）迁移了整个账户（几乎包括每个服务）。来看一下迁移的过程，可能对某些人有用的。（我的Google Account语言是英语，所以下面的名称以英文为准，中文是自己翻译的）
+<ol>
+	<li>首先申请一个新的Google Account（Gmail），这里假设你申请的是new@gmail.com，原来的是old@gmail.com（当然你不可能申请到这两个地址，因为用户名最短为5个字母）</li>
+	<li>迁移Gmail。我不打算把所有的邮件都搬过去，一来是因为太多（2000+），二来是没有太大用处。所以就只是做了转发和留言，然后迁移了Contacts。<br />
+首先进入settings（设置）-&gt;Forwarding and POP（转发和POP）-&gt;Forwarding（转发），选择Forward a copy of incoming mail to（转发一个副本到），在后面填入new@gmail.com，选择keep Gamil's copy in the inbox（在Gmail中保留副本）。然后到General选项卡，Vacation responder（假期回复），选择Vacation responder on（打开假期回复），在下面的Subject（标题）和Message（消息）中输入相应内容。最后点击Save Changes（保存更改）。<br />
+登录old@gmail.com，点击Contacts（联系人），右上角Export（导出），选择Gmail CSV (for import into another Gmail account)，将这个cvs保存在本地，然后登出old@gmail.com。登录new@gmail.com，同样进入Contacts（联系人），右上角IMport（导入），导入刚才的cvs，这样Contacts（联系人）就迁移好了，不过这样有一个问题，就是原来的Groups（组）不见了，自己手动新建吧。<br />
+创建一个Filter，选择页面上方的Create a filter，在To（收件人）后面填上new@gmail.com，然后Next Step（下一步），勾选Apply the label，右面选New label（新标签），输入old address。然后Creat Filter（创建过滤器）。
+<strong>update</strong> 20080413：不知道什么时候， Gmail 能用 POP3 进入其他 Gmail 了，以前貌似不行的，这样的话，在 old@gmail.com 设置允许 POP3（Settings-&gt;<span>Forwarding and POP/IMAP-&gt;</span>Enable POP for <span class="KPbg7b">all mail</span>），然后在 new@gmail.com 添加一个新账户（Settings-&gt;<span>Accounts-&gt;</span><span class="jwjW1c">Get mail from other accounts-&gt;</span><span id="1fsw" class="GaVz0 jwjW1c">Add another mail account</span>），然后按照提示一步步来就是了。（注意：由于 POP3 只能访问 Inbox 中的邮件，请先将 All mail move to Inbox ）</li>
+	<li>迁移Google Reader。登录old@gmail.com，进入Google Reader -&gt; Import/Export，然后Export your subscriptions as an OPML file，保存在本地。登录new@gmail.com，进入Google Reader -&gt; Import/Export， Select an OPML file，然后就ok了。这个会连分组一起导入的，很方便。（貌似这方面OPML比CVS好）</li>
+	<li>迁移Google Calendar（日历）。登录old@gmail.com，进入settings（设置）-&gt;Calendars（日历），单击你的日历右面的Share this calendar，在Share with specific people（与特定的人共享）中加入new@gmail.com，Has Permission To（权限）选择Make changes AND manage sharing（更改日历并管理共享），点击Add Person。然后，old@gmail.com会收到一封通知邮件，Calendar里也有了这个Calendar。</li>
+	<li>迁移Google Bookmarks（书签）。登录old@gmail.com，进入Google Bookmarks，单击左下角Export Bookmarks（导出书签）（这个功能中文版没有，如果你使用中文版，请在地址栏最后加上&amp;hl=en，换回中文版请换成&amp;hl=zh-CN），将其保存到本地，然后在Firefox（IE应该也有类似的功能吧）中选择书签-&gt;管理书签-&gt;文件-&gt;导入书签，选择从文件，选择刚才的文件。之后，在Google Toolbar（没有安装的请在这里<a href="http://toolbar.google.com">下载</a>，IE版的应该也有类似的功能吧）中书签项上，选择导入Firefox书签，然后勾掉不想要的书签，最后导入即可。（感觉这个方法不是很好，得借用Firefox的书签和Google Toolbar，不知谁有好办法？）</li>
+	<li>迁移blogger。登录old@gmail.com，进入blogger，选择你的blog的设置，单击许可，添加作者，填上new@gmail.com，邀请。登录new@gmail.com，会收到一封邮件，确认后登录blogger。然后登录old@gmail.com，到许可选项卡，点击new@gmail.com右面的作者，使其变为管理员。</li>
+	<li>迁移iGoogle。由于我的iGoogle上只有几个staff，所以手动添加，改一下theme，就ok了。</li>
+	<li>迁移Google Documents &amp; Spreadsheets和Google Notebooks。在每一个文件上都做共享吧，虽然比较麻烦，但我真的想不出来别的方法了。</li>
+	<li>迁移Webmaster Tools。在每个网站上都加上认证就行了，我想不会有人管理几十个网站吧。</li>
+	<li>迁移Google Talk。在迁移Gmail的时候已经迁移过Contacts了，所以就不用费什么劲了，只是再认证一遍就行了。</li>
+	<li>迁移PinYin IME（谷歌拼音输入法）。在PinYin IME登录old@gmail.com，然后同步，在更换账户，跟new@gmail.com同步，不知道这样有没有效果，不过我还是这样做了。</li>
+	<li>迁移Google Groups（论坛）。这个貌似不需要迁移，不过让Group上的人重新认识你需要一定的时间。</li>
+	<li>迁移Picasa Web Albums。这个还需要迁移吗？有两倍的空间多好啊。</li>
+	<li>迁移Web History。不知道方法，也没必要。</li>
+	<li>迁移Google Alerts。不常用，上面的Alerts也不多，就手动搬过来了。其实不搬也行，反正发到old@gmail.com的所有邮件都会转发过来。</li>
+	<li>迁移orkut。基本上不用，也就不知道了。</li>
+	<li>迁移Youtube。我是用上新的Acconut之后Google Account才能Link Youtube账户的。^_^</li>
+</ol>
+敝人拙作，希望对您有点用处。</p>

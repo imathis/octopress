@@ -1,0 +1,37 @@
+---
+layout: post
+title: Gentoo/Nginx with IPv6 (Tunnel) Support
+categories:
+- Information Technology
+tags:
+- Gentoo
+- ipv6
+- Linux
+- Nginx
+- tunnel
+published: true
+comments: true
+---
+<p>弄了一个 <a href="http://he.net/">he.net</a> 的 <a href="http://tunnelbroker.net/">IPv6 隧道</a>，给服务器用。（你说你 <a href="http://www.linode.com/">Linode</a> 为啥不提供原生 IPv6，为啥？）</p>
+
+<p>一会就申请完了，你就获得 4 个 IP，服务器的 IPv4、IPv6，客户端的 IPv4、IPv6，你需要这些 IP 来做一些配置。</p>
+
+<p>首先是配好 Gentoo，<a href="http://www.linode.com/wiki/index.php/IPv6#Gentoo">LInode 的 wiki</a> 写的很清楚，注意 interface 的名字似乎不能太短，一开始我起的叫 he，出了奇怪的错误……改成 hetun 就好了……</p>
+
+<p>注意 Linode 的 eth0 是用的 DHCP，别乱改。</p>
+
+<p>接下来是 Nginx，因为编译的时候已经带上 USE="ipv6" 了，所以就不需要重新编译了，改一下 Listen 语句就行。我原先都是用的 Listen 0.0.0.0:80，要使 IPv6 有效的话要改成 [::]:80，于是尝试性地改了一个域名的配置。</p>
+
+<p>重启 Nginx，报错，说 80 端口已经被 bind 了，我说不可能啊，lsof -i tcp:80 也是空的。想了想隐约知道是怎么回事了，于是把所有的配置文件都从 Listen 0.0.0.0:80 改成 Listen [::]:80，重启，OK 了。</p>
+
+<p>想来是因为 Nginx 把 0.0.0.0:80 和 [::]:80 认成了两个端口，于是 bind 了两遍，这不就冲突了嘛……都改成 Listen [::]:80 就好了。</p>
+
+<p>参考文献：</p>
+
+<p><ol>
+	<li><a href="http://kovyrin.net/2010/01/16/enabling-ipv6-support-in-nginx/">http://kovyrin.net/2010/01/16/enabling-ipv6-support-in-nginx/</a></li>
+	<li>tunnelbroker.net 给的配置命令</li>
+	<li><a href="http://www.linode.com/wiki/index.php/IPv6#Gentoo">http://www.linode.com/wiki/index.php/IPv6#Gentoo</a></li>
+</ol></p>
+
+<p></p>

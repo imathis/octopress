@@ -1,0 +1,22 @@
+---
+layout: post
+title: Archlinux 提前体验 IPv6
+categories:
+- Information Technology
+tags:
+- Arch
+- Archlinux
+- gw6c
+- ip
+- ipv6
+- tun
+published: true
+comments: true
+---
+<p>在<a href="http://linuxdesktop.cn/2008/05/20/ipv6-under-linux/">这里</a>看到了 Linux 下提前体验 IPv6 ，留言中提到了 Archlinux 下的方法，非常的简单：
+<blockquote>sudo modprobe tun<br />
+sudo yaourt -S gw6c<br />
+sudo gw6c</blockquote>
+要自动启动的话，编辑 /etc/rc.conf ，在 MODULES 里加上 tun ，在下面的 DAEMONS 里加上 gw6c 就 OK 了。</p>
+
+<p>非常简单吧。果然是 Archlinux 。</p>

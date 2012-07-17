@@ -1,0 +1,55 @@
+---
+layout: post
+title: C Traps & Tips I -- Duff's Device
+categories:
+- Information Technology
+tags:
+- C++
+published: true
+comments: true
+---
+<p>最近又对 C 的陷阱和奇怪的用法之类的感兴趣了，于是又想写点东西，完全是主观感觉奇怪的或者是感觉是陷阱就写出来了，外加无责任分析，错了还请大家斧正……</p>
+
+<p>今天写第一篇，希望以后能多写点……</p>
+
+<p>先上代码：</p>
+
+<p><pre lang="c" line="1">send(to, from, count)
+register short *to, *from;
+register count;
+{
+	register n=(count+7)/8;
+	switch(count%8){
+	case 0:	do{	*to = *from++;
+	case 7:		*to = *from++;
+	case 6:		*to = *from++;
+	case 5:		*to = *from++;
+	case 4:		*to = *from++;
+	case 3:		*to = *from++;
+	case 2:		*to = *from++;
+	case 1:		*to = *from++;
+		}while(--n>0);
+	}
+}
+</pre></p>
+
+<p>看懂了的话下面可以无视了……请轻轻按下左上角或者右上角的X……</p>
+
+<p>可以看出，这短代码是用来复制内存的（请别告诉我你看不懂旧式的函数首部），就像 memcpy，一般人可能会写出类似下面的代码：</p>
+
+<p><pre lang="c" line="1">do {                          /* count > 0 assumed */
+    *to = *from++;            /* Note that the ''to'' pointer is NOT incremented */
+} while (--count > 0);
+</pre></p>
+
+<p>这两段代码的区别是上面的一个，也就是 Duff's device 用了叫做循环展开的技术，观察可以发现，下面这段代码循环体很短，也就是说循环条件的判断在循环执行的时候占用了很大一部分的时间，而循环展开后循环条件所占用的时间下降了，从而提高了程序的效率。</p>
+
+<p>其实 Duff's device 里面最神奇的就是 switch 跟 while 交错出现。示例中循环展开了 8 次，第一次 switch 的时候首先处理被 8 除余下的 count%8 次，然后 while 循环处理 8*(n-1) 次，这样就正好凑齐 count 次复制了。这个 8 次是可以改的，愿意的话可以改成 16 次？不过展开越多二进制的大小就越大，也算是用空间换时间了。</p>
+
+<p>至于你问我为啥是 <span style="font-family: monospace;">*to</span> 而不是 <span style="font-family: monospace;">*to++</span>，我只能告诉你那个指针 <span style="font-family: monospace;">to</span> 不是一般的指针，而是 memory-mapped output register，按我的理解大概是它能自动增长吧？参考资料里说新手可能不知道 memory-mapped output register，所以有时候就改成 <span style="font-family: monospace;">*to++</span> 了，嗯，我是新手。谁知道是怎么回事告诉我一声？查了一些还是不太懂……</p>
+
+<p>另外，Duff's device 也不是说一定能让代码变快，有人就说了，我去掉这些烦人的 Duff's device 之后反而快了。 :-(</p>
+
+<p>References:</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Duff's_device">http://en.wikipedia.org/wiki/Duff's_device</a></p>

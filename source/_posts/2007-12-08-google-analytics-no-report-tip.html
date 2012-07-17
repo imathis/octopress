@@ -1,0 +1,33 @@
+---
+layout: post
+title: 用 Google Analytics 时排除内部点击量的小技巧
+categories:
+- Information Technology
+tags:
+- Analytics
+- Google
+- Java
+- JavaScript
+- tips
+published: true
+comments: true
+---
+<p>使用 Google Analytics 的时候，大家都要排除内部点击对结果产生的影响，在<a href="https://www.google.com/support/googleanalytics/bin/answer.py?answer=55481&hl=zh_CN">这里</a> Google 给出了官方方法。<br />
+由于我们都是动态 IP （IP 贵啊，买不起啊……），所以要用添加 Cookie 的办法，不过在加 Cookie 的时候给出的方法比较麻烦，还得写一页 HTML 。<br />
+下面是我的方法：
+<ol>
+	<li>
+打开你使用 Google Analytics 的站点。
+</li></ol></p>
+
+<p>	<li>
+在浏览器的地址栏输入 "javascript:__utmSetVar('no_report')" （不含双引号），然后回车。
+</li></p>
+
+<p><li>
+这样就添加好了。
+</li></p>
+
+<p></p>
+
+<p>比官方方法要简单些吧？</p>

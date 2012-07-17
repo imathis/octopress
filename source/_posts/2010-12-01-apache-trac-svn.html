@@ -1,0 +1,28 @@
+---
+layout: post
+title: Apache + Trac + SVN
+categories:
+- Information Technology
+tags:
+- apache
+- SA
+- svn
+- trac
+published: true
+comments: true
+---
+<p>Trac 的安装不难，主要是配置麻烦。</p>
+
+<p>我一开始看的是官方文档，后来看了几份中文文档，用的是 mod_wsgi 的方法，因为之前配过 django，熟悉些。</p>
+
+<p>easy_install 挺好用。</p>
+
+<p>trac-admin /path/to/project initenv 就安装好了。</p>
+
+<p>然后就是各种配置，配置主要是用 trac-admin 命令 conf/trac.ini 两个文件。</p>
+
+<p>trac-admin 里面配置权限， permission add admin TRAC_ADMIN 之类的。</p>
+
+<p>conf/trac.ini 里面要把 default_charest 改成 utf-8，注意最好在建立数据库还没安装 Trac 的时候就把数据库编码改成 UTF-8，我一开始是安装后改的，似乎无效。</p>
+
+<p>Trac 的鉴权完全就是用 Apache……</p>

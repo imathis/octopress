@@ -1,0 +1,18 @@
+---
+layout: post
+title: C++ Primer 随记——第 4 章， 数组和指针
+categories:
+- book
+- Information Technology
+tags:
+- C++
+- C++ Primer
+published: true
+comments: true
+---
+<p><ol>
+	<li>void* 指针只支持几种有限的操作：比较、传参数、赋值。不能通过 void* 指针操纵它所指向的对象。（Page 104）</li>
+	<li>void* 不是万能的，它不能指向 const 对象，使用 const void* 指向 const 对象。（Page 110）</li>
+	<li>指向 const 对象的指针也必须具有 const 特性。（Page 110）</li>
+	<li>定义指向数组的指针要注意优先级。比如 int (*ip)[4];。（Page 123）</li>
+</ol></p>

@@ -1,0 +1,39 @@
+---
+layout: post
+title: 把 ZY 给我倒过来！──解决德版 G1 ZY倒置问题
+categories:
+- Information Technology
+tags:
+- android
+- G1
+- keyboard
+- remap
+published: true
+comments: true
+---
+<p>我就想不明白了，为什么我刷了一个没写是德版 ROM 的 ROM ZY 也会倒过来呢？难道能辨别机器的硬件？判断我是德版就给倒过来了？唉……自己动手 fix 吧。总不能因为这个就换个 ROM 啊。</p>
+
+<p>唉……会盲打也是错啊，专为会盲打的同学准备：</p>
+
+<p>首先把你的 ROM 的那个 zip 解压，解压出来之后，进到 /system/usr/keylayout 里面，这里面这写文件就是键盘映射的文件了，key 21 就是键盘中上的键，key 44 是键盘左下的键。于是看哪个文件里 key 21 后面是 Z 的，都给我改成 Y；key 44 后面是 Y 的，都给我改成 Z，就 OK 了。查找可以这样：</p>
+
+<p><pre lang="bash">grep "key 44 " ./*
+grep "key 21 " ./*</pre></p>
+
+<p>替换的话，俺也不会 sed、awk 啥的，就手动来了。反正也不多，我就找到一处。</p>
+
+<p>这样新的键盘映射文件就准备好了，用 USB 线把手机连接在计算机上，拿出 adb：</p>
+
+<p><pre lang="bash">adb remount
+adb push trout-keypad-qwertz.kl /system/usr/keylayout/
+</pre></p>
+
+<p>仿照上面的命令把所有修改过的文件都用 adb push 复制到手机里去。（adb remount 只需要一次）</p>
+
+<p>重启就 OK 了。</p>
+
+<p>没用过 adb 的放狗搜索一下，在 Android 的 SDK 里有。</p>
+
+<p>德版 G1 测试通过，听说德版里程碑 Milestone 也有这问题，应该也有效。</p>
+
+<p>Good luck.</p>

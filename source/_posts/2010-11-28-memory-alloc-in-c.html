@@ -1,0 +1,28 @@
+---
+layout: post
+title: C 的内存分配
+categories: []
+tags:
+- C++
+- memory alloc
+published: false
+comments: true
+---
+<p>前两天看到一个叫 <code>alloca()</code> 的函数，于是对 C 的内存分配小研究了一下，简单说下与之相关的几个函数。</p>
+
+<p><h2>malloc</h2></p>
+
+<p>大家最熟悉的一个函数，原型是 <code>void * malloc(size_t size)</code>，作用是在堆上分配 size 大小的空间，使用完毕需要 <code>free()</code> 掉。</p>
+
+<p><h2>calloc</h2></p>
+
+<p>原型是这样滴：<code>void *calloc(size_t nmemb, size_t size)</code>，分配一个数组出来，我觉得就纯是方便……</p>
+
+<p>另外分配的空间会初始化为零。</p>
+
+<p><h2>realloc</h2></p>
+
+<p><code>void *realloc(void *ptr, size_t size)</code></p>
+
+<p>posix_memalign, memalign, valloc<br />
+calloc, free, malloc, realloc, reallocf, valloc</p>

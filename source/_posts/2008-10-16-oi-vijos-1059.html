@@ -1,0 +1,26 @@
+---
+layout: post
+title: ! '[OI][Vijos 1059]积木城堡'
+categories:
+- Information Technology
+tags:
+- algorithm
+- C++
+- OI
+- Vijos
+published: true
+comments: true
+---
+<p>一年没写代码了，这周又开始拿起我那二把刀，开始切题了……</p>
+
+<p>看到我们的<a href="http://hi.baidu.com/xiangruyimo/blog/item/e14940345b96e648251f149d.html">小妹妹</a>写了<a href="http://www.vijos.cn/Problem_Show.asp?id=1059">积木城堡</a>这个题，于是我也从这题开始了……</p>
+
+<p>简单的 0/1 背包，渐进时间复杂度（大概）是 O(N*n*n)，渐进空间复杂度（大概）是 O(N*n*n)，其中 N 为城堡数量， n 为组成每个城堡的积木数。</p>
+
+<p>这题有着 Vijos 的一贯传统，就是题目描述令人 confused，就这题来说，从中间抽取积木还能使城堡不倒，不得不说是有一定功力，抽出的积木就扔在一边，不能不说是浪费。其实这都可以在题目中说清楚的。</p>
+
+<p>开始做，一开始用了 bitset （在 NOIP 中允许使用），结果 TLE ；后来优化了读入，还是 TLE，后来砍掉了 bitset ，用 boolean array，提交无数次后（Vijos 最近服务器有问题，运行程序忽快忽慢，随机 TLE 的现象时有发生），终于 AC 了。</p>
+
+<p>代码可以看<a href="http://github.com/leafduo/vijos/tree/master/1059/1059.cpp">这里</a>，其他 vijos 的代码也在那里。</p>
+
+<p>事实证明， bitset 的效率并不高，竞赛的时候应远离 bitset …… （这也可能跟 Vijos 所用编译器的实现有关）</p>

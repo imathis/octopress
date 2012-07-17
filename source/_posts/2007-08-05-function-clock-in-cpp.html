@@ -1,0 +1,22 @@
+---
+layout: post
+title: clock() in C++
+categories:
+- Information Technology
+tags:
+- C++
+- OI
+- programming
+published: true
+comments: true
+---
+<p>今天把在日照写的代码拿出来看了看，编译运行了一下，发生了一个意想不到的事：用来测时间的 clock() 函数返回了一个非常大的数……正常应该返回毫秒数啊。无奈，上网看了一下。看了一下<a href="http://www.cplusplus.com/reference/clibrary/ctime/clock.html" target="_blank"> clock() 函数的介绍</a>。
+<blockquote>Returns the number of clock ticks elapsed since the program was launched.</blockquote></p>
+
+<p>The macro constant expression CLOCKS_PER_SEC specifies the relation between a clock tick and a second (clock ticks per second).<br />
+The initial moment of reference used by clock as the beginning of the program execution may vary between platforms. To calculate the actual processing times of a program, the value returned by clock should be compared to a value returned by an initial call to clock.
+原来返回的并不是毫秒数，而是一个number of clock，常量 CLOCKS_PER_SEC 定义了 clock 和秒数之间的关系，返回毫秒数应该用clock()*1000/CLOCKS_PER_SEC，而不是仅仅用 clock() 。Dev-C++自带的gcc3.4.2中CLOCKS_PER_SEC=1000，所以 clock() 正好返回毫秒数，我用的gcc4.1.2里CLOCKS_PER_SEC=1000000，返回的数当然大了。</p>
+
+<p>今天又纠正了一个错误，不错。</p>
+
+<p>PS：本来不想在这个 blog 里说关于 Programming 的东西的，想再开一个 blog ，现在懒得干了 ，不学 Programming 的同学们就不要看这些 post 了。</p>

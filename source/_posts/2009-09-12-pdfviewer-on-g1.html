@@ -1,0 +1,24 @@
+---
+layout: post
+title: PDFViewer on G1
+categories:
+- Information Technology
+tags:
+- adobe
+- android
+- G1
+- HTC
+- pdf
+published: true
+comments: true
+---
+<p>HTC 开发了一个基于 Adobe Reader LE 2.5 的 PDFViewer，不过 G1 上直接安装这个 apk 不管用，说是只能 PDFViewer  只能运行在 HTC 设备上。我说 HTC 啊，G1 不是自家的孩子啊……歧视啊……</p>
+
+<p>不过还是有强人有了 hack 的办法：</p>
+
+<p>首先下载 libpdfreader.so、FilePicker.apk、PDFViewer.apk 三个文件，然后把前两个文件分别放到 /system/lib、/system/app 就 OK 了（记得先 remount /system），最后 PDFViewer.apk 按正常方法安装就行，可以用 adb，也可以先复制到 SD 卡，再用 terminal 复制到位置。</p>
+
+<p>下载 & 参考：</p>
+
+<p><a href="http://forum.xda-developers.com/showthread.php?p=3782880">http://forum.xda-developers.com/showthread.php?p=3782880</a>
+<a href="http://strazzere.com/blog/?p=266">http://strazzere.com/blog/?p=266</a></p>

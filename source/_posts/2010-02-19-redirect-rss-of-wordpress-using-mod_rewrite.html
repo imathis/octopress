@@ -1,0 +1,41 @@
+---
+layout: post
+title: 用 mod_rewrite 重定向 WordPress 的 RSS
+categories:
+- blogging
+- Information Technology
+tags:
+- apache
+- mod_rewrite
+- RSS
+- wordpress
+published: true
+comments: true
+---
+<p>不知道为啥，原来的重定向失效了……</p>
+
+<p>似乎现在没有什么好用的重定向插件，要么是不支持 Feedsky，要么没法用自定义域名，咱不太会 PHP，也懒得 hack 了，所以就祭出 Apache 来做这件事，当然 mod_rewrite 是少不了了。</p>
+
+<p>先说方法，后说其他。在 .htaccess 的最上面加这么几行：</p>
+
+<p><pre lang="apache" line="1"># BEGIN user-defined
+<ifmodule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_USER_AGENT} !^.*(FeedBurner|FeedValidator|feedsky) [NC]
+RewriteCond %{REQUEST_URI} ^/feed.* [NC]
+RewriteRule .* http://feed.leafduo.com/ [NC,L,R=301]
+</ifmodule></pre></p>
+
+<p>#END user-defined
+</p>
+
+<p>感觉用 mod_rewrite 做这件事比较合适，不用经过 WP 不说，效果还比较好，所有访问原先 feed 的都被重定向了。</p>
+
+<p>大家都知道，Feedsky 爬虫的 UA 是这样的："Mozilla 5.0 (compatible; Feedsky 1.0; http://www.feedsky.com)"，所以我们就能通过过滤 UA 来分别对待爬虫和其他访问者，对于爬虫不做重定向，其他访问者一律重定向。</p>
+
+<p>需要一点正则表达式知识和一点 Apache 的配置，先是参考了<a href="http://www.askapache.com/htaccess/redirecting-wordpress-feeds-to-feedburner.html">这个</a>，说了一大堆，没仔细看，然后准备自己写。找到一个 mod_rewrite 的 <a href="http://borkweb.com/story/apache-rewrite-cheatsheet">Cheat Sheet</a>，感觉比 Apache 的文档好懂多了。</p>
+
+<p>然后就写出来了，一开始是放在了 .htaccess 的最下面，发现怎么都不起作用，后来挪到最上面了，应该是跟 WP-SuperCache 的 rewrite 规则冲突了，看到它的规则里有带 [L] 的。</p>
+
+<p>目前看来工作良好。</p>

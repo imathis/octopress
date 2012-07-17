@@ -1,0 +1,60 @@
+---
+layout: post
+title: 解决 WordPress 自动升级中遇到的一个验证问题
+categories:
+- Information Technology
+tags:
+- Gentoo
+- Linux
+- OpenSSH
+- PHP
+- ssh
+- wordpress
+published: true
+comments: true
+---
+<p>WordPress 要升级 3.0.5，我懒，所以自动升级，点开自动升级的页面，输入验证方式，发现木有 sftp 的选项，印象中原来是有的，去查了一下，发现不是 WordPress 的问题，而是 PHP 没有装载 ssh 的模块，于是装上。</p>
+
+<p><pre lang="bash">emerge dev-php5/pecl-ssh2</pre></p>
+
+<p>然后升级页面就神奇地出现了 SSH2 的选项，于是开心地填上用户名密码，一个回车，告诉你用户名或密码错误……我说不可能啊，于是去查系统日志，日志里竟然一个字都没写……明显就不是密码错了嘛。</p>
+
+<p><a href="https://picasaweb.google.com/lh/photo/xkySpdVTZ8xpIVrPLffVhA?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/_7Y_7M0vQVWs/TVLi45Y4HfI/AAAAAAAACZY/v4afyZn-oHM/s800/Screen%20shot%202011-02-10%20at%202.09.08%20AM.png" height="383" width="534" /></a></p>
+
+<p>啥问题呢，不清楚，咋办呢，查 WordPress 的源码吧。发现 <a href="http://phpxref.ftwr.co.uk/wordpress/nav.html?wp-admin/includes/file.php.source.html#l850">wp-admin/includes/file.php</a> 里有个函数叫 <a href="http://phpxref.ftwr.co.uk/wordpress/nav.html?wp-admin/includes/file.php.source.html#l850"><code>get_filesystem_method()</code></a>，它的注释告诉我 WordPress 升级写文件有这么几种方式：Direct, SSH2, FTP PHP Extension, FTP Sockets，优先级依次递减，于是发现还有 Direct 这么一种神奇的方式，快速解决问题： <code>chown -R nobody:nobody /path/to/WordPress</code>。（我用 php-fpm 运行的，php 的 user 是 nobody）</p>
+
+<p>不能把问题放着不管是不？去看看是啥问题，在 WordPress 源码里搜 "Username/Password incorrect for"，发现几个文件里都有，分别对应几种连接方式：direct、ssh2、ftpext、ftpsockets。当然我们要看 SSH2 是不？于是这个文件是 <a href="http://phpxref.ftwr.co.uk/wordpress/nav.html?wp-admin/includes/class-wp-filesystem-ssh2.php.source.html#l103">wp-admin/includes/class-wp-filesystem-ssh2.php</a>，里面那个 <a href="http://phpxref.ftwr.co.uk/wordpress/nav.html?wp-admin/includes/class-wp-filesystem-ssh2.php.source.html#l103"><code>connect()</code></a> 函数是我感兴趣的，里面有这么一句：</p>
+
+<p><pre lang="php">
+if ( !$this->keys ) {
+  if ( ! @ssh2_auth_password($this->link, $this->options['username'], $this->options['password']) ) {
+    $this->errors->add('auth', sprintf(__('Username/Password incorrect for %s'), $this->options['username']));
+    return false;
+}
+</pre></p>
+
+<p>也就是说没有使用 key 的时候，用密码验证，<a href="http://php.net/manual/en/function.ssh2-auth-password.php"><code>ssh2_auth_password()</code></a> 失败的话就说是用户名或密码错。（PHP 达人告诉我前面的 @ 是啥？）</p>
+
+<p>查这个函数的<a href="http://php.net/manual/en/function.ssh2-auth-password.php">原型</a>，人家只说失败的时候返回 false，谁说一定是密码错误了，你妹的……</p>
+
+<p>不过在这个文件里还有新发现，在<a href="http://phpxref.ftwr.co.uk/wordpress/nav.html?wp-admin/includes/class-wp-filesystem-ssh2.php.source.html#l1">这个类的注释</a>里，发现了<a href="http://kevin.vanzonneveld.net/techblog/article/make_ssh_connections_with_php/">一篇 pecl-ssh2 的安装指南</a>，在里面发现了问题：On the serverside, 'PasswordAuthentication yes' must be enabled in the sshd_config. 一查我的配置，果然给弄成 no 了……</p>
+
+<p>欣喜若狂地改成 yes，然后重启 sshd，<code>/etc/init.d/sshd restart</code>，竟然没法重启……尝试 reload，<code>/etc/init.d/sshd reload</code>，说 sshd 没运行（No /usr/sbin/sshd found running; none killed.），又开始扯淡了！！！</p>
+
+<p>遵循不知道谁的教导，重新 emerge 一遍 openssh。</p>
+
+<p><pre lang="bash">emerge net-misc/openssh</pre></p>
+
+<p>然后</p>
+
+<p><pre lang="bash">/etc/init.d/sshd restart</pre></p>
+
+<p>就能重启了……</p>
+
+<p>之后回到 WordPress 输上密码，发现能登录上了，变成 PHP 错误了……仔细一看，我的账户也没有改 WordPress 代码的权限啊……</p>
+
+<p>折腾一圈白干了，专门弄个账户还不如改权限（<code>chown -R nobody:nobody</code>）呢。</p>
+
+<p><del datetime="2011-02-09T18:03:26+00:00">不过过程中还发现了新的问题，sshd_config 里面 PasswordAuthentication no 之后还是能从别的主机用密码登陆（不过 php 这个 ssh2 的库登陆不了了），很神奇吧……以后再看是什么问题吧。</del></p>
+
+<p>大概找到是啥问题了，下篇发出来吧。</p>

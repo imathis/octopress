@@ -1,0 +1,25 @@
+---
+layout: post
+title: Installing Gentoo Linux on DELL R710
+categories:
+- Information Technology
+tags:
+- DELL
+- Gentoo
+- Linux
+- lvm
+- RAID
+published: true
+comments: true
+---
+<p>公司买了一台 R710，第一次自己装服务器上的 Linux，虽说区别不是很大，但是还是很值得纪录一下的哦。</p>
+
+<p>服务器跟 PC 最大的区别大概就是硬件了吧，涉及到驱动的基本上就只有 RAID 控制器了吧？编译内核的时候那个纠结啊……那个启动不起来啊……真是……</p>
+
+<p>首先是得照着一个指南做，就是<a href="http://www.gentoo.org/doc/en/gentoo-x86+raid+lvm2-quickinstall.xml">这个指南</a>啦，比较适合以前装过 Gentoo 的人看。这个指南是装软件 RAID 和 LVM2，我们做的是硬件 RAID，所以里面软件 RAID 相关的东西就不用安装了，比如 dm-mod 之类的就不用装了。我还是习惯把 /boot 放在 LVM 里面，其实自己有的时候也觉得没啥必要，有点犯贱的意思……如果你也希望把 /boot 放在 LVM 里面，可以参考 Gentoo Wiki 的<a href="http://www.gentoo-wiki.info/HOWTO_Install_Gentoo_on_an_LVM2_root_partition">这篇文章</a>，不过里面的内容略微有点过时了，比如内核参数 dolvm2，现在写成 dolvm 了。一开始安装的时候忘了做 initrd，查了半天才发现，还是不细心啊。</p>
+
+<p>剩下的大概就是编译内核了，先随手把什么声卡驱动什么的去掉，然后重点是 RAID 驱动，一开始天真地以为 RAID 控制器的驱动是 LSI Logic MegaRAID SAS RAID Module 之类的，结果就是直接启动不起来了。后来认真起来，按照 lspci 的结果去网上找内核模块，发现应该是 <a href="http://cateee.net/lkddb/web-lkddb/FUSION.html">CONFIG_FUSION</a> 这个选项，之后就能顺利地启动了。</p>
+
+<p>配置好一些基本的东西之后，还有一些硬件相关的小工具，最重要的还是 RAID 控制器的监控工具，网上找了很多，不过大多数都没法用，<a href="http://hwraid.le-vert.net/wiki/LSIFusionMPT">这一页</a>有两个工具，都比较好用，<a href="http://hwraid.le-vert.net/">HWRaid</a> 这个站似乎也很强大。里面提到的 lsiutil 是 LSI 官方提供的，Gentoo 源里那个似乎年久失修了，LSI 的官网上能够<a href="http://www.lsi.com/DistributionSystem/User/AssetMgr.aspx?asset=51101">找到</a>，不过不是很好找，下载下来是二进制。还有些能改前面板 LCD 的小工具什么的，我觉得没多大用，就算了（想改的话 BIOS 里面就有）。</p>
+
+<p>有点后悔买了一个比较弱的 RAID 控制器，不过一切还要等有了负载再说，哈哈。</p>

@@ -1,0 +1,21 @@
+---
+layout: post
+title: Xinnet sucks & OpenDNS rocks
+categories:
+- blogging
+- Information Technology
+tags:
+- DNS
+- domain
+- OpenDNS
+- xinnet
+published: true
+comments: true
+---
+<p>最近折腾了折腾，发现了几个问题。</p>
+
+<p>leafduo.com 是在<a href="http://www.xinnet.com/index.html">新网</a>注册的，然后每次改 DNS 改 A record 当然都得去新网那里。IE only 的管理界面就先不说了，这个管理的逻辑也非常有问题……首先如果你给顶级域加了 DNS 之后就不能删除了，造成顶级域有 5 个 DNS 服务器（新网两个，DH 三个），这也就算了，不过最让人恶心的是自己添加的 DNS 服务器不起作用，还是只有新网的两个 DNS 起作用。添加之后不能删除，而且又不起作用……</p>
+
+<p>顺便问一下哪个国外的注册商服务比较好，价格也比较合理，准备域名到期的时候转出去。</p>
+
+<p>之后又发现了 <a href="http://www.opendns.com/">OpenDNS</a> 的一个很有用的小功能──<a href="http://www.opendns.com/support/cache/">CacheCheck</a>，能手动刷新 DNS，而不管 TTL 之类的东西，这样当你改了自己网站的 DNS 服务器或者 A 记录的时候，手动刷新一下就可以看到结果了，而不用等 N 个小时全球刷 DNS。当然不用 OpenDNS 的还得等 DNS 刷新的。</p>

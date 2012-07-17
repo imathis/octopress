@@ -1,0 +1,89 @@
+---
+layout: post
+title: 试用 ibus
+categories:
+- Information Technology
+tags:
+- Arch
+- Archlinux
+- ibus
+- IME
+- Linux
+- PKGBUILD
+published: true
+comments: true
+---
+<p>关于 <a href="http://code.google.com/p/ibus/">ibus</a> 的新闻已经不少了，鉴于我也忍不了 SCIM 和 fcitx 了，所以准备投靠 ibus 。这次是在 Archlinux 上安装的，先写 PKGBUILD  ，装好之后没有引擎……晕菜……</p>
+
+<p>然后扔掉包直接装， OK 了，最后改了一下 PKGBUILD ，也 OK 了。</p>
+
+<p>PKGBUILD  仅仅是到了能用的程度。</p>
+
+<p>用了一下，感觉起码比 SCIM 和 fcitx 都要漂亮，至于 bug ，我就打了这么几个字，还没找出什么来，看起来不错。</p>
+
+<p>这个是 ibus-git 的 PKGBUILD</p>
+
+<p><pre lang="bash" line="1">#Contributor: leafduo<leafduo@gmail.com></pre></p>
+
+<p>pkgname=ibus-git<br />
+pkgver=git<br />
+pkgrel=1<br />
+pkgdesc="a next generation input framework."<br />
+arch=('i686' 'x86_64')<br />
+license=('GPL')<br />
+depends=('python' 'dbus-python>=0.83.0' 'automake' 'autoconf')<br />
+makedepends=('git')<br />
+url="http://code.google.com/p/ibus/"<br />
+source=()<br />
+md5sum=()<br />
+install=ibus.install</p>
+
+<p>build() {<br />
+    cd $startdir/src<br />
+    git clone git://github.com/phuang/ibus.git ibus<br />
+    cd ibus<br />
+    ./autogen.sh --prefix=/usr<br />
+    make || return 1<br />
+    make DESTDIR=$pkgdir install || return 1<br />
+}</p>
+
+<p>对应的 ibus.install</p>
+
+<p><pre lang="bash" line="1'>post_install() {<br />
+      /usr/bin/gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules<br />
+}</p>
+
+<p>post_upgrade() {<br />
+    /usr/bin/gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules<br />
+}</p>
+
+<p>post_remove() {<br />
+    /usr/bin/gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules<br />
+}</p>
+
+<p>ibus-pinyin-git 的 PKGBUILD</p>
+
+<p><pre lang="bash" line="1">#Contributor: leafduo<leafduo@gmail.com></pre></p>
+
+<p>pkgname=ibus-pinyin-git<br />
+pkgver=git<br />
+pkgrel=1<br />
+pkgdesc="pinyin input method for ibus"<br />
+arch=('i686' 'x86_64')<br />
+license=('GPL')<br />
+depends=('python' 'dbus-python>=0.83.0' 'automake' 'autoconf' 'ibus-git')<br />
+makedepends=('git')<br />
+url="http://code.google.com/p/ibus/"<br />
+source=()<br />
+md5sum=()</p>
+
+<p>build() {<br />
+    cd $startdir/src<br />
+    git clone git://github.com/phuang/ibus-pinyin.git ibus-pinyin<br />
+    cd ibus-pinyin<br />
+    ./autogen.sh --prefix=/usr<br />
+    make || return 1<br />
+    make DESTDIR=$pkgdir install || return 1<br />
+}</p>
+
+<p>当然，你可以在<a href="http://code.google.com/p/mypkgbuild/">这里</a>找到我所有的 PKGBUILD。</p>

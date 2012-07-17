@@ -1,0 +1,98 @@
+---
+layout: post
+title: Get Nagios to Work with Nginx (Gentoo)
+categories:
+- Information Technology
+tags:
+- fcgi
+- fcgiwrap
+- Gentoo
+- Linux
+- Nagios
+- Nginx
+- spawn-fcgi
+published: true
+comments: true
+---
+<p>今天装 <a href="http://www.nagios.org/">Nagios</a>，开源监控软件。</p>
+
+<p>照例第一步：</p>
+
+<p><pre lang="bash">emerge net-analyzer/nagios</pre></p>
+
+<p>这个包是个 meta 包，里面似乎有一个内核和一些插件，以后再研究，先搭起来再说。</p>
+
+<p>跑起 Nagios：</p>
+
+<p><pre lang="bash">/etc/init.d/nagios start
+rc-update add nagios default</pre></p>
+
+<p>安装完成之后它会告诉你，要是 Apache 或者 Lighttpd 的话我会给你配好，不是的话自己看着办吧，于是我就自己来了。:-(</p>
+
+<p>首先安装 spawn-fcgi 和 fcgiwrap，第一个是管理 fcgi 进程的，第二个是把 CGI 包装成 fcgi 的。fcgiwrap 这兄弟目前被 ~x86 mask 了，先 unmask。</p>
+
+<p><pre lang="bash">echo www-misc/fcgiwrap ~x86 >> /etc/portage/package.keywords</pre></p>
+
+<p>然后安装：</p>
+
+<p><pre lang="bash">emerge www-servers/spawn-fcgi www-misc/fcgiwrap</pre></p>
+
+<p>跑起 spawn-fcgi：</p>
+
+<p><pre lang="bash">sudo spawn-fcgi -a 127.0.0.1 -p 22222 -P /var/run/fcgiwrap.pid -u nagios -g nagios -- /usr/sbin/fcgiwrap</pre></p>
+
+<p>-a 是主机，-p 是端口（用 unix domain 也行），-P 是 pid 文件，-u 是用户，-g 是组，-- 后面是要运行的命令，用户名和组一定要对，主机和端口要跟 nginx 对上。这条命令是起 CGI 部分的，Nagios 也用了 PHP，PHP 请通过 fcgi 自行跑起来 :-)，php-fpm 或者 spawn-fcgi 均可，参考 WordPress 之类就行。</p>
+
+<p>下面是 nginx 的配置，主要是抄的别人的，主体参考<a href="http://yemaosheng.com/?p=899">这里</a>，另外也参考<a href="http://www.matejunkie.com/howto-let-nginx-serve-the-nagios-web-interface/">这里</a>。尤其是<code>fastcgi_param  AUTH_USER          $remote_user; fastcgi_param  REMOTE_USER        $remote_user;</code> 两句，前一篇没有，害惨我了，nagios 一直说认证不通过……</p>
+
+<p>自己发挥改改就好撒。</p>
+
+<p><pre lang="bash">location / {
+        auth_basic "Restricted";
+        auth_basic_user_file /PATH/TO/HTPASSWD;</pre></p>
+
+<p>        root /usr/share/nagios/htdocs;</p>
+
+<p>        location ~ \.php$ {<br />
+                fastcgi_pass   YOUR_PHP_UPSTREAM;<br />
+                fastcgi_index  index.php;<br />
+                fastcgi_param  SCRIPT_FILENAME  /usr/share/nagios/htdocs$fastcgi_script_name;<br />
+                include fastcgi_params;<br />
+        }</p>
+
+<p>        location /nagios/ {<br />
+                location /nagios/images/ {<br />
+                        gzip off;<br />
+                }<br />
+                expires 30d;<br />
+                alias /usr/share/nagios/htdocs/;<br />
+        }</p>
+
+<p>        location /docs/ {<br />
+                root /usr/share/nagios/htdocs/;<br />
+                index index.html;<br />
+        }</p>
+
+<p>        location ~ \.cgi {<br />
+                fastcgi_pass 127.0.0.1:22222;<br />
+                fastcgi_index index.cgi;<br />
+                fastcgi_param SCRIPT_FILENAME /usr/lib$fastcgi_script_name;<br />
+                include fastcgi_params;<br />
+                fastcgi_param  AUTH_USER          $remote_user;<br />
+                fastcgi_param  REMOTE_USER        $remote_user;<br />
+        }<br />
+}
+</p>
+
+<p>关于里面提到的 htpasswd，是 <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">basic auth</a> 用的，咋生成看<a href="http://wiki.nginx.org/HttpAuthBasicModule">文档</a>吧。</p>
+
+<p>Restart Nginx & enjoy!</p>
+
+<p>参考：
+<ol>
+	<li><a href="http://yemaosheng.com/?p=899">http://yemaosheng.com/?p=899</a></li>
+	<li><a href="http://www.matejunkie.com/howto-let-nginx-serve-the-nagios-web-interface/">http://www.matejunkie.com/howto-let-nginx-serve-the-nagios-web-interface/</a></li>
+	<li><a href="http://wiki.nginx.org/HttpAuthBasicModule">http://wiki.nginx.org/HttpAuthBasicModule</a></li>
+</ol></p>
+
+<p></p>
