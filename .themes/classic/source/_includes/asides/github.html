@@ -17,10 +17,18 @@
             s.parentNode.insertBefore(jxhr, s);
         }
 
+        var blacklist = [];
+        {% if site.github_blacklist %}
+          {% for repo in site.github_blacklist %}
+            blacklist.push('{{repo}}');
+          {% endfor %}
+        {% endif %}
+
         github.showRepos({
             user: '{{site.github_user}}',
             count: {{site.github_repo_count}},
             skip_forks: {{site.github_skip_forks}},
+            blacklist: blacklist,
             target: '#gh_repos'
         });
     });
