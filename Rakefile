@@ -127,7 +127,7 @@ task :preview do
 end
 
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
-desc "Begin a new post in #{source_dir}/#{posts_dir}"
+desc "Begin a new post in #{source_dir}/#{posts_dir}. Edit with $OCTOPRESS_EDITOR if set."
 task :new_post, :title do |t, args|
   if args.title
     title = args.title
@@ -151,10 +151,11 @@ task :new_post, :title do |t, args|
     post.puts "categories: "
     post.puts "---"
   end
+  edit_file(filename)
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
-desc "Create a new page in #{source_dir}/(filename)/index.#{new_page_ext}"
+desc "Create a new page in #{source_dir}/(filename)/index.#{new_page_ext} Edit with $OCTOPRESS_EDITOR if set."
 task :new_page, :filename do |t, args|
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   args.with_defaults(:filename => 'new-page')
@@ -187,6 +188,7 @@ task :new_page, :filename do |t, args|
       page.puts "footer: true"
       page.puts "---"
     end
+    edit_file(file)
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
   end
@@ -484,6 +486,10 @@ def ask(message, valid_options)
     answer = get_stdin(message)
   end
   answer
+end
+
+def edit_file(filename)
+  system(*Shellwords.split(ENV['OCTOPRESS_EDITOR']), filename) if ENV['OCTOPRESS_EDITOR']
 end
 
 desc "list tasks"
