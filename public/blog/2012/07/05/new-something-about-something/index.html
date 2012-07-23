@@ -114,6 +114,21 @@ dfasldkf sadklfjasdf</p>
 </span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+
+
+<div><script src='https://gist.github.com/2991809.js?file='></script>
+<noscript><pre><code>module Web
+  CONFIG = YAML.load(ERB.new(File.read(Rails.root.join(&quot;config/web.yml&quot;))).result)[Rails.env]
+  HOSTNAME = CONFIG['hostname']
+  BACKEND_HOSTNAME = CONFIG['backend_hostname']
+  WHITELISTING = CONFIG['whitelisting']
+  BASE_URL = &quot;http://#{HOSTNAME}/&quot;
+  BACKEND_URL = &quot;http://#{BACKEND_HOSTNAME}/&quot;
+end</code></pre></noscript></div>
+
+
+
 </div>
 
 
@@ -207,7 +222,7 @@ dfasldkf sadklfjasdf</p>
 
         github.showRepos({
             user: 'KensoDev',
-            count: 10,
+            count: 5,
             skip_forks: true,
             target: '#gh_repos'
         });
@@ -224,7 +239,7 @@ dfasldkf sadklfjasdf</p>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("KensoDev", 10, true);
+      getTwitterFeed("KensoDev", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

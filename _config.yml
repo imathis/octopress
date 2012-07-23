@@ -17,7 +17,7 @@ date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
-subscribe_email:
+subscribe_email: 
 # RSS feeds can list your email address if you like
 email:
 
@@ -59,13 +59,13 @@ default_asides: [custom/asides/about.html, asides/recent_posts.html, asides/gith
 
 # Github repositories
 github_user: KensoDev
-github_repo_count: 10
+github_repo_count: 5
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
 twitter_user: KensoDev
-twitter_tweet_count: 10
+twitter_tweet_count: 5
 twitter_show_replies: true
 twitter_follow_button: true
 twitter_show_follower_count: true
@@ -93,7 +93,7 @@ disqus_short_name: KensoDev-EN
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: 
 
 # Facebook Like
 facebook_like: true
