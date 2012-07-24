@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Tzurel]]></title>
   <link href="http://avi.io/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2012-07-22T21:46:16+03:00</updated>
+  <updated>2012-07-24T22:05:15+03:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,43 +12,5 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Something about something]]></title>
-    <link href="http://avi.io/blog/2012/07/05/new-something-about-something/"/>
-    <updated>2012-07-05T10:22:00+03:00</updated>
-    <id>http://avi.io/blog/2012/07/05/new-something-about-something</id>
-    <content type="html"><![CDATA[<p>dsfsdfa sdf asdflasd lfas
-dfsadfasd fl;sadf</p>
-
-<p>asdfasdfkjas dlfkasdfs
-adfsladkfj asldkjf as
-dfasldkf sadklfjasdf</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">something</span>
-</span><span class='line'>  <span class="nb">puts</span> <span class="s2">&quot;something about something&quot;</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<div><script src='https://gist.github.com/2991809.js?file='></script>
-<noscript><pre><code>module Web
-  CONFIG = YAML.load(ERB.new(File.read(Rails.root.join(&quot;config/web.yml&quot;))).result)[Rails.env]
-  HOSTNAME = CONFIG['hostname']
-  BACKEND_HOSTNAME = CONFIG['backend_hostname']
-  WHITELISTING = CONFIG['whitelisting']
-  BASE_URL = &quot;http://#{HOSTNAME}/&quot;
-  BACKEND_URL = &quot;http://#{BACKEND_HOSTNAME}/&quot;
-end</code></pre></noscript></div>
-
-
-
-]]></content>
-  </entry>
   
 </feed>
