@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Avi Tzurel]]></title>
-  <link href="http://avi.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: general | Avi Tzurel]]></title>
+  <link href="http://avi.io/blog/categories/general/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
   <updated>2012-07-27T22:56:47+03:00</updated>
   <id>http://avi.io/</id>
@@ -22,21 +22,19 @@
 
 <p>To create a new post, you need to run a rake task like so:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;some awesome post title&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p><code>bash
+rake new_post["some awesome post title"]
+</code></p>
 
 <p>The problem is, that in zsh, those are escaped and you get an error.</p>
 
-<p>I used to do <code>new_post</code> without anything and then edit the file name and the title inside the file BUT there&#8217;s actually a better way.</p>
+<p>I used to do <code>new_post</code> without anything and then edit the file name and the title inside the file BUT there's actually a better way.</p>
 
 <p>You can either run <code>noglob rake</code> or you can run the rake like this:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake <span class="s2">&quot;new_post[some awesome post title]&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p><code>bash
+rake "new_post[some awesome post title]"
+</code></p>
 
 <p>Enjoy!</p>
 ]]></content>
