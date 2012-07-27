@@ -1,1 +1,1 @@
-rvm --create use "ruby-1.9.3@octopress"
+rvm --create use "ruby-1.9.3-p194@avi.io"
