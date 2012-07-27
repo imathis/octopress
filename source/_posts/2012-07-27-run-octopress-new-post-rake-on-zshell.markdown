@@ -6,7 +6,7 @@ comments: true
 categories: general
 ---
 
-This blog is running on Octopress, which is an awesome implementation of a blogging engine in Ruby.
+This blog is running on [Octopress](https://github.com/imathis/octopress), which is an awesome implementation of a blogging engine in Ruby.
 
 To create a new post, you need to run a rake task like so:
 
