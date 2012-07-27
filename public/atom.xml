@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Tzurel]]></title>
   <link href="http://avi.io/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2012-07-27T22:56:47+03:00</updated>
+  <updated>2012-07-27T23:26:47+03:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -18,7 +18,7 @@
     <link href="http://avi.io/blog/2012/07/27/run-octopress-new-post-rake-on-zshell/"/>
     <updated>2012-07-27T22:53:00+03:00</updated>
     <id>http://avi.io/blog/2012/07/27/run-octopress-new-post-rake-on-zshell</id>
-    <content type="html"><![CDATA[<p>This blog is running on Octopress, which is an awesome implementation of a blogging engine in Ruby.</p>
+    <content type="html"><![CDATA[<p>This blog is running on <a href="https://github.com/imathis/octopress">Octopress</a>, which is an awesome implementation of a blogging engine in Ruby.</p>
 
 <p>To create a new post, you need to run a rake task like so:</p>
 
