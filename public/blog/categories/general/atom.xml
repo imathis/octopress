@@ -4,7 +4,7 @@
   <title><![CDATA[Category: general | Avi Tzurel]]></title>
   <link href="http://avi.io/blog/categories/general/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2012-07-28T00:10:59+03:00</updated>
+  <updated>2012-07-29T14:11:01+03:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[project specific settings using zshell and dotfiles]]></title>
+    <link href="http://avi.io/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/"/>
+    <updated>2012-07-29T13:54:00+03:00</updated>
+    <id>http://avi.io/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles</id>
+    <content type="html"><![CDATA[<p>I have been working with ZHell pretty much since the first day that I have been using a Mac.</p>
+
+<p>The use I make of to grew with time and definitely the biggest switch was that I moved to using dotfiles for settings in a single location.</p>
+
+<p>I forked <a href="http://zachholman.com/">Zach Holman</a> dot files <a href="http://github.com/kensodev/dotfiles">here</a>, and I have been adjusting and customizing it ever since.</p>
+
+<p>I am using Ruby/Rails for my everyday work, both for consulting and open source projects, the one thing that I see people do and I don't like is committing configuration files with password and sensitive information into source control.</p>
+
+<p>When I can, I try to avoid it, so I developed a very easy way to manage my per-project environment variable without going through a huge file.</p>
+
+<p>All of my zsh files are located in a single folder in my dotfiles.</p>
+
+<p><code>
+├── aliases.zsh
+├── completion.zsh
+├── config.zsh
+├── functions
+│   ├── _boom
+│   ├── _brew
+│   ├── _c
+│   ├── _git-rm
+│   ├── _h
+│   ├── _rake
+│   ├── c
+│   ├── gf
+│   ├── gitdays
+│   ├── h
+│   ├── last_modified
+│   ├── newtab
+│   ├── savepath
+│   ├── smartextract
+│   ├── start_project
+│   ├── verbose_completion
+│   └── zgitinit
+├── hidden_aliases.zsh
+├── projects
+│   ├── boto_project.zsh
+│   └── octopus_project.zsh
+├── prompt.zsh
+├── window.zsh
+└── zshrc.symlink
+</code></p>
+
+<p>As you can see, there's a special folder there called <code>projects</code>, in which I put a lll of my project specific setting like tokens, passwords and other things.</p>
+
+<p>For example, here's what a project file might look like:</p>
+
+<p><code>bash
+export OCTOPUS_POSTGRES_USER=postgres
+export OCTOPUS_POSTGRES_PASSWORD=some_password
+</code></p>
+
+<p>One thing that is very easy to forget, is that if you open source your dot files (and you should) don't forget to ignore those files and don't commit them.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[run octopress new_post rake on zshell]]></title>
