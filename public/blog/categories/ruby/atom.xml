@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | Avi Tzurel]]></title>
+  <link href="http://avi.io/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://avi.io/"/>
+  <updated>2012-07-30T02:26:33+03:00</updated>
+  <id>http://avi.io/</id>
+  <author>
+    <name><![CDATA[Avi Tzurel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[run rake task in the background and log to file]]></title>
+    <link href="http://avi.io/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/"/>
+    <updated>2012-07-30T02:16:00+03:00</updated>
+    <id>http://avi.io/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file</id>
+    <content type="html"><![CDATA[<p>I am working with rake tasks a lot, I love the simplicity of creating one and just running one on the server.</p>
+
+<p>For the real heavy lifting I am using a queue system of course, but when I just want to throw something in the queue for example, I will usually create a rake task for it and run it on one of the servers.</p>
+
+<p>I use quick and dirty <code>puts</code> messages to log the progress.</p>
+
+<p>For example I could have a rake task like this:</p>
+
+<p><code>ruby
+User.find_each do |user|
+  puts "Going over user: #{user.id}"
+  Resque.enqueue(...)
+end
+</code></p>
+
+<p>To run this on the server, I just ssh into is and then I do <code>screen</code> so when I log out of the server the session will save the process and not kill it.</p>
+
+<p>Then, I run this command:</p>
+
+<p><code>
+rake foo:bar  --trace 2&gt;&amp;1 &gt;&gt; log/some_log_file.log
+</code></p>
+
+<p>That's it, you can now leave the server and let it do all the work, periodically, you can log in and check the progress just by tailing the file.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: general - Avi Tzurel</title>
+  <title>run rake task in the background and log to file - Avi Tzurel</title>
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="Category: general">
+  <meta name="description" content="I am working with rake tasks a lot, I love the simplicity of creating one and just running one on the server. For the real heavy lifting I am using a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avi.ioblog/categories/general/">
+  <link rel="canonical" href="http://avi.io/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -64,50 +64,123 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: General</h1>
+    
+      <h1 class="entry-title">Run Rake Task in the Background and Log to File</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-30T02:16:00+03:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>I am working with rake tasks a lot, I love the simplicity of creating one and just running one on the server.</p>
 
-  
-  <h2>2012</h2>
+<p>For the real heavy lifting I am using a queue system of course, but when I just want to throw something in the queue for example, I will usually create a rake task for it and run it on one of the servers.</p>
 
-<article>
-  
-<h1><a href="/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/">project specific settings using zshell and dotfiles</a></h1>
-<time datetime="2012-07-29T13:54:00+03:00" pubdate><span class='month'>Jul</span> <span class='day'>29</span> <span class='year'>2012</span></time>
+<p>I use quick and dirty <code>puts</code> messages to log the progress.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/general/'>general</a></span>
-</footer>
+<p>For example I could have a rake task like this:</p>
 
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/27/run-octopress-new-post-rake-on-zshell/">run octopress new_post rake on zshell</a></h1>
-<time datetime="2012-07-27T22:53:00+03:00" pubdate><span class='month'>Jul</span> <span class='day'>27</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/general/'>general</a></span>
-</footer>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">User</span><span class="o">.</span><span class="n">find_each</span> <span class="k">do</span> <span class="o">|</span><span class="n">user</span><span class="o">|</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s2">&quot;Going over user: </span><span class="si">#{</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>  <span class="no">Resque</span><span class="o">.</span><span class="n">enqueue</span><span class="p">(</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<p>To run this on the server, I just ssh into is and then I do <code>screen</code> so when I log out of the server the session will save the process and not kill it.</p>
 
+<p>Then, I run this command:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">foo</span><span class="ss">:bar</span>  <span class="o">--</span><span class="n">trace</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">&gt;&gt;</span> <span class="n">log</span><span class="o">/</span><span class="n">some_log_file</span><span class="o">.</span><span class="n">log</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s it, you can now leave the server and let it do all the work, periodically, you can log in and check the progress just by tailing the file.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Avi Tzurel</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-30T02:16:00+03:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/open/'>Open</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/general-/'>general,</a>, <a class='category' href='/blog/categories/on/'>on</a>, <a class='category' href='/blog/categories/rails-/'>rails,</a>, <a class='category' href='/blog/categories/source/'>source</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/" data-via="KensoDev" data-counturl="http://avi.io/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/" title="Previous Post: project specific settings using zshell and dotfiles">&laquo; project specific settings using zshell and dotfiles</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -247,7 +320,10 @@
       var disqus_shortname = 'KensoDev-EN';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://avi.io/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/';
+        var disqus_url = 'http://avi.io/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
