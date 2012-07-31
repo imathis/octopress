@@ -4,7 +4,7 @@
   <title><![CDATA[Category: general, | Avi Tzurel]]></title>
   <link href="http://avi.io/blog/categories/general-/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2012-07-30T02:26:33+03:00</updated>
+  <updated>2012-07-31T18:23:42+03:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[copy all files from a folder into a folder without the confirmation on linux]]></title>
+    <link href="http://avi.io/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux/"/>
+    <updated>2012-07-31T18:17:00+03:00</updated>
+    <id>http://avi.io/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux</id>
+    <content type="html"><![CDATA[<p>As a developer, there are things that never mind how many times you'll do them, you will never ever remember how to do it exactly without googling for a couple of minutes or looking through the last executed list of commands on the terminal.</p>
+
+<p>For me, one of those things is how to copy all files and folders from source to destination with automatic reply yes to overwrite requests.</p>
+
+<p>Here's how you do it</p>
+
+<p><code>bash
+cp -apRv &lt;source_folder&gt;/* &lt;dest_folder&gt;/ --reply=yes
+</code></p>
+
+<p>Enjoy!</p>
+
+<p>And #notetoself, no need to google anymore, find it on my blog ;)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[run rake task in the background and log to file]]></title>
