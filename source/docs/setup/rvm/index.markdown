@@ -12,7 +12,7 @@ Installation should be pretty smooth, but if you have trouble [get help here](ht
 Run this command to install RVM for your user account.
 
 ```sh
-bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+curl -L https://get.rvm.io | bash -s stable --ruby
 ```
 
 Next add RVM to your shell as a function. (Or simply close and reopen your shell.)
