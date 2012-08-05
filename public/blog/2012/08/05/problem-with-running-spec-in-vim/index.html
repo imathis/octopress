@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Avi Tzurel</title>
+  <title>problem with running spec in vim - Avi Tzurel</title>
   <meta name="author" content="Avi Tzurel">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avi.io/">
+  <link rel="canonical" href="http://avi.io/blog/2012/08/05/problem-with-running-spec-in-vim/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -63,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/08/05/problem-with-running-spec-in-vim/">Problem With Running Spec in Vim</a></h1>
+      <h1 class="entry-title">Problem With Running Spec in Vim</h1>
     
     
       <p class="meta">
@@ -89,14 +86,14 @@
 
 <time datetime="2012-08-05T22:02:00+03:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
         
-         | <a href="/blog/2012/08/05/problem-with-running-spec-in-vim/#disqus_thread">Comments</a>
+         | <a href="#disqus_thread">Comments</a>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I have been using Vim for almost a week now.</p>
+<div class="entry-content"><p>I have been using Vim for almost a week now.</p>
 
 <p>I am using the <a href="http://github.com/astrails/dotvim">dotvim</a> configuration by <a href="http://astrails.com">Astrails</a>.</p>
 
@@ -260,73 +257,16 @@ In a vim session I mapped a key like this</p>
 
 <p>My entire vim configuration is here: <a href="http://www.github.com/kensodev/dotvim">link</a></p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux/">Copy All Files From a Folder Into a Folder Without the Confirmation on Linux</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Avi Tzurel</span></span>
 
-<time datetime="2012-07-31T18:17:00+03:00" pubdate data-updated="true">Jul 31<span>st</span>, 2012</time>
-        
-         | <a href="/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>As a developer, there are things that never mind how many times you&#8217;ll do them, you will never ever remember how to do it exactly without googling for a couple of minutes or looking through the last executed list of commands on the terminal.</p>
-
-<p>For me, one of those things is how to copy all files and folders from source to destination with automatic reply yes to overwrite requests.</p>
-
-<p>Here&#8217;s how you do it</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>cp -apRv &lt;source_folder&gt;/* &lt;dest_folder&gt;/ --reply<span class="o">=</span>yes
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Enjoy!</p>
-
-<p>And #notetoself, no need to google anymore, find it on my blog ;)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/">Run Rake Task in the Background and Log to File</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -338,234 +278,46 @@ In a vim session I mapped a key like this</p>
   
 
 
-<time datetime="2012-07-30T02:16:00+03:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I am working with rake tasks a lot, I love the simplicity of creating one and just running one on the server.</p>
-
-<p>For the real heavy lifting I am using a queue system of course, but when I just want to throw something in the queue for example, I will usually create a rake task for it and run it on one of the servers.</p>
-
-<p>I use quick and dirty <code>puts</code> messages to log the progress.</p>
-
-<p>For example I could have a rake task like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">User</span><span class="o">.</span><span class="n">find_each</span> <span class="k">do</span> <span class="o">|</span><span class="n">user</span><span class="o">|</span>
-</span><span class='line'>  <span class="nb">puts</span> <span class="s2">&quot;Going over user: </span><span class="si">#{</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span class='line'>  <span class="no">Resque</span><span class="o">.</span><span class="n">enqueue</span><span class="p">(</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="p">)</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To run this on the server, I just ssh into is and then I do <code>screen</code> so when I log out of the server the session will save the process and not kill it.</p>
-
-<p>Then, I run this command:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">foo</span><span class="ss">:bar</span>  <span class="o">--</span><span class="n">trace</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">&gt;&gt;</span> <span class="n">log</span><span class="o">/</span><span class="n">some_log_file</span><span class="o">.</span><span class="n">log</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&#8217;s it, you can now leave the server and let it do all the work, periodically, you can log in and check the progress just by tailing the file.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2012-08-05T22:02:00+03:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/">Project Specific Settings Using Zshell and Dotfiles</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
+<span class="categories">
   
+    <a class='category' href='/blog/categories/general/'>General</a>
+  
+</span>
 
 
-<time datetime="2012-07-29T13:54:00+03:00" pubdate data-updated="true">Jul 29<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/#disqus_thread">Comments</a>
-        
-      </p>
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>I have been working with ZHell pretty much since the first day that I have been using a Mac.</p>
-
-<p>The use I make of to grew with time and definitely the biggest switch was that I moved to using dotfiles for settings in a single location.</p>
-
-<p>I forked <a href="http://zachholman.com/">Zach Holman</a> dot files <a href="http://github.com/kensodev/dotfiles">here</a>, and I have been adjusting and customizing it ever since.</p>
-
-<p>I am using Ruby/Rails for my everyday work, both for consulting and open source projects, the one thing that I see people do and I don&#8217;t like is committing configuration files with password and sensitive information into source control.</p>
-
-<p>When I can, I try to avoid it, so I developed a very easy way to manage my per-project environment variable without going through a huge file.</p>
-
-<p>All of my zsh files are located in a single folder in my dotfiles.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>├── aliases.zsh
-</span><span class='line'>├── completion.zsh
-</span><span class='line'>├── config.zsh
-</span><span class='line'>├── functions
-</span><span class='line'>│   ├── _boom
-</span><span class='line'>│   ├── _brew
-</span><span class='line'>│   ├── _c
-</span><span class='line'>│   ├── _git-rm
-</span><span class='line'>│   ├── _h
-</span><span class='line'>│   ├── _rake
-</span><span class='line'>│   ├── c
-</span><span class='line'>│   ├── gf
-</span><span class='line'>│   ├── gitdays
-</span><span class='line'>│   ├── h
-</span><span class='line'>│   ├── last_modified
-</span><span class='line'>│   ├── newtab
-</span><span class='line'>│   ├── savepath
-</span><span class='line'>│   ├── smartextract
-</span><span class='line'>│   ├── start_project
-</span><span class='line'>│   ├── verbose_completion
-</span><span class='line'>│   └── zgitinit
-</span><span class='line'>├── hidden_aliases.zsh
-</span><span class='line'>├── projects
-</span><span class='line'>│   ├── boto_project.zsh
-</span><span class='line'>│   └── octopus_project.zsh
-</span><span class='line'>├── prompt.zsh
-</span><span class='line'>├── window.zsh
-</span><span class='line'>└── zshrc.symlink</span></code></pre></td></tr></table></div></figure>
-
-
-<p>As you can see, there&#8217;s a special folder there called <code>projects</code>, in which I put a lll of my project specific setting like tokens, passwords and other things.</p>
-
-<p>For example, here&#8217;s what a project file might look like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">OCTOPUS_POSTGRES_USER</span><span class="o">=</span>postgres
-</span><span class='line'><span class="nb">export </span><span class="nv">OCTOPUS_POSTGRES_PASSWORD</span><span class="o">=</span>some_password
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>One thing that is very easy to forget, is that if you open source your dot files (and you should) don&#8217;t forget to ignore those files and don&#8217;t commit them.</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2012/08/05/problem-with-running-spec-in-vim/" data-via="KensoDev" data-counturl="http://avi.io/blog/2012/08/05/problem-with-running-spec-in-vim/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
-
-    </article>
-  
-  
-    <article>
+    
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/27/run-octopress-new-post-rake-on-zshell/">Run Octopress New_post Rake on Zshell</a></h1>
-    
-    
-      <p class="meta">
-        
+        <a class="basic-alignment left" href="/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux/" title="Previous Post: copy all files from a folder into a folder without the confirmation on linux">&laquo; copy all files from a folder into a folder without the confirmation on linux</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-27T22:53:00+03:00" pubdate data-updated="true">Jul 27<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/07/27/run-octopress-new-post-rake-on-zshell/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This blog is running on <a href="https://github.com/imathis/octopress">Octopress</a>, which is an awesome implementation of a blogging engine in Ruby.</p>
-
-<p>To create a new post, you need to run a rake task like so:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;some awesome post title&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The problem is, that in zsh, those are escaped and you get an error.</p>
-
-<p>I used to do <code>new_post</code> without anything and then edit the file name and the title inside the file BUT there&#8217;s actually a better way.</p>
-
-<p>You can either run <code>noglob rake</code> or you can run the rake like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake <span class="s2">&quot;new_post[some awesome post title]&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Enjoy!</p>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  
-  
+  </section>
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -605,7 +357,7 @@ In a vim session I mapped a key like this</p>
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -625,7 +377,7 @@ In a vim session I mapped a key like this</p>
 <section>
   <h1>My Coderwall</h1>
   <ul id="cw_badges">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
 
   <script type="text/javascript">
@@ -695,6 +447,7 @@ In a vim session I mapped a key like this</p>
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -709,7 +462,10 @@ In a vim session I mapped a key like this</p>
       var disqus_shortname = 'KensoDev-EN';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://avi.io/blog/2012/08/05/problem-with-running-spec-in-vim/';
+        var disqus_url = 'http://avi.io/blog/2012/08/05/problem-with-running-spec-in-vim/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
