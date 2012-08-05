@@ -1,7 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
-require 'rake/minify'
+require "guard"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -43,6 +43,8 @@ task :install, :theme do |t, args|
   cp_r "#{themes_dir}/#{theme}/source/.", source_dir
   mkdir_p "sass"
   cp_r "#{themes_dir}/#{theme}/sass/.", "sass"
+  mkdir_p "javascripts"
+  cp_r "#{themes_dir}/#{theme}/javascripts/.", "javascripts"
   mkdir_p "#{source_dir}/#{posts_dir}"
   mkdir_p public_dir
 end
@@ -54,29 +56,20 @@ end
 desc "Generate jekyll site"
 task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  puts "## Generating Site with Jekyll"
-  system "compass compile --css-dir #{source_dir}/stylesheets"
-  Rake::Task['minify_and_combine'].execute
-  system "jekyll"
-end
+  puts "## Generating Site with Guard"
 
-Rake::Minify.new(:minify_and_combine) do
-  files = FileList.new("#{source_dir}/javascripts/group/*.*")
+  Guard.setup({
+    :no_interactions => true,
+    :group => ['frontend']
+  })
 
-  output_file =  "#{source_dir}/javascripts/octopress.min.js"
+  # guard-compass doesn't set itself up properly unless it's create_updater
+  # method is triggered, as that is private, we have to fudge it by triggering
+  # a reload of the guard configuration. We can't trigger Guard.start as that
+  # triggers the file listener, which we don't want.
+  Guard.reload({})
 
-  puts "BEGIN Minifying #{output_file}"
-  group(output_file) do
-    files.each do |filename|
-      puts "Minifying- #{filename} into #{output_file}"
-      if filename.include? '.min.js'
-        add(filename, :minify => false)
-      else
-        add(filename)
-      end
-    end
-  end
-  puts "END Minifying #{output_file}"
+  Guard.run_all({})
 end
 
 # usage rake generate_only[my-post]
@@ -97,33 +90,29 @@ end
 desc "Watch the site and regenerate when it changes"
 task :watch do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  puts "Starting to watch source with Jekyll and Compass."
-  system "compass compile --css-dir #{source_dir}/stylesheets"
-  Rake::Task['minify_and_combine'].execute
-  jekyllPid = Process.spawn("jekyll --auto")
-  compassPid = Process.spawn("compass watch")
+  puts "Starting to watch source with Guard."
+  puts "'rake watch' is now a synonym for 'guard'. You should run that instead"
+  guardPid = Process.spawn("bundle exec guard --no-interactions")
   trap("INT") {
-    [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    [guardPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
-  [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
+  [guardPid].each { |pid| Process.wait(pid) }
 end
 
 desc "preview the site in a web browser"
 task :preview do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
-  system "compass compile --css-dir #{source_dir}/stylesheets"
-  jekyllPid = Process.spawn("jekyll --auto")
-  compassPid = Process.spawn("compass watch")
+  puts "Starting to watch source with Guard. Starting Rack on port #{server_port}"
+  guardPid = Process.spawn("bundle exec guard --no-interactions")
   rackupPid = Process.spawn("rackup --port #{server_port}")
 
   trap("INT") {
-    [jekyllPid, compassPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    [guardPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
 
-  [jekyllPid, compassPid, rackupPid].each { |pid| Process.wait(pid) }
+  [guardPid, rackupPid].each { |pid| Process.wait(pid) }
 end
 
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
@@ -225,6 +214,7 @@ task :update, :theme do |t, args|
   theme = args.theme || 'classic'
   Rake::Task[:update_source].invoke(theme)
   Rake::Task[:update_style].invoke(theme)
+  Rake::Task[:update_javascript].invoke(theme)
 end
 
 desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"
@@ -240,6 +230,20 @@ task :update_style, :theme do |t, args|
   cp_r "sass.old/custom/.", "sass/custom"
   puts "## Updated Sass ##"
   rm_r ".sass-cache", :secure=>true if File.directory?(".sass-cache")
+end
+
+desc "Move javscripts to javascripts.old, install javascript theme updates, replace javascript/custom with javascript.old/custom"
+task :update_javascript, :theme do |t, args|
+  theme = args.theme || 'classic'
+  if File.directory?("javascripts.old")
+    puts "removed existing javascripts.old directory"
+    rm_r "javascripts.old", :secure=>true
+  end
+  mv "javascripts", "javascripts.old"
+  puts "## Moved styles into javascripts.old/"
+  cp_r "#{themes_dir}/"+theme+"/javascripts/", "javascripts"
+  cp_r "javascripts.old/custom/.", "javascripts/custom"
+  puts "## Updated Javascript ##"
 end
 
 desc "Move source to source.old, install source theme updates, replace source/_includes/navigation.html with source.old's navigation"
@@ -329,7 +333,7 @@ multitask :push do
       puts "\n## GitHub Pages deploy complete"
     end
   else
-    puts "This project isn't configured for deploying to GitHub Pages\nPlease run `rake setup_github_pages[your-deployment-repo-url]`." 
+    puts "This project isn't configured for deploying to GitHub Pages\nPlease run `rake setup_github_pages[your-deployment-repo-url]`."
   end
 end
 
@@ -430,12 +434,12 @@ task :setup_github_pages, :repo do |t, args|
     f.write rakefile
   end
 
-  # Configure published url 
+  # Configure published url
   jekyll_config = IO.read('_config.yml')
   current_url = /^url:\s?(.*$)/.match(jekyll_config)[1]
   has_cname = File.exists?("#{source_dir}/CNAME")
   if current_url == 'http://yoursite.com'
-    jekyll_config.sub!(/^url:.*$/, "url: #{url}") 
+    jekyll_config.sub!(/^url:.*$/, "url: #{url}")
     File.open('_config.yml', 'w') do |f|
       f.write jekyll_config
     end

@@ -38,7 +38,7 @@ var octopress = (function(){
       }
       if (sections.length >= 3){ $('aside.sidebar').addClass('thirds'); }
     }
-    
+
     , addCodeLineNumbers: function () {
       if (navigator.appName === 'Microsoft Internet Explorer') { return; }
       $('div.gist-highlight').each(function(index) {
@@ -113,7 +113,7 @@ var octopress = (function(){
 
     /* Sky Slavin, Ludopoli. MIT license.  * based on JavaScript Pretty Date * Copyright (c) 2008 John Resig (jquery.com) * Licensed under the MIT license.  */
     /* Updated considerably by Brandon Mathis */
- 
+
     , prettyDate: function (time) {
       if (navigator.appName === 'Microsoft Internet Explorer') {
         return "<span>&infin;</span>"; // because IE date parsing isn't fun.
@@ -207,7 +207,7 @@ var octopress = (function(){
         }
       }
     })()
-    
+
     , github: (function(){
 
       htmlEscape = function (str) {
