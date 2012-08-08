@@ -1,24 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Avi Tzurel]]></title>
-  <link href="http://avi.io/atom.xml" rel="self"/>
-  <link href="http://avi.io/"/>
-  <updated>2012-08-08T16:46:27+03:00</updated>
-  <id>http://avi.io/</id>
-  <author>
-    <name><![CDATA[Avi Tzurel]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Creating self starting worker machines for fun and profit - Avi Tzurel</title>
+  <meta name="author" content="Avi Tzurel">
 
   
-  <entry>
-    <title type="html"><![CDATA[Creating self starting worker machines for fun and profit]]></title>
-    <link href="http://avi.io/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit/"/>
-    <updated>2012-08-08T13:49:00+03:00</updated>
-    <id>http://avi.io/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit</id>
-    <content type="html"><![CDATA[<p>Lately, I needed to create worker machines (Machines that have Resque workers on them).</p>
+  <meta name="description" content="Lately, I needed to create worker machines (Machines that have Resque workers on them). Usually, the process is very manual and tedious, you need to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://avi.io/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Avi Tzurel" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33891290-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Avi Tzurel</a></h1>
+  
+    <h2>Blogging about Ruby/Rails and related web stuff</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:avi.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Creating Self Starting Worker Machines for Fun and Profit</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-08T13:49:00+03:00" pubdate data-updated="true">Aug 8<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Lately, I needed to create worker machines (Machines that have Resque workers on them).</p>
 
 <p>Usually, the process is very manual and tedious, you need to deploy the code to each machine (on code change), you need to start/stop/restart the workers and more.</p>
 
@@ -376,356 +463,252 @@
 <h2>Comments? Questions?</h2>
 
 <p>Please feel free</p>
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <entry>
-    <title type="html"><![CDATA[problem with running spec in vim]]></title>
-    <link href="http://avi.io/blog/2012/08/05/problem-with-running-spec-in-vim/"/>
-    <updated>2012-08-05T22:02:00+03:00</updated>
-    <id>http://avi.io/blog/2012/08/05/problem-with-running-spec-in-vim</id>
-    <content type="html"><![CDATA[<p>I have been using Vim for almost a week now.</p>
 
-<p>I am using the <a href="http://github.com/astrails/dotvim">dotvim</a> configuration by <a href="http://astrails.com">Astrails</a>.</p>
+<span class="byline author vcard">Posted by <span class="fn">Avi Tzurel</span></span>
 
-<p>All in all, the configuration is awesome and I completely love it, it&#8217;s the longest time period I have ever used Vim. Considering that the second place is about 5 minutes, that&#8217;s super impressive.</p>
-
-<p>I only have one problem with it.</p>
-
-<p>I took the spec running functions from <a href="https://github.com/garybernhardt">Gary Bernhardt</a> <a href="https://github.com/garybernhardt/dotfiles/">dotfiles</a>, I just remapped the keys differently.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-</span><span class='line'>" RUNNING TESTS
-</span><span class='line'>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-</span><span class='line'>map &lt;leader&gt;' :call RunTestFile()&lt;cr&gt;
-</span><span class='line'>map &lt;leader&gt;; :call RunNearestTest()&lt;cr&gt;
-</span><span class='line'>
-</span><span class='line'>function! RunTestFile(...)
-</span><span class='line'>    if a:0
-</span><span class='line'>        let command_suffix = a:1
-</span><span class='line'>    else
-</span><span class='line'>        let command_suffix = ""
-</span><span class='line'>    endif
-</span><span class='line'>
-</span><span class='line'>    " Run the tests for the previously-marked file.
-</span><span class='line'>    let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
-</span><span class='line'>    if in_test_file
-</span><span class='line'>        call SetTestFile()
-</span><span class='line'>    elseif !exists("t:grb_test_file")
-</span><span class='line'>        return
-</span><span class='line'>    end
-</span><span class='line'>    call RunTests(t:grb_test_file . command_suffix)
-</span><span class='line'>endfunction
-</span><span class='line'>
-</span><span class='line'>function! RunNearestTest()
-</span><span class='line'>    let spec_line_number = line('.')
-</span><span class='line'>    call RunTestFile(":" . spec_line_number . " -b")
-</span><span class='line'>endfunction
-</span><span class='line'>
-</span><span class='line'>function! SetTestFile()
-</span><span class='line'>    " Set the spec file that tests will be run for.
-</span><span class='line'>    let t:grb_test_file=@%
-</span><span class='line'>endfunction
-</span><span class='line'>
-</span><span class='line'>function! RunTests(filename)
-</span><span class='line'>    " Write the file and run tests for the given filename
-</span><span class='line'>    :w
-</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-</span><span class='line'>    if match(a:filename, '\.feature$') != -1
-</span><span class='line'>        exec ":!script/features " . a:filename
-</span><span class='line'>    else
-</span><span class='line'>        if filereadable("script/test")
-</span><span class='line'>            exec ":!script/test " . a:filename
-</span><span class='line'>        elseif filereadable("Gemfile")
-</span><span class='line'>            exec ":!bundle exec rspec --color " . a:filename
-</span><span class='line'>        else
-</span><span class='line'>            exec ":!rspec --color " . a:filename
-</span><span class='line'>        end
-</span><span class='line'>    end
-</span><span class='line'>endfunction
-</span><span class='line'>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-</span><span class='line'>" RUNNING TESTS
-</span><span class='line'>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""</span></code></pre></td></tr></table></div></figure>
+      
 
 
-<p>As you can see, I mapped <code>,;</code> to run line specs, and <code>,'</code> to run the entire spec file.</p>
-
-<p>The problem is, that the terminal exists immediately after the result, does not wait for me to hit <code>Enter</code> or anything.</p>
-
-<p>You can see the problem demo in this YouTube Video</p>
-
-<iframe width="" height="" src="http://www.youtube.com/embed/gUB48XwNq0M " frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 
-<p>I asked this question on StackOverflow <a href="http://stackoverflow.com/questions/11785035/vim-issue-with-running-specs-in-ruby-rspec/11785791#11785791">here</a></p>
-
-<p>Someone suggested it might be a trailing character, but I checked and there&#8217;s nothing like that.</p>
-
-<p>The same person suggested to map just <code>ls</code> like so:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>nmap &lt;leader&gt;ls :!ls&lt;cr&gt;</span></code></pre></td></tr></table></div></figure>
 
 
-<p>But this command does not exit.</p>
-
-<p>Another thing I tried is this
-In a vim session I mapped a key like this</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>map &lt;Leader&gt;~ :!rspec %&lt;cr&gt;</span></code></pre></td></tr></table></div></figure>
 
 
-<p>When I used it, the terminal did not exit as well.</p>
-
-<p>Vim Experts, what am I missing here?</p>
-
-<p>Running specs all the time is something crucial to my workflow, I don&#8217;t want to hide vim very time, it breaks my flow.</p>
-
-<p>Any help appreciated.</p>
-
-<p>My entire vim configuration is here: <a href="http://www.github.com/kensodev/dotvim">link</a></p>
-]]></content>
-  </entry>
   
-  <entry>
-    <title type="html"><![CDATA[copy all files from a folder into a folder without the confirmation on linux]]></title>
-    <link href="http://avi.io/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux/"/>
-    <updated>2012-07-31T18:17:00+03:00</updated>
-    <id>http://avi.io/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux</id>
-    <content type="html"><![CDATA[<p>As a developer, there are things that never mind how many times you&#8217;ll do them, you will never ever remember how to do it exactly without googling for a couple of minutes or looking through the last executed list of commands on the terminal.</p>
-
-<p>For me, one of those things is how to copy all files and folders from source to destination with automatic reply yes to overwrite requests.</p>
-
-<p>Here&#8217;s how you do it</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>cp -apRv &lt;source_folder&gt;/* &lt;dest_folder&gt;/ --reply<span class="o">=</span>yes
-</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Enjoy!</p>
+<time datetime="2012-08-08T13:49:00+03:00" pubdate data-updated="true">Aug 8<span>th</span>, 2012</time>
+      
 
-<p>And #notetoself, no need to google anymore, find it on my blog ;)</p>
-]]></content>
-  </entry>
+<span class="categories">
   
-  <entry>
-    <title type="html"><![CDATA[run rake task in the background and log to file]]></title>
-    <link href="http://avi.io/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/"/>
-    <updated>2012-07-30T02:16:00+03:00</updated>
-    <id>http://avi.io/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file</id>
-    <content type="html"><![CDATA[<p>I am working with rake tasks a lot, I love the simplicity of creating one and just running one on the server.</p>
-
-<p>For the real heavy lifting I am using a queue system of course, but when I just want to throw something in the queue for example, I will usually create a rake task for it and run it on one of the servers.</p>
-
-<p>I use quick and dirty <code>puts</code> messages to log the progress.</p>
-
-<p>For example I could have a rake task like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">User</span><span class="o">.</span><span class="n">find_each</span> <span class="k">do</span> <span class="o">|</span><span class="n">user</span><span class="o">|</span>
-</span><span class='line'>  <span class="nb">puts</span> <span class="s2">&quot;Going over user: </span><span class="si">#{</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span class='line'>  <span class="no">Resque</span><span class="o">.</span><span class="n">enqueue</span><span class="p">(</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="p">)</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To run this on the server, I just ssh into is and then I do <code>screen</code> so when I log out of the server the session will save the process and not kill it.</p>
-
-<p>Then, I run this command:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">foo</span><span class="ss">:bar</span>  <span class="o">--</span><span class="n">trace</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">&gt;&gt;</span> <span class="n">log</span><span class="o">/</span><span class="n">some_log_file</span><span class="o">.</span><span class="n">log</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&#8217;s it, you can now leave the server and let it do all the work, periodically, you can log in and check the progress just by tailing the file.</p>
-]]></content>
-  </entry>
+    <a class='category' href='/blog/categories/open/'>Open</a>, <a class='category' href='/blog/categories/rails-/'>Rails,</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/source/'>Source</a>, <a class='category' href='/blog/categories/on/'>on</a>
   
-  <entry>
-    <title type="html"><![CDATA[project specific settings using zshell and dotfiles]]></title>
-    <link href="http://avi.io/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/"/>
-    <updated>2012-07-29T13:54:00+03:00</updated>
-    <id>http://avi.io/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles</id>
-    <content type="html"><![CDATA[<p>I have been working with ZHell pretty much since the first day that I have been using a Mac.</p>
-
-<p>The use I make of to grew with time and definitely the biggest switch was that I moved to using dotfiles for settings in a single location.</p>
-
-<p>I forked <a href="http://zachholman.com/">Zach Holman</a> dot files <a href="http://github.com/kensodev/dotfiles">here</a>, and I have been adjusting and customizing it ever since.</p>
-
-<p>I am using Ruby/Rails for my everyday work, both for consulting and open source projects, the one thing that I see people do and I don&#8217;t like is committing configuration files with password and sensitive information into source control.</p>
-
-<p>When I can, I try to avoid it, so I developed a very easy way to manage my per-project environment variable without going through a huge file.</p>
-
-<p>All of my zsh files are located in a single folder in my dotfiles.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>├── aliases.zsh
-</span><span class='line'>├── completion.zsh
-</span><span class='line'>├── config.zsh
-</span><span class='line'>├── functions
-</span><span class='line'>│   ├── _boom
-</span><span class='line'>│   ├── _brew
-</span><span class='line'>│   ├── _c
-</span><span class='line'>│   ├── _git-rm
-</span><span class='line'>│   ├── _h
-</span><span class='line'>│   ├── _rake
-</span><span class='line'>│   ├── c
-</span><span class='line'>│   ├── gf
-</span><span class='line'>│   ├── gitdays
-</span><span class='line'>│   ├── h
-</span><span class='line'>│   ├── last_modified
-</span><span class='line'>│   ├── newtab
-</span><span class='line'>│   ├── savepath
-</span><span class='line'>│   ├── smartextract
-</span><span class='line'>│   ├── start_project
-</span><span class='line'>│   ├── verbose_completion
-</span><span class='line'>│   └── zgitinit
-</span><span class='line'>├── hidden_aliases.zsh
-</span><span class='line'>├── projects
-</span><span class='line'>│   ├── boto_project.zsh
-</span><span class='line'>│   └── octopus_project.zsh
-</span><span class='line'>├── prompt.zsh
-</span><span class='line'>├── window.zsh
-</span><span class='line'>└── zshrc.symlink</span></code></pre></td></tr></table></div></figure>
+</span>
 
 
-<p>As you can see, there&#8217;s a special folder there called <code>projects</code>, in which I put a lll of my project specific setting like tokens, passwords and other things.</p>
-
-<p>For example, here&#8217;s what a project file might look like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">OCTOPUS_POSTGRES_USER</span><span class="o">=</span>postgres
-</span><span class='line'><span class="nb">export </span><span class="nv">OCTOPUS_POSTGRES_PASSWORD</span><span class="o">=</span>some_password
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>One thing that is very easy to forget, is that if you open source your dot files (and you should) don&#8217;t forget to ignore those files and don&#8217;t commit them.</p>
-]]></content>
-  </entry>
+    </p>
+    
+      <div class="sharing">
   
-  <entry>
-    <title type="html"><![CDATA[run octopress new_post rake on zshell]]></title>
-    <link href="http://avi.io/blog/2012/07/27/run-octopress-new-post-rake-on-zshell/"/>
-    <updated>2012-07-27T22:53:00+03:00</updated>
-    <id>http://avi.io/blog/2012/07/27/run-octopress-new-post-rake-on-zshell</id>
-    <content type="html"><![CDATA[<p>This blog is running on <a href="https://github.com/imathis/octopress">Octopress</a>, which is an awesome implementation of a blogging engine in Ruby.</p>
-
-<p>To create a new post, you need to run a rake task like so:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;some awesome post title&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The problem is, that in zsh, those are escaped and you get an error.</p>
-
-<p>I used to do <code>new_post</code> without anything and then edit the file name and the title inside the file BUT there&#8217;s actually a better way.</p>
-
-<p>You can either run <code>noglob rake</code> or you can run the rake like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake <span class="s2">&quot;new_post[some awesome post title]&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Enjoy!</p>
-]]></content>
-  </entry>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit/" data-via="KensoDev" data-counturl="http://avi.io/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit/" >Tweet</a>
   
-</feed>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/08/05/problem-with-running-spec-in-vim/" title="Previous Post: problem with running spec in vim">&laquo; problem with running spec in vim</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Avi Tzurel</h1>
+  <img src="https://api.twitter.com/1/users/profile_image?screen_name=kensodev&amp;size=original" width="128" height="128" style="height: 128px; width: 128px; border-radius: 6px">
+  <p>
+  	Owner @ <a href="http://www.kensodev.com">KensoDev</a>, a boutique software consultancy based in Israel More <a href="/about">about me</a>.
+  </p>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit/">Creating self starting worker machines for fun and profit</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/05/problem-with-running-spec-in-vim/">problem with running spec in vim</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux/">copy all files from a folder into a folder without the confirmation on linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/">run rake task in the background and log to file</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/">project specific settings using zshell and dotfiles</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("KensoDev", 5, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/KensoDev" class="twitter-follow-button" data-show-count="true">Follow @KensoDev</a>
+  
+</section>
+
+
+
+
+
+<section>
+  <h1>My Coderwall</h1>
+  <ul id="cw_badges">
+    <li class="loading">Status updating...</li>
+  </ul>
+
+  <script type="text/javascript">
+    var coderwall = (function(){
+      function render(options, badges){
+        var fragment = '',
+            t = $(options.target)[0],
+            height = 65,
+            width = 65,
+            index;
+
+        for (index in badges) {
+          fragment += '<a class="cw_badge"title="' + badges[index].description + '" href="http://coderwall.com/' + options.user + '">';
+          fragment +=   '<img alt="' + badges[index].description + '" height="' + width + '" width="' + height + '" src="' + badges[index].badge + '"/>';
+          fragment += '</a>';
+        }
+
+        t.innerHTML = fragment;
+      }
+      return {
+        showBadges: function(options){
+          $.ajax({
+              url: 'http://coderwall.com/' + options.user + '.json?callback=?'
+            , type: 'jsonp'
+            , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
+            , success: function(res) {
+                render(options, res.data.badges);
+            }
+          });
+        }
+      };
+    })();
+
+    $.domReady(function(){
+      if (!window.jXHR){
+        var jxhr = document.createElement('script');
+        jxhr.type = 'text/javascript';
+        jxhr.src = '/javascripts/libs/jXHR.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(jxhr, s);
+      }
+      if (!window.$){
+        var b = document.createElement('script');
+        b.type = 'text/javascript';
+        b.src = '/javascripts/ender.js';
+        var sc = document.getElementsByTagName('script')[0];
+        sc.parentNode.insertBefore(jxhr, s);
+      }
+      coderwall.showBadges({
+        user: 'kensodev',
+        target: '#cw_badges'
+      });
+    });
+  </script>
+  <style type="text/css">
+    .cw_badge img {
+      padding: 5px;
+      border: 0 none !important;
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      -o-box-shadow: none !important;
+      box-shadow: none !important;
+    }
+  </style>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Avi Tzurel -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'avi-io';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://avi.io/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit/';
+        var disqus_url = 'http://avi.io/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
