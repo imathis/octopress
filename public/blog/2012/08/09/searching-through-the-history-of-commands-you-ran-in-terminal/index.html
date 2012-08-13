@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Avi Tzurel</title>
+  <title>searching through the history of commands you ran in terminal - Avi Tzurel</title>
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="Blog Archive 2012 searching through the history of commands you ran in terminal
-Aug 09 2012 posted in General Making Nokogiri install again on &hellip;">
+  <meta name="description" content="Whenever I am logged in to a server or even when I am working on my own machine, I keep searching through the command history through up and down &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Aug 09 2012 posted in General Making Nokogiri install again on &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avi.io/blog/archives/">
+  <link rel="canonical" href="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -77,134 +76,123 @@ Aug 09 2012 posted in General Making Nokogiri install again on &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Searching Through the History of Commands You Ran in Terminal</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-09T00:06:00+03:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>Whenever I am logged in to a server or even when I am working on my own machine, I keep searching through the command history through up and down arrows.</p>
 
-  
-  <h2>2012</h2>
+<p>While this can be efficient if you have 2-3 commands, it can be quite frustrating to find specific commands.</p>
 
-<article>
-  
-<h1><a href="/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/">searching through the history of commands you ran in terminal</a></h1>
-<time datetime="2012-08-09T00:06:00+03:00" pubdate><span class='month'>Aug</span> <span class='day'>09</span> <span class='year'>2012</span></time>
+<p>That is something I keep doing over and over again, and now I have a better way, I just grep through the list of commands, find the one I want, copy it and paste it into a new command, and I&#8217;m done.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/general/'>General</a></span>
-</footer>
+<p>This saves me <strong>a lot</strong> of time.</p>
 
+<p>Here&#8217;s how:</p>
 
-</article>
+<p>To show the history of commands you just do:</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history</span></code></pre></td></tr></table></div></figure>
 
 
-<article>
-  
-<h1><a href="/blog/2012/08/09/making-nokogiri-install-again-on-mountain-lion/">Making Nokogiri install again on Mountain Lion</a></h1>
-<time datetime="2012-08-09T00:04:00+03:00" pubdate><span class='month'>Aug</span> <span class='day'>09</span> <span class='year'>2012</span></time>
+<p>You probably know the rest, but you can just pipe the history into grep and search your history</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/on/'>on</a>, <a class='category' href='/blog/categories/rails/'>rails</a></span>
-</footer>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history | grep {command_or_part_of_command}</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<p>For example:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history | grep cp -R</span></code></pre></td></tr></table></div></figure>
 
 
-
-<article>
-  
-<h1><a href="/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit/">Creating self starting worker machines for fun and profit</a></h1>
-<time datetime="2012-08-08T13:49:00+03:00" pubdate><span class='month'>Aug</span> <span class='day'>08</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/open/'>Open</a>, <a class='category' href='/blog/categories/rails-/'>Rails,</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/source/'>Source</a>, <a class='category' href='/blog/categories/on/'>on</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/08/05/problem-with-running-spec-in-vim/">problem with running spec in vim</a></h1>
-<time datetime="2012-08-05T22:02:00+03:00" pubdate><span class='month'>Aug</span> <span class='day'>05</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/general/'>General</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux/">copy all files from a folder into a folder without the confirmation on linux</a></h1>
-<time datetime="2012-07-31T18:17:00+03:00" pubdate><span class='month'>Jul</span> <span class='day'>31</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/devops/'>devops</a>, <a class='category' href='/blog/categories/general-/'>general,</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/">run rake task in the background and log to file</a></h1>
-<time datetime="2012-07-30T02:16:00+03:00" pubdate><span class='month'>Jul</span> <span class='day'>30</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/open/'>Open</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/general-/'>general,</a>, <a class='category' href='/blog/categories/on/'>on</a>, <a class='category' href='/blog/categories/rails-/'>rails,</a>, <a class='category' href='/blog/categories/source/'>source</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/">project specific settings using zshell and dotfiles</a></h1>
-<time datetime="2012-07-29T13:54:00+03:00" pubdate><span class='month'>Jul</span> <span class='day'>29</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/general/'>general</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/27/run-octopress-new-post-rake-on-zshell/">run octopress new_post rake on zshell</a></h1>
-<time datetime="2012-07-27T22:53:00+03:00" pubdate><span class='month'>Jul</span> <span class='day'>27</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/general/'>general</a></span>
-</footer>
-
-
-</article>
-
+<p>Enjoy!</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Avi Tzurel</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-09T00:06:00+03:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/general/'>General</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/" data-via="KensoDev" data-counturl="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/08/09/making-nokogiri-install-again-on-mountain-lion/" title="Previous Post: Making Nokogiri install again on Mountain Lion">&laquo; Making Nokogiri install again on Mountain Lion</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -352,7 +340,10 @@ Aug 09 2012 posted in General Making Nokogiri install again on &hellip;">
       var disqus_shortname = 'avi-io';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/';
+        var disqus_url = 'http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

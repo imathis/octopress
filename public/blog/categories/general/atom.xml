@@ -4,7 +4,7 @@
   <title><![CDATA[Category: General | Avi Tzurel]]></title>
   <link href="http://avi.io/blog/categories/general/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2012-08-08T16:46:27+03:00</updated>
+  <updated>2012-08-13T15:22:40+03:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[searching through the history of commands you ran in terminal]]></title>
+    <link href="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/"/>
+    <updated>2012-08-09T00:06:00+03:00</updated>
+    <id>http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal</id>
+    <content type="html"><![CDATA[<p>Whenever I am logged in to a server or even when I am working on my own machine, I keep searching through the command history through up and down arrows.</p>
+
+<p>While this can be efficient if you have 2-3 commands, it can be quite frustrating to find specific commands.</p>
+
+<p>That is something I keep doing over and over again, and now I have a better way, I just grep through the list of commands, find the one I want, copy it and paste it into a new command, and I'm done.</p>
+
+<p>This saves me <strong>a lot</strong> of time.</p>
+
+<p>Here's how:</p>
+
+<p>To show the history of commands you just do:</p>
+
+<p><code>
+history
+</code></p>
+
+<p>You probably know the rest, but you can just pipe the history into grep and search your history</p>
+
+<p><code>
+history | grep {command_or_part_of_command}
+</code></p>
+
+<p>For example:</p>
+
+<p><code>
+history | grep cp -R
+</code></p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[problem with running spec in vim]]></title>

@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Tzurel]]></title>
   <link href="http://avi.io/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2012-08-08T16:46:27+03:00</updated>
+  <updated>2012-08-13T15:22:40+03:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,110 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[searching through the history of commands you ran in terminal]]></title>
+    <link href="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/"/>
+    <updated>2012-08-09T00:06:00+03:00</updated>
+    <id>http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal</id>
+    <content type="html"><![CDATA[<p>Whenever I am logged in to a server or even when I am working on my own machine, I keep searching through the command history through up and down arrows.</p>
+
+<p>While this can be efficient if you have 2-3 commands, it can be quite frustrating to find specific commands.</p>
+
+<p>That is something I keep doing over and over again, and now I have a better way, I just grep through the list of commands, find the one I want, copy it and paste it into a new command, and I&#8217;m done.</p>
+
+<p>This saves me <strong>a lot</strong> of time.</p>
+
+<p>Here&#8217;s how:</p>
+
+<p>To show the history of commands you just do:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You probably know the rest, but you can just pipe the history into grep and search your history</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history | grep {command_or_part_of_command}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For example:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history | grep cp -R</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Making Nokogiri install again on Mountain Lion]]></title>
+    <link href="http://avi.io/blog/2012/08/09/making-nokogiri-install-again-on-mountain-lion/"/>
+    <updated>2012-08-09T00:04:00+03:00</updated>
+    <id>http://avi.io/blog/2012/08/09/making-nokogiri-install-again-on-mountain-lion</id>
+    <content type="html"><![CDATA[<p>As probably any geek out there, I upgraded my OS to Apple Mountain Lion.</p>
+
+<p>The upgrade created a lot of problems for me, I basically had to reinstall almost everything, from MySql to homebrew.</p>
+
+<p>I am not sure if everyone experienced the same thing, but that was the case for me.</p>
+
+<p>One of the problems I encountered was that I could not install Nokogiri anymore on my machine, bundler would not install it and complain about dependencies not being installed (specifically livxml)</p>
+
+<p>To fix it, you need to reinstall Ruby using RVM with livxml properly linked.</p>
+
+<p>First, install <code>libxml</code> and <code>libxslt</code> through homebrew, like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install libxml2 libxslt
+</span><span class='line'>brew link libxml2 libxslt</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If that doesn&#8217;t work you probably need to install <code>libiconv</code> like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd   
+</span><span class='line'>mkdir temp
+</span><span class='line'>cd temp
+</span><span class='line'>ls
+</span><span class='line'>wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
+</span><span class='line'>tar xvfz libiconv-1.13.1.tar.gz
+</span><span class='line'>cd libiconv-1.13.1
+</span><span class='line'>./configure --prefix=/usr/local/Cellar/libiconv/1.13.1
+</span><span class='line'>make
+</span><span class='line'>sudo make install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And then install <code>libxml</code> and <code>libxslt</code> again</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install libxml2 libxslt
+</span><span class='line'>brew link libxml2 libxslt</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Once that&#8217;s done without errors, reinstall Ruby.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm reinstall ruby-1.9.3-p194</span></code></pre></td></tr></table></div></figure>
+
+
+<p>RVM will figure out those libraries location and properly install Ruby with those linked up.</p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Creating self starting worker machines for fun and profit]]></title>
