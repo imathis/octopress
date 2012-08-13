@@ -12,7 +12,7 @@ The upgrade created a lot of problems for me, I basically had to reinstall almos
 
 I am not sure if everyone experienced the same thing, but that was the case for me.
 
-One of the problems I encountered was that I could not install Nokogiri anymore on my machine, bundler would not install it and complain about dependencies not being installed (specifically livxml)
+One of the problems I encountered was that I could not install Nokogiri anymore on my machine, bundler would not install it and complain about dependencies not being installed (specifically `libxml`)
 
 To fix it, you need to reinstall Ruby using RVM with livxml properly linked.
 
