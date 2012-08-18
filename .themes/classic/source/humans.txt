@@ -1,0 +1,15 @@
+---
+layout: nil
+---
+ 
+/* TEAM */
+Owner: {{ site.author }}.
+{% if site.email %}Email: {{ site.email }}
+{% endif %}{% if site.twitter_user %}Twitter: @{{ site.twitter_user }}
+{% endif %}{% if site.github_user %}Github: {{ site.github_user }}
+{% endif %}{% if site.location %}Location: {{ site.location }}
+{% endif %}
+
+/* SITE */
+Last update: {{ site.time | date_to_long_string }}
+Software: Octopress, Jekyll
