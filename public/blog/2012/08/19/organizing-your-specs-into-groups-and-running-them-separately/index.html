@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>searching through the history of commands you ran in terminal - Avi Tzurel</title>
+  <title>organizing your specs into groups and running them separately - Avi Tzurel</title>
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="Whenever I am logged in to a server or even when I am working on my own machine, I keep searching through the command history through up and down &hellip;">
+  <meta name="description" content="A while back I answered this StackOverflow question. When you have a lot of specs, it makes sense to run them in separate logical groups and not just &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/">
+  <link rel="canonical" href="http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Searching Through the History of Commands You Ran in Terminal</h1>
+      <h1 class="entry-title">Organizing Your Specs Into Groups and Running Them Separately</h1>
     
     
       <p class="meta">
@@ -96,7 +96,7 @@
   
 
 
-<time datetime="2012-08-09T00:06:00+03:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
+<time datetime="2012-08-19T13:57:00+03:00" pubdate data-updated="true">Aug 19<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -105,35 +105,71 @@
   </header>
 
 
-<div class="entry-content"><p>Whenever I am logged in to a server or even when I am working on my own machine, I keep searching through the command history through up and down arrows.</p>
+<div class="entry-content"><p>A while back I answered <a href="http://stackoverflow.com/questions/10029250/organizing-rspec-2-tests-into-unit-and-integration-categories-in-rails/10029504#10029504">this StackOverflow question</a>.</p>
 
-<p>While this can be efficient if you have 2-3 commands, it can be quite frustrating to find specific commands.</p>
+<p>When you have a lot of specs, it makes sense to run them in separate logical groups and not just with <code>rspec spec</code> or something like that.</p>
 
-<p>That is something I keep doing over and over again, and now I have a better way, I just grep through the list of commands, find the one I want, copy it and paste it into a new command, and I&#8217;m done.</p>
-
-<p>This saves me <strong>a lot</strong> of time.</p>
-
-<p>Here&#8217;s how:</p>
-
-<p>To show the history of commands you just do:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>history</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You probably know the rest, but you can just pipe the history into grep and search your history</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>history | grep {command_or_part_of_command}</span></code></pre></td></tr></table></div></figure>
-
+<p>This way, you can save time and you can also run them in separate processes on the CI.</p>
 
 <p>For example:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>history | grep cp -R</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake spec:unit
+</span><span class='line'>bundle exec rake spec:integration
+</span><span class='line'>bundle exec rake spec:api</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Enjoy!</p>
+<p>In order to achieve this, you need to change the <code>spec.rake</code> file.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="n">namespace</span> <span class="ss">:spec</span> <span class="k">do</span>
+</span><span class='line'>    <span class="no">Rspec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">RakeTask</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:unit</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">pattern</span> <span class="o">=</span> <span class="no">Dir</span><span class="o">[</span><span class="s1">&#39;spec/*/**/*_spec.rb&#39;</span><span class="o">].</span><span class="n">reject</span><span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="o">[</span><span class="s1">&#39;/api/v1&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="n">f</span><span class="o">[</span><span class="s1">&#39;/integration&#39;</span><span class="o">]</span> <span class="p">}</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="no">Rspec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">RakeTask</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:api</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;spec/*/{api/v1}*/**/*_spec.rb&quot;</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="no">Rspec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">RakeTask</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:integration</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;spec/integration/**/*_spec.rb&quot;</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can continue customizing that all you want, you can run specific specs that are the most important to you.</p>
+
+<p>I find those groups useful for most of my use cases, but with minor changes you can make it fit yours</p>
+
+<h3>Using Rspec Tags</h3>
+
+<p>You can use tags for that as well, but I find that more tedious and you can forget to <em>tag</em> something.</p>
+
+<p>For example:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="n">it</span> <span class="s2">&quot;should do some integration test&quot;</span><span class="p">,</span> <span class="ss">:integration</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="k">do</span>
+</span><span class='line'>   <span class="c1"># something</span>
+</span><span class='line'>  <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
@@ -156,12 +192,12 @@
   
 
 
-<time datetime="2012-08-09T00:06:00+03:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
+<time datetime="2012-08-19T13:57:00+03:00" pubdate data-updated="true">Aug 19<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/general/'>General</a>
+    <a class='category' href='/blog/categories/general/'>General</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/on/'>on</a>, <a class='category' href='/blog/categories/rails-/'>rails,</a>
   
 </span>
 
@@ -170,7 +206,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/" data-via="KensoDev" data-counturl="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/" data-via="KensoDev" data-counturl="http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/" >Tweet</a>
   
   
   
@@ -181,10 +217,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/08/09/making-nokogiri-install-again-on-mountain-lion/" title="Previous Post: Making Nokogiri install again on Mountain Lion">&laquo; Making Nokogiri install again on Mountain Lion</a>
+        <a class="basic-alignment left" href="/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/" title="Previous Post: searching through the history of commands you ran in terminal">&laquo; searching through the history of commands you ran in terminal</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/" title="Next Post: organizing your specs into groups and running them separately">organizing your specs into groups and running them separately &raquo;</a>
       
     </p>
   </footer>
@@ -343,8 +377,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/';
-        var disqus_url = 'http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/';
+        var disqus_identifier = 'http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/';
+        var disqus_url = 'http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/';
         var disqus_script = 'embed.js';
       
     (function () {

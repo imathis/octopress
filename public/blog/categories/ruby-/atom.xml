@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby, | Avi Tzurel]]></title>
   <link href="http://avi.io/blog/categories/ruby-/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2012-08-13T15:26:57+03:00</updated>
+  <updated>2012-08-19T14:05:03+03:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,65 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[organizing your specs into groups and running them separately]]></title>
+    <link href="http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/"/>
+    <updated>2012-08-19T13:57:00+03:00</updated>
+    <id>http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately</id>
+    <content type="html"><![CDATA[<p>A while back I answered <a href="http://stackoverflow.com/questions/10029250/organizing-rspec-2-tests-into-unit-and-integration-categories-in-rails/10029504#10029504">this StackOverflow question</a>.</p>
+
+<p>When you have a lot of specs, it makes sense to run them in separate logical groups and not just with <code>rspec spec</code> or something like that.</p>
+
+<p>This way, you can save time and you can also run them in separate processes on the CI.</p>
+
+<p>For example:</p>
+
+<p><code>
+bundle exec rake spec:unit
+bundle exec rake spec:integration
+bundle exec rake spec:api
+</code></p>
+
+<p>In order to achieve this, you need to change the <code>spec.rake</code> file.</p>
+
+<p>```ruby
+  namespace :spec do</p>
+
+<pre><code>Rspec::Core::RakeTask.new(:unit) do |t|
+  t.pattern = Dir['spec/*/**/*_spec.rb'].reject{ |f| f['/api/v1'] || f['/integration'] }
+end
+</code></pre>
+
+<p>   Rspec::Core::RakeTask.new(:api) do |t|</p>
+
+<pre><code>  t.pattern = "spec/*/{api/v1}*/**/*_spec.rb"
+end
+
+Rspec::Core::RakeTask.new(:integration) do |t|
+  t.pattern = "spec/integration/**/*_spec.rb"
+end
+</code></pre>
+
+<p>  end
+```
+You can continue customizing that all you want, you can run specific specs that are the most important to you.</p>
+
+<p>I find those groups useful for most of my use cases, but with minor changes you can make it fit yours</p>
+
+<h3>Using Rspec Tags</h3>
+
+<p>You can use tags for that as well, but I find that more tedious and you can forget to <em>tag</em> something.</p>
+
+<p>For example:</p>
+
+<p><code>ruby
+  it "should do some integration test", :integration =&gt; true do
+   # something
+  end
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Making Nokogiri install again on Mountain Lion]]></title>
