@@ -32,5 +32,16 @@
       {% endif %}
     {% endif %}
   {% endif %}
+  {% if site.weibo_share %}
+  <span>
+  <iframe
+    width="86"
+    scrolling="no"
+    height="20"
+    frameborder="0"
+    src="http://hits.sinajs.cn/A1/weiboshare.html?url={{ site.url }}{{ page.url }}&amp;type=6&amp;{% if site.weibo_uid %}ralateUid={{ site.weibo_uid }}{% endif %}" allowtransparency="true">
+  </iframe>
+  </span>
+  {% endif %}
   {% include custom/sharing.html %}
 </div>

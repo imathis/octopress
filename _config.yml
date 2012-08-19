@@ -112,3 +112,7 @@ gauges_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+# Weibo Share Button
+weibo_share: true
+weibo_uid: ecguo
