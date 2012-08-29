@@ -1,0 +1,44 @@
+---
+layout: page
+footer: false
+---
+
+<style type="text/css">
+    .tagCloud {
+        list-style:none;
+        margin:0;
+        padding:5px 0 ;
+        overflow:hidden;
+    }
+    .tagCloud li {
+        line-height:28px;
+    }
+    .tagCloud.inline li {
+        float:left;
+    }
+    .tagCloud a {
+        padding: 3px 6px;
+        margin: 2px;
+        background: #eee;
+        color:#005F6B;
+        border-radius: 3px;
+        text-decoration:none;
+    }
+    .tagCloud a span{
+        vertical-align:super;
+        font-size:0.8em;
+    }
+    .tagCloud a.active {
+        background:#57A957;
+        border:1px solid #4C964D;
+        color:#FFF;
+    }
+</style>
+
+<div id="blog-tag-cloud" >
+    <ul class="tagCloud inline">
+        {% for category in page.categories %}
+        <li><a href="{{ category[0] | category_url }}">{{ category[0] }} <span>{{ category[1] | length }}</span></a></li>
+        {% endfor %}
+    </ul>
+</div>
