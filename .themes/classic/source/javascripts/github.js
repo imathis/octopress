@@ -2,9 +2,9 @@ var github = (function(){
   function render(target, repos){
     var i = 0, fragment = '', t = $(target)[0];
 
-    for(i = 0; i < repos.length; i++) {
-      fragment += '<li><a href="'+repos[i].svn_url+'">'+repos[i].name+'</a><p>'+repos[i].description+'</p></li>';
-    }
+      for(i = 0; i < repos.length; i++) {
+        fragment += '<li><a href="'+repos[i].html_url +'">'+repos[i].name+'</a><p>'+repos[i].description+'</p></li>';
+      }
     t.innerHTML = fragment;
   }
   return {
@@ -15,12 +15,11 @@ var github = (function(){
         , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
         , success: function(data) {
           var repos = [];
-          if (!data || !data.data) { return; }
-          for (var i = 0; i < data.data.length; i++) {
-            var currentRepo = data.data[i];
-            if (options.skip_forks && currentRepo.fork) { continue; }
-            repos.push(currentRepo);
-          }
+           if (!data || !data.data) { return; }
+           for (var i = 0; i < data.data.length; i++) {
+              if (options.skip_forks && data.data[i].fork) { continue; }
+              repos.push(data.data[i]);
+            }
           repos.sort(function(a, b) {
             var aDate = new Date(a.pushed_at).valueOf(),
                 bDate = new Date(b.pushed_at).valueOf();
