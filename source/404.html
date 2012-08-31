@@ -1,0 +1,18 @@
+---
+layout: page
+title: "404"
+date: 2012-07-18 06:29
+comments: false
+sharing: false
+footer: true
+---
+
+<p>It looks like you have requested a file which no longer exists.</p>
+<p>Here is a list of recently published posts.</p>
+<div id="blog-archives" class="missing">
+{% for post in site.posts limit: 10 %}
+<article>
+  {% include archive_post.html %}
+</article>
+{% endfor %}
+</div>

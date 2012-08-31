@@ -1,0 +1,33 @@
+---
+layout: post
+title: ! 'iOS dev: 将 Xcode 中的 CODE SIGN IDENTITY 分离出 VCS'
+categories:
+- Information Technology
+tags:
+- code sign
+- iOS
+- iPhone
+- Xcode
+published: true
+comments: true
+---
+<p>做 iOS 开发的时候每个人都有不同的开发者证书/私钥，只有通过这个私钥进行代码签名之后 app 才能在 iPhone 上运行起来。项目中用来确定使用哪个私钥签名的配置文件是 <code>project.pbxproj</code>，由于它也记录了项目地很多其它信息，所以它往往会出现在版本控制系统中，这样就造成只有一个人能够成功地签名。好在我们可以通过 <code>.xcconfig</code> 文件来将这个配置抽离出来。</p>
+
+<p>首先新建一个文件(Cmd+N)，在 Other 中选择 Configuration Settings File，新建一个配置文件 <code>CodeSign.xcconfig</code>。在这个文件中添加一行：
+<code>CODE_SIGN_IDENTITY = iPhone Developer: 人甲 路 (XXXXXXXXXX)</code>，其中证书的名称可以在 Keychain Access 里面找到。</p>
+
+<p><a href="https://picasaweb.google.com/lh/photo/lkf9kEWgThZpL63-LH9fjA?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-ZoEoKlecJX0/Tjzrvfr0SlI/AAAAAAAACds/CsBs8CiqWg8/s640/Screen%252520Shot%2525202011-08-06%252520at%2525203.22.07%252520PM.png" height="426" width="640" /></a></p>
+
+<p>之后删除原来 <code>project.pbxproj</code> 里面的签名，直接在 build settings 里面删除就好，注意 project 和 target 的都要删掉（都选中之后 Cmd+delete）。</p>
+
+<p>最后在 Project 的 info 中，看到 Configuration 一栏，在 Based on Configuration File，选择我们创建的文件 CodeSign。</p>
+
+<p><a href="https://picasaweb.google.com/lh/photo/esruPhlQSDvSS3PxLhYrIg?feat=embedwebsite"><img src="https://lh4.googleusercontent.com/-u_Oi-idbkYs/TjztLkNdUyI/AAAAAAAACec/lNHZI9rKsU0/s640/Screen%252520Shot%2525202011-08-06%252520at%2525203.15.22%252520PM.png" height="196" width="640" /></a></p>
+
+<p>最后在 build settings 里面应该是这个样子：（项目和目标那一栏都是空的）</p>
+
+<p><a href="https://picasaweb.google.com/lh/photo/MLqZmfyGH8p2CLvHkYQ-Dg?feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-o1g7_aMfQ6w/Tjzswj-QZpI/AAAAAAAACeE/VujRXPlMgTw/s640/Screen%252520Shot%2525202011-08-06%252520at%2525203.16.09%252520PM.png" height="61" width="640" /></a></p>
+
+<p>最后注意不要把 <code>CodeSign.xcconfig</code> check in 进去。</p>
+
+<p>参考：<a href="http://respectthecode.co/2011/06/11/xcode-4-and-xcconfig-files/">http://respectthecode.co/2011/06/11/xcode-4-and-xcconfig-files/</a></p>

@@ -1,0 +1,26 @@
+---
+layout: post
+title: ! '[OI][Vijos 1214]伤心的AsukaNoKaze'
+categories:
+- Information Technology
+tags:
+- algorithm
+- C++
+- OI
+- Vijos
+published: true
+comments: true
+---
+<p><a href="http://www.vijos.cn/Problem_Show.asp?id=1214">这题</a>算是个数论题。</p>
+
+<p>其实也没用到什么数论结论，首先手算找找规律。发现，对于 [tex]\forall x\in (\frac{n}{i+1},\frac{n}{i+1}],x\in {\mathbb Z}[/tex] 有 [tex]n ~{\mathtt div}~ x[/tex] 为常数[tex]i - 1[/tex]，于是这一区间内的数就可以只算一次，然后将结果乘以区间内整数的个数就行了。但当[tex]i>\sqrt{n}[/tex]时，每个区间的长度[tex]\frac{n}{i}-\frac{n}{i-1}<1[/tex]，这样就得不偿失了，所以当[tex]i<=\sqrt{n}[/tex]时每个区间处理一次，当[tex]i>\sqrt{n}[/tex]时，进行朴素的计算。</p>
+
+<p>div 运算就这样解决了，剩下的取余可以由整除的结果生成，对于[tex]\forall x\in {\mathbb Z}[/tex]，有[tex]n ~{\mathtt mod}~ i = n - i(n ~{\mathtt div}~ i)[/tex]，每个区间内，[tex]n ~{\mathtt div}~ i[/tex]为定值，所以令[tex]first=\frac{n}{i+1},last=\frac{n}{i},k=n ~{\mathtt div}~ i=i-1[/tex]，则对于区间[tex](first,last][/tex]，有[tex]\sum\limits_{i=first}^{last}{n ~{\mathtt mod}~ i}[/tex][tex]=\sum\limits_{i=first}^{last}{n- i(n ~{\mathtt div}~ i)}[/tex][tex]=\sum\limits_{i=first}^{last}{n-i\cdot{}k}[/tex][tex]=n\cdot{}(last-first)-k\sum\limits_{i=first}^{last}{i}[/tex][tex]=n\cdot{}(last-first)-k\frac{\cdot{}(first+1+last)(last-first)}{2}[/tex][tex]=n\cdot{}(last-first)-\frac{(first+1+last)(last-first)(i-1)}{2}[/tex]。同样地，当[tex]i>\sqrt{n}[/tex]时，进行朴素的计算。</p>
+
+<p>时间复杂度 [tex]O(\sqrt{n})[/tex]，空间复杂度 O(1)。</p>
+
+<p>算法就是这样了，刚开始写的时候 TLE 了，原因是作为循环条件的 sqrt(n) 没有提前计算出来，于是导致了很多不必要的运算，多么低级的错误……</p>
+
+<p>C++ 代码在<a href="http://github.com/leafduo/vijos/tree/master/1214/1214.cpp">这里</a>。</p>
+
+<p>P.S. 突然想做编号是大家生日的题目，这题编号是我一个朋友的生日，自己的生日编号的题目的状态是暂不提供……</p>

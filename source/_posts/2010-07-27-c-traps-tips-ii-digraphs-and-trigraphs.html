@@ -1,0 +1,52 @@
+---
+layout: post
+title: C Traps & Tips II -- Digraphs and Trigraphs
+categories:
+- Information Technology
+tags:
+- C++
+published: true
+comments: true
+---
+<p>今天写个第二遍吧，这篇有点×疼，大家见谅。</p>
+
+<p>先看代码：</p>
+
+<p><pre lang="c" line="1">#include <stdio.h /></pre></p>
+
+<p>int main()<br />
+{
+    printf("%s", "What's this??!\n");<br />
+    return 0;<br />
+}</p>
+
+<p><pre lang="c" line="1">int main()
+{
+  int a = 0;
+  //What's a's value??????????????/
+  a++;
+  return 0;
+}
+</pre></p>
+
+<p>想想上面两段代码吧……</p>
+
+<p>好了，答案在这里，在符合 C99 的编译器里，第一段输出 What's this|，第二段 a 的值还是零。为什么这样呢，因为 C99 增加了一个叫 trigraph 的特性，也就是三元组。由于某些键盘上无法输入某些字符，所以就定义三个字符来替代那一个字符，比如 ??! 会转换成 |，??/ 会转换成 \，也就是说 a++ 也成了注释的一部分，（三元组都是两个问号开头的），而且无论是在字符串中还是注释中都会被替换（在预处理器中进行替换，不论在代码的哪里出现都会被替换）。这样就能解释上面两段代码的输出了。想要避免这个问题可以将 ? 进行转义（写成 \?），或者把字符串拆开（写成 "?""?""!"）。</p>
+
+<p>还有一种叫做 digraph，二元组，也就是用两个字符来表示一个字符。与三元组不同的是，二元组被当成一个独立的 token 来解释，在预处理器进行词法分析的时候被替换，也就是说，在字符串中和包括在其他 token 中的二元组不会被替换掉，这样就不会造成像三元组那样诡异的问题了。</p>
+
+<p>为啥说这篇×疼的，是因为 GCC 默认不开启三元组的支持（M$ 的编译器不清楚）……想要开启需要在编译时指定 -std 或者 -trigraphs，没有这两个编译选项的时候出现三元组不会发生替换，编译时会有警告。</p>
+
+<p>我觉得这东西平时没啥用，不要误用了就好。</p>
+
+<p>References：</p>
+
+<p><ul>
+	<li><a href="http://en.wikipedia.org/wiki/Digraphs_and_trigraphs">http://en.wikipedia.org/wiki/Digraphs_and_trigraphs</a>
+</li>
+	<li><a href="http://gcc.gnu.org/onlinedocs/cpp/Initial-processing.html">http://gcc.gnu.org/onlinedocs/cpp/Initial-processing.html</a>
+</li>
+	<li><a href="http://gcc.gnu.org/onlinedocs/cpp/Tokenization.html">http://gcc.gnu.org/onlinedocs/cpp/Tokenization.html</a>
+</li>
+	<li><a href="http://stackoverflow.com/questions/1995113/strangest-language-feature/1995134#1995134">http://stackoverflow.com/questions/1995113/strangest-language-feature/1995134#1995134</a></li></ul>
+</p>

@@ -1,0 +1,51 @@
+---
+layout: post
+title: C++ Primer 随记——第 2 章，变量和基本类型
+categories:
+- book
+- Information Technology
+tags:
+- C++
+- C++ Primer
+published: true
+comments: true
+---
+<p>很久很久以前就买了 <em>C++ Primer</em>，但是一直是当工具书来看，现在闲下来了，就拿来仔细看看。</p>
+
+<p>（由于是<del datetime="2009-01-30T13:02:05+00:00">乱</del>随记，看不懂的就不要看了）</p>
+
+<p>第 1 章，快速入门，没有要记的。</p>
+
+<p>第一部分 基本语言</p>
+
+<p>第 2 章，变量和基本类型
+<ol>
+	<li>表示整数、字符和布尔值的算数类型合称为整型。</li>
+	<li>char 是 signed 还是 unsigned 是由编译器确定的。</li>
+	<li>signed 类型如何用位来表示是由编译器决定的。</li>
+	<li>8 位 signed 类型的取值至少 -127~127，许多实现允许 -128~127。</li>
+	<li>将超出取值范围的数赋给 signed 类型时的行为是未定义的。</li>
+	<li>将超出取值范围的数赋给 unsigned 类型时，编译器会使用该值对 unsigned 类型的可能取值数目取模，然后将结果赋给该 unsigned 类型。</li>
+	<li>没有 short 类型的字面值常量。</li>
+	<li>默认的浮点字面值常量为 double 类型，在数值后面加 F 或 f 表示单精度，L 或 l 表示扩展精度。</li>
+	<li>字符前面加 L （只能大写）得到 wchar_t 类型的宽字符字面值。</li>
+	<li>字符串前面加 L （只能大写）得到宽字符串字面值。</li>
+	<li>两个相邻的仅由空白字符隔开的字符串字面值（或宽字符串字面值）可以连成一个新字符串字面值。</li>
+	<li>连接字符串字面值和宽字符串字面值的结果是未定义的。（g++ 会输出一个类似内存地址的东西，谁来解释下？）</li>
+	<li>C++ 定义了保留了一片关键字和替代名（63 个关键字和 11 个替代名）</li>
+	<li>标识符不能饱含两个连续的下划线，也不能以下划线开头后面紧跟一个大写字母，函数外面定义的标识符还不能以下划线开头。C++ 把他们留给标准库了……</li>
+	<li>在全局作用域里定义的 const 对象默认具有文件作用域，使用 extern 使整个程序可以访问它。（非 const 变量默认为 extern）</li>
+	<li>枚举成员值可以不是惟一的。比如 enum p {p1 = 1, p2 = 1, p3}; 是合法的。</li>
+</ol></p>
+
+<p>看完这一章，我发现 C++ 里有太多未定义的行为，不要依赖他们。</p>
+
+<p>有一个问题，先看下面这段（在 2.3.1 节）：</p>
+
+<p><blockquote>C++ programmers tend to be cavalier in their use of the term object. Most generally, an object is a region of memory that has a type. More specifically, evaluating an expression that is an lvalue yields an object.</blockquote></p>
+
+<p>C++ 程序员经常随意地使用术语对象。一般而言，对象就是内存中具有类型的区域。说得更具体一些，计算左值表达式就会产生对象。
+</p>
+
+<p>什么叫“计算左值表达式就会产生对象”，计算右值表达式的时候不会产生对象吗？望高人解答。
+</p>

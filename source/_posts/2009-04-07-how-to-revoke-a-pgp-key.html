@@ -1,0 +1,33 @@
+---
+layout: post
+title: 怎样废弃 PGP 密钥
+categories:
+- Information Technology
+tags:
+- GnuPG
+- PGP
+published: true
+comments: true
+---
+<p>由于种种原因，比如密钥已经泄露，或者你改了名字或者 email，你很可能需要废弃以前使用的 PGP 密钥，简单地不用它总不太好吧，我们来告诉别人你已经不再用这个密钥了。</p>
+
+<p>以 GnuPG 为例：</p>
+
+<p>首先，我们需要拿到 PGP 密钥的废弃证书：</p>
+
+<p><blockquote>gpg -o revoke.asc --gen-revoke user-id（替换成你自己的 user-id）</blockquote></p>
+
+<p>这样我们就把废弃证书写到 revoke.asc 里了。其实废弃密钥应该在产生密钥对的时候就生成，然后放在安全的地方，当然我比较懒……</p>
+
+<p>之后我们导入废弃证书：</p>
+
+<p><blockquote>gpg --import revoke.asc</blockquote></p>
+
+<p>这样我们就废弃了这个证书，最后我们把废弃掉的 PGP 公钥发到 keyserver 上。</p>
+
+<p><blockquote>gpg --send-key key-id</blockquote></p>
+
+<p>（用 gpg --list-keys 列出 key-id）</p>
+
+<p>好了，这样大家就都知道你的 PGP 密钥已经 revoked 了。
+</p>

@@ -1,0 +1,30 @@
+---
+layout: post
+title: 我的 emerald 终于有边框了
+categories:
+- Information Technology
+tags:
+- Arch
+- Archlinux
+- compiz-fusion
+- emerald
+- hwd
+- nvidia-xconfig
+published: true
+comments: true
+---
+<p>N 年之前装上了 <a href="http://www.compiz-fusion.org/">compiz-fusion</a> 和 emerald ，但是每次启动 emerald 之后，窗口就没有边框了…… 没边框其实挺常见的，谁没见过一两次呢…… 但是这次，我找遍了全世界也没有找到解决的办法……</p>
+
+<p>感觉可能是 xorg.conf 有问题，于是换上 Ubuntu 的 xorg.conf （ Ubuntu 下的 compiz-fusion 还是可以用的），就成功了。于是开始研究两个 xorg.conf 的不同，发现其中一个不同是 Arch （现用）的 DefaultDepth 是 16 ， Ubuntu 的 DefaultDepth 是 24 ，改之，成功……</p>
+
+<p>最后想起来好像是 <a href="http://en.wikipedia.org/wiki/GLX">glx</a> 或者什么别的东西不支持 16 位，只支持 24 位，奇怪的事情……</p>
+
+<p>也挺奇怪的是，无论是 hwd 还是 nvidia-xconfig 生成的 xorg.conf 的 DefaultDepth 都是 16 ……</p>
+
+<p>总之，<strong>记住要把 DefaultDepth 设成 24</strong> ！</p>
+
+<p>贴两张图吧，希望大家没看烦……</p>
+
+<p><a href="http://picasaweb.google.com/LeafDuo/Blog/photo#5182053765406655010"><img src="http://lh6.google.com/LeafDuo/R-pacaYKAiI/AAAAAAAAAUc/sUoN9wa766c/s400/Screenshot.png" alt="compiz-fusion 1" /></a></p>
+
+<p><a href="http://picasaweb.google.com/LeafDuo/Blog/photo#5182053773996589634"><img src="http://lh4.google.com/LeafDuo/R-pac6YKAkI/AAAAAAAAAUs/nX6rRLzZY2c/s400/Screenshot-2.png" alt="compiz-fusion 2" /></a></p>

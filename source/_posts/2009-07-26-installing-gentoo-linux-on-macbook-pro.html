@@ -1,0 +1,76 @@
+---
+layout: post
+title: Installing Gentoo Linux on Macbook Pro
+categories:
+- Information Technology
+tags:
+- Gentoo
+- Linux
+- Macbook Pro
+published: true
+comments: true
+---
+<p>那是公元某年某月某日，我开始在 MBP 上装 Gentoo……</p>
+
+<p>其实不是个很简单的活，所以来记录下，没装过 Gentoo 的先回家去看<a href="http://www.gentoo.org/doc/en/handbook/index.xml">安装手册</a>。<em>（这不是 Linux 入门教程）</em></p>
+
+<p>首先说一下配置，2008 年的 Macbook Pro 5,1，型号是 MB471LL/A，配置不一样的话底下的过程也酌情修改。</p>
+
+<p>然后小补一点知识，Macbook Pro 没有 BIOS，而是采用了 <a href="http://en.wikipedia.org/wiki/Extensible_Firmware_Interface">EFI</a>。因而也没有常用的分区表格式 MBR，而是采用了 <a href="http://en.wikipedia.org/wiki/GUID_Partition_Table">GPT</a>。GPT 传说中能放很多分区（而不是最多四个），fdisk 传说中不支持 GPT（不过好像有人用 fdisk 成功过）。</p>
+
+<p>正式开始了：</p>
+
+<p><ol>
+	<li>说明一下，我要保留 Mac OS X，因为我觉得 Mac OS X 也很好用，呵呵。</li></ol></p>
+
+<p>	<li>事先准备好 Gentoo Minimal Install CD、stage3 和 snapshot 备用（直接用最新的 stage，我用的是 amd64 的 CD 和 stage）</li></p>
+
+<p>	<li>在 Mac OS X 里安装 <a href="http://refit.sourceforge.net/">rEFIt</a>。</li></p>
+
+<p>	<li>分区，这里我用 Mac OS X 自带的 Disk Utility，先 resize HFS+ 分区，给 Gentoo 留出空间，然后新建几个 FAT 分区，具体怎么分你自己定吧。</li></p>
+
+<p>	<li>插入 Gentoo Minimal Install CD，重启，开机时按住 Option 键，等一会应该会出现一个光盘下面写着 Windows，不管它写的是什么了，从这个光盘启动。</li></p>
+
+<p>	<li>启动之后，用 parted 改下分区表，把 FAT 改成 Linux 的分区（注意有一个大约 200MB 的 EFI 分区，不要搞掉），然后关机，开机（注意不要 reboot），进到 rEFIt 之后同步一下分区表。</li></p>
+
+<p>	<li>再次从光盘启动，安装 Gentoo。</li></p>
+
+<p>	<li>配内核的时候可以参考一下 <a href="http://en.gentoo-wiki.com/wiki/Apple_Macbook_Pro/Configuration_Files/Kernel">Gentoo Linux Wiki</a>。</li></p>
+
+<p>	<li>make.conf 我是这样写的：</li></p>
+
+<p><blockquote>CFLAGS="-O2 -march=core2 -pipe -msse4.1"<br />
+CXXFLAGS="${CFLAGS}"<br />
+MAKEOPTS="-j3"</blockquote></p>
+
+<p>	<li>装 Grub 的时候请注意，不要装到 /dev/sda，装到 /boot 的分区上吧。</li></p>
+
+<p></p>
+
+<p>鉴于 Macbook Pro 有很多诡异的设备，我们来说一下万恶的驱动：
+<ol>
+	<li>alsa 不出声</li></ol></p>
+
+<p>alsa 编成模块，/etc/modprobe.d/alsa.conf 里面加一行 </p>
+
+<p><blockquote>options snd-hda-intel model=mbp3</blockquote></p>
+
+<p>然后运行 update-modules。（<a href="http://www.linuxsir.org/bbs/showthread.php?p=1724248">via</a>）</p>
+
+<p>	<li>触摸板无法使用<br />
+2.6.29-r5 里不知道 bcm5974 还是 usbhid 有问题，反正是有问题，touchpad 没法正常工作，升级到 2.6.30-r4 后就正常了（2.6.28-r5 好像也正常），注意 2.6.30-r4 目前还是 ~amd，相应的，x11-drivers/nvidia-drivers 也要用 ~amd64 里的。</li></p>
+
+<p>bcm5974 还是很好的。</p>
+
+<p>	<li>无线网卡的驱动</li></p>
+
+<p>portage 里面有，不过是 ~amd64 的，叫 net-wireless/broadcom-sta。</p>
+
+<p>	<li>键盘背光</li></p>
+
+<p>portage 里有 app-laptop/macbook-backlight，用这个包就 OK 了。
+</p>
+
+<p></p>
+
+<p>写得不是很详细，有什么问题可以在下面留言或者 email 我，不过要先问 Google 和各大发行版的相关内容。</p>

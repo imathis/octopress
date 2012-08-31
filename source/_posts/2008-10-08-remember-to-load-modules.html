@@ -1,0 +1,30 @@
+---
+layout: post
+title: 记得加载模块
+categories:
+- Information Technology
+tags:
+- Linux
+- module
+- printer
+- USB
+published: true
+comments: true
+---
+<p>为了启动的时候能更快一点，我把要加载的模块直接写进了 /etc/rc.conf （方法看<a href="http://liangzhdp.blogspot.com/2008/04/modules-udev.html">这里</a>），启动确实快了。不过有的时候还是有些郁闷……</p>
+
+<p>很少用 USB flash drive，偶尔用，郁闷了，怎么看也没这个设备，只有两块硬盘，很久之后发现没加载模块，于是加载之：</p>
+
+<p><pre lang="bash" line="1">modprobe usb-storage</pre></p>
+
+<p>又过了很长时间，用到打印机。很少打印东西，而且这个打印机比较难搞，所以导致我每次用打印机都心惊肉跳……这回直接找不到打印机了，良久之后，发现应该加载一个模块……</p>
+
+<p><pre lang="bash" line="1">modprobe usblp</pre></p>
+
+<p>唉……</p>
+
+<p>注意下，如果你用 2.4 内核的话，应该加载 printer 这个模块，详细的可以看 <a href="http://wiki.archlinux.org/index.php/Cups#Kernel_Modules">ArchWiki 的说明</a>。</p>
+
+<p>启动是快了，可是要记得加载模块啊……</p>
+
+<p>提醒下自己，下次别忘了。</p>

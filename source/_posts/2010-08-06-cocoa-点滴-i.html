@@ -1,0 +1,14 @@
+---
+layout: post
+title: Cocoa 点滴 I
+categories: []
+tags:
+- Cocoa
+published: false
+comments: true
+---
+<p>[mainWindow orderFront:self] 这样可以打开一个窗口，当然，记得把 IB 里的 Release on close 勾掉</p>
+
+<p>[[menu addItemWithTitle:@"test" action:@selector(function:) keyEquivalent:@""] setTarget:self] 添加一个菜单项，keyEquivalent 不能为 nil，不要忘记 setTarget，NSMenuItem 不需要再 retain</p>
+
+<p>clean 之后 build 可能会解决你遇到的诡异问题。</p>

@@ -1,0 +1,21 @@
+---
+layout: post
+title: 计算任意日期是星期几的方法──蔡勒公式（Zeller's congruence）
+categories:
+- Information Technology
+tags:
+- calendar
+published: true
+comments: true
+---
+<p>我们经常需要计算一个日期是星期几，比较好想的方法是知道一个日期是星期几（比如 1900 年 1 月 1 日是周一），然后一天一天地数……效率有点低，呵呵。改进一点可以一次数一个月或者数一年，不过貌似得用到什么偏移表什么的，不够麻烦的。</p>
+
+<p>来，我们说说蔡勒公式。形式非常诡异和神奇：</p>
+
+<p>[tex]$$dayOfWeek = \left(d + \left\lfloor\frac{26(m+1)}{10}\right\rfloor + y + \left\lfloor\frac{y}{4}\right\rfloor + 6 \left\lfloor\frac{y}{100}\right\rfloor + \left\lfloor\frac{y}{400}\right\rfloor\right) \mod 7$$[/tex]</p>
+
+<p>这里我写的是一种比较适用于计算机计算的公式，其他的形式可以参看<a href="http://en.wikipedia.org/wiki/Zeller%27s_congruence">维基百科</a>。</p>
+
+<p>上式中，y 是年份，m 是月份，d 是日期，dayOfWeek 就是星期几了（以 0 为星期六，1 为星期日，依此类推）。特别注意，如果月份是一月或者二月，要把它们当作上一年的十三月、十四月。</p>
+
+<p>当然，这个公式只适用于格里历，很久以前的事它就管不了了。</p>

@@ -1,0 +1,22 @@
+---
+layout: post
+title: 一句话搞定 KDEmod 烦人的服务器
+categories:
+- Information Technology
+tags:
+- Arch
+- Archlinux
+- kde
+- kdemod
+- Linux
+- wget
+published: true
+comments: true
+---
+<p>由于 KDEmod 官方网站和一个镜像站被功夫网收购，我们这些墙内的同学就只能用 <a href="http://kdemod.iskrembilen.com/">http://kdemod.iskrembilen.com/</a> 这个镜像了，但是这个镜像经常出些奇奇怪怪的问题，有的时候速度很快，有的时候进度根本不动…… 令人非常郁闷……</p>
+
+<p>一怒之下，在 /etc/pacman.conf 的 [options] 这一部分加了一句话：</p>
+
+<p><blockquote>XferCommand = /usr/bin/wget --passive-ftp -c -O %o %u</blockquote></p>
+
+<p>哈哈，调出我们强大的 wget 吧，一切就都安静了……</p>

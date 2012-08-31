@@ -1,0 +1,27 @@
+---
+layout: post
+title: VMware 下安装 Gentoo 的唯一注意事项
+categories:
+- Information Technology
+tags:
+- Gentoo
+- kernel
+- Linux
+- network
+- VMware
+published: true
+comments: true
+---
+<p>好吧，安装 Gentoo 其实挺复杂，不过按手册来就是了。</p>
+
+<p>但是我在 VMware 下安装 Gentoo 却怎么安都连不上网……我郁闷啊……</p>
+
+<p>后来得知，VMware 虚拟的是一块 AMD 网卡，而默认 menuconfig 是不选它的，所以就连不上网了……</p>
+
+<p>所以请在 make menuconfig 的时候选上以下几项：</p>
+
+<p><span style="font-size: small;">Device Drivers -&gt; </span><span style="font-size: small;">Network device support -&gt; </span><span style="font-size: small;">Ethernet (10 or 100Mbit) -&gt; EISA, VLB, PCI and on board controllers 还有它下属的 AMD PCnet32 PCI support 和 Use RX polling (NAPI)</span></p>
+
+<p>之后编译内核，就 OK 了。</p>
+
+<p>（我被它折腾了很长时间！我郁闷啊！）</p>

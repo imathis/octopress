@@ -1,0 +1,28 @@
+---
+layout: post
+title: Archlinux 解决 mldonkey 中文文件名问题
+categories:
+- Information Technology
+tags:
+- Arch
+- Archlinux
+- Chinese
+- filename
+- mldonkey
+published: true
+comments: true
+---
+<p>mldonkey 的中文文件名显示成下划线的问题不是一天两天了，自从开始用 Linux 到现在还都没有解决，网上有几个解决办法，一个是下载完以后进行转换，一个是打补丁，还有一个是设置环境变量 LANG=zh_CN.UTF8 。受<a href="http://www.google.com/url?sa=t&amp;ct=clnk&amp;cd=9&amp;url=http%3A%2F%2F209.85.173.104%2Fsearch%3Fognize%3Dtrue%26q%3Dcache%3AFExcnjL3VywJ%3Awww.5dlinux.com%2Farticle%2F1%2F2008%2Flinux_12149.html%2Bmldonkey%2B%25E4%25B8%25AD%25E6%2596%2587%26hl%3Den%26ct%3Dclnk%26cd%3D9%26client%3Dfirefox-a&amp;ei=2wcUSMG-DJ7SpgTItqWeAg&amp;usg=AFQjCNEe4k_1VycOr91umFJtWTqK-HK_gA&amp;sig2=Qt1K4dx8PJL9Eeoy5d3RMA">这里</a>的启发，我是这样解决的：</p>
+
+<p><ol>
+	<li>新建一个 /usr/bin/mlnet.sh ，内容如下：
+<coolcode>#!/bin/bash<br />
+export LANG=zh_CN.UTF8<br />
+export LC_ALL=zh_CN.UTF8<br />
+/usr/bin/mlnet& >/tmp/mldonkey.log &</coolcode>
+</li>
+	<li>chmod +x /usr/bin/mlnet.sh</li>
+	<li>把 /etc/rc.d/mldonkey 里 su -l $MLDUSER -c 那行改成 su -l $MLDUSER -c "/usr/bin/mlnet.sh&amp;"</li>
+</ol></p>
+
+<p>OK！</p>

@@ -1,0 +1,17 @@
+---
+layout: post
+title: VMWare Fusion 装 Gentoo⋯⋯
+categories: []
+tags: []
+published: true
+comments: true
+---
+<p>发现其它发行版真的没法胜任开发工作，而我又不喜欢自己编译，Ubuntu 里面的 nginx 缺少我需要用的模块，真伤心，本来想在虚拟机里弄一个不用编译的发行版来着，看样子还是得 Gentoo 出马。</p>
+
+<p>VMWare Fusion 又傲娇了，又是驱动问题，偷懒用 genkernel 就好了，可谁让我这么勤奋呢？</p>
+
+<p>lspci 告诉我们，VMWare 有个设备叫 00:10.0 SCSI storage controller: LSI Logic / Symbios Logic 53c1030 PCI-X Fusion-MPT Dual Ultra320 SCSI (rev 01)，查到对应的内核选项是 <a href="http://cateee.net/lkddb/web-lkddb/FUSION.html">CONFIG_FUSION</a>，记得选上。这样就解决了启动的时候找不到分区的问题⋯⋯</p>
+
+<p>还有一个问题是，启动到一半说 Freeing unused kernel memory，然后就死掉了，是新引入的 OpenRC 的问题，解决办法在<a href="http://dev.gentoo.org/~a3li/openrc.txt">这里</a>。</p>
+
+<p>Happy coding!</p>

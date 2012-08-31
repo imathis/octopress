@@ -1,0 +1,65 @@
+---
+layout: post
+title: 如何在学校登陆QQ
+categories:
+- Information Technology
+- life
+tags:
+- GFW
+- Google
+- qq
+- Tor
+- windows
+published: true
+comments: true
+---
+<p>最近，不知道那个老师心血来潮，使学校里不能上QQ了，使我甚是郁闷（因为QQ上只有我一个人……）。自己的方法不敢独享，拿出来给大家看看。<br />
+首先分析一下学校封锁QQ的方法（这个看不懂的可以直接跳过）。ping腾讯的服务器，能ping通，说明不是封的服务器。使用TCP连接登陆，也不能登陆，说明不是封的UDP协议。用MiniQQ登陆，还没有列出服务器就出现了错误，说明我发出去的数据到达广域网，也就是数据没有通过网关，被网关处理掉了。同学告诉我说，他挂上透明代理之后还是不能登陆，而我使用Tor（这是一个加密代理）可以访问。这只能说明网关过虑了数据包，对符合QQ数据包特性的数据包进行拦截。当然，也可能同时实行了封锁UDP协议等方法，但这些已经不重要了。<br />
+明白了封锁原理，就有了相应的对策：
+<ol>
+	<li>不在本地发送QQ的数据包</li>
+	<li>使用加密代理发送QQ的数据包</li>
+</ol>
+对应上面两个对策，具体说一下方法：</p>
+
+<p><span style="font-size: 130%"><span style="color: #ff0000">第一、使用在线QQ客户端，实现不在本地发送QQ的数据包</span></span>
+这里推荐几个在线客户端，例如<a href="http://www.imhaha.com/">IMhaha</a>、<a href="http://www.meebo.com/" target="_blank">Meebo</a>等。<br />
+现在以<a href="http://www.imhaha.com/">IMhaha</a>为例进行一下介绍：<br />
+打开<a href="http://www.imhaha.com/">http://www.imhaha.com</a>，将看到这样一个页面：<a href="http://bp2.blogger.com/_yba6sgaqsTU/RYzRpDPA83I/AAAAAAAAAAk/izGp0MMdxY4/s1600-h/%E6%9C%AA%E5%91%BD%E5%90%8D.PNG" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img src="http://bp2.blogger.com/_yba6sgaqsTU/RYzRpDPA83I/AAAAAAAAAAk/izGp0MMdxY4/s400/%E6%9C%AA%E5%91%BD%E5%90%8D.PNG" style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer" id="BLOGGER_PHOTO_ID_5011610988529644402" border="0" /></a>（先感慨一下：现在中文的东西越来越多了，想当年IMhaha还是英文的……）<br />
+你可以直接在QQ的用户名和密码处填上你的QQ号和密码，直接登陆，用起来还是挺方便的，也可以在这里
+<a href="http://bp1.blogger.com/_yba6sgaqsTU/RYzSkzPA84I/AAAAAAAAAAs/qJKAza_6JLo/s1600-h/%E6%9C%AA%E5%91%BD%E5%90%8D.PNG" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img src="http://bp1.blogger.com/_yba6sgaqsTU/RYzSkzPA84I/AAAAAAAAAAs/qJKAza_6JLo/s400/%E6%9C%AA%E5%91%BD%E5%90%8D.PNG" style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer" id="BLOGGER_PHOTO_ID_5011612015026828162" border="0" /></a>注册IMhaha的帐号，以实现多个QQ或者QQ和MSN等的同时登陆。<br />
+当然，IMhaha也有不完善的地方，比如不能下载好友分组，不能显示备注名称，弄得我都不知道对方是谁。<br />
+如果你还是不太明白，请看看<a href="http://soft.yesky.com/lianluo/359/2616359.shtml">这里http://soft.yesky.com/lianluo/359/2616359.shtml</a>。不过这里的IMhaha和现在有细小差别（因为IMhaha更新了）。
+<a href="http://www.wappblog.com/entry/19.html">这里</a>还有其他在线IM的介绍，不过大多不支持QQ。
+<span style="font-size: 130%"><span style="color: #ff0000">第二、使用加密代理发送QQ的数据包</span></span>
+现在加密代理有许多，例如Tor、无<span style="color: #ffffff">*-*</span>界（注意！不要在服务器在国外的网站如Google上搜索无<span style="color: #ffffff">*-*</span>界！！）等等，这里主要介绍Tor。<br />
+首先打开Tor的官方主页：<a href="http://tor.eff.org/">http://tor.eff.org/</a>
+点下载链接，建议大家下载 0.1.1.26版，因为它稳定；而0.1.2.4-alpha是一个开发版本，虽然快一点，但是不太稳定。<br />
+如果你找不到下载的链接，请直接到<a href="http://tor.eff.org/dist/vidalia-bundles/vidalia-bundle-0.1.1.26-0.0.7.exe">这里</a>下载。<br />
+下载后安装，安装后会自动运行Vidalia。<br />
+Vidalia是Tor的图形化界面，多语言的。<br />
+在系统托盘（桌面右下角有时钟的地方）中，会看见Tor的洋葱图标，单击它，在菜单中点启动，等待一会，Tor就启动了。<br />
+（可以这样验证Tor是否已经启动，在菜单中选择消息日志，如果看到
+<blockquote>[注意] Tor has successfully opened a circuit. Looks like client functionality is working.</blockquote>
+就说明Tor已经启动了。（当然你也会看到许多其他的消息，不过不用关心它们）<br />
+（再感叹一下，Tor原来也是英文的，而且只有命令行，现在不仅网站、软件都是中文的，甚至还有图形化界面……）<br />
+现在，请启动Privoxy（刚才应该自动启动了，如果系统托盘里有一个P字的标志就说明已经启动了）。<br />
+Tor启动后，事情就解决了一大半。<br />
+现在，打开QQ输入用户名和密码，别急，别点登陆，点击高级选项。<br />
+登陆模式任选。<br />
+在网络设置的类型里选择
+<blockquote>HTTP代理</blockquote>
+地址填
+<blockquote>127.0.0.1</blockquote>
+端口
+<blockquote>8118</blockquote>
+其它不动，如下图。
+<a href="http://bp2.blogger.com/_yba6sgaqsTU/RYzcsDPA87I/AAAAAAAAABE/oP987IVYhWA/s1600-h/%E6%9C%AA%E5%91%BD%E5%90%8D.PNG" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img src="http://bp2.blogger.com/_yba6sgaqsTU/RYzcsDPA87I/AAAAAAAAABE/oP987IVYhWA/s400/%E6%9C%AA%E5%91%BD%E5%90%8D.PNG" style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer" id="BLOGGER_PHOTO_ID_5011623134697157554" border="0" /></a></p>
+
+<p>点击测试，等一回，应该会收到“代理服务器工作正常”的提示。这时候就可以登陆QQ了！
+<a href="http://bp2.blogger.com/_yba6sgaqsTU/RYzchDPA86I/AAAAAAAAAA8/GiNEQi1rIoU/s1600-h/%E6%9C%AA%E5%91%BD%E5%90%8D.PNG" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img src="http://bp2.blogger.com/_yba6sgaqsTU/RYzchDPA86I/AAAAAAAAAA8/GiNEQi1rIoU/s400/%E6%9C%AA%E5%91%BD%E5%90%8D.PNG" style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer" id="BLOGGER_PHOTO_ID_5011622945718596514" border="0" /></a>
+如果你还不明白，也可以到网上找找Tor的介绍，有很多这种资料的，也可以参见<a href="http://h198741.blogspot.com/2006/11/torgfw.html">http://h198741.blogspot.com/2006/11/torgfw.html</a>
+至此，任务圆满解决！希望大家聊得愉快！<br />
+（累死我了……）</p>
+
+<p>PS：今天的作业在<a href="http://experiment200604.blogspot.com/2006/12/20061223.html">这里</a>。</p>

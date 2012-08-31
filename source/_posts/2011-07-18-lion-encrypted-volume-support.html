@@ -1,0 +1,33 @@
+---
+layout: post
+title: Lion 对加密卷的支持
+categories:
+- Information Technology
+- CoreStorage
+- diskutil
+- Lion
+- Mac
+published: true
+comments: true
+---
+<p>今天想给硬盘数据做备份，毕竟硬盘已经用了两年了，不用查 SMART 信息也知道他已经老了，虽然诸如代码之类的都有很多备份，但是还是有些文档、照片需要备份。</p>
+
+<p>又阴差阳错得到一块老旧移动硬盘，灰常好啊。开工吧。</p>
+
+<p>拿来的时候是 NTFS，第一件事情就是改成 HFS+，拿 Disk Utility 格式化的时候发现多出了加密的选项，不用多说，先试试。不得不说这个 Lion 的 GM 版本还不够到正式版的水平，这个输入密码的输入框如果输入超过十位的密码就会 crash，这个完全不能忍受啊，尝试了半天发现先在别的地方输入好然后复制过来就可以了。（好吧，我不得不说我写文章想截图的时候这个 bug 又神秘的消失了）</p>
+
+<p><a href="https://picasaweb.google.com/lh/photo/jeCgDHO8qJqbYuM4Guqctg?feat=embedwebsite"><img src="https://lh4.googleusercontent.com/-ryRM1jL_il0/TiMs7wbtP1I/AAAAAAAACcY/SSqM8_GCDko/s640/diskutil.png" height="528" width="640" /></a></p>
+
+<p>这样格式化好了之后每次插入移动硬盘的时候都会提示你输入密码才能访问，像是做备份这种应用就会安全很多。</p>
+
+<p>之后我就发现加密卷的密码无法修改，我猜测这种加密是用密码加密一个密钥，再用密钥加密数据的，应该可以修改密码，现在无法修改的原因应该是 Apple 还没想好在哪里放这个功能，也或许 Apple 不会给这个功能提供 GUI，那我们转战 CLI 吧，Disk Utility 对应的命令行工具是 diskutil，里面提供了很多 GUI 中没有的功能。鼓捣一会之后发现 diskutil 有个叫做 CoreStorage 的模块，进一步发现 <code>diskutil coreStorage changeVolumePassphrase</code> 可以修改 CoreStorage 卷的密码，其中所需的卷 UUID 可以通过 <code>diskutil coreStorage list</code> 获得。</p>
+
+<p>可以看得出，CoreStorage 又是苹果推的一种新技术，看 diskutil 里面的用语（PV、LV）推测是类似 LVM 的东西，Mac 以前似乎没有类似 LVM 的技术（AFAIK），网上搜索也搜索不到 CoreStorage 的相关信息，Lion 的 Developer Library 里面也是没有，最后还是在手册（man diskutil）里找到了一些信息。看完之后的感觉就是 CoreStorage 就是一个 LVM，Apple 终于有了 LVM。 :-) 不过看起来许多功能还没有开发出来接口，比如 LVM 的一些最基本的功能⋯⋯ :-(</p>
+
+<p>看来 Lion 不光是在界面上模仿 iOS（我对这点颇有不满），在底层也下了不少功夫，CoreStorage 就是在看不见的地方默默发挥作用的一个好同志啊。底层的 UNIX 配合 用户友好的界面，是 Mac 的制胜法宝，只有这样才能留住如此多的开发者和一些相当挑剔的用户（比如设计师）。底层的 BSD 也给苹果减少了许多开发的困难，可以到处抄来抄去，可以派几个人推动一下某个项目的开发（比如 LLVM），看被抄的人不爽了还过去帮助修改（比如各种 BSD）。相比之下，再大的微软也不能把所有事情做好，至少给自己增加了许多开发难度。</p>
+
+<p>另外，苹果你抄个 ZFS 过来吧，ZFS 多适合你现在的各种用途啊，又没有 Linux 的许可证问题，抓紧啊，I want a better filesystem!</p>
+
+<p>PS：最后贴上 diskutil 手册的一部分，如果你有兴趣的话。</p>
+
+<p><script src="https://gist.github.com/1087869.js?file=gistfile1.txt"></script></p>

@@ -1,0 +1,29 @@
+---
+layout: post
+title: cURL 下载迅雷离线
+categories:
+- Information Technology
+tags:
+- cURL
+- Linux
+published: true
+comments: true
+---
+<p>今天下载 Xcode 4 GM，很大，3G+（苹果东西一向大），于是想走这样的线路，BT->迅雷离线->某服务器->笔记本，这样就避免迅雷离线有的时候下载不稳定之类的问题，所以需要用 cURL 之类的东西下载迅雷离线，稍微尝试之后，办法出来啦。</p>
+
+<p><ol>
+	<li>首先用浏览器获得真实的下载链接，开头类似 http://vod19.c7.lixian.vip.xunlei.com/download 这样的，要真正开始下载之后的链接。
+</li></ol></p>
+
+<p>	<li>找到 vip.xunlei.com 这个域名下面的 cookie，名字是 gdriveid，把名字和值记下来。
+</li></p>
+
+<p>	<li>curl "http://DOWNLOAD.LINK/" --cookie "gdriveid=VALUE" -o FILE_NAME
+</li></p>
+
+<p>	<li>OK 了。</li>
+</p>
+
+<p>本来是用 http://gdl.lixian.vip.xunlei.com/download? 开头的链接来尝试的，后来发现重定向到 http://vod19.c7.lixian.vip.xunlei.com/download 之后 cURL 没有把 cookie 带上，而服务器对这两个 URI 的访问都需要验证这个 cookie，我对 cURL 又不是很熟，就转而用 http://vod19.c7.lixian.vip.xunlei.com/download 这样的链接了……</p>
+
+<p>可能从文件里读取 cookie 可行，我没试成功。</p>

@@ -1,0 +1,85 @@
+---
+layout: post
+title: 我的字体设置
+categories:
+- Information Technology
+tags:
+- font
+- fontconfig
+- Linux
+published: true
+comments: true
+---
+<p>很久以前把中文字体搞定以后，就再没有搞过字体的问题，前几天看到别人的截图，字体很漂亮，倍感嫉妒……一问之后，用的是 <a href="http://wenq.org/?ZenHei">wqy-zenhei</a> ，于是更加郁闷了，明明是一样的字体，我的就不好看……</p>
+
+<p>于是，简单的读了一下 <a href="http://fontconfig.org/wiki/">fontconfig</a> 的<a href="http://fontconfig.org/fontconfig-user.html">手册</a>，改了一个 .fonts.conf ，基于 wqy-zenhei 自带的 config 。没有很仔细地读手册，所以不知道这样的 .fonts.conf 有没有什么错误，不过效果还是不错的，于是贴一下：</p>
+
+<p>先贴效果图：</p>
+
+<p>写这篇 post 的时候打开的网页，这张主要是中文（其实这张加粗的太多了，不太好看）：</p>
+
+<p><a href="http://picasaweb.google.com/LeafDuo/Blog/photo#5223923636252101858"><img src="http://lh4.ggpht.com/LeafDuo/SH8a3qCSzOI/AAAAAAAAAkM/7eRF3wBMUpM/s800/wqy-zenhei.png" width="590" alt="wqy-zenhei" /></a></p>
+
+<p>这张主要是英文，英文字体是 DejaVu ：</p>
+
+<p><a href="http://picasaweb.google.com/LeafDuo/Blog/photo#5223923645799571138"><img src="http://lh5.ggpht.com/LeafDuo/SH8a4NmlnsI/AAAAAAAAAkU/TrZx_4wPZ3Q/s800/DejaVu.png" width="590" alt="DejaVu" /></a></p>
+
+<p>最后贴 .fonts.conf ：
+<pre lang="xml"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd"></pre></p>
+
+<p><fontconfig /></p>
+
+<p>    <!-- modified by leafduo@gmail.com -->
+    <match target="font">
+        <test qual="any" name="family">
+            <string>WenQuanYi Zen Hei</string>
+            <string>文泉驿正黑</string>
+            <string>文泉驛正黑</string>
+        </test> <br />
+        <edit name="globaladvance"><bool>false</bool></edit>
+        <edit name="spacing"><int>0</int></edit>
+        <edit name="antialias" mode="assign"><bool>true</bool></edit>
+        <edit name="hinting" mode="assign"><bool>true</bool></edit>
+        <edit name="hintstyle" mode="assign"><const>hintnone</const></edit>
+        <edit name="autohint" mode="assign"><bool>false</bool></edit>
+        <edit name="rh_prefer_bitmaps" mode="assign"><bool>false</bool></edit>
+        <edit name="rgba" mode="assign"><const>none</const></edit>
+        <edit name="embeddedbitmap"><bool>false</bool></edit>
+    </match></p>
+
+<p>    <match target="font">
+        <test qual="any" name="family">
+            <string>DejaVu Serif</string>
+            <string>DejaVu Sans</string>
+            <string>DejaVu Sans Mono</string>
+        </test>
+        <edit name="autohint"><bool>true</bool></edit>
+        <edit name="hintstyle"><const>hintfull</const></edit>
+        <edit name="antialias"><bool>true</bool></edit>
+    </match></p>
+
+<p>    <alias>
+        <family>serif</family>
+        <prefer>
+            <family>DejaVu Serif</family>
+            <family>WenQuanYi Zen Hei</family>
+        </prefer>
+    </alias>
+    <alias>
+        <family>sans-serif</family>
+        <prefer>
+            <family>DejaVu Sans</family>
+            <family>WenQuanYi Zen Hei</family>
+        </prefer>
+    </alias>
+    <alias>
+        <family>monospace</family>
+        <prefer>
+            <family>DejaVu Sans Mono</family>
+            <family>WenQuanYi Zen Hei</family>
+        </prefer>
+    </alias>
+</p>
+
+<p>嗯，我觉得不错。</p>

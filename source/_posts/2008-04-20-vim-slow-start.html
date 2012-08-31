@@ -1,0 +1,25 @@
+---
+layout: post
+title: vim 启动缓慢
+categories:
+- Information Technology
+tags:
+- Linux
+- vim
+- X
+published: true
+comments: true
+---
+<p>今天终于忍不住 vim 慢如蜗牛的启动速度，于是 Google 解决办法……</p>
+
+<p>省略搜索数次……</p>
+
+<p>在<a href="http://www.vim.org/htmldoc/starting.html#slow-start">这里</a>找到了办法，原来是启动的时候要连接 X ，这样速度就慢下来了，实在懒得自己编译一个不带 X11 的版本，于是就在 ~/.bashrc 加了一行：</p>
+
+<p><coolcode>
+alias vim='vim -X'
+</coolcode></p>
+
+<p>不过这样也丧失了<a href="http://www.vim.org/htmldoc/starting.html#-X">一些功能</a>，比如更改窗口标题和使用 X 的剪切板，反正我也不常用这个功能，所以无所谓了……</p>
+
+<p>现在瞬间就可以帮助乌干达的穷苦儿童了，高兴啊……</p>

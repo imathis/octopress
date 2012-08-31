@@ -1,0 +1,17 @@
+---
+layout: post
+title: Python 判断一个变量是否是字符串
+categories: []
+tags:
+- bug
+- python
+published: true
+comments: true
+---
+<p>忏悔啊，就写了一个类还出了 bug⋯⋯</p>
+
+<p>写了单元测试还出了 bug⋯⋯</p>
+
+<p><code>type(data) == type("")</code> 这种办法是不行的，因为 "" 是 str 类型，如果 data 是 unicode 的话这种判断就不成立了，而应该采用这种办法：<code>isinstance(data, basestring)</code>，其中 basestring 是 str 和 unicode 两个类的父类。</p>
+
+<p>期待 python 3k⋯⋯</p>

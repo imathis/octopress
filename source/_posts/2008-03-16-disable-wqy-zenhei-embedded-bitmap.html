@@ -1,0 +1,27 @@
+---
+layout: post
+title: 禁用文泉驿正黑字体中的内嵌点阵
+categories:
+- Information Technology
+tags:
+- font
+- fontconfig
+- wqy-zenhei
+published: true
+comments: true
+---
+<p>看到<a href="http://wqy.sourceforge.net/cgi-bin/index.cgi?ZenHei">文泉驿正黑</a>挺漂亮的，于是 pacman -S wqy-zenhei ，装好之后提示默认禁用了内嵌的点阵字体，如果要启用的话应该修改什么文件，反正我也不希望看到难看的点阵字体，所以也就没改，重启 X ，之后发现 9pt~12pt 的字变成点阵宋体了……不是说禁用了吗？怎么这个还撒谎啊……看了下配置文件 embeddedbitmap 确实是 false ，那为什么又会显示出点阵字体呢……这个难道还有撒谎的？</p>
+
+<p>郁闷几天后，有人说是 fontconfig 的 bug …… 无论 embeddedbitmap 是 true 还是 false 都会调用点阵字体。无奈，使出绝技，将点阵去掉，看它去哪调用……</p>
+
+<p>首先安装 fontforge ，然后创建一个脚本，名为 zenhei_nobitmap.fe ，内容如下</p>
+
+<p><coolcode>
+#!/usr/bin/fontforge<br />
+Open("wqy-zenhei.ttf");<br />
+Generate("wqy-zenhei-nobitmap.ttf");<br />
+Close();</coolcode></p>
+
+<p>把 wqy-zenhei.ttf 复制过去，执行 fontforge -script zenhei_nobitmap.fe ，然后把生成的 wqy-zenhei-nobitmap.ttf 改回原来的名字，复制回去，重启 X ，你就永远也看不到可恶的点阵字体了。</p>
+
+<p>ps: via <a href="http://wenq.org/forum/viewtopic.php?t=522">http://wenq.org/forum/viewtopic.php?t=522</a></p>

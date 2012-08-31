@@ -1,0 +1,27 @@
+---
+layout: post
+title: Arch 下安装 Acroread 简体中文字体包
+categories:
+- Information Technology
+tags:
+- acroread
+- adobe
+- Arch
+- Archlinux
+- Chinese
+- font
+- Linux
+published: true
+comments: true
+---
+<p>转到 <a href="http://www.archlinux.org/">Arch</a> 下面也有两个星期了，感觉用 Arch 很习惯，比较简洁，比较快（废话，要不怎么叫 <a href="http://wiki.archlinux.org/index.php/The_Arch_Way">Arch</a>），不过不是很习惯 <a href="http://www.kde.org/">KDE</a> ，和 <a href="http://www.gnome.org/">GNOME</a> 操作上有很多不同， <a href="http://amarok.kde.org/">Amarok</a> 倒是个好东西……</p>
+
+<p>扯远了，拉回来，前两天装 Adobe Reader 的时候遇到了一点小问题，这里说一下。</p>
+
+<p>安装很简单， pacman -S arcoread 就搞定了，不过好像源里没有语言包，要自己装。于是去<a href="http://www.adobe.com/products/acrobat/acrrasianfontpack.html">下载</a>，之后安装。进行到让我输入安装路径的时候出问题了，无论我输入什么路径，它都让我再输入一遍……晕死……无奈之下，打开脚本看。发现按 Adboe 的要求， Arcoread 应该装在 $dir/Adobe/Reader8/Reader ，但是 Arch 把它装在了 /usr/share/acrobat ，这就出问题了，安装脚本就找不到路径了……</p>
+
+<p>没办法，手动来吧，发现其他几个文件是压缩包，于是解开，发现是按照 acroread 的目录结构放的一些文件，于是按照压缩包提供的路径手动复制过去，启动 acroread ，OK 了。</p>
+
+<p>不得不抱怨一下， Arch 乱改什么路径， Adobe 的脚本连点提示都没有…… 哪位有空的时候把安装脚本改一下，改个 Arch 专用版。 :)</p>
+
+<p><strong>update:</strong> 也可以简单一句搞定：yaourt -S acroread8-fonts  （via <a href="http://lymanrb.spaces.live.com/">lyman</a>）</p>

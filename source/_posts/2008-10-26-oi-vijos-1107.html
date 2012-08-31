@@ -1,0 +1,34 @@
+---
+layout: post
+title: ! '[OI][Vijos 1107]环游大同 80 天'
+categories:
+- Information Technology
+tags:
+- algorithm
+- C++
+- OI
+- Vijos
+published: true
+comments: true
+---
+<p>话说<a href="http://www.vijos.cn/Problem_Show.asp?id=1107">这题</a>是一个搜索题。</p>
+
+<p>我采用的是两次 DFS 的方法，也就是任意取一个点开始 DFS，找到这次 DFS 时深度最深的点（也就是从所选点开始最长路径的终点），然后从这一点（可以证明，这一点是最长路径的端点）开始再进行 DFS，这次 DFS 的深度就是要求的路径长度。</p>
+
+<p>算法就是这样了，不过这个算法的正确性我一开始也不太确定，下面来证明一下：</p>
+
+<p>大家看图：</p>
+
+<p><a href="http://picasaweb.google.com/lh/photo/NY1Jnu3cWVKA0BvUyw-Y9w"><img src="http://lh6.ggpht.com/LeafDuo/SQCcU72qGHI/AAAAAAAAA-Q/3RzwOtKTupU/s400/1107.png" /></a></p>
+
+<p>设最长路径为 AB ，一开始任选的点为 P。取路径 PB 上的一点 Q，使得 AQ 与 PQ 只有一个公共点 Q（也就是使得从 A 走到 Q 再走到 B 不会走回头路）。设 AQ=a，QB=b，QP=s，不妨设 a&lt;b。</p>
+
+<p>要证明这个算法的正确性，也就是要证明从 P 开始的最长路径的终点一定是 A 或 B。假设从 P 开始的最长路径的终点是 C ，设 CP=c。</p>
+
+<p>由假设知， c&gt;s+b。由于从从 P 开始的最长路径的终点是 C，所以第二次 DFS 将从 C 开始，所得最长路径为 CB=c+s+b&gt;s+b+s+b，又因为 a&lt;b，故CB&gt;s+b+s+b&gt;s+a+s+b&gt;a+b=AB，这与 AB 是最长路径矛盾，故假设不成立，命题得证。</p>
+
+<p>时间复杂度 O(CR)，空间复杂度 O(CR)。</p>
+
+<p><a href="http://github.com/leafduo/vijos/tree/master/1107/1107.cpp">代码</a>还是非常 ugly，偷了很多懒，改一下的话应该能更快些。</p>
+
+<p>P.S. 停止切题，准备期中考试。（其实这个星期就没做题）</p>
