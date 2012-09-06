@@ -21,6 +21,7 @@ module HighlightCode
       else
         highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'}) 
       end
+      highlighted_code = highlighted_code.gsub(/{{/, '&#x7b;&#x7b;').gsub(/{%/, '&#x7b;&#x25;')
       File.open(path, 'w') {|f| f.print(highlighted_code) } if path
     end
     highlighted_code.to_s
@@ -43,8 +44,6 @@ module HighlightCode
     marks   = options[:marks]
     linenos = options[:linenos]
     start   = options[:start]
-
-    code = code.gsub(/{{/, '&#x7b;&#x7b;').gsub(/{%/, '&#x7b;&#x25;')
 
     if lang == 'plain'
       # Escape html tags
