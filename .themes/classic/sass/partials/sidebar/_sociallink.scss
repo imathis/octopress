@@ -1,4 +1,4 @@
-.googleplus {
+.socialllink {
   h1 {
        -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
@@ -19,6 +19,9 @@
   }
 }
 
+
+// Is this really used? Doesn't setting googleplus_
+// user do the same thing?
 .googleplus-hidden {
   position: absolute;
   top: -1000em;
