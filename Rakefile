@@ -53,6 +53,7 @@ task :generate do
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system "jekyll"
+  Rake::Task[:copydot].invoke(source_dir, public_dir)
 end
 
 desc "Watch the site and regenerate when it changes"
@@ -215,7 +216,6 @@ task :deploy do
     Rake::Task[:generate].execute
   end
 
-  Rake::Task[:copydot].invoke(source_dir, public_dir)
   Rake::Task["#{deploy_default}"].execute
 end
 
