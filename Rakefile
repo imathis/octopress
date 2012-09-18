@@ -370,7 +370,7 @@ task :merge_sitemaps do
     howmany  += 1
   }
   File.open( root_dir + "/sitemap.xml", 'w' ) do |f|
-    f.write ( header + alllines + trailer ).join( "\n" )
+    f.write ( header + alllines + trailer ).join()
   end
   puts "Merged #{howmany} sitemaps onto #{root_dir}/sitemap.xml"
 end
