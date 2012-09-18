@@ -368,7 +368,6 @@ task :merge_sitemaps do
     trailer  = [ lines.slice!( -1 ) ]
     alllines = alllines + lines
     howmany  += 1
-    File.delete sitemap
   }
   File.open( root_dir + "/sitemap.xml", 'w' ) do |f|
     f.write ( header + alllines + trailer ).join( "\n" )
