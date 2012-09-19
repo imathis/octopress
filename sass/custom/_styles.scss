@@ -1,0 +1,183 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+@font-face {
+	  font-family: "League";
+	    src: url('/font/LeagueGothic.otf');
+    }
+
+    a:visited, #content .blog-index article h1 a:hover { color: #F2583E; }
+
+
+    /* ----- main layout ----- */
+
+
+    html { background: #262C33 url("../images/background.png"); }
+
+    body { font-size: 1em; }
+
+    body > div { background-image: none; }
+
+    body > div > div { background-image: none; }
+
+
+    /* ----- header ----- */
+
+
+    body > header{
+	      background: none;
+	        /*padding: 1.6em 0 1em 0*/
+	        padding: 0.5em 0 0.5em 0
+	}
+
+	body > header h1{
+	  font-size: 2.8em;
+	    padding-left: 20px;
+	      text-shadow: rgba(0, 0, 0, 0.8) 0 0 8px;
+	      }
+
+	      body > header h2{
+	        font-size: 0.5em;
+	  letter-spacing: 1px;
+	    margin-top: -1.4em;
+	      padding-left: 20px;
+	      }
+
+	      body > nav {
+	        padding-top: .15em;
+	  padding-bottom: .15em;
+	  }
+
+	  body > nav a{
+	    font-size: 1em;
+	      line-height: 1.4em;
+	      }
+
+	      body > nav form .search{
+	        padding: .2em .3em;
+	}
+
+
+	/* ----- Content ----- */
+
+
+	#content .blog-index article h1 {
+	  font-size: 1.8em;
+	    font-weight: normal;
+	    }
+
+	    #content .blog-index article h1, #content .blog-index article h1 a, article header h1, article header h1 a{
+	      color: #555555 !important;
+	      }
+
+	      h1 { font-size: 1.8em; }
+
+	      h1 span{
+	        font-weight: normal;
+	  color: #E0841B;
+	  }
+
+	  article h2, article h3, article header h1{
+	    font-weight: normal;
+	    }
+
+	    .blog-index article h1 a:hover{ text-decoration: none; }
+
+	    article p {
+	      text-align:justify;
+	        margin-bottom: 1em;
+	}
+
+
+	/* ----- Sidebar ----- */
+
+
+	aside.sidebar section h1 { letter-spacing: 0.1em; }
+
+	aside.sidebar a { text-decoration: none; }
+
+	.toggle-sidebar{display: none;}
+
+	ul#gh_repos > li > a{
+	  display: block;
+	    font-weight: bold;
+	      margin-bottom: 0.4em;
+	      }
+
+	      aside.sidebar{
+	        -moz-border-radius-topright: 0.4em;
+	  -webkit-border-radius: 0 0.4em 0 0;
+	    border-radius: 0 0.4em 0 0;
+	    }
+
+
+	    /* ----- Footer ----- */
+
+
+	    body > footer{
+	      -moz-border-radius: 0;
+	        -webkit-border-radius: 0;
+	  border-radius:0;
+	    margin-bottom: 0;
+	    }
+
+
+	    /* ----- 404 ----- */
+
+
+	    .notfound404 article{
+	      margin-left: 0 !important;
+	      }
+
+
+	      /* ----- Media queries ----- */
+
+
+	      @media only screen and (min-width: 550px) {
+
+	        body > header h1{
+	      background: url("/favicon.png") no-repeat 0 8px;
+	            padding-left: 60px;
+	      }
+
+	        body > header h2 { padding-left: 60px; }
+
+	  body > footer { margin-bottom: 3em; }
+	  }
+
+	  @media only screen and (min-width: 1040px) {
+
+	    body > nav {
+	        -moz-border-radius: 0.4em;
+	    -webkit-border-radius: 0.4em;
+	        border-radius:0.4em;
+	    margin-bottom: 2em;
+	      }
+
+	        body > footer{
+	      -moz-border-radius-bottomleft: 0.4em;
+	            -moz-border-radius-bottomright: 0.4em;
+	          -webkit-border-radius: 0 0 0.4em 0.4em;
+	        border-radius: 0 0 0.4em 0.4em;
+	  }
+
+	    #main{
+	          -moz-border-radius-topleft: 0.4em;
+	        -moz-border-radius-topright: 0.4em;
+	      -webkit-border-radius: 0.4em 0.4em 0 0;
+	            border-radius: 0.4em 0.4em 0 0;
+	      }
+
+	        #content{
+	      -moz-border-radius-topleft: 0.4em;
+	            -webkit-border-radius: 0.4em 0 0 0;
+	          border-radius: 0.4em 0 0 0;
+	    }
+
+	      #content .blog-index a[rel="full-article"]{
+	            -webkit-border-radius: 6px;
+	          -moz-border-radius: 6px;
+	        border-radius: 6px;
+	  }
+	  }
+
