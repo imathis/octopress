@@ -1,0 +1,3 @@
+[submodule ".themes/oct2-orange"]
+	path = .themes/oct2-orange
+	url = git://github.com/lunks/oct2-orange.git
