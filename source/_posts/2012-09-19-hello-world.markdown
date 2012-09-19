@@ -11,7 +11,7 @@ Olá, mundo! Há algumas semanas atrás pensamos em criar um blog pra toda
 a equipe *avassaladora* da HE:labs poder publicar o que anda acontecendo
 de interessante em nossos projetos, seja na parte exclusivamente técnica
 ou não.
-
+<!-- more -->
 Espere posts bem variados por aqui. Podemos discutir desde [como testar
 factories][postrodrigo] até como [a nossa nova AR:Drone][drone] voa bem. Não existe uma
 restrição sobre o que falar, mas vamos tentar usar as categorias da
