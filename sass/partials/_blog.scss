@@ -9,7 +9,7 @@ article {
     background: $img-border bottom left repeat-x;
     h1 {
       margin: 0;
-      a { text-decoration: none;
+      a { text-decoration: none; font-weight: bold;
         &:hover { text-decoration: underline; } }
     }
     p {
@@ -20,6 +20,7 @@ article {
         @extend .sans;
         text-transform: uppercase;
         position: absolute; top: 0;
+        font-size: .7em;
       }
     }
     @media only screen and (min-width: 768px) {
