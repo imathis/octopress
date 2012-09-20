@@ -5,6 +5,7 @@
 .pygments-cache
 _deploy
 sass.old
+public
 source.old
 source/_stash
 source/stylesheets/screen.css
