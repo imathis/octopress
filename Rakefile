@@ -377,4 +377,8 @@ task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
 end
-task :default => [:generate, :deploy]
+
+task :git_push do
+  system `git push`
+end
+task :default => [:git_push, :generate, :deploy]
