@@ -8,7 +8,7 @@ $link-color-visited: adjust-color($link-color, $hue: 80, $lightness: -4) !defaul
 $link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
 
 // Main Section Colors
-$main-bg: #f8f8f8 !default;
+$main-bg: #fff !default;
 $page-bg: #252525 !default;
 $article-border: #eeeeee !default;
 
