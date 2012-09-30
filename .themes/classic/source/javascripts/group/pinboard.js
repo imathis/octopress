@@ -39,7 +39,7 @@ var pinboard = (function(){
       if (it.t.length > 0) {
         for (var i = 0; i < it.t.length; i++) {
           var tag = it.t[i];
-          str += " <a class=\"pin-tag\" href=\"http://pinboard.in/u:"+ this.cook(it.a) + "/t:" + this.cook(tag) + "\">" + this.cook(tag).replace(/^\s+|\s+$/g, '') + "</a> ";
+          str += " <a class=\"pin-tag\" href=\"//pinboard.in/u:"+ this.cook(it.a) + "/t:" + this.cook(tag) + "\">" + this.cook(tag).replace(/^\s+|\s+$/g, '') + "</a> ";
         }
       }
       str += "</p></li>\n";
@@ -50,7 +50,7 @@ var pinboard = (function(){
   return {
     getFeed: function(options) {
       this.element = options.target;
-      fetch("http://feeds.pinboard.in/json/v1/u:"+options.user+"/?cb=pinboard.render\&count="+options.count);
+      fetch("//feeds.pinboard.in/json/v1/u:"+options.user+"/?cb=pinboard.render\&count="+options.count);
     },
 
     render: function(data) {
