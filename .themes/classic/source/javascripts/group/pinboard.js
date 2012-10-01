@@ -50,7 +50,7 @@ var pinboard = (function(){
   return {
     getFeed: function(options) {
       this.element = options.target;
-      fetch("//feeds.pinboard.in/json/v1/u:"+options.user+"/?cb=pinboard.render\&count="+options.count);
+      fetch("https://feeds.pinboard.in/json/v1/u:"+options.user+"/?cb=pinboard.render\&count="+options.count);
     },
 
     render: function(data) {
