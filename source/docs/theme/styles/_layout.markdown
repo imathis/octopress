@@ -7,7 +7,7 @@
 Just like with colors, widths in `/sass/base/_layout.scss` are defined like `$max-width: 1200px !default;` and can be easily customized
 by defining them in `sass/custom/_layout.scss`. Here's a look at the layout defaults.
 
-{% codeblock Layout Defaults (_layout.scss) https://github.com/imathis/octopress/tree/master/.themes/classic/sass/base/_layout.scss view on Github %}
+{% codeblock Layout Defaults (_layout.scss) https://github.com/imathis/octopress/tree/master/.themes/classic/sass/base/_layout.scss view on GitHub %}
 $max-width: 1200px !default;
 
 // Padding used for layout margins

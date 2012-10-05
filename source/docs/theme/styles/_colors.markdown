@@ -13,7 +13,7 @@ To customize your color scheme edit `sass/custom/_colors.scss` and override the 
 
 The official Octopress site is using the default 'classic' theme with a few minor color changes to the custom colors file. Take a look at this file and you'll see some lines of sass code that have been commented out.
 
-{% codeblock Custom Colors (sass/custom/_colors.scss) https://github.com/imathis/octopress/tree/master/.themes/classic/sass/custom/_colors.scss View on Github %}
+{% codeblock Custom Colors (sass/custom/_colors.scss) https://github.com/imathis/octopress/tree/master/.themes/classic/sass/custom/_colors.scss View on GitHub %}
 $header-bg: #263347;
 $subtitle-color: lighten($header-bg, 58);
 $nav-bg: desaturate(lighten(#8fc17a, 18), 5);
@@ -24,7 +24,7 @@ $sidebar-link-color-hover: darken(#7ab662, 9);
 
 The custom colors file has some commented out colors you can use. The theme file is broken up into sections to make it easier to read through. Here's a look at the navigation section of `sass/base/_theme.scss`.
 
-{% codeblock Navigation (sass/base/_theme.scss) https://github.com/imathis/octopress/tree/master/.themes/classic/sass/base/_theme.scss View on Github %}
+{% codeblock Navigation (sass/base/_theme.scss) https://github.com/imathis/octopress/tree/master/.themes/classic/sass/base/_theme.scss View on GitHub %}
 /* Navigation */
 $nav-bg: #ccc !default;
 $nav-color: darken($nav-bg, 38) !default;

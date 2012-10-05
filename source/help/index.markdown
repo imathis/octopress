@@ -18,11 +18,11 @@ Don't feel like reading the documentation? You've come to the right place! Actua
 If you have a question, or if you love helping others:
 
 1. Join the #Octopress IRC channel on irc.freenode.net.
-2. [Post an issue](http://github.com/imathis/octopress/issues) on Github's issue tracker.
+2. [Post an issue](http://github.com/imathis/octopress/issues) on GitHub's issue tracker.
 3. Mention [@Octopress](http://twitter.com/octopress) on Twitter.
 
 ## Contributing
 
-If you want to help out, [fork Octopress on Github](http://github.com/imathis/octopress) and send me a pull request.
+If you want to help out, [fork Octopress on GitHub](http://github.com/imathis/octopress) and send me a pull request.
 This site is also part of the Octopress project and if you find errors you can [post issues](http://github.com/imathis/octopress/issues/)
 or send me a pull request for the [site branch](http://github.com/imathis/octopress/tree/site).
