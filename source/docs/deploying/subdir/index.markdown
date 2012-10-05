@@ -6,7 +6,7 @@ sidebar: false
 footer: false
 ---
 
-If you're deploying to a subdirectory on your site, or if you're using Github's project pages, make sure you set up your urls correctly in your configs.
+If you're deploying to a subdirectory on your site, or if you're using GitHub's project pages, make sure you set up your urls correctly in your configs.
 You can do this *almost* automatically:
 
 ``` sh

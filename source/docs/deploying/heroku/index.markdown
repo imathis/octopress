@@ -17,7 +17,7 @@ gem install heroku
 ```
 
 Next create a heroku app for deployment. If this is your first time using Heroku, this command will ask for your account credentials,
-and automatically upload your public SSH key. If you don't already have a public key follow [Github's guide and create one](http://help.github.com/set-up-git-redirect/).
+and automatically upload your public SSH key. If you don't already have a public key follow [GithHub's guide and create one](http://help.github.com/set-up-git-redirect/).
 
 ```sh
 heroku create

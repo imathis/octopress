@@ -6,7 +6,7 @@ sidebar: false
 footer: false
 ---
 
-With the `backtick_codeblock` filter you can use Github's lovely back tick syntax highlighting blocks.
+With the `backtick_codeblock` filter you can use GitHub's lovely back tick syntax highlighting blocks.
 Simply start a line with three back ticks followed by a space and the language you're using.
 
 ## Syntax

@@ -52,7 +52,7 @@ Note: using excludes will prevent rsync from uploading local files, or if the de
 ## Version control
 
 You'll want to keep your blog source in a remote git repository,
-so either [set up a Github repository](https://github.com/repositories/new) or [host your own](#self_hosted_git) and then do this.
+so either [set up a GitHub repository](https://github.com/repositories/new) or [host your own](#self_hosted_git) and then do this.
 
 ```sh
 # Since you cloned Octopress, you'll need to change the origin remote

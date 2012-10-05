@@ -7,7 +7,7 @@ comments: true
 categories: release
 ---
 
-Octopress is a framework designed by [Brandon Mathis](http://brandonmathis.com) for [Jekyll](http://github.com/mojombo/jekyll), the blog aware static site generator powering [Github Pages](http://pages.github.com).
+Octopress is a framework designed by [Brandon Mathis](http://brandonmathis.com) for [Jekyll](http://github.com/mojombo/jekyll), the blog aware static site generator powering [GitHub Pages](http://pages.github.com).
 To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress
 All of that is already taken care of. Simply [clone or fork Octopress](https://github.com/imathis/octopress), install dependencies and the theme, and you're set.
 
@@ -20,7 +20,7 @@ Octopress comes with:
 - A semantic HTML5 template
 - A Mobile first responsive layout (rotate, or resize your browser and see)
 - Built in 3rd party support for Twitter, Google Plus One, Disqus Comments, Pinboard, Delicious, and Google Analytics
-- An easy deployment strategy using Github pages or Rsync
+- An easy deployment strategy using GitHub Pages or Rsync
 - Built in support for POW and Rack servers
 - Easy theming with Compass and Sass
 - A Beautiful [Solarized](http://ethanschoonover.com/solarized) syntax highlighting
@@ -34,7 +34,7 @@ Most of these plugins have been created just for Octopress, but a few come from 
 - [HTML5 Video Tag](/docs/plugins/video-tag) - *easily post mp4 HTML5 video with flash player fallback*
 - [Code Block](/docs/plugins/codeblock) - *for easy inline code sharing*
 - [Include Code](/docs/plugins/include-code) - *embed code from your filesystem*
-- [Gist Tag](/docs/plugins/gist-tag) - *automatically downloads and embeds Github gists*
+- [Gist Tag](/docs/plugins/gist-tag) - *automatically downloads and embeds GitHub gists*
 - [Image Tag](/docs/plugins/image-tag) - *easily post images with class names and titles*
 - [Render Partial](/docs/plugins/render-partial) - *insert any file into another post or page*
 - [Blockquote](/docs/plugins/blockquote) - *generate beautiful, semantic block quotes*

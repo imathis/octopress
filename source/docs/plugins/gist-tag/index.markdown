@@ -7,7 +7,7 @@ footer: false
 ---
 
 All you need is the gist's id and you can easily embed it in your page. This actually downloads a cache of the gist and embeds it in a `<noscript>` tag for RSS
-readers and search engines, while still using Github's javascript gist embed code for browsers.
+readers and search engines, while still using GitHub's JavaScript gist embed code for browsers.
 
 #### Syntax
 
