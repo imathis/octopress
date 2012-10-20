@@ -16,3 +16,5 @@ group :development do
 end
 
 gem 'sinatra', '~> 1.3.2'
+
+gem 'feedzirra', '~> 0.1.3'

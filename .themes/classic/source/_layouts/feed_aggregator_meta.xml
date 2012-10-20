@@ -1,0 +1,30 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[{{ page.title | cdata_escape }} Meta Feed]]></title>
+  <link href="{{ site.url }}{{ page.url }}" rel="self"/>
+  <link href="{{ site.url }}/"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}{{ page.url }}</id>
+  <author>
+    <name><![CDATA[{{ site.author | strip_html | cdata_escape }}]]></name>
+    {% if site.email %}<email><![CDATA[{{ site.email | cdata_escape }}]]></email>{% endif %}
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  {% for post in page.feed_aggregator.posts %}
+    <entry>
+      <title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
+      <link href="{{ post.url }}"/>
+      <updated>{{ post.date | date_to_xmlschema }}</updated>
+      <id>{{ post.id }}</id>
+      <author>
+        <name><![CDATA[{{ post.author | cdata_escape }}]]></name>
+        <uri>{{ post.author_url }}</uri>
+      </author>
+      <content type="html"><![CDATA[{{ post.content | cdata_escape }}]]></content>
+    </entry>
+  {% endfor %}
+</feed>

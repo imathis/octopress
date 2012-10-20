@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% assign feed_aggregator = page.feed_aggregator %}
+
+<br>
+<h1 align="center"><u> {{ feed_aggregator.title }} </u></h1>
+
+<div class=\"blog-index\">
+{% for post in feed_aggregator.posts %}
+  <article>
+    <header>
+      <h1 class="entry-title"><a href="{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+      <p class="meta">
+        <time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate data-updated="true">{{ post.date_formatted }}  &nbsp; &mdash; &nbsp; {{ post.author }}</time>
+      </p>
+    </header>
+    <div class="entry-content">{{ post.content }}</div>
+  </article>
+{% endfor %}
+</div>
+<aside class="sidebar">
+  <section>
+    <h1>{{ feed_aggregator.title }} Members</h1>
+    {% for author in feed_aggregator.authors %}
+      <a href="{{ author.url }}"> {{ author.first }} {{ author.last }}</a><br>
+    {% endfor %}
+  </section>
+</aside>
