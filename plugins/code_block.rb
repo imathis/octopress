@@ -41,7 +41,7 @@
 # <pre><code>&lt;sarcasm> Ooooh, sarcasm... How original!&lt;/sarcasm></code></pre>
 # </figure>
 #
-require './plugins/pygments_code'
+require './plugins/highlight_code'
 require './plugins/raw'
 
 module Jekyll

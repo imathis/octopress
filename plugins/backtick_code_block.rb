@@ -1,4 +1,4 @@
-require './plugins/pygments_code'
+require './plugins/highlight_code'
 
 module BacktickCodeBlock
   include HighlightCode
