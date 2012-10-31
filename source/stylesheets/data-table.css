@@ -28,3 +28,34 @@
 * + table th[align="center"], * + table td[align="center"] {
   text-align:center;
 }
+
+/* ###############*/
+header.default h1 a {
+  display: block;
+  width: 228px;
+  height: 91px;
+  background-image: url(/blog/images/logo-he-labs.jpg);
+  float: left;
+}
+header.default h1 a span {
+  display: none;
+}
+
+#follow {
+  float: right;
+  padding-top: 48px;
+}
+#follow ul {
+}
+#follow ul li {
+  display: inline;
+  margin-left: 25px
+}
+#follow ul li a {
+  padding-bottom: 18px;
+  padding-right: 3px;
+}
+#follow ul li a:hover {
+  color: #b80606;
+  text-decoration: underline;
+}
