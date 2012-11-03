@@ -44,12 +44,14 @@ header.default h1 a span {
 #follow {
   float: right;
   padding-top: 48px;
+  width: 286px;
 }
 #follow ul {
+  padding: 0 20px 0 20px;
 }
 #follow ul li {
   display: inline;
-  margin-left: 25px
+  margin-left: 10px
 }
 #follow ul li a {
   padding-bottom: 18px;
