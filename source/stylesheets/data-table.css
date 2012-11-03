@@ -60,4 +60,5 @@ header.default h1 a span {
 #follow ul li a:hover {
   color: #b80606;
   text-decoration: underline;
+  opacity: 0.7;
 }
