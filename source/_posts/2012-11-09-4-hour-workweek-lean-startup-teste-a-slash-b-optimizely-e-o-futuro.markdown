@@ -29,5 +29,5 @@ A parte boa é que agora apareceu uma ferramenta chamada [FluidFeatures] que tem
 [The Lean Startup]: http://lean.st/
 [Eric Ries]: http://en.wikipedia.org/wiki/Eric_Ries
 [validated learning]: http://lean.st/principles/validated-learning
-[IMVU]: http://en.wikipedia.org/wiki/Eric_Ries
+[IMVU]: http://www.imvu.com/
 [FluidFeatures]: http://www.fluidfeatures.com/
