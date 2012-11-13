@@ -4,7 +4,7 @@
   <title><![CDATA[Category: General | Avi Tzurel]]></title>
   <link href="http://avi.io/blog/categories/general/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2012-11-13T18:45:08+02:00</updated>
+  <updated>2012-11-13T18:46:55+02:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -202,7 +202,7 @@ end
 
 <p>You can see the problem demo in this YouTube Video</p>
 
-<p>{% youtube gUB48XwNq0M %}</p>
+<p><iframe width="" height="" src="http://www.youtube.com/embed/gUB48XwNq0M " frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></p>
 
 <p>I asked this question on StackOverflow <a href="http://stackoverflow.com/questions/11785035/vim-issue-with-running-specs-in-ruby-rspec/11785791#11785791">here</a></p>
 
