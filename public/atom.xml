@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Tzurel]]></title>
   <link href="http://avi.io/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2012-08-19T14:05:03+03:00</updated>
+  <updated>2012-11-13T18:45:05+02:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[RailsConf 2012 talk - How Gogobot works]]></title>
+    <link href="http://avi.io/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works/"/>
+    <updated>2012-11-13T18:37:00+02:00</updated>
+    <id>http://avi.io/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works</id>
+    <content type="html"><![CDATA[<p>My slides from the talk I gave at RailsConf Israel 2012.</p>
+
+<script async class="speakerdeck-embed" data-id="0e2a2d400f220130018822000a1f82fb" src="http://avi.io//speakerdeck.com/assets/embed.js"></script>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[organizing your specs into groups and running them separately]]></title>
@@ -877,11 +891,19 @@ In a vim session I mapped a key like this</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[run octopress new_post rake on zshell]]></title>
+    <title type="html"><![CDATA[Run Octopress New Post Rake On Zshell]]></title>
     <link href="http://avi.io/blog/2012/07/27/run-octopress-new-post-rake-on-zshell/"/>
-    <updated>2012-07-27T22:53:00+03:00</updated>
+    <updated>2012-07-27T00:00:00+03:00</updated>
     <id>http://avi.io/blog/2012/07/27/run-octopress-new-post-rake-on-zshell</id>
-    <content type="html"><![CDATA[<p>This blog is running on <a href="https://github.com/imathis/octopress">Octopress</a>, which is an awesome implementation of a blogging engine in Ruby.</p>
+    <content type="html"><![CDATA[<p>a&#8211;
+layout: post
+title: &#8220;run octopress new_post rake on zshell&#8221;
+date: 2012-07-27 22:53
+comments: true</p>
+
+<h2>categories: general</h2>
+
+<p>This blog is running on <a href="https://github.com/imathis/octopress">Octopress</a>, which is an awesome implementation of a blogging engine in Ruby.</p>
 
 <p>To create a new post, you need to run a rake task like so:</p>
 

@@ -1,4 +1,4 @@
----
+a--
 layout: post
 title: "run octopress new_post rake on zshell"
 date: 2012-07-27 22:53
