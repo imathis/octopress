@@ -111,7 +111,14 @@ p, li {
     padding: 0 .3em;
     margin: -1px 0;
   }
-  pre code { font-size: 1em !important; background: none; border: none; }
+  pre code { 
+    font-size: 1em !important; 
+    background: none; 
+    border: none; 
+    color: $pre-color;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .pre-code {

@@ -10,9 +10,10 @@ module BacktickCodeBlock
     @lang = nil
     @url = nil
     @title = nil
-    input.gsub(/^`{3} *([^\n]+)?\n(.+?)\n`{3}/m) do
-      @options = $1 || ''
-      str = $2
+    input.gsub(/^((?: {4}|\t)*)`{3} *([^\n]+)?\n(.+?)\n(?: {4}|\t)*`{3}/m) do
+      indent = $1
+      @options = $2 || ''
+      str = $3
 
       if @options =~ AllOptions
         @lang = $1
@@ -22,12 +23,15 @@ module BacktickCodeBlock
         @caption = "<figcaption><span>#{$2}</span></figcaption>"
       end
 
+      if not(indent.empty?)
+        str = str.gsub(/^#{indent}/, '')
+      end
       if str.match(/\A( {4}|\t)/)
         str = str.gsub(/^( {4}|\t)/, '')
       end
       if @lang.nil? || @lang == 'plain'
-        code = tableize_code(str.gsub('<','&lt;').gsub('>','&gt;'))
-        "<figure class='code'>#{@caption}#{code}</figure>"
+        code = tableize_code(str.gsub('<','&lt;').gsub('>','&gt;').gsub('&','&amp;'))
+        "#{indent}<figure class='code'>#{@caption}#{code}</figure>"
       else
         if @lang.include? "-raw"
           raw = "``` #{@options.sub('-raw', '')}\n"
@@ -35,7 +39,7 @@ module BacktickCodeBlock
           raw += "\n```\n"
         else
           code = highlight(str, @lang)
-          "<figure class='code'>#{@caption}#{code}</figure>"
+          "#{indent}<figure class='code'>#{@caption}#{code}</figure>"
         end
       end
     end
