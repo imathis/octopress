@@ -3,20 +3,15 @@ require './plugins/backtick_code_block'
 require './plugins/post_filters'
 require './plugins/raw'
 require './plugins/date'
-require 'rubypants'
 
 module OctopressFilters
   include BacktickCodeBlock
   include TemplateWrapper
   def pre_filter(input)
-    input = render_code_block(input)
-    input.gsub /(<figure.+?>.+?<\/figure>)/m do
-      safe_wrap($1)
-    end
+    input = preprocess_code_blocks(input)
   end
   def post_filter(input)
-    input = unwrap(input)
-    RubyPants.new(input).to_html
+    input = postprocess_code_blocks(input)
   end
 end
 
