@@ -1,4 +1,5 @@
 ---
+author: Pedro Marins
 layout: post
 title: "Tech Talks - Rodrigo Pinto: Explorando as views Rails"
 date: 2012-11-16 14:24
