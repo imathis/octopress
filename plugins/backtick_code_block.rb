@@ -1,5 +1,6 @@
 require './plugins/pygments_code'
 require 'base64'
+require 'rubypants'
 
 module BacktickCodeBlock
   include HighlightCode
@@ -51,7 +52,7 @@ module BacktickCodeBlock
   end
   def postprocess_code_blocks(input)
     input.gsub(/#{OpeningTag}([a-zA-Z0-9\+\/=]*)#{ClosingTag}/) do
-      Base64.decode64($1)
+      Base64.decode64(RubyPants.new($1).to_html)
     end
   end
 end
