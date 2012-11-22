@@ -167,10 +167,14 @@ module Jekyll
       old_do_layout(payload, layouts)
     end
 
-    # Returns the full url of the post, including the
-    # configured url
+    ##
+    # Returns the full url of the post or page, including the configured URL.
+    ##
+
     def full_url
-      self.site.config['url'] + self.url
+      if is_post?
+        site.config["url"] + url
+      else (site.config['url'] + @dir + url).gsub(%r!index.html$!, "") end
     end
   end
 end
