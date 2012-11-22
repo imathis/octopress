@@ -89,11 +89,15 @@ module Jekyll
   module Convertible
 
     def is_post?
-      self.class.to_s == 'Jekyll::Post'
+      if is_a?(Post)
+        true
+      else false end
     end
 
     def is_page?
-      self.class.to_s == 'Jekyll::Page'
+      if is_a?(Page)
+        true
+      else false end
     end
 
     def is_filterable?
