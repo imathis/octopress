@@ -3,6 +3,6 @@
 <time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "<span class='month'>%b</span> <span class='day'>%d</span> <span class='year'>%Y</span>"}}</time>
 {% if category != '0' %}
 <footer>
-  <span class="categories">posted in {{ post.categories | category_links }}</span>
+  <span class="categories">postado em {{ post.categories | category_links }}</span>
 </footer>
 {% endif %}
