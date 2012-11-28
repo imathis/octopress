@@ -24,6 +24,7 @@
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
   {% include custom/head.html %}
   {% include google_analytics.html %}
+  {% include gauges_analytics.html %}
   {% unless favicon %}{% capture favicon %}{{ root_url }}/octopress-favicon.png{% endcapture %} {% endunless %}
   <link href="{{favicon}}" rel="icon">
 </head>
