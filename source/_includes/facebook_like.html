@@ -1,10 +1,21 @@
 {% if site.facebook_like %}
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  FB.Event.subscribe('edge.create', function(targetUrl) {
+    _gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
+  });
+  FB.Event.subscribe('edge.remove', function(targetUrl) {
+    _gaq.push(['_trackSocial', 'facebook', 'unlike', targetUrl]);
+  });
+  FB.Event.subscribe('message.send', function(targetUrl) {
+    _gaq.push(['_trackSocial', 'facebook', 'send', targetUrl]);
+  });
+</script>
 {% endif %}
