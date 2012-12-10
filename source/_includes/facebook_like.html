@@ -5,11 +5,10 @@
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) {return;}
     js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+    js.src = "//connect.facebook.net/en_US/all.js#appId=294124694041877&xfbml=1";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
   window.fbAsyncInit = function(){
-    FB.init({appId:'294124694041877'});
     FB.Event.subscribe('edge.create', function(targetUrl) {
       _gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
     });
