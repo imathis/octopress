@@ -12,10 +12,10 @@
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
   <!-- Facebook stuff taken from main page, not sure it should go here -->
-  <meta property="og:title" content="HE:labs - Desenvolvimento de Software para Internet."/>
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"/>
   <meta property="og:site_name" content="HE:labs blog"/>
   <meta property="og:image" content="http://helabs.com.br/images/logo_sq.jpg"/>
-  <meta property="og:description" content="HE:labs é uma empresa pioneira em desenvolvimento de sistemas web, aplicativos web, SaaS e Cloud Computing." />
+  <meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}" />
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
