@@ -8,6 +8,7 @@ categories:
   - codeschool
   - workshop
   - rails-for-zombies
+  - Rodrigo Pinto
 ---
 
 Recentemente a [HE:labs][1] fechou parceria com a [CodeSchool][2] para trazer para o Brasil cursos online disponíveis na plataforma [CodeSchool][2] no formato  **presencial**. O primeiro workshop lançado é o [Rails for Zombies 2][rfz] e as inscrições já estão abertas.

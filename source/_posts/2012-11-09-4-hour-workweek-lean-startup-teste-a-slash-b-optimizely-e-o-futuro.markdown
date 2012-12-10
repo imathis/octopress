@@ -6,6 +6,7 @@ date: 2012-11-09 12:12
 comments: true
 categories: 
 - lean startup
+- Sylvestre Mergulhão
 ---
 
 Quando li o livro [The 4 Hour Workweek] , percebi que muitas das otimizações exemplificadas pelo [Timothy] eram baseadas em experimentação sobre o que funciona melhor, ou seja, tem maior taxa de conversão. Na época não existia uma ferramenta como o [Optimizely]. Ele deve ter tido um bom trabalho para chegar nas conclusões sobre que converte melhor.
