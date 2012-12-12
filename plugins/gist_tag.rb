@@ -40,7 +40,9 @@ module Jekyll
     end
 
     def script_url_for(gist_id, filename)
-      "https://gist.github.com/#{gist_id}.js?file=#{filename}"
+      url = "https://gist.github.com/#{gist_id}.js"
+      url += "?file=#{filename}" if filename && filename != ''
+      url
     end
 
     def get_gist_url_for(gist, file)
