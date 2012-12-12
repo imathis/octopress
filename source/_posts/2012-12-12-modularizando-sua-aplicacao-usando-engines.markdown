@@ -2,7 +2,7 @@
 author: Pedro Nascimento
 layout: post
 title: "'Modularizando sua aplicação usando Engines'"
-date: 2012-12-09 19:13
+date: 2012-12-12 12:12
 comments: true
 categories: engines lunks
 ---
@@ -16,6 +16,7 @@ no [StartupDev][startupdev]:
 [favorite_it][favorite_it]. Todas elas partiram de códigos utilizados
 várias vezes em outros projetos. Como qualquer outro projeto open
 source, qualquer colaboração é bem vinda e incentivada.
+<!-- more -->
 
 ##O que são Engines?
 [Engines][engines_guide] são aplicações Rails que podem ser incluídas dentro da sua
