@@ -1,7 +1,7 @@
 ---
 author: Pedro Nascimento
 layout: post
-title: "'Modularizando sua aplicação usando Engines'"
+title: "Modularizando sua aplicação usando Engines"
 date: 2012-12-12 12:12
 comments: true
 categories: engines lunks
@@ -28,6 +28,7 @@ alguns generators.
 Engines servem para diminuir a duplicação de código em suas aplicações
 e/ou permitir um bootstrap mais eficiente de novas aplicações. Casos
 comuns:
+
 * Aplicações dentro da empresa que usam um layout e estrutura
   semelhantes.
 * Coisas que são feitas em grande parte das aplicações novas e que se
@@ -71,7 +72,7 @@ def tweet_about_me
 end
 ```
 
-It just works.&trade;. Tudo que você criar dentro da Engine fica
+It just works&trade;. Tudo que você criar dentro da Engine fica
 disponível na sua aplicação.
 
 No próximo post da série discutiremos sobre alguns problemas que
