@@ -7,6 +7,7 @@ comments: true
 categories:
   - tech talks
   - rails
+  - Rodrigo Martins
   - Pedro Marins
 ---
 
