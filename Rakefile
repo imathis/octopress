@@ -26,11 +26,12 @@ new_post_ext    = "markdown"  # default new post file extension when using the n
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
 server_port     = "4000"      # port for preview server eg. localhost:4000
 
-
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
   if File.directory?(source_dir) || File.directory?("sass")
     abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
+    cp_tmp File.join([source_dir, "_includes", "custom"])
+    cp_tmp File.join(["sass", "custom"])
   end
   # copy theme into working Jekyll directories
   theme = args.theme || 'classic'
@@ -41,6 +42,7 @@ task :install, :theme do |t, args|
   cp_r "#{themes_dir}/#{theme}/sass/.", "sass"
   mkdir_p "#{source_dir}/#{posts_dir}"
   mkdir_p public_dir
+  cp_tmp
 end
 
 #######################
@@ -370,6 +372,19 @@ def ask(message, valid_options)
     answer = get_stdin(message)
   end
   answer
+end
+
+def cp_tmp path=nil
+  if path
+    tmp_path = path.split(File::SEPARATOR)[0..-2].join(File::SEPARATOR)
+    mkdir_p File.join(["tmp", tmp_path])
+    cp_r(path, File.join(["tmp", tmp_path])) if File.directory?(path)
+  else
+    if File.directory?("tmp")
+      cp_r(Dir["tmp/*"], "./") 
+      rm_rf "tmp"
+    end
+  end
 end
 
 desc "list tasks"
