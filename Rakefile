@@ -26,6 +26,8 @@ new_post_ext    = "markdown"  # default new post file extension when using the n
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
 server_port     = "4000"      # port for preview server eg. localhost:4000
 
+## -- Amazon S3 Deploy config -- ##
+bucket_name     = ""
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
@@ -348,6 +350,24 @@ task :setup_github_pages, :repo do |t, args|
     end
   end
   puts "\n---\n## Now you can deploy to #{url} with `rake deploy` ##"
+end
+
+desc "deploy to Amazon S3 using s3cmd"
+task :s3, :bucket do |t, args|
+  puts 'Amazon S3 Deployment'
+  if args.bucket
+    bucket = args.bucket
+  else 
+    if bucket_name != ""
+      bucket = bucket_name
+    else
+      bucket = get_stdin("Enter the s3 bucket name")
+    end
+  end
+
+  cd "#{public_dir}" do
+    system "s3cmd sync . --delete-removed . s3://#{bucket}/"
+  end
 end
 
 def ok_failed(condition)
