@@ -57,7 +57,7 @@ task :generate do
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   Rake::Task['minify_and_combine'].execute
-  system "jekyll"
+  system "jekyll --no-server --no-auto"
 end
 
 Rake::Minify.new(:minify_and_combine) do
