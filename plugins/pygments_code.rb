@@ -6,11 +6,8 @@ PYGMENTS_CACHE_DIR = File.expand_path('../../.pygments-cache', __FILE__)
 FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)
 
 module HighlightCode
-  def highlight(str, lang)
-    lang = 'ruby' if lang == 'ru'
-    lang = 'objc' if lang == 'm'
-    lang = 'perl' if lang == 'pl'
-    lang = 'yaml' if lang == 'yml'
+  def highlight(str, options={})
+    lang = Pygments.lexer_for(str, options).name.to_s.downcase rescue nil
     str = pygments(str, lang).match(/<pre>(.+)<\/pre>/m)[1].to_s.gsub(/ *$/, '') #strip out divs <div class="highlight">
     tableize_code(str, lang)
   end
