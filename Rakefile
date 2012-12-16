@@ -1,6 +1,13 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "fog"
+
+## -- Amazon S3 deploy config -- ##
+
+s3_bucket     = "www.andrewreid.me"
+s3_access_key = "AKIAINFN5CMVV5UKIMLA"
+s3_secret_key = "eJN20JLTaJHhrrWWQN0eNxhWELDdWgXnkKjB25yp"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -238,6 +245,59 @@ task :rsync do
   end
   puts "## Deploying website via Rsync"
   ok_failed system("rsync -avze 'ssh -p #{ssh_port}' #{exclude} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
+end
+
+desc "Deploy website to S3 via Fog"
+task :s3 do
+  ## Connection to S3
+  connection = Fog::Storage.new(
+    :provider               => "AWS",
+    :aws_secret_access_key  => s3_secret_key,
+    :aws_access_key_id      => s3_access_key
+  )
+  
+  ## Traverse public directory, build a hash
+  Dir.chdir("public") do
+    published_files = FileList['**/*'].inject({}) do |hsh, path|
+      if File.directory? path
+        hsh.update("#{path}/" => :directory)
+      else
+        hsh.update(path => OpenSSL::Digest::MD5.hexdigest(File.read(path)))
+      end
+    end
+    raise "public is empty: aborting" if published_files.size <= 1
+    
+    bucket = connection.directories.get(s3_bucket)
+    
+    published_files.each do |file, etag|
+      case etag
+      when :directory
+        puts "Creating directory #{file}"
+        bucket.files.create(:key => file, :public => true)
+      else
+        if f = bucket.files.head(file)
+          if f.etag == etag
+            puts "Skipping #{file} (identical)"
+          else
+            "Updating #{file}"
+            bucket.files.create(:key => file, :public => true, :body => File.open(file))
+          end
+        else
+          puts "Uploading #{file}"
+          bucket.files.create(:key => file, :public => true, :body => File.open(file))
+        end
+      end
+    end
+    
+    ## Clean up removed files
+    
+    bucket.files.each do |object|
+      unless published_files.has_key? object.key
+        puts "Removing #{object.key} (no longer exists)"
+        object.destroy
+      end
+    end
+  end
 end
 
 desc "deploy public directory to github pages"
