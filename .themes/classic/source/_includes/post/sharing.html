@@ -3,21 +3,33 @@
     {% if site.respectfully_social %}
       <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
     {% else %}
-      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" target="_blank" >Tweet</a>
+      {% if post.title %}
+        <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ post.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ post.url }}" >Tweet</a>
+      {% else %}
+        <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" >Tweet</a>
+      {% endif %}
     {% endif %}
   {% endif %}
   {% if site.google_plus_one %}
     {% if site.respectfully_social %}
       <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url={{site.url}}{{page.url}}" target="_blank">+1</a>
     {% else %}
-      <div class="g-plusone" data-size="{{ site.google_plus_one_size }}"></div>
+      {% if post.title %}
+        <div class="g-plusone" data-href="{{ site.url }}{{ post.url }}" data-size="{{ site.google_plus_one_size }}"></div>
+      {% else %}
+        <div class="g-plusone" data-href="{{ site.url }}{{ page.url }}" data-size="{{ site.google_plus_one_size }}"></div>
+      {% endif %}
     {% endif %}
   {% endif %}
   {% if site.facebook_like %}
     {% if site.respectfully_social %}
     <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank">Share</a>
     {% else %}
-      <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+      {% if post.title %}
+        <div class="fb-like" data-href="{{ site.url }}{{ post.url }}" data-send="true" data-width="450" data-show-faces="false"></div>
+      {% else %}
+        <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-send="true" data-width="450" data-show-faces="false"></div>
+      {% endif %}
     {% endif %}
   {% endif %}
   {% include custom/sharing.html %}
