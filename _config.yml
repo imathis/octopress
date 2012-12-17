@@ -61,6 +61,11 @@ post_sidebar: post_default.html
 #   3rd Party Settings    #
 # ----------------------- #
 
+# OpenID Delegation
+# Add your OpenID server and delegate settings here to enable OpenID delegation
+openid_server: 
+openid_delegate: 
+
 # Javascript social buttons often generate lots of http requests and may track your viewer's browsing history
 # Show respect for privacy and bandwidth with simple links for Twitter, Facebook and Google Plus.
 respectfully_social: true
