@@ -20,7 +20,7 @@
 # will output a figcaption with the title: Example 2 (test.js)
 #
 
-require './plugins/pygments_code'
+require './plugins/highlight_code'
 require './plugins/raw'
 require 'pathname'
 
