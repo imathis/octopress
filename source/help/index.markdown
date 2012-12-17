@@ -18,7 +18,7 @@ Don't feel like reading the documentation? You've come to the right place! Actua
 If you have a question, or if you love helping others:
 
 1. Join the #Octopress IRC channel on irc.freenode.net.
-2. [Post an issue](http://github.com/imathis/octopress/issues) on Github's issue tracker.
+2. Search for an existing topic or start a new one describing your problem on [Octopress's Google Group](https://groups.google.com/forum/#!forum/octopress).
 3. Mention [@Octopress](http://twitter.com/octopress) on Twitter.
 
 ## Contributing
