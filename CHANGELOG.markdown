@@ -1,5 +1,9 @@
 # Octopress Changelog
 
+## 2.1
+
+- `rake preview` binds to IP and HOST, which can be set through OCTOPRESS_IP and OCTOPRESS_HOST, respectively (#780)
+
 ## 2.0
 
 - Now based on [mojombo/jekyll](http://github.com/mojombo/jekyll)
