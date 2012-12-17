@@ -407,10 +407,14 @@ task :setup_github_pages, :repo do |t, args|
   end
 
   # Configure deployment repository
+  git_user_name = `git config --get user.name`.strip
+  git_user_email = `git config --get user.email`.strip
   rm_rf deploy_dir
   mkdir deploy_dir
   cd "#{deploy_dir}" do
     system "git init"
+    system "git config user.name '#{git_user_name}'" unless git_user_name.empty?
+    system "git config user.email '#{git_user_email}'" unless git_user_email.empty?
     system "git remote add origin #{repo_url}"
     puts   "Attempting to pull from repository"
     system "git pull origin #{branch}"
