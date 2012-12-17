@@ -27,7 +27,7 @@ module BacktickCodeBlock
         @caption = "<figcaption><span>#{$2}</span></figcaption>"
       end
 
-      if not(indent.empty?)
+      unless indent.empty?
         str = str.gsub(/^#{indent}/, '')
       end
       if str.match(/\A( {4}|\t)/)
