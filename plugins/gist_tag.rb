@@ -1,5 +1,6 @@
 # A Liquid tag for Jekyll sites that allows embedding Gists and showing code for non-JavaScript enabled browsers and readers.
-# by: Brandon Tilly
+# Written by: Brandon Mathis, Parker Moore
+# Inspired by: Brandon Tilly
 # Source URL: https://gist.github.com/1027674
 # Post http://brandontilley.com/2011/01/31/gist-tag-for-jekyll.html
 #
@@ -9,9 +10,11 @@ require 'cgi'
 require 'digest/md5'
 require 'net/https'
 require 'uri'
+require './plugins/pygments_code'
 
 module Jekyll
   class GistTag < Liquid::Tag
+    include HighlightCode
     def initialize(tag_name, text, token)
       super
       @text           = text
@@ -23,24 +26,10 @@ module Jekyll
     def render(context)
       if parts = @text.match(/([\d]*) (.*)/)
         gist, file = parts[1].strip, parts[2].strip
-        script_url = script_url_for gist, file
-        code       = get_cached_gist(gist, file) || get_gist_from_web(gist, file)
-        html_output_for script_url, code
+        get_cached_gist(gist, file) || get_gist_from_web(gist, file)
       else
         ""
       end
-    end
-
-    def html_output_for(script_url, code)
-      code = CGI.escapeHTML code
-      <<-HTML
-<div><script src='#{script_url}'></script>
-<noscript><pre><code>#{code}</code></pre></noscript></div>
-      HTML
-    end
-
-    def script_url_for(gist_id, filename)
-      "https://gist.github.com/#{gist_id}.js?file=#{filename}"
     end
 
     def get_gist_url_for(gist, file)
@@ -82,8 +71,10 @@ module Jekyll
       https.verify_mode = OpenSSL::SSL::VERIFY_NONE
       request           = Net::HTTP::Get.new raw_uri.request_uri
       data              = https.request request
-      data              = data.body
+      lang              = file.empty? ? '' : file.split('.')[-1]
+      data              = highlight(data.body, lang, { linenos: true, start: 1 })
       cache gist, file, data unless @cache_disabled
+
       data
     end
   end
