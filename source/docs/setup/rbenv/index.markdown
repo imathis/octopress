@@ -23,6 +23,8 @@ source ~/.bash_profile
 
 **Zsh users:** In the instructions above substitute `~/.bash_profile` with `~/.zshenv`.
 
+**Note:** You may need to add `source ~/.bash_profile` to `~/.profile` depending upon your bash configuration.
+
 ## Alternate Installation Using Homebrew
 
 If you use Homebrew on Mac OS X you may prefer to install rbenv like this:
