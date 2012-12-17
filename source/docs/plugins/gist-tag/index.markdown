@@ -15,9 +15,15 @@ readers and search engines, while still using Github's javascript gist embed cod
 
 #### Example
 
-    {{ "{% gist 996818" }} %}
+    {{ "{% gist 4321346" }} %}
 
-{% gist 996818 %}
+{% gist 4321346 %}
+
+If you want syntax highlighting, specify the filename (with extension):
+
+    {{ "{% gist 4321346 gistfile1.diff" }} %}
+
+{% gist 4321346 gistfile1.diff %}
 
 If you have a gist with multiple files, you can include files one at a time by adding the name after the gist id.
 
