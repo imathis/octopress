@@ -105,5 +105,8 @@ disqus_developer: 0
 # Google Analytics
 google_analytics_tracking_id:
 
+# Gaug.es Analytics
+gauges_analytics_tracking_id:
+
 # Facebook Like
 facebook_like: false

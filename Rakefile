@@ -28,8 +28,8 @@ posts_dir       = "_posts"    # directory for blog files
 themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
-server_port     = "4000"      # port for preview server eg. localhost:4000
-
+server_host     = ENV['OCTOPRESS_IP']   || '0.0.0.0'   # host ip address for preview server
+server_port     = ENV['OCTOPRESS_PORT'] || "4000"      # port for preview server eg. localhost:4000
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
@@ -57,7 +57,7 @@ task :generate do
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   Rake::Task['minify_and_combine'].execute
-  system "jekyll"
+  system "jekyll --no-server --no-auto"
 end
 
 Rake::Minify.new(:minify_and_combine) do
@@ -112,11 +112,11 @@ end
 desc "preview the site in a web browser"
 task :preview do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
+  puts "Starting to watch source with Jekyll and Compass. Starting Rack, serving to http://#{server_host}:#{server_port}"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   jekyllPid = Process.spawn("jekyll --auto")
   compassPid = Process.spawn("compass watch")
-  rackupPid = Process.spawn("rackup --port #{server_port}")
+  rackupPid = Process.spawn("rackup --host #{server_host} --port #{server_port}")
 
   trap("INT") {
     [jekyllPid, compassPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }

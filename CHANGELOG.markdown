@@ -1,5 +1,12 @@
 # Octopress Changelog
 
+## 2.1
+
+- Improvements to SCSS which styles `<sup>` and `<sub>` tags (#426)
+- Added list of categories into atom.xml (#421)
+- Added default support for guag.es analytics (#827)
+- `rake preview` binds to IP and HOST, which can be set through OCTOPRESS_IP and OCTOPRESS_HOST, respectively (#780)
+
 ## 2.0
 
 - Now based on [mojombo/jekyll](http://github.com/mojombo/jekyll)
