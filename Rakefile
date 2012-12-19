@@ -15,7 +15,7 @@ deploy_branch  = "gh-pages"
 
 ## -- Misc Configs -- ##
 
-public_dir      = "public"    # compiled site directory
+public_dir      = "public/blog"    # compiled site directory
 source_dir      = "source"    # source file directory
 blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
 deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
@@ -25,6 +25,7 @@ themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
 server_port     = "4000"      # port for preview server eg. localhost:4000
+is_multiblog    = true        # runs some extra tasks for blogs
 
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
@@ -53,6 +54,9 @@ task :generate do
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system "jekyll"
+  if( defined? is_multiblog and is_multiblog )
+    Rake::Task[:merge_sitemaps].execute
+  end
 end
 
 desc "Watch the site and regenerate when it changes"
@@ -299,7 +303,7 @@ task :setup_github_pages, :repo do |t, args|
   if args.repo
     repo_url = args.repo
   else
-    puts "Enter the read/write url for your repository" 
+    puts "Enter the read/write url for your repository"
     puts "(For example, 'git@github.com:your_username/your_username.github.com)"
     repo_url = get_stdin("Repository url: ")
   end
@@ -349,6 +353,28 @@ task :setup_github_pages, :repo do |t, args|
   end
   puts "\n---\n## Now you can deploy to #{url} with `rake deploy` ##"
 end
+
+desc "merges all the sitemaps it finds inside public. Useuful if you have more than one blog under the same site. Idea from https://github.com/imathis/octopress/issues/708"
+task :merge_sitemaps do
+  root_dir = "public"
+  howmany  = 0
+  header   = []
+  trailer  = []
+  alllines = []
+  lines    = []
+  Dir.glob( root_dir + "/**/sitemap.xml" ).each{ |sitemap|
+    lines    = (IO.readlines sitemap)
+    header   = lines.slice!( 0..1 )
+    trailer  = [ lines.slice!( -1 ) ]
+    alllines = alllines + lines
+    howmany  += 1
+  }
+  File.open( root_dir + "/sitemap.xml", 'w' ) do |f|
+    f.write ( header + alllines + trailer ).join()
+  end
+  puts "Merged #{howmany} sitemaps onto #{root_dir}/sitemap.xml"
+end
+
 
 def ok_failed(condition)
   if (condition)
