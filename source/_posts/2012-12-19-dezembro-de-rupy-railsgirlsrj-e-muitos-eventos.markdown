@@ -47,7 +47,7 @@ Grande Abraço,<br/>
 [rp]: http://www.twitter.com/rodrigoospinto
 [rl]: http://www.twitter.com/rafaelp
 [sm]: http://www.twitter.com/smergulhao
-[paas]: http://
+[paas]: http://en.wikipedia.org/wiki/Platform_as_a_service
 [ml]: http://helabs.com.br/mailing/
 [SWrio]: http://rio.startupweekend.org/
 [cs]: http://www.codeschool.com.br
