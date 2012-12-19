@@ -32,11 +32,11 @@ Ainda aconteceu o [GeeksOnBeer][gob], no dia  e novamente estávamos presentes. 
 
 Para fecher o ciclo de eventos no sábado dia 15, rolou o [RailsGirls-RJ][rgrj] e o 9° encontro do Rio.JS.
 
-O [RailsGirls-RJ][rgrj] é um evento que tem como meta "dar ferramentas para garotas e mulheres construirem seus próprios sonhos", ou seja, um evento para mulheres de um dia inteiro focado em ensinar Rails para que elas possam a partir daí começar a construir aplicações web. O evento foi sensacional, com mais de 60 pessoas presentes, a [HE:labs][he] também apoiou e [eu][rp] estive lá ajudando como coach e apresentando uma palestra sobre ["Introdução ao Ruby on Rails"][intro].
+O [RailsGirls-RJ][rgrj] é um evento que tem como meta _"dar ferramentas para garotas e mulheres construirem seus próprios sonhos"_, ou seja, um evento de um dia inteiro, focado em ensinar Rails para mulheres, para que elas possam a partir daí começar a construir aplicações web. O evento foi sensacional, com mais de 60 pessoas presentes, a [HE:labs][he] também apoiou e [eu][rp] estive lá ajudando como coach e apresentando uma palestra sobre ["Introdução ao Ruby on Rails"][intro].
 
-[No 9° encontro do Rio.JS][RioJS] que esteve presente foi o [Pedro Marins][Pedro Marins]. O evento reuniu a comunidade de desenvolvedores para palestras sobre javascript. Entre os temas abordados estão peculiaridade do javascript, qualidade de código e o Angular.JS.
+[No 9° encontro do Rio.JS][RioJS] quem esteve presente foi o [Pedro Marins][Pedro Marins]. O evento reuniu a comunidade de desenvolvedores para palestras sobre JavaScript. Entre os temas abordados estão peculiaridade do javascript, qualidade de código e o Angular.JS.
 
-Por fim é isso, os eventos tomam um recesso durante esse período de fim de ano, mas nós não. Já estamos preparando eventos e cursos para o ano que vem então assine [nossa mailing][ml] para ficar atualizado sobre onde estamos envolvidos.
+Os eventos entram em recesso durante esse período de fim de ano, mas nós não. Já estamos preparando eventos e cursos para o ano que vem, então [assine nossa mailing][ml] para ficar atualizado sobre onde e com o que estamos envolvidos.
 
 Grande Abraço,<br/>
 [Rodrigo Pinto][rp].
