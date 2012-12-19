@@ -2,6 +2,10 @@
 To customize the favicon, assign it to "/url/to/favicon.png"
 {% endcomment %}
 {% assign favicon = false %}
+<!-- Optional Google Translate configuration -->
+{% if site.google_translate_content %}
+    <meta name="google-translate-customization" content="{{ site.google_translate_content }}"></meta>
+{% endif %}
 <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
 <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
