@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Page Not Found
+footer: false
 ---
 
 Oops, I couldn't find that page! Sorry about that.
