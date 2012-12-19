@@ -72,7 +72,9 @@ module Jekyll
       request           = Net::HTTP::Get.new raw_uri.request_uri
       data              = https.request request
       lang              = file.empty? ? '' : file.split('.')[-1]
-      data              = highlight(data.body, lang, { linenos: true, start: 1 })
+      link              = "https://gist.github.com/#{gist}"
+      caption           = file.empty? ? "Gist: #{gist}" : file
+      data              = highlight(data.body, lang, { linenos: true, start: 1, caption: caption, url: link, anchor: 'View Gist' })
       cache gist, file, data unless @cache_disabled
 
       data
