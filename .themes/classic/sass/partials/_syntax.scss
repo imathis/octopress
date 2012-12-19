@@ -77,6 +77,8 @@ html .gist .gist-file {
     a[href*=raw]{
       @extend .download-source;
       top: .4em;
+      position: absolute;
+      padding-left: 3em;
     }
   }
 }
@@ -225,11 +227,16 @@ figure.code {
   figcaption {
     position: relative;
     @extend .code-title;
-    a { @extend .download-source; }
+    a { position: relative;
+        @extend .download-source; }
   }
   .highlight {
     margin-bottom: 0;
   }
+}
+
+.figfooter {
+  border-radius: 0px 0px 5px 5px !important;
 }
 
 .code-title {
@@ -251,11 +258,10 @@ figure.code {
 }
 
 .download-source {
-  position: absolute; right: .8em;
+  right: .8em;
   @include hover-link;
   color: #666 !important;
   z-index: 1;
   font-size: 13px;
   text-shadow: #cbcccc 0 1px 0;
-  padding-left: 3em;
 }
