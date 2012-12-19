@@ -10,7 +10,7 @@ footer: false
 
 Use this if you want to host a blog from `http://username.github.com` (though you can also use [custom domains](#custom_domains)).
 
-Create a [new Github repository](https://github.com/repositories/new) and name the repository with your user name or organization name `username.github.com` or `organization.github.com`.
+Create a [new Github repository](https://github.com/repositories/new) and name the repository with the format `username.github.com`, where `username` is your GitHub user name or organization name.
 
 Github Pages for users and organizations uses the master branch like the public directory on a web server, serving up the files at your Pages url `http://username.github.com`.
 As a result, you'll want to work on the source for your blog in the source branch and commit *the generated content* to the master branch. Octopress has a configuration task that helps you set all this up.
