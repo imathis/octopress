@@ -20,7 +20,7 @@ A [RUPY][rupy] aconteceu nos dias 08 e 09 de Dezembro. [Eu(Rodrigo Pinto)][rp] e
 
 O evento contou com excelentes apresentações, entre elas, palestras como _"Usando o vagrant como ambiente de desenvolvimento Ruby"_ do [Nando Vieira][fn], _"Google App Engine, Python e Startups"_ com o [Renzo Nuccitelli][rn], e keynotes muito interessantes como _"De Smalltalk a Clojure"_ com [Ronaldo Ferraz][rf] e o [Fabio Akita][akt] fechando o evento falando sobre _"O que há de novo no Rails 4"_.
 
-Não se atendo somente as palestras da grade de programanção uma que me chamou bastante a atenção, foi a apresentação do [Tony Lâmpada][tl] compartilhando seu projeto [FreedomSponsors.org][fs], um projeto de crowdfunding para implementação e correção de funcionalidades em projetos open source.
+Não se atendo somente as palestras da grade de programação, uma que me chamou bastante a atenção, foi a apresentação do [Tony Lâmpada][tl] compartilhando seu projeto [FreedomSponsors.org][fs]. Um projeto de crowdfunding onde você pode contribuir financeiramenet para a implementação e/ou correção de funcionalidades em projetos open source.
 
 <!-- Faltaram os links para os palestrantes e para as palestras, se estiverem disponíveis -->
 
