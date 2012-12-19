@@ -28,7 +28,13 @@ Nesse mesmo final de semana o [Rafael Lima][rl] esteve do [StartupWeekend Rio][S
 
 Na semana seguinte, nos dias 11 e 13 de Dezembro foi ministrado o 1º curso Rails for Zombies 2 presencial, nascido da parceria [HE:labs][he] + [CodeSchool][cs]. Em breve teremos novas datas para o curso, então fique ligado e [inscreva-se na nossa mailing][ml] para ser avisado quando as novas datas forem definidas.
 
-Para fecher o ciclo de eventos no sábado dia 15, rolou o [RailsGirls-RJ][rgrj] um evento que tem como meta "dar ferramentas para garotas e mulheres construirem seus próprios sonhos", ou seja, um evento para mulheres de um dia inteiro focado em ensinar Rails para que elas possam a partir daí começar a construir aplicações web. O evento foi sensacional, com mais de 60 pessoas presentes, a [HE:labs][he] também apoiou e [eu][rp] estive lá ajudando como coach e apresentando uma palestra sobre ["Introdução ao Ruby on Rails"][intro].
+Ainda aconteceu o [GeeksOnBeer][gob], no dia  e novamente estávamos presentes. A [HE:labs][he] estava representada por [Sylvestre Mergulhão][sm], [Rafael Lima][rl] e Raphael Periard, que aproveitaram as cervejas para fazer muito networking. O [GeeksOnBeer][gob] foi mais um evento patrocinado pela HE:labs.
+
+Para fecher o ciclo de eventos no sábado dia 15, rolou o [RailsGirls-RJ][rgrj] e o 9° encontro do Rio.JS.
+
+O [RailsGirls-RJ][rgrj] é um evento que tem como meta "dar ferramentas para garotas e mulheres construirem seus próprios sonhos", ou seja, um evento para mulheres de um dia inteiro focado em ensinar Rails para que elas possam a partir daí começar a construir aplicações web. O evento foi sensacional, com mais de 60 pessoas presentes, a [HE:labs][he] também apoiou e [eu][rp] estive lá ajudando como coach e apresentando uma palestra sobre ["Introdução ao Ruby on Rails"][intro].
+
+[No 9° encontro do Rio.JS][RioJS] que esteve presente foi o [Pedro Marins][Pedro Marins]. O evento reuniu a comunidade de desenvolvedores para palestras sobre javascript. Entre os temas abordados estão peculiaridade do javascript, qualidade de código e o Angular.JS.
 
 Por fim é isso, os eventos tomam um recesso durante esse período de fim de ano, mas nós não. Já estamos preparando eventos e cursos para o ano que vem então assine [nossa mailing][ml] para ficar atualizado sobre onde estamos envolvidos.
 
@@ -48,9 +54,12 @@ Grande Abraço,<br/>
 [rgrj]: http://railsgirls.com/riodejaneiro
 [intro]: https://speakerdeck.com/rodrigoospinto/introducao-ao-ruby-on-rails-railsgirls-rj
 [fs]: http://www.freedomsponsors.org
+[RioJS]: https://www.facebook.com/groups/riojs/
+[gob]: http://geeksonbeer.com
 
 [fn]: https://twitter.com/fnando
 [rf]: https://twitter.com/rferraz
 [tl]: https://twitter.com/tonylampada
 [rn]: https://twitter.com/nuccitec
 [akt]: https://twitter.com/AkitaOnRails
+[Pedro Marins]: https://twitter.com/pedromarins
