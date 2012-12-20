@@ -2,6 +2,7 @@
 
 ## 2.1
 
+- Gist plugin now uses raw text instead of the Gist JS
 - Improvements to SCSS which styles `<sup>` and `<sub>` tags (#426)
 - Added list of categories into atom.xml (#421)
 - Added default support for guag.es analytics (#827)
