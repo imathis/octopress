@@ -325,8 +325,20 @@ multitask :push do
       puts "\n## Commiting: #{message}"
       system "git commit -m \"#{message}\""
       puts "\n## Pushing generated #{deploy_dir} website"
-      system "git push origin #{deploy_branch}"
-      puts "\n## GitHub Pages deploy complete"
+      if system "git push origin #{deploy_branch}"
+        puts "\n## GitHub Pages deploy complete"
+      else
+        remote = `git remote -v`
+        repo_url = case remote
+                   when /(http[^\s]+)/
+                     $1
+                   when /(git@[^\s]+)/
+                     $1
+                   else
+                     ""
+                   end
+        raise "\n## Octopress could not push to #{repo_url}"
+      end
     end
   else
     puts "This project isn't configured for deploying to GitHub Pages\nPlease run `rake setup_github_pages[your-deployment-repo-url]`." 
