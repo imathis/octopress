@@ -34,7 +34,7 @@ module HighlightCode
     lang = 'objc' if lang == 'm'
     lang = 'perl' if lang == 'pl'
     lang = 'yaml' if lang == 'yml'
-    lang = 'coffeescript' if lang == 'coffee'
+    lang = 'coffeescript' if lang == 'coffee' or lang == 'cs'
     lang = 'plain' if lang == '' or lang.nil? or !lang
 
     caption = options[:caption]   || nil
