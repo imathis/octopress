@@ -66,7 +66,7 @@ module HighlightCode
 
   def captionize (caption, url, anchor)
     figcaption  = "<figcaption><span>#{caption}</span>"
-    figcaption += "<a href='#{url}' title='Download code'> #{anchor || 'link'}</a>" if url
+    figcaption += "<a href='#{url}'>#{anchor.strip || 'link'}</a>" if url
     figcaption += "</figcaption>"
   end
 

@@ -74,7 +74,7 @@ module Jekyll
       lang              = file.empty? ? '' : file.split('.')[-1]
       link              = "https://gist.github.com/#{gist}"
       caption           = file.empty? ? "Gist: #{gist}" : file
-      data              = highlight(data.body, lang, { linenos: true, start: 1, caption: caption, url: link, anchor: 'View Gist' })
+      data              = highlight(data.body, lang, { linenos: true, start: 1, caption: caption, url: link, anchor: 'Gist page' })
       cache gist, file, data unless @cache_disabled
 
       data

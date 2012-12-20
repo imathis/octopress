@@ -98,7 +98,7 @@ module Jekyll
         @lang = file.extname.sub('.','') unless @lang
         title = @title ? "#{@title} (#{file.basename})" : file.basename
         url = "/#{code_dir}/#{@file}"
-        highlight(code, @lang, {caption: title, url: url, anchor: 'download', start: @start, marks: @marks, linenos: @linenos })
+        highlight(code, @lang, {caption: title, url: url, anchor: 'view raw', start: @start, marks: @marks, linenos: @linenos })
       end
     end
   end
