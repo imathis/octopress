@@ -382,6 +382,7 @@ task :setup_github_pages, :repo do |t, args|
   else
     repo_url = get_stdin("Enter the read/write url for your repository: ")
   end
+  raise "!! The repo URL that was input was malformed." unless repo_url.match(/https:\/\/github.com\/[^\/]+\/[^\/]+/) or repo_url.match(/git@github.com:[^\/]+\/[^\/]+/)
   user = repo_url.match(/(:([^\/]+)|(github.com\/([^\/]+)))/)[2] || repo_url.match(/(:([^\/]+)|(github.com\/([^\/]+)))/)[4]
   branch = (repo_url.match(/\/[\w-]+.github.com/).nil?) ? 'gh-pages' : 'master'
   project = (branch == 'gh-pages') ? repo_url.match(/\/([^\.]+)/)[1] : ''
