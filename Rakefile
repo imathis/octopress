@@ -382,7 +382,7 @@ task :setup_github_pages, :repo do |t, args|
   else
     repo_url = get_stdin("Enter the read/write url for your repository: ")
   end
-  user = repo_url.match(/:([^\/]+)/)[1]
+  user = repo_url.match(/(:([^\/]+)|(github.com\/([^\/]+)))/)[2] || repo_url.match(/(:([^\/]+)|(github.com\/([^\/]+)))/)[4]
   branch = (repo_url.match(/\/[\w-]+.github.com/).nil?) ? 'gh-pages' : 'master'
   project = (branch == 'gh-pages') ? repo_url.match(/\/([^\.]+)/)[1] : ''
   url = "http://#{user}.github.com"
