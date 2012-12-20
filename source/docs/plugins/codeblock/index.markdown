@@ -16,7 +16,7 @@ With this plugin you can write blocks of code directly in your posts and optiona
 
 ### Basic options
 
-- `[lang:language]` - Choose a language for the syntax highlighter. Passing 'plain' disables highlighting.
+- `[lang:language]` - Choose a language for the syntax highlighter. Passing 'plain' disables highlighting. ([Supported languages](http://pygments.org/docs/lexers/).)
 - `[title]` - Add a figcaption to your code block.
 - `[url]` - Download or reference link for your code.
 - `[link text]` - Text for the link, defaults to 'link'.
