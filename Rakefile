@@ -328,7 +328,7 @@ multitask :push do
       if system "git push origin #{deploy_branch}"
         puts "\n## GitHub Pages deploy complete"
       else
-        puts "\n## Octopress could not push to your repository. Check your internet connection."
+        raise "\n## Octopress could not push to your repository. Check your internet connection."
       end
     end
   else
