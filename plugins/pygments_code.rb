@@ -66,7 +66,7 @@ module HighlightCode
   end
 
   def captionize (caption, url, anchor)
-    figcaption  = "<figcaption><span>#{caption}</span>"
+    figcaption  = "<figcaption>#{caption.strip} "
     figcaption += "<a href='#{url}'>#{anchor.strip || 'link'}</a>" if url
     figcaption += "</figcaption>"
   end
@@ -75,9 +75,9 @@ module HighlightCode
     start = options[:start]
     lines = options[:linenos].nil? ? true : options[:linenos]
     marks = options[:marks]   || []
-    table = "<div class='highlight'><table>"
+    table = "<table class='highlight'>"
     table += number_lines(start, code.lines.count, marks) if lines
-    table += "<td class='code'><pre><code class='#{lang}'>"
+    table += "<td class='main #{'unnumbered' unless lines} #{lang}'><div>"
     if marks.size
       code.lines.each_with_index do |line,index|
         classes = 'line'
@@ -86,21 +86,27 @@ module HighlightCode
           classes += ' start' unless marks.include? index - 1 + start
           classes += ' end' unless marks.include? index + 1 + start
         end
-        table += "<span class='#{classes}'>#{line}</span>"
+        table += "<pre data-line='line #{index + start}' class='#{classes}'>#{line}</pre>"
       end
     else
       table += code.gsub /^((.+)?(\n?))/, '<span class=\'line\'>\1</span>'
     end
-    table +="</code></pre></td></tr></table></div>"
+    table +="</div></td></tr></table>"
   end
 
   def number_lines (start, count, marks)
     start ||= 1
-    lines = "<td class='gutter'><pre class='line-numbers'>"
+    lines = "<td class='line-numbers' aria-hidden='true'><div>"
     count.times do |index|
-      lines += "<span class='line-number#{' marked' if marks.include? index + start}'>#{index + start}</span>\n"
+      classes = 'line-number'
+      if marks.include? index + start
+        classes += ' marked'
+        classes += ' start' unless marks.include? index - 1 + start
+        classes += ' end' unless marks.include? index + 1 + start
+      end
+      lines += "<pre class='#{classes}'>#{index + start}</pre>"
     end
-    lines += "</pre></td>"
+    lines += "</div></td>"
   end
 
   def get_lang (input)

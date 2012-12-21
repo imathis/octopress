@@ -15,37 +15,25 @@ p, li {
   pre code { font-size: 1em; background: none; border: none; }
 }
 
+pre, figure.code table {
+  @if $code-selection-color != false {
+    @include selection($code-selection);
+  }
+}
+
 pre {
   background: $pre-bg $noise-bg;
   @include border-radius(.4em);
   @extend .mono;
-  border: 1px solid $pre-border;
-  line-height: 1.45em;
-  font-size: 13px;
-  margin-bottom: 2.1em;
-  padding: .8em 1em;
   color: $pre-color;
-  overflow: auto;
-  @if $code-selection-color != false {
-    @include selection($code-selection);
-  }
-  .marked {
-    position: relative;
-    display: block;
-    &:after {
-      content: "";
-      position: absolute;
-      background: $marker-bg;
-      left: -.8em; top: 0; bottom: 0; right: -.8em;
-      border: 1px solid { left-color: $marker-border-left; left-width: 2px; right-color: $marker-border; top: 0; bottom: 0; }
-    }
-    &.start:after {
-      border-top: 1px solid $marker-border;
-    }
-    &.end:after {
-      border-bottom: 1px solid $marker-border;
-    }
-  }
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
+  border: 1px solid $pre-border;
+  margin-bottom: 2.1em;
+  padding: 1em .8em;
+  font-size: 13px;
+  line-height: 1.45em;
 }
 
 figure.code {
@@ -54,7 +42,18 @@ figure.code {
   padding: 0;
   border: 0;
   margin-bottom: 1.5em;
-  pre { margin-bottom: 0; }
+  pre { 
+    @include border-radius(0px);
+    @include box-shadow(none);
+    background: none;
+    color: $base1;
+    border: none;
+    padding: 0; 
+    margin-bottom: 0;
+    overflow: visible;
+    font-style: normal;
+    font-weight: normal; 
+  }
   figcaption {
     position: relative;
     text-align: center;
@@ -92,9 +91,30 @@ figure.code {
       @include hover-link;
       color: inherit;
       z-index: 1;
-      font-size: 13px;
       padding-left: 3em;
     }
+  }
+  .marked {
+    position: relative;
+    display: block;
+    &:after {
+      content: "";
+      position: absolute;
+      background: $marker-bg;
+      left: -.8em; top: 0; bottom: 0; right: -.8em;
+      border: 0px solid $marker-border {
+        left-color: $marker-border-left;
+      }
+    }
+    &.start:after {
+      border-top-width: 1px;
+    }
+    &.end:after {
+      border-bottom-width: 1px;
+    }
+  }
+  .unnumbered, .line-numbers { 
+    .marked:after { border-left-width: 2px; }
   }
 }
 
@@ -103,40 +123,29 @@ figure.code {
   background: $base03;
   overflow-y: hidden;
   overflow-x: auto;
-  pre  { 
-    background: none;
-    @include border-radius(0px);
-    @include box-shadow(none);
-    border: none;
-    padding: 0; 
-    margin-bottom: 0;
+
+  // allows line number to be read by screen readers but won't be selected when copying code
+  [data-line]:before { 
+    content: attr(data-line);
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
   }
 
-  code { 
-    font-family: $mono;
-    overflow: scroll;
-    overflow-y: hidden;
-    display: block;
-    padding: .8em;
-    overflow-x: auto;
+  td {
     line-height: 1.45em;
-    background: $base03 $noise-bg;
-    color: $base1;
-    span {
-      color: $base1;
-      font-style: normal;
-      font-weight: normal; 
-    }
+    font-size: 13px;
+    div { padding: .8em; }
   }
 
-  table td.code { width: 100%; }
+  .main {
+    width: 100%;
+    background: $base03 $noise-bg;
+  }
 
   .line-numbers {
-    @include border-radius(0);
     text-align: right;
-    font-size: 13px;
-    line-height: 1.45em;
-    padding: .8em;
+    pre { color: $base01; }
 
     @if lightness($base03) > lightness(#555) {
       background: lighten($base03, 1) $noise-bg;
@@ -149,8 +158,6 @@ figure.code {
       @include box-shadow(lighten($base02, 2) -1px 0 inset);
       text-shadow: darken($base02, 10) 0 -1px;
     }
-
-    span { color: $base01; }
   }
 
   .c      { color: $base01; font-style: italic; }                     /* Comment */
