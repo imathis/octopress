@@ -19,7 +19,7 @@ readers and search engines, while still using Github's javascript gist embed cod
 
 {% gist 4321346 %}
 
-If you want syntax highlighting, specify the filename (with extension):
+If you want syntax highlighting (for a [supported language](http://pygments.org/docs/lexers/)), specify the filename (with extension):
 
     {{ "{% gist 4321346 gistfile1.diff" }} %}
 

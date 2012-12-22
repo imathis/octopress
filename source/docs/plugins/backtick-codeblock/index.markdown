@@ -16,7 +16,7 @@ Simply start a line with three back ticks followed by a space and the language y
     ```
 ### Basic options
 
-- `[language]` - Used by the syntax highlighter. Passing 'plain' disables highlighting.
+- `[language]` - Used by the syntax highlighter. Passing 'plain' disables highlighting. ([Supported languages](http://pygments.org/docs/lexers/).)
 - `[title]` - Add a figcaption to your code block.
 - `[url]` - Download or reference link for your code.
 - `[Link text]` - Text for the link, defaults to 'link'.
