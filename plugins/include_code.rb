@@ -10,14 +10,14 @@
 #
 # This will import test.js from source/downloads/code/javascripts/test.js
 # and output the contents in a syntax highlighted code block inside a figure,
-# with a figtitle listing the file name and download link
+# with a figcaption listing the file name and download link
 #
 # Example 2:
-# You can also include an optional title for the <figtitle>
+# You can also include an optional title for the <figcaption>
 #
 # {% include_code javascripts/test.js Example 2 %}
 #
-# will output a figtitle with the title: Example 2 (test.js)
+# will output a figcaption with the title: Example 2 (test.js)
 #
 
 require './plugins/pygments_code'
