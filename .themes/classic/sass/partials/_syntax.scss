@@ -125,17 +125,12 @@ figure.code {
   overflow-x: auto;
 
   // allows line number to be read by screen readers but won't be selected when copying code
-  [data-line]:before { 
-    content: attr(data-line);
-    font-size: 0;
-    line-height: 0;
-    color: transparent;
-  }
+  [data-line]:before { content: attr(data-line); }
 
   td {
     line-height: 1.45em;
     font-size: 13px;
-    div { padding: .8em; }
+    pre { padding: .8em; }
   }
 
   .main {

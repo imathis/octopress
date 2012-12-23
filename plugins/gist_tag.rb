@@ -15,18 +15,42 @@ require './plugins/pygments_code'
 module Jekyll
   class GistTag < Liquid::Tag
     include HighlightCode
-    def initialize(tag_name, text, token)
+    def initialize(tag_name, markup, token)
       super
-      @text           = text
       @cache_disabled = false
       @cache_folder   = File.expand_path "../.gist-cache", File.dirname(__FILE__)
+
+      options    = parse_markup(markup)
+      @lang      = options[:lang]
+      @title     = options[:title]
+      @lineos    = options[:lineos]
+      @marks     = options[:marks]
+      @url       = options[:url]
+      @link_text = options[:link_text]
+      @start     = options[:start]
+      @end       = options[:end]
+      @markup    = clean_markup(markup)
+
       FileUtils.mkdir_p @cache_folder
     end
 
     def render(context)
-      if parts = @text.match(/([\d]*) (.*)/)
+      if parts = @markup.match(/([\d]*) (.*)/)
         gist, file = parts[1].strip, parts[2].strip
-        get_cached_gist(gist, file) || get_gist_from_web(gist, file)
+        code       = get_cached_gist(gist, file) || get_gist_from_web(gist, file)
+
+        length = code.lines.count
+        @end ||= length
+        return "#{file} is #{length} lines long, cannot begin at line #{@start}" if @start > length
+        return "#{file} is #{length} lines long, cannot read beyond line #{@end}" if @end > length
+        if @start > 1 or @end < length
+          code = code.split(/\n/).slice(@start -1, @end + 1 - @start).join("\n")
+        end
+
+        lang  = file.empty? ? @lang || '' : file.split('.')[-1]
+        link  = "https://gist.github.com/#{gist}"
+        title = file.empty? ? "Gist: #{gist}" : file
+        highlight(code, lang, { title: @title || title, url: link, link_text: @link_text || 'Gist page', marks: @marks, linenos: @linenos, start: @start })
       else
         ""
       end
@@ -71,18 +95,15 @@ module Jekyll
       https.verify_mode = OpenSSL::SSL::VERIFY_NONE
       request           = Net::HTTP::Get.new raw_uri.request_uri
       data              = https.request request
-      lang              = file.empty? ? '' : file.split('.')[-1]
-      link              = "https://gist.github.com/#{gist}"
-      caption           = file.empty? ? "Gist: #{gist}" : file
-      data              = highlight(data.body, lang, { linenos: true, start: 1, caption: caption, url: link, anchor: 'Gist page' })
-      cache gist, file, data unless @cache_disabled
+      code              = data.body.to_s
 
-      data
+      cache gist, file, code unless @cache_disabled
+      code
     end
   end
 
   class GistTagNoCache < GistTag
-    def initialize(tag_name, text, token)
+    def initialize(tag_name, markup, token)
       super
       @cache_disabled = true
     end

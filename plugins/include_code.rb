@@ -10,14 +10,14 @@
 #
 # This will import test.js from source/downloads/code/javascripts/test.js
 # and output the contents in a syntax highlighted code block inside a figure,
-# with a figcaption listing the file name and download link
+# with a figtitle listing the file name and download link
 #
 # Example 2:
-# You can also include an optional title for the <figcaption>
+# You can also include an optional title for the <figtitle>
 #
 # {% include_code javascripts/test.js Example 2 %}
 #
-# will output a figcaption with the title: Example 2 (test.js)
+# will output a figtitle with the title: Example 2 (test.js)
 #
 
 require './plugins/pygments_code'
@@ -32,31 +32,22 @@ module Jekyll
       @title = nil
       @title_old = nil
 
-      @lang = get_lang(markup)
-      markup = replace_lang(markup)
-
-      @linenos = get_linenos(markup)
-      markup = replace_linenos(markup)
-
-      @marks = get_marks(markup)
-      markup = replace_marks(markup)
-      
-      @start = get_start(markup)
-      markup = replace_start(markup)
-
-      @end = get_end(markup)
-      markup = replace_end(markup)
-
-      range = get_range(markup, @start, @end)
-      @start = range[:start]
-      @end = range[:end]
-      markup = replace_range(markup)
+      options    = parse_markup(markup)
+      @lang      = options[:lang]
+      @title     = options[:title]
+      @lineos    = options[:lineos]
+      @marks     = options[:marks]
+      @url       = options[:url]
+      @link_text = options[:link_text]
+      @start     = options[:start]
+      @end       = options[:end]
+      markup     = clean_markup(markup)
 
       if markup.strip =~ /(^\S*\.\S+) *(.+)?/i
         @file = $1
-        @title = $2 || nil
+        @title ||= $2
       elsif markup.strip =~ /(.*?)(\S*\.\S+)\Z/i # Title before file is deprecated in 2.1
-        @title_old = $1 || nil
+        @title_old = $1
         @file = $2
       end
       super
@@ -68,7 +59,7 @@ module Jekyll
       file = code_path + @file
 
       unless @title_old.nil?
-        @title = @title_old
+        @title ||= @title_old
         puts "### ------------ WARNING ------------ ###"
         puts "This include_code syntax is deprecated "
         puts "Correct syntax: path/to/file.ext [title]"
@@ -89,7 +80,8 @@ module Jekyll
       Dir.chdir(code_path) do
         code = file.read
         length = code.lines.count
-        @end ||= length
+        @end   ||= length
+        @start ||= 1
         return "#{file} is #{length} lines long, cannot begin at line #{@start}" if @start > length
         return "#{file} is #{length} lines long, cannot read beyond line #{@end}" if @end > length
         if @start > 1 or @end < length
@@ -98,7 +90,7 @@ module Jekyll
         @lang = file.extname.sub('.','') unless @lang
         title = @title ? "#{@title} (#{file.basename})" : file.basename
         url = "/#{code_dir}/#{@file}"
-        highlight(code, @lang, {caption: title, url: url, anchor: 'view raw', start: @start, marks: @marks, linenos: @linenos })
+        highlight(code, @lang, {title: title, url: url, link_text: @link_text || 'view raw', start: @start, marks: @marks, linenos: @linenos })
       end
     end
   end

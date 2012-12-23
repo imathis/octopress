@@ -38,13 +38,13 @@ module HighlightCode
     lang = 'csharp' if lang == 'cs'
     lang = 'plain' if lang == '' or lang.nil? or !lang
 
-    caption = options[:caption]   || nil
-    url     = options[:url]       || nil
-    anchor  = options[:anchor]    || nil
-    wrap    = options[:wrap]      || true
-    marks   = options[:marks]
-    linenos = options[:linenos]
-    start   = options[:start]
+    url       = options[:url]       || nil
+    title     = options[:title]     || (url ? ' ' : nil)
+    link_text = options[:link_text] || nil
+    wrap      = options[:wrap]      || true
+    marks     = options[:marks]
+    linenos   = options[:linenos]
+    start     = options[:start]     || 1
 
     if lang == 'plain'
       # Escape html tags
@@ -58,45 +58,42 @@ module HighlightCode
     end
 
     code = tableize_code(code, lang, { linenos: linenos, start: start, marks: marks })
-    caption = captionize(caption, url, anchor) if caption
+    title = captionize(title, url, link_text) if title
 
-    figure = "<figure class='code'>#{caption}#{code}</figure>"
+    figure = "<figure class='code'>#{title}#{code}</figure>"
     figure = safe_wrap(figure) if wrap
     figure
   end
 
-  def captionize (caption, url, anchor)
+  def captionize (caption, url, link_text)
     figcaption  = "<figcaption>#{caption}"
-    figcaption += "<a href='#{url}'>#{anchor.strip || 'link'}</a>" if url
+    figcaption += "<a href='#{url}'>#{(link_text || 'link').strip}</a>" if url
     figcaption += "</figcaption>"
   end
 
   def tableize_code (code, lang, options = {})
-    start = options[:start]
-    lines = options[:linenos].nil? ? true : options[:linenos]
-    marks = options[:marks]   || []
+    start = options[:start] || 1
+    lines = options[:linenos] || true
+    marks = options[:marks] || []
     table = "<table class='highlight'>"
     table += number_lines(start, code.lines.count, marks) if lines
-    table += "<td class='main #{'unnumbered' unless lines} #{lang}'><div>"
-    if marks.size
-      code.lines.each_with_index do |line,index|
-        classes = 'line'
-        if marks.include? index + start
-          classes += ' marked'
-          classes += ' start' unless marks.include? index - 1 + start
-          classes += ' end' unless marks.include? index + 1 + start
-        end
-        table += "<pre data-line='line #{index + start}' class='#{classes}'>#{line}</pre>"
+    table += "<td class='main #{'unnumbered' unless lines} #{lang}'><pre>"
+    code.lines.each_with_index do |line,index|
+      classes = 'line'
+      if marks.include? index + start
+        classes += ' marked'
+        classes += ' start' unless marks.include? index - 1 + start
+        classes += ' end' unless marks.include? index + 1 + start
       end
-    else
-      table += code.gsub /^((.+)?(\n?))/, '<span class=\'line\'>\1</span>'
+      line = line.strip.empty? ? ' ' : line
+      table += "<div class='#{classes}'>#{line}</div>"
     end
-    table +="</div></td></tr></table>"
+    table +="</pre></td></tr></table>"
   end
 
   def number_lines (start, count, marks)
     start ||= 1
-    lines = "<td class='line-numbers' aria-hidden='true'><div>"
+    lines = "<td class='line-numbers' aria-hidden='true'><pre>"
     count.times do |index|
       classes = 'line-number'
       if marks.include? index + start
@@ -104,21 +101,44 @@ module HighlightCode
         classes += ' start' unless marks.include? index - 1 + start
         classes += ' end' unless marks.include? index + 1 + start
       end
-      lines += "<pre class='#{classes}'>#{index + start}</pre>"
+      lines += "<div data-line='#{index + start}' class='#{classes}'></div>"
     end
-    lines += "</div></td>"
+    lines += "</pre></td>"
   end
 
-  def get_lang (input)
-    lang = nil
-    if input =~ /\s*lang:(\w+)/i
-      lang = $1
-    end
-    lang
+  def parse_markup (input)
+    lang      = input.match(/\s*lang:(\w+)/i)
+    title     = input.match(/\s*title:\s*(("(.+?)")|('(.+?)')|(\S+))/i)
+    linenos   = input.match(/\s*linenos:(\w+)/i)
+    marks     = get_marks(input)
+    url       = input.match(/\s*url:\s*(("(.+?)")|('(.+?)')|(\S+))/i)
+    link_text = input.match(/\s*link_text:\s*(("(.+?)")|('(.+?)')|(\S+))/i)
+    start     = input.match(/\s*start:(\d+)/i)
+    endline   = input.match(/\s*end:(\d+)/i)
+
+    opts = {
+      lang:         (lang.nil? ? nil : lang[1]),
+      title:        (title.nil? ? nil : title[3] || title[5] || title[6]),
+      linenos:      (linenos.nil? ? nil : linenos[1]),
+      marks:        marks,
+      url:          (url.nil? ? nil : url[3] || url[5] || url[6]),
+      start:        (start.nil? ? nil : start[1].to_i),
+      end:          (endline.nil? ? nil : endline[1].to_i),
+      link_text:    (link_text.nil? ? nil : link_text[3] || link_text[5] || link_text[6]) 
+    }
+    opts.merge(get_range(input, opts[:start], opts[:end]))
   end
 
-  def replace_lang (input)
-    input.sub(/ *lang:\w+/i, '')
+  def clean_markup (input)
+    input.sub(/\s*lang:\w+/i, ''
+        ).sub(/\s*title:\s*(("(.+?)")|('(.+?)')|(\S+))/i, ''
+        ).sub(/\s*url:(\S+)/i, ''
+        ).sub(/\s*link_text:\s*(("(.+?)")|('(.+?)')|(\S+))/i, ''
+        ).sub(/\s*mark:\d\S*/i,''
+        ).sub(/\s*linenos:false/i,''
+        ).sub(/\s*start:\d+/i,''
+        ).sub(/\s*end:\d+/i,''
+        ).sub(/\s*range:\d+-\d+/i,'')
   end
 
   def get_marks (input)
@@ -135,54 +155,11 @@ module HighlightCode
     marks
   end
 
-  def replace_marks (input)
-    input.sub(/ *mark:\d\S*/i,'')
-  end
-
-  def get_linenos (input)
-    linenos = true
-    if input =~ / *linenos:false/i
-      linenos = false
-    end
-    linenos
-  end
-
-  def replace_linenos (input)
-    input.sub(/ *linenos:false/i,'')
-  end
-
-  def get_start (input)
-    start = 1
-    if input =~ / *start:(\d+)/i
-      start = $1.to_i
-    end
-    start
-  end
-
-  def replace_start (input)
-    input.sub(/ *start:\d+/i,'')
-  end
-
-  def get_end (input)
-    endline = nil
-    if input =~ / *end:(\d+)/i
-      endline = $1.to_i
-    end
-    endline
-  end
-
-  def replace_end (input)
-    input.sub(/ *end:\d+/i,'')
-  end
-
   def get_range (input, start, endline)
     if input =~ / *range:(\d+)-(\d+)/i
       start = $1.to_i
       endline = $2.to_i
     end
     {start: start, end: endline}
-  end
-  def replace_range (input)
-    input.sub(/ *range:\d+-\d+/i,'')
   end
 end
