@@ -12,28 +12,30 @@ module BacktickCodeBlock
         markup = $1 || ''
         code = $2.to_s
 
-        options    = parse_markup(markup)
-        @lang      = options[:lang]
-        @title     = options[:title]
-        @lineos    = options[:lineos]
-        @marks     = options[:marks]
-        @url       = options[:url]
-        @link_text = options[:link_text]
-        @start     = options[:start]
+        opts     = parse_markup(markup)
+        @options = {
+          lang:      opts[:lang],
+          title:     opts[:title],
+          lineos:    opts[:lineos],
+          marks:     opts[:marks],
+          url:       opts[:url],
+          link_text: opts[:link_text] || 'link',
+          start:     opts[:start]     || 1,
+        }
         markup     = clean_markup(markup)
 
         if markup =~ AllOptions
-          @lang      ||= $1
-          @title     ||= $2
-          @url       ||= $3
-          @link_text ||= $4
+          @options[:lang]      ||= $1
+          @options[:title]     ||= $2
+          @options[:url]       ||= $3
+          @options[:link_text] ||= $4
         elsif markup =~ LangCaption
-          @lang      ||= $1
-          @title     ||= $2
+          @options[:lang]      ||= $1
+          @options[:title]     ||= $2
         else
-          @lang = 'plain'
+          @options[:lang]      ||= 'plain'
         end
-        highlight(code, @lang, {title: @title, url: @url, link_text: @link_text, linenos: @linenos, marks: @marks, start: @start })
+        highlight(code, @options)
       end
     end
   end

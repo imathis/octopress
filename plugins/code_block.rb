@@ -52,38 +52,38 @@ module Jekyll
     TitleUrl = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)/i
     Title = /(\S[\S\s]*)/
     def initialize(tag_name, markup, tokens)
-      @title = nil
-      
-      options    = parse_markup(markup)
-      @lang      = options[:lang]
-      @title     = options[:title]
-      @lineos    = options[:lineos]
-      @marks     = options[:marks]
-      @url       = options[:url]
-      @link_text = options[:link_text]
-      @start     = options[:start]
+      opts     = parse_markup(markup)
+      @options = {
+        lang:      opts[:lang],
+        title:     opts[:title],
+        lineos:    opts[:lineos],
+        marks:     opts[:marks],
+        url:       opts[:url],
+        link_text: opts[:link_text] || 'link',
+        start:     opts[:start]     || 1,
+      }
       markup     = clean_markup(markup)
 
       if markup =~ TitleUrlLinkText
-        @title     ||= $1
-        @url       ||= $2 + $3
-        @link_text ||= $4
+        @options[:title]     ||= $1
+        @options[:url]       ||= $2 + $3
+        @options[:link_text] ||= $4
       elsif markup =~ TitleUrl
-        @title  ||= $1
-        @url    ||= $2 + $3
+        @options[:title]     ||= $1
+        @options[:url]       ||= $2 + $3
       elsif markup =~ Title
-        @title  ||= $1
+        @options[:title]     ||= $1
       end
       # grab lang from filename in title
-      if @title =~ /\S[\S\s]*\w+\.(\w+)/ && @lang.nil?
-        @lang ||= $1
+      if @options[:title] =~ /\S[\S\s]*\w+\.(\w+)/ && @options[:lang].nil?
+        @options[:lang]      ||= $1
       end
       super
     end
 
     def render(context)
       code = super.strip
-      code = highlight(code, @lang, {title: @title, url: @url, link_text: @link_text, start: @start, marks: @marks, linenos: @linenos})
+      code = highlight(code, @options)
       code = context['pygments_prefix'] + code if context['pygments_prefix']
       code = code + context['pygments_suffix'] if context['pygments_suffix']
       code

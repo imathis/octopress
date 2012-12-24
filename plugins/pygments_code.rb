@@ -23,7 +23,8 @@ module HighlightCode
     puts $!,$@
   end
 
-  def highlight(code, lang, options = {})
+  def highlight(code, options = {})
+    lang = options[:lang]
     lang = 'ruby' if lang == 'ru'
     lang = 'objc' if lang == 'm'
     lang = 'perl' if lang == 'pl'
@@ -134,7 +135,7 @@ module HighlightCode
       end:          (endline.nil? ? nil : endline[1].to_i),
       link_text:    (link_text.nil? ? nil : link_text[3] || link_text[5] || link_text[6]) 
     }
-    opts.merge(get_range(input, opts[:start], opts[:end]))
+    opts.merge(parse_range(input, opts[:start], opts[:end]))
   end
 
   def clean_markup (input)
@@ -163,11 +164,24 @@ module HighlightCode
     marks
   end
 
-  def get_range (input, start, endline)
+  def parse_range (input, start, endline)
     if input =~ / *range:(\d+)-(\d+)/i
       start = $1.to_i
       endline = $2.to_i
     end
     {start: start, end: endline}
   end
+  
+  def get_range (code, start, endline)
+    length    = code.lines.count
+    start   ||= 1
+    endline ||= length
+    if start > 1 or endline < length
+      raise "#{filepath} is #{length} lines long, cannot begin at line #{start}" if start > length
+      raise "#{filepath} is #{length} lines long, cannot read beyond line #{endline}" if endline > length
+      code = code.split(/\n/).slice(start - 1, endline + 1 - start).join("\n")
+    end
+    code
+  end
+
 end

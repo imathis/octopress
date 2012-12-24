@@ -30,7 +30,7 @@ module Jekyll
         lineos:    opts[:lineos],
         marks:     opts[:marks],
         url:       opts[:url],
-        link_text: opts[:link_text],
+        link_text: opts[:link_text] || 'Gist page',
         start:     opts[:start],
         end:       opts[:end]
       }
@@ -45,23 +45,15 @@ module Jekyll
         @options[:title]     ||= file.empty? ? "Gist: #{gist}" : file 
         @options[:url]       ||= "https://gist.github.com/#{gist}"
         @options[:lang]      ||= file.empty? ? @options[:lang] || '' : file.split('.')[-1]
-        @options[:link_text] ||= "Gist page"
         @options[:no_cache]    = @cache_disabled
         @options[:cache_path]  = @cache_disabled ? nil : get_cache_path(@cache_folder, get_cache_file(gist, file), @markup + @options.to_s)
 
         cache = read_cache(@options[:cache_path])
 
         unless cache
-          code     = get_gist_from_web(gist, file)
-          length   = code.lines.count
-          @start ||= 1
-          @end   ||= length
-          return "#{file} is #{length} lines long, cannot begin at line #{@start}" if @start > length
-          return "#{file} is #{length} lines long, cannot read beyond line #{@end}" if @end > length
-          if @start > 1 or @end < length
-            code = code.split(/\n/).slice(@start -1, @end + 1 - @start).join("\n")
-          end
-          code = highlight(code, @options[:lang], @options)
+          code = get_gist_from_web(gist, file)
+          code = get_range(code, @options[:start], @options[:end])
+          code = highlight(code, @options)
         end
         code
       else

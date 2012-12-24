@@ -29,23 +29,24 @@ module Jekyll
     include HighlightCode
     def initialize(tag_name, markup, tokens)
       @file = nil
-      @title = nil
       @title_old = nil
 
-      options    = parse_markup(markup)
-      @lang      = options[:lang]
-      @title     = options[:title]
-      @lineos    = options[:lineos]
-      @marks     = options[:marks]
-      @url       = options[:url]
-      @link_text = options[:link_text]
-      @start     = options[:start]
-      @end       = options[:end]
+      opts     = parse_markup(markup)
+      @options = {
+        lang:      opts[:lang],
+        title:     opts[:title],
+        lineos:    opts[:lineos],
+        marks:     opts[:marks],
+        url:       opts[:url],
+        link_text: opts[:link_text] || 'view raw',
+        start:     opts[:start]     || 1,
+        end:       opts[:end]
+      }
       markup     = clean_markup(markup)
 
       if markup.strip =~ /(^\S*\.\S+) *(.+)?/i
         @file = $1
-        @title ||= $2
+        @options[:title] ||= $2
       elsif markup.strip =~ /(.*?)(\S*\.\S+)\Z/i # Title before file is deprecated in 2.1
         @title_old = $1
         @file = $2
@@ -56,14 +57,14 @@ module Jekyll
     def render(context)
       code_dir = (context.registers[:site].config['code_dir'].sub(/^\//,'') || 'downloads/code')
       code_path = (Pathname.new(context.registers[:site].source) + code_dir).expand_path
-      file = code_path + @file
+      filepath = code_path + @file
 
       unless @title_old.nil?
-        @title ||= @title_old
+        @options[:title] ||= @title_old
         puts "### ------------ WARNING ------------ ###"
         puts "This include_code syntax is deprecated "
         puts "Correct syntax: path/to/file.ext [title]"
-        puts "Update include for #{file}"
+        puts "Update include for #{filepath}"
         puts "### --------------------------------- ###"
       end
       
@@ -72,29 +73,22 @@ module Jekyll
         return "Code directory '#{code_path}' cannot be a symlink"
       end
 
-      unless file.file?
-        puts "File #{file} could not be found"
-        return "File #{file} could not be found"
+      unless filepath.file?
+        puts "File #{filepath} could not be found"
+        return "File #{filepath} could not be found"
       end
 
       Dir.chdir(code_path) do
-        code = file.read
-        length = code.lines.count
-        @end   ||= length
-        @start ||= 1
-        return "#{file} is #{length} lines long, cannot begin at line #{@start}" if @start > length
-        return "#{file} is #{length} lines long, cannot read beyond line #{@end}" if @end > length
-        if @start > 1 or @end < length
-          code = code.split(/\n/).slice(@start -1, @end + 1 - @start).join("\n")
-        end
-        @lang = file.extname.sub('.','') unless @lang
-        title = @title ? "#{@title} (#{file.basename})" : file.basename
-        url = "/#{code_dir}/#{@file}"
-        highlight(code, @lang, {title: title, url: url, link_text: @link_text || 'view raw', start: @start, marks: @marks, linenos: @linenos })
+        @options[:lang]  ||= filepath.extname.sub('.','')
+        @options[:title]   = @options[:title] ? "#{@options[:title]} (#{filepath.basename})" : filepath.basename
+        @options[:url]   ||= "/#{code_dir}/#{@file}"
+
+        code = filepath.read
+        code = get_range(code, @options[:start], @options[:end])
+        highlight(code, @options)
       end
     end
   end
-
 end
 
 Liquid::Template.register_tag('include_code', Jekyll::IncludeCodeTag)
