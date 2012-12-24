@@ -32,19 +32,24 @@ module HighlightCode
     lang = 'csharp' if lang == 'cs'
     lang = 'plain' if lang == '' or lang.nil? or !lang
 
-    url       = options[:url]       || nil
-    title     = options[:title]     || (url ? ' ' : nil)
-    link_text = options[:link_text] || nil
-    wrap      = options[:wrap]      || true
-    marks     = options[:marks]
-    linenos   = options[:linenos]
-    start     = options[:start]     || 1
+    url        = options[:url]        || nil
+    title      = options[:title]      || (url ? ' ' : nil)
+    link_text  = options[:link_text]  || nil
+    wrap       = options[:wrap]       || true
+    marks      = options[:marks]
+    linenos    = options[:linenos]
+    start      = options[:start]      || 1
+    no_cache   = options[:no_cache]   || false
+    cache_path = options[:cache_path] || nil
 
-    path = File.join(PYGMENTS_CACHE_DIR, "#{lang}-#{Digest::MD5.hexdigest(options.to_s + code)}.html") if defined?(PYGMENTS_CACHE_DIR)
+    # Attempt to retrieve cached code
+    cache = nil
+    unless no_cache
+      path  = cache_path || get_cache_path(PYGMENTS_CACHE_DIR, lang, options.to_s + code)
+      cache = read_cache(path)
+    end
 
-    if File.exist?(path)
-      code = File.read(path)
-    else
+    unless cache
      if lang == 'plain'
         # Escape html tags
         code = code.gsub('<','&lt;')
@@ -54,10 +59,18 @@ module HighlightCode
       code = tableize_code(code, lang, {linenos: linenos, start: start, marks: marks })
       title = captionize(title, url, link_text) if title
       code = "<figure class='code'>#{title}#{code}</figure>"
-      File.open(path, 'w') {|f| f.print(code) } if path
+      File.open(path, 'w') {|f| f.print(code) } unless no_cache
     end
-    code = safe_wrap(code) if wrap
+    code = safe_wrap(cache || code) if wrap
     code
+  end
+
+  def read_cache (path)
+    code = File.exist?(path) ? File.read(path) : nil
+  end
+
+  def get_cache_path (dir, name, str)
+    File.join(dir, "#{name}-#{Digest::MD5.hexdigest(str)}.html")
   end
 
   def captionize (caption, url, link_text)

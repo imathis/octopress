@@ -9,6 +9,7 @@
 require 'cgi'
 require 'digest/md5'
 require 'net/https'
+require 'fileutils'
 require 'uri'
 require './plugins/pygments_code'
 
@@ -20,16 +21,19 @@ module Jekyll
       @cache_disabled = false
       @cache_folder   = File.expand_path "../.gist-cache", File.dirname(__FILE__)
 
-      options    = parse_markup(markup)
-      @lang      = options[:lang]
-      @title     = options[:title]
-      @lineos    = options[:lineos]
-      @marks     = options[:marks]
-      @url       = options[:url]
-      @link_text = options[:link_text]
-      @start     = options[:start]
-      @end       = options[:end]
-      @markup    = clean_markup(markup)
+      opts = parse_markup(markup)
+      @markup = clean_markup(markup)
+
+      @options = {
+        lang:      opts[:lang],
+        title:     opts[:title],
+        lineos:    opts[:lineos],
+        marks:     opts[:marks],
+        url:       opts[:url],
+        link_text: opts[:link_text],
+        start:     opts[:start],
+        end:       opts[:end]
+      }
 
       FileUtils.mkdir_p @cache_folder
     end
@@ -37,23 +41,31 @@ module Jekyll
     def render(context)
       if parts = @markup.match(/([\d]*) (.*)/)
         gist, file = parts[1].strip, parts[2].strip
-        code       = get_cached_gist(gist, file) || get_gist_from_web(gist, file)
 
-        length = code.lines.count
-        @start ||= 1
-        @end   ||= length
-        return "#{file} is #{length} lines long, cannot begin at line #{@start}" if @start > length
-        return "#{file} is #{length} lines long, cannot read beyond line #{@end}" if @end > length
-        if @start > 1 or @end < length
-          code = code.split(/\n/).slice(@start -1, @end + 1 - @start).join("\n")
+        @options[:title]     ||= file.empty? ? "Gist: #{gist}" : file 
+        @options[:url]       ||= "https://gist.github.com/#{gist}"
+        @options[:lang]      ||= file.empty? ? @options[:lang] || '' : file.split('.')[-1]
+        @options[:link_text] ||= "Gist page"
+        @options[:no_cache]    = @cache_disabled
+        @options[:cache_path]  = @cache_disabled ? nil : get_cache_path(@cache_folder, get_cache_file(gist, file), @markup + @options.to_s)
+
+        cache = read_cache(@options[:cache_path])
+
+        unless cache
+          code     = get_gist_from_web(gist, file)
+          length   = code.lines.count
+          @start ||= 1
+          @end   ||= length
+          return "#{file} is #{length} lines long, cannot begin at line #{@start}" if @start > length
+          return "#{file} is #{length} lines long, cannot read beyond line #{@end}" if @end > length
+          if @start > 1 or @end < length
+            code = code.split(/\n/).slice(@start -1, @end + 1 - @start).join("\n")
+          end
+          code = highlight(code, @options[:lang], @options)
         end
-
-        lang  = file.empty? ? @lang || '' : file.split('.')[-1]
-        link  = "https://gist.github.com/#{gist}"
-        title = file.empty? ? "Gist: #{gist}" : file
-        highlight(code, lang, { title: @title || title, url: link, link_text: @link_text || 'Gist page', marks: @marks, linenos: @linenos, start: @start })
+        code
       else
-        ""
+        "Gist formatting error, format should be {% gist gist_id [filename] %}"
       end
     end
 
@@ -61,25 +73,13 @@ module Jekyll
       "https://raw.github.com/gist/#{gist}/#{file}"
     end
 
-    def cache(gist, file, data)
-      cache_file = get_cache_file_for gist, file
-      File.open(cache_file, "w") do |io|
-        io.write data
-      end
-    end
-
-    def get_cached_gist(gist, file)
-      return nil if @cache_disabled
-      cache_file = get_cache_file_for gist, file
-      File.read cache_file if File.exist? cache_file
-    end
-
-    def get_cache_file_for(gist, file)
+    def get_cache_file(gist, file)
       bad_chars = /[^a-zA-Z0-9\-_.]/
       gist      = gist.gsub bad_chars, ''
       file      = file.gsub bad_chars, ''
-      md5       = Digest::MD5.hexdigest "#{gist}-#{file}"
-      File.join @cache_folder, "#{gist}-#{file}-#{md5}.cache"
+      name  = gist
+      name += "-#{file}" unless file.empty?
+      name
     end
 
     def get_gist_from_web(gist, file)
@@ -96,10 +96,7 @@ module Jekyll
       https.verify_mode = OpenSSL::SSL::VERIFY_NONE
       request           = Net::HTTP::Get.new raw_uri.request_uri
       data              = https.request request
-      code              = data.body.to_s
-
-      cache gist, file, code unless @cache_disabled
-      code
+      data.body.to_s
     end
   end
 
