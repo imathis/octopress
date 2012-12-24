@@ -40,7 +40,8 @@ module Jekyll
         code       = get_cached_gist(gist, file) || get_gist_from_web(gist, file)
 
         length = code.lines.count
-        @end ||= length
+        @start ||= 1
+        @end   ||= length
         return "#{file} is #{length} lines long, cannot begin at line #{@start}" if @start > length
         return "#{file} is #{length} lines long, cannot read beyond line #{@end}" if @end > length
         if @start > 1 or @end < length

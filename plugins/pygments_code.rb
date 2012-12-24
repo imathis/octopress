@@ -12,18 +12,12 @@ module HighlightCode
   include TemplateWrapper
   include SiteConfig
   def pygments(code, lang)
-    path = File.join(PYGMENTS_CACHE_DIR, "#{lang}-#{Digest::MD5.hexdigest(code)}.html") if defined?(PYGMENTS_CACHE_DIR)
-    if File.exist?(path)
-      highlighted_code = File.read(path)
+    if get_config('pygments')
+      highlighted_code = Albino.new(code, lang, :html)
     else
-      if get_config('pygments')
-        highlighted_code = Albino.new(code, lang, :html)
-      else
-        highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'}) 
-      end
-      highlighted_code = highlighted_code.gsub(/{{/, '&#x7b;&#x7b;').gsub(/{%/, '&#x7b;&#x25;')
-      File.open(path, 'w') {|f| f.print(highlighted_code) } if path
+      highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'}) 
     end
+    highlighted_code = highlighted_code.gsub(/{{/, '&#x7b;&#x7b;').gsub(/{%/, '&#x7b;&#x25;')
     highlighted_code.to_s
   rescue 
     puts $!,$@
@@ -46,23 +40,24 @@ module HighlightCode
     linenos   = options[:linenos]
     start     = options[:start]     || 1
 
-    if lang == 'plain'
-      # Escape html tags
-      code = code.gsub('<','&lt;')
-    elsif lang.include? "-raw"
-      output  = "``` #{$1.sub('-raw', '')}\n"
-      output += code
-      output += "\n```\n"
+    path = File.join(PYGMENTS_CACHE_DIR, "#{lang}-#{Digest::MD5.hexdigest(options.to_s + code)}.html") if defined?(PYGMENTS_CACHE_DIR)
+
+    if File.exist?(path)
+      code = File.read(path)
     else
-      code = pygments(code, lang).match(/<pre>(.+)<\/pre>/m)[1].gsub(/ *$/, '') #strip out divs <div class="highlight">
+     if lang == 'plain'
+        # Escape html tags
+        code = code.gsub('<','&lt;')
+      else
+        code = pygments(code, lang).match(/<pre>(.+)<\/pre>/m)[1].gsub(/ *$/, '') #strip out divs <div class="highlight">
+      end
+      code = tableize_code(code, lang, {linenos: linenos, start: start, marks: marks })
+      title = captionize(title, url, link_text) if title
+      code = "<figure class='code'>#{title}#{code}</figure>"
+      File.open(path, 'w') {|f| f.print(code) } if path
     end
-
-    code = tableize_code(code, lang, { linenos: linenos, start: start, marks: marks })
-    title = captionize(title, url, link_text) if title
-
-    figure = "<figure class='code'>#{title}#{code}</figure>"
-    figure = safe_wrap(figure) if wrap
-    figure
+    code = safe_wrap(code) if wrap
+    code
   end
 
   def captionize (caption, url, link_text)
@@ -75,7 +70,7 @@ module HighlightCode
     start = options[:start] || 1
     lines = options[:linenos] || true
     marks = options[:marks] || []
-    table = "<table class='highlight'>"
+    table = "<div class='highlight'><table>"
     table += number_lines(start, code.lines.count, marks) if lines
     table += "<td class='main #{'unnumbered' unless lines} #{lang}'><pre>"
     code.lines.each_with_index do |line,index|
@@ -88,7 +83,7 @@ module HighlightCode
       line = line.strip.empty? ? ' ' : line
       table += "<div class='#{classes}'>#{line}</div>"
     end
-    table +="</pre></td></tr></table>"
+    table +="</pre></td></tr></table></div>"
   end
 
   def number_lines (start, count, marks)
@@ -112,7 +107,7 @@ module HighlightCode
     linenos   = input.match(/\s*linenos:(\w+)/i)
     marks     = get_marks(input)
     url       = input.match(/\s*url:\s*(("(.+?)")|('(.+?)')|(\S+))/i)
-    link_text = input.match(/\s*link_text:\s*(("(.+?)")|('(.+?)')|(\S+))/i)
+    link_text = input.match(/\s*link[-_]text:\s*(("(.+?)")|('(.+?)')|(\S+))/i)
     start     = input.match(/\s*start:(\d+)/i)
     endline   = input.match(/\s*end:(\d+)/i)
 
