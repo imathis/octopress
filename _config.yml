@@ -72,7 +72,7 @@ twitter_show_follower_count: false
 twitter_tweet_button: true
 
 # Disqus Comments
-disqus_short_name: timehelabs
+disqus_short_name: helabsteamblog
 disqus_show_comment_count: true
 
 # Google Analytics
