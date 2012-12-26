@@ -2,7 +2,7 @@ require './plugins/pygments_code'
 
 module BacktickCodeBlock
   include HighlightCode
-  AllOptions = /([^\s]+)\s+(.+?)(https?:\/\/\S+|\/\S+)\s*(.+)?/i
+  AllOptions = /([^\s]+)\s+(.+?)\s+(https?:\/\/\S+|\/\S+)\s*(.+)?/i
   LangCaption = /([^\s]+)\s*(.+)?/i
   def render_code_block(input)
     @options = nil
