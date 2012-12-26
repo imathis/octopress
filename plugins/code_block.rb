@@ -48,8 +48,7 @@ module Jekyll
 
   class CodeBlock < Liquid::Block
     include HighlightCode
-    TitleUrlLinkText = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)\s+(.+)/i
-    TitleUrl = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)/i
+    TitleUrlLinkText = /(\S[\S\s]*)\s+(https?:\/\/\S+|\/\S+)\s*(.+)?/i
     Title = /(\S[\S\s]*)/
     def initialize(tag_name, markup, tokens)
       opts     = parse_markup(markup)
@@ -66,11 +65,8 @@ module Jekyll
 
       if markup =~ TitleUrlLinkText
         @options[:title]     ||= $1
-        @options[:url]       ||= $2 + $3
-        @options[:link_text] ||= $4
-      elsif markup =~ TitleUrl
-        @options[:title]     ||= $1
-        @options[:url]       ||= $2 + $3
+        @options[:url]       ||= $2
+        @options[:link_text] ||= $3
       elsif markup =~ Title
         @options[:title]     ||= $1
       end
