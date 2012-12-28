@@ -2,6 +2,7 @@ require "rubygems"
 require "bundler/setup"
 require "stringex"
 require 'rake/minify'
+require 'yaml'
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -219,6 +220,20 @@ task :clean do
   rm "#{source_dir}/stylesheets/screen.css" if File.exists?("#{source_dir}/stylesheets/screen.css")
   system "compass clean"
   puts "## Cleaned Sass, Pygments and Gist caches, removed generated stylesheets ##"
+end
+
+desc "Merge config files into one _config.yml"
+task :merge_configs do
+  default_configs = Hash.new
+  Dir.glob("_config/defaults/*.yml").each do |config|
+    this_config = YAML.load(File.read(config))
+    default_configs = default_configs.deep_merge(this_config)
+  end
+  local_configs = YAML.load(File.read("_config/site.yml"))
+
+  File.open("_config.yml", "w") do |f|
+    f.write(default_configs.deep_merge(local_configs).to_yaml)
+  end
 end
 
 desc "Update theme source and style"
@@ -502,6 +517,22 @@ def ask(message, valid_options)
     answer = get_stdin(message)
   end
   answer
+end
+
+class Hash
+  def deep_merge(hash)
+    target = dup
+    return target unless hash.is_a? Hash
+    hash.keys.each do |key|
+      if hash[key].is_a? Hash and self[key].is_a? Hash
+        target[key] = target[key].deep_merge(hash[key])
+        next
+      end
+      target[key] = hash[key]
+    end
+
+    target
+  end
 end
 
 desc "list tasks"
