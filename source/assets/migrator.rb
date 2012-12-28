@@ -60,6 +60,8 @@ begin
   FileUtils.mv "#{Dir.pwd}/Rakefile", "#{Dir.pwd}/Rakefile-old"
   FileUtils.cp "#{TMP_OCTO}/Rakefile", "#{Dir.pwd}/Rakefile"
   
+  # migrate updated plugins (but leave deprecated ones)
+  
   # cleanup
   FileUtils.rm_rf TMP_OCTO
   
