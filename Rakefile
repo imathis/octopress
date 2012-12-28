@@ -57,6 +57,7 @@ desc "Generate jekyll site"
 task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
+  Rake::Task["merge_configs"].execute
   system "compass compile --css-dir #{source_dir}/stylesheets"
   Rake::Task['minify_and_combine'].execute
   system "jekyll --no-server --no-auto"
@@ -91,6 +92,7 @@ task :generate_only, :filename do |t, args|
   end
   puts "## Stashing other posts"
   Rake::Task["isolate"].invoke(filename)
+  Rake::Task["merge_configs"].execute
   Rake::Task["generate"].execute
   puts "## Restoring stashed posts"
   Rake::Task["integrate"].execute
@@ -100,6 +102,7 @@ desc "Watch the site and regenerate when it changes"
 task :watch do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass."
+  Rake::Task["merge_configs"].execute
   system "compass compile --css-dir #{source_dir}/stylesheets"
   Rake::Task['minify_and_combine'].execute
   jekyllPid = Process.spawn("jekyll --auto")
@@ -115,6 +118,7 @@ desc "preview the site in a web browser"
 task :preview do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass. Starting Rack, serving to http://#{server_host}:#{server_port}"
+  Rake::Task["merge_configs"].execute
   system "compass compile --css-dir #{source_dir}/stylesheets"
   jekyllPid = Process.spawn("jekyll --auto")
   compassPid = Process.spawn("compass watch")
