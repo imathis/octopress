@@ -34,6 +34,8 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
+include:
+  - .htaccess
 markdown: rdiscount
 pygments: false # Jekyll's default Python Pygments have been replaced by pygments.rb. Set to true to use Albino + Pythong Pygments
 
