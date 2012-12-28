@@ -286,16 +286,6 @@ desc "Generate website and deploy"
 task :gen_deploy => [:integrate, :generate, :deploy] do
 end
 
-desc "copy dot files for deployment"
-task :copydot, :source, :dest do |t, args|
-  files = [".htaccess"] | copy_dot_files
-  Dir["#{args.source}/.*"].each do |file|
-    if !File.directory?(file) && files.include?(File.basename(file))
-      cp(file, file.gsub(/#{args.source}/, "#{args.dest}"));
-    end
-  end
-end
-
 desc "Deploy website via rsync"
 task :rsync do
   exclude = ""
