@@ -12,9 +12,6 @@ rsync_delete   = false
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
 
-# Hidden "dot" files that should be included with the deployed site (see task copydot)
-copy_dot_files = []
-
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
 
@@ -278,7 +275,6 @@ end
 
 desc "Default deploy task"
 task :deploy do
-  Rake::Task[:copydot].invoke(source_dir, public_dir)
   Rake::Task["#{deploy_default}"].execute
 end
 
@@ -301,7 +297,6 @@ multitask :push do
   if File.directory?(deploy_dir)
     puts "## Deploying branch to GitHub Pages "
     (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
-    Rake::Task[:copydot].invoke(public_dir, deploy_dir)
     puts "Attempting pull, to sync local deployment repository"
     cd "#{deploy_dir}" do
       system "git pull origin #{deploy_branch}"
