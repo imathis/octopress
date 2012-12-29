@@ -1,6 +1,5 @@
 require './plugins/raw'
 require './plugins/config'
-require 'albino'
 require 'pygments'
 require 'fileutils'
 require 'digest/md5'
@@ -12,11 +11,7 @@ module HighlightCode
   include TemplateWrapper
   include SiteConfig
   def pygments(code, lang)
-    if get_config('pygments')
-      highlighted_code = Albino.new(code, lang, :html)
-    else
-      highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'}) 
-    end
+    highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'}) 
     highlighted_code = highlighted_code.gsub(/{{/, '&#x7b;&#x7b;').gsub(/{%/, '&#x7b;&#x25;')
     highlighted_code.to_s
   rescue 
