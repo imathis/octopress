@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "time"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -96,7 +97,7 @@ task :new_post, :title do |t, args|
   mkdir_p "#{source_dir}/#{posts_dir}"
   args.with_defaults(:title => 'new-post')
   title = args.title
-  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  filename = "#{source_dir}/#{posts_dir}/#{Time.now.utc.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -105,7 +106,7 @@ task :new_post, :title do |t, args|
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "date: #{Time.now.utc.iso8601}"
     post.puts "comments: true"
     post.puts "categories: "
     post.puts "---"
@@ -140,7 +141,7 @@ task :new_page, :filename do |t, args|
       page.puts "---"
       page.puts "layout: page"
       page.puts "title: \"#{title}\""
-      page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+      page.puts "date: #{Time.now.utc.iso8601}"
       page.puts "comments: true"
       page.puts "sharing: true"
       page.puts "footer: true"
