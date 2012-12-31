@@ -1,0 +1,6 @@
+<script type="text/javascript">
+  $('time').each(function(i){
+    isodate = $(this).attr('datetime');
+    $(this).html(moment(isodate).format('{{ site.moment_format }}'));
+  });
+</script>

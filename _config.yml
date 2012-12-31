@@ -14,6 +14,10 @@ description:
 # http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
 # Additionally, %o will give you the ordinal representation of the day
 date_format: "ordinal"
+# Format for moment js library
+# Default mimics the ordinal default for above
+# See http://momentjs.com for more
+moment_format: "MMM Do, YYYY"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
