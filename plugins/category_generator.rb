@@ -29,7 +29,7 @@ module Jekyll
     #  +base+         is the String path to the <source>.
     #  +category_dir+ is the String path between <source> and the category folder.
     #  +category+     is the category currently being processed.
-    def initialize(site, base, category_dir, category)
+    def initialize(site, base, category_dir, category, title)
       @site = site
       @base = base
       @dir  = category_dir
@@ -40,10 +40,10 @@ module Jekyll
       self.data['category']    = category
       # Set the title for this page.
       title_prefix             = site.config['category_title_prefix'] || 'Category: '
-      self.data['title']       = "#{title_prefix}#{category}"
+      self.data['title']       = "#{title_prefix}#{title}"
       # Set the meta-description for this page.
       meta_description_prefix  = site.config['category_meta_description_prefix'] || 'Category: '
-      self.data['description'] = "#{meta_description_prefix}#{category}"
+      self.data['description'] = "#{meta_description_prefix}#{title}"
     end
 
   end
@@ -56,7 +56,7 @@ module Jekyll
     #  +base+         is the String path to the <source>.
     #  +category_dir+ is the String path between <source> and the category folder.
     #  +category+     is the category currently being processed.
-    def initialize(site, base, category_dir, category)
+    def initialize(site, base, category_dir, category, title)
       @site = site
       @base = base
       @dir  = category_dir
@@ -67,10 +67,10 @@ module Jekyll
       self.data['category']    = category
       # Set the title for this page.
       title_prefix             = site.config['category_title_prefix'] || 'Category: '
-      self.data['title']       = "#{title_prefix}#{category}"
+      self.data['title']       = "#{title_prefix}#{title}"
       # Set the meta-description for this page.
       meta_description_prefix  = site.config['category_meta_description_prefix'] || 'Category: '
-      self.data['description'] = "#{meta_description_prefix}#{category}"
+      self.data['description'] = "#{meta_description_prefix}#{title}"
 
       # Set the correct feed URL.
       self.data['feed_url'] = "#{category_dir}/#{name}"
@@ -86,8 +86,8 @@ module Jekyll
     #
     #  +category_dir+ is the String path to the category folder.
     #  +category+     is the category currently being processed.
-    def write_category_index(category_dir, category)
-      index = CategoryIndex.new(self, self.source, category_dir, category)
+    def write_category_index(category_dir, category, title)
+      index = CategoryIndex.new(self, self.source, category_dir, category, title)
       index.render(self.layouts, site_payload)
       index.write(self.dest)
       # Record the fact that this page has been added, otherwise Site::cleanup will remove it.
@@ -95,7 +95,7 @@ module Jekyll
 
       # Create an Atom-feed for each index.
       if self.config['category_feeds']
-        feed = CategoryFeed.new(self, self.source, category_dir, category)
+        feed = CategoryFeed.new(self, self.source, category_dir, category, title)
         feed.render(self.layouts, site_payload)
         feed.write(self.dest)
         # Record the fact that this page has been added, otherwise Site::cleanup will remove it.
@@ -103,17 +103,21 @@ module Jekyll
       end
     end
 
+
     # Loops through the list of category pages and processes each one.
     def write_category_indexes
       if self.layouts.key? 'category_index'
         dir = self.config['category_dir']
         self.categories.keys.each do |category|
-          category_slug = category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
-          if dir.nil? or dir.empty?
-            self.write_category_index(category_slug, category)
+          if category =~ /(.+)\[(.+)\]/
+            slug = $1.strip
+            title = $2.strip
           else
-            self.write_category_index(File.join(dir, category_slug), category)
+            slug = title = category
           end
+          cat_dir = slug.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
+          cat_dir = File.join(dir, cat_dir) unless dir.nil? or dir.empty?
+          self.write_category_index(cat_dir, category, title)
         end
 
       # Throw an exception if the layout couldn't be found.
@@ -121,7 +125,6 @@ module Jekyll
         throw "No 'category_index' layout found."
       end
     end
-
   end
 
 
@@ -167,12 +170,16 @@ module Jekyll
     # Returns string
     #
     def category_link(category)
-      dir = @context.registers[:site].config['category_dir']
-      categories = categories.sort!.map do |item|
-        url = item.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
-        url = "#{dir}/#{url}" unless dir.nil? or dir.empty?
-        "<a class='category' href='/#{url}/'>#{item}</a>"
+      if category =~ /(.+)\[(.+)\]/
+        slug = $1.strip
+        title = $2.strip
+      else
+        slug = title = category
       end
+      dir = @context.registers[:site].config['category_dir']
+      url = slug.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
+      url = "#{dir}/#{url}" unless dir.nil? or dir.empty?
+      "<a class='category' href='/#{url}/'>#{title}</a>"
     end
 
     # Outputs the post.date as formatted html, with hooks for CSS styling.
@@ -181,13 +188,17 @@ module Jekyll
     #
     # Returns string
     def date_to_html_string(date)
-      result = '<span class="month">' + date.strftime('%b').upcase + '</span> '
-      result += date.strftime('<span class="day">%d</span> ')
-      result += date.strftime('<span class="year">%Y</span> ')
-      result
+      string = <<HTML.strip
+<span class='month'>#{date.strftime('%b').upcase}</span>
+#{date.strftime('<span class="day">%d</span>')}
+#{date.strftime('<span class="year">%Y</span>')}
+HTML
     end
 
   end
 
 end
 
+    def parse_category
+      { slug: slug, title: title }
+    end
