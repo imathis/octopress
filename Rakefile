@@ -204,6 +204,57 @@ task :update_source, :theme do |t, args|
   puts "## Updated #{source_dir} ##"
 end
 
+# usage rake update_dates or rake update_dates[timezone]
+desc "Change page/post dates that aren't iso8601 to iso8601 and utc assuming that they were created in the specified timezone, or assume current local timezone if no timezone is specified."
+task :update_dates, :localtz do |t, args|
+  localtz = args.localtz || Time.now.zone 
+  puts "## Converting times from #{localtz}"
+
+  Dir.glob("#{source_dir}/**/*.markdown").each do |file|
+    new_date = ''
+    text = File.read(file)
+    date = text.match(/^date: [ :\-\w]*$/)
+
+    # if match found
+    unless date.length == 0
+      date = date[0].split(': ')[1].split('\\')[0].strip
+
+      begin
+        # see if it's already iso8601 and adjust it to utc
+        new_date = Time.iso8601(date).utc.iso8601
+      rescue
+        # otherwise...
+        begin
+          # try to parse it
+          new_date = Time.parse("#{date} #{localtz}").utc.iso8601
+        rescue
+          # or notify and do nothing
+          puts "## Couldn't parse: file"
+          new_date = ''
+        end
+      end 
+
+      if new_date == date
+        # if it's already iso8601 and utc, don't do anything
+        new_date = ''
+      end
+    end
+
+    unless new_date.length == 0
+      puts "## Updating #{file}"
+
+      # backup file
+      mv file, "#{file}.bak", :force => true
+      text = text.gsub(/^date: [ :\-\w]*$/, "date: #{new_date}")
+
+      # write text with new date
+      File.open(file, "w"){|thisfile|
+        thisfile.puts text
+      }
+    end
+  end
+end
+
 ##############
 # Deploying  #
 ##############
