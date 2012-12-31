@@ -242,9 +242,6 @@ task :update_dates, :localtz do |t, args|
 
     unless new_date.length == 0
       puts "## Updating #{file}"
-
-      # backup file
-      mv file, "#{file}.bak", :force => true
       text = text.gsub(/^date: [ :\-\w]*$/, "date: #{new_date}")
 
       # write text with new date
