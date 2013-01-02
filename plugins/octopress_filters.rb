@@ -126,7 +126,7 @@ module OctopressLiquidFilters
 
   # Returns a title cased string based on John Gruber's title case http://daringfireball.net/2008/08/title_case_update
   def titlecase(input)
-    input.titlecase
+    input.titlecase unless input.nil?
   end
 
 end
