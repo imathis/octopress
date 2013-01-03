@@ -37,6 +37,14 @@ category_dir: blog/categories
 include:
   - .htaccess
 markdown: redcarpet
+redcarpet:
+  extensions: 
+    - no_intra_emphasis
+    - strikethrough
+    - autolink
+    - superscript
+    - smart
+
 pygments: false # Jekyll's default Python Pygments have been replaced by pygments.rb. Set to true to use Albino + Pythong Pygments
 
 paginate: 10          # Posts per page on the blog index
