@@ -277,41 +277,42 @@ task :update_dates, :localtz do |t, args|
 
   Dir.glob("#{source_dir}/**/*.markdown").each do |file|
     new_date = ''
+    new_updated = ''
     text = File.read(file)
+    new_text = text
     date = text.match(/^date: [ :\-\w]*$/)
+    updated = text.match(/^updated: [ :\-\w]*$/)
 
     # if match found
     if date
       date = date[0].split(': ')[1].split('\\')[0].strip
 
-      begin
-        # see if it's already iso8601 and adjust it to utc
-        new_date = Time.iso8601(date).utc.iso8601
-      rescue
-        # otherwise...
-        begin
-          # try to parse it
-          new_date = Time.parse("#{date} #{localtz}").utc.iso8601
-        rescue
-          # or notify and do nothing
-          puts "## Couldn't parse date: #{file}"
-          new_date = ''
-        end
-      end 
-
-      if new_date == date
-        # if it's already iso8601 and utc, don't do anything
-        new_date = ''
-      end
+      puts "## Couldn't parse date: #{file}" unless new_date = make_utc(date, localtz)
     end
 
-    unless new_date == ''
+    # if match found
+    if updated
+      updated = updated[0].split(': ')[1].split('\\')[0].strip
+
+      puts "## Couldn't parse updated: #{file}" unless new_updated = make_utc(updated, localtz)
+    end
+
+    # replace date if needed
+    unless new_date && new_date.empty?
+      new_text = new_text.gsub(/^date: [ :\-\w]*$/, "date: #{new_date}")
+    end
+
+    # replace updated if needed
+    unless new_updated && new_updated.empty?
+      new_text = new_text.gsub(/^updated: [ :\-\w]*$/, "updated: #{new_updated}")
+    end
+
+    unless text == new_text
       puts "## Updating #{file}"
-      text = text.gsub(/^date: [ :\-\w]*$/, "date: #{new_date}")
 
       # write text with new date
       File.open(file, "w"){|thisfile|
-        thisfile.puts text
+        thisfile.puts new_text
       }
     end
   end
@@ -572,6 +573,28 @@ def ask(message, valid_options)
     answer = get_stdin(message)
   end
   answer
+end
+
+def make_utc(date, offset)
+  begin
+    # see if it's already iso8601 and adjust it to utc
+    new_date = Time.iso8601(date).utc.iso8601
+  rescue
+    # otherwise...
+    begin
+      # try to parse it
+      new_date = Time.parse("#{date} #{offset}").utc.iso8601
+    rescue
+      # nil if parse problems 
+      new_date = nil 
+    end
+  end 
+
+  if new_date == date
+    # if it's already iso8601 and utc, don't do anything
+    new_date = ''
+  end
+  new_date
 end
 
 desc "list tasks"
