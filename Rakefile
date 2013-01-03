@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "time"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -99,7 +100,7 @@ task :new_post, :title do |t, args|
   end
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   mkdir_p "#{source_dir}/#{posts_dir}"
-  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  filename = "#{source_dir}/#{posts_dir}/#{Time.now.utc.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -108,7 +109,7 @@ task :new_post, :title do |t, args|
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "date: #{Time.now.utc.iso8601}"
     post.puts "comments: true"
     post.puts "categories: "
     post.puts "---"
@@ -143,7 +144,7 @@ task :new_page, :filename do |t, args|
       page.puts "---"
       page.puts "layout: page"
       page.puts "title: \"#{title}\""
-      page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+      page.puts "date: #{Time.now.utc.iso8601}"
       page.puts "comments: true"
       page.puts "sharing: true"
       page.puts "footer: true"
@@ -204,6 +205,54 @@ task :update_source, :theme do |t, args|
   mv "#{source_dir}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != source_dir
   cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir && File.exists?("#{source_dir}.old/index.html")
   puts "## Updated #{source_dir} ##"
+end
+
+# usage rake update_dates or rake update_dates[timezone]
+desc "Change page/post dates that aren't iso8601 to iso8601 and utc assuming that they were created in the specified timezone, or assume current local timezone if no timezone is specified."
+task :update_dates, :localtz do |t, args|
+  localtz = args.localtz || Time.now.zone 
+  puts "## Converting times from #{localtz}"
+
+  Dir.glob("#{source_dir}/**/*.markdown").each do |file|
+    new_date = ''
+    text = File.read(file)
+    date = text.match(/^date: [ :\-\w]*$/)
+
+    # if match found
+    if date
+      date = date[0].split(': ')[1].split('\\')[0].strip
+
+      begin
+        # see if it's already iso8601 and adjust it to utc
+        new_date = Time.iso8601(date).utc.iso8601
+      rescue
+        # otherwise...
+        begin
+          # try to parse it
+          new_date = Time.parse("#{date} #{localtz}").utc.iso8601
+        rescue
+          # or notify and do nothing
+          puts "## Couldn't parse: file"
+          new_date = ''
+        end
+      end 
+
+      if new_date == date
+        # if it's already iso8601 and utc, don't do anything
+        new_date = ''
+      end
+    end
+
+    unless new_date == ''
+      puts "## Updating #{file}"
+      text = text.gsub(/^date: [ :\-\w]*$/, "date: #{new_date}")
+
+      # write text with new date
+      File.open(file, "w"){|thisfile|
+        thisfile.puts text
+      }
+    end
+  end
 end
 
 ##############
