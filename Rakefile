@@ -219,7 +219,7 @@ task :update_dates, :localtz do |t, args|
     date = text.match(/^date: [ :\-\w]*$/)
 
     # if match found
-    unless date.length == 0
+    if date
       date = date[0].split(': ')[1].split('\\')[0].strip
 
       begin
@@ -243,7 +243,7 @@ task :update_dates, :localtz do |t, args|
       end
     end
 
-    unless new_date.length == 0
+    unless new_date == ''
       puts "## Updating #{file}"
       text = text.gsub(/^date: [ :\-\w]*$/, "date: #{new_date}")
 
