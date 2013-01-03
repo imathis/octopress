@@ -1,16 +1,10 @@
 # Author: Brandon Mathis
-# Description: Provides plugins with a method for wrapping and unwrapping input to prevent Markdown and Textile from parsing it.
-# Purpose: This is useful for preventing Markdown and Textile from being too aggressive and incorrectly parsing in-line HTML.
+# Description: Provides plugins with a method for wrapping and unwrapping input to prevent Textile from parsing it.
+# Purpose: This is useful for preventing Textile from being too aggressive and incorrectly parsing in-line HTML.
 module TemplateWrapper
-  # Wrap input with a <div>
+  # Escape content for Textile with <notextile>
   def safe_wrap(input)
-    "<!--escape--><div class='escape-wrapper'><notextile><!--content-->#{input}<!--end-content--></notextile></div><!--end-escape-->"
-  end
-  # This must be applied after the
-  def unwrap(input)
-    input.gsub /<!--escape-->([\s\S]*?)<!--content-->(.+?)<!--end-content-->([\s\S]*?)<!--end-escape-->/m do
-      $2
-    end
+    "<notextile>#{input}</notextile>"
   end
 end
 

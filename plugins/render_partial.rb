@@ -42,6 +42,7 @@ module Jekyll
       file_dir = (context.registers[:site].source || 'source')
       file_path = Pathname.new(file_dir).expand_path
       file = file_path + @file
+      ext = File.extname(@file)
 
       unless file.file?
         return "File #{file} could not be found"
@@ -52,7 +53,7 @@ module Jekyll
         if contents =~ /\A-{3}.+[^\A]-{3}\n(.+)/m
           contents = $1.lstrip
         end
-        contents = pre_filter(contents)
+        contents = pre_filter(contents, ext)
         if @raw
           contents
         else
@@ -61,7 +62,6 @@ module Jekyll
             contents = partial.render(context)
             
             site = context.registers[:site]
-            ext = File.extname(@file)
             converter = site.converters.find { |c| c.matches(ext) }
             
             if converter.nil?

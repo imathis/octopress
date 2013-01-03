@@ -55,7 +55,7 @@ module Jekyll
           code = get_range(code, @options[:start], @options[:end])
           code = highlight(code, @options)
         end
-        code || safe_wrap(cache)
+        code || cache
       else
         "Gist formatting error, format should be {% gist gist_id [filename] %}"
       end

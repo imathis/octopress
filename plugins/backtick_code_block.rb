@@ -4,7 +4,8 @@ module BacktickCodeBlock
   include HighlightCode
   AllOptions = /([^\s]+)\s+(.+?)\s+(https?:\/\/\S+|\/\S+)\s*(.+)?/i
   LangCaption = /([^\s]+)\s*(.+)?/i
-  def render_code_block(input)
+  def render_code_block(input, ext)
+    escape = ext ? ext.match(/textile/) != nil : false
     input.encode!("UTF-8")
     input.gsub /^`{3}(.+?)`{3}/m do
       str = $1.to_s
@@ -21,6 +22,7 @@ module BacktickCodeBlock
           url:       opts[:url],
           link_text: opts[:link_text] || 'link',
           start:     opts[:start]     || 1,
+          escape:    opts[:escape]    || escape
         }
         markup     = clean_markup(markup)
 

@@ -118,7 +118,7 @@ figure.code {
   }
 }
 
-.highlight {
+figure .highlight {
   border: 1px solid $pre-border;
   background: $base03;
   overflow-y: hidden;
@@ -228,7 +228,7 @@ $solar-scroll-thumb: rgba(#fff, .2);
   $solar-scroll-thumb: rgba(#000, .15);
 }
 
-pre, .highlight {
+pre, figure .highlight {
   &::-webkit-scrollbar {  height: .5em; background: $solar-scroll-bg; }
   &::-webkit-scrollbar-thumb:horizontal { background: $solar-scroll-thumb;  -webkit-border-radius: 4px; border-radius: 4px }
 }

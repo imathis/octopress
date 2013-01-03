@@ -31,7 +31,7 @@ module HighlightCode
     url        = options[:url]        || nil
     title      = options[:title]      || (url ? ' ' : nil)
     link_text  = options[:link_text]  || nil
-    wrap       = options[:wrap]       || true
+    escape     = options[:escape]     || false
     marks      = options[:marks]
     linenos    = options[:linenos]
     start      = options[:start]      || 1
@@ -55,14 +55,14 @@ module HighlightCode
       code = tableize_code(code, lang, {linenos: linenos, start: start, marks: marks })
       title = captionize(title, url, link_text) if title
       code = "<figure class='code'>#{title}#{code}</figure>"
+      code = safe_wrap(code) if escape
       File.open(path, 'w') {|f| f.print(code) } unless no_cache
     end
-    code = safe_wrap(cache || code) if wrap
-    code
+    cache || code
   end
 
   def read_cache (path)
-    code = File.exist?(path) ? File.read(path) : nil unless path.nil?
+    File.exist?(path) ? File.read(path) : nil unless path.nil?
   end
 
   def get_cache_path (dir, name, str)
@@ -114,6 +114,7 @@ module HighlightCode
     lang      = input.match(/\s*lang:(\w+)/i)
     title     = input.match(/\s*title:\s*(("(.+?)")|('(.+?)')|(\S+))/i)
     linenos   = input.match(/\s*linenos:(\w+)/i)
+    escape    = input.match(/\s*escape:(\w+)/i)
     marks     = get_marks(input)
     url       = input.match(/\s*url:\s*(("(.+?)")|('(.+?)')|(\S+))/i)
     link_text = input.match(/\s*link[-_]text:\s*(("(.+?)")|('(.+?)')|(\S+))/i)
@@ -124,6 +125,7 @@ module HighlightCode
       lang:         (lang.nil? ? nil : lang[1]),
       title:        (title.nil? ? nil : title[3] || title[5] || title[6]),
       linenos:      (linenos.nil? ? nil : linenos[1]),
+      escape:       (escape.nil? ? nil : escape[1]),
       marks:        marks,
       url:          (url.nil? ? nil : url[3] || url[5] || url[6]),
       start:        (start.nil? ? nil : start[1].to_i),
@@ -134,15 +136,15 @@ module HighlightCode
   end
 
   def clean_markup (input)
-    input.sub(/\s*lang:\w+/i, ''
+    input.sub(/\s*lang:\s*\w+/i, ''
         ).sub(/\s*title:\s*(("(.+?)")|('(.+?)')|(\S+))/i, ''
-        ).sub(/\s*url:(\S+)/i, ''
+        ).sub(/\s*url:\s*(\S+)/i, ''
         ).sub(/\s*link_text:\s*(("(.+?)")|('(.+?)')|(\S+))/i, ''
         ).sub(/\s*mark:\d\S*/i,''
-        ).sub(/\s*linenos:false/i,''
-        ).sub(/\s*start:\d+/i,''
-        ).sub(/\s*end:\d+/i,''
-        ).sub(/\s*range:\d+-\d+/i,'')
+        ).sub(/\s*linenos:\s*\w+/i,''
+        ).sub(/\s*start:\s*\d+/i,''
+        ).sub(/\s*end:\s*\d+/i,''
+        ).sub(/\s*range:\s*\d+-\d+/i,'')
   end
 
   def get_marks (input)
