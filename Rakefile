@@ -317,6 +317,43 @@ task :update_dates, :localtz do |t, args|
   end
 end
 
+# usage rake update_names
+desc "Change date portion of the filenames of posts to utc. This should be run after update_dates"
+task :update_names do |t, args|
+  puts "## Converting filenames to utc"
+
+  Dir.glob("#{source_dir}/**/*.markdown").each do |file|
+    date = file.match(/\d\d\d\d-\d\d-\d\d/)
+    
+    if date #if filename contains a date
+      date = date.to_s
+      post_date = File.read(file).match(/^date: .*/)
+
+      if post_date #if post has date attribute
+        post_date = post_date.to_s.match(/(?<date>\d\d\d\d-\d\d-\d\d)T\d\d:\d\d:\d\dZ/)
+
+        if post_date #if it's in iso8601
+          post_date = post_date[:date].to_s
+          unless date == post_date #if filename and post don't match
+            puts "## Moving: #{file}"
+            new_file = file.gsub(date,post_date)
+            unless File.exist?(new_file)
+              FileUtils.mv file, new_file
+            else
+              puts "## FAILED: #{new_file} exists"
+            end
+          end
+        else
+          puts "## Date not iso/utc: #{file}"
+          puts "## Please run rake update_dates"
+        end
+      else
+        puts "## No date in: #{file}"
+      end
+    end
+  end
+end
+
 ##############
 # Deploying  #
 ##############
