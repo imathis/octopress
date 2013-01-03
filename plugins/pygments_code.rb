@@ -62,7 +62,7 @@ module HighlightCode
   end
 
   def read_cache (path)
-    code = File.exist?(path) ? File.read(path) : nil
+    code = File.exist?(path) ? File.read(path) : nil unless path.nil?
   end
 
   def get_cache_path (dir, name, str)
