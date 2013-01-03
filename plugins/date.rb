@@ -42,6 +42,16 @@ module Octopress
       date_formatted
     end
 
+    # Modifies time to a configured offset or
+    # defaults to local offset
+    def offset_date(date, offset)
+      date = datetime(date)
+      if offset.class == String && offset.match(/[\+\-]\d\d:[03]0/)
+        date = date.getlocal(offset)
+      end
+      date
+    end
+
   end
 end
 
@@ -56,13 +66,14 @@ module Jekyll
     # Returns <Hash>
     def to_liquid
       date_format = self.site.config['date_format']
+      date_offset = self.site.config['date_offset']
       self.data.deep_merge({
         "title"             => self.data['title'] || self.slug.split('-').select {|w| w.capitalize! || w }.join(' '),
         "url"               => self.url,
         "date"              => self.date,
         # Monkey patch
-        "date_formatted"    => format_date(self.date, date_format),
-        "updated_formatted" => self.data.has_key?('updated') ? format_date(self.data['updated'], date_format) : nil,
+        "date_formatted"    => format_date(offset_date(self.date,date_offset), date_format),
+        "updated_formatted" => self.data.has_key?('updated') ? format_date(offset_date(self.data['updated'],date_offset), date_format) : nil,
         "id"                => self.id,
         "categories"        => self.categories,
         "next"              => self.next,
@@ -91,8 +102,9 @@ module Jekyll
       self.read_yaml(File.join(base, dir), name)
       # Monkey patch
       date_format = self.site.config['date_format']
-      self.data['date_formatted']    = format_date(self.data['date'], date_format) if self.data.has_key?('date')
-      self.data['updated_formatted'] = format_date(self.data['updated'], date_format) if self.data.has_key?('updated')
+      date_offset = self.site.config['date_offset']
+      self.data['date_formatted']    = format_date(offset_date(self.data['date'],date_offset), date_format) if self.data.has_key?('date')
+      self.data['updated_formatted'] = format_date(offset_date(self.data['updated'],date_offset), date_format) if self.data.has_key?('updated')
     end
   end
 end
