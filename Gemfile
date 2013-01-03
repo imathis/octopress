@@ -13,6 +13,7 @@ group :development do
   gem 'rb-fsevent', '~> 0.9.3'
   gem 'stringex', '~> 1.4.0'
   gem 'liquid', '~> 2.3.0'
+  gem 'stitch-rb', "~> 0.0.8"
   gem 'rake-minify'
 end
 

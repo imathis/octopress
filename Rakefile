@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "stitch"
 require 'rake/minify'
 
 ## -- Rsync Deploy config -- ##
@@ -59,9 +60,16 @@ task :generate do
 end
 
 Rake::Minify.new(:minify_and_combine) do
-  files = FileList.new("#{source_dir}/javascripts/group/*.*")
+  modules = FileList.new("#{source_dir}/javascripts/modules/*.*")
+  files = FileList.new("#{source_dir}/javascripts/group/*.*", "#{source_dir}/javascripts/octopress.js")
 
+  module_file =  "#{source_dir}/javascripts/octopress.js"
   output_file =  "#{source_dir}/javascripts/octopress.min.js"
+
+  puts "BUILDING modules into #{module_file}"
+  File.open module_file, 'w' do |f|
+    f.write Stitch::Package.new(:files => modules, :root => "#{source_dir}/javascripts/modules").compile
+  end
 
   puts "BEGIN Minifying #{output_file}"
   group(output_file) do
