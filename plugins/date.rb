@@ -31,8 +31,14 @@ module Octopress
 
     # Formats date either as ordinal or by given date format
     # Adds %o as ordinal representation of the day
-    def format_date(date, format)
+    def format_date(date, format, offset)
       date = datetime(date)
+
+      if offset.nil? || offset.empty?
+        offset = '+00:00'
+      end
+      date = date.getlocal(offset)
+
       if format.nil? || format.empty? || format == "ordinal"
         date_formatted = ordinalize(date)
       else
@@ -40,16 +46,6 @@ module Octopress
         date_formatted.gsub!(/%o/, ordinal(date.strftime('%e').to_i))
       end
       date_formatted
-    end
-
-    # Modifies time to a configured offset or
-    # defaults to local offset
-    def offset_date(date, offset)
-      date = datetime(date)
-      if offset.class == String && offset.match(/[\+\-]\d\d:[03]0/)
-        date = date.getlocal(offset)
-      end
-      date
     end
 
   end
@@ -72,8 +68,8 @@ module Jekyll
         "url"               => self.url,
         "date"              => self.date,
         # Monkey patch
-        "date_formatted"    => format_date(offset_date(self.date,date_offset), date_format),
-        "updated_formatted" => self.data.has_key?('updated') ? format_date(offset_date(self.data['updated'],date_offset), date_format) : nil,
+        "date_formatted"    => format_date(self.date, date_format, date_offset),
+        "updated_formatted" => self.data.has_key?('updated') ? format_date(self.data['updated'], date_format, date_offset) : nil,
         "id"                => self.id,
         "categories"        => self.categories,
         "next"              => self.next,
@@ -103,8 +99,8 @@ module Jekyll
       # Monkey patch
       date_format = self.site.config['date_format']
       date_offset = self.site.config['date_offset']
-      self.data['date_formatted']    = format_date(offset_date(self.data['date'],date_offset), date_format) if self.data.has_key?('date')
-      self.data['updated_formatted'] = format_date(offset_date(self.data['updated'],date_offset), date_format) if self.data.has_key?('updated')
+      self.data['date_formatted']    = format_date(self.data['date'], date_format, date_offset) if self.data.has_key?('date')
+      self.data['updated_formatted'] = format_date(self.data['updated'],date_format, date_offset) if self.data.has_key?('updated')
     end
   end
 end
