@@ -275,24 +275,32 @@ task :update_dates, :localtz do |t, args|
   localtz = args.localtz || Time.now.zone 
   puts "## Converting times from #{localtz}"
 
-  Dir.glob("#{source_dir}/**/*.markdown").each do |file|
+  Dir.glob("#{source_dir}/**/*").each do |file|
     new_date = ''
     new_updated = ''
-    text = File.read(file)
+    text = ''
+    text = File.read(file) if File.file?(file)
     new_text = text
-    date = text.match(/^date: [ :\-\w]*$/)
-    updated = text.match(/^updated: [ :\-\w]*$/)
+    begin
+      date = text.match(/^---$[\s\S]*^(?<m>date:.*)$[\s\S]*---$/)
+      updated = text.match(/^---$[\s\S]*^(?<m>updated:.*)$[\s\S]*---$/)
+    rescue
+      date = nil
+      updated =nil
+    end
 
     # if match found
     if date
-      date = date[0].split(': ')[1].split('\\')[0].strip
+      date = date[:m]
+      date = date.split(': ')[1].strip
 
       puts "## Couldn't parse date: #{file}" unless new_date = make_utc(date, localtz)
     end
 
     # if match found
     if updated
-      updated = updated[0].split(': ')[1].split('\\')[0].strip
+      updated = updated[:m]
+      updated = updated.split(': ')[1].strip
 
       puts "## Couldn't parse updated: #{file}" unless new_updated = make_utc(updated, localtz)
     end
@@ -323,15 +331,19 @@ desc "Change date portion of the filenames of posts to utc. This should be run a
 task :update_names do |t, args|
   puts "## Converting filenames to utc"
 
-  Dir.glob("#{source_dir}/**/*.markdown").each do |file|
+  Dir.glob("#{source_dir}/**/*").each do |file|
     date = file.match(/\d\d\d\d-\d\d-\d\d/)
     
     if date #if filename contains a date
       date = date.to_s
-      post_date = File.read(file).match(/^date: .*/)
+      begin
+        post_date = File.read(file).match(/^---$[\s\S]*^(?<m>date:.*)$[\s\S]*^---$/)
+      rescue
+        post_date = nil
+      end
 
       if post_date #if post has date attribute
-        post_date = post_date.to_s.match(/(?<date>\d\d\d\d-\d\d-\d\d)T\d\d:\d\d:\d\dZ/)
+        post_date = post_date[:m].match(/(?<date>\d\d\d\d-\d\d-\d\d)T\d\d:\d\d:\d\dZ/)
 
         if post_date #if it's in iso8601
           post_date = post_date[:date].to_s
