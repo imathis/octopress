@@ -12,9 +12,6 @@ LOCAL_OCTOPRESS_INSTALLATION = Dir.pwd
 OCTO_GIT = "https://github.com/imathis/octopress.git"
 NEW_OCTO = File.join(File.dirname(LOCAL_OCTOPRESS_INSTALLATION), ["octopress", Time.now.year, Time.now.month, Time.now.day].join('-'))
 
-OCTO_CONFIG_GIT = "https://github.com/octopress/sample-octopress-configuration"
-OCTO_CONFIG_DEST = File.join(NEW_OCTO, "_config")
-
 def old_octo_dir(*subdirs)
   File.join(LOCAL_OCTOPRESS_INSTALLATION, *subdirs)
 end
@@ -35,13 +32,6 @@ begin
   # Copy .git from old to new
   FileUtils.rm_rf new_octo_dir('.git')
   FileUtils.cp_r  old_octo_dir('.git'), new_octo_dir
-
-  # Make local copy of octopress/sample-octopress-configuration
-  FileUtils.rm_rf OCTO_CONFIG_DEST
-  system "git clone #{OCTO_CONFIG_GIT} #{OCTO_CONFIG_DEST}"
-  Dir.chdir(OCTO_CONFIG_DEST) do
-    FileUtils.rm_rf %(.git .gitignore README.md)
-  end
   
   #
   # migrate configuration
