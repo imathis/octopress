@@ -86,8 +86,6 @@ begin
     f.write(deploy_configs.to_yaml)
   end
   
-  # migrate plugins
-  
   # migrate custom themes
   custom_themes = Dir.glob(old_octo_dir('.themes', '*')).delete_if { |theme| theme =~ /\.themes\/classic/ }
   FileUtils.cp_r custom_themes, new_octo_dir('.themes')
@@ -96,7 +94,9 @@ begin
   FileUtils.mv old_octo_dir("Rakefile"), new_octo_dir("Rakefile-old")
 
   # migrate updated plugins (but leave deprecated ones)
-  FileUtils.cp_r new_octo_dir("plugins"), old_octo_dir("plugins")
+  octopress_plugins = Dir.glob(new_octo_dir('plugins', '*')).map { |path| path.match(/([\w]*\/[\w]*.rb)$/)[1] }
+  custom_plugins    = Dir.glob(old_octo_dir('plugins', '*')).map { |path| path.match(/([\w]*\/[\w]*.rb)$/)[1] } - octopress_plugins
+  FileUtils.cp_r custom_plugins.map { |rel_path| old_octo_dir(rel_path) }, new_octo_dir('plugins')
 
   # move new to old's location
   FileUtils.rm_rf old_octo_dir
