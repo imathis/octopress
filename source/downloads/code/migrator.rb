@@ -23,6 +23,10 @@ def new_octo_dir(*subdirs)
   File.join(NEW_OCTO, *subdirs)
 end
 
+def read_yaml(path)
+  YAML.load(File.read(path))
+end
+
 begin
   # Make local copy of imathis/octopress
   FileUtils.rm_rf new_octo_dir
@@ -44,7 +48,7 @@ begin
   FileUtils.cp_r new_octo_dir('.themes', 'classic'), old_octo_dir('.themes')
   
   # migrate configuration
-  local_config = YAML.load(File.read(old_octo_dir("_config.yml")))
+  local_config = read_yaml(old_octo_dir("_config.yml"))
   
   FileUtils.mkdir_p old_octo_dir('_config')
   FileUtils.cp_r File.join(OCTO_CONFIG_DEST, 'defaults'), old_octo_dir('_config'), :verbose => true, :remove_destination => true
