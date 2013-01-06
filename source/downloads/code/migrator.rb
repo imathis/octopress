@@ -7,13 +7,13 @@ raise "You must run this script from the root of your Octopress blog directory" 
 require "fileutils"
 require "yaml"
 
+LOCAL_OCTOPRESS_INSTALLATION = Dir.pwd
+
 OCTO_GIT = "https://github.com/imathis/octopress.git"
-TMP_OCTO = "/tmp/octopress"
+TMP_OCTO = File.join(File.dirname(LOCAL_OCTOPRESS_INSTALLATION), "new-octopress")
 
 OCTO_CONFIG_GIT = "https://github.com/octopress/sample-octopress-configuration"
-TMP_OCTO_CONFIG = "/tmp/sample-octopress-configuration"
-
-LOCAL_OCTOPRESS_INSTALLATION = Dir.pwd
+OCTO_CONFIG_DEST = File.join(LOCAL_OCTOPRESS_INSTALLATION, "_config")
 
 def curr_octo_dir(*subdirs)
   File.join(LOCAL_OCTOPRESS_INSTALLATION, *subdirs)
