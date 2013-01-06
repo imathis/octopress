@@ -76,7 +76,8 @@ begin
     f.write(deploy_configs.to_yaml)
   end
   
-  # migrate
+  # migrate plugins
+  
   # migrate custom themes
   custom_themes = Dir.glob(old_octo_dir('.themes', '*')).delete_if { |theme| theme =~ /\.themes\/classic/ }
   FileUtils.cp_r custom_themes, new_octo_dir('.themes')
