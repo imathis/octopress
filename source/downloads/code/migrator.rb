@@ -54,6 +54,7 @@ begin
     this_yaml.each_key do |key|
       if local_config.has_key?(key) and this_yaml[key] != local_config[key]
         site_config[key] = local_config[key]
+      end
     end
   end
   
