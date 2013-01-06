@@ -42,10 +42,6 @@ begin
   Dir.chdir(OCTO_CONFIG_DEST) do
     FileUtils.rm_rf %(.git .gitignore README.md)
   end
-
-  # copy new theme to current directory
-  FileUtils.rm_rf old_octo_dir('.themes', 'classic')
-  FileUtils.cp_r new_octo_dir('.themes', 'classic'), old_octo_dir('.themes')
   
   # migrate configuration
   local_config = read_yaml(old_octo_dir("_config.yml"))
