@@ -86,6 +86,12 @@ begin
     f.write(deploy_configs.to_yaml)
   end
   
+  # migrate old source to new
+  FileUtils.mv old_octo_dir("source"), new_octo_dir
+  
+  # migrate old sass to new
+  FileUtils.mv old_octo_dir("sass"), new_octo_dir
+  
   # migrate custom themes
   custom_themes = Dir.glob(old_octo_dir('.themes', '*')).delete_if { |theme| theme =~ /\.themes\/classic/ }
   FileUtils.cp_r custom_themes, new_octo_dir('.themes')
