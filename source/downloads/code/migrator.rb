@@ -100,7 +100,7 @@ begin
   puts "Happy blogging!"
   
 rescue => e
-  puts "An error occurred #{e}."
+  puts "An error occurred: #{e}."
   exit 1
 end
 
