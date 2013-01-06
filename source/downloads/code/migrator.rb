@@ -35,7 +35,9 @@ begin
   # Make local copy of octopress/sample-octopress-configuration
   FileUtils.rm_rf OCTO_CONFIG_DEST
   system "git clone #{OCTO_CONFIG_GIT} #{OCTO_CONFIG_DEST}"
-  FileUtils.rm_rf File.join(OCTO_CONFIG_DEST, ".git")
+  Dir.chdir(OCTO_CONFIG_DEST) do
+    FileUtils.rm_rf %(.git .gitignore README.md)
+  end
 
   # copy new theme to current directory
   FileUtils.rm_rf old_octo_dir('.themes', 'classic')
