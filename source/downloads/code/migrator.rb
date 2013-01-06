@@ -46,9 +46,6 @@ begin
   # migrate configuration
   local_config = read_yaml(old_octo_dir("_config.yml"))
   
-  FileUtils.mkdir_p old_octo_dir('_config')
-  FileUtils.cp_r File.join(OCTO_CONFIG_DEST, 'defaults'), old_octo_dir('_config'), :verbose => true, :remove_destination => true
-  
   # build site configs
   site_config = {}
   %w(classic.yml disqus.yml gauges_analytics.yml github_repos_sidebar.yml google_analytics.yml
@@ -71,20 +68,17 @@ begin
   # TODO extract deploy configs from Rakefile
   
   # write configs
-  File.open(old_octo_dir('_config', 'site.yml'), 'w') do |f|
+  File.open(new_octo_dir('_config', 'site.yml'), 'w') do |f|
     f.write(site_config.to_yaml)
   end
-  File.open(old_octo_dir('_config', 'deploy.yml'), 'w') do |f|
+  File.open(new_octo_dir('_config', 'deploy.yml'), 'w') do |f|
     f.write(deploy_configs.to_yaml)
   end
   
+  # migrate
+  
   # migrate Rakefile
-  FileUtils.mv old_octo_dir("Rakefile"), old_octo_dir("Rakefile-old")
-  FileUtils.cp new_octo_dir("Rakefile"), old_octo_dir("Rakefile")
-
-  # migrate Gemfile
-  FileUtils.rm old_octo_dir("Gemfile")
-  FileUtils.cp new_octo_dir("Gemfile"), old_octo_dir("Gemfile")
+  FileUtils.mv old_octo_dir("Rakefile"), new_octo_dir("Rakefile-old")
 
   # migrate updated plugins (but leave deprecated ones)
   FileUtils.cp_r new_octo_dir("plugins"), old_octo_dir("plugins")
