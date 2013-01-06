@@ -10,7 +10,7 @@ require "yaml"
 LOCAL_OCTOPRESS_INSTALLATION = Dir.pwd
 
 OCTO_GIT = "https://github.com/imathis/octopress.git"
-NEW_OCTO = File.join(File.dirname(LOCAL_OCTOPRESS_INSTALLATION), "new-octopress")
+NEW_OCTO = File.join(File.dirname(LOCAL_OCTOPRESS_INSTALLATION), ["octopress", Time.now.year, Time.now.month, Time.now.day].join('-'))
 
 OCTO_CONFIG_GIT = "https://github.com/octopress/sample-octopress-configuration"
 OCTO_CONFIG_DEST = File.join(NEW_OCTO, "_config")
