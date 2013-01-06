@@ -24,14 +24,13 @@ def tmp_octo_dir(*subdirs)
 end
 
 begin
-
   # Make local copy of imathis/octopress
   FileUtils.rm_rf tmp_octo_dir
-  system "git clone #{GIT_TMP} #{tmp_octo_dir}"
+  system "git clone #{OCTO_GIT} #{tmp_octo_dir}"
 
   # Make local copy of octopress/sample-octopress-configuration
-  FileUtils.rm_rf TMP_OCTO_CONFIG
   system "git clone #{OCTO_CONFIG_GIT} #{TMP_OCTO_CONFIG}"
+  FileUtils.rm_rf OCTO_CONFIG_DEST
 
   # copy new theme to current directory
   FileUtils.rm_rf curr_octo_dir('.themes', 'classic')
@@ -41,7 +40,7 @@ begin
   local_config = YAML.load(File.read(curr_octo_dir("_config.yml")))
   
   FileUtils.mkdir_p curr_octo_dir('_config')
-  FileUtils.cp_r File.join(TMP_OCTO_CONFIG, 'defaults'), curr_octo_dir('_config'), :verbose => true, :remove_destination => true
+  FileUtils.cp_r File.join(OCTO_CONFIG_DEST, 'defaults'), curr_octo_dir('_config'), :verbose => true, :remove_destination => true
   
   # build site configs
   site_config = {}
