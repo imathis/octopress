@@ -35,7 +35,7 @@ begin
 
   # copy new theme to current directory
   FileUtils.rm_rf curr_octo_dir('.themes', 'classic')
-  FileUtils.cp_r tmp_octo_dir('.themes', 'classic'), curr_octo_dir('.themes')}
+  FileUtils.cp_r tmp_octo_dir('.themes', 'classic'), curr_octo_dir('.themes')
   
   # migrate configuration
   local_config = YAML.load(File.read(curr_octo_dir("_config.yml")))
