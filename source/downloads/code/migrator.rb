@@ -89,6 +89,10 @@ begin
   # migrate updated plugins (but leave deprecated ones)
   FileUtils.cp_r new_octo_dir("plugins"), old_octo_dir("plugins")
 
+  # move new to old's location
+  FileUtils.rm_rf old_octo_dir
+  FileUtils.mv new_octo_dir, old_octo_dir
+
   # cleanup
   FileUtils.rm_rf new_octo_dir
   
