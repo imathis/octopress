@@ -50,7 +50,7 @@ begin
   site_config = {}
   %w(classic.yml disqus.yml gauges_analytics.yml github_repos_sidebar.yml google_analytics.yml
     google_plus.yml jekyll.yml share_posts.yml tweets_sidebar.yml).each do |yaml_file|
-    this_yaml = YAML.load(File.read(File.join(old_octo_dir('defaults', yaml_file))))
+    this_yaml = read_yaml(new_octo_dir('_config', 'defaults', yaml_file))
     this_yaml.each_key do |key|
       if local_config.has_key?(key) and this_yaml[key] != local_config[key]
         site_config[key] = local_config[key]
