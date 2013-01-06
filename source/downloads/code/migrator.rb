@@ -15,12 +15,12 @@ NEW_OCTO = File.join(File.dirname(LOCAL_OCTOPRESS_INSTALLATION), "new-octopress"
 OCTO_CONFIG_GIT = "https://github.com/octopress/sample-octopress-configuration"
 OCTO_CONFIG_DEST = File.join(NEW_OCTO, "_config")
 
-def curr_octo_dir(*subdirs)
+def old_octo_dir(*subdirs)
   File.join(LOCAL_OCTOPRESS_INSTALLATION, *subdirs)
 end
 
-def tmp_octo_dir(*subdirs)
-  File.join(TMP_OCTO, *subdirs)
+def new_octo_dir(*subdirs)
+  File.join(NEW_OCTO, *subdirs)
 end
 
 begin
