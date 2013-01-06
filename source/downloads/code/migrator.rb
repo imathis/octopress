@@ -27,6 +27,10 @@ begin
   # Make local copy of imathis/octopress
   FileUtils.rm_rf new_octo_dir
   system "git clone #{OCTO_GIT} #{new_octo_dir}; cd #{new_octo_dir}; git checkout 2.1"
+  
+  # Copy .git from old to new
+  FileUtils.rm_rf new_octo_dir('.git')
+  FileUtils.cp_r  old_octo_dir('.git'), new_octo_dir
 
   # Make local copy of octopress/sample-octopress-configuration
   FileUtils.rm_rf OCTO_CONFIG_DEST
