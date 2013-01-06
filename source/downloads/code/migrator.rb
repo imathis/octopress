@@ -13,7 +13,7 @@ OCTO_GIT = "https://github.com/imathis/octopress.git"
 NEW_OCTO = File.join(File.dirname(LOCAL_OCTOPRESS_INSTALLATION), "new-octopress")
 
 OCTO_CONFIG_GIT = "https://github.com/octopress/sample-octopress-configuration"
-OCTO_CONFIG_DEST = File.join(LOCAL_OCTOPRESS_INSTALLATION, "_config")
+OCTO_CONFIG_DEST = File.join(NEW_OCTO, "_config")
 
 def curr_octo_dir(*subdirs)
   File.join(LOCAL_OCTOPRESS_INSTALLATION, *subdirs)
