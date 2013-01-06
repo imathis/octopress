@@ -43,9 +43,22 @@ begin
     FileUtils.rm_rf %(.git .gitignore README.md)
   end
   
+  #
   # migrate configuration
-  local_config = read_yaml(old_octo_dir("_config.yml"))
+  #
+  local_config      = read_yaml(old_octo_dir("_config.yml"))
+  rakefile_contents = File.read(old_octo_dir('Rakefile'))
   
+  # grab configs
+  %w(public_dir source_dir blog_index_dir stash_dir posts_dir themes_dir new_post_ext new_page_ext server_port).each do |var|
+    matched = rakefile_contents.match(/#{var}\s*=\s*["']([^"']*)["']/)
+    begin
+      local_configs[var] = matched[1]
+    rescue
+      puts "No value could be found for '#{var}' in the old Rakefile."
+    end
+  end
+
   # build site configs
   site_config = {}
   %w(classic.yml disqus.yml gauges_analytics.yml github_repos_sidebar.yml google_analytics.yml
@@ -58,15 +71,22 @@ begin
     end
   end
   
-  # write deploy configs
-  deploy_configs = {}
-  rakefile = File.read(old_octo_dir('Rakefile'))
-  default_deploy = rakefile.match(/deploy_default\s*=\s*["']([\w-]*)["']/)[1]
-  defaults_deploy_file = old_octo_dir('_config', 'defaults', 'deploy', (default_deploy == 'push' ? 'gh_pages.yml' : 'rsync.yml'))
-  deploy_configs = YAML.load(File.read(defaults_deploy_file))
+  # build deploy configs
+  deploy_configs         = {}
+  deploy_default         = rakefile_contents.match(/deploy_default\s*=\s*["']([\w-]*)["']/)[1]
+  deploy_default_file    = new_octo_dir('_config', 'defaults', 'deploy', (deploy_default == 'push' ? 'gh_pages.yml' : 'rsync.yml'))
+  deploy_default_configs = read_yaml(deploy_default_file)
   
-  rakefile.match(/deploy_branch\s*=\s*["']([\w-]*)["'])[1]/)
-  # TODO extract deploy configs from Rakefile
+  # read in deploy configs from rakefile
+  %w(deploy_dir deploy_branch ssh_user document_root ssh_port deploy_default).each do |var|
+    matched = rakefile_contents.match(/#{var}\s*=\s*["']([^"']*)["']/)
+    begin
+      deploy_configs[var] = matched[1] if deploy_default_configs.has_key?(var) && deploy_default_configs[var] != matched[1]
+    rescue
+      puts "No value could be found for '#{var}' in the old Rakefile."
+    end
+  end
+  deploy_configs["rsync_delete"] = rakefile_contents.match(/rsync_delete\s*=\s*(true|false)/)[1] == "true"
   
   # write configs
   File.open(new_octo_dir('_config', 'site.yml'), 'w') do |f|
