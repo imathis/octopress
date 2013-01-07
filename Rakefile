@@ -1,6 +1,8 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require 'time'
+require 'tzinfo'
 require 'rake/minify'
 require 'time'
 
@@ -27,6 +29,7 @@ posts_dir       = "_posts"    # directory for blog files
 themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
+timezone        = 'local'     # default time and date used to local timezone
 server_host     = ENV['OCTOPRESS_IP']   || '0.0.0.0'   # host ip address for preview server
 server_port     = ENV['OCTOPRESS_PORT'] || "4000"      # port for preview server eg. localhost:4000
 
@@ -139,8 +142,9 @@ task :new_post, :title do |t, args|
     title = get_stdin("Enter a title for your post: ")
   end
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  time = now_in_timezone(timezone) 
   mkdir_p "#{source_dir}/#{posts_dir}"
-  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  filename = "#{source_dir}/#{posts_dir}/#{time.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -149,7 +153,7 @@ task :new_post, :title do |t, args|
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "date: #{time.iso8601}"
     post.puts "comments: true"
     post.puts "external-url: "
     post.puts "categories: "
@@ -181,11 +185,12 @@ task :new_page, :filename do |t, args|
       abort("rake aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
     end
     puts "Creating new page: #{file}"
+    time = now_in_timezone(timezone) 
     open(file, 'w') do |page|
       page.puts "---"
       page.puts "layout: page"
       page.puts "title: \"#{title}\""
-      page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+      page.puts "date: #{time.iso8601}"
       page.puts "comments: true"
       page.puts "sharing: true"
       page.puts "footer: true"
@@ -274,7 +279,6 @@ task :update_source, :theme do |t, args|
   puts "## Updated #{source_dir} ##"
 end
 
-
 ##############
 # Deploying  #
 ##############
@@ -333,7 +337,7 @@ multitask :push do
       end
     end
   else
-    puts "This project isn't configured for deploying to GitHub Pages\nPlease run `rake setup_github_pages[your-deployment-repo-url]`." 
+    puts "This project isn't configured for deploying to GitHub Pages\nPlease run `rake setup_github_pages[your-deployment-repo-url]`."
   end
 end
 
@@ -439,12 +443,12 @@ task :setup_github_pages, :repo do |t, args|
     f.write rakefile
   end
 
-  # Configure published url 
+  # Configure published url
   jekyll_config = IO.read('_config.yml')
   current_url = /^url:\s?(.*$)/.match(jekyll_config)[1]
   has_cname = File.exists?("#{source_dir}/CNAME")
   if current_url == 'http://yoursite.com'
-    jekyll_config.sub!(/^url:.*$/, "url: #{url}") 
+    jekyll_config.sub!(/^url:.*$/, "url: #{url}")
     File.open('_config.yml', 'w') do |f|
       f.write jekyll_config
     end
@@ -518,6 +522,28 @@ def ask(message, valid_options)
     answer = get_stdin(message)
   end
   answer
+end
+
+def now_in_timezone(timezone)
+  time = Time.now
+  unless timezone.nil? || timezone.empty? || timezone == 'local'
+    tz = TZInfo::Timezone.get(timezone) #setup Timezone object
+    adjusted_time = tz.utc_to_local(time.utc) #time object without correct offset
+    #time object with correct offset
+    time = Time.new(
+      adjusted_time.year,
+      adjusted_time.month,
+      adjusted_time.day,
+      adjusted_time.hour,
+      adjusted_time.min,
+      adjusted_time.sec,
+      tz.period_for_utc(time.utc).utc_total_offset())
+    #convert offset to utc instead of just ±0 if that was specified
+    if ['utc','zulu','universal','uct','gmt','gmt0','gmt+0','gmt-0'].include? timezone.downcase
+      time = time.utc
+    end
+  end
+  time
 end
 
 desc "list tasks"
