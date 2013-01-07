@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require 'time'
 require 'rake/minify'
 
 ## -- Rsync Deploy config -- ##
@@ -134,7 +135,7 @@ task :new_post, :title do |t, args|
   end
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   mkdir_p "#{source_dir}/#{posts_dir}"
-  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  filename = "#{source_dir}/#{posts_dir}/#{Time.now.utc.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -143,7 +144,7 @@ task :new_post, :title do |t, args|
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "date: #{Time.now.utc.iso8601}"
     post.puts "comments: true"
     post.puts "external-url: "
     post.puts "categories: "
@@ -179,7 +180,7 @@ task :new_page, :filename do |t, args|
       page.puts "---"
       page.puts "layout: page"
       page.puts "title: \"#{title}\""
-      page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+      page.puts "date: #{Time.now.utc.iso8601}"
       page.puts "comments: true"
       page.puts "sharing: true"
       page.puts "footer: true"
@@ -268,6 +269,103 @@ task :update_source, :theme do |t, args|
   puts "## Updated #{source_dir} ##"
 end
 
+# usage rake update_dates or rake update_dates[timezone]
+desc "Change page/post dates that aren't iso8601 to iso8601 and utc assuming that they were created in the specified timezone, or assume current local timezone if no timezone is specified."
+task :update_dates, :localtz do |t, args|
+  localtz = args.localtz || Time.now.zone 
+  puts "## Converting times from #{localtz}"
+
+  Dir.glob("#{source_dir}/**/*").each do |file|
+    new_date = ''
+    new_updated = ''
+    text = ''
+    text = File.read(file) if File.file?(file)
+    new_text = text
+    begin
+      date = text.match(/^---$[\s\S]*^(?<m>date:.*)$[\s\S]*---$/)
+      updated = text.match(/^---$[\s\S]*^(?<m>updated:.*)$[\s\S]*---$/)
+    rescue
+      date = nil
+      updated =nil
+    end
+
+    # if match found
+    if date
+      date = date[:m]
+      date = date.split(': ')[1].strip
+
+      puts "## Couldn't parse date: #{file}" unless new_date = make_utc(date, localtz)
+    end
+
+    # if match found
+    if updated
+      updated = updated[:m]
+      updated = updated.split(': ')[1].strip
+
+      puts "## Couldn't parse updated: #{file}" unless new_updated = make_utc(updated, localtz)
+    end
+
+    # replace date if needed
+    unless new_date && new_date.empty?
+      new_text = new_text.gsub(/^date: [ :\-\w]*$/, "date: #{new_date}")
+    end
+
+    # replace updated if needed
+    unless new_updated && new_updated.empty?
+      new_text = new_text.gsub(/^updated: [ :\-\w]*$/, "updated: #{new_updated}")
+    end
+
+    unless text == new_text
+      puts "## Updating #{file}"
+
+      # write text with new date
+      File.open(file, "w"){|thisfile|
+        thisfile.puts new_text
+      }
+    end
+  end
+end
+
+# usage rake update_names
+desc "Change date portion of the filenames of posts to utc. This should be run after update_dates"
+task :update_names do |t, args|
+  puts "## Converting filenames to utc"
+
+  Dir.glob("#{source_dir}/**/*").each do |file|
+    date = file.match(/\d\d\d\d-\d\d-\d\d/)
+    
+    if date #if filename contains a date
+      date = date.to_s
+      begin
+        post_date = File.read(file).match(/^---$[\s\S]*^(?<m>date:.*)$[\s\S]*^---$/)
+      rescue
+        post_date = nil
+      end
+
+      if post_date #if post has date attribute
+        post_date = post_date[:m].match(/(?<date>\d\d\d\d-\d\d-\d\d)T\d\d:\d\d:\d\dZ/)
+
+        if post_date #if it's in iso8601
+          post_date = post_date[:date].to_s
+          unless date == post_date #if filename and post don't match
+            puts "## Moving: #{file}"
+            new_file = file.gsub(date,post_date)
+            unless File.exist?(new_file)
+              FileUtils.mv file, new_file
+            else
+              puts "## FAILED: #{new_file} exists"
+            end
+          end
+        else
+          puts "## Date not iso/utc: #{file}"
+          puts "## Please run rake update_dates"
+        end
+      else
+        puts "## No date in: #{file}"
+      end
+    end
+  end
+end
 
 ##############
 # Deploying  #
@@ -487,6 +585,28 @@ def ask(message, valid_options)
     answer = get_stdin(message)
   end
   answer
+end
+
+def make_utc(date, offset)
+  begin
+    # see if it's already iso8601 and adjust it to utc
+    new_date = Time.iso8601(date).utc.iso8601
+  rescue
+    # otherwise...
+    begin
+      # try to parse it
+      new_date = Time.parse("#{date} #{offset}").utc.iso8601
+    rescue
+      # nil if parse problems 
+      new_date = nil 
+    end
+  end 
+
+  if new_date == date
+    # if it's already iso8601 and utc, don't do anything
+    new_date = ''
+  end
+  new_date
 end
 
 desc "list tasks"
