@@ -1,4 +1,5 @@
 ---
+author: Rodrigo Pinto
 layout: post
 title: "Dezembro de RUPY, RailsGirls-RJ e muitos eventos"
 date: 2012-12-19 12:00
