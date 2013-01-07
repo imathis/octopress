@@ -1,0 +1,12 @@
+---
+# ----------------------- #
+#   GitHub Pages Config   #
+#   deploy_default: push  #
+# ----------------------- #
+
+# This will be configured for you when you run config_deploy
+deploy_branch: "gh-pages"
+deploy_dir:    "_deploy"
+
+# Hidden "dot" files that should be included with the deployed site (see task copydot)
+copy_dot_files: []

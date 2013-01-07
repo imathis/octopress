@@ -1,0 +1,8 @@
+---
+# --------------------------------- #
+#   Google+ Profile Configuration   #
+# --------------------------------- #
+
+# Hidden: No visible button, just add author information to search results
+googleplus_user:
+googleplus_hidden: false
