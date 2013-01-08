@@ -17,17 +17,19 @@ deploy_branch  = "gh-pages"
 
 ## -- Misc Configs -- ##
 
-public_dir      = "public"    # compiled site directory
-source_dir      = "source"    # source file directory
-blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
-deploy_dir      = "_deploy"   # deploy directory (for GitHub pages deployment)
-stash_dir       = "_stash"    # directory to stash posts for speedy generation
-posts_dir       = "_posts"    # directory for blog files
-themes_dir      = ".themes"   # directory for blog files
-new_post_ext    = "markdown"  # default new post file extension when using the new_post task
-new_page_ext    = "markdown"  # default new page file extension when using the new_page task
-server_host     = ENV['OCTOPRESS_IP']   || '0.0.0.0'   # host ip address for preview server
-server_port     = ENV['OCTOPRESS_PORT'] || "4000"      # port for preview server eg. localhost:4000
+public_dir         = "public"    # compiled site directory
+source_dir         = "source"    # source file directory
+blog_index_dir     = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
+deploy_dir         = "_deploy"   # deploy directory (for GitHub pages deployment)
+stash_dir          = "_stash"    # directory to stash posts for speedy generation
+posts_dir          = "_posts"    # directory for blog files
+themes_dir         = ".themes"   # directory for blog files
+new_post_ext       = "markdown"  # default new post file extension when using the new_post task
+new_page_ext       = "markdown"  # default new page file extension when using the new_page task
+new_post_published = "false"     # should new posts be published by default?
+new_page_published = "true"      # should new pages be published by default?
+server_host        = ENV['OCTOPRESS_IP']   || '0.0.0.0'   # host ip address for preview server
+server_port        = ENV['OCTOPRESS_PORT'] || "4000"      # port for preview server eg. localhost:4000
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
@@ -145,6 +147,7 @@ task :new_post, :title do |t, args|
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
     post.puts "comments: true"
+    post.puts "published: #{new_post_published}"
     post.puts "external-url: "
     post.puts "categories: "
     post.puts "---"
@@ -181,6 +184,7 @@ task :new_page, :filename do |t, args|
       page.puts "title: \"#{title}\""
       page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
       page.puts "comments: true"
+      page.puts "published: #{new_page_published}"
       page.puts "sharing: true"
       page.puts "footer: true"
       page.puts "---"
