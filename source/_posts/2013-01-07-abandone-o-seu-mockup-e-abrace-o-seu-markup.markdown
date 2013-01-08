@@ -50,8 +50,8 @@ Hoje eu me divirto muito mais na hora de começar a desenvolver uma interface, a
 
 * o seu trabalho é feito somente uma vez, depois disso com alguns ajustes e melhorias no código, tudo está pronto para ser reutilizado em produção;
 
-Este é um processo que nós tentamos seguir na [HE:labs][1], é que tem se mostrado eficiente para nossos projetos. Não quer dizer que tenha que ser considerado um padrão para todos, cada caso é um caso e cada projeto também.
+Este é um processo que nós tentamos seguir na [HE:labs][1], e que tem se mostrado eficiente para nossos projetos. Não quer dizer que tenha que ser considerado um padrão para todos, cada caso é um caso e cada projeto também.
 
-Acreditamos que o importante é sempre estar experimentando coisas novas que tragam a evolução para a internet, para os nossos clientes e para os usuários dos produtos que desenvolvemos.
+Acreditamos que o importante é sempre experimentar coisas novas que tragam a evolução para a internet, para os nossos clientes e para os usuários dos produtos que desenvolvemos.
 
 [1]:http://helabs.com.br
