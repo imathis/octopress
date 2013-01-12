@@ -111,7 +111,17 @@ module Jekyll
 
       # Throw an exception if the layout couldn't be found.
       else
-        throw "No 'category_index' layout found."
+        raise <<-ERR
+
+
+===============================================
+ Error for category_generator.rb plugin
+-----------------------------------------------
+ No 'category_index.hmtl' in source/_layouts/
+ Perhaps you haven't installed a theme yet.
+===============================================
+
+ERR
       end
     end
 
