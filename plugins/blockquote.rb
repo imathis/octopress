@@ -31,13 +31,13 @@ module Jekyll
       if markup =~ FullCiteWithTitle
         @by = $1
         @source = $2 + $3
-        @title = $4.titlecase
+        @title = $4.titlecase.strip
       elsif markup =~ FullCite
         @by = $1
         @source = $2 + $3
       elsif markup =~ AuthorTitle
         @by = $1
-        @title = $2.titlecase
+        @title = $2.titlecase.strip
       elsif markup =~ Author
         @by = $1
       end
