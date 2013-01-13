@@ -389,14 +389,14 @@ task :setup_github_pages, :repo do |t, args|
   unless repo_url[-4..-1] == ".git"
     repo_url << ".git"
   end
-  raise "!! The repo URL that was input was malformed." unless repo_url.match(/https:\/\/github.com\/[^\/]+\/[^\/]+/) or repo_url.match(/git@github.com:[^\/]+\/[^\/]+/)
-  user_match = repo_url.match(/(:([^\/]+)|(github.com\/([^\/]+)))/)
+  raise "!! The repo URL that was input was malformed." unless (repo_url =~ /https:\/\/github\.com\/[^\/]+\/[^\/]+/).nil? or (repo_url =~ /git@github\.com:[^\/]+\/[^\/]+/).nil?
+  user_match = repo_url.match(/(:([^\/]+)|(github\.com\/([^\/]+)))/)
   user = user_match[2] || user_match[4]
-  branch = (repo_url.match(/\/[\w-]+.github.com/).nil?) ? 'gh-pages' : 'master'
+  branch = (repo_url =~ /\/[\w-]+\.github\.com/).nil? ? 'gh-pages' : 'master'
   project = (branch == 'gh-pages') ? repo_url.match(/\/(.+)(\.git)/)[1] : ''
   url = "http://#{user}.github.com"
   url += "/#{project}" unless project == ''
-  unless `git remote -v`.match(/origin.+?octopress(\.git/).nil?
+  unless (`git remote -v` =~ /origin.+?octopress(?:\.git)?/).nil?
     # If octopress is still the origin remote (from cloning) rename it to octopress
     system "git remote rename origin octopress"
     if branch == 'master'
