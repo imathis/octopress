@@ -2,6 +2,7 @@ require "rubygems"
 require "bundler/setup"
 require "stringex"
 require 'rake/minify'
+require 'time'
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -50,12 +51,15 @@ end
 #######################
 
 desc "Generate jekyll site"
-task :generate do
+task :generate, :no_future do |t, args|
+  future = args.no_future
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   Rake::Task['minify_and_combine'].execute
-  system "jekyll --no-server --no-auto"
+  system "jekyll --no-server --no-auto #{'--no-future' if future.nil?}"
+  unpublished = get_unpublished(Dir.glob("#{source_dir}/#{posts_dir}/*.*"), {no_future: future.nil?, message: "\nThese posts were not generated:"})
+  puts unpublished unless unpublished.empty?
 end
 
 Rake::Minify.new(:minify_and_combine) do
@@ -93,12 +97,13 @@ task :generate_only, :filename do |t, args|
 end
 
 desc "Watch the site and regenerate when it changes"
-task :watch do
+task :watch, :show_future do |t, args|
+  future = args.show_future
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass."
   system "compass compile --css-dir #{source_dir}/stylesheets"
   Rake::Task['minify_and_combine'].execute
-  jekyllPid = Process.spawn("jekyll --auto")
+  jekyllPid = Process.spawn("jekyll --auto #{'--no-future' if future.nil?}")
   compassPid = Process.spawn("compass watch")
   trap("INT") {
     [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
@@ -107,12 +112,13 @@ task :watch do
   [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
 end
 
-desc "preview the site in a web browser"
-task :preview do
+desc "preview the site in a web browser."
+task :preview, :show_future do |t, args|
+  future = args.show_future
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass. Starting Rack, serving to http://#{server_host}:#{server_port}"
   system "compass compile --css-dir #{source_dir}/stylesheets"
-  jekyllPid = Process.spawn("jekyll --auto")
+  jekyllPid = Process.spawn("jekyll --auto #{'--no-future' if future.nil?}")
   compassPid = Process.spawn("compass watch")
   rackupPid = Process.spawn("rackup --host #{server_host} --port #{server_port}")
 
@@ -465,6 +471,31 @@ task :setup_github_pages, :repo do |t, args|
   puts "Note: generated content is copied into _deploy/ which is not in version control."
   puts "If starting with a fresh clone of this project you should re-run setup_github_pages."
   puts "========================================================"
+end
+
+# usage rake list_posts or rake list_posts[pub|unpub]
+desc "List all unpublished/draft posts"
+task :list_drafts do
+  posts = Dir.glob("#{source_dir}/#{posts_dir}/*.*") 
+  unpublished = get_unpublished(posts)
+  puts unpublished.empty? ? "There are no unpublished posts" : unpublished
+end
+
+def get_unpublished(posts, options={})
+  result = ""
+  message = options[:message] || "These Posts will not be published:"
+  posts.sort.each do |post|
+    file = File.read(post)
+    data = YAML.load file.match(/(^-{3}\n)(.+?)(\n-{3})/m)[2]
+    
+    if options[:no_future]
+      future = Time.now < Time.parse(data['date']) ? "future date: #{data['date']}" : false
+    end
+    draft = data['published'] == false ? 'published: false' : false
+    result << "- #{data['title']} (#{draft or future})\n" if draft or future
+  end
+  result = "#{message}\n" + result unless result.empty?
+  result
 end
 
 def ok_failed(condition)
