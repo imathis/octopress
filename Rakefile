@@ -1,6 +1,6 @@
-require "rubygems"
-require "bundler/setup"
-require "stringex"
+require 'rubygems'
+require 'bundler/setup'
+require 'stringex'
 require 'time'
 require 'tzinfo'
 require 'rake/minify'
@@ -22,16 +22,16 @@ deploy_branch  = "gh-pages"
 
 public_dir      = "public"    # compiled site directory
 source_dir      = "source"    # source file directory
-blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
+blog_index_dir  = "source"    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
 deploy_dir      = "_deploy"   # deploy directory (for GitHub pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
 themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
-timezone        = 'local'     # default time and date used to local timezone
+timezone        = "local"     # default time and date used to local timezone. Timezones (under TZ column): http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 server_host     = ENV['OCTOPRESS_IP']   || '0.0.0.0'   # host ip address for preview server
-server_port     = ENV['OCTOPRESS_PORT'] || "4000"      # port for preview server eg. localhost:4000
+server_port     = ENV['OCTOPRESS_PORT'] || '4000'      # port for preview server eg. localhost:4000
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
@@ -482,7 +482,7 @@ desc "List all unpublished/draft posts"
 task :list_drafts do
   posts = Dir.glob("#{source_dir}/#{posts_dir}/*.*") 
   unpublished = get_unpublished(posts)
-  puts unpublished.empty? ? "There are no unpublished posts" : unpublished
+  puts unpublished.empty? ? "There are no posts currently in draft" : unpublished
 end
 
 def get_unpublished(posts, options={})
@@ -493,7 +493,7 @@ def get_unpublished(posts, options={})
     data = YAML.load file.match(/(^-{3}\n)(.+?)(\n-{3})/m)[2]
     
     if options[:no_future]
-      future = Time.now < Time.parse(data['date']) ? "future date: #{data['date']}" : false
+      future = Time.now < Time.parse(data['date'].to_s) ? "future date: #{data['date']}" : false
     end
     draft = data['published'] == false ? 'published: false' : false
     result << "- #{data['title']} (#{draft or future})\n" if draft or future
