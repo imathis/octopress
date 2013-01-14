@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "aws-sdk"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -13,6 +14,9 @@ deploy_default = "rsync"
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
+
+## -- Amazon S3 Deploy config -- ##
+s3_bucket = "example.com"
 
 ## -- Misc Configs -- ##
 
@@ -260,6 +264,28 @@ multitask :push do
     puts "\n## Pushing generated #{deploy_dir} website"
     system "git push origin #{deploy_branch} --force"
     puts "\n## Github Pages deploy complete"
+  end
+end
+
+desc "Deploy public directory to Amazon S3"
+task :s3 do
+  puts "## Checking AWS Credentials..."
+  unless ENV['AWS_ACCESS_KEY_ID'] && ENV['AWS_SECRET_ACCESS_KEY']
+    puts "\n## ERROR: Please setup up both ENV['AWS_ACCESS_KEY_ID'] and ENV['AWS_SECRET_ACCESS_KEY']"
+    next false
+  end
+  puts "\n## Deploying website onto Amazon S3"
+  s3 = AWS::S3.new
+  bucket = s3.buckets[s3_bucket]
+  puts "\n## Uploading public directory to bucket \"#{s3_bucket}\""
+  files = %x[find #{public_dir} -type f].split
+  files.map do |file_path|
+    fd = File.open(file_path)
+    bucket_path = file_path.sub('public/', '')
+    obj = bucket.objects[bucket_path]
+    # TODO: A fresh :generate task will always update resources, need a better
+    # method for preventing full-site uploads on every deploy
+    obj.write(fd) if !obj.exists? || obj.last_modified < fd.mtime
   end
 end
 
