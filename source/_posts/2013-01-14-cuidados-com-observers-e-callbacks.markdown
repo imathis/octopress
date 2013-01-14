@@ -5,6 +5,11 @@ title: "Cuidados com Observers e callbacks"
 date: 2013-01-14 16:30
 comments: true
 categories: 
+  - Anézio Marques
+  - Rails 4
+  - Observer
+  - callbacks
+
 ---
 
 Já foi divulgado que na versão __4 do Rails__ removerão o __Observer__ e ele deverá ser utilizado como uma gem. Analizei em alguns projetos a utilização dessa classe e as vezes encontro situações onde acredito que ela pode estar prejudicando mais do que colaborando com o projeto.
