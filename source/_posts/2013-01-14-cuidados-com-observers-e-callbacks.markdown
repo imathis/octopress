@@ -19,11 +19,13 @@ A grosso modo a utilização de Observer nada mais é do que uma extração de c
 
 Um exemplo dessa situação é o __Welcome email__ que é enviado quando um usuário é cadastrado. 
 
+```ruby
 	class UserObserver < ActiveRecord::Observer
 		def after_create(user)
 			NotificationsMailer.welcome_user(user.id).deliver
 		end
 	end
+```
 
 ### DRY utilizando Observer ###
 
@@ -31,6 +33,7 @@ A utilização de observer sem que ele seja utilizado em multiplas classes é de
 
 Essa extração é produtiva no caso onde diversas classes acabam executando o mesmo callback como nesse exemplo:
 
+```ruby
 	class AuditObserver < ActiveModel::Observer
 		observe :account, :balance
 
@@ -38,6 +41,8 @@ Essa extração é produtiva no caso onde diversas classes acabam executando o m
 			AuditTrail.new(record, "UPDATED")
 		end
 	end
+```
+
 
 Aqui o Observer está criando um registro de auditoria tanto no Account quanto no Balance. Já justifica a sua utilização.
 
@@ -55,6 +60,7 @@ Este caso é de um simples email extra enviado, mas agora imagine um after_creat
 
 Uma solução que tem se mostrado muito claro, simples e quebra a complexidade dos models é extrair comportamentos de um determinado cenario para uma nova classe. Por exemplo:
 
+```ruby
 	class UserSignup
 		def initialize(params)
 			@user = User.new(params)
@@ -78,5 +84,6 @@ Uma solução que tem se mostrado muito claro, simples e quebra a complexidade d
 			render :new
 		end
 	end
+```
 
 Dessa forma estou extraindo a situação específica da criação de usuários pelo formulário padrão do projeto para uma classe que terá seu comportamento bem específico deixando assim o código mais simples para se testar, tirando complexidade da classe User e de quebra ainda deixará de executar em diversos testes do projeto os callbacks da criação do User o que irá impactar positivamente na velocidade da execução dos testes.
