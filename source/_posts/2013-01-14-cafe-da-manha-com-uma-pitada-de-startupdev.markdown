@@ -9,7 +9,7 @@ categories: startupdev video
 
 Em uma viagem que eu e Mergulhão fizemos com uns amigos em setembro de 2012,
 tivemos uma conversa sobre o [Startup DEV](http://startupdev.com.br) no café da manhã.
-Entenda o que pensamos a respeito de projetos de Startups e qual é a nossa filosofia de trabalho.
+Entenda o que pensamos a respeito de projetos de startups e qual é a nossa filosofia de trabalho.
 <!-- more -->
 Esse vídeo foi gravado por [Rodrigo Toledo](http://www.rodrigodetoledo.com), conta com a participação do [Klaus Wuestefeld](http://klauswuestefeld.blogspot.com.br/) e mostra a cara do [Alisson Vale](http://alissonvale.com/) de vez em quando :-P
 
