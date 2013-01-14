@@ -31,7 +31,7 @@ var github = (function(){
             return aDate > bDate ? -1 : 1;
           });
 
-          if (options.count) { repos.splice(options.count); }
+          if (options.count || options.count === 0) { repos.splice(options.count); }
           render(options.target, repos);
         }
       });
