@@ -3,6 +3,10 @@ require './plugins/config'
 require 'pygments'
 require 'fileutils'
 require 'digest/md5'
+begin # Make it easy for folks to use rubypython if they like
+  require 'rubypython'
+rescue LoadError # rubypython is not installed
+end
 
 PYGMENTS_CACHE_DIR = File.expand_path('../../.pygments-cache', __FILE__)
 FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)
