@@ -17,6 +17,7 @@ layout: default
         {% if page.author %}{% include post/author.html %}{% endif %}
         {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
         {% if page.categories %}{% include post/categories.html %}{% endif %}
+	{% if page.tags %}{% include post/tags.html %}{% endif %}
       </p>{% endif %}
       {% unless page.sharing == false %}
         {% include post/sharing.html %}
