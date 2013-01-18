@@ -23,9 +23,8 @@ categories:
   - Tags
   - Tags
 ---
-```
-
 Conteúdo do post
+```
  
 5. Commit as mudanças: git commit -am 'post: Titulo do seu post'
  
