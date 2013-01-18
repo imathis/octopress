@@ -10,6 +10,8 @@ git checkout -b post/titulo-do-seu-post
 rake new_post["Titulo do seu post"]
  
 4. Edite o seu post em source/_posts/ com o formato abaixo
+
+```
 ---
 published: false
 author: Seu Nome
@@ -21,7 +23,8 @@ categories:
   - Tags
   - Tags
 ---
- 
+```
+
 Conteúdo do post
  
 5. Commit as mudanças: git commit -am 'post: Titulo do seu post'
