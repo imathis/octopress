@@ -1,6 +1,34 @@
-## Publishing the blog
+## Criando seu post
 
-Just run `rake`.
+1. Clone o repositório
+git@github.com:Helabs/blog.git
+ 
+2. Cria uma branch com o titulo do seu post: 
+git checkout -b post/titulo-do-seu-post
+ 
+3. Crie o seu post:
+rake new_post["Titulo do seu post"]
+ 
+4. Edite o seu post em source/_posts/ com o formato abaixo
+---
+published: false
+author: Seu Nome
+layout: post
+title: "Título"
+date: AAAA-MM-DD HH:MM
+comments: true
+categories: 
+  - Tags
+  - Tags
+---
+ 
+Conteúdo do post
+ 
+5. Commit as mudanças: git commit -am 'post: Titulo do seu post'
+ 
+6. Push na branch: git push origin post/titulo-do-seu-post
+ 
+7. Mande um pull request
 
 ## License
 (The MIT License)
