@@ -202,6 +202,21 @@ task :new_page, :filename do |t, args|
   end
 end
 
+# usage rake edit[my-post]
+desc "Open specified post in $EDITOR."
+task :edit, :post_name do |t, args|
+  editor = ENV["EDITOR"] || system("echo $EDITOR")
+  if editor.nil? || editor.chomp == ""
+    raise RuntimeError, "An $EDITOR must be specified in your env."
+  end
+  if args.post_name
+    post_name = args.post_name
+  else
+    post_name = get_stdin("Enter a post name: ")
+  end
+  `$EDITOR #{source_dir}/_posts/#{post_name}.#{new_post_ext}`
+end
+
 # usage rake isolate[my-post]
 desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much quicker."
 task :isolate, :filename do |t, args|
