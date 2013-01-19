@@ -1,0 +1,16 @@
+---
+# ------------------------ #
+#       RSync Config       #
+#   deploy_default: rsync  #
+# ------------------------ #
+
+# Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
+ssh_user:      "user@domain.com"
+ssh_port:      "22"
+document_root: "~/website.com/"
+rsync_delete:  false
+rsync_args:    ""  # Any extra arguments to pass to rsync
+deploy_dir:    "_deploy"
+
+# Hidden "dot" files that should be included with the deployed site (see task copydot)
+copy_dot_files: []

@@ -14,6 +14,7 @@ group :development do
   gem 'stringex', '~> 1.4.0'
   gem 'liquid', '~> 2.3.0'
   gem 'rake-minify'
+  gem 'rdiscount', '~> 1.6.8'
 end
 
 gem 'sinatra', '~> 1.3.3'
