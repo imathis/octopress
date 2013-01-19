@@ -1,0 +1,22 @@
+---
+# --------------------------------- #
+#   Post/Page Share Configuration   #
+# --------------------------------- #
+
+# Delicious
+delicious_user:
+delicious_count: 3
+
+# Facebook Like
+facebook_like: false
+
+# Google+
+google_plus_one: false
+google_plus_one_size: medium
+
+# Pinboard
+pinboard_user:
+pinboard_count: 3
+
+# Twitter
+twitter_tweet_button: true
