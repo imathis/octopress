@@ -1,4 +1,5 @@
-== HEAD
+# HEAD
+
   * Major Enhancements
   * Minor Enhancements
   * Bug Fixes
