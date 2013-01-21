@@ -1,7 +1,7 @@
 require 'yaml'
 
 module Octopress
-  class Configuration
+  module Configuration
     def self.config_dir(*subdirs)
       File.absolute_path(File.join(File.dirname(__FILE__), '../', '../' '_config', *subdirs))
     end
