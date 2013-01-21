@@ -15,6 +15,7 @@ group :development do
   gem 'liquid', '~> 2.3.0'
   gem 'tzinfo', '~> 0.3.35'
   gem 'rake-minify'
+  gem 'rdiscount', '~> 1.6.8'
 end
 
 gem 'sinatra', '~> 1.3.3'
