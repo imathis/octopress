@@ -2,14 +2,14 @@
 author: Eduardo Fiorezi
 layout: post
 title: "Todo sisteminha começa pequenininho"
-date: 2013-01-21 18:00
+date: 2013-01-23 16:30
 comments: true
-categories: 
+categories:
   - Desenvolvimento ágil
   - Eduardo Fiorezi
 ---
 
-Recentemente em uma conversa informal, uma possível cliente gostaria de saber quanto tempo nossa equipe precisava para desenvolver um "sisteminha", com algumas features que ela já havia pesquisado em sistemas similares ao dela. 
+Recentemente em uma conversa informal, uma possível cliente gostaria de saber quanto tempo nossa equipe precisava para desenvolver um "sisteminha", com algumas features que ela já havia pesquisado em sistemas similares ao dela.
 
 Com uma folha A4 em mãos, ela nos mostrou todas funcionalidades descritas em uma lista:
 
