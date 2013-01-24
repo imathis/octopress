@@ -24,7 +24,7 @@ Ela me explicou todas funcionalidades e disse que aquela proposta foi orçada po
 
 Quem trabalha com desenvolvimento de software, sabe que este tipo de situação é normal, porque cada equipe, cada empresa entende e vende o desenvolvimento de software da sua maneira. Provavelmente essa empresa que estipulou 12 meses deixou uma pequena “folga” para não errar.
 
-A partir disso, tentei mudar a conversa para que ela pudesse entender como funciona o [desenvolvimento ágil](http://desenvolvimentoagil.com.br/) e como os projetos são desenvolvolvidos na HE:labs.
+A partir disso, tentei mudar a conversa para que ela pudesse entender como funciona o [desenvolvimento ágil](http://desenvolvimentoagil.com.br/) e como os projetos são desenvolvidos na HE:labs.
 
 O primeiro passo é faze-la entender que o desenvolvimento de qualquer sistema é complexo e começa com pequenos [passos de bebê](http://desenvolvimentoagil.com.br/xp/principios/passos_bebe/). O Facebook não começou grande como é hoje, começou com 1 desenvolvedor e muita persistência de algumas poucas pessoas que acreditavam na idéia.
 
