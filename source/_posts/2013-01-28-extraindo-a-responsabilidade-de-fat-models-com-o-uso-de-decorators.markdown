@@ -58,7 +58,7 @@ Com certeza melhor que a solução anterior, mas agora o nosso model está saben
 
 - alto acoplamento
 - testes mais lentos
-- mágia negra, perda de clareza
+- falta de coesão
 
 ### Definindo melhor as responsabilidades e assim deixando tudo mais claro
 
@@ -87,7 +87,7 @@ No código acima criamos uma classe em Ruby pura, conhecida também como PORO (P
 
 - **Baixo acoplamento**: `Post` lida com o banco de dados e `PostNotifyUsers` notifica os usuários. Cada um com sua responsabilidade.
 - **Testes mais rápidos**: Quando se cria um `Post` em seus testes ele não envia mais email
-- **Clareza**: Pois agora sabemos de tudo o que ocorre ao salvar um `Post`, ele apenas é salvo.
+- **Alta coesão**: Pois agora sabemos de tudo o que ocorre ao salvar um `Post`, ele apenas é salvo.
 
 Veja agora como ficaria o nosso controller usando o decorator que acabamos de criar:
 
@@ -95,9 +95,9 @@ Veja agora como ficaria o nosso controller usando o decorator que acabamos de cr
 class PostsController < ApplicationController
 
   def create
-    @post = PostNotifyUsers.new(Post.new(params[:post]))
+    @post = Post.new(params[:post])
 
-    if @post.save
+    if PostNotifyUsers.new(@post).save
       redirect_to(@post, :notice => 'Post was successfully created.') }
     else
       render :action => "new"
@@ -106,7 +106,7 @@ class PostsController < ApplicationController
 end
 ```
 
-Como pode ver ficou mais claro pois agora sei que nesta action eu salvo o post e notifico os usuários. Outra coisa legal é que o a nossa classe `PostNotifyUsers` [quacks](http://en.wikipedia.org/wiki/Duck_typing) como `User` sendo assim podemos continuar usando o `@post.save` em nosso controller.
+Como pode ver ficou mais claro pois agora sei que nesta action eu salvo o post e notifico os usuários. Outra coisa legal é que o a nossa classe `PostNotifyUsers` [quacks](http://en.wikipedia.org/wiki/Duck_typing) como `User` sendo assim podemos continuar usando o `#save` só que agora do `PostNotifyUsers` em nosso controller.
 
 O [Anézio](http://twitter.com/aneziojunior) falou recentemente sobre a extração de responsábilidades também no post [Cuidados com Observers e callbacks](http://helabs.com.br/blog/2013/01/14/cuidados-com-observers-e-callbacks/).
 
