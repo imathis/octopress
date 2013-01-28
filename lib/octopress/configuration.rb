@@ -46,13 +46,13 @@ module Octopress
     # Returns a Hash of all the configuration files, with each key being a symbol
     def self.read_configuration
       configs = {}
-      Dir.glob(self.config_dir('defaults', '**', '*.yml')) do |filename|
+      Dir.glob(self.config_dir('*.yml')) do |filename|
         file_yaml = YAML.load(File.read(filename))
         unless file_yaml.nil?
           configs = file_yaml.deep_merge(configs)
         end
       end
-      Dir.glob(self.config_dir('*.yml')) do |filename|
+      Dir.glob(self.config_dir('defaults', '**', '*.yml')) do |filename|
         file_yaml = YAML.load(File.read(filename))
         unless file_yaml.nil?
           configs = file_yaml.deep_merge(configs)
