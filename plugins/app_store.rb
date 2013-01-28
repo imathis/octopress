@@ -21,13 +21,13 @@ module Jekyll
       if parts = @text.match(/([\d]*)/)
         app_store_id = parts[1].strip
         json = get_app_local_data(app_store_id) || get_app_store_data(app_store_id)
-        html_output_for(json, app_store_id)
+        html_output_for(json)
       else
         ""
       end
     end
 
-    def html_output_for(code, app_store_id)
+    def html_output_for(code)
       code = code['results'][0]
 
       name = code['trackName']
