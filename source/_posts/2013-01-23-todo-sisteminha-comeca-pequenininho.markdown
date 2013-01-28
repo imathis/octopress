@@ -2,14 +2,14 @@
 author: Eduardo Fiorezi
 layout: post
 title: "Todo sisteminha começa pequenininho"
-date: 2013-01-21 18:00
+date: 2013-01-23 16:30
 comments: true
-categories: 
+categories:
   - Desenvolvimento ágil
   - Eduardo Fiorezi
 ---
 
-Recentemente em uma conversa informal, uma possível cliente gostaria de saber quanto tempo nossa equipe precisava para desenvolver um "sisteminha", com algumas features que ela já havia pesquisado em sistemas similares ao dela. 
+Recentemente em uma conversa informal, uma possível cliente gostaria de saber quanto tempo nossa equipe precisava para desenvolver um "sisteminha", com algumas features que ela já havia pesquisado em sistemas similares ao dela.
 
 Com uma folha A4 em mãos, ela nos mostrou todas funcionalidades descritas em uma lista:
 
@@ -24,7 +24,7 @@ Ela me explicou todas funcionalidades e disse que aquela proposta foi orçada po
 
 Quem trabalha com desenvolvimento de software, sabe que este tipo de situação é normal, porque cada equipe, cada empresa entende e vende o desenvolvimento de software da sua maneira. Provavelmente essa empresa que estipulou 12 meses deixou uma pequena “folga” para não errar.
 
-A partir disso, tentei mudar a conversa para que ela pudesse entender como funciona o [desenvolvimento ágil](http://desenvolvimentoagil.com.br/) e como os projetos são desenvolvolvidos na HE:labs.
+A partir disso, tentei mudar a conversa para que ela pudesse entender como funciona o [desenvolvimento ágil](http://desenvolvimentoagil.com.br/) e como os projetos são desenvolvidos na HE:labs.
 
 O primeiro passo é faze-la entender que o desenvolvimento de qualquer sistema é complexo e começa com pequenos [passos de bebê](http://desenvolvimentoagil.com.br/xp/principios/passos_bebe/). O Facebook não começou grande como é hoje, começou com 1 desenvolvedor e muita persistência de algumas poucas pessoas que acreditavam na idéia.
 
