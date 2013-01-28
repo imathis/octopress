@@ -29,7 +29,7 @@ Como fazemos? Ao conversar com o cliente sobre a ideia dele, nós detectamos o c
 [Uma dica para sucesso em software.](http://sucessoemsoftware.com.br/)
 
 ## Rails Template e Heroku <3
-Aqui na HE:labs utilizamos o Heroku como Cloud SaaS para praticamente todos os nossos projetos. Perder pouco tempo no setup dos projetos ajuda bastante. Não precisamos ficar configurando praticamente nada. E com a ajuda do nosso rails-template (link do rails-template), que adiciona mais algumas configurações e gems default dos nossos projetos, conseguimos em menos de 30 minutos colocar a aplicação online.
+Aqui na HE:labs utilizamos o Heroku como Cloud SaaS para praticamente todos os nossos projetos. Perder pouco tempo no setup dos projetos ajuda bastante. Não precisamos ficar configurando praticamente nada. E com a ajuda do nosso [rails-template](https://github.com/Helabs/rails-template), que adiciona mais algumas configurações e gems default dos nossos projetos, conseguimos em menos de 30 minutos colocar a aplicação online.
 
 O Rodrigo Pinto tem uma talk bacana sobre Platform as a Service que você pode ver [aqui](https://speakerdeck.com/rodrigoospinto/paas-plataform-as-a-service)
 
