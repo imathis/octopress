@@ -2,13 +2,14 @@
 author: Andre Cytryn
 layout: post
 title: "Retrospectiva - evento Kolaborativa"
-date: 2013-01-29 09:46
+date: 2013-01-29 10:30
 comments: true
 categories:
   - eventos
   - Kolaborativa
   - Andre Cytryn
 ---
+
 Neste último sábado dia 26 de janeiro, fui ao [Kolaborativa][ko], um evento que tem como intenção criar uma comunidade ativa de Profissionais da Web. A ideia é que seja um evento mensal que reúna desde o programador ao profissional de mídias sociais em meio de palestras, mesas de discussão, networking, etc.
 <!--more-->
 
