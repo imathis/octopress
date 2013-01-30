@@ -5,10 +5,10 @@ title: "Extraindo a responsabilidade de Fat Models com o uso de Decorators no Ra
 date: 2013-01-28 10:30
 comments: true
 categories: 
-  - Mauro George
-  - Decorator
-  - Model
-  - Rails
+  - mauro george
+  - decorator
+  - model
+  - rails
 ---
 
 

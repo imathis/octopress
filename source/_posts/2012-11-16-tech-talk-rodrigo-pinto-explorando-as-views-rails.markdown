@@ -7,8 +7,8 @@ comments: true
 categories:
   - tech talks
   - rails
-  - Rodrigo Pinto
-  - Pedro Marins
+  - rodrigo pinto
+  - pedro marins
 ---
 
 Hoje recomeçamos as Tech Talks internas aqui na HE:Labs! Depois de algum tempo sem acontercer, as Tech Talks voltaram com tudo, com o [Rodrigo Pinto][3] avassalando explorando as views do Rails. E para animar a galera a Tech Talk foi regada a pizza e refrigerante.

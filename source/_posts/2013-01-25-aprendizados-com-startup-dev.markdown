@@ -5,8 +5,8 @@ title: "Aprendizados com o Startup DEV"
 date: 2013-01-25 10:00
 comments: true
 categories:
-  - Startup DEV
-  - Desenvolvimento Ágil
+  - startup dev
+  - desenvolvimento agil
 ---
 
 O [Startup DEV](http://startupdev.com.br) é um modelo de desenvolvimento bastante fora do padrão do mercado. Afinal, são dois dias e no final sai um produto funcional. Esses dois dias proporcionam experiências e aprendizados importantes. Vou listar alguns pontos neste post.

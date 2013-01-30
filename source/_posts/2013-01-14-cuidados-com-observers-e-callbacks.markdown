@@ -5,9 +5,9 @@ title: "Cuidados com Observers e callbacks"
 date: 2013-01-14 16:30
 comments: true
 categories: 
-  - Anézio Marques
-  - Rails 4
-  - Observer
+  - anezio marques
+  - rails 4
+  - observer
   - callbacks
 
 ---

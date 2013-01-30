@@ -7,8 +7,8 @@ comments: true
 categories:
   - tech talks
   - rails
-  - Rodrigo Martins
-  - Pedro Marins
+  - rodrigo martins
+  - pedro marins
 ---
 
 Hoje rolou a segunda edição das Tech Talks da HE:labs! [Rodrigo Martins][2] avassalou comparando códigos bem escritos. Novamente a Tech Talk foi regada a pizza e refrigerante.

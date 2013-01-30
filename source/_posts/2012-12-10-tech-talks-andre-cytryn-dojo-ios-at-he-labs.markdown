@@ -6,10 +6,10 @@ date: 2012-12-10 11:47
 comments: true
 categories:
   - tech talks
-  - iOS
+  - ios
   - dojo
-  - André Cytryn
-  - Mauro George
+  - andre cytryn
+  - mauro george
 ---
 
 Mais uma sexta feira, mais um evento na HE:labs.

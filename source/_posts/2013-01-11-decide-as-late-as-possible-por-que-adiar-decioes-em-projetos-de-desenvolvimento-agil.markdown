@@ -5,12 +5,12 @@ title: "'Decide as late as possible' - Por que adiar decisões em projetos de de
 date: 2013-01-11 10:47
 comments: true
 categories:
-  - André Cytryn
-  - Lean
-  - Lean Startup
-  - Agile
-  - Decide as late as possible
-  - Desenvolvimento Agil
+  - andre cytryn
+  - lean
+  - lean startup
+  - agile
+  - decide as late as possible
+  - desenvolvimento agil
 ---
 
 O conceito de "Decide as late as possible" faz parte de um dos princípios ["Lean"][1] e consiste em prorrogar decisões até o momento em que elas são realmente necessárias.

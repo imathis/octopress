@@ -5,9 +5,9 @@ title: "HE:labs in Rails Girls RJ"
 date: 2013-01-18 12:20
 comments: true
 categories: 
-  - Rails Girls RJ 
-  - Ramon Page
-  - Rodrigo Pinto
+  - railsgirls
+  - ramon page
+  - rodrigo pinto
   - eventos
 ---
 ![image](/images/posts/rails-gils-logo.png)
