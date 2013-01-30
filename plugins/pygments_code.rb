@@ -21,7 +21,11 @@ module HighlightCode
       if File.exist?(path)
         highlighted_code = File.read(path)
       else
-        highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
+        begin
+          highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
+        rescue Exception => e
+          highlighted_code = Pygments.highlight(code, :lexer => 'text', :formatter => 'html', :options => {:encoding => 'utf-8'})
+        end
         File.open(path, 'w') {|f| f.print(highlighted_code) }
       end
     else
