@@ -25,6 +25,6 @@
   {% include custom/head.html %}
   {% include google_analytics.html %}
   {% include gauges_analytics.html %}
-  {% unless favicon %}{% capture favicon %}{{ root_url }}/octopress-favicon.png{% endcapture %} {% endunless %}
-  <link href="{{favicon}}" rel="icon">
+  {% unless favicon %}{% capture favicon %}{{ root_url }}/octopress-favicon.ico{% endcapture %} {% endunless %}
+  <link href="{{favicon}}" rel="shortcut icon" type="image/x-icon">
 </head>
