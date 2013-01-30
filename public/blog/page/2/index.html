@@ -9,7 +9,11 @@
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="I have been working with ZHell pretty much since the first day that I have been using a Mac. The use I make of to grew with time and definitely the &hellip;">
+  <meta name="description" content="a&#8211;
+layout: post
+title: &#8220;run octopress new_post rake on zshell&#8221;
+date: 2012-07-27 22:53
+comments: true categories: general This blog &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,125 +81,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/">Project Specific Settings Using Zshell and Dotfiles</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-29T13:54:00+03:00" pubdate data-updated="true">Jul 29<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have been working with ZHell pretty much since the first day that I have been using a Mac.</p>
-
-<p>The use I make of to grew with time and definitely the biggest switch was that I moved to using dotfiles for settings in a single location.</p>
-
-<p>I forked <a href="http://zachholman.com/">Zach Holman</a> dot files <a href="http://github.com/kensodev/dotfiles">here</a>, and I have been adjusting and customizing it ever since.</p>
-
-<p>I am using Ruby/Rails for my everyday work, both for consulting and open source projects, the one thing that I see people do and I don&#8217;t like is committing configuration files with password and sensitive information into source control.</p>
-
-<p>When I can, I try to avoid it, so I developed a very easy way to manage my per-project environment variable without going through a huge file.</p>
-
-<p>All of my zsh files are located in a single folder in my dotfiles.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>├── aliases.zsh
-</span><span class='line'>├── completion.zsh
-</span><span class='line'>├── config.zsh
-</span><span class='line'>├── functions
-</span><span class='line'>│   ├── _boom
-</span><span class='line'>│   ├── _brew
-</span><span class='line'>│   ├── _c
-</span><span class='line'>│   ├── _git-rm
-</span><span class='line'>│   ├── _h
-</span><span class='line'>│   ├── _rake
-</span><span class='line'>│   ├── c
-</span><span class='line'>│   ├── gf
-</span><span class='line'>│   ├── gitdays
-</span><span class='line'>│   ├── h
-</span><span class='line'>│   ├── last_modified
-</span><span class='line'>│   ├── newtab
-</span><span class='line'>│   ├── savepath
-</span><span class='line'>│   ├── smartextract
-</span><span class='line'>│   ├── start_project
-</span><span class='line'>│   ├── verbose_completion
-</span><span class='line'>│   └── zgitinit
-</span><span class='line'>├── hidden_aliases.zsh
-</span><span class='line'>├── projects
-</span><span class='line'>│   ├── boto_project.zsh
-</span><span class='line'>│   └── octopus_project.zsh
-</span><span class='line'>├── prompt.zsh
-</span><span class='line'>├── window.zsh
-</span><span class='line'>└── zshrc.symlink</span></code></pre></td></tr></table></div></figure>
-
-
-<p>As you can see, there&#8217;s a special folder there called <code>projects</code>, in which I put a lll of my project specific setting like tokens, passwords and other things.</p>
-
-<p>For example, here&#8217;s what a project file might look like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">OCTOPUS_POSTGRES_USER</span><span class="o">=</span>postgres
-</span><span class='line'><span class="nb">export </span><span class="nv">OCTOPUS_POSTGRES_PASSWORD</span><span class="o">=</span>some_password
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>One thing that is very easy to forget, is that if you open source your dot files (and you should) don&#8217;t forget to ignore those files and don&#8217;t commit them.</p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -288,10 +173,6 @@ comments: true</p>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/">Using MongoDB aggregation framework #1</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works/">RailsConf 2012 talk - How Gogobot works</a>
       </li>
     
@@ -301,6 +182,10 @@ comments: true</p>
     
       <li class="post">
         <a href="/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/">searching through the history of commands you ran in terminal</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/09/making-nokogiri-install-again-on-mountain-lion/">Making Nokogiri install again on Mountain Lion</a>
       </li>
     
   </ul>

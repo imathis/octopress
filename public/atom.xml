@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Tzurel]]></title>
   <link href="http://avi.io/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2013-01-30T20:39:35+02:00</updated>
+  <updated>2013-01-30T20:40:36+02:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -78,33 +78,6 @@
 <h2>SO?</h2>
 
 <p>More then anything, this post is a callout for discussion with anyone using similar solution with similar scale and can assist, I know I would love to brainstorm on how to solve this problem.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using MongoDB aggregation framework #1]]></title>
-    <link href="http://avi.io/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/"/>
-    <updated>2013-01-16T21:09:00+02:00</updated>
-    <id>http://avi.io/blog/2013/01/16/using-mongodb-aggregation-framework-number-1</id>
-    <content type="html"><![CDATA[<p>A little while ago, I started implementing the graph behind <a href="http://gogobot.com">Gogobot</a>.</p>
-
-<p>When you see any page on the site (Logged in), all of what you see is completely personalized to you and is based on what your friends are doing/done before.</p>
-
-<p>Whether your friends are on Gogobot or not, if you connect to Facebook/Foursquare we will calculate the score for all places based on your friends.</p>
-
-<p>Unlike other sites, we will promote what your friends are doing and not what random users are doing, this way, when you see a review written by a face you recognize, the likelihood for fraudulent reviews is slim.</p>
-
-<p>We had this graph since day one, but as we scaled up and started taking more and more things into account while calculating the score, we needed a different solution.</p>
-
-<p>A few months ago, I sat down to plan this solution and the architecture behind it basically from scratch.</p>
-
-<p>I will not get into the details here, posts on this subject are probably coming soon, just wanted to lay out a few examples of how I&#8217;m using the new <a href="http://docs.mongodb.org/manual/applications/aggregation/">MongoDB aggregation framework</a>.</p>
-
-<p>The MongoDB aggregation framework is a new way to aggregate data from MongoDB without actually using MapReduce or needing to export the data and using <a href="http://aws.amazon.com/elasticmapreduce/">Amazon ElasticMapReduce</a>.</p>
-
-<p>While we do use those solutions for more complex stuff, for a lot of things, we use the Aggregation framework and it&#8217;s proven to be a pretty powerful solution.</p>
-
-<p>OK, so here&#8217;s a nice example of the power of the Aggregation Framework (including benchmarks)</p>
 ]]></content>
   </entry>
   
