@@ -6,14 +6,14 @@ comments: true
 categories: ["Ruby", "Ruby on rails", "MongoDB"]
 ---
 
-A few weeks back, we started slowly upgrading all of our queues to work with Sidekiq.
+A few weeks back, we started slowly upgrading all of our queues at [Gogobot](http://www.gogobot.com) to work with [Sidekiq](https://github.com/mperham/sidekiq).
 
-Posts on how awesome the experience was and how much better Sidekiq is from Resque coming soon, though with all the good came some bad.
+Posts on how awesome the experience was and how much better Sidekiq is from [Resque](http://github.com/defunkt/sidekiq) coming soon, though with all the good came some bad.
 
 Summary of the solution
 -----------------------
 
-With Sidekiq, we are processing around 25X more jobs than what we were doing with Resque, processing around 15,000,000 jobs per day, at paces of over 1K per second at times (at peak we go up well past that)
+With Sidekiq, we are processing around **25X more** jobs than what we were doing with Resque, processing around 15,000,000 jobs per day, at paces of over 1K per second at times (at peak we go up well past that)
 
 This is how many jobs we processed today…
 
