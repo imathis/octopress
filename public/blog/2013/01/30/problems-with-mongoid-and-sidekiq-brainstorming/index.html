@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Ruby - Avi Tzurel</title>
+  <title>Problems with Mongoid and Sidekiq- Brainstorming - Avi Tzurel</title>
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="Category: Ruby">
+  <meta name="description" content="A few weeks back, we started slowly upgrading all of our queues to work with Sidekiq. Posts on how awesome the experience was and how much better &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avi.ioblog/categories/ruby/">
+  <link rel="canonical" href="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -76,109 +76,154 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Ruby</h1>
+    
+      <h1 class="entry-title">Problems With Mongoid and Sidekiq- Brainstorming</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-30T20:13:00+02:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>A few weeks back, we started slowly upgrading all of our queues to work with Sidekiq.</p>
 
-  
-  <h2>2013</h2>
+<p>Posts on how awesome the experience was and how much better Sidekiq is from Resque coming soon, though with all the good came some bad.</p>
 
-<article>
-  
-<h1><a href="/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">Problems with Mongoid and Sidekiq- Brainstorming</a></h1>
-<time datetime="2013-01-30T20:13:00+02:00" pubdate><span class='month'>Jan</span> <span class='day'>30</span> <span class='year'>2013</span></time>
+<h2>Summary of the solution</h2>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/mongodb/'>MongoDB</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-on-rails/'>Ruby on rails</a></span>
-</footer>
+<p>With Sidekiq, we are processing around 25X more jobs than what we were doing with Resque, processing around 15,000,000 jobs per day, at paces of over 1K per second at times (at peak we go up well past that)</p>
 
+<p>This is how many jobs we processed today…</p>
 
-</article>
+<p><img src="http://d.pr/i/O9aU+" alt="Sidekiq history graph for today" /></p>
 
+<p>And this is a snapshot of our realtime graph</p>
 
+<p><img src="http://d.pr/i/7Fkr+" alt="Realtime graph snapshot" /></p>
 
-<article>
-  
-<h1><a href="/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/">Using MongoDB aggregation framework #1</a></h1>
-<time datetime="2013-01-16T21:09:00+02:00" pubdate><span class='month'>Jan</span> <span class='day'>16</span> <span class='year'>2013</span></time>
+<p>On the MongoDB side we are working with Mongoid and we have a shared environment, 9 shards with 3 replicas in each shard, all running through 2 routers.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/general/'>General</a>, <a class='category' href='/blog/categories/mongodb/'>MongoDB</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-on-rails/'>Ruby on Rails</a></span>
-</footer>
+<p>Our production mongoid config looks like this</p>
 
-
-</article>
-
-
-
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/">organizing your specs into groups and running them separately</a></h1>
-<time datetime="2012-08-19T13:57:00+03:00" pubdate><span class='month'>Aug</span> <span class='day'>19</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/general/'>General</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/on/'>on</a>, <a class='category' href='/blog/categories/rails-/'>rails,</a></span>
-</footer>
-
-
-</article>
-
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+</span><span class='line'>  <span class="l-Scalar-Plain">op_timeout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
+</span><span class='line'>  <span class="l-Scalar-Plain">connection_timeout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
+</span><span class='line'>  <span class="l-Scalar-Plain">sessions</span><span class="p-Indicator">:</span>
+</span><span class='line'>    <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">hosts</span><span class="p-Indicator">:</span>
+</span><span class='line'>        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">HOST_NAME:27017</span> <span class="c1">#Single router R0</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">USER_NAME</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">PASSWORD</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">DATABASE_NAME</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+</span><span class='line'>        <span class="l-Scalar-Plain">consistency</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">:eventual</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<article>
-  
-<h1><a href="/blog/2012/08/09/making-nokogiri-install-again-on-mountain-lion/">Making Nokogiri install again on Mountain Lion</a></h1>
-<time datetime="2012-08-09T00:04:00+03:00" pubdate><span class='month'>Aug</span> <span class='day'>09</span> <span class='year'>2012</span></time>
+<p>We are using latest versions of all relevant gems (Sidekiq, Mongoid, Moped, Redis)</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/on/'>on</a>, <a class='category' href='/blog/categories/rails/'>rails</a></span>
-</footer>
+<h2>All seems fine right? What&#8217;s the problem?</h2>
 
+<p>The problem is that we have too many connections opening and closing to our mongo instances. (~25-40 new connections per second).</p>
 
-</article>
+<p>Each time a job is picked up, a connection to Mongo is opened and when the job is done, this connection is closed (using Kiqstand middleware).</p>
 
+<p>This is causing huge loads on our router server, and causing mongo to run out of file descriptors at times.</p>
 
+<h2>SO?</h2>
 
-<article>
-  
-<h1><a href="/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit/">Creating self starting worker machines for fun and profit</a></h1>
-<time datetime="2012-08-08T13:49:00+03:00" pubdate><span class='month'>Aug</span> <span class='day'>08</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/open/'>Open</a>, <a class='category' href='/blog/categories/rails-/'>Rails,</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/source/'>Source</a>, <a class='category' href='/blog/categories/on/'>on</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/">run rake task in the background and log to file</a></h1>
-<time datetime="2012-07-30T02:16:00+03:00" pubdate><span class='month'>Jul</span> <span class='day'>30</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/open/'>Open</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/general-/'>general,</a>, <a class='category' href='/blog/categories/on/'>on</a>, <a class='category' href='/blog/categories/rails-/'>rails,</a>, <a class='category' href='/blog/categories/source/'>source</a></span>
-</footer>
-
-
-</article>
-
+<p>More then anything, this post is a callout for discussion with anyone using similar solution with similar scale and can assist, I know I would love to brainstorm on how to solve this problem.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Avi Tzurel</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-30T20:13:00+02:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/mongodb/'>MongoDB</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-on-rails/'>Ruby on rails</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/" data-via="KensoDev" data-counturl="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/" title="Previous Post: Using MongoDB aggregation framework #1">&laquo; Using MongoDB aggregation framework #1</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -326,7 +371,10 @@
       var disqus_shortname = 'avi-io';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/';
+        var disqus_url = 'http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

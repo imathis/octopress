@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby on rails | Avi Tzurel]]></title>
+  <link href="http://avi.io/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
+  <link href="http://avi.io/"/>
+  <updated>2013-01-30T20:39:35+02:00</updated>
+  <id>http://avi.io/</id>
+  <author>
+    <name><![CDATA[Avi Tzurel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Problems with Mongoid and Sidekiq- Brainstorming]]></title>
+    <link href="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/"/>
+    <updated>2013-01-30T20:13:00+02:00</updated>
+    <id>http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming</id>
+    <content type="html"><![CDATA[<p>A few weeks back, we started slowly upgrading all of our queues to work with Sidekiq.</p>
+
+<p>Posts on how awesome the experience was and how much better Sidekiq is from Resque coming soon, though with all the good came some bad.</p>
+
+<h2>Summary of the solution</h2>
+
+<p>With Sidekiq, we are processing around 25X more jobs than what we were doing with Resque, processing around 15,000,000 jobs per day, at paces of over 1K per second at times (at peak we go up well past that)</p>
+
+<p>This is how many jobs we processed today…</p>
+
+<p><img src="http://d.pr/i/O9aU+" alt="Sidekiq history graph for today" /></p>
+
+<p>And this is a snapshot of our realtime graph</p>
+
+<p><img src="http://d.pr/i/7Fkr+" alt="Realtime graph snapshot" /></p>
+
+<p>On the MongoDB side we are working with Mongoid and we have a shared environment, 9 shards with 3 replicas in each shard, all running through 2 routers.</p>
+
+<p>Our production mongoid config looks like this</p>
+
+<p>```yaml
+production:
+  op_timeout: 3
+  connection_timeout: 3
+  sessions:</p>
+
+<pre><code>default:
+  hosts:
+    - HOST_NAME:27017 #Single router R0
+  username: USER_NAME
+  password: PASSWORD
+  database: DATABASE_NAME
+  options:
+    consistency: :eventual
+</code></pre>
+
+<p>```</p>
+
+<p>We are using latest versions of all relevant gems (Sidekiq, Mongoid, Moped, Redis)</p>
+
+<h2>All seems fine right? What's the problem?</h2>
+
+<p>The problem is that we have too many connections opening and closing to our mongo instances. (~25-40 new connections per second).</p>
+
+<p>Each time a job is picked up, a connection to Mongo is opened and when the job is done, this connection is closed (using Kiqstand middleware).</p>
+
+<p>This is causing huge loads on our router server, and causing mongo to run out of file descriptors at times.</p>
+
+<h2>SO?</h2>
+
+<p>More then anything, this post is a callout for discussion with anyone using similar solution with similar scale and can assist, I know I would love to brainstorm on how to solve this problem.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -51,15 +51,23 @@
         <lastmod>2012-11-13T18:45:08+02:00</lastmod>
     </url>
     <url>
+        <loc>http://avi.io/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/</loc>
+        <lastmod>2013-01-30T20:27:46+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/</loc>
+        <lastmod>2013-01-30T20:39:37+02:00</lastmod>
+    </url>
+    <url>
         <loc>http://avi.io/about/</loc>
         <lastmod>2012-07-29T14:20:33+03:00</lastmod>
     </url>
     <url>
         <loc>http://avi.io/blog/archives/</loc>
-        <lastmod>2012-11-13T18:45:08+02:00</lastmod>
+        <lastmod>2013-01-30T20:39:37+02:00</lastmod>
     </url>
     <url>
         <loc>http://avi.io/</loc>
-        <lastmod>2012-11-13T18:45:08+02:00</lastmod>
+        <lastmod>2013-01-30T20:39:37+02:00</lastmod>
     </url>
 </urlset>

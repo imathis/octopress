@@ -9,8 +9,7 @@
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="My slides from the talk I gave at RailsConf Israel 2012. Enjoy!
-">
+  <meta name="description" content="A few weeks back, we started slowly upgrading all of our queues to work with Sidekiq. Posts on how awesome the experience was and how much better &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +77,159 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">Problems With Mongoid and Sidekiq- Brainstorming</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-30T20:13:00+02:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A few weeks back, we started slowly upgrading all of our queues to work with Sidekiq.</p>
+
+<p>Posts on how awesome the experience was and how much better Sidekiq is from Resque coming soon, though with all the good came some bad.</p>
+
+<h2>Summary of the solution</h2>
+
+<p>With Sidekiq, we are processing around 25X more jobs than what we were doing with Resque, processing around 15,000,000 jobs per day, at paces of over 1K per second at times (at peak we go up well past that)</p>
+
+<p>This is how many jobs we processed today…</p>
+
+<p><img src="http://d.pr/i/O9aU+" alt="Sidekiq history graph for today" /></p>
+
+<p>And this is a snapshot of our realtime graph</p>
+
+<p><img src="http://d.pr/i/7Fkr+" alt="Realtime graph snapshot" /></p>
+
+<p>On the MongoDB side we are working with Mongoid and we have a shared environment, 9 shards with 3 replicas in each shard, all running through 2 routers.</p>
+
+<p>Our production mongoid config looks like this</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+</span><span class='line'>  <span class="l-Scalar-Plain">op_timeout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
+</span><span class='line'>  <span class="l-Scalar-Plain">connection_timeout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
+</span><span class='line'>  <span class="l-Scalar-Plain">sessions</span><span class="p-Indicator">:</span>
+</span><span class='line'>    <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">hosts</span><span class="p-Indicator">:</span>
+</span><span class='line'>        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">HOST_NAME:27017</span> <span class="c1">#Single router R0</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">USER_NAME</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">PASSWORD</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">DATABASE_NAME</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+</span><span class='line'>        <span class="l-Scalar-Plain">consistency</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">:eventual</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We are using latest versions of all relevant gems (Sidekiq, Mongoid, Moped, Redis)</p>
+
+<h2>All seems fine right? What&#8217;s the problem?</h2>
+
+<p>The problem is that we have too many connections opening and closing to our mongo instances. (~25-40 new connections per second).</p>
+
+<p>Each time a job is picked up, a connection to Mongo is opened and when the job is done, this connection is closed (using Kiqstand middleware).</p>
+
+<p>This is causing huge loads on our router server, and causing mongo to run out of file descriptors at times.</p>
+
+<h2>SO?</h2>
+
+<p>More then anything, this post is a callout for discussion with anyone using similar solution with similar scale and can assist, I know I would love to brainstorm on how to solve this problem.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/">Using MongoDB Aggregation Framework #1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-16T21:09:00+02:00" pubdate data-updated="true">Jan 16<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A little while ago, I started implementing the graph behind <a href="http://gogobot.com">Gogobot</a>.</p>
+
+<p>When you see any page on the site (Logged in), all of what you see is completely personalized to you and is based on what your friends are doing/done before.</p>
+
+<p>Whether your friends are on Gogobot or not, if you connect to Facebook/Foursquare we will calculate the score for all places based on your friends.</p>
+
+<p>Unlike other sites, we will promote what your friends are doing and not what random users are doing, this way, when you see a review written by a face you recognize, the likelihood for fraudulent reviews is slim.</p>
+
+<p>We had this graph since day one, but as we scaled up and started taking more and more things into account while calculating the score, we needed a different solution.</p>
+
+<p>A few months ago, I sat down to plan this solution and the architecture behind it basically from scratch.</p>
+
+<p>I will not get into the details here, posts on this subject are probably coming soon, just wanted to lay out a few examples of how I&#8217;m using the new <a href="http://docs.mongodb.org/manual/applications/aggregation/">MongoDB aggregation framework</a>.</p>
+
+<p>The MongoDB aggregation framework is a new way to aggregate data from MongoDB without actually using MapReduce or needing to export the data and using <a href="http://aws.amazon.com/elasticmapreduce/">Amazon ElasticMapReduce</a>.</p>
+
+<p>While we do use those solutions for more complex stuff, for a lot of things, we use the Aggregation framework and it&#8217;s proven to be a pretty powerful solution.</p>
+
+<p>OK, so here&#8217;s a nice example of the power of the Aggregation Framework (including benchmarks)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1098,192 +1250,9 @@ In a vim session I mapped a key like this</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/">Project Specific Settings Using Zshell and Dotfiles</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-29T13:54:00+03:00" pubdate data-updated="true">Jul 29<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have been working with ZHell pretty much since the first day that I have been using a Mac.</p>
-
-<p>The use I make of to grew with time and definitely the biggest switch was that I moved to using dotfiles for settings in a single location.</p>
-
-<p>I forked <a href="http://zachholman.com/">Zach Holman</a> dot files <a href="http://github.com/kensodev/dotfiles">here</a>, and I have been adjusting and customizing it ever since.</p>
-
-<p>I am using Ruby/Rails for my everyday work, both for consulting and open source projects, the one thing that I see people do and I don&#8217;t like is committing configuration files with password and sensitive information into source control.</p>
-
-<p>When I can, I try to avoid it, so I developed a very easy way to manage my per-project environment variable without going through a huge file.</p>
-
-<p>All of my zsh files are located in a single folder in my dotfiles.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>├── aliases.zsh
-</span><span class='line'>├── completion.zsh
-</span><span class='line'>├── config.zsh
-</span><span class='line'>├── functions
-</span><span class='line'>│   ├── _boom
-</span><span class='line'>│   ├── _brew
-</span><span class='line'>│   ├── _c
-</span><span class='line'>│   ├── _git-rm
-</span><span class='line'>│   ├── _h
-</span><span class='line'>│   ├── _rake
-</span><span class='line'>│   ├── c
-</span><span class='line'>│   ├── gf
-</span><span class='line'>│   ├── gitdays
-</span><span class='line'>│   ├── h
-</span><span class='line'>│   ├── last_modified
-</span><span class='line'>│   ├── newtab
-</span><span class='line'>│   ├── savepath
-</span><span class='line'>│   ├── smartextract
-</span><span class='line'>│   ├── start_project
-</span><span class='line'>│   ├── verbose_completion
-</span><span class='line'>│   └── zgitinit
-</span><span class='line'>├── hidden_aliases.zsh
-</span><span class='line'>├── projects
-</span><span class='line'>│   ├── boto_project.zsh
-</span><span class='line'>│   └── octopus_project.zsh
-</span><span class='line'>├── prompt.zsh
-</span><span class='line'>├── window.zsh
-</span><span class='line'>└── zshrc.symlink</span></code></pre></td></tr></table></div></figure>
-
-
-<p>As you can see, there&#8217;s a special folder there called <code>projects</code>, in which I put a lll of my project specific setting like tokens, passwords and other things.</p>
-
-<p>For example, here&#8217;s what a project file might look like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">OCTOPUS_POSTGRES_USER</span><span class="o">=</span>postgres
-</span><span class='line'><span class="nb">export </span><span class="nv">OCTOPUS_POSTGRES_PASSWORD</span><span class="o">=</span>some_password
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>One thing that is very easy to forget, is that if you open source your dot files (and you should) don&#8217;t forget to ignore those files and don&#8217;t commit them.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/27/run-octopress-new-post-rake-on-zshell/">Run Octopress New Post Rake on Zshell</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-27T00:00:00+03:00" pubdate data-updated="true">Jul 27<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/07/27/run-octopress-new-post-rake-on-zshell/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>a&#8211;
-layout: post
-title: &#8220;run octopress new_post rake on zshell&#8221;
-date: 2012-07-27 22:53
-comments: true</p>
-
-<h2>categories: general</h2>
-
-<p>This blog is running on <a href="https://github.com/imathis/octopress">Octopress</a>, which is an awesome implementation of a blogging engine in Ruby.</p>
-
-<p>To create a new post, you need to run a rake task like so:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;some awesome post title&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The problem is, that in zsh, those are escaped and you get an error.</p>
-
-<p>I used to do <code>new_post</code> without anything and then edit the file name and the title inside the file BUT there&#8217;s actually a better way.</p>
-
-<p>You can either run <code>noglob rake</code> or you can run the rake like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake <span class="s2">&quot;new_post[some awesome post title]&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Enjoy!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -1302,6 +1271,14 @@ comments: true</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">Problems with Mongoid and Sidekiq- Brainstorming</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/">Using MongoDB aggregation framework #1</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works/">RailsConf 2012 talk - How Gogobot works</a>
       </li>
     
@@ -1311,14 +1288,6 @@ comments: true</p>
     
       <li class="post">
         <a href="/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/">searching through the history of commands you ran in terminal</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/09/making-nokogiri-install-again-on-mountain-lion/">Making Nokogiri install again on Mountain Lion</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit/">Creating self starting worker machines for fun and profit</a>
       </li>
     
   </ul>
@@ -1421,7 +1390,7 @@ comments: true</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Avi Tzurel -
+  Copyright &copy; 2013 - Avi Tzurel -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

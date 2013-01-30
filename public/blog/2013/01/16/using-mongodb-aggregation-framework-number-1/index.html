@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Ruby - Avi Tzurel</title>
+  <title>Using MongoDB aggregation framework #1 - Avi Tzurel</title>
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="Category: Ruby">
+  <meta name="description" content="A little while ago, I started implementing the graph behind Gogobot. When you see any page on the site (Logged in), all of what you see is completely &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avi.ioblog/categories/ruby/">
+  <link rel="canonical" href="http://avi.io/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -76,109 +76,115 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Ruby</h1>
+    
+      <h1 class="entry-title">Using MongoDB Aggregation Framework #1</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-16T21:09:00+02:00" pubdate data-updated="true">Jan 16<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>A little while ago, I started implementing the graph behind <a href="http://gogobot.com">Gogobot</a>.</p>
 
-  
-  <h2>2013</h2>
+<p>When you see any page on the site (Logged in), all of what you see is completely personalized to you and is based on what your friends are doing/done before.</p>
 
-<article>
-  
-<h1><a href="/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">Problems with Mongoid and Sidekiq- Brainstorming</a></h1>
-<time datetime="2013-01-30T20:13:00+02:00" pubdate><span class='month'>Jan</span> <span class='day'>30</span> <span class='year'>2013</span></time>
+<p>Whether your friends are on Gogobot or not, if you connect to Facebook/Foursquare we will calculate the score for all places based on your friends.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/mongodb/'>MongoDB</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-on-rails/'>Ruby on rails</a></span>
-</footer>
+<p>Unlike other sites, we will promote what your friends are doing and not what random users are doing, this way, when you see a review written by a face you recognize, the likelihood for fraudulent reviews is slim.</p>
 
+<p>We had this graph since day one, but as we scaled up and started taking more and more things into account while calculating the score, we needed a different solution.</p>
 
-</article>
+<p>A few months ago, I sat down to plan this solution and the architecture behind it basically from scratch.</p>
 
+<p>I will not get into the details here, posts on this subject are probably coming soon, just wanted to lay out a few examples of how I&#8217;m using the new <a href="http://docs.mongodb.org/manual/applications/aggregation/">MongoDB aggregation framework</a>.</p>
 
+<p>The MongoDB aggregation framework is a new way to aggregate data from MongoDB without actually using MapReduce or needing to export the data and using <a href="http://aws.amazon.com/elasticmapreduce/">Amazon ElasticMapReduce</a>.</p>
 
-<article>
-  
-<h1><a href="/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/">Using MongoDB aggregation framework #1</a></h1>
-<time datetime="2013-01-16T21:09:00+02:00" pubdate><span class='month'>Jan</span> <span class='day'>16</span> <span class='year'>2013</span></time>
+<p>While we do use those solutions for more complex stuff, for a lot of things, we use the Aggregation framework and it&#8217;s proven to be a pretty powerful solution.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/general/'>General</a>, <a class='category' href='/blog/categories/mongodb/'>MongoDB</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-on-rails/'>Ruby on Rails</a></span>
-</footer>
-
-
-</article>
-
-
-
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/">organizing your specs into groups and running them separately</a></h1>
-<time datetime="2012-08-19T13:57:00+03:00" pubdate><span class='month'>Aug</span> <span class='day'>19</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/general/'>General</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/on/'>on</a>, <a class='category' href='/blog/categories/rails-/'>rails,</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/08/09/making-nokogiri-install-again-on-mountain-lion/">Making Nokogiri install again on Mountain Lion</a></h1>
-<time datetime="2012-08-09T00:04:00+03:00" pubdate><span class='month'>Aug</span> <span class='day'>09</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/on/'>on</a>, <a class='category' href='/blog/categories/rails/'>rails</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit/">Creating self starting worker machines for fun and profit</a></h1>
-<time datetime="2012-08-08T13:49:00+03:00" pubdate><span class='month'>Aug</span> <span class='day'>08</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/open/'>Open</a>, <a class='category' href='/blog/categories/rails-/'>Rails,</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/source/'>Source</a>, <a class='category' href='/blog/categories/on/'>on</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/">run rake task in the background and log to file</a></h1>
-<time datetime="2012-07-30T02:16:00+03:00" pubdate><span class='month'>Jul</span> <span class='day'>30</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/open/'>Open</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/general-/'>general,</a>, <a class='category' href='/blog/categories/on/'>on</a>, <a class='category' href='/blog/categories/rails-/'>rails,</a>, <a class='category' href='/blog/categories/source/'>source</a></span>
-</footer>
-
-
-</article>
-
+<p>OK, so here&#8217;s a nice example of the power of the Aggregation Framework (including benchmarks)</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Avi Tzurel</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-16T21:09:00+02:00" pubdate data-updated="true">Jan 16<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/general/'>General</a>, <a class='category' href='/blog/categories/mongodb/'>MongoDB</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-on-rails/'>Ruby on Rails</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/" data-via="KensoDev" data-counturl="http://avi.io/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works/" title="Previous Post: RailsConf 2012 talk - How Gogobot works">&laquo; RailsConf 2012 talk - How Gogobot works</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/" title="Next Post: Problems with Mongoid and Sidekiq- Brainstorming">Problems with Mongoid and Sidekiq- Brainstorming &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -326,7 +332,10 @@
       var disqus_shortname = 'avi-io';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://avi.io/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/';
+        var disqus_url = 'http://avi.io/blog/2013/01/16/using-mongodb-aggregation-framework-number-1/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
