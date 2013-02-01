@@ -419,6 +419,23 @@ end
 # TODO: Need to hook this variable into configurator
 s3_bucket = "example.com"
 
+desc "Configure Amazon S3 for website hosting"
+task :s3_init do
+  puts "## Configuring Amazon S3 bucket \"#{s3_bucket}\" for website hosting"
+  s3 = AWS::S3.new
+  puts "\n## Creating bucket"
+  bucket = s3.buckets.create s3_bucket
+  puts "\n## Enabling static website hosting"
+  bucket.configure_website do |cfg|
+    cfg.index_document_suffix = "index.html"
+  end
+  puts "\n## Enable read access to all resources"
+  bucket.policy = AWS::S3::Policy.new do |p|
+    p.allow(:actions => ["s3:GetObject"], :resources => ["arn:aws:s3:::#{s3_bucket}/*"], :principals => ["*"])
+  end
+  puts "\n## Website is hosted at http://#{s3_bucket}.s3-website-us-east-1.amazonaws.com"
+end
+
 desc "Deploy public directory to Amazon S3"
 task :s3 do
   puts "## Checking AWS Credentials..."
