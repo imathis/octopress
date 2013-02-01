@@ -46,9 +46,6 @@ header.default h1 a span {
   padding-top: 48px;
   width: 286px;
 }
-#follow ul {
-  padding: 0 20px 0 20px;
-}
 #follow ul li {
   display: inline;
   margin-left: 10px
