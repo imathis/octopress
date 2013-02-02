@@ -10,11 +10,7 @@ If you don't already have a Heroku account, [create one](https://api.heroku.com/
 
 ## Basic Octopress setup
 
-First make sure you've installed the Heroku gem
-
-```sh
-gem install heroku
-```
+First make sure you've installed the [Heroku Toolbelt](https://toolbelt.heroku.com).
 
 Next create a heroku app for deployment. If this is your first time using Heroku, this command will ask for your account credentials,
 and automatically upload your public SSH key. If you don't already have a public key follow [Github's guide and create one](http://help.github.com/set-up-git-redirect/).
