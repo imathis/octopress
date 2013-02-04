@@ -378,7 +378,25 @@ task :list do
   puts "(type rake -T for more detail)\n\n"
 end
 
-task :git_push do
-  system `git push`
+namespace :git do
+  desc 'Check if project can be committed to the repository.'
+  task :status_check do
+    result = `git status`
+    if result.include?('Untracked files:') || result.include?('unmerged:') || result.include?('modified:')
+      puts result
+      exit
+    end
+  end
+
+  desc 'Update files from repository.'
+  task :pull do
+    sh "git pull --rebase"
+  end
+
+  desc 'Push project.'
+  task :push do
+    sh "git push"
+  end
 end
-task :default => [:git_push, :generate, :deploy]
+
+task :default => ['git:status_check','git:pull','git:push', :generate, :deploy]
