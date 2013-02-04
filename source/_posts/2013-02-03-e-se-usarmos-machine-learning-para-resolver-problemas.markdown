@@ -31,24 +31,24 @@ Para cada prefixo, uma taxa especifica.
 
 Ex:
 
-- **prefix**  **rate**
-- 551198   0.025
-- 55119    0.015
-- 55118    0.025
-- 55113    0.01
-- 55112    0.012
-- 52199    0.03
-- 55218    0.025
-- 55213    0.011
-- 55212    0.013
-- 240      0.50
+- **prefix** ---- **rate**
+- 551198 ----  0.025
+- 55119 ----   0.015
+- 55118 ----   0.025
+- 55113 ----   0.01
+- 55112 ----   0.012
+- 52199 ----   0.03
+- 55218 ----   0.025
+- 55213 ----   0.011
+- 55212 ----   0.013
+- 240 ----     0.50
 
 ------------------------------------------------------------------------
 
 
-O principal problema consistia no fato de não saber que parte da string que continha o numero era de fato prefixo e o que era o numero, pois recebíamos o numero como uma string inteira, por exemplo: “5511980000000”.
+O principal problema consistia no fato de não saber que parte da string que continha o número era de fato o prefixo e o que era o número, pois recebíamos o número como uma string inteira, por exemplo: “5511980000000”.
 
-Como qualquer outro problema, existem diversas maneiras de se resolver.
+E como qualquer outro problema, existem diversas maneiras de se resolver.
 
 Sempre fui fascinado por [Machine Learning](http://en.wikipedia.org/wiki/Machine_learning). Na realidade, desde a época que eu não sabia direito o que significava mas já sabia que ele foi muito mal implementado no Exterminador do Futuro 1[¹](#1). Vi aí uma oportunidade de me divertir, mesmo que a solução não viesse a ser usada.
 
@@ -98,8 +98,8 @@ prefix = ‘55118’
 eval @a.get_rules
 #‘0.025’
 ```
-Mas agora você diz: Peraê, você está dizendo que se apenas alimentar a variável prefixo com o numero completo ele traz o resultado correto?
-Ok, eu admito. Não é tão mágico assim. Para meu exemplo ficar completo, somente o que foi feito não resolveria, ja que, como eu disse, o valor que obteríamos seria uma string com o numero inteiro. Caso eu coloque o valor inteiro da string na variável prefix não encontraria nenhum resultado pois o ID3 não faz predições. Faz apenas classificações.
+Mas agora você diz: Peraê, você está dizendo que se apenas alimentar a variável prefixo com o número completo ele traz o resultado correto?
+Ok, eu admito. Não é tão mágico assim. Para meu exemplo ficar completo, somente o que foi feito não resolveria, ja que, como eu disse, o valor que obteríamos seria uma string com o número inteiro. Caso eu coloque o valor inteiro da string na variável prefix não encontraria nenhum resultado pois o ID3 não faz predições. Faz apenas classificações.
 
 ```
 @prefix = number
@@ -118,7 +118,7 @@ Ok, eu admito. Não é tão mágico assim. Para meu exemplo ficar completo, some
   end
 ```
 
-Ok. Ta certo. Você pode dizer que nesse exemplo eu usei o mesmo princípio do usado no Exterminador do Futuro 1, mas se a Skynet usou no T-800, quem sou eu para dizer algo contra?
+Ok. Ta certo. Você pode dizer que nesse exemplo eu usei o mesmo princípio de eliminar os números que não se encaixavam com nosso dataset, como o usado no Exterminador do Futuro 1, mas se a Skynet usou no T-800, quem sou eu para dizer algo contra?
 
 
 
