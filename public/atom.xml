@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Tzurel]]></title>
   <link href="http://avi.io/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2013-01-30T20:46:19+02:00</updated>
+  <updated>2013-02-04T22:14:23+02:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[building the gogobot social graph]]></title>
+    <link href="http://avi.io/blog/2013/02/04/building-the-gogobot-social-graph/"/>
+    <updated>2013-02-04T22:11:00+02:00</updated>
+    <id>http://avi.io/blog/2013/02/04/building-the-gogobot-social-graph</id>
+    <content type="html"><![CDATA[<p>For the past few months I have been super busy building the social graph behind Gogobot.</p>
+
+<p>In this presentation I gave in Israel I go through a fraction of the Gogobot platform and how I implemented a social feature</p>
+
+<script async class="speakerdeck-embed" data-id="5c18bff0512b0130cb6b12313b10154e" src="http://avi.io//speakerdeck.com/assets/embed.js"></script>
+
+
+<p>Feel free to comment &amp; discuss.</p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Problems with Mongoid and Sidekiq- Brainstorming]]></title>
