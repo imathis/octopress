@@ -1,11 +1,10 @@
 ---
-published: false
 layout: post
 title: "E se usarmos Machine Learning para resolver problemas"
-date: 2013-02-03 22:31
+date: 2013-02-04 14:00
 comments: true
 categories:
-  - rafael Fiuza
+  - rafael fiuza
   - machine learning
   - id3
   - classificadores
@@ -15,6 +14,7 @@ categories:
 
 Para mim, uma das coisas mais interessantes no meio de desenvolvimento de softwares é a que não existe apenas uma forma de se fazer. Existem diversas formas corretas (e incorretas) de se resolver algum problema. Elas vão do incrivelmente simples à forma mais rebuscada ou a mais marretada.
 Geralmente, quando posso, escolho a forma mais divertida.
+<!-- more -->
 
 ![image](/images/posts/2013-02-04/dr-evil.jpg)
 
