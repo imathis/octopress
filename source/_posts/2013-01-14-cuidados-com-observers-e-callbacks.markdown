@@ -61,29 +61,29 @@ Este caso é de um simples email extra enviado, mas agora imagine um after_creat
 Uma solução que tem se mostrado muito claro, simples e quebra a complexidade dos models é extrair comportamentos de um determinado cenario para uma nova classe. Por exemplo:
 
 ```ruby
-	class UserSignup
-		def initialize(params)
-			@user = User.new(params)
-		end
-  
-		def signup
-			if @user.save
-				NotificationsMailer.welcome_user(user.id).deliver
-			end
-			@user
-		end
-	end
-
-	class UsersController < ApplicationController
-		def create
-			@user = UserSignup.new(params).signup
+  class UserSignup
+    def initialize(params)
+      @user = User.new(params)
+    end
     
-	    if @user.errors.present?
-			redirect_to dashboard_path, notice: "User created successfully"
-		else
-			render :new
-		end
-	end
+    def signup
+      if @user.save
+        NotificationsMailer.welcome_user(user.id).deliver
+      end
+      @user
+    end
+  end
+  
+  class UserController < ApplicationController
+    def create
+      @user = UserSignup.new(params).signup
+      
+      if @user.errors.present?
+        render :new
+      else
+        redirect_to dashboard_path, notice: "User create successfully"
+      end  
+    end
+  end    
 ```
-
 Dessa forma estou extraindo a situação específica da criação de usuários pelo formulário padrão do projeto para uma classe que terá seu comportamento bem específico deixando assim o código mais simples para se testar, tirando complexidade da classe User e de quebra ainda deixará de executar em diversos testes do projeto os callbacks da criação do User o que irá impactar positivamente na velocidade da execução dos testes.
