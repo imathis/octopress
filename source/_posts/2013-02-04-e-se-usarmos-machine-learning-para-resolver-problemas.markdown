@@ -1,4 +1,5 @@
 ---
+author: Rafael Fiuza
 layout: post
 title: "E se usarmos Machine Learning para resolver problemas"
 date: 2013-02-04 14:00
