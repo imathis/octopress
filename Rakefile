@@ -202,10 +202,10 @@ task :isolate, :filename do |t, args|
   else
     filename = get_stdin("Enter a post file name: ")
   end
-  full_configuration[:stash_dir] = "#{configuration[:source]}/#{configuration[:stash_dir]}"
-  FileUtils.mkdir(full_configuration[:stash_dir]) unless File.exist?(full_configuration[:stash_dir])
+  stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
+  FileUtils.mkdir(stash_dir) unless File.exist?(stash_dir)
   Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*") do |post|
-    FileUtils.mv post, full_configuration[:stash_dir] unless post.include?(filename)
+    FileUtils.mv post, stash_dir unless post.include?(filename)
   end
 end
 
