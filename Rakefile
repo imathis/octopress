@@ -61,7 +61,7 @@ Rake::Minify.new(:minify_and_combine) do
 
   puts "BEGIN Minifying #{output_file}"
   group(output_file) do
-    files.each do |filename|
+    files.sort.each do |filename|
       puts "Minifying- #{filename} into #{output_file}"
       if filename.include? '.min.js'
         add(filename, :minify => false)
@@ -135,7 +135,7 @@ task :new_post, :title do |t, args|
     title = get_stdin("Enter a title for your post: ")
   end
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(configuration[:source])
-  time = now_in_timezone(configuration[:timezone]) 
+  time = now_in_timezone(configuration[:timezone])
   mkdir_p "#{configuration[:source]}/#{configuration[:posts_dir]}"
   filename = "#{configuration[:source]}/#{configuration[:posts_dir]}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{configuration[:new_post_ext]}"
   if File.exist?(filename)
@@ -178,7 +178,7 @@ task :new_page, :filename do |t, args|
       abort("rake aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
     end
     puts "Creating new page: #{file}"
-    time = now_in_timezone(timezone) 
+    time = now_in_timezone(timezone)
     open(file, 'w') do |page|
       page.puts "---"
       page.puts "layout: page"
@@ -353,7 +353,7 @@ task :set_root_dir, :dir do |t, args|
     site_configs[:subscribe_rss] = "#{dir}/atom.xml"
     site_configs[:root] = "/#{dir.sub(/^\//, '')}"
     Octopress::Configuration.write_config('site.yml', site_configs)
-    
+
     rm_rf configuration[:destination]
     mkdir_p site_configs[:destination]
     puts "\n========================================================"
@@ -368,7 +368,9 @@ task :setup_github_pages, :repo do |t, args|
   if args.repo
     repo_url = args.repo
   else
-    repo_url = get_stdin("Enter the read/write url for your repository: ")
+    puts "Enter the read/write url for your repository"
+    puts "(For example, 'git@github.com:your_username/your_username.github.com)"
+    repo_url = get_stdin("Repository url: ")
   end
   unless repo_url[-4..-1] == ".git"
     repo_url << ".git"
@@ -454,7 +456,7 @@ end
 # usage rake list_posts or rake list_posts[pub|unpub]
 desc "List all unpublished/draft posts"
 task :list_drafts do
-  posts = Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*") 
+  posts = Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*")
   unpublished = get_unpublished(posts)
   puts unpublished.empty? ? "There are no posts currently in draft" : unpublished
 end
@@ -465,7 +467,7 @@ def get_unpublished(posts, options={})
   posts.sort.each do |post|
     file = File.read(post)
     data = YAML.load file.match(/(^-{3}\n)(.+?)(\n-{3})/m)[2]
-    
+
     if options[:no_future]
       future = Time.now < Time.parse(data['date'].to_s) ? "future date: #{data['date']}" : false
     end
