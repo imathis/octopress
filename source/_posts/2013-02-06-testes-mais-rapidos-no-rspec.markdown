@@ -1,9 +1,8 @@
 ---
-published: false
 author: Rafael Lima
 layout: post
 title: "Testes (bem) mais rápidos no RSpec"
-date: 2013-02-06 09:00
+date: 2013-02-06 15:45
 comments: true
 categories: 
   - rails
