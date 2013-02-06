@@ -10,6 +10,7 @@ categories:
   - rspec
   - tests
   - ruby
+  - rafael lima
 ---
 
 Conforme um projeto vai crescendo, a quantidade de casos de teste aumenta e a tendência é que a suíte completa comece a demorar mais para rodar, principalmente se você está fazendo testes de aceitação. Isso pode virar um problema muito grave em projetos legados, mas existem soluções rápidas (a.k.a marretas) que resolvem esse problema. Vou mostrar neste post como fiz para **reduzir em mais de 70% o tempo de execução da suíte de testes** de um projeto.
@@ -232,7 +233,7 @@ rake
 Took 245.99421 seconds
 ```
 
-Com esses resultados, posso afirmar que o ganho de tempo total para o meu projeto foi superior a 70%
+Com esses resultados, posso afirmar que o ganho de tempo total para o meu projeto foi superior a 70%. 
 Nada mal, sair de 13 minutos para 4 minutos, não acha!?
 
 ### Bônus: Guard + Zeus
