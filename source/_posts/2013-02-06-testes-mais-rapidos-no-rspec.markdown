@@ -184,7 +184,7 @@ Took 272.119908 seconds
 
 Os testes rodando em paralelo demoraram 4 minutos e 53 segundos e isso é um ganho incrível comparado com os 13 minutos iniciais. Críticos de plantão, eu sei que 4 minutos e pouco ainda é bastante e que dá pra melhorar ;-)
 
-### Dica 4: Ruby Patch railsexpress
+### Dica 5: Ruby Patch railsexpress
 
 Existe um patch para as versões 1.8.7, 1.9.2 e 1.9.3 do Ruby que diminui o tempo de load do Rails e de execução dos testes.
 
