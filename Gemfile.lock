@@ -2,8 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
-    aws-sdk (1.8.0)
-      httparty (~> 0.7)
+    aws-sdk (1.8.1.1)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
@@ -18,9 +17,6 @@ GEM
     fast-stemmer (1.0.1)
     fssm (0.2.9)
     haml (3.1.7)
-    httparty (0.10.0)
-      multi_json (~> 1.0)
-      multi_xml
     jekyll (0.12.0)
       classifier (~> 1.3)
       directory_watcher (~> 1.1)
@@ -33,8 +29,6 @@ GEM
     liquid (2.3.0)
     maruku (0.6.1)
       syntax (>= 1.0.0)
-    multi_json (1.5.0)
-    multi_xml (0.5.2)
     nokogiri (1.5.6)
     posix-spawn (0.3.6)
     pygments.rb (0.3.4)
@@ -63,7 +57,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth (~> 4.2.9)
-  aws-sdk (~> 1.8.0)
+  aws-sdk (~> 1.8.1)
   compass (~> 0.12.2)
   haml (~> 3.1.7)
   jekyll (~> 0.12)
