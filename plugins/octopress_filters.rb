@@ -99,10 +99,7 @@ module OctopressLiquidFilters
 
   # Removes trailing forward slash from a string for easily appending url segments
   def strip_slash(input)
-    if input =~ /(.+)\/$|^\/$/
-      input = $1
-    end
-    input
+    input.sub(/\/\s*$/, '')
   end
 
   # Returns a url without the protocol (http://)
