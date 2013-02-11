@@ -55,10 +55,10 @@ module Octopress
       Dir.glob(self.config_dir('*.yml')) do |filename|
         file_yaml = YAML.load(File.read(filename))
         unless file_yaml.nil?
-          configs = file_yaml.deep_merge(configs)
+          configs = configs.deep_merge(file_yaml)
         end
       end
-      
+
       configs.to_symbol_keys
     end
 
