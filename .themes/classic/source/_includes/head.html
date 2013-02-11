@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
   <meta name="author" content="{{ site.author }}">
+  {% if site.googleplus_user %}<link href="https://plus.google.com/{{ site.googleplus_user }}" rel="author">{% endif %}
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
   {% capture description %}{% if page.description %}{{ page.description }}{% elsif site.description %}{{ site.description }}{% endif %}{% endcapture %}{% if description.length %}
