@@ -17,7 +17,7 @@ module Octopress
         begin
           configs = YAML.load(File.open(full_path))
           if configs.nil?
-            configs
+            Hash.new
           else
             configs.to_symbol_keys
           end
