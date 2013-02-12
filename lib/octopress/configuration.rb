@@ -2,8 +2,10 @@ require 'yaml'
 
 module Octopress
   module Configuration
+    CONFIG_DIR = File.join(File.dirname(__FILE__), '../', '../' '_config')
+
     def self.config_dir(*subdirs)
-      File.absolute_path(File.join(File.dirname(__FILE__), '../', '../' '_config', *subdirs))
+      File.absolute_path(File.join(CONFIG_DIR, *subdirs))
     end
 
     # Static: Reads the configuration of the specified file
