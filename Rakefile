@@ -135,7 +135,7 @@ task :new_post, :title do |t, args|
     title = get_stdin("Enter a title for your post: ")
   end
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(configuration[:source])
-  time = now_in_timezone(configuration[:timezone]) 
+  time = now_in_timezone(configuration[:timezone])
   mkdir_p "#{configuration[:source]}/#{configuration[:posts_dir]}"
   filename = "#{configuration[:source]}/#{configuration[:posts_dir]}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{configuration[:new_post_ext]}"
   if File.exist?(filename)
@@ -178,7 +178,7 @@ task :new_page, :filename do |t, args|
       abort("rake aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
     end
     puts "Creating new page: #{file}"
-    time = now_in_timezone(timezone) 
+    time = now_in_timezone(configuration[:timezone])
     open(file, 'w') do |page|
       page.puts "---"
       page.puts "layout: page"
