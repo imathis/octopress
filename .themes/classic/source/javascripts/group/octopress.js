@@ -12,6 +12,7 @@ var octopress = (function(){
       mobileNav.find('select').bind('change', function(event) {
         if (event.target.value) { window.location.href = event.target.value; }
       });
+      mobileNav.find('select').val('');
     }
 
     , addSidebarToggler: function () {
