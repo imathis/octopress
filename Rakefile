@@ -19,6 +19,7 @@ require 'octopress'
 ###   otherwise, you're on your own ;-)
 
 configuration = Octopress::Configuration.read_configuration
+full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
@@ -202,16 +203,15 @@ task :isolate, :filename do |t, args|
   else
     filename = get_stdin("Enter a post file name: ")
   end
-  full_configuration[:stash_dir] = "#{configuration[:source]}/#{configuration[:stash_dir]}"
-  FileUtils.mkdir(full_configuration[:stash_dir]) unless File.exist?(full_configuration[:stash_dir])
+  FileUtils.mkdir(full_stash_dir) unless File.exist?(full_stash_dir)
   Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*") do |post|
-    FileUtils.mv post, full_configuration[:stash_dir] unless post.include?(filename)
+    FileUtils.mv post, full_stash_dir unless post.include?(filename)
   end
 end
 
 desc "Move all stashed posts back into the posts directory, ready for site generation."
 task :integrate do
-  FileUtils.mv Dir.glob("#{configuration[:source]}/#{configuration[:stash_dir]}/*.*"), "#{configuration[:source]}/#{configuration[:posts_dir]}/"
+  FileUtils.mv Dir.glob("#{full_stash_dir}/*.*"), "#{configuration[:source]}/#{configuration[:posts_dir]}/"
 end
 
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
