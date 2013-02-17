@@ -1,15 +1,15 @@
 require 'minitest/autorun'
-require_relative '../../lib/octopress'
+require_relative '../../octopress'
 
 describe Octopress::Configuration do
-  describe '.read_configuration' do
-    subject do
-      Octopress::Configuration.read_configuration
-    end
-
+  describe '#read_configuration' do
     describe "when no override" do
       before do
-        Octopress::Configuration::CONFIG_DIR = File.join(File.dirname(__FILE__), '../', 'fixtures', 'no_override')
+        @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'no_override'))
+      end
+      
+      subject do
+        @octo_config.read_configuration
       end
 
       it "returns the default config with keys as symbols" do
@@ -25,7 +25,11 @@ describe Octopress::Configuration do
 
     describe "when override" do
       before do
-        Octopress::Configuration::CONFIG_DIR = File.join(File.dirname(__FILE__), '../', 'fixtures', 'override')
+        @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'override'))
+      end
+      
+      subject do
+        @octo_config.read_configuration
       end
 
       it "returns the default config with keys as symbols" do
