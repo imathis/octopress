@@ -9,6 +9,7 @@ require 'rake/minify'
 require 'time'
 require 'yaml'
 require 'octopress'
+require 'rake/testtask'
 
 ### Configuring Octopress:
 ###   Under _config/ you will find:
@@ -524,4 +525,8 @@ desc "list tasks"
 task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
+end
+
+Rake::TestTask.new do |t|
+  t.pattern = "spec/**/*_spec.rb"
 end

@@ -1,0 +1,11 @@
+---
+# ------------------------------- #
+#   Classic Theme Configuration   #
+# ------------------------------- #
+
+url: http://myownsite.com
+title: My Octopress custom Blog
+subtitle: "How did this get here? I'm not good with computers"
+author: John Doe
+simple_search: http://google.com/search
+description:
