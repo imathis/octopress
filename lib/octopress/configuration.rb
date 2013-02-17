@@ -2,8 +2,10 @@ require 'yaml'
 
 module Octopress
   module Configuration
+    CONFIG_DIR = File.join(File.dirname(__FILE__), '../', '../' '_config')
+
     def self.config_dir(*subdirs)
-      File.absolute_path(File.join(File.dirname(__FILE__), '../', '../' '_config', *subdirs))
+      File.absolute_path(File.join(CONFIG_DIR, *subdirs))
     end
 
     # Static: Reads the configuration of the specified file
@@ -55,10 +57,10 @@ module Octopress
       Dir.glob(self.config_dir('*.yml')) do |filename|
         file_yaml = YAML.load(File.read(filename))
         unless file_yaml.nil?
-          configs = file_yaml.deep_merge(configs)
+          configs = configs.deep_merge(file_yaml)
         end
       end
-      
+
       configs.to_symbol_keys
     end
 
