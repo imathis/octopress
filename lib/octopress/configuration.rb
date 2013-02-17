@@ -1,11 +1,16 @@
 require 'yaml'
 
 module Octopress
-  module Configuration
-    CONFIG_DIR = File.join(File.dirname(__FILE__), '../', '../' '_config')
+  class Configuration
+    DEFAULT_CONFIG_DIR = File.join(File.dirname(__FILE__), '../', '../' '_config')
+    attr_accessor :config_directory
+    
+    def initialize(config_dir = DEFAULT_CONFIG_DIR)
+      self.config_directory = config_dir
+    end
 
-    def self.config_dir(*subdirs)
-      File.absolute_path(File.join(CONFIG_DIR, *subdirs))
+    def config_dir(*subdirs)
+      File.absolute_path(File.join(self.config_directory, *subdirs))
     end
 
     # Static: Reads the configuration of the specified file
@@ -13,7 +18,7 @@ module Octopress
     # path - the String path to the configuration file, relative to ./_config
     #
     # Returns a Hash of the items in the configuration file (symbol keys)
-    def self.read_config(path)
+    def read_config(path)
       full_path = self.config_dir(path)
       if File.exists? full_path
         begin
@@ -39,14 +44,14 @@ module Octopress
     # obj  - the object to be dumped into the specified file in YAML form
     #
     # Returns the Hash for the configuration file.
-    def self.write_config(path, obj)
+    def write_config(path, obj)
       YAML.dump(obj.to_string_keys, File.open(self.config_dir(path), 'w'))
     end
 
     # Static: Reads all the configuration files into one hash
     #
     # Returns a Hash of all the configuration files, with each key being a symbol
-    def self.read_configuration
+    def read_configuration
       configs = {}
       Dir.glob(self.config_dir('defaults', '**', '*.yml')) do |filename|
         file_yaml = YAML.load(File.read(filename))
@@ -67,7 +72,7 @@ module Octopress
     # Static: Writes configuration files necessary for generation of the Jekyll site
     #
     # Returns a Hash of the items which were written to the Jekyll configuration file
-    def self.write_configs_for_generation
+    def write_configs_for_generation
       config = self.read_configuration
       jekyll_configs = {}
       File.open("_config.yml", "w") do |f|
@@ -81,7 +86,7 @@ module Octopress
     # Static: Removes configuration files required for site generation
     #
     # Returns the number of files deleted
-    def self.remove_configs_for_generation
+    def remove_configs_for_generation
       File.unlink("_config.yml")
     end
   end
