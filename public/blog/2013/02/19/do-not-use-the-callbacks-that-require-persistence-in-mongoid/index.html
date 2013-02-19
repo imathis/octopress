@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Problems with Mongoid and Sidekiq- Brainstorming - Avi Tzurel</title>
+  <title>DO NOT use the callbacks that require persistence in Mongoid - Avi Tzurel</title>
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="A few weeks back, we started slowly upgrading all of our queues at Gogobot to work with Sidekiq. Posts on how awesome the experience was and how much &hellip;">
+  <meta name="description" content="I started using MongoDB at Gogobot a little while ago.
+While using it, I encountered some problems, but for the most part, things went pretty smooth &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">
+  <link rel="canonical" href="http://avi.io/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +81,7 @@
   
   <header>
     
-      <h1 class="entry-title">Problems With Mongoid and Sidekiq- Brainstorming</h1>
+      <h1 class="entry-title">DO NOT Use the Callbacks That Require Persistence in Mongoid</h1>
     
     
       <p class="meta">
@@ -96,7 +97,7 @@
   
 
 
-<time datetime="2013-01-30T20:13:00+02:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
+<time datetime="2013-02-19T22:10:00+02:00" pubdate data-updated="true">Feb 19<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -105,25 +106,54 @@
   </header>
 
 
-<div class="entry-content"><p>A few weeks back, we started slowly upgrading all of our queues at <a href="http://www.gogobot.com">Gogobot</a> to work with <a href="https://github.com/mperham/sidekiq">Sidekiq</a>.</p>
+<div class="entry-content"><p>I started using MongoDB at <a href="http://www.gogobot.com">Gogobot</a> a little while ago.
+While using it, I encountered some <a href="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">problems</a>, but for the most part, things went pretty smooth.</p>
 
-<p>Posts on how awesome the experience was and how much better Sidekiq is from <a href="http://github.com/defunkt/sidekiq">Resque</a> coming soon, though with all the good came some bad.</p>
+<p>Today, I encountered a bug that surprised me.</p>
 
-<h2>Summary of the solution</h2>
+<p>While it certainly should not have, I think it can surprise you as well, so I am writing it up here as a fair warning.</p>
 
-<p>With Sidekiq, we are processing around <strong>25X more</strong> jobs than what we were doing with Resque, processing around 15,000,000 jobs per day, at paces of over 1K per second at times (at peak we go up well past that)</p>
+<p>For Gogobot, the entire graph is built on top of MongoDB, all the things social are driven by it and for the most parts like I mentioned, we are pretty happy with it.</p>
 
-<p>This is how many jobs we processed today…</p>
+<h2>SO, What was the problem?</h2>
 
-<p><img src="http://d.pr/i/O9aU+" alt="Sidekiq history graph for today" /></p>
+<p>The entire graph is a mountable engine, we can decide to turn it on or to turn it off at will.
+It acts as a data warehouse and the workflows are being managed by the app.</p>
 
-<p>And this is a snapshot of our realtime graph</p>
+<p>For example:</p>
 
-<p><img src="http://d.pr/i/7Fkr+" alt="Realtime graph snapshot" /></p>
+<p>When model X is created, app is notified and decides what to do with this notification, and so on and so forth.</p>
 
-<p>On the MongoDB side we are working with Mongoid and we have a shared environment, 9 shards with 3 replicas in each shard, all running through 2 routers.</p>
+<p>Everything peachy so far, nothing we haven&#8217;t used hundreds of times in the past.</p>
 
-<p>Our production mongoid config looks like this</p>
+<p>Here&#8217;s how it works.</p>
+
+<p>We have a model called <code>VisitedPlace</code>, it&#8217;s a representation of a user that visited a certain place</p>
+
+<p>Here&#8217;s the code</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">GraphEngine</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">FbPlace</span>
+</span><span class='line'>    <span class="kp">include</span> <span class="no">Mongoid</span><span class="o">::</span><span class="no">Document</span>
+</span><span class='line'>    <span class="kp">include</span> <span class="no">Mongoid</span><span class="o">::</span><span class="no">Timestamps</span>
+</span><span class='line'>    <span class="kp">include</span> <span class="no">GraphEngine</span><span class="o">::</span><span class="no">Notifications</span><span class="o">::</span><span class="no">NotifiableModel</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">#… rest of code here</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see, this model includes a module called <code>NotifiableModel</code>, here&#8217;s the important part from it:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -137,34 +167,55 @@
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">op_timeout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">connection_timeout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">sessions</span><span class="p-Indicator">:</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">hosts</span><span class="p-Indicator">:</span>
-</span><span class='line'>        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">HOST_NAME:27017</span> <span class="c1">#Single router R0</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">USER_NAME</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">PASSWORD</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">DATABASE_NAME</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
-</span><span class='line'>        <span class="l-Scalar-Plain">consistency</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">:eventual</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">GraphEngine</span>
+</span><span class='line'>  <span class="k">module</span> <span class="nn">Notifications</span>
+</span><span class='line'>    <span class="k">module</span> <span class="nn">NotifiableModel</span>
+</span><span class='line'>      <span class="kp">extend</span> <span class="no">ActiveSupport</span><span class="o">::</span><span class="no">Concern</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">included</span> <span class="k">do</span>
+</span><span class='line'>        <span class="n">after_create</span> <span class="k">do</span>
+</span><span class='line'>          <span class="n">send_notification</span><span class="p">(</span><span class="s2">&quot;created&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">end</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">def</span> <span class="nf">send_notification</span><span class="p">(</span><span class="n">verb</span><span class="p">)</span>
+</span><span class='line'>          <span class="c1"># Notify the app here...</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>We are using latest versions of all relevant gems (Sidekiq, Mongoid, Moped, Redis)</p>
+<p>Like I said, pretty standard stuff, nothing too fancy, but here&#8217;s where it&#8217;s getting tricky.</p>
 
-<h2>All seems fine right? What&#8217;s the problem?</h2>
+<p>This model has a unique index on <code>user_id</code> and <code>place_id</code>. It&#8217;s a unique index and no two documents can exist in the same collection.</p>
 
-<p>The problem is that we have too many connections opening and closing to our mongo instances. (~25-40 new connections per second).</p>
+<p>BUT… check this out:</p>
 
-<p>Each time a job is picked up, a connection to Mongo is opened and when the job is done, this connection is closed (using Kiqstand middleware).</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="no">GraphEngine</span><span class="o">::</span><span class="no">VisitedPlace</span><span class="o">.</span><span class="n">create!</span><span class="p">(</span><span class="n">user_id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">place_id</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span><span class='line'>  <span class="no">GraphEngine</span><span class="o">::</span><span class="no">VisitedPlace</span><span class="o">.</span><span class="n">create!</span><span class="p">(</span><span class="n">user_id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">place_id</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>This is causing huge loads on our router server, and causing mongo to run out of file descriptors at times.</p>
 
-<h2>SO?</h2>
+<p>The second query actually failed in the DB level, but the application still returned true.</p>
 
-<p>More then anything, this post is a callout for discussion with anyone using similar solution with similar scale and can assist, I know I would love to brainstorm on how to solve this problem.</p>
+<p>Meaning, that <code>after_create</code> is actually being called even if the record is <strong>not really persisted</strong>.</p>
+
+<h2>How you can fix? / should you fix?</h2>
+
+<p>For Gogobot, I fixed it using safe mode on those models, I don&#8217;t mind the performance penalty, since I don&#8217;t want to trigger Sidekiq workers that will do all sorts of things twice or three times.</p>
+
+<p>Should you do the same? I am not sure, you need to benchmark your app and see if you can fix it in another way.</p>
+
+<p>Would love to hear back from you in comments/discussion</p>
 </div>
 
 
@@ -187,7 +238,7 @@
   
 
 
-<time datetime="2013-01-30T20:13:00+02:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
+<time datetime="2013-02-19T22:10:00+02:00" pubdate data-updated="true">Feb 19<span>th</span>, 2013</time>
       
 
 <span class="categories">
@@ -201,7 +252,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/" data-via="KensoDev" data-counturl="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid/" data-via="KensoDev" data-counturl="http://avi.io/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid/" >Tweet</a>
   
   
   
@@ -212,10 +263,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works/" title="Previous Post: RailsConf 2012 talk - How Gogobot works">&laquo; RailsConf 2012 talk - How Gogobot works</a>
+        <a class="basic-alignment left" href="/blog/2013/02/04/building-the-gogobot-social-graph/" title="Previous Post: building the gogobot social graph">&laquo; building the gogobot social graph</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/02/04/building-the-gogobot-social-graph/" title="Next Post: building the gogobot social graph">building the gogobot social graph &raquo;</a>
       
     </p>
   </footer>
@@ -374,8 +423,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/';
-        var disqus_url = 'http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/';
+        var disqus_identifier = 'http://avi.io/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid/';
+        var disqus_url = 'http://avi.io/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid/';
         var disqus_script = 'embed.js';
       
     (function () {

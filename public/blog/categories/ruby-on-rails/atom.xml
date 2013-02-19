@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on rails | Avi Tzurel]]></title>
   <link href="http://avi.io/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2013-02-04T22:14:23+02:00</updated>
+  <updated>2013-02-19T22:29:19+02:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,102 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[DO NOT use the callbacks that require persistence in Mongoid]]></title>
+    <link href="http://avi.io/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid/"/>
+    <updated>2013-02-19T22:10:00+02:00</updated>
+    <id>http://avi.io/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid</id>
+    <content type="html"><![CDATA[<p>I started using MongoDB at <a href="http://www.gogobot.com">Gogobot</a> a little while ago.
+While using it, I encountered some <a href="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">problems</a>, but for the most part, things went pretty smooth.</p>
+
+<p>Today, I encountered a bug that surprised me.</p>
+
+<p>While it certainly should not have, I think it can surprise you as well, so I am writing it up here as a fair warning.</p>
+
+<p>For Gogobot, the entire graph is built on top of MongoDB, all the things social are driven by it and for the most parts like I mentioned, we are pretty happy with it.</p>
+
+<h2>SO, What was the problem?</h2>
+
+<p>The entire graph is a mountable engine, we can decide to turn it on or to turn it off at will.
+It acts as a data warehouse and the workflows are being managed by the app.</p>
+
+<p>For example:</p>
+
+<p>When model X is created, app is notified and decides what to do with this notification, and so on and so forth.</p>
+
+<p>Everything peachy so far, nothing we haven't used hundreds of times in the past.</p>
+
+<p>Here's how it works.</p>
+
+<p>We have a model called <code>VisitedPlace</code>, it's a representation of a user that visited a certain place</p>
+
+<p>Here's the code</p>
+
+<p>```ruby</p>
+
+<pre><code>module GraphEngine
+  class FbPlace
+    include Mongoid::Document
+    include Mongoid::Timestamps
+    include GraphEngine::Notifications::NotifiableModel
+
+    #… rest of code here
+  end
+end
+</code></pre>
+
+<p>```</p>
+
+<p>As you can see, this model includes a module called <code>NotifiableModel</code>, here's the important part from it:</p>
+
+<p>```ruby</p>
+
+<pre><code>module GraphEngine
+  module Notifications
+    module NotifiableModel
+      extend ActiveSupport::Concern
+
+      included do
+        after_create do
+          send_notification("created")
+        end
+      end
+
+      def send_notification(verb)
+        # Notify the app here...
+      end
+    end
+  end
+end
+</code></pre>
+
+<p>```</p>
+
+<p>Like I said, pretty standard stuff, nothing too fancy, but here's where it's getting tricky.</p>
+
+<p>This model has a unique index on <code>user_id</code> and <code>place_id</code>. It's a unique index and no two documents can exist in the same collection.</p>
+
+<p>BUT… check this out:</p>
+
+<p><code>ruby
+  GraphEngine::VisitedPlace.create!(user_id: 1, place_id: 1) =&gt; true
+  GraphEngine::VisitedPlace.create!(user_id: 1, place_id: 1) =&gt; true
+</code></p>
+
+<p>The second query actually failed in the DB level, but the application still returned true.</p>
+
+<p>Meaning, that <code>after_create</code> is actually being called even if the record is <strong>not really persisted</strong>.</p>
+
+<h2>How you can fix? / should you fix?</h2>
+
+<p>For Gogobot, I fixed it using safe mode on those models, I don't mind the performance penalty, since I don't want to trigger Sidekiq workers that will do all sorts of things twice or three times.</p>
+
+<p>Should you do the same? I am not sure, you need to benchmark your app and see if you can fix it in another way.</p>
+
+<p>Would love to hear back from you in comments/discussion</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Problems with Mongoid and Sidekiq- Brainstorming]]></title>
