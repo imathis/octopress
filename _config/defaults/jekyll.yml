@@ -11,7 +11,16 @@ destination:  public          # compiled site directory
 plugins:      plugins
 code_dir:     downloads/code
 category_dir: blog/categories
-markdown:     rdiscount
+include:
+  - .htaccess
+markdown:     redcarpet
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - strikethrough
+    - autolink
+    - superscript
+    - smart
 pygments:     false           # Jekyll's default Python Pygments have been replaced by pygments.rb.
                               # Set to true to use Albino + Python Pygments
 
