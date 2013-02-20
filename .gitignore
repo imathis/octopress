@@ -1,5 +1,7 @@
 .bundle
 .DS_Store
+*.sw[mnop]
+*~
 .sass-cache
 .gist-cache
 .pygments-cache
@@ -9,7 +11,9 @@ sass.old
 source.old
 source/_stash
 source/stylesheets/screen.css
-source/javascripts/octopress.min.js
+source/javascripts/*.min.js
 source/images/icon-*.png
 vendor
 node_modules
+/.preview-mode
+/_config.yml
