@@ -236,7 +236,7 @@ var octopress = (function(){
           var count = parseInt(target.attr('data-count'))
           var skip_forks = target.attr('data-skip') == 'true';
           $.ajax({
-              url: "https://api.github.com/users/"+user+"/repos?callback=?"
+              url: "https://api.github.com/users/"+user+"/repos?sort=pushed&callback=?"
             , dataType: 'jsonp'
             , error: function (err) { target.find('.loading').addClass('error').text("Error loading feed"); }
             , success: function(data) {
@@ -246,13 +246,6 @@ var octopress = (function(){
                 if (skip_forks && data.data[i].fork) { continue; }
                 repos.push(data.data[i]);
               }
-              repos.sort(function(a, b) {
-                var aDate = new Date(a.pushed_at).valueOf(),
-                    bDate = new Date(b.pushed_at).valueOf();
-
-                if (aDate === bDate) { return 0; }
-                return aDate > bDate ? -1 : 1;
-              });
 
               if (count) { repos.splice(count); }
               render(target, repos);
