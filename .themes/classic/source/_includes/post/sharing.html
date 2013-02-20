@@ -1,13 +1,10 @@
+{% capture sharing_title %}{% if page.title == nil %}{{ site.title }}{% else %}{% if site.titlecase and page.titlecase != false %}{{ page.title | titlecase  }}{% else %}{{ page.title }}{% endif %}{% endif %}{% endcapture %}
 <div class="sharing">
   {% if site.twitter_tweet_button %}
     {% if site.respectfully_social %}
       <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
     {% else %}
-      {% if post.title %}
-        <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ post.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ post.url }}" >Tweet</a>
-      {% else %}
-        <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" >Tweet</a>
-      {% endif %}
+      <a href="http://twitter.com/share" class="twitter-share-button" data-text="{{ sharing_title }}" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ post.url }}" >Tweet</a>
     {% endif %}
   {% endif %}
   {% if site.google_plus_one %}
