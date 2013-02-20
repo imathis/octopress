@@ -526,3 +526,27 @@ task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
 end
+
+desc "Update plugins specified in plugin_sources."
+task :update_plugins do
+  require 'net/http'
+  require 'net/https'
+  require 'uri'
+
+  configuration[:plugin_sources].each_pair do |plugin,url|
+    puts "Replacing plugins/#{plugin} from #{url}..."
+    uri = URI.parse(url)
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true if(uri.scheme.downcase == 'https')
+    request = Net::HTTP::Get.new(uri.request_uri)
+    response = http.request(request)
+    if(response.code_type == Net::HTTPOK)
+      puts "  Success."
+      File.open("plugins/#{plugin}", "w") do |fh|
+        fh.write(response.body)
+      end
+    else
+      puts "  ERROR, got: #{response.code} -- #{response.message}!"
+    end
+  end
+end
