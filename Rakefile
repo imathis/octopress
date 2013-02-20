@@ -223,6 +223,11 @@ task :clean do
   puts "## Cleaned Sass, Pygments and Gist caches, removed generated stylesheets ##"
 end
 
+desc "Remove generated files (#{configuration[:destination]} directory)."
+task :clobber do
+  rm_rf [configuration[:destination]]
+end
+
 desc "Update theme source and style"
 task :update, :theme do |t, args|
   theme = args.theme || 'classic'
