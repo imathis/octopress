@@ -339,9 +339,14 @@ task :set_root_dir, :dir do |t, args|
   end
 end
 
+URL_PROMPT=[
+  "Enter the read/write url for your repository",
+  "(For example, 'git@github.com:your_username/your_username.github.com)",
+  "Enter the read/write url for your repository: "
+]
 desc "Set up _deploy folder and deploy branch for GitHub Pages deployment"
 task :setup_github_pages, :repo do |t, args|
-  repo_url = get_arg(args, :repo, "Enter the read/write url for your repository: ")
+  repo_url = get_arg(args, :repo, URL_PROMPT)
   unless repo_url[-4..-1] == ".git"
     repo_url << ".git"
   end
@@ -457,6 +462,7 @@ def ok_failed(condition)
 end
 
 def get_stdin(message)
+  message = message.join("\n") if(message.is_a?(Array))
   print message
   STDIN.gets.chomp
 end
