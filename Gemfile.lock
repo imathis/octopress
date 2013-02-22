@@ -29,7 +29,7 @@ GEM
     pygments.rb (0.3.4)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
-    rack (1.4.1)
+    rack (1.5.2)
     rack-protection (1.3.2)
       rack
     rake (10.0.3)
@@ -61,7 +61,7 @@ DEPENDENCIES
   jekyll (~> 0.12.0)
   liquid (~> 2.3.0)
   pygments.rb (~> 0.3.4)
-  rack (~> 1.4.1)
+  rack (~> 1.5.0)
   rake (~> 10.0.3)
   rake-minify
   rb-fsevent (~> 0.9.3)
