@@ -3,8 +3,9 @@ require 'sinatra/base'
 
 # The project root directory
 $root = ::File.dirname(__FILE__)
+require File.expand_path(File.join($root, 'lib/octopress'))
 
-class SinatraStaticServer < Sinatra::Base  
+class SinatraStaticServer < Sinatra::Base
 
   get(/.+/) do
     send_sinatra_file(unescape request.path) {404}
@@ -15,8 +16,8 @@ class SinatraStaticServer < Sinatra::Base
   end
 
   def send_sinatra_file(path, &missing_file_block)
-    file_path = File.join(File.dirname(__FILE__), 'public',  path)
-    file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i  
+    file_path = File.join(File.dirname(__FILE__), Octopress.configuration[:destination],  path)
+    file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
     File.exist?(file_path) ? send_file(file_path) : missing_file_block.call
   end
 
