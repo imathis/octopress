@@ -119,4 +119,3 @@ module OctopressLiquidFilters
 
 end
 Liquid::Template.register_filter OctopressLiquidFilters
-

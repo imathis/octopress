@@ -15,4 +15,3 @@ ARGV.delete_if do |arg|
 end
 
 IRB.start
-

@@ -353,7 +353,7 @@ task :set_root_dir, :dir do |t, args|
     site_configs[:subscribe_rss] = "#{dir}/atom.xml"
     site_configs[:root] = "/#{dir.sub(/^\//, '')}"
     configurator.write_config('site.yml', site_configs)
-    
+
     rm_rf configuration[:destination]
     mkdir_p site_configs[:destination]
     puts "\n========================================================"
@@ -456,7 +456,7 @@ end
 # usage rake list_posts or rake list_posts[pub|unpub]
 desc "List all unpublished/draft posts"
 task :list_drafts do
-  posts = Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*") 
+  posts = Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*")
   unpublished = get_unpublished(posts)
   puts unpublished.empty? ? "There are no posts currently in draft" : unpublished
 end
@@ -467,7 +467,7 @@ def get_unpublished(posts, options={})
   posts.sort.each do |post|
     file = File.read(post)
     data = YAML.load file.match(/(^-{3}\n)(.+?)(\n-{3})/m)[2]
-    
+
     if options[:no_future]
       future = Time.now < Time.parse(data['date'].to_s) ? "future date: #{data['date']}" : false
     end
