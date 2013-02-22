@@ -4,7 +4,7 @@ module Octopress
   class Configuration
     DEFAULT_CONFIG_DIR = File.join(File.dirname(__FILE__), '../', '../' '_config')
     attr_accessor :config_directory
-    
+
     def initialize(config_dir = DEFAULT_CONFIG_DIR)
       self.config_directory = config_dir
     end
@@ -79,7 +79,7 @@ module Octopress
         jekyll_configs = config.to_string_keys.to_yaml :canonical => false
         f.write(jekyll_configs)
       end
-      
+
       jekyll_configs
     end
 

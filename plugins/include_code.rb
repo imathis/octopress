@@ -67,7 +67,7 @@ module Jekyll
         puts "Update include for #{filepath}"
         puts "### --------------------------------- ###"
       end
-      
+
       if File.symlink?(code_path)
         puts "Code directory '#{code_path}' cannot be a symlink"
         return "Code directory '#{code_path}' cannot be a symlink"

@@ -118,4 +118,3 @@ module Jekyll
   end
 
 end
-

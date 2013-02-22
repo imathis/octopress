@@ -15,10 +15,10 @@ module HighlightCode
   include TemplateWrapper
   include SiteConfig
   def pygments(code, lang)
-    highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'}) 
+    highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
     highlighted_code = highlighted_code.gsub(/{{/, '&#x7b;&#x7b;').gsub(/{%/, '&#x7b;&#x25;')
     highlighted_code.to_s
-  rescue 
+  rescue
     puts $!,$@
   end
 
@@ -134,7 +134,7 @@ module HighlightCode
       url:          (url.nil? ? nil : url[3] || url[5] || url[6]),
       start:        (start.nil? ? nil : start[1].to_i),
       end:          (endline.nil? ? nil : endline[1].to_i),
-      link_text:    (link_text.nil? ? nil : link_text[3] || link_text[5] || link_text[6]) 
+      link_text:    (link_text.nil? ? nil : link_text[3] || link_text[5] || link_text[6])
     }
     opts.merge(parse_range(input, opts[:start], opts[:end]))
   end
@@ -172,7 +172,7 @@ module HighlightCode
     end
     {start: start, end: endline}
   end
-  
+
   def get_range (code, start, endline)
     length    = code.lines.count
     start   ||= 1
