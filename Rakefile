@@ -6,7 +6,6 @@ require "stringex"
 require 'time'
 require 'tzinfo'
 require 'rake/minify'
-require 'time'
 require 'yaml'
 require 'octopress'
 
