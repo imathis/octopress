@@ -208,7 +208,3 @@ HTML
   end
 
 end
-
-    def parse_category
-      { slug: slug, title: title }
-    end
