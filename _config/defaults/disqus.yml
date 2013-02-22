@@ -3,6 +3,8 @@
 #   Disqus Comments Configuration   #
 # --------------------------------- #
 
+# In order to use Disqus you must both set the short name here, AND set
+# "use_comments: true" in site.yml.
 disqus_short_name:
 disqus_show_comment_count: false
 disqus_developer: 0
