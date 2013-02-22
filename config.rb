@@ -3,6 +3,7 @@ require "octopress"
 
 config = Octopress::Configuration.new.read_configuration
 
+project_path = File.dirname(__FILE__)
 project_type = :stand_alone
 
 compass_http_path = config[:destination].gsub('public', '')
