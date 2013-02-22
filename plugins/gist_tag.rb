@@ -42,7 +42,7 @@ module Jekyll
       if parts = @markup.match(/([\d]*) (.*)/)
         gist, file = parts[1].strip, parts[2].strip
 
-        @options[:title]     ||= file.empty? ? "Gist: #{gist}" : file 
+        @options[:title]     ||= file.empty? ? "Gist: #{gist}" : file
         @options[:url]       ||= "https://gist.github.com/#{gist}"
         @options[:lang]      ||= file.empty? ? @options[:lang] || '' : file.split('.')[-1]
         @options[:no_cache]    = @cache_disabled
