@@ -1,0 +1,14 @@
+---
+assets:
+  #
+  # Include source line comments in compiled SASS?
+  #
+  line_comments: true
+  #
+  # Compass CSS minification behavior.  Values are:
+  # * nested
+  # * expanded (recommended for development)
+  # * compact
+  # * compressed (recommended for production)
+  #
+  output_style: compressed

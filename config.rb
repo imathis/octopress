@@ -17,5 +17,5 @@ images_dir = "#{config[:source]}/images"
 fonts_dir = "#{config[:source]}/fonts"
 generated_images_dir = "#{config[:source]}/images"
 
-line_comments = false
-output_style = :compressed
+line_comments = configuration[:assets]["line_comments"]
+output_style = configuration[:assets]["output_style"].to_sym
