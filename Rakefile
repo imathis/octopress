@@ -285,6 +285,11 @@ desc "Generate website and deploy"
 task :gen_deploy => [:integrate, :generate, :deploy] do
 end
 
+def ensure_trailing_slash(val)
+  val = "#{val}/" unless(val.end_with?('/'))
+  return val
+end
+
 desc "Deploy website via rsync"
 task :rsync do
   exclude = ""
@@ -292,7 +297,9 @@ task :rsync do
     exclude = "--exclude-from '#{File.expand_path('./rsync-exclude')}'"
   end
   puts "## Deploying website via Rsync"
-  ok_failed system("rsync -avze 'ssh -p #{configuration[:ssh_port]} #{'-i' + configuration[:ssh_key] unless configuration[:ssh_key].empty?}' #{exclude} #{configuration[:rsync_args]} #{"--delete" unless configuration[:rsync_delete] == false} #{configuration[:destination]}/ #{configuration[:ssh_user]}:#{configuration[:document_root]}")
+  ssh_key = (!configuration[:ssh_key].nil? && !configuration[:ssh_key].empty?) ? "-i #{ENV['HOME']}/.ssh/#{configuration[:ssh_key]}" : ""
+  document_root = ensure_trailing_slash(configuration[:document_root])
+  ok_failed system("rsync -avze 'ssh -p #{configuration[:ssh_port]} #{ssh_key}' #{exclude} #{configuration[:rsync_args]} #{"--delete" unless !configuration[:rsync_delete]} #{ensure_trailing_slash(configuration[:destination])} #{configuration[:ssh_user]}:#{document_root}")
 end
 
 desc "deploy public directory to github pages"
