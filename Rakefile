@@ -131,9 +131,9 @@ task :new_post, :title do |t, args|
   create_post(configuration, Time.now, title)
 end
 
-# usage rake old_post['yyyy-mm-dd hh:mm:ss',my-old-post] or rake old_post['yyyy-mm-dd hh:mm:ss','my old post'] or rake old_post (will inquire for a title and date/time)
-desc "Begin a back-dated post in #{configuration[:source]}/#{configuration[:posts_dir]}"
-task :old_post, :posted_at, :title do |t, args|
+# usage rake dated_post['yyyy-mm-dd hh:mm:ss',my-post] or rake dated_post['yyyy-mm-dd hh:mm:ss','my post post'] or rake dated_post (will inquire for a title and date/time)
+desc "Begin a back- or forward-dated post in #{configuration[:source]}/#{configuration[:posts_dir]}"
+task :dated_post, :posted_at, :title do |t, args|
   title = get_arg(args, :title, "Enter a title for your post: ")
   time = get_arg(args, :posted_at, "Enter a date/time for your post (YYYY-MM-DD HH:MM:SS): ")
   create_post(configuration, Time.parse(time), title)
