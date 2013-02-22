@@ -1,7 +1,7 @@
 $:.unshift File.expand_path("lib", File.dirname(__FILE__)) # For use/testing when no gem is installed
 require "octopress"
 
-config = Octopress::Configuration.new.read_configuration
+config = Octopress.configuration
 
 project_type = :stand_alone
 

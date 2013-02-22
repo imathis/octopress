@@ -17,8 +17,8 @@ require 'octopress'
 ###   Please do not change anything below if you want help --
 ###   otherwise, you're on your own ;-)
 
-configurator   = Octopress::Configuration.new
-configuration  = configurator.read_configuration
+configurator = Octopress.configurator
+configuration  = Octopress.configuration
 full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
