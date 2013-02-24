@@ -25,6 +25,6 @@ module Octopress
       @env = nil
     end
     @env_raw = env_raw_tmp
-    @env = InquirableString.new(@env_raw)
+    @env ||= InquirableString.new(@env_raw)
   end
 end
