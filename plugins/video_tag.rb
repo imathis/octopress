@@ -22,22 +22,31 @@ module Jekyll
     @width = ''
 
     def initialize(tag_name, markup, tokens)
-      if markup =~ /((https?:\/\/|\/)(\S+))(\s+(\d+)\s(\d+))?(\s+(https?:\/\/|\/)(\S+))?/i
-        @video  = $1
-        @width  = $5
-        @height = $6
-        @poster = $7
+      if markup =~ /(https?:\S+)(\s+(https?:\S+))?(\s+(https?:\S+))?(\s+(\d+)\s(\d+))?(\s+(https?:\S+))?/i
+        @video  = [$1, $3, $5].compact
+        @width  = $7
+        @height = $8
+        @poster = $10
       end
       super
     end
 
     def render(context)
       output = super
-      if @video
+      type = {
+        'mp4' => "type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'",
+        'ogv' => "type='video/ogg; codecs=theora, vorbis'",
+        'webm' => "type='video/webm; codecs=vp8, vorbis'"
+      }
+      if @video.size > 0
         video =  "<video width='#{@width}' height='#{@height}' preload='none' controls poster='#{@poster}'>"
-        video += "<source src='#{@video}' type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'/></video>"
+        @video.each do |v|
+          t = v.match(/([^\.]+)$/)[1]
+          video += "<source src='#{v}' #{type[t]}>"
+        end
+        video += "</video>"
       else
-        "Error processing input, expected syntax: {% video url/to/video [width height] [url/to/poster] %}"
+        "Error processing input, expected syntax: {% video url/to/video [url/to/video] [url/to/video] [width height] [url/to/poster] %}"
       end
     end
   end
