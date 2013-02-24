@@ -214,12 +214,11 @@ task :integrate do
   FileUtils.mv Dir.glob("#{full_stash_dir}/*.*"), "#{configuration[:source]}/#{configuration[:posts_dir]}/"
 end
 
-desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
+desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache, and Compass-generated files."
 task :clean do
-  [".pygments-cache/**", ".gist-cache/**"].each { |dir| rm_rf Dir.glob(dir) }
-  rm "#{configuration[:source]}/stylesheets/screen.css" if File.exists?("#{configuration[:source]}/stylesheets/screen.css")
+  rm_rf [".pygments-cache", ".gist-cache"]
   system "compass clean"
-  puts "## Cleaned Sass, Pygments and Gist caches, removed generated stylesheets ##"
+  puts "## Cleaned Sass-generated files, and various caches ##"
 end
 
 desc "Update theme source and style"
