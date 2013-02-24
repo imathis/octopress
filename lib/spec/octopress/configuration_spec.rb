@@ -27,7 +27,7 @@ describe Octopress::Configuration do
       before do
         @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'override'))
       end
-      
+
       subject do
         @octo_config.read_configuration
       end
