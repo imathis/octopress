@@ -20,7 +20,7 @@ module Octopress
     # Not simply memoizing the result in case the configuration changes out
     # from under us at runtime...  Not sure if that can happen, but just in
     # case let's be conservative in our behavior here.
-    env_raw_tmp = ENV["OCTOPRESS_ENV"] || self.configuration[:env]
+    env_raw_tmp = (ENV["OCTOPRESS_ENV"] || self.configuration[:env]).to_s
     if(env_raw_tmp != @env_raw)
       @env = nil
     end
