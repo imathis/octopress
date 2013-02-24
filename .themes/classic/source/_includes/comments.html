@@ -1,3 +1,4 @@
+{% if site.use_comments %}
 <section>
   <h1>Comments</h1>
   {% include custom/comments.html %}
@@ -5,3 +6,4 @@
     <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
   {% endif %}
 </section>
+{% endif %}
