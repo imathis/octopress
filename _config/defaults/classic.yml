@@ -42,3 +42,7 @@ linklog_marker: "&rarr;"
 linklog_marker_position: after
 linklog_marker_position_feed: after
 standard_post_marker:
+
+# Disable all comments by default.  If you're using Disqus, or a custom comment system, add
+# "use_comments: true" to your site.yml.
+use_comments: false
