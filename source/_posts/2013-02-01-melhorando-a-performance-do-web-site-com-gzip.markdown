@@ -9,6 +9,7 @@ categories:
   - performance
   - http compression
   - gzip
+  
 ---
 
 O tempo inteiro chovem dicas de performance pela internet. É bem difícil filtrar tudo que aparece e saber o que realmente importa, o que realmente dá resultado, e mais ainda, o que é fácil de se fazer. Não adianta uma solução mirabolante, em que para ganhar 1 milisegundo tenhamos que envolver toda a equipe de um projeto e consumir um sprint inteiro.
