@@ -1,7 +1,7 @@
 ---
 author: Pedro Marins
 layout: post
-title: "Retrospectiva - 2 Café com DEV"
+title: "Retrospectiva - 2° Café com DEV"
 date: 2013-02-25 12:03
 comments: true
 categories: 
