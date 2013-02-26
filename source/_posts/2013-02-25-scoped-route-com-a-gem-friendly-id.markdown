@@ -2,7 +2,7 @@
 layout: post
 author: Rodrigo Reginato Marques
 title: "Scoped route com a gem friendly_id"
-date: 2013-02-25 14:28
+date: 2013-02-26 11:00
 comments: true
 categories:
   - rodrigo reginato marques
