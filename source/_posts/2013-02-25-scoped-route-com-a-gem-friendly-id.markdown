@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Rodrigo Reginato Marques
-title: "Scoped route com a gem friendly_id"
+title: Scoped route com a gem friendly_id
 date: 2013-02-26 11:00
 comments: true
 categories:
@@ -13,7 +13,10 @@ categories:
 ---
 
 Quando começamos o sistema [clubedomenu.com](http://clubedomenu.com), um sistema voltado para delivery de comida, fizemos pensando exclusivamente para a cidade de Londrina. Recentemente surgiu a necessidade de expandir o sistema para outras localidades, e com isso
-fizemos um estudo das funcionalidades existentes. Vimos que as urls do sistema foram contruídas dessa forma:
+fizemos um estudo das funcionalidades existentes.
+<!-- more -->
+
+Vimos que as urls do sistema foram contruídas dessa forma:
 
 ```
 clubedomenu.com/nome_do_restaurante
