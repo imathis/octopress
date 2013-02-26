@@ -14,7 +14,7 @@ categories:
 
 Quando eu participei do desenvolvimento do projeto [clubedomenu.com](http://clubedomenu.com), um sistema voltado para delivery de comida, fizemos pensando exclusivamente para a cidade de Londrina. 
 Recentemente surgiu a necessidade de expandir o sistema para outras localidades.
-fizemos um estudo das funcionalidades existentes. 
+Fizemos um estudo das funcionalidades existentes. 
 <!-- more -->
 
 Vimos que as urls do sistema foram contruídas dessa forma:
