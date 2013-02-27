@@ -99,13 +99,13 @@ Daí por diante é só ir diminuindo a resolução conformo você vai dando mais
 }
 ```
 
-Na maioria das vezes, conforme a resolução do dispositivo diminuí, a capacidade de processamento também, então começam a aparecer estilos que otimizam o desempenho em dispositivos mais modestos.
+Na maioria das vezes, conforme a resolução do dispositivo diminui, a capacidade de processamento também, então começam a aparecer estilos que otimizam o desempenho em dispositivos mais modestos.
 
 Mudando um pouco de assunto mas dentro de um mesmo contexto, acho que quando você está aprendendo *CSS* básico ainda, mais importante do que o conceito de **“Design Responsivo”** em si é o conceito de “[Box-Model](http://www.w3.org/TR/CSS2/box.html)”. Procure entender melhor como se comporta a renderização em cada browser.
 
 Se você não domina completamente todos os elementos da sua interface no navegador Web, será um pouco mais difícil “aprender design responsivo”. Talvez você até o faça, mas seu trabalho não terá a qualidade esperada no final.
 
-**Conclusão:** Você precisa pensar para que cada dispositivo tenha a melhor experiência possível dentro de suas limitações. Através das *Media Queries* podemos definir estilos especifícos para cada contexto e assim otimizar a experiência do usuário em diferentes situações.
+**Conclusão:** Você precisa pensar para que cada dispositivo tenha a melhor experiência possível dentro de suas limitações. Através das *Media Queries* podemos definir estilos específicos para cada contexto e assim otimizar a experiência do usuário em diferentes situações.
 
 No próximo post tentarei falar mais sobre *Viewports* e *Media Queries*.
 
