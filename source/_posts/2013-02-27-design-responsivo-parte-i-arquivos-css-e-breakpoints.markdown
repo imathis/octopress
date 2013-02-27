@@ -5,9 +5,11 @@ layout: post
 title: "Design Responsivo Parte I: Arquivos CSS e Breakpoints"
 date: 2013-02-27 10:15
 comments: true
-categories: 
+categories:
   - design
   - css
+  - design responsivo
+  - mikael carrara
 ---
 
 Irei a partir de hoje lançar uma série de posts com minhas considerações a respeito de design responsivo.
