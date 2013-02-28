@@ -60,10 +60,10 @@ module Jekyll
           partial = Liquid::Template.parse(contents)
           context.stack do
             contents = partial.render(context)
-            
+
             site = context.registers[:site]
             converter = site.converters.find { |c| c.matches(ext) }
-            
+
             if converter.nil?
               contents
             else

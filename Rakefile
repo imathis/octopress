@@ -6,7 +6,6 @@ require "stringex"
 require 'time'
 require 'tzinfo'
 require 'rake/minify'
-require 'time'
 require 'yaml'
 require 'octopress'
 
@@ -197,7 +196,7 @@ task :new_page, :filename do |t, args|
 end
 
 # usage rake isolate[my-post]
-desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much quicker."
+desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much more quickly."
 task :isolate, :filename do |t, args|
   if args.filename
     filename = args.filename
@@ -215,12 +214,11 @@ task :integrate do
   FileUtils.mv Dir.glob("#{full_stash_dir}/*.*"), "#{configuration[:source]}/#{configuration[:posts_dir]}/"
 end
 
-desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
+desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache, and Compass-generated files."
 task :clean do
-  [".pygments-cache/**", ".gist-cache/**"].each { |dir| rm_rf Dir.glob(dir) }
-  rm "#{configuration[:source]}/stylesheets/screen.css" if File.exists?("#{configuration[:source]}/stylesheets/screen.css")
+  rm_rf [".pygments-cache", ".gist-cache"]
   system "compass clean"
-  puts "## Cleaned Sass, Pygments and Gist caches, removed generated stylesheets ##"
+  puts "## Cleaned Sass-generated files, and various caches ##"
 end
 
 desc "Update theme source and style"
@@ -354,7 +352,7 @@ task :set_root_dir, :dir do |t, args|
     site_configs[:subscribe_rss] = "#{dir}/atom.xml"
     site_configs[:root] = "/#{dir.sub(/^\//, '')}"
     configurator.write_config('site.yml', site_configs)
-    
+
     rm_rf configuration[:destination]
     mkdir_p site_configs[:destination]
     puts "\n========================================================"
@@ -369,7 +367,9 @@ task :setup_github_pages, :repo do |t, args|
   if args.repo
     repo_url = args.repo
   else
-    repo_url = get_stdin("Enter the read/write url for your repository: ")
+    puts "Enter the read/write url for your repository"
+    puts "(For example, 'git@github.com:your_username/your_username.github.com)"
+    repo_url = get_stdin("Repository url: ")
   end
   unless repo_url[-4..-1] == ".git"
     repo_url << ".git"
@@ -455,7 +455,7 @@ end
 # usage rake list_posts or rake list_posts[pub|unpub]
 desc "List all unpublished/draft posts"
 task :list_drafts do
-  posts = Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*") 
+  posts = Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*")
   unpublished = get_unpublished(posts)
   puts unpublished.empty? ? "There are no posts currently in draft" : unpublished
 end
@@ -466,7 +466,7 @@ def get_unpublished(posts, options={})
   posts.sort.each do |post|
     file = File.read(post)
     data = YAML.load file.match(/(^-{3}\n)(.+?)(\n-{3})/m)[2]
-    
+
     if options[:no_future]
       future = Time.now < Time.parse(data['date'].to_s) ? "future date: #{data['date']}" : false
     end

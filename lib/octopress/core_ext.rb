@@ -18,9 +18,9 @@ class Hash
     target
   end
   def to_symbol_keys
-    inject({}) { |memo,(k,v)| memo[k.to_sym] = v; memo } 
+    inject({}) { |memo,(k,v)| memo[k.to_sym] = v; memo }
   end
   def to_string_keys
-    inject({}) { |memo,(k,v)| memo[k.to_s] = v; memo } 
+    inject({}) { |memo,(k,v)| memo[k.to_s] = v; memo }
   end
 end
