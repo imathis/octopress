@@ -465,7 +465,7 @@ end
 # Run tests for Octopress module, found in lib/.
 #
 Rake::TestTask.new do |t|
-  t.pattern = "spec/**/*_spec.rb"
+  t.pattern = "lib/spec/**/*_spec.rb"
 end
 
 def get_unpublished(posts, options={})
