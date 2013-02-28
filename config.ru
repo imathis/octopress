@@ -2,8 +2,8 @@ require 'bundler/setup'
 require 'sinatra/base'
 
 # The project root directory
-$root = ::File.dirname(__FILE__)
-require File.expand_path(File.join($root, 'lib/octopress'))
+octopress_root = ::File.dirname(__FILE__)
+require File.expand_path(File.join(octopress_root, 'lib/octopress'))
 
 class SinatraStaticServer < Sinatra::Base
 
