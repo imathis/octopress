@@ -1,7 +1,0 @@
-source "https://rubygems.org"
-
-gem "rake", "~> 10.0"
-
-group :test do
-  gem "minitest", "~> 4.6"
-end

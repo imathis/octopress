@@ -18,4 +18,8 @@ group :development do
   gem 'rdiscount', '~> 1.6.8'
 end
 
+group :test do
+  gem "minitest", "~> 4.6"
+end
+
 gem 'sinatra', '~> 1.3.3'

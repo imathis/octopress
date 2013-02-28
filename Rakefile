@@ -8,6 +8,7 @@ require 'tzinfo'
 require 'rake/minify'
 require 'yaml'
 require 'octopress'
+require "rake/testtask"
 
 ### Configuring Octopress:
 ###   Under _config/ you will find:
@@ -458,6 +459,13 @@ task :list_drafts do
   posts = Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*")
   unpublished = get_unpublished(posts)
   puts unpublished.empty? ? "There are no posts currently in draft" : unpublished
+end
+
+#
+# Run tests for Octopress module, found in lib/.
+#
+Rake::TestTask.new do |t|
+  t.pattern = "spec/**/*_spec.rb"
 end
 
 def get_unpublished(posts, options={})
