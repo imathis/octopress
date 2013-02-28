@@ -65,8 +65,8 @@ module Octopress
           configs = configs.deep_merge(file_yaml)
         end
       end
-      env = ENV["OCTOPRESS_ENV"] || configs["env"]
-      env_path = self.config_dir('environments', "#{env}.yml")
+      configs["env"] = ENV["OCTOPRESS_ENV"] || configs["env"]
+      env_path = self.config_dir('environments', "#{configs["env"]}.yml")
       if(File.exist?(env_path))
         file_yaml = YAML.load(File.read(env_path))
         unless file_yaml.nil?

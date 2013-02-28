@@ -3,5 +3,4 @@
 #   User Deployment Config   #
 # -------------------------- #
 
-env: production
 deploy_default: rsync

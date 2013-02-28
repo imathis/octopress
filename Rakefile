@@ -286,13 +286,21 @@ end
 # Deploying  #
 ##############
 
+# Unpublicized helper task to ensure that at deploy-time we act like we're
+# going to production -- unless the user has explicitly instructed us
+# otherwise.
+task :set_deployment_environment do
+  ENV['OCTOPRESS_ENV'] = 'production' unless(ENV['OCTOPRESS_ENV'])
+  configuration  = configurator.read_configuration
+end
+
 desc "Default deploy task"
-task :deploy do
+task :deploy => :set_deployment_environment do
   Rake::Task["#{configuration[:deploy_default]}"].execute
 end
 
 desc "Generate website and deploy"
-task :gen_deploy => [:integrate, :generate, :deploy] do
+task :gen_deploy => [:integrate, :set_deployment_environment, :generate, :deploy] do
 end
 
 desc "Deploy website via rsync"

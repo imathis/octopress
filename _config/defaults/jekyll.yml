@@ -24,7 +24,7 @@ redcarpet:
 pygments:     false           # Jekyll's default Python Pygments have been replaced by pygments.rb.
                               # Set to true to use Albino + Python Pygments
 
-env:            production
+env:            development
 blog_index_dir: source        # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
 stash_dir:      _stash        # directory to stash posts for speedy generation
 posts_dir:      _posts        # directory for blog files
