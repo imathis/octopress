@@ -21,7 +21,7 @@ configurator   = Octopress::Configuration.new
 configuration  = configurator.read_configuration
 full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
 
-desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
+desc "Initial setup for Octopress: generates per-environment configs, and copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
   if File.directory?(configuration[:source]) || File.directory?("sass")
     abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
@@ -34,7 +34,17 @@ task :install, :theme do |t, args|
   mkdir_p "sass"
   cp_r "#{configuration[:themes_dir]}/#{theme}/sass/.", "sass"
   mkdir_p "#{configuration[:source]}/#{configuration[:posts_dir]}"
-  mkdir_p configuration[:destination]
+
+  prefix_offset = configuration[:setup_dir].length + 1
+  FileList["#{configuration[:setup_dir]}/**/*.yml"].each do |config_file|
+    relative_name = config_file[prefix_offset..-1]
+    destination_file = File.join(configurator.config_directory, relative_name)
+    destination_directory = File.dirname(destination_file)
+    if(!File.directory?(destination_directory))
+      mkdir_p destination_directory
+    end
+    cp config_file, destination_file
+  end
 end
 
 #######################
