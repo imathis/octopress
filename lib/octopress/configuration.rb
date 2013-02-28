@@ -6,7 +6,7 @@ module Octopress
     attr_accessor :config_directory
     
     def initialize(config_dir = DEFAULT_CONFIG_DIR)
-      self.config_directory = config_dir
+      self.config_directory = File.expand_path(config_dir)
     end
 
     def config_dir(*subdirs)
