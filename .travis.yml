@@ -6,6 +6,4 @@ rvm:
 script:
   - bundle exec rake install
   - bundle exec rake generate
-  - cd lib
-  - bundle install --gemfile=lib/Gemfile
-  - bundle exec rake test --rakefile lib/Rakefile
+  - "cd lib && bundle install && bundle exec rake test"
