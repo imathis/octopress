@@ -10,8 +10,9 @@ require 'yaml'
 require 'octopress'
 
 ### Configuring Octopress:
-###   Under _config/ you will find:
-###       site.yml, deploy.yml
+###   After running 'rake install', under _config/ you will find:
+###       site.yml, deploy.yml, environments/development.yml, and
+###       environments/production.yml
 ###   Here you can override Octopress's default configurations or add your own.
 ###   This Rakefile uses those config settings to do what it does.
 ###   Please do not change anything below if you want help --
