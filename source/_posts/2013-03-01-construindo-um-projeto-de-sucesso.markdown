@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Construindo um projeto de sucesso"
-date: 2013-03-01 00:40
+date: 2013-03-01 16:00
 comments: true
 categories:
   - xp
