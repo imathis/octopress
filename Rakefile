@@ -298,7 +298,11 @@ task :rsync do
     exclude = "--exclude-from '#{File.expand_path('./rsync-exclude')}'"
   end
   puts "## Deploying website via Rsync"
-  ssh_key = (!configuration[:ssh_key].nil? && !configuration[:ssh_key].empty?) ? "-i #{ENV['HOME']}/.ssh/#{configuration[:ssh_key]}" : ""
+  ssh_key = if(!configuration[:ssh_key].nil? && !configuration[:ssh_key].empty?)
+    "-i #{ENV['HOME']}/.ssh/#{configuration[:ssh_key]}"
+  else
+    ""
+  end
   document_root = ensure_trailing_slash(configuration[:document_root])
   ok_failed system("rsync -avze 'ssh -p #{configuration[:ssh_port]} #{ssh_key}' #{exclude} #{configuration[:rsync_args]} #{"--delete" unless !configuration[:rsync_delete]} #{ensure_trailing_slash(configuration[:destination])} #{configuration[:ssh_user]}:#{document_root}")
 end
