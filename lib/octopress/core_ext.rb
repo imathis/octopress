@@ -1,3 +1,20 @@
+module Octopress
+  module HashHelpers
+    def self.transform_keys_recursively(entity, &block)
+      result = entity
+      case entity
+      when Hash
+        result = Hash[entity.map do |key, value|
+          [block.call(key), self.transform_keys_recursively(value, &block)]
+        end]
+      when Array
+        result = entity.map { |elem| self.transform_keys_recursively(elem, &block) }
+      end
+      return result
+    end
+  end
+end
+
 class Hash
   # Merges self with another hash, recursively.
   #
@@ -18,9 +35,9 @@ class Hash
     target
   end
   def to_symbol_keys
-    inject({}) { |memo,(k,v)| memo[k.to_sym] = v; memo }
+    Octopress::HashHelpers.transform_keys_recursively(self, &:to_sym)
   end
   def to_string_keys
-    inject({}) { |memo,(k,v)| memo[k.to_s] = v; memo }
+    Octopress::HashHelpers.transform_keys_recursively(self, &:to_s)
   end
 end
