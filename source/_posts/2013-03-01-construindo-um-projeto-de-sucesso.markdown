@@ -64,7 +64,7 @@ Basedo nessas premissas que eu compartilhei, estamos entregando semana a semana 
 
 Na nossa página existem [outros depoimentos](http://helabs.com.br/#cliente).
 
-Abraço, [Rodrigo Pinto](www.twitter.com/rodrigoospinto).
+Abraço, [Rodrigo Pinto](http://www.twitter.com/rodrigoospinto).
 
 
 (1) http://www.dicio.com.br/constancia/
