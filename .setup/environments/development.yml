@@ -1,0 +1,6 @@
+---
+# Place all development-mode configutation settings here.  This file will be
+# loaded after all other config files.
+assets:
+  line_comments: true
+  output_style: expanded

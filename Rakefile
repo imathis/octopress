@@ -11,8 +11,9 @@ require 'octopress'
 require "rake/testtask"
 
 ### Configuring Octopress:
-###   Under _config/ you will find:
-###       site.yml, deploy.yml
+###   After running 'rake install', under _config/ you will find:
+###       site.yml, deploy.yml, environments/development.yml, and
+###       environments/production.yml
 ###   Here you can override Octopress's default configurations or add your own.
 ###   This Rakefile uses those config settings to do what it does.
 ###   Please do not change anything below if you want help --
@@ -22,7 +23,7 @@ configurator   = Octopress::Configuration.new
 configuration  = configurator.read_configuration
 full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
 
-desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
+desc "Initial setup for Octopress: generates per-environment configs, and copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
   if File.directory?(configuration[:source]) || File.directory?("sass")
     abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
@@ -35,7 +36,17 @@ task :install, :theme do |t, args|
   mkdir_p "sass"
   cp_r "#{configuration[:themes_dir]}/#{theme}/sass/.", "sass"
   mkdir_p "#{configuration[:source]}/#{configuration[:posts_dir]}"
-  mkdir_p configuration[:destination]
+
+  prefix_offset = configuration[:setup_dir].length + 1
+  FileList["#{configuration[:setup_dir]}/**/*.yml"].each do |config_file|
+    relative_name = config_file[prefix_offset..-1]
+    destination_file = File.join(configurator.config_directory, relative_name)
+    destination_directory = File.dirname(destination_file)
+    if(!File.directory?(destination_directory))
+      mkdir_p destination_directory
+    end
+    cp config_file, destination_file
+  end
 end
 
 #######################
@@ -276,13 +287,21 @@ end
 # Deploying  #
 ##############
 
+# Unpublicized helper task to ensure that at deploy-time we act like we're
+# going to production -- unless the user has explicitly instructed us
+# otherwise.
+task :set_deployment_environment do
+  ENV['OCTOPRESS_ENV'] = 'production' unless(ENV['OCTOPRESS_ENV'])
+  configuration  = configurator.read_configuration
+end
+
 desc "Default deploy task"
-task :deploy do
+task :deploy => :set_deployment_environment do
   Rake::Task["#{configuration[:deploy_default]}"].execute
 end
 
 desc "Generate website and deploy"
-task :gen_deploy => [:integrate, :generate, :deploy] do
+task :gen_deploy => [:integrate, :set_deployment_environment, :generate, :deploy] do
 end
 
 desc "Deploy website via rsync"

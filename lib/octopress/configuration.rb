@@ -6,7 +6,7 @@ module Octopress
     attr_accessor :config_directory
 
     def initialize(config_dir = DEFAULT_CONFIG_DIR)
-      self.config_directory = config_dir
+      self.config_directory = File.expand_path(config_dir)
     end
 
     def config_dir(*subdirs)
@@ -61,6 +61,15 @@ module Octopress
       end
       Dir.glob(self.config_dir('*.yml')) do |filename|
         file_yaml = YAML.load(File.read(filename))
+        unless file_yaml.nil?
+          configs = configs.deep_merge(file_yaml)
+        end
+      end
+      env = ENV["OCTOPRESS_ENV"] || configs["env"]
+      configs["env"] = env if(env)
+      env_path = self.config_dir('environments', "#{configs["env"]}.yml")
+      if(File.exist?(env_path))
+        file_yaml = YAML.load(File.read(env_path))
         unless file_yaml.nil?
           configs = configs.deep_merge(file_yaml)
         end
