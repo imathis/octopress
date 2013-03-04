@@ -10,7 +10,7 @@ source:       source          # source file directory
 destination:  public          # compiled site directory
 plugins:      plugins
 code_dir:     downloads/code
-category_dir: blog/categories
+category_dir: categories
 include:
   - .htaccess
 markdown:     redcarpet
@@ -22,14 +22,15 @@ redcarpet:
     - superscript
     - smart
 pygments:     false           # Jekyll's default Python Pygments have been replaced by pygments.rb.
-                              # Set to true to use Albino + Python Pygments
+include:
+  - .htaccess
 
-env:            production
-blog_index_dir: source        # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
+env:            production    # affects asset compilation
+post_index_dir: source        # directory for your posts index page (if you put your index in source/blog/index.html, set this to 'source/blog')
 stash_dir:      _stash        # directory to stash posts for speedy generation
 posts_dir:      _posts        # directory for blog files
-themes_dir:     .themes       # directory for blog files
 new_post_ext:   markdown      # default new post file extension when using the new_post task
 new_page_ext:   markdown      # default new page file extension when using the new_page task
 server_host:    0.0.0.0       # host ip address for preview server
 server_port:    4000          # port for preview server eg. localhost:4000
+timezone:       local         # default time and date used to local timezone. Vew supported timezones (under TZ column): http://en.wikipedia.org/wiki/List_of_tz_database_time_zones

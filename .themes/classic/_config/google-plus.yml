@@ -4,6 +4,10 @@
 # --------------------------------- #
 
 # Hidden: No visible button, just add author information to search results
-googleplus_user:
-googleplus_hidden: false
-google_plus_image_size: 32
+googleplus:
+  user:
+  hidden: false
+  image_size: 32
+
+  # Google+ Sharing
+  plus_one: false

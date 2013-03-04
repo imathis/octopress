@@ -3,6 +3,14 @@
 #   Classic Theme Configuration   #
 # ------------------------------- #
 
+theme:
+  name: classic
+  # path to theme stylesheets directory
+  stylesheets_dir: assets/stylesheets
+  # path to theme javascripts directory
+  javascripts_dir: assets/javascripts
+
+
 url: http://yoursite.com
 title: My Octopress Blog
 subtitle: A blogging framework for hackers.
@@ -32,13 +40,13 @@ page_sidebar: page_default.html
 post_sidebar: post_default.html
 
 paginate: 10          # Posts per page on the blog index
-pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
+pagination_dir:       # Directory base for pagination URLs eg. /page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
-excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+excerpt_link: "Read on →"  # "Continue reading" link text at the bottom of excerpted articles
 excerpt_in_feed: false # Truncate excerpted articles in the atom feed
 permalink_label: "Permalink"
-permalink_label_feed: "&#9875; Permalink"
-linklog_marker: "&rarr;"
+permalink_label_feed: "★ Permalink"
+linklog_marker: "→"
 linklog_marker_position: after
 linklog_marker_position_feed: after
 standard_post_marker:

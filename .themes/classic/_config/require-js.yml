@@ -1,0 +1,17 @@
+---
+# Asset configuration
+
+# Javascript assets stored in assets/javascripts and assets/javascripts/lib
+# Are wrapped with CommonJS functions, combined, uglified and fingerprinted
+# Supported files: .js, .coffee, .mustache, .eco, .tmpl
+
+require_js:
+  # Dependiences are added first as globals
+  dependencies: 
+    - lib/modernizr.js
+    - lib/swfobject-dynamic.js
+    - lib/*.*
+
+  # files from the javascripts root path are wrapped with CommonJS functions
+  modules:
+    - '*.*'
