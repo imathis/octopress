@@ -26,11 +26,13 @@ categories:
 Conteúdo do post
 ```
 
-5) Commit as mudanças: git commit -am 'post: Titulo do seu post'
- 
-6) Push na branch: git push origin post/titulo-do-seu-post
- 
-7) Mande um pull request
+5) Veja se ficou bom executando: rake preview
+
+6) Commit as mudanças: git commit -am 'post: Titulo do seu post'
+
+7) Push na branch: git push origin post/titulo-do-seu-post
+
+8) Mande um pull request
 
 ## License
 (The MIT License)
