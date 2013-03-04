@@ -1,6 +1,0 @@
----
-# -------------------------- #
-#   User Deployment Config   #
-# -------------------------- #
-
-deploy_default: rsync

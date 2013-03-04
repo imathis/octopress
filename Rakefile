@@ -1,14 +1,14 @@
 $:.unshift File.expand_path("lib", File.dirname(__FILE__)) # For use/testing when no gem is installed
 
-require "rubygems"
-require "bundler/setup"
-require "stringex"
+require 'rubygems'
+require 'bundler/setup'
+require 'stringex'
 require 'time'
 require 'tzinfo'
-require 'rake/minify'
 require 'yaml'
 require 'octopress'
-require "rake/testtask"
+require 'rake/testtask'
+require 'colors'
 
 ### Configuring Octopress:
 ###   Under _config/ you will find:
@@ -24,18 +24,80 @@ full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
-  if File.directory?(configuration[:source]) || File.directory?("sass")
+  theme = args.theme || 'classic'
+  theme_configuration = configurator.read_theme_configuration(theme)
+  if File.directory?(theme_configuration[:source]) || File.directory?(theme_configuration[:theme][:javascripts_dir]) || File.directory?(theme_configuration[:theme][:stylesheets_dir])
     abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
   end
   # copy theme into working Jekyll directories
+  puts "## Installing "+theme+" theme"
+  Rake::Task["install_template"].invoke(theme)
+  Rake::Task["install_stylesheets"].invoke(theme)
+  Rake::Task["install_javascripts"].invoke(theme)
+  Rake::Task["install_configs"].invoke(theme)
+  mkdir_p 'site'
+end
+
+task :install_configs, :theme do |t, args|
   theme = args.theme || 'classic'
-  puts "## Copying "+theme+" theme into ./#{configuration[:source]} and ./sass"
-  mkdir_p configuration[:source]
-  cp_r "#{configuration[:themes_dir]}/#{theme}/source/.", configuration[:source]
-  mkdir_p "sass"
-  cp_r "#{configuration[:themes_dir]}/#{theme}/sass/.", "sass"
-  mkdir_p "#{configuration[:source]}/#{configuration[:posts_dir]}"
-  mkdir_p configuration[:destination]
+  mkdir_p "_config"
+  if File.directory? ".themes/#{theme}/_config"
+    cp_r ".themes/#{theme}/_config/.", "_config/defaults", :remove_destination=>true
+    user_config_site = <<-EOF
+---
+# --------------------------- #
+#      User Configuration     #
+# --------------------------- #
+
+EOF
+    File.open('_config/site.yml', 'w') { |f| f.write user_config_site }
+
+    user_config_deploy = <<-EOF
+---
+# -------------------------- #
+#      Deployment Config     #
+# -------------------------- #
+
+deploy_method: rsync
+EOF
+    File.open('_config/deploy.yml', 'w') { |f| f.write user_config_deploy }
+  end
+end
+
+desc "Install stylesheets for a theme"
+task :install_stylesheets, :theme do |t, args|
+  theme = args.theme || 'classic'
+  theme_configuration = configurator.read_theme_configuration(theme)
+  begin
+    stylesheets_dir = File.join(".themes/#{theme}", theme_configuration[:theme][:stylesheets_dir])
+  rescue
+    "The #{theme} theme must have a configuration file. This theme isn't compatable with Octopress 3.0 installation. You can probably still install it manually.".yellow
+  end
+  mkdir_p "assets/stylesheets"
+  if File.directory? stylesheets_dir
+    cp_r "#{stylesheets_dir}/.", "assets/stylesheets"
+  end
+end
+
+desc "Install javascript assets for a theme"
+task :install_javascripts, :theme do |t, args|
+  theme = args.theme || 'classic'
+  theme_configuration = configurator.read_theme_configuration(theme)
+  begin
+    javascripts_dir = File.join(".themes/#{theme}", theme_configuration[:theme][:javascripts_dir])
+  rescue
+    "The #{theme} theme must have a configuration file. This theme isn't compatable with Octopress 3.0 installation. You can probably still install it manually.".yellow
+  end
+  mkdir_p "assets/javascripts"
+  if File.directory? javascripts_dir
+    cp_r "#{javascripts_dir}/.", "assets/javascripts"
+  end
+end
+
+task :install_template, :theme do |t, args|
+  theme = args.theme || 'classic'
+  mkdir_p "source/_posts"
+  cp_r ".themes/#{theme}/source/.", 'source'
 end
 
 #######################
@@ -43,36 +105,15 @@ end
 #######################
 
 desc "Generate jekyll site"
-task :generate, :no_future do |t, args|
-  future = args.no_future
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(configuration[:source])
+task :generate do
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." if configuration[:source].nil? || !File.directory?(configuration[:source])
   configurator.write_configs_for_generation
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{configuration[:source]}/stylesheets"
-  Rake::Task['minify_and_combine'].execute
-  system "jekyll --no-server --no-auto #{'--no-future' if future.nil?}"
-  unpublished = get_unpublished(Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*"), {no_future: future.nil?, message: "\nThese posts were not generated:"})
+  system "jekyll --no-server --no-auto #{'--no-future' if Octopress.env == 'production'}"
+  unpublished = get_unpublished(Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*"), {env: Octopress.env, message: "\nThese posts were not generated:"})
   puts unpublished unless unpublished.empty?
   configurator.remove_configs_for_generation
-end
-
-Rake::Minify.new(:minify_and_combine) do
-  files = FileList.new("#{configuration[:source]}/javascripts/group/*.*")
-
-  output_file =  "#{configuration[:source]}/javascripts/octopress.min.js"
-
-  puts "BEGIN Minifying #{output_file}"
-  group(output_file) do
-    files.each do |filename|
-      puts "Minifying- #{filename} into #{output_file}"
-      if filename.include? '.min.js'
-        add(filename, :minify => false)
-      else
-        add(filename)
-      end
-    end
-  end
-  puts "END Minifying #{output_file}"
 end
 
 # usage rake generate_only[my-post]
@@ -90,42 +131,32 @@ task :generate_only, :filename do |t, args|
   Rake::Task["integrate"].execute
 end
 
+# - Check to see if site has been installed first rescue properly
 desc "Watch the site and regenerate when it changes"
-task :watch, :show_future do |t, args|
-  future = args.show_future
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(configuration[:source])
-  configurator.write_configs_for_generation
+task :watch do
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." if configuration[:source].nil? || !File.directory?(configuration[:source])
   puts "Starting to watch source with Jekyll and Compass."
-  system "compass compile --css-dir #{configuration[:source]}/stylesheets"
-  Rake::Task['minify_and_combine'].execute
-  jekyllPid = Process.spawn("jekyll --auto #{'--no-future' if future.nil?}")
-  compassPid = Process.spawn("compass watch")
+  guardPid = Process.spawn("guard")
   trap("INT") {
-    [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
-    configurator.remove_configs_for_generation
+    Process.kill(9, guardPid) rescue Errno::ESRCH
     exit 0
   }
-  [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
+  Process.wait guardPid
 end
 
 desc "preview the site in a web browser."
-task :preview, :show_future do |t, args|
-  future = args.show_future
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(configuration[:source])
-  configurator.write_configs_for_generation
-  puts "Starting to watch source with Jekyll and Compass. Starting Rack, serving to http://#{configuration[:server_host]}:#{configuration[:server_port]}"
-  system "compass compile --css-dir #{configuration[:source]}/stylesheets"
-  jekyllPid = Process.spawn("jekyll --auto #{'--no-future' if future.nil?}")
-  compassPid = Process.spawn("compass watch")
+task :preview do
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." if configuration[:source].nil? || !File.directory?(configuration[:source])
+  guardPid = Process.spawn("guard")
+  puts "Starting Rack, serving to http://#{configuration[:server_host]}:#{configuration[:server_port]}"
   rackupPid = Process.spawn("rackup --host #{configuration[:server_host]} --port #{configuration[:server_port]}")
 
   trap("INT") {
-    [jekyllPid, compassPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
-    configurator.remove_configs_for_generation
+    [guardPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
 
-  [jekyllPid, compassPid, rackupPid].each { |pid| Process.wait(pid) }
+  [guardPid, rackupPid].each { |pid| Process.wait(pid) }
 end
 
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
@@ -219,42 +250,60 @@ desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache, and Compass-g
 task :clean do
   rm_rf [".pygments-cache", ".gist-cache"]
   system "compass clean"
-  puts "## Cleaned Sass-generated files, and various caches ##"
+  puts "## Cleaned Compass-generated files, and various caches ##"
 end
 
 desc "Update theme source and style"
 task :update, :theme do |t, args|
   theme = args.theme || 'classic'
-  Rake::Task[:update_source].invoke(theme)
-  Rake::Task[:update_style].invoke(theme)
+  Rake::Task[:update_template].invoke(theme)
+  Rake::Task[:update_stylesheets].invoke(theme)
+  Rake::Task[:update_javascripts].invoke(theme)
 end
 
-desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"
-task :update_style, :theme do |t, args|
+desc "Move stylesheets to stylesheets.old, install stylesheets theme updates, replace stylesheets/custom with stylesheets.old/custom"
+task :update_stylesheets, :theme do |t, args|
   theme = args.theme || 'classic'
-  if File.directory?("sass.old")
-    puts "removed existing sass.old directory"
-    rm_r "sass.old", :secure=>true
+  if File.directory?("#{configuration[:assets]}.old/stylesheets")
+    rm_r "#{configuration[:assets]}.old/stylesheets", :secure=>true
+    puts "Removed existing assets.old/stylesheets directory"
   end
-  mv "sass", "sass.old"
-  puts "## Moved styles into sass.old/"
-  cp_r "#{configuration[:themes_dir]}/"+theme+"/sass/", "sass"
-  cp_r "sass.old/custom/.", "sass/custom"
-  puts "## Updated Sass ##"
+  mkdir "#{configuration[:assets]}.old" 
+  mv "#{configuration[:assets]}/stylesheets", "#{configuration[:assets]}.old/stylesheets"
+  puts "Moved styles into #{configuration[:assets]}.old/stylesheets"
+  install_stylesheets(theme)
+  cp_r "#{configuration[:assets]}.old/stylesheets/custom", "#{configuration[:assets]}/stylesheets/custom"
+  puts "## Updated Stylesheets ##"
   rm_r ".sass-cache", :secure=>true if File.directory?(".sass-cache")
 end
 
+desc "Move javascripts to #{configuration[:assets]}.old/javascripts, install javascripts theme updates."
+task :update_javascripts, :theme do |t, args|
+  if File.directory?(".themes/#{theme}/javascripts")
+    theme = args.theme || 'classic'
+    if File.directory?("#{configuration[:assets]}.old/javascripts")
+      rm_r "#{configuration[:assets]}.old/javascripts", :secure=>true
+      puts "Removed existing assets.old/javascripts directory"
+    end
+    mkdir "#{configuration[:assets]}.old" 
+    cp_r "#{configuration[:assets]}/javascripts/.", "#{configuration[:assets]}.old/javascripts"
+    puts "Copied styles into #{configuration[:assets]}.old/javascripts"
+    install_javascripts(theme)
+    puts "## Updated Javascripts ##"
+  end
+end
+
 desc "Move source to source.old, install source theme updates, replace source/_includes/navigation.html with source.old's navigation"
-task :update_source, :theme do |t, args|
+task :update_template, :theme do |t, args|
   theme = args.theme || 'classic'
   if File.directory?("#{configuration[:source]}.old")
-    puts "## Removed existing #{configuration[:source]}.old directory"
+    puts "Removed existing #{configuration[:source]}.old directory"
     rm_r "#{configuration[:source]}.old", :secure=>true
   end
   mkdir "#{configuration[:source]}.old"
   cp_r "#{configuration[:source]}/.", "#{configuration[:source]}.old"
   puts "## Copied #{configuration[:source]} into #{configuration[:source]}.old/"
-  cp_r "#{configuration[:themes_dir]}/"+theme+"/source/.", configuration[:source], :remove_destination=>true
+  cp_r ".themes/"+theme+"/source/.", configuration[:source], :remove_destination=>true
   cp_r "#{configuration[:source]}.old/_includes/custom/.", "#{configuration[:source]}/_includes/custom/", :remove_destination=>true
   mv "#{configuration[:source]}/index.html", "#{configuration[:blog_index_dir]}", :force=>true if configuration[:blog_index_dir] != configuration[:source]
   cp "#{configuration[:source]}.old/index.html", configuration[:source] if configuration[:blog_index_dir] != configuration[:source] && File.exists?("#{configuration[:source]}.old/index.html")
@@ -348,7 +397,7 @@ task :set_root_dir, :dir do |t, args|
       dir = "/" + args.dir.sub(/(\/*)(.+)/, "\\2").sub(/\/$/, '');
     end
     # update personal configuration
-    site_configs = configurator.read_config('site.yml')
+    site_configs = configurator.read_configuration('site.yml')
     site_configs[:destination] = "public#{dir}"
     site_configs[:subscribe_rss] = "#{dir}/atom.xml"
     site_configs[:root] = "/#{dir.sub(/^\//, '')}"
@@ -387,13 +436,13 @@ task :setup_github_pages, :repo do |t, args|
     system "git remote rename origin octopress"
     if branch == 'master'
       # If this is a user/organization pages repository, add the correct origin remote
-      # and checkout the source branch for committing changes to the blog source.
+      # and checkout the source branch for committing changes to the website's source.
       system "git remote add origin #{repo_url}"
       puts "Added remote #{repo_url} as origin"
       system "git config branch.master.remote origin"
       puts "Set origin as default remote"
       system "git branch -m master source"
-      puts "Master branch renamed to 'source' for committing your blog source files"
+      puts "Master branch renamed to 'source' for committing your website's source files"
     else
       unless !configuration[:destination].match("#{project}").nil?
         Rake::Task[:set_root_dir].invoke(project)
@@ -474,8 +523,8 @@ def get_unpublished(posts, options={})
   posts.sort.each do |post|
     file = File.read(post)
     data = YAML.load file.match(/(^-{3}\n)(.+?)(\n-{3})/m)[2]
-
-    if options[:no_future]
+    
+    if options[:env] == 'production'
       future = Time.now < Time.parse(data['date'].to_s) ? "future date: #{data['date']}" : false
     end
     draft = data['published'] == false ? 'published: false' : false
