@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: General | Avi Tzurel]]></title>
+  <link href="http://avi.io/blog/categories/general/atom.xml" rel="self"/>
+  <link href="http://avi.io/"/>
+  <updated>2013-03-05T00:43:52+02:00</updated>
+  <id>http://avi.io/</id>
+  <author>
+    <name><![CDATA[Avi Tzurel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[organizing your specs into groups and running them separately]]></title>
+    <link href="http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/"/>
+    <updated>2012-08-19T13:57:00+03:00</updated>
+    <id>http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately</id>
+    <content type="html"><![CDATA[<p>A while back I answered <a href="http://stackoverflow.com/questions/10029250/organizing-rspec-2-tests-into-unit-and-integration-categories-in-rails/10029504#10029504">this StackOverflow question</a>.</p>
+
+<p>When you have a lot of specs, it makes sense to run them in separate logical groups and not just with <code>rspec spec</code> or something like that.</p>
+
+<p>This way, you can save time and you can also run them in separate processes on the CI.</p>
+
+<p>For example:</p>
+
+<p><code>
+bundle exec rake spec:unit
+bundle exec rake spec:integration
+bundle exec rake spec:api
+</code></p>
+
+<p>In order to achieve this, you need to change the <code>spec.rake</code> file.</p>
+
+<p>```ruby
+  namespace :spec do</p>
+
+<pre><code>Rspec::Core::RakeTask.new(:unit) do |t|
+  t.pattern = Dir['spec/*/**/*_spec.rb'].reject{ |f| f['/api/v1'] || f['/integration'] }
+end
+</code></pre>
+
+<p>   Rspec::Core::RakeTask.new(:api) do |t|</p>
+
+<pre><code>  t.pattern = "spec/*/{api/v1}*/**/*_spec.rb"
+end
+
+Rspec::Core::RakeTask.new(:integration) do |t|
+  t.pattern = "spec/integration/**/*_spec.rb"
+end
+</code></pre>
+
+<p>  end
+```
+You can continue customizing that all you want, you can run specific specs that are the most important to you.</p>
+
+<p>I find those groups useful for most of my use cases, but with minor changes you can make it fit yours</p>
+
+<h3>Using Rspec Tags</h3>
+
+<p>You can use tags for that as well, but I find that more tedious and you can forget to <em>tag</em> something.</p>
+
+<p>For example:</p>
+
+<p><code>ruby
+  it "should do some integration test", :integration =&gt; true do
+   # something
+  end
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[searching through the history of commands you ran in terminal]]></title>
+    <link href="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/"/>
+    <updated>2012-08-09T00:06:00+03:00</updated>
+    <id>http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal</id>
+    <content type="html"><![CDATA[<p>Whenever I am logged in to a server or even when I am working on my own machine, I keep searching through the command history through up and down arrows.</p>
+
+<p>While this can be efficient if you have 2-3 commands, it can be quite frustrating to find specific commands.</p>
+
+<p>That is something I keep doing over and over again, and now I have a better way, I just grep through the list of commands, find the one I want, copy it and paste it into a new command, and I'm done.</p>
+
+<p>This saves me <strong>a lot</strong> of time.</p>
+
+<p>Here's how:</p>
+
+<p>To show the history of commands you just do:</p>
+
+<p><code>
+history
+</code></p>
+
+<p>You probably know the rest, but you can just pipe the history into grep and search your history</p>
+
+<p><code>
+history | grep {command_or_part_of_command}
+</code></p>
+
+<p>For example:</p>
+
+<p><code>
+history | grep cp -R
+</code></p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[problem with running spec in vim]]></title>
+    <link href="http://avi.io/blog/2012/08/05/problem-with-running-spec-in-vim/"/>
+    <updated>2012-08-05T22:02:00+03:00</updated>
+    <id>http://avi.io/blog/2012/08/05/problem-with-running-spec-in-vim</id>
+    <content type="html"><![CDATA[<p>I have been using Vim for almost a week now.</p>
+
+<p>I am using the <a href="http://github.com/astrails/dotvim">dotvim</a> configuration by <a href="http://astrails.com">Astrails</a>.</p>
+
+<p>All in all, the configuration is awesome and I completely love it, it's the longest time period I have ever used Vim. Considering that the second place is about 5 minutes, that's super impressive.</p>
+
+<p>I only have one problem with it.</p>
+
+<p>I took the spec running functions from <a href="https://github.com/garybernhardt">Gary Bernhardt</a> <a href="https://github.com/garybernhardt/dotfiles/">dotfiles</a>, I just remapped the keys differently.</p>
+
+<p>```
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RUNNING TESTS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>' :call RunTestFile()<cr>
+map <leader>; :call RunNearestTest()<cr></p>
+
+<p>function! RunTestFile(...)</p>
+
+<pre><code>if a:0
+    let command_suffix = a:1
+else
+    let command_suffix = ""
+endif
+
+" Run the tests for the previously-marked file.
+let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
+if in_test_file
+    call SetTestFile()
+elseif !exists("t:grb_test_file")
+    return
+end
+call RunTests(t:grb_test_file . command_suffix)
+</code></pre>
+
+<p>endfunction</p>
+
+<p>function! RunNearestTest()</p>
+
+<pre><code>let spec_line_number = line('.')
+call RunTestFile(":" . spec_line_number . " -b")
+</code></pre>
+
+<p>endfunction</p>
+
+<p>function! SetTestFile()</p>
+
+<pre><code>" Set the spec file that tests will be run for.
+let t:grb_test_file=@%
+</code></pre>
+
+<p>endfunction</p>
+
+<p>function! RunTests(filename)</p>
+
+<pre><code>" Write the file and run tests for the given filename
+:w
+:silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+:silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+:silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+:silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+:silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+:silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+if match(a:filename, '\.feature$') != -1
+    exec ":!script/features " . a:filename
+else
+    if filereadable("script/test")
+        exec ":!script/test " . a:filename
+    elseif filereadable("Gemfile")
+        exec ":!bundle exec rspec --color " . a:filename
+    else
+        exec ":!rspec --color " . a:filename
+    end
+end
+</code></pre>
+
+<p>endfunction
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RUNNING TESTS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+```</p>
+
+<p>As you can see, I mapped <code>,;</code> to run line specs, and <code>,'</code> to run the entire spec file.</p>
+
+<p>The problem is, that the terminal exists immediately after the result, does not wait for me to hit <code>Enter</code> or anything.</p>
+
+<p>You can see the problem demo in this YouTube Video</p>
+
+<p><iframe width="" height="" src="http://www.youtube.com/embed/gUB48XwNq0M " frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></p>
+
+<p>I asked this question on StackOverflow <a href="http://stackoverflow.com/questions/11785035/vim-issue-with-running-specs-in-ruby-rspec/11785791#11785791">here</a></p>
+
+<p>Someone suggested it might be a trailing character, but I checked and there's nothing like that.</p>
+
+<p>The same person suggested to map just <code>ls</code> like so:</p>
+
+<p><code>
+nmap &lt;leader&gt;ls :!ls&lt;cr&gt;
+</code></p>
+
+<p>But this command does not exit.</p>
+
+<p>Another thing I tried is this
+In a vim session I mapped a key like this</p>
+
+<p><code>
+map &lt;Leader&gt;~ :!rspec %&lt;cr&gt;
+</code></p>
+
+<p>When I used it, the terminal did not exit as well.</p>
+
+<p>Vim Experts, what am I missing here?</p>
+
+<p>Running specs all the time is something crucial to my workflow, I don't want to hide vim very time, it breaks my flow.</p>
+
+<p>Any help appreciated.</p>
+
+<p>My entire vim configuration is here: <a href="http://www.github.com/kensodev/dotvim">link</a></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,1134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Avi Tzurel]]></title>
+  <link href="http://avi.io/atom.xml" rel="self"/>
+  <link href="http://avi.io/"/>
+  <updated>2013-03-05T00:43:52+02:00</updated>
+  <id>http://avi.io/</id>
+  <author>
+    <name><![CDATA[Avi Tzurel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[DO NOT use the callbacks that require persistence in Mongoid]]></title>
+    <link href="http://avi.io/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid/"/>
+    <updated>2013-02-19T22:10:00+02:00</updated>
+    <id>http://avi.io/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid</id>
+    <content type="html"><![CDATA[<p>I started using MongoDB at <a href="http://www.gogobot.com">Gogobot</a> a little while ago.
+While using it, I encountered some <a href="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">problems</a>, but for the most part, things went pretty smooth.</p>
+
+<p>Today, I encountered a bug that surprised me.</p>
+
+<p>While it certainly should not have, I think it can surprise you as well, so I am writing it up here as a fair warning.</p>
+
+<p>For Gogobot, the entire graph is built on top of MongoDB, all the things social are driven by it and for the most parts like I mentioned, we are pretty happy with it.</p>
+
+<h2>SO, What was the problem?</h2>
+
+<p>The entire graph is a mountable engine, we can decide to turn it on or to turn it off at will.
+It acts as a data warehouse and the workflows are being managed by the app.</p>
+
+<p>For example:</p>
+
+<p>When model X is created, app is notified and decides what to do with this notification, and so on and so forth.</p>
+
+<p>Everything peachy so far, nothing we haven&#8217;t used hundreds of times in the past.</p>
+
+<p>Here&#8217;s how it works.</p>
+
+<p>We have a model called <code>VisitedPlace</code>, it&#8217;s a representation of a user that visited a certain place</p>
+
+<p>Here&#8217;s the code</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">GraphEngine</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">FbPlace</span>
+</span><span class='line'>    <span class="kp">include</span> <span class="no">Mongoid</span><span class="o">::</span><span class="no">Document</span>
+</span><span class='line'>    <span class="kp">include</span> <span class="no">Mongoid</span><span class="o">::</span><span class="no">Timestamps</span>
+</span><span class='line'>    <span class="kp">include</span> <span class="no">GraphEngine</span><span class="o">::</span><span class="no">Notifications</span><span class="o">::</span><span class="no">NotifiableModel</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">#… rest of code here</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see, this model includes a module called <code>NotifiableModel</code>, here&#8217;s the important part from it:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">GraphEngine</span>
+</span><span class='line'>  <span class="k">module</span> <span class="nn">Notifications</span>
+</span><span class='line'>    <span class="k">module</span> <span class="nn">NotifiableModel</span>
+</span><span class='line'>      <span class="kp">extend</span> <span class="no">ActiveSupport</span><span class="o">::</span><span class="no">Concern</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">included</span> <span class="k">do</span>
+</span><span class='line'>        <span class="n">after_create</span> <span class="k">do</span>
+</span><span class='line'>          <span class="n">send_notification</span><span class="p">(</span><span class="s2">&quot;created&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">end</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">def</span> <span class="nf">send_notification</span><span class="p">(</span><span class="n">verb</span><span class="p">)</span>
+</span><span class='line'>          <span class="c1"># Notify the app here...</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Like I said, pretty standard stuff, nothing too fancy, but here&#8217;s where it&#8217;s getting tricky.</p>
+
+<p>This model has a unique index on <code>user_id</code> and <code>place_id</code>. It&#8217;s a unique index and no two documents can exist in the same collection.</p>
+
+<p>BUT… check this out:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="no">GraphEngine</span><span class="o">::</span><span class="no">VisitedPlace</span><span class="o">.</span><span class="n">create!</span><span class="p">(</span><span class="n">user_id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">place_id</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span><span class='line'>  <span class="no">GraphEngine</span><span class="o">::</span><span class="no">VisitedPlace</span><span class="o">.</span><span class="n">create!</span><span class="p">(</span><span class="n">user_id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">place_id</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The second query actually failed in the DB level, but the application still returned true.</p>
+
+<p>Meaning, that <code>after_create</code> is actually being called even if the record is <strong>not really persisted</strong>.</p>
+
+<h2>How you can fix? / should you fix?</h2>
+
+<p>For Gogobot, I fixed it using safe mode on those models, I don&#8217;t mind the performance penalty, since I don&#8217;t want to trigger Sidekiq workers that will do all sorts of things twice or three times.</p>
+
+<p>Should you do the same? I am not sure, you need to benchmark your app and see if you can fix it in another way.</p>
+
+<p>Would love to hear back from you in comments/discussion</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[building the gogobot social graph]]></title>
+    <link href="http://avi.io/blog/2013/02/04/building-the-gogobot-social-graph/"/>
+    <updated>2013-02-04T22:11:00+02:00</updated>
+    <id>http://avi.io/blog/2013/02/04/building-the-gogobot-social-graph</id>
+    <content type="html"><![CDATA[<p>For the past few months I have been super busy building the social graph behind Gogobot.</p>
+
+<p>In this presentation I gave in Israel I go through a fraction of the Gogobot platform and how I implemented a social feature</p>
+
+<script async class="speakerdeck-embed" data-id="5c18bff0512b0130cb6b12313b10154e" src="http://avi.io//speakerdeck.com/assets/embed.js"></script>
+
+
+<p>Feel free to comment &amp; discuss.</p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Problems with Mongoid and Sidekiq- Brainstorming]]></title>
+    <link href="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/"/>
+    <updated>2013-01-30T20:13:00+02:00</updated>
+    <id>http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming</id>
+    <content type="html"><![CDATA[<p>A few weeks back, we started slowly upgrading all of our queues at <a href="http://www.gogobot.com">Gogobot</a> to work with <a href="https://github.com/mperham/sidekiq">Sidekiq</a>.</p>
+
+<p>Posts on how awesome the experience was and how much better Sidekiq is from <a href="http://github.com/defunkt/sidekiq">Resque</a> coming soon, though with all the good came some bad.</p>
+
+<h2>Summary of the solution</h2>
+
+<p>With Sidekiq, we are processing around <strong>25X more</strong> jobs than what we were doing with Resque, processing around 15,000,000 jobs per day, at paces of over 1K per second at times (at peak we go up well past that)</p>
+
+<p>This is how many jobs we processed today…</p>
+
+<p><img src="http://d.pr/i/O9aU+" alt="Sidekiq history graph for today" /></p>
+
+<p>And this is a snapshot of our realtime graph</p>
+
+<p><img src="http://d.pr/i/7Fkr+" alt="Realtime graph snapshot" /></p>
+
+<p>On the MongoDB side we are working with Mongoid and we have a shared environment, 9 shards with 3 replicas in each shard, all running through 2 routers.</p>
+
+<p>Our production mongoid config looks like this</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+</span><span class='line'>  <span class="l-Scalar-Plain">op_timeout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
+</span><span class='line'>  <span class="l-Scalar-Plain">connection_timeout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
+</span><span class='line'>  <span class="l-Scalar-Plain">sessions</span><span class="p-Indicator">:</span>
+</span><span class='line'>    <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">hosts</span><span class="p-Indicator">:</span>
+</span><span class='line'>        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">HOST_NAME:27017</span> <span class="c1">#Single router R0</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">USER_NAME</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">PASSWORD</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">DATABASE_NAME</span>
+</span><span class='line'>      <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
+</span><span class='line'>        <span class="l-Scalar-Plain">consistency</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">:eventual</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We are using latest versions of all relevant gems (Sidekiq, Mongoid, Moped, Redis)</p>
+
+<h2>All seems fine right? What&#8217;s the problem?</h2>
+
+<p>The problem is that we have too many connections opening and closing to our mongo instances. (~25-40 new connections per second).</p>
+
+<p>Each time a job is picked up, a connection to Mongo is opened and when the job is done, this connection is closed (using Kiqstand middleware).</p>
+
+<p>This is causing huge loads on our router server, and causing mongo to run out of file descriptors at times.</p>
+
+<h2>SO?</h2>
+
+<p>More then anything, this post is a callout for discussion with anyone using similar solution with similar scale and can assist, I know I would love to brainstorm on how to solve this problem.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[RailsConf 2012 talk - How Gogobot works]]></title>
+    <link href="http://avi.io/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works/"/>
+    <updated>2012-11-13T18:37:00+02:00</updated>
+    <id>http://avi.io/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works</id>
+    <content type="html"><![CDATA[<p>My slides from the talk I gave at RailsConf Israel 2012.</p>
+
+<script async class="speakerdeck-embed" data-id="0e2a2d400f220130018822000a1f82fb" src="http://avi.io//speakerdeck.com/assets/embed.js"></script>
+
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[organizing your specs into groups and running them separately]]></title>
+    <link href="http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/"/>
+    <updated>2012-08-19T13:57:00+03:00</updated>
+    <id>http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately</id>
+    <content type="html"><![CDATA[<p>A while back I answered <a href="http://stackoverflow.com/questions/10029250/organizing-rspec-2-tests-into-unit-and-integration-categories-in-rails/10029504#10029504">this StackOverflow question</a>.</p>
+
+<p>When you have a lot of specs, it makes sense to run them in separate logical groups and not just with <code>rspec spec</code> or something like that.</p>
+
+<p>This way, you can save time and you can also run them in separate processes on the CI.</p>
+
+<p>For example:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake spec:unit
+</span><span class='line'>bundle exec rake spec:integration
+</span><span class='line'>bundle exec rake spec:api</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In order to achieve this, you need to change the <code>spec.rake</code> file.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="n">namespace</span> <span class="ss">:spec</span> <span class="k">do</span>
+</span><span class='line'>    <span class="no">Rspec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">RakeTask</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:unit</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">pattern</span> <span class="o">=</span> <span class="no">Dir</span><span class="o">[</span><span class="s1">&#39;spec/*/**/*_spec.rb&#39;</span><span class="o">].</span><span class="n">reject</span><span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="o">[</span><span class="s1">&#39;/api/v1&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="n">f</span><span class="o">[</span><span class="s1">&#39;/integration&#39;</span><span class="o">]</span> <span class="p">}</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="no">Rspec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">RakeTask</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:api</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;spec/*/{api/v1}*/**/*_spec.rb&quot;</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="no">Rspec</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">RakeTask</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:integration</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;spec/integration/**/*_spec.rb&quot;</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can continue customizing that all you want, you can run specific specs that are the most important to you.</p>
+
+<p>I find those groups useful for most of my use cases, but with minor changes you can make it fit yours</p>
+
+<h3>Using Rspec Tags</h3>
+
+<p>You can use tags for that as well, but I find that more tedious and you can forget to <em>tag</em> something.</p>
+
+<p>For example:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="n">it</span> <span class="s2">&quot;should do some integration test&quot;</span><span class="p">,</span> <span class="ss">:integration</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="k">do</span>
+</span><span class='line'>   <span class="c1"># something</span>
+</span><span class='line'>  <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[searching through the history of commands you ran in terminal]]></title>
+    <link href="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/"/>
+    <updated>2012-08-09T00:06:00+03:00</updated>
+    <id>http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal</id>
+    <content type="html"><![CDATA[<p>Whenever I am logged in to a server or even when I am working on my own machine, I keep searching through the command history through up and down arrows.</p>
+
+<p>While this can be efficient if you have 2-3 commands, it can be quite frustrating to find specific commands.</p>
+
+<p>That is something I keep doing over and over again, and now I have a better way, I just grep through the list of commands, find the one I want, copy it and paste it into a new command, and I&#8217;m done.</p>
+
+<p>This saves me <strong>a lot</strong> of time.</p>
+
+<p>Here&#8217;s how:</p>
+
+<p>To show the history of commands you just do:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You probably know the rest, but you can just pipe the history into grep and search your history</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history | grep {command_or_part_of_command}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For example:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history | grep cp -R</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Making Nokogiri install again on Mountain Lion]]></title>
+    <link href="http://avi.io/blog/2012/08/09/making-nokogiri-install-again-on-mountain-lion/"/>
+    <updated>2012-08-09T00:04:00+03:00</updated>
+    <id>http://avi.io/blog/2012/08/09/making-nokogiri-install-again-on-mountain-lion</id>
+    <content type="html"><![CDATA[<p>As probably any geek out there, I upgraded my OS to Apple Mountain Lion.</p>
+
+<p>The upgrade created a lot of problems for me, I basically had to reinstall almost everything, from MySql to homebrew.</p>
+
+<p>I am not sure if everyone experienced the same thing, but that was the case for me.</p>
+
+<p>One of the problems I encountered was that I could not install Nokogiri anymore on my machine, bundler would not install it and complain about dependencies not being installed (specifically <code>libxml</code>)</p>
+
+<p>To fix it, you need to reinstall Ruby using RVM with livxml properly linked.</p>
+
+<p>First, install <code>libxml</code> and <code>libxslt</code> through homebrew, like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install libxml2 libxslt
+</span><span class='line'>brew link libxml2 libxslt</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If that doesn&#8217;t work you probably need to install <code>libiconv</code> like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd   
+</span><span class='line'>mkdir temp
+</span><span class='line'>cd temp
+</span><span class='line'>ls
+</span><span class='line'>wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
+</span><span class='line'>tar xvfz libiconv-1.13.1.tar.gz
+</span><span class='line'>cd libiconv-1.13.1
+</span><span class='line'>./configure --prefix=/usr/local/Cellar/libiconv/1.13.1
+</span><span class='line'>make
+</span><span class='line'>sudo make install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And then install <code>libxml</code> and <code>libxslt</code> again</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install libxml2 libxslt
+</span><span class='line'>brew link libxml2 libxslt</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Once that&#8217;s done without errors, reinstall Ruby.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm reinstall ruby-1.9.3-p194</span></code></pre></td></tr></table></div></figure>
+
+
+<p>RVM will figure out those libraries location and properly install Ruby with those linked up.</p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Creating self starting worker machines for fun and profit]]></title>
+    <link href="http://avi.io/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit/"/>
+    <updated>2012-08-08T13:49:00+03:00</updated>
+    <id>http://avi.io/blog/2012/08/08/creating-self-starting-worker-machines-for-fun-and-profit</id>
+    <content type="html"><![CDATA[<p>Lately, I needed to create worker machines (Machines that have Resque workers on them).</p>
+
+<p>Usually, the process is very manual and tedious, you need to deploy the code to each machine (on code change), you need to start/stop/restart the workers and more.</p>
+
+<p>Since I needed A LOT of workers, I really wanted to make the process automatic.</p>
+
+<p>I wanted the machine to be in charge of everything it needs.</p>
+
+<p>Meaning</p>
+
+<ul>
+<li>Pull latest git code</li>
+<li>Copy file to the <code>current</code> directory</li>
+<li>Startup god (which will start the Resque processes)</li>
+</ul>
+
+
+<p>I wanted the machine to be in charge of all this when it boots up, so in case I need to update the code or something, all I need is to reboot the machines and that&#8217;s it.</p>
+
+<p>Also, scaling up the process is super easy, all I need is to add more machines.</p>
+
+<p>The logic behind it was also being able to use spot-instances on Amazon, which are much cheaper.</p>
+
+<p>So, as always, I thought I would document the process and open source it.</p>
+
+<h2>Challenges</h2>
+
+<p>What are the challenges we are looking at, when we want to do something like that.</p>
+
+<ol>
+<li>Awareness of RVM, Ruby version</li>
+<li>Awareness of Bundler and Gem versions.</li>
+</ol>
+
+
+<p>Those are things we need to consider.</p>
+
+<h2>Breaking down the process into pseudo code.</h2>
+
+<p>So, let&#8217;s break down the process into pseudo code</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Go to the temp folder
+</span><span class='line'>git pull from origin + branch you want
+</span><span class='line'>Copy all files from temp folder to current folder
+</span><span class='line'>Go To current folder, bundle install
+</span><span class='line'>Start God</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>RVM Wrappers</h2>
+
+<p>For the last 2 parts of the process, if you try to do just <code>bundle install --deployment</code> for example, the script will fail, it does not know what bundle is, it resolves to the default Ruby installed on the machine at this point.</p>
+
+<p>Since want the last 2 processes to go through RVM, we need to create a wrapper script.</p>
+
+<h3>Creating RVM Wrappers</h3>
+
+<p>You can create RVM wrappers like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm wrapper {ruby_version@gemset} {prefix} {executable}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For example</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm wrapper 1.9.2 bootup god</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will generate this file: (called <code>bootup_god</code>)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/usr/bin/env bash</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[[</span> -s <span class="s2">&quot;/usr/local/rvm/environments/ruby-1.9.2-p290&quot;</span> <span class="o">]]</span>
+</span><span class='line'><span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nb">source</span> <span class="s2">&quot;/usr/local/rvm/environments/ruby-1.9.2-p290&quot;</span>
+</span><span class='line'>  <span class="nb">exec </span>god <span class="s2">&quot;$@&quot;</span>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'><span class="k">  </span><span class="nb">echo</span> <span class="s2">&quot;ERROR: Missing RVM environment file: &#39;/usr/local/rvm/environments/ruby-1.9.2-p290&#39;&quot;</span> &gt;&amp;2
+</span><span class='line'>  <span class="nb">exit </span>1
+</span><span class='line'><span class="k">fi</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I did the same for bundle which generated this file: (called <code>bootup_bundle</code>)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/usr/bin/env bash</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[[</span> -s <span class="s2">&quot;/usr/local/rvm/environments/ruby-1.9.2-p290&quot;</span> <span class="o">]]</span>
+</span><span class='line'><span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nb">source</span> <span class="s2">&quot;/usr/local/rvm/environments/ruby-1.9.2-p290&quot;</span>
+</span><span class='line'>  <span class="nb">exec </span>bundle <span class="s2">&quot;$@&quot;</span>
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'><span class="k">  </span><span class="nb">echo</span> <span class="s2">&quot;ERROR: Missing RVM environment file: &#39;/usr/local/rvm/environments/ruby-1.9.2-p290&#39;&quot;</span> &gt;&amp;2
+</span><span class='line'>  <span class="nb">exit </span>1
+</span><span class='line'><span class="k">fi</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The files are created in <code>vim /usr/local/rvm/bin/</code>.</p>
+
+<p>Now that we have the wrappers, we made sure the boot up process will be aware of RVM and we can continue.</p>
+
+<h2>RC files</h2>
+
+<p>If you want something to run when the machine starts you need to get to know the <code>rc</code> files.</p>
+
+<p>Usually, those files are located in <code>/etc/</code> folder (may vary of course)</p>
+
+<p>The files are loaded and executed in a specific order</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rc
+</span><span class='line'>rc<span class="o">{</span>numer<span class="o">}</span>
+</span><span class='line'>rc.local
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want something to run when ALL the rest of the machine bootup process ran, you put it at the end of the rc.local file.</p>
+
+<p>One gotcha here is that the file <em>must</em> end with <code>exit 0</code>, or your script will not run at all, and good luck finding out why :P</p>
+
+<p>I put this line at the end, right before the <code>exit 0</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sh /root/start_workers.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Finalize</h2>
+
+<p>Now that I have the wrappers, I have the line in rc.local I can finalize the process with creating the shell script.</p>
+
+<p>This is what the script looks for me</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> <span class="o">{</span>temp_folder<span class="o">}</span>
+</span><span class='line'>git pull origin <span class="o">{</span>branch_name<span class="o">}</span>
+</span><span class='line'><span class="nb">cd</span> ..
+</span><span class='line'>cp -apRv <span class="o">{</span>source_folder<span class="o">}</span>/* <span class="o">{</span>destination_folder<span class="o">}</span> --reply<span class="o">=</span>yes
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Running bundle install&quot;</span>
+</span><span class='line'><span class="nb">cd</span> /root/c <span class="o">&amp;&amp;</span> /usr/local/rvm/bin/bootup_bundle install --path /mnt/data-store/html/gogobot/shared/bundle --deployment --without development <span class="nb">test</span>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Starting RVM&quot;</span>
+</span><span class='line'>/usr/local/rvm/bin/bootup_god -c /root/c/god/resque_extra_workers.god
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The god file to start the workers is standard.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rails_env</span>   <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;RAILS_ENV&#39;</span><span class="o">]</span>  <span class="o">||</span> <span class="s2">&quot;production&quot;</span>
+</span><span class='line'><span class="n">rails_root</span>  <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;RAILS_ROOT&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s2">&quot;/mnt/data-store/html/gogobot/current&quot;</span>
+</span><span class='line'><span class="no">WORKER_TIMEOUT</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">10</span> <span class="c1"># 10 minutes</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># Stale workers</span>
+</span><span class='line'><span class="no">Thread</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span>
+</span><span class='line'>  <span class="kp">loop</span> <span class="k">do</span>
+</span><span class='line'>    <span class="k">begin</span>
+</span><span class='line'>      <span class="sb">`ps -e -o pid,command | grep [r]esque`</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span>
+</span><span class='line'>        <span class="n">parts</span>   <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">next</span> <span class="k">if</span> <span class="n">parts</span><span class="o">[-</span><span class="mi">2</span><span class="o">]</span> <span class="o">!=</span> <span class="s2">&quot;at&quot;</span>
+</span><span class='line'>        <span class="n">started</span> <span class="o">=</span> <span class="n">parts</span><span class="o">[-</span><span class="mi">1</span><span class="o">].</span><span class="n">to_i</span>
+</span><span class='line'>        <span class="n">elapsed</span> <span class="o">=</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span> <span class="o">-</span> <span class="no">Time</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">started</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">if</span> <span class="n">elapsed</span> <span class="o">&gt;=</span> <span class="no">WORKER_TIMEOUT</span>
+</span><span class='line'>          <span class="o">::</span><span class="no">Process</span><span class="o">.</span><span class="n">kill</span><span class="p">(</span><span class="s1">&#39;USR1&#39;</span><span class="p">,</span> <span class="n">parts</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">to_i</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">end</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>    <span class="k">rescue</span>
+</span><span class='line'>      <span class="c1"># don&#39;t die because of stupid exceptions</span>
+</span><span class='line'>      <span class="kp">nil</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>    <span class="nb">sleep</span> <span class="mi">30</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">queue_name</span> <span class="o">=</span> <span class="s2">&quot;graph_checkins_import&quot;</span>
+</span><span class='line'><span class="n">num_workers</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># FB wall posts</span>
+</span><span class='line'><span class="n">num_workers</span><span class="o">.</span><span class="n">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">num</span><span class="o">|</span>
+</span><span class='line'>  <span class="no">God</span><span class="o">.</span><span class="n">watch</span> <span class="k">do</span> <span class="o">|</span><span class="n">w</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">dir</span>      <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">rails_root</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">name</span>     <span class="o">=</span> <span class="s2">&quot;resque-</span><span class="si">#{</span><span class="n">num</span><span class="si">}</span><span class="s2">-</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">group</span>    <span class="o">=</span> <span class="s2">&quot;resque&quot;</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">interval</span> <span class="o">=</span> <span class="mi">2</span><span class="o">.</span><span class="n">minutes</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">env</span>      <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;QUEUE&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;RAILS_ENV&quot;</span><span class="o">=&gt;</span><span class="n">rails_env</span><span class="p">,</span> <span class="s2">&quot;PIDFILE&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">rails_root</span><span class="si">}</span><span class="s2">/tmp/resque_</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">_</span><span class="si">#{</span><span class="n">w</span><span class="si">}</span><span class="s2">.pid&quot;</span><span class="p">}</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">pid_file</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">rails_root</span><span class="si">}</span><span class="s2">/tmp/resque_</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">_</span><span class="si">#{</span><span class="n">w</span><span class="si">}</span><span class="s2">.pid&quot;</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">start</span>    <span class="o">=</span> <span class="s2">&quot;cd </span><span class="si">#{</span><span class="n">rails_root</span><span class="si">}</span><span class="s2">/ &amp;&amp; bundle exec rake environment resque:work QUEUE=</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2"> RAILS_ENV=</span><span class="si">#{</span><span class="n">rails_env</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">log</span>      <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">rails_root</span><span class="si">}</span><span class="s2">/log/resque_god.log&quot;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">uid</span> <span class="o">=</span> <span class="s1">&#39;root&#39;</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">gid</span> <span class="o">=</span> <span class="s1">&#39;root&#39;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1"># restart if memory gets too high</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">transition</span><span class="p">(</span><span class="ss">:up</span><span class="p">,</span> <span class="ss">:restart</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">on</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">on</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="ss">:memory_usage</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span>
+</span><span class='line'>        <span class="n">c</span><span class="o">.</span><span class="n">above</span> <span class="o">=</span> <span class="mi">350</span><span class="o">.</span><span class="n">megabytes</span>
+</span><span class='line'>        <span class="n">c</span><span class="o">.</span><span class="n">times</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1"># determine the state on startup</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">transition</span><span class="p">(</span><span class="ss">:init</span><span class="p">,</span> <span class="p">{</span> <span class="kp">true</span> <span class="o">=&gt;</span> <span class="ss">:up</span><span class="p">,</span> <span class="kp">false</span> <span class="o">=&gt;</span> <span class="ss">:start</span> <span class="p">})</span> <span class="k">do</span> <span class="o">|</span><span class="n">on</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">on</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="ss">:process_running</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span>
+</span><span class='line'>        <span class="n">c</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="kp">true</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1"># determine when process has finished starting</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">transition</span><span class="p">(</span><span class="o">[</span><span class="ss">:start</span><span class="p">,</span> <span class="ss">:restart</span><span class="o">]</span><span class="p">,</span> <span class="ss">:up</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">on</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">on</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="ss">:process_running</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span>
+</span><span class='line'>        <span class="n">c</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="kp">true</span>
+</span><span class='line'>        <span class="n">c</span><span class="o">.</span><span class="n">interval</span> <span class="o">=</span> <span class="mi">5</span><span class="o">.</span><span class="n">seconds</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1"># failsafe</span>
+</span><span class='line'>      <span class="n">on</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="ss">:tries</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span>
+</span><span class='line'>        <span class="n">c</span><span class="o">.</span><span class="n">times</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span class='line'>        <span class="n">c</span><span class="o">.</span><span class="n">transition</span> <span class="o">=</span> <span class="ss">:start</span>
+</span><span class='line'>        <span class="n">c</span><span class="o">.</span><span class="n">interval</span> <span class="o">=</span> <span class="mi">5</span><span class="o">.</span><span class="n">seconds</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1"># start if process is not running</span>
+</span><span class='line'>    <span class="n">w</span><span class="o">.</span><span class="n">transition</span><span class="p">(</span><span class="ss">:up</span><span class="p">,</span> <span class="ss">:start</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">on</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">on</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="ss">:process_running</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span>
+</span><span class='line'>        <span class="n">c</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="kp">false</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Profit</h2>
+
+<p>Now, it&#8217;s a completely automatic process, all you need is to run as many machines as you need, once the machine is booted up, it will deploy code to itself, copy files, install gems and run workers.</p>
+
+<p>If you want to restart the process, add machines or anything else, you can do it with the click of a button in the AWS UI.</p>
+
+<h2>Comments? Questions?</h2>
+
+<p>Please feel free</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[problem with running spec in vim]]></title>
+    <link href="http://avi.io/blog/2012/08/05/problem-with-running-spec-in-vim/"/>
+    <updated>2012-08-05T22:02:00+03:00</updated>
+    <id>http://avi.io/blog/2012/08/05/problem-with-running-spec-in-vim</id>
+    <content type="html"><![CDATA[<p>I have been using Vim for almost a week now.</p>
+
+<p>I am using the <a href="http://github.com/astrails/dotvim">dotvim</a> configuration by <a href="http://astrails.com">Astrails</a>.</p>
+
+<p>All in all, the configuration is awesome and I completely love it, it&#8217;s the longest time period I have ever used Vim. Considering that the second place is about 5 minutes, that&#8217;s super impressive.</p>
+
+<p>I only have one problem with it.</p>
+
+<p>I took the spec running functions from <a href="https://github.com/garybernhardt">Gary Bernhardt</a> <a href="https://github.com/garybernhardt/dotfiles/">dotfiles</a>, I just remapped the keys differently.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+</span><span class='line'>" RUNNING TESTS
+</span><span class='line'>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+</span><span class='line'>map &lt;leader&gt;' :call RunTestFile()&lt;cr&gt;
+</span><span class='line'>map &lt;leader&gt;; :call RunNearestTest()&lt;cr&gt;
+</span><span class='line'>
+</span><span class='line'>function! RunTestFile(...)
+</span><span class='line'>    if a:0
+</span><span class='line'>        let command_suffix = a:1
+</span><span class='line'>    else
+</span><span class='line'>        let command_suffix = ""
+</span><span class='line'>    endif
+</span><span class='line'>
+</span><span class='line'>    " Run the tests for the previously-marked file.
+</span><span class='line'>    let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
+</span><span class='line'>    if in_test_file
+</span><span class='line'>        call SetTestFile()
+</span><span class='line'>    elseif !exists("t:grb_test_file")
+</span><span class='line'>        return
+</span><span class='line'>    end
+</span><span class='line'>    call RunTests(t:grb_test_file . command_suffix)
+</span><span class='line'>endfunction
+</span><span class='line'>
+</span><span class='line'>function! RunNearestTest()
+</span><span class='line'>    let spec_line_number = line('.')
+</span><span class='line'>    call RunTestFile(":" . spec_line_number . " -b")
+</span><span class='line'>endfunction
+</span><span class='line'>
+</span><span class='line'>function! SetTestFile()
+</span><span class='line'>    " Set the spec file that tests will be run for.
+</span><span class='line'>    let t:grb_test_file=@%
+</span><span class='line'>endfunction
+</span><span class='line'>
+</span><span class='line'>function! RunTests(filename)
+</span><span class='line'>    " Write the file and run tests for the given filename
+</span><span class='line'>    :w
+</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+</span><span class='line'>    if match(a:filename, '\.feature$') != -1
+</span><span class='line'>        exec ":!script/features " . a:filename
+</span><span class='line'>    else
+</span><span class='line'>        if filereadable("script/test")
+</span><span class='line'>            exec ":!script/test " . a:filename
+</span><span class='line'>        elseif filereadable("Gemfile")
+</span><span class='line'>            exec ":!bundle exec rspec --color " . a:filename
+</span><span class='line'>        else
+</span><span class='line'>            exec ":!rspec --color " . a:filename
+</span><span class='line'>        end
+</span><span class='line'>    end
+</span><span class='line'>endfunction
+</span><span class='line'>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+</span><span class='line'>" RUNNING TESTS
+</span><span class='line'>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see, I mapped <code>,;</code> to run line specs, and <code>,'</code> to run the entire spec file.</p>
+
+<p>The problem is, that the terminal exists immediately after the result, does not wait for me to hit <code>Enter</code> or anything.</p>
+
+<p>You can see the problem demo in this YouTube Video</p>
+
+<iframe width="" height="" src="http://www.youtube.com/embed/gUB48XwNq0M " frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+<p>I asked this question on StackOverflow <a href="http://stackoverflow.com/questions/11785035/vim-issue-with-running-specs-in-ruby-rspec/11785791#11785791">here</a></p>
+
+<p>Someone suggested it might be a trailing character, but I checked and there&#8217;s nothing like that.</p>
+
+<p>The same person suggested to map just <code>ls</code> like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nmap &lt;leader&gt;ls :!ls&lt;cr&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But this command does not exit.</p>
+
+<p>Another thing I tried is this
+In a vim session I mapped a key like this</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>map &lt;Leader&gt;~ :!rspec %&lt;cr&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When I used it, the terminal did not exit as well.</p>
+
+<p>Vim Experts, what am I missing here?</p>
+
+<p>Running specs all the time is something crucial to my workflow, I don&#8217;t want to hide vim very time, it breaks my flow.</p>
+
+<p>Any help appreciated.</p>
+
+<p>My entire vim configuration is here: <a href="http://www.github.com/kensodev/dotvim">link</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[copy all files from a folder into a folder without the confirmation on linux]]></title>
+    <link href="http://avi.io/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux/"/>
+    <updated>2012-07-31T18:17:00+03:00</updated>
+    <id>http://avi.io/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux</id>
+    <content type="html"><![CDATA[<p>As a developer, there are things that never mind how many times you&#8217;ll do them, you will never ever remember how to do it exactly without googling for a couple of minutes or looking through the last executed list of commands on the terminal.</p>
+
+<p>For me, one of those things is how to copy all files and folders from source to destination with automatic reply yes to overwrite requests.</p>
+
+<p>Here&#8217;s how you do it</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>cp -apRv &lt;source_folder&gt;/* &lt;dest_folder&gt;/ --reply<span class="o">=</span>yes
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Enjoy!</p>
+
+<p>And #notetoself, no need to google anymore, find it on my blog ;)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[run rake task in the background and log to file]]></title>
+    <link href="http://avi.io/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file/"/>
+    <updated>2012-07-30T02:16:00+03:00</updated>
+    <id>http://avi.io/blog/2012/07/30/run-rake-task-in-the-background-and-log-to-file</id>
+    <content type="html"><![CDATA[<p>I am working with rake tasks a lot, I love the simplicity of creating one and just running one on the server.</p>
+
+<p>For the real heavy lifting I am using a queue system of course, but when I just want to throw something in the queue for example, I will usually create a rake task for it and run it on one of the servers.</p>
+
+<p>I use quick and dirty <code>puts</code> messages to log the progress.</p>
+
+<p>For example I could have a rake task like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">User</span><span class="o">.</span><span class="n">find_each</span> <span class="k">do</span> <span class="o">|</span><span class="n">user</span><span class="o">|</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="s2">&quot;Going over user: </span><span class="si">#{</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>  <span class="no">Resque</span><span class="o">.</span><span class="n">enqueue</span><span class="p">(</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To run this on the server, I just ssh into is and then I do <code>screen</code> so when I log out of the server the session will save the process and not kill it.</p>
+
+<p>Then, I run this command:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">foo</span><span class="ss">:bar</span>  <span class="o">--</span><span class="n">trace</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">&gt;&gt;</span> <span class="n">log</span><span class="o">/</span><span class="n">some_log_file</span><span class="o">.</span><span class="n">log</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s it, you can now leave the server and let it do all the work, periodically, you can log in and check the progress just by tailing the file.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[project specific settings using zshell and dotfiles]]></title>
+    <link href="http://avi.io/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles/"/>
+    <updated>2012-07-29T13:54:00+03:00</updated>
+    <id>http://avi.io/blog/2012/07/29/project-specific-settings-using-zshell-and-dotfiles</id>
+    <content type="html"><![CDATA[<p>I have been working with ZHell pretty much since the first day that I have been using a Mac.</p>
+
+<p>The use I make of to grew with time and definitely the biggest switch was that I moved to using dotfiles for settings in a single location.</p>
+
+<p>I forked <a href="http://zachholman.com/">Zach Holman</a> dot files <a href="http://github.com/kensodev/dotfiles">here</a>, and I have been adjusting and customizing it ever since.</p>
+
+<p>I am using Ruby/Rails for my everyday work, both for consulting and open source projects, the one thing that I see people do and I don&#8217;t like is committing configuration files with password and sensitive information into source control.</p>
+
+<p>When I can, I try to avoid it, so I developed a very easy way to manage my per-project environment variable without going through a huge file.</p>
+
+<p>All of my zsh files are located in a single folder in my dotfiles.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>├── aliases.zsh
+</span><span class='line'>├── completion.zsh
+</span><span class='line'>├── config.zsh
+</span><span class='line'>├── functions
+</span><span class='line'>│   ├── _boom
+</span><span class='line'>│   ├── _brew
+</span><span class='line'>│   ├── _c
+</span><span class='line'>│   ├── _git-rm
+</span><span class='line'>│   ├── _h
+</span><span class='line'>│   ├── _rake
+</span><span class='line'>│   ├── c
+</span><span class='line'>│   ├── gf
+</span><span class='line'>│   ├── gitdays
+</span><span class='line'>│   ├── h
+</span><span class='line'>│   ├── last_modified
+</span><span class='line'>│   ├── newtab
+</span><span class='line'>│   ├── savepath
+</span><span class='line'>│   ├── smartextract
+</span><span class='line'>│   ├── start_project
+</span><span class='line'>│   ├── verbose_completion
+</span><span class='line'>│   └── zgitinit
+</span><span class='line'>├── hidden_aliases.zsh
+</span><span class='line'>├── projects
+</span><span class='line'>│   ├── boto_project.zsh
+</span><span class='line'>│   └── octopus_project.zsh
+</span><span class='line'>├── prompt.zsh
+</span><span class='line'>├── window.zsh
+</span><span class='line'>└── zshrc.symlink</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see, there&#8217;s a special folder there called <code>projects</code>, in which I put a lll of my project specific setting like tokens, passwords and other things.</p>
+
+<p>For example, here&#8217;s what a project file might look like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">OCTOPUS_POSTGRES_USER</span><span class="o">=</span>postgres
+</span><span class='line'><span class="nb">export </span><span class="nv">OCTOPUS_POSTGRES_PASSWORD</span><span class="o">=</span>some_password
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>One thing that is very easy to forget, is that if you open source your dot files (and you should) don&#8217;t forget to ignore those files and don&#8217;t commit them.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Run Octopress New Post Rake On Zshell]]></title>
+    <link href="http://avi.io/blog/2012/07/27/run-octopress-new-post-rake-on-zshell/"/>
+    <updated>2012-07-27T00:00:00+03:00</updated>
+    <id>http://avi.io/blog/2012/07/27/run-octopress-new-post-rake-on-zshell</id>
+    <content type="html"><![CDATA[<p>a&#8211;
+layout: post
+title: &#8220;run octopress new_post rake on zshell&#8221;
+date: 2012-07-27 22:53
+comments: true</p>
+
+<h2>categories: general</h2>
+
+<p>This blog is running on <a href="https://github.com/imathis/octopress">Octopress</a>, which is an awesome implementation of a blogging engine in Ruby.</p>
+
+<p>To create a new post, you need to run a rake task like so:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;some awesome post title&quot;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The problem is, that in zsh, those are escaped and you get an error.</p>
+
+<p>I used to do <code>new_post</code> without anything and then edit the file name and the title inside the file BUT there&#8217;s actually a better way.</p>
+
+<p>You can either run <code>noglob rake</code> or you can run the rake like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake <span class="s2">&quot;new_post[some awesome post title]&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+</feed>

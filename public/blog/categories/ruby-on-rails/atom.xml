@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby on rails | Avi Tzurel]]></title>
+  <link href="http://avi.io/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
+  <link href="http://avi.io/"/>
+  <updated>2013-03-05T00:43:52+02:00</updated>
+  <id>http://avi.io/</id>
+  <author>
+    <name><![CDATA[Avi Tzurel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[DO NOT use the callbacks that require persistence in Mongoid]]></title>
+    <link href="http://avi.io/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid/"/>
+    <updated>2013-02-19T22:10:00+02:00</updated>
+    <id>http://avi.io/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid</id>
+    <content type="html"><![CDATA[<p>I started using MongoDB at <a href="http://www.gogobot.com">Gogobot</a> a little while ago.
+While using it, I encountered some <a href="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">problems</a>, but for the most part, things went pretty smooth.</p>
+
+<p>Today, I encountered a bug that surprised me.</p>
+
+<p>While it certainly should not have, I think it can surprise you as well, so I am writing it up here as a fair warning.</p>
+
+<p>For Gogobot, the entire graph is built on top of MongoDB, all the things social are driven by it and for the most parts like I mentioned, we are pretty happy with it.</p>
+
+<h2>SO, What was the problem?</h2>
+
+<p>The entire graph is a mountable engine, we can decide to turn it on or to turn it off at will.
+It acts as a data warehouse and the workflows are being managed by the app.</p>
+
+<p>For example:</p>
+
+<p>When model X is created, app is notified and decides what to do with this notification, and so on and so forth.</p>
+
+<p>Everything peachy so far, nothing we haven't used hundreds of times in the past.</p>
+
+<p>Here's how it works.</p>
+
+<p>We have a model called <code>VisitedPlace</code>, it's a representation of a user that visited a certain place</p>
+
+<p>Here's the code</p>
+
+<p>```ruby</p>
+
+<pre><code>module GraphEngine
+  class FbPlace
+    include Mongoid::Document
+    include Mongoid::Timestamps
+    include GraphEngine::Notifications::NotifiableModel
+
+    #… rest of code here
+  end
+end
+</code></pre>
+
+<p>```</p>
+
+<p>As you can see, this model includes a module called <code>NotifiableModel</code>, here's the important part from it:</p>
+
+<p>```ruby</p>
+
+<pre><code>module GraphEngine
+  module Notifications
+    module NotifiableModel
+      extend ActiveSupport::Concern
+
+      included do
+        after_create do
+          send_notification("created")
+        end
+      end
+
+      def send_notification(verb)
+        # Notify the app here...
+      end
+    end
+  end
+end
+</code></pre>
+
+<p>```</p>
+
+<p>Like I said, pretty standard stuff, nothing too fancy, but here's where it's getting tricky.</p>
+
+<p>This model has a unique index on <code>user_id</code> and <code>place_id</code>. It's a unique index and no two documents can exist in the same collection.</p>
+
+<p>BUT… check this out:</p>
+
+<p><code>ruby
+  GraphEngine::VisitedPlace.create!(user_id: 1, place_id: 1) =&gt; true
+  GraphEngine::VisitedPlace.create!(user_id: 1, place_id: 1) =&gt; true
+</code></p>
+
+<p>The second query actually failed in the DB level, but the application still returned true.</p>
+
+<p>Meaning, that <code>after_create</code> is actually being called even if the record is <strong>not really persisted</strong>.</p>
+
+<h2>How you can fix? / should you fix?</h2>
+
+<p>For Gogobot, I fixed it using safe mode on those models, I don't mind the performance penalty, since I don't want to trigger Sidekiq workers that will do all sorts of things twice or three times.</p>
+
+<p>Should you do the same? I am not sure, you need to benchmark your app and see if you can fix it in another way.</p>
+
+<p>Would love to hear back from you in comments/discussion</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Problems with Mongoid and Sidekiq- Brainstorming]]></title>
+    <link href="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/"/>
+    <updated>2013-01-30T20:13:00+02:00</updated>
+    <id>http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming</id>
+    <content type="html"><![CDATA[<p>A few weeks back, we started slowly upgrading all of our queues at <a href="http://www.gogobot.com">Gogobot</a> to work with <a href="https://github.com/mperham/sidekiq">Sidekiq</a>.</p>
+
+<p>Posts on how awesome the experience was and how much better Sidekiq is from <a href="http://github.com/defunkt/sidekiq">Resque</a> coming soon, though with all the good came some bad.</p>
+
+<h2>Summary of the solution</h2>
+
+<p>With Sidekiq, we are processing around <strong>25X more</strong> jobs than what we were doing with Resque, processing around 15,000,000 jobs per day, at paces of over 1K per second at times (at peak we go up well past that)</p>
+
+<p>This is how many jobs we processed today…</p>
+
+<p><img src="http://d.pr/i/O9aU+" alt="Sidekiq history graph for today" /></p>
+
+<p>And this is a snapshot of our realtime graph</p>
+
+<p><img src="http://d.pr/i/7Fkr+" alt="Realtime graph snapshot" /></p>
+
+<p>On the MongoDB side we are working with Mongoid and we have a shared environment, 9 shards with 3 replicas in each shard, all running through 2 routers.</p>
+
+<p>Our production mongoid config looks like this</p>
+
+<p>```yaml
+production:
+  op_timeout: 3
+  connection_timeout: 3
+  sessions:</p>
+
+<pre><code>default:
+  hosts:
+    - HOST_NAME:27017 #Single router R0
+  username: USER_NAME
+  password: PASSWORD
+  database: DATABASE_NAME
+  options:
+    consistency: :eventual
+</code></pre>
+
+<p>```</p>
+
+<p>We are using latest versions of all relevant gems (Sidekiq, Mongoid, Moped, Redis)</p>
+
+<h2>All seems fine right? What's the problem?</h2>
+
+<p>The problem is that we have too many connections opening and closing to our mongo instances. (~25-40 new connections per second).</p>
+
+<p>Each time a job is picked up, a connection to Mongo is opened and when the job is done, this connection is closed (using Kiqstand middleware).</p>
+
+<p>This is causing huge loads on our router server, and causing mongo to run out of file descriptors at times.</p>
+
+<h2>SO?</h2>
+
+<p>More then anything, this post is a callout for discussion with anyone using similar solution with similar scale and can assist, I know I would love to brainstorm on how to solve this problem.</p>
+]]></content>
+  </entry>
+  
+</feed>
