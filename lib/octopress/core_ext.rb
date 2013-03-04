@@ -17,24 +17,28 @@ class Hash
 
     target
   end
+
   def to_symbol_keys
-    inject({}) do |memo,(k,v)|
-		if v.is_a? Hash
-			memo[k.to_sym] = v.to_symbol_keys
-		else
-			memo[k.to_sym] = v;
-		end
-		memo
-	end
+    inject({}) do |memo, (k, v)|
+      if v.is_a? Hash
+        memo[k.to_sym] = v.to_symbol_keys
+      else
+        memo[k.to_sym] = v
+      end
+
+      memo
+    end
   end
+
   def to_string_keys
-    inject({}) do |memo,(k,v)|
-		if v.is_a? Hash
-			memo[k.to_s] = v.to_string_keys
-		else
-			memo[k.to_s] = v;
-		end
-		memo
-	end
+    inject({}) do |memo, (k, v)|
+      if v.is_a? Hash
+        memo[k.to_s] = v.to_string_keys
+      else
+        memo[k.to_s] = v
+      end
+
+      memo
+    end
   end
 end
