@@ -1,4 +1,3 @@
-twitter   = require('twitter')
 adn       = require('adn')
 pinboard  = require('pinboard')
 delicious = require('delicious')
