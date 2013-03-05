@@ -57,6 +57,7 @@ module Jekyll
   # for which you want to include these properties
   CHANGE_FREQUENCY_CUSTOM_VARIABLE_NAME = "change_frequency"
   PRIORITY_CUSTOM_VARIABLE_NAME = "priority"
+  EXCLUDED_CUSTOM_VARIABLE_NAME = "sitemap_excluded"
 
   class Post
     attr_accessor :name
@@ -142,7 +143,7 @@ module Jekyll
     def fill_posts(site, urlset)
       last_modified_date = nil
       site.posts.each do |post|
-        if !excluded?(post.name)
+        if !excluded?(post)
           url = fill_url(site, post)
           urlset.add_element(url)
         end
@@ -161,7 +162,7 @@ module Jekyll
     # Returns last_modified_date of index page
     def fill_pages(site, urlset)
       site.pages.each do |page|
-        if !excluded?(page.name)
+        if !excluded?(page)
           path = page.full_path_to_source
           if File.exists?(path)
             url = fill_url(site, page)
@@ -280,8 +281,8 @@ module Jekyll
     # Is the page or post listed as something we want to exclude?
     #
     # Returns boolean
-    def excluded?(name)
-      EXCLUDED_FILES.include? name
+    def excluded?(page_or_post)
+      EXCLUDED_FILES.include?(page_or_post.name) || page_or_post.data[EXCLUDED_CUSTOM_VARIABLE_NAME]
     end
 
     def posts_included?(name)
