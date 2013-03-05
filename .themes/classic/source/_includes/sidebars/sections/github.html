@@ -1,4 +1,4 @@
-{% if site.github_user %}
+{% if site.github_user and site.github_repo_count > 0 %}
 <section>
   <h1>On GitHub</h1>
   <div id="gh_repos" data-user="{{site.github_user}}" data-count="{{site.github_repo_count}}" data-skip="{{site.github_skip_forks}}" data-repos="{{site.github_repos | join:, }}"></div>
