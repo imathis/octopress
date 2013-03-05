@@ -27,6 +27,9 @@ new_post_ext    = "markdown"  # default new post file extension when using the n
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
 server_port     = "4000"      # port for preview server eg. localhost:4000
 
+## -- Git Configs -- ##
+git_user_name   = ""
+git_user_email  = ""
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
@@ -335,10 +338,14 @@ task :setup_github_pages, :repo do |t, args|
   File.open('_config.yml', 'w') do |f|
     f.write jekyll_config
   end
+  git_user_name = `git config --get user.name`.strip if git_user_name.empty?
+  git_user_email = `git config --get user.email`.strip if git_user_email.empty?
   rm_rf deploy_dir
   mkdir deploy_dir
   cd "#{deploy_dir}" do
     system "git init"
+    system "git config user.name '#{git_user_name}'" unless git_user_name.empty?
+    system "git config user.email '#{git_user_email}'" unless git_user_email.empty?
     system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
     system "git add ."
     system "git commit -m \"Octopress init\""
