@@ -1,5 +1,4 @@
 ---
-published: false
 author: Sylvestre Mergulhão
 layout: post
 title: "Seu ambiente de trabalho mais limpo usando Vagrant"
