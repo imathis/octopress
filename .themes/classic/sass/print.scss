@@ -1,0 +1,49 @@
+@import "compass";
+@import "custom/print";
+
+// HTML5 boilerplate: https://github.com/h5bp/html5-boilerplate/blob/master/css/style.css#L279-L292
+* { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+a, a:visited { text-decoration: underline; }
+a[href]:after { content: " (" attr(href) ")"; }
+abbr[title]:after { content: " (" attr(title) ")"; }
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } /* Don't show links for images, or javascript/internal links */
+pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+thead { display: table-header-group; } /* h5bp.com/t */
+tr, img { page-break-inside: avoid; }
+img { max-width: 100% !important; }
+@page { margin: 0.5cm; }
+p, h2, h3 { orphans: 3; widows: 3; }
+h2, h3 { page-break-after: avoid; }
+
+// Removes unnecessary parts for print view: navigation and sidebar
+body > nav,
+aside.sidebar {
+  display: none;
+}
+
+// Body
+body {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: Garamond, Perpetua, "Nimbus Roman No9 L", "Times New Roman", serif;
+  color: black;
+  background: none;
+  font-size: 11pt;
+}
+
+h1 {
+  font-size: 14pt;
+}
+h2 {
+  font-size: 13pt;
+}
+h3 {
+  font-size: 12pt;
+}
+h4,h5,h6{
+  font-size: 11pt;
+}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+  text-decoration: none !important;
+}
