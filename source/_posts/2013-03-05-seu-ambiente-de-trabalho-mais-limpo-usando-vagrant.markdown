@@ -3,7 +3,7 @@ published: false
 author: Sylvestre Mergulhão
 layout: post
 title: "Seu ambiente de trabalho mais limpo usando Vagrant"
-date: 2013-03-04 12:20
+date: 2013-03-05 10:20
 comments: true
 categories:
   - vagrant
