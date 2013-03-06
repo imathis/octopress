@@ -1,0 +1,7 @@
+---
+# Specify the target filename as key, and the source URL as value.
+# This will NOT integrate any local changes you make, and is only useful for
+# plugins that are comprised of a single source file!
+plugin_sources:
+#  wordcount.rb: 'https://raw.github.com/gummesson/jekyll-wordcount/master/wordcount.rb'
+#  alias_generator.rb: 'https://raw.github.com/tsmango/jekyll_alias_generator/master/_plugins/alias_generator.rb'
