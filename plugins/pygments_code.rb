@@ -15,9 +15,15 @@ module HighlightCode
   include TemplateWrapper
   include SiteConfig
   def pygments(code, lang)
-    highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
-    highlighted_code = highlighted_code.gsub(/{{/, '&#x7b;&#x7b;').gsub(/{%/, '&#x7b;&#x25;')
-    highlighted_code.to_s
+    begin
+      highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
+      highlighted_code = highlighted_code.gsub(/{{/, '&#x7b;&#x7b;').gsub(/{%/, '&#x7b;&#x25;')
+      highlighted_code.to_s
+    rescue
+      fail_message =  "Pygments couldn't highlight your code in lang '#{lang}':"
+      fail_message += "\n\n#{code}\n"
+      raise ArgumentError, fail_message
+    end
   rescue
     puts $!,$@
   end
