@@ -253,6 +253,11 @@ task :clean do
   puts "## Cleaned Compass-generated files, and various caches ##"
 end
 
+desc "Remove generated files (#{configuration[:destination]} directory)."
+task :clobber do
+  rm_rf [configuration[:destination]]
+end
+
 desc "Update theme source and style"
 task :update, :theme do |t, args|
   theme = args.theme || 'classic'
