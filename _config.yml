@@ -67,6 +67,7 @@ github_skip_forks: true
 twitter_user:
 twitter_tweet_count: 4
 twitter_show_replies: false
+twitter_show_retweets: false
 twitter_follow_button: true
 twitter_show_follower_count: false
 twitter_tweet_button: true
