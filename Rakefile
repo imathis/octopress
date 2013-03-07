@@ -11,6 +11,7 @@ require 'octopress/js_asset_manager'
 require 'rake/testtask'
 require 'colors'
 require 'open3'
+require 'aws-sdk'
 
 ### Configuring Octopress:
 ###   Under _config/ you will find:
@@ -412,6 +413,31 @@ multitask :push do
     end
   else
     puts "This project isn't configured for deploying to GitHub Pages\nPlease run `rake setup_github_pages[your-deployment-repo-url]`."
+  end
+end
+
+# TODO: Need to hook this variable into configurator
+s3_bucket = "example.com"
+
+desc "Deploy public directory to Amazon S3"
+task :s3 do
+  puts "## Checking AWS Credentials..."
+  unless ENV['AWS_ACCESS_KEY_ID'] && ENV['AWS_SECRET_ACCESS_KEY']
+    puts "\n## ERROR: Please setup up both ENV['AWS_ACCESS_KEY_ID'] and ENV['AWS_SECRET_ACCESS_KEY']"
+    exit 1
+  end
+  puts "\n## Deploying website onto Amazon S3"
+  s3 = AWS::S3.new
+  bucket = s3.buckets[s3_bucket]
+  puts "\n## Uploading public directory to bucket \"#{s3_bucket}\""
+  files = %x[find #{public_dir} -type f].split
+  files.map do |file_path|
+    fd = File.open(file_path)
+    bucket_path = file_path.sub('public/', '')
+    obj = bucket.objects[bucket_path]
+    # TODO: A fresh :generate task will always update resources, need a better
+    # method for preventing full-site uploads on every deploy
+    obj.write(fd) if !obj.exists? || obj.last_modified < fd.mtime
   end
 end
 
