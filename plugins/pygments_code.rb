@@ -7,6 +7,7 @@ begin # Make it easy for folks to use rubypython if they like
   require 'rubypython'
 rescue LoadError # rubypython is not installed
 end
+require File.expand_path('../../lib/colors.rb', __FILE__)
 
 PYGMENTS_CACHE_DIR = File.expand_path('../../.pygments-cache', __FILE__)
 FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)
@@ -21,8 +22,8 @@ module HighlightCode
       highlighted_code.to_s
     rescue
       fail_message =  "Pygments couldn't highlight your code in lang '#{lang}':"
-      fail_message += "\n\n#{code}\n"
-      raise ArgumentError, fail_message
+      fail_message += "\n\n#{code}"
+      raise ArgumentError, fail_message.red
     end
   rescue
     puts $!,$@
