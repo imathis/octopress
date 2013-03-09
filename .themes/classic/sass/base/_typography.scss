@@ -62,7 +62,8 @@ h5, section h4, section section h3 {
 h6, section h5, section section h4, section section section h3 {
   font-size: .8em;
 }
-p, blockquote, ul, ol { margin-bottom: 1.5em; }
+
+p, article blockquote, ul, ol { margin-bottom: 1.5em; }
 
 ul { list-style-type: disc;
   ul { list-style-type: circle; margin-bottom: 0px;
@@ -106,7 +107,7 @@ small { font-size: .8em; }
 
 big { font-size: 1.2em; }
 
-blockquote {
+article blockquote {
   $bq-margin: 1.2em;
   font-style: italic;
   position: relative;
