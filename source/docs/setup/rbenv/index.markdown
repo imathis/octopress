@@ -38,7 +38,7 @@ brew install ruby-build
 Next install Ruby 1.9.3 and you'll be all set.
 
 ```sh
-rbenv install 1.9.3-p0
+rbenv install 1.9.3-p194
 rbenv rehash
 ```
 
