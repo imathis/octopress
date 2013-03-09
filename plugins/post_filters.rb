@@ -5,7 +5,6 @@ module Jekyll
   #
   # Examples:
   # https://github.com/tedkulp/octopress/blob/master/plugins/post_metaweblog.rb
-  # https://github.com/tedkulp/octopress/blob/master/plugins/post_twitter.rb
   class PostFilter < Plugin
 
     #Called before post is sent to the converter. Allows
