@@ -5,15 +5,5 @@
 
 twitter:
   user:
-
-  timeline:
-    tweet-count: 4
-    show-replies: false
-    show-rts: false
-
-  follow-button:
-    show: true
-    follower-count: false
-
   # Sharing button on posts
-  tweet-button: true
+  # tweet-button: true
