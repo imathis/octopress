@@ -30,6 +30,7 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       @file = nil
       @title_old = nil
+      @original_markup = markup
 
       opts     = parse_markup(markup)
       @options = {
@@ -85,7 +86,12 @@ module Jekyll
 
         code = filepath.read
         code = get_range(code, @options[:start], @options[:end])
-        highlight(code, @options)
+        begin
+          highlight(code, @options)
+        rescue MentosError => e
+          markup = "{% include_code #{@original_markup} %}"
+          highlight_failed(e, "{% include_code [title] [lang:language] path/to/file [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, filepath)
+        end
       end
     end
   end

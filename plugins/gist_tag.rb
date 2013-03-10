@@ -19,6 +19,7 @@ module Jekyll
     def initialize(tag_name, markup, token)
       super
       @cache_disabled = false
+      @original_markup = markup
       @cache_folder   = File.expand_path "../.gist-cache", File.dirname(__FILE__)
 
       opts = parse_markup(markup)
@@ -53,7 +54,12 @@ module Jekyll
         unless cache
           code = get_gist_from_web(gist, file)
           code = get_range(code, @options[:start], @options[:end])
-          code = highlight(code, @options)
+          begin
+            code = highlight(code, @options)
+          rescue MentosError => e
+            markup = "{% gist #{@original_markup} %}"
+            highlight_failed(e, "{% gist gist_id [filename] [lang:language] [title:title] [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, file)
+          end
         end
         code || cache
       else
