@@ -58,7 +58,7 @@ module Jekyll
             code = highlight(code, @options)
           rescue
             markup = "{% gist #{@original_markup} %}"
-            highlight_failed("{% gist gist_id [filename] %}", markup, code, file)
+            highlight_failed("{% gist gist_id [filename] [lang:language] [title:title] [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, file)
           end
         end
         code || cache
