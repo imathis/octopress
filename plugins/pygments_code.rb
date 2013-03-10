@@ -184,18 +184,13 @@ module HighlightCode
     code
   end
 
-  def highlight_failed(tag, syntax, code, lang, file = nil)
+  def highlight_failed(syntax, markup, code, file = nil)
     code_snippet = code.split("\n")[0..9].map{|l| "    #{l}" }.join("\n")
-    fail_message = <<-MESSAGE
-Syntax Error in tag '#{tag}' while parsing the following markup in lang '#{lang}':
-#{"(Failing code from #{file})" if file}
-
-#{code_snippet}
-#{"    ..." if code.split("\n").size > 10}
-
-Valid syntax: #{syntax}
-MESSAGE
-    $stderr.puts fail_message.chomp.red
+    fail_message  = "\nSyntax Error while parsing the following markup#{ " in #{file}" if file}:\n\n".red
+    fail_message += "    #{markup}\n#{code_snippet}\n"
+    fail_message += "#{"    ..." if code.split("\n").size > 10}\n"
+    fail_message += "\nValid syntax:\n\n#{syntax}\n".yellow
+    $stderr.puts fail_message.chomp
     raise ArgumentError
   end
 

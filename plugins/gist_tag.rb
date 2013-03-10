@@ -19,6 +19,7 @@ module Jekyll
     def initialize(tag_name, markup, token)
       super
       @cache_disabled = false
+      @original_markup = markup
       @cache_folder   = File.expand_path "../.gist-cache", File.dirname(__FILE__)
 
       opts = parse_markup(markup)
@@ -56,7 +57,8 @@ module Jekyll
           begin
             code = highlight(code, @options)
           rescue
-            highlight_failed('gist', 'gist gist_id [filename]', code, @options[:lang], file)
+            markup = "{% gist #{@original_markup} %}"
+            highlight_failed("{% gist gist_id [filename] %}", markup, code, file)
           end
         end
         code || cache

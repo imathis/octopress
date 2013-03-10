@@ -30,6 +30,7 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       @file = nil
       @title_old = nil
+      @original_markup = markup
 
       opts     = parse_markup(markup)
       @options = {
@@ -88,7 +89,8 @@ module Jekyll
         begin
           highlight(code, @options)
         rescue
-          highlight_failed('include_code', 'include_code path/to/file [title]', code, @options[:lang], filepath)
+          markup = "{% include_code #{@original_markup} %}"
+          highlight_failed("{% include_code [title] [lang:language] path/to/file [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, filepath)
         end
       end
     end

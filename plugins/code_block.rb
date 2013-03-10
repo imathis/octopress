@@ -51,6 +51,7 @@ module Jekyll
     TitleUrlLinkText = /(\S[\S\s]*)\s+(https?:\/\/\S+|\/\S+)\s*(.+)?/i
     Title = /(\S[\S\s]*)/
     def initialize(tag_name, markup, tokens)
+      @original_markup = markup
       opts     = parse_markup(markup)
       @options = {
         lang:      opts[:lang],
@@ -85,7 +86,8 @@ module Jekyll
         code = code + context['pygments_suffix'] if context['pygments_suffix']
         code
       rescue
-        highlight_failed('code_block', 'codeblock [title] [url] [link text]', code, @options[:lang])
+        markup = "{% codeblock #{@original_markup} %}"
+        highlight_failed("{% codeblock [lang:language] [title] [url] [link text] [start:#] [mark:#,#-#] [linenos:false] %}\ncode\n{% endcodeblock %}", markup, code)
       end
     end
   end

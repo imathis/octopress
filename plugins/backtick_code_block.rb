@@ -10,7 +10,7 @@ module BacktickCodeBlock
     input.gsub /^`{3}(.+?)`{3}/m do
       str = $1.to_s
       str.gsub /([^\n]+)?\n(.+?)\Z/m do
-        markup = $1 || ''
+        markup = original_markup = $1 || ''
         code = $2.to_s
 
         opts     = parse_markup(markup)
@@ -41,7 +41,8 @@ module BacktickCodeBlock
         begin
           highlight(code, @options)
         rescue
-          highlight_failed('backtick_code_block', "``` [lang]\n              code\n              ```", code, @options[:lang])
+          markup = "```#{original_markup}"
+          highlight_failed("```[language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]\ncode\n```", markup, code)
         end
       end
     end
