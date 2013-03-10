@@ -56,7 +56,7 @@ module Jekyll
           begin
             code = highlight(code, @options)
           rescue
-            highlight_failed(file, code, @options[:lang])
+            highlight_failed('gist', 'gist gist_id [filename]', code, @options[:lang], file)
           end
         end
         code || cache

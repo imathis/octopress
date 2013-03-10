@@ -88,7 +88,7 @@ module Jekyll
         begin
           highlight(code, @options)
         rescue
-          highlight_failed(@file, code, @options[:lang])
+          highlight_failed('include_code', 'include_code path/to/file [title]', code, @options[:lang], filepath)
         end
       end
     end

@@ -85,7 +85,7 @@ module Jekyll
         code = code + context['pygments_suffix'] if context['pygments_suffix']
         code
       rescue
-        highlight_failed(nil, code, @options[:lang])
+        highlight_failed('code_block', 'codeblock [title] [url] [link text]', code, @options[:lang])
       end
     end
   end

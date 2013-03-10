@@ -41,7 +41,7 @@ module BacktickCodeBlock
         begin
           highlight(code, @options)
         rescue
-          highlight_failed(nil, code, @options[:lang])
+          highlight_failed('backtick_code_block', "``` [lang]\n              code\n              ```", code, @options[:lang])
         end
       end
     end

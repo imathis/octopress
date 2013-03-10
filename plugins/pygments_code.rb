@@ -184,13 +184,18 @@ module HighlightCode
     code
   end
 
-  def highlight_failed(file, code, lang)
-    code_snippet = code.split("\n")[0..9].map{|l| ">> #{l}" }.join("\n")
-    fail_message =  "Pygments doesn't know how to highlight your code in lang '#{lang}'."
-    fail_message += "\nFailing code from #{file}:" if file
-    fail_message += "\n\n#{code_snippet}"
-    fail_message += "\n>> ..." if code.split("\n").size > 10
-    $stderr.puts fail_message.red
+  def highlight_failed(tag, syntax, code, lang, file = nil)
+    code_snippet = code.split("\n")[0..9].map{|l| "    #{l}" }.join("\n")
+    fail_message = <<-MESSAGE
+Syntax Error in tag '#{tag}' while parsing the following markup in lang '#{lang}':
+#{"(Failing code from #{file})" if file}
+
+#{code_snippet}
+#{"    ..." if code.split("\n").size > 10}
+
+Valid syntax: #{syntax}
+MESSAGE
+    $stderr.puts fail_message.chomp.red
     raise ArgumentError
   end
 
