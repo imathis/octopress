@@ -85,7 +85,11 @@ module Jekyll
 
         code = filepath.read
         code = get_range(code, @options[:start], @options[:end])
-        highlight(code, @options)
+        begin
+          highlight(code, @options)
+        rescue
+          highlight_failed(@file, code, @options[:lang])
+        end
       end
     end
   end

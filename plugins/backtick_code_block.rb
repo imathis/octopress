@@ -37,7 +37,12 @@ module BacktickCodeBlock
         else
           @options[:lang]      ||= 'plain'
         end
-        highlight(code, @options)
+
+        begin
+          highlight(code, @options)
+        rescue
+          highlight_failed(nil, code, @options[:lang])
+        end
       end
     end
   end

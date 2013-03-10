@@ -53,7 +53,11 @@ module Jekyll
         unless cache
           code = get_gist_from_web(gist, file)
           code = get_range(code, @options[:start], @options[:end])
-          code = highlight(code, @options)
+          begin
+            code = highlight(code, @options)
+          rescue
+            highlight_failed(file, code, @options[:lang])
+          end
         end
         code || cache
       else

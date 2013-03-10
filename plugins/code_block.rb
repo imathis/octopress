@@ -78,11 +78,15 @@ module Jekyll
     end
 
     def render(context)
-      code = super.strip
-      code = highlight(code, @options)
-      code = context['pygments_prefix'] + code if context['pygments_prefix']
-      code = code + context['pygments_suffix'] if context['pygments_suffix']
-      code
+      begin
+        code = super.strip
+        code = highlight(code, @options)
+        code = context['pygments_prefix'] + code if context['pygments_prefix']
+        code = code + context['pygments_suffix'] if context['pygments_suffix']
+        code
+      rescue
+        highlight_failed(nil, code, @options[:lang])
+      end
     end
   end
 end
