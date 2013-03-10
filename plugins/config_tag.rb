@@ -1,21 +1,19 @@
-$:.unshift File.expand_path("../lib", File.dirname(__FILE__)) # For use/testing when no gem is installed
-require 'octopress'
 require 'json'
 
 class ConfigTag < Liquid::Tag
   def initialize(tag_name, options, tokens)
     super
-    config = Octopress::Configuration.read_configuration
-    options = options.split(',').map {|i| i.strip }
-    options.first.split('.').each { |k| config = config[k] } #reference objects with dot notation
-    @config = vars
-    @key = options.first.sub(/_/, '-').sub(/\./, '-')
-    @tag = (options.last || 'div')
+    @options = options.split(' ').map {|i| i.strip }
+    @key = @options.first
+    @tag = (@options[1] || 'div')
   end
 
   def render(context)
-    tag  = "<#{@tag} class='#{@key}'"
-    @config.each do |k,v|
+    config = context.registers[:site].config
+    options = @options.first.split('.').map { |k| config = config[k] }.last #reference objects with dot notation
+    keyclass = @key.sub(/_/, '-').sub(/\./, '-')
+    tag  = "<#{@tag} class='#{keyclass}'"
+    options.each do |k,v|
       unless v.nil?
         v = v.join ',' if v.respond_to? 'join'
         v = v.to_json if v.respond_to? 'keys'
@@ -23,6 +21,8 @@ class ConfigTag < Liquid::Tag
       end
     end
     tag += "></#{@tag}>"
+    p tag
+    tag
   end
 end
 
