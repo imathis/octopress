@@ -1,3 +1,5 @@
+require File.expand_path('../../lib/colors.rb', __FILE__)
+
 module Jekyll
 
   class Pagination < Generator
@@ -88,7 +90,7 @@ module Jekyll
       @previous_page = nil
 
       if @page > @total_pages
-        raise RuntimeError, "page number can't be greater than total pages: #{@page} > #{@total_pages}"
+        raise RuntimeError, "page number can't be greater than total pages: #{@page} > #{@total_pages}".red
       end
 
       init = (@page - 1) * @per_page
