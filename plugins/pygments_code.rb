@@ -16,17 +16,9 @@ module HighlightCode
   include TemplateWrapper
   include SiteConfig
   def pygments(code, lang)
-    begin
-      highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
-      highlighted_code = highlighted_code.gsub(/{{/, '&#x7b;&#x7b;').gsub(/{%/, '&#x7b;&#x25;')
-      highlighted_code.to_s
-    rescue
-      fail_message =  "Pygments couldn't highlight your code in lang '#{lang}':"
-      fail_message += "\n\n#{code}"
-      raise ArgumentError, fail_message.red
-    end
-  rescue
-    puts $!,$@
+    highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
+    highlighted_code = highlighted_code.gsub(/{{/, '&#x7b;&#x7b;').gsub(/{%/, '&#x7b;&#x25;')
+    highlighted_code.to_s
   end
 
   def highlight(code, options = {})
@@ -190,6 +182,16 @@ module HighlightCode
       code = code.split(/\n/).slice(start - 1, endline + 1 - start).join("\n")
     end
     code
+  end
+
+  def highlight_failed(file, code, lang)
+    code_snippet = code.split("\n")[0..9].map{|l| ">> #{l}" }.join("\n")
+    fail_message =  "Pygments doesn't know how to highlight your code in lang '#{lang}'."
+    fail_message += "\nFailing code from #{file}:" if file
+    fail_message += "\n\n#{code_snippet}"
+    fail_message += "\n>> ..." if code.split("\n").size > 10
+    $stderr.puts fail_message.red
+    raise ArgumentError
   end
 
 end
