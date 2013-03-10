@@ -184,12 +184,13 @@ module HighlightCode
     code
   end
 
-  def highlight_failed(syntax, markup, code, file = nil)
+  def highlight_failed(error, syntax, markup, code, file = nil)
     code_snippet = code.split("\n")[0..9].map{|l| "    #{l}" }.join("\n")
-    fail_message  = "\nSyntax Error while parsing the following markup#{ " in #{file}" if file}:\n\n".red
+    fail_message  = "\nPygments Error while parsing the following markup#{" in #{file}" if file}:\n\n".red
     fail_message += "    #{markup}\n#{code_snippet}\n"
     fail_message += "#{"    ..." if code.split("\n").size > 10}\n"
-    fail_message += "\nValid syntax:\n\n#{syntax}\n".yellow
+    fail_message += "\nValid Syntax:\n\n#{syntax}\n".yellow
+    fail_message += "\nPygments Error:\n\n#{error.message}".red
     $stderr.puts fail_message.chomp
     raise ArgumentError
   end

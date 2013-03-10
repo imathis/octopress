@@ -88,9 +88,9 @@ module Jekyll
         code = get_range(code, @options[:start], @options[:end])
         begin
           highlight(code, @options)
-        rescue
+        rescue MentosError => e
           markup = "{% include_code #{@original_markup} %}"
-          highlight_failed("{% include_code [title] [lang:language] path/to/file [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, filepath)
+          highlight_failed(e, "{% include_code [title] [lang:language] path/to/file [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, filepath)
         end
       end
     end

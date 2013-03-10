@@ -56,9 +56,9 @@ module Jekyll
           code = get_range(code, @options[:start], @options[:end])
           begin
             code = highlight(code, @options)
-          rescue
+          rescue MentosError => e
             markup = "{% gist #{@original_markup} %}"
-            highlight_failed("{% gist gist_id [filename] [lang:language] [title:title] [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, file)
+            highlight_failed(e, "{% gist gist_id [filename] [lang:language] [title:title] [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, file)
           end
         end
         code || cache

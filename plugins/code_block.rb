@@ -85,9 +85,9 @@ module Jekyll
         code = context['pygments_prefix'] + code if context['pygments_prefix']
         code = code + context['pygments_suffix'] if context['pygments_suffix']
         code
-      rescue
+      rescue MentosError => e
         markup = "{% codeblock #{@original_markup} %}"
-        highlight_failed("{% codeblock [lang:language] [title] [url] [link text] [start:#] [mark:#,#-#] [linenos:false] %}\ncode\n{% endcodeblock %}", markup, code)
+        highlight_failed(e, "{% codeblock [lang:language] [title] [url] [link text] [start:#] [mark:#,#-#] [linenos:false] %}\ncode\n{% endcodeblock %}", markup, code)
       end
     end
   end

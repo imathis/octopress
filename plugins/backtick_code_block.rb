@@ -40,9 +40,9 @@ module BacktickCodeBlock
 
         begin
           highlight(code, @options)
-        rescue
+        rescue MentosError => e
           markup = "```#{original_markup}"
-          highlight_failed("```[language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]\ncode\n```", markup, code)
+          highlight_failed(e, "```[language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]\ncode\n```", markup, code)
         end
       end
     end
