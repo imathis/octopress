@@ -28,7 +28,7 @@ function addSidebarToggler() {
   }
   var sections = $('aside.sidebar > section');
   if (sections.length > 1) {
-    sections.each(function(section, index){
+    sections.each(function(index, section){
       if ((sections.length >= 3) && index % 3 === 0) {
         $(section).addClass("first");
       }
