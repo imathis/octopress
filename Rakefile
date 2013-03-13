@@ -147,6 +147,8 @@ end
 desc "preview the site in a web browser."
 task :preview do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." if configuration[:source].nil? || !File.directory?(configuration[:source])
+  ENV['OCTOPRESS_ENV'] ||= 'development'
+  Rake::Task["generate"].execute
   guardPid = Process.spawn("guard")
   puts "Starting Rack, serving to http://#{configuration[:server_host]}:#{configuration[:server_port]}"
   rackupPid = Process.spawn("rackup --host #{configuration[:server_host]} --port #{configuration[:server_port]}")
@@ -273,7 +275,7 @@ task :update_stylesheets, :theme do |t, args|
     rm_r "assets.old/stylesheets", :secure=>true
     puts "Removed existing assets.old/stylesheets directory"
   end
-  mkdir_p "assets.old" 
+  mkdir_p "assets.old"
   if File.directory?("assets/stylesheets")
     mv "assets/stylesheets", "assets.old/stylesheets"
     puts "Moved stylesheets into assets.old/stylesheets"
@@ -298,7 +300,7 @@ task :update_javascripts, :theme do |t, args|
       rm_r "assets.old/javascripts", :secure=>true
       puts "Removed existing assets.old/javascripts directory"
     end
-    mkdir_p "assets.old" 
+    mkdir_p "assets.old"
     if File.directory?("assets/javascripts")
       cp_r "assets/javascripts/.", "assets.old/javascripts"
       puts "Copied javascripts into assets.old/javascripts"
@@ -425,7 +427,7 @@ task :set_root_dir, :dir do |t, args|
     site_configs = configurator.read_config('site.yml')
     site_configs[:destination] = "public#{path}"
     root = "/#{path.sub(/^\//, '')}"
-    url = $1 if site_configs[:url] =~ /(https?:\/\/[^\/]+)/i 
+    url = $1 if site_configs[:url] =~ /(https?:\/\/[^\/]+)/i
     site_configs[:url] = url + path
     site_configs[:subscribe_rss] = "#{path}/atom.xml"
     site_configs[:root] = "#{root}"
@@ -565,7 +567,7 @@ def get_unpublished(posts, options={})
   posts.sort.each do |post|
     file = File.read(post)
     data = YAML.load file.match(/(^-{3}\n)(.+?)(\n-{3})/m)[2]
-    
+
     if options[:env] == 'production'
       future = Time.now < Time.parse(data['date'].to_s) ? "future date: #{data['date']}" : false
     end
