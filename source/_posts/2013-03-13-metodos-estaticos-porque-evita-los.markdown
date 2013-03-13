@@ -10,6 +10,7 @@ categories: lunks ruby refactor
 Aparentemente existe na cultura de alguns desenvolvedores uma certa convenção sobre quando usar métodos estáticos. Se é um método relativamente simples, que itera sobre uma coleção dos objetos da classe em si, implementar um método estático é uma forma possível de implementação.
 
 Diga-se que uma API está sendo feita, e é preciso retornar os usuários novos em um JSON bem específico às características da aplicação. Segue um exemplo, extraído de um projeto real:
+<!-- more -->
 
 ```ruby
 class User < ActiveRecord::Base
