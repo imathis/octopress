@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Métodos estáticos, porque evitá-los
-date: 2013-03-11 13:00:00
+date: 2013-03-13 11:00:00
 comments: true
 categories: lunks ruby refactor
-published: false
 ---
 
 
