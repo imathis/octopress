@@ -147,6 +147,8 @@ end
 desc "preview the site in a web browser."
 task :preview do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." if configuration[:source].nil? || !File.directory?(configuration[:source])
+  ENV['OCTOPRESS_ENV'] ||= 'development'
+  Rake::Task["generate"].execute
   guardPid = Process.spawn("guard")
   puts "Starting Rack, serving to http://#{configuration[:server_host]}:#{configuration[:server_port]}"
   rackupPid = Process.spawn("rackup --host #{configuration[:server_host]} --port #{configuration[:server_port]}")
@@ -273,7 +275,7 @@ task :update_stylesheets, :theme do |t, args|
     rm_r "#{configuration[:assets]}.old/stylesheets", :secure=>true
     puts "Removed existing assets.old/stylesheets directory"
   end
-  mkdir "#{configuration[:assets]}.old" 
+  mkdir "#{configuration[:assets]}.old"
   mv "#{configuration[:assets]}/stylesheets", "#{configuration[:assets]}.old/stylesheets"
   puts "Moved styles into #{configuration[:assets]}.old/stylesheets"
   install_stylesheets(theme)
@@ -290,7 +292,7 @@ task :update_javascripts, :theme do |t, args|
       rm_r "#{configuration[:assets]}.old/javascripts", :secure=>true
       puts "Removed existing assets.old/javascripts directory"
     end
-    mkdir "#{configuration[:assets]}.old" 
+    mkdir "#{configuration[:assets]}.old"
     cp_r "#{configuration[:assets]}/javascripts/.", "#{configuration[:assets]}.old/javascripts"
     puts "Copied styles into #{configuration[:assets]}.old/javascripts"
     install_javascripts(theme)
@@ -539,7 +541,7 @@ def get_unpublished(posts, options={})
   posts.sort.each do |post|
     file = File.read(post)
     data = YAML.load file.match(/(^-{3}\n)(.+?)(\n-{3})/m)[2]
-    
+
     if options[:env] == 'production'
       future = Time.now < Time.parse(data['date'].to_s) ? "future date: #{data['date']}" : false
     end
