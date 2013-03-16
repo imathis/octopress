@@ -110,7 +110,7 @@ task :generate do
   configurator.write_configs_for_generation
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{configuration[:source]}/stylesheets"
-  system "jekyll build"
+  system "jekyll build #{"--drafts" unless Octopress.env == 'production'}"
   unpublished = get_unpublished(Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*"), {env: Octopress.env, message: "\nThese posts were not generated:"})
   puts unpublished unless unpublished.empty?
   configurator.remove_configs_for_generation

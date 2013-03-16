@@ -20,7 +20,7 @@ module Guard
       if Watcher.match_files(self, Dir.glob('{,**/}*{,.*}').uniq).size > 0
         configurator = Octopress::Configuration.new
         configurator.write_configs_for_generation
-        system "jekyll build"
+        system "jekyll build #{"--drafts" unless Octopress.env == 'production'}"
         configurator.remove_configs_for_generation
       end
     end
@@ -28,7 +28,7 @@ module Guard
     def run_on_changes(_)
       configurator = Octopress::Configuration.new
       configurator.write_configs_for_generation
-      system "jekyll build"
+      system "jekyll build #{"--drafts" unless Octopress.env == 'production'}"
       configurator.remove_configs_for_generation
     end
   end
