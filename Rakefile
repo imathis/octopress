@@ -280,7 +280,10 @@ task :update_stylesheets, :theme do |t, args|
   end
   Rake::Task["install_stylesheets"].invoke(theme)
   if File.directory?("assets.old/stylesheets/custom")
-    cp_r "assets.old/stylesheets/custom", "assets/stylesheets/custom"
+    cp_r "assets.old/stylesheets/custom", "assets/stylesheets"
+  end
+  if File.directory?("assets.old/stylesheets/plugins")
+    cp_r "assets.old/stylesheets/plugins", "assets/stylesheets"
   end
   rm_r ".sass-cache", :secure=>true if File.directory?(".sass-cache")
   puts "## Updated Stylesheets ##"
