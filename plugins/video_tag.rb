@@ -38,7 +38,7 @@ module Jekyll
         'ogv' => "type='video/ogg; codecs=theora, vorbis'",
         'webm' => "type='video/webm; codecs=vp8, vorbis'"
       }
-      if @video.size > 0
+      if @video && @video.size > 0
         video =  "<video width='#{@width}' height='#{@height}' preload='none' controls poster='#{@poster}'>"
         @video.each do |v|
           t = v.match(/([^\.]+)$/)[1]
