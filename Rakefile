@@ -26,12 +26,12 @@ desc "Initial setup for Octopress: copies the default theme into the path of Jek
 task :install, :theme do |t, args|
   theme = args.theme || 'classic'
   theme_configuration = configurator.read_theme_configuration(theme)
-  if File.directory?(theme_configuration[:source]) || File.directory?(theme_configuration[:theme][:javascripts_dir]) || File.directory?(theme_configuration[:theme][:stylesheets_dir])
+  if File.directory?(theme_configuration[:source])
     abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
   end
   # copy theme into working Jekyll directories
   puts "## Installing "+theme+" theme"
-  Rake::Task["install_template"].invoke(theme)
+  Rake::Task["install_source"].invoke(theme)
   Rake::Task["install_stylesheets"].invoke(theme)
   Rake::Task["install_javascripts"].invoke(theme)
   Rake::Task["install_configs"].invoke(theme)
@@ -94,7 +94,7 @@ task :install_javascripts, :theme do |t, args|
   end
 end
 
-task :install_template, :theme do |t, args|
+task :install_source, :theme do |t, args|
   theme = args.theme || 'classic'
   mkdir_p "source/_posts"
   cp_r ".themes/#{theme}/source/.", 'source'
@@ -261,7 +261,7 @@ end
 desc "Update theme source and style"
 task :update, :theme do |t, args|
   theme = args.theme || 'classic'
-  Rake::Task[:update_template].invoke(theme)
+  Rake::Task[:update_source].invoke(theme)
   Rake::Task[:update_stylesheets].invoke(theme)
   Rake::Task[:update_javascripts].invoke(theme)
 end
@@ -269,37 +269,44 @@ end
 desc "Move stylesheets to stylesheets.old, install stylesheets theme updates, replace stylesheets/custom with stylesheets.old/custom"
 task :update_stylesheets, :theme do |t, args|
   theme = args.theme || 'classic'
-  if File.directory?("#{configuration[:assets]}.old/stylesheets")
-    rm_r "#{configuration[:assets]}.old/stylesheets", :secure=>true
+  if File.directory?("assets.old/stylesheets")
+    rm_r "assets.old/stylesheets", :secure=>true
     puts "Removed existing assets.old/stylesheets directory"
   end
-  mkdir "#{configuration[:assets]}.old" 
-  mv "#{configuration[:assets]}/stylesheets", "#{configuration[:assets]}.old/stylesheets"
-  puts "Moved styles into #{configuration[:assets]}.old/stylesheets"
-  install_stylesheets(theme)
-  cp_r "#{configuration[:assets]}.old/stylesheets/custom", "#{configuration[:assets]}/stylesheets/custom"
-  puts "## Updated Stylesheets ##"
+  mkdir_p "assets.old" 
+  if File.directory?("assets/stylesheets")
+    mv "assets/stylesheets", "assets.old/stylesheets"
+    puts "Moved stylesheets into assets.old/stylesheets"
+  end
+  Rake::Task["install_stylesheets"].invoke(theme)
+  if File.directory?("assets.old/stylesheets/custom")
+    cp_r "assets.old/stylesheets/custom", "assets/stylesheets/custom"
+  end
   rm_r ".sass-cache", :secure=>true if File.directory?(".sass-cache")
+  puts "## Updated Stylesheets ##"
 end
 
-desc "Move javascripts to #{configuration[:assets]}.old/javascripts, install javascripts theme updates."
+desc "Move javascripts to assets.old/javascripts, install javascripts theme updates."
 task :update_javascripts, :theme do |t, args|
-  if File.directory?(".themes/#{theme}/javascripts")
-    theme = args.theme || 'classic'
-    if File.directory?("#{configuration[:assets]}.old/javascripts")
-      rm_r "#{configuration[:assets]}.old/javascripts", :secure=>true
+  theme = args.theme || 'classic'
+  theme_configuration = configurator.read_theme_configuration(theme)
+  if theme_configuration[:theme][:javascripts_dir]
+    if File.directory?("assets.old/javascripts")
+      rm_r "assets.old/javascripts", :secure=>true
       puts "Removed existing assets.old/javascripts directory"
     end
-    mkdir "#{configuration[:assets]}.old" 
-    cp_r "#{configuration[:assets]}/javascripts/.", "#{configuration[:assets]}.old/javascripts"
-    puts "Copied styles into #{configuration[:assets]}.old/javascripts"
-    install_javascripts(theme)
+    mkdir_p "assets.old" 
+    if File.directory?("assets/javascripts")
+      cp_r "assets/javascripts/.", "assets.old/javascripts"
+      puts "Copied javascripts into assets.old/javascripts"
+    end
+    Rake::Task[:install_javascripts].invoke(theme)
     puts "## Updated Javascripts ##"
   end
 end
 
 desc "Move source to source.old, install source theme updates, replace source/_includes/navigation.html with source.old's navigation"
-task :update_template, :theme do |t, args|
+task :update_source, :theme do |t, args|
   theme = args.theme || 'classic'
   if File.directory?("#{configuration[:source]}.old")
     puts "Removed existing #{configuration[:source]}.old directory"
