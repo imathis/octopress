@@ -7,6 +7,7 @@ require 'time'
 require 'tzinfo'
 require 'yaml'
 require 'octopress'
+require 'octopress/js_asset_manager'
 require 'rake/testtask'
 require 'colors'
 
@@ -108,7 +109,9 @@ desc "Generate jekyll site"
 task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." if configuration[:source].nil? || !File.directory?(configuration[:source])
   configurator.write_configs_for_generation
-  puts "## Generating Site with Jekyll"
+  puts "## Generating Site with Jekyll - ENV: #{Octopress.env}"
+  js_assets = Octopress::JSAssetsManager.new
+  js_assets.compile
   system "compass compile --css-dir #{configuration[:source]}/stylesheets"
   system "jekyll --no-server --no-auto #{'--no-future' if Octopress.env == 'production'}"
   unpublished = get_unpublished(Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*"), {env: Octopress.env, message: "\nThese posts were not generated:"})

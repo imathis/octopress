@@ -8,7 +8,6 @@ class JavascriptAssets < Liquid::Tag
 
   def render(context)
     js_assets = Octopress::JSAssetsManager.new
-    js_assets.compile
     js_assets.url
   end
 end
