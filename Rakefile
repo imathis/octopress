@@ -508,7 +508,6 @@ task :setup_github_pages, :repo do |t, args|
 
   puts "\nYour deployment configuration (_config/deploy.yml) has been updated to:"
   deploy_config_msg = <<-EOF
-
   deploy_default: push
   deploy_branch: #{branch}
 EOF
@@ -519,7 +518,7 @@ EOF
   if !site_configuration.has_key?(:url) or site_configuration[:url] == 'http://yoursite.com'
     site_configuration[:url] = url
     configurator.write_config('site.yml', site_configuration)
-    puts "\n Your site configuration (_config/site.yml) has been updated to:"
+    puts "\nYour site configuration (_config/site.yml) has been updated to:"
     puts "\n  url: #{url}".yellow
   end
   jekyll_configuration = configurator.read_config('defaults/jekyll.yml').deep_merge(site_configuration)
@@ -531,7 +530,7 @@ EOF
     current_url = site_configuration[:url]
     if cname != current_short_url
       puts "Your CNAME points to #{cname} but your _config/site.yml is setting the url to #{current_short_url}".red
-      puts "If you need it, get help here: https://help.github.com/articles/setting-up-a-custom-domain-with-pages"
+      puts "If you need help, get it here: https://help.github.com/articles/setting-up-a-custom-domain-with-pages"
     else
       url = cname
     end
