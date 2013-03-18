@@ -12,6 +12,7 @@
 /source/_stash
 /source/stylesheets/screen.css
 /source/javascripts/*.min.js
+/source/javascripts/build
 /source/images/icon-*.png
 /vendor
 /lib/vendor
