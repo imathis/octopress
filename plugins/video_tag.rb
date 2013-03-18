@@ -22,7 +22,7 @@ module Jekyll
     @width = ''
 
     def initialize(tag_name, markup, tokens)
-      if markup =~ /(https?:\S+)(\s+(https?:\S+))?(\s+(https?:\S+))?(\s+(\d+)\s(\d+))?(\s+(https?:\S+))?/i
+      if markup =~ /(\S+\.\S+)(\s+(\S+\.\S+))?(\s+(\S+\.\S+))?(\s+(\d+)\s(\d+))?(\s+(\S+\.\S+))?/i
         @video  = [$1, $3, $5].compact
         @width  = $7
         @height = $8
