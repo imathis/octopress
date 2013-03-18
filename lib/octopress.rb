@@ -9,6 +9,6 @@ module Octopress
   # Static: Fetches the Octopress environment
   def self.env
     configurator   = Octopress::Configuration.new
-    ENV["OCTOPRESS_ENV"] || configurator.read_config("defaults/jekyll.yml")[:env]
+    ENV["OCTOPRESS_ENV"] || configurator.read_config("defaults/jekyll.yml").deep_merge(configurator.read_config("site.yml"))[:env]
   end
 end
