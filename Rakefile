@@ -504,35 +504,45 @@ task :setup_github_pages, :repo do |t, args|
   deploy_configuration[:deploy_default] = "push"
   deploy_configuration[:deploy_branch]  = branch
   deploy_configuration = configurator.read_config('defaults/deploy/gh_pages.yml').deep_merge(deploy_configuration)
-  puts deploy_configuration
   configurator.write_config('deploy.yml', deploy_configuration)
+
+  puts "\nYour deployment configuration (_config/deploy.yml) has been updated to:"
+  deploy_config_msg = <<-EOF
+
+  deploy_default: push
+  deploy_branch: #{branch}
+EOF
+  puts deploy_config_msg.yellow
 
   # Configure published url
   site_configuration = configurator.read_config('site.yml')
-  site_configuration[:url] = url if site_configuration.has_key?(:url) && site_configuration[:url] == 'http://yoursite.com'
-  site_configuration = configurator.read_config('defaults/jekyll.yml').deep_merge(site_configuration)
+  if !site_configuration.has_key?(:url) or site_configuration[:url] == 'http://yoursite.com'
+    site_configuration[:url] = url
+    configurator.write_config('site.yml', site_configuration)
+    puts "\n Your site configuration (_config/site.yml) has been updated to:"
+    puts "\n  url: #{url}".yellow
+  end
+  jekyll_configuration = configurator.read_config('defaults/jekyll.yml').deep_merge(site_configuration)
 
-  puts "\n========================================================"
-  has_cname = File.exists?("#{configuration[:source]}/CNAME")
+  cname_path = "#{jekyll_configuration[:source]}/CNAME"
+  has_cname = File.exists?(cname_path)
   if has_cname
-    cname = IO.read("#{configuration[:source]}/CNAME").chomp
-    current_short_url = /\/{2}(.*$)/.match(current_url)[1]
+    cname = IO.read(cname_path).chomp
+    current_url = site_configuration[:url]
     if cname != current_short_url
-      puts "!! WARNING: Your CNAME points to #{cname} but your _config.yml url is set to #{current_short_url} !!"
-      puts "For help with setting up a CNAME follow the guide at http://help.github.com/pages/#custom_domains"
+      puts "Your CNAME points to #{cname} but your _config/site.yml is setting the url to #{current_short_url}".red
+      puts "If you need it, get help here: https://help.github.com/articles/setting-up-a-custom-domain-with-pages"
     else
-      puts "GitHub Pages will host your site at http://#{cname}"
+      url = cname
     end
   else
-    puts "GitHub Pages will host your site at #{url}."
-    puts "To host at \"your-site.com\", configure a CNAME: `echo \"your-domain.com\" > #{configuration[:source]}/CNAME`"
-    puts "Then change the url in _config.yml from #{current_url} to http://your-domain.com"
-    puts "Finally, follow the guide at http://help.github.com/pages/#custom_domains for help pointing your domain to GitHub Pages"
+    puts "To use a custom domain:".bold
+    puts "  Follow this guide: https://help.github.com/articles/setting-up-a-custom-domain-with-pages"
+    puts "  Then remember to update the url in _config/site.yml from #{url} to http://your-domain.com"
   end
-  puts "Deploy to #{repo_url} with `rake deploy`"
-  puts "Note: generated content is copied into _deploy/ which is not in version control."
-  puts "If starting with a fresh clone of this project you should re-run setup_github_pages."
-  puts "========================================================"
+  puts "\nTo deploy:".bold
+  puts "  Run `rake deploy` which will copy your site to _deploy/, commit then push to #{repo_url}"
+  puts "\nGitHub Pages will host your site at".green + " #{url}.".green.bold
 end
 
 # usage rake list_posts or rake list_posts[pub|unpub]
