@@ -10,6 +10,7 @@ require 'octopress'
 require 'octopress/js_asset_manager'
 require 'rake/testtask'
 require 'colors'
+require 'open3'
 
 ### Configuring Octopress:
 ###   Under _config/ you will find:
@@ -489,34 +490,46 @@ task :setup_github_pages, :repo do |t, args|
   end
 
   # Configure deployment repository
-  rm_rf configuration[:deploy_dir]
-  mkdir configuration[:deploy_dir]
-  cd "#{configuration[:deploy_dir]}" do
-    system "git init"
-    system "git remote add origin #{repo_url}"
-    puts   "Attempting to pull from repository"
-    system "git pull origin #{branch}"
+  rm_rf configuration[:deploy_dir], :verbose=>false
+  cmd = "git clone #{repo_url} --branch #{branch} #{configuration[:deploy_dir]}"
+  Open3.popen2e(cmd) do |stdin, stdout_err, wait_thr|
+    exit_status = wait_thr.value
+    unless exit_status.success?
+      error = ''
+      while line = stdout_err.gets do error << line end
+      puts "Be sure your repo (#{repo_url}) is set up properly and try again".red 
+      abort error
+    end
+  end
+  cd "#{configuration[:deploy_dir]}", :verbose=>false do
     unless File.exist?('index.html')
-      system "echo 'My Octopress Page is coming soon &hellip;' > index.html"
-      system "git add ."
-      system "git commit -m \"Octopress init\""
-      system "git branch -m gh-pages" unless branch == 'master'
+      `echo 'My Octopress Page is coming soon &hellip;' > index.html`
+      `git add . && git commit -m 'Octopress init'`
+      `git branch -m gh-pages` unless branch == 'master'
     end
   end
 
   # Configure deployment setup in deploy.yml
   deploy_configuration = configurator.read_config('deploy.yml')
-  deploy_configuration[:deploy_default] = "push"
-  deploy_configuration[:deploy_branch]  = branch
-  deploy_configuration = configurator.read_config('defaults/deploy/gh_pages.yml').deep_merge(deploy_configuration)
-  configurator.write_config('deploy.yml', deploy_configuration)
+  config_message = ""
 
-  puts "\nYour deployment configuration (_config/deploy.yml) has been updated to:"
-  deploy_config_msg = <<-EOF
-  deploy_default: push
-  deploy_branch: #{branch}
-EOF
-  puts deploy_config_msg.yellow
+  unless deploy_configuration[:deploy_default] == "push"
+    deploy_configuration[:deploy_default] = "push"
+    config_message << "\n  deploy_default: push"
+  end
+
+  unless deploy_configuration[:deploy_branch] == branch
+    deploy_configuration[:deploy_branch] = branch
+    config_message << "\n  deploy_branch: #{branch}"
+  end
+
+  # Mention updated configs if any
+  unless config_message.empty?
+    deploy_configuration = configurator.read_config('defaults/deploy/gh_pages.yml').deep_merge(deploy_configuration)
+    configurator.write_config('deploy.yml', deploy_configuration)
+    puts "\nYour deployment configuration (_config/deploy.yml) has been updated to:"
+    puts config_msg.yellow
+  end
 
   # Configure published url
   site_configuration = configurator.read_config('site.yml')
@@ -530,23 +543,27 @@ EOF
 
   cname_path = "#{jekyll_configuration[:source]}/CNAME"
   has_cname = File.exists?(cname_path)
+  output = ""
   if has_cname
     cname = IO.read(cname_path).chomp
     current_url = site_configuration[:url]
     if cname != current_short_url
-      puts "Your CNAME points to #{cname} but your _config/site.yml is setting the url to #{current_short_url}".red
-      puts "If you need help, get it here: https://help.github.com/articles/setting-up-a-custom-domain-with-pages"
+      output << "\nYour CNAME points to #{cname} but your _config/site.yml is setting the url to #{current_short_url}".red
+      output << "\nIf you need help, get it here: https://help.github.com/articles/setting-up-a-custom-domain-with-pages"
     else
       url = cname
     end
   else
-    puts "To use a custom domain:".bold
-    puts "  Follow this guide: https://help.github.com/articles/setting-up-a-custom-domain-with-pages"
-    puts "  Then remember to update the url in _config/site.yml from #{url} to http://your-domain.com"
+    output << "\nTo use a custom domain:".bold
+    output << "\n  Follow this guide: https://help.github.com/articles/setting-up-a-custom-domain-with-pages"
+    output << "\n  Then remember to update the url in _config/site.yml from #{url} to http://your-domain.com"
   end
+
+  puts "Configured successfully:".green.bold
+  puts "  Github Pages will host your site at #{url}.".green
   puts "\nTo deploy:".bold
   puts "  Run `rake deploy` which will copy your site to _deploy/, commit then push to #{repo_url}"
-  puts "\nGitHub Pages will host your site at".green + " #{url}.".green.bold
+  puts output
 end
 
 # usage rake list_posts or rake list_posts[pub|unpub]
