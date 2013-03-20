@@ -2,6 +2,7 @@ $:.unshift File.expand_path(File.dirname(__FILE__)) # For use/testing when no ge
 
 require "octopress/core_ext"
 require "octopress/configuration"
+require "octopress/dependency_installer"
 require "octopress/js_asset_manager"
 
 module Octopress
