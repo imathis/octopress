@@ -1,4 +1,5 @@
 require 'open3'
+
 module Octopress
   class DependencyInstaller
     # Static: installs a list of plugins
