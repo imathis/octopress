@@ -16,7 +16,7 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    directory_watcher (1.4.1)
+    directory_watcher (1.5.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
     fast-stemmer (1.0.2)
@@ -37,8 +37,8 @@ GEM
     guard-shell (0.5.1)
       guard (>= 1.1.0)
     haml (3.1.7)
-    highline (1.6.15)
-    jekyll (1.0.0.beta1)
+    highline (1.6.16)
+    jekyll (1.0.0.beta2)
       classifier (~> 1.3)
       commander (~> 4.1.3)
       directory_watcher (~> 1.1)
@@ -107,7 +107,7 @@ DEPENDENCIES
   guard-compass
   guard-shell
   haml (~> 3.1.7)
-  jekyll (~> 1.0.0.beta1)
+  jekyll (~> 1.0.0.beta2)
   liquid (~> 2.3.0)
   minitest (~> 4.6)
   pygments.rb (~> 0.3.4)
