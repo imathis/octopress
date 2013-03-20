@@ -577,9 +577,12 @@ end
 #
 # Run tests for Octopress module, found in lib/.
 #
-Rake::TestTask.new do |t|
-  t.pattern = "lib/spec/**/*_spec.rb"
+require 'rspec/core/rake_task'
+desc "Run all examples"
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.pattern = "./lib/spec{,/*/**}/*_spec.rb"
 end
+task :test => :spec
 
 def get_unpublished(posts, options={})
   result = ""

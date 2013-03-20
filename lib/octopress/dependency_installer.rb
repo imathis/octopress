@@ -43,6 +43,12 @@ module Octopress
     def install_dir(plugin)
       File.join(INSTALL_DIR, File.basename(plugin).rstrip('.git'))
     end
+
+    # Public: clones the remote repository to the plugin install directory
+    #
+    # plugin - the plugin name
+    #
+    # Returns the file path to where the plugin was installed
     def clone(plugin)
       unless File.directory?(install_dir(plugin))
         Open3.popen3("git clone #{git_url(plugin)} #{install_dir(plugin)}") do |stdin, stdout, stderr, wait_thr|

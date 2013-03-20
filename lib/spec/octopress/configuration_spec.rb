@@ -1,16 +1,10 @@
-require 'minitest/autorun'
-require_relative '../../octopress'
+require_relative '../spec_helper.rb'
 
 describe Octopress::Configuration do
   describe '#read_configuration' do
     describe "when no override" do
-      before do
-        @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'no_override'))
-      end
-
-      subject do
-        @octo_config.read_configuration
-      end
+      let(:octo_config) { Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'no_override')) }
+      subject { octo_config.read_configuration }
 
       it "returns the default config with keys as symbols" do
         expected_config = { :url           => "http://yoursite.com",
@@ -19,18 +13,13 @@ describe Octopress::Configuration do
                             :author        => "Your Name",
                             :simple_search => "http://google.com/search",
                             :description   => nil }
-        subject.must_equal expected_config
+        subject.should eq(expected_config)
       end
     end
 
     describe "when override" do
-      before do
-        @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'override'))
-      end
-
-      subject do
-        @octo_config.read_configuration
-      end
+      let(:octo_config) { Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'override')) }
+      subject { octo_config.read_configuration }
 
       it "returns the default config with keys as symbols" do
         expected_config = { :url           => "http://myownsite.com",
@@ -39,7 +28,7 @@ describe Octopress::Configuration do
                             :author        => "John Doe",
                             :simple_search => "http://google.com/search",
                             :description   => nil }
-        subject.must_equal expected_config
+        subject.should eq(expected_config)
       end
     end
   end
