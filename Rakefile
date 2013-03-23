@@ -158,7 +158,7 @@ task :preview do
   rackupPid = Process.spawn("rackup --host #{configuration[:server_host]} --port #{configuration[:server_port]}")
 
   trap("INT") {
-    [guardPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    [guardPid, rackupPid].each { |pid| Process.kill(3, pid) rescue Errno::ESRCH }
     exit 0
   }
 
