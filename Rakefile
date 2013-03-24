@@ -416,41 +416,64 @@ multitask :push do
   end
 end
 
-# TODO: Need to hook this variable into configurator
-s3_bucket = "example.com"
-
 desc "Configure Amazon S3 for website hosting"
 task :s3_init do
-  puts "## Configuring Amazon S3 bucket \"#{s3_bucket}\" for website hosting"
-  s3 = AWS::S3.new
-  puts "\n## Creating bucket"
-  bucket = s3.buckets.create s3_bucket
-  puts "\n## Enabling static website hosting"
-  bucket.configure_website do |cfg|
-    cfg.index_document_suffix = "index.html"
+  puts "## Configuring Amazon S3 bucket for static website hosting"
+
+  # Configure deployment setup in deploy.yml
+  deploy_configuration = configurator.read_config('deploy.yml')
+  deploy_defaults = configurator.read_config('defaults/deploy/s3.yml')
+  puts "Enter bucket name"
+  puts "(Should match you website host: 'example.com', 'mywebsite.net', etc)"
+  bucket_name = get_stdin("Bucket: ")
+  puts "(Optional) Enter region code"
+  puts "(Leave blank unless you know what you're doing)"
+  valid_regions = ["", "us-east-1", "us-west-1", "us-west-2", "eu-west-1", "ap-southeast-1", "ap-southeast-2", "ap-northeast-1", "sa-east-1"]
+  region = ask("Region (default: #{deploy_defaults[:region]}): ", valid_regions)
+  region = deploy_defaults[:region] if region.empty?
+  deploy_configuration[:deploy_method] = "aws"
+  deploy_configuration[:deploy_default] = "s3"
+  deploy_configuration[:bucket] = bucket_name
+  deploy_configuration[:region] = region
+  deploy_configuration = deploy_defaults.deep_merge(deploy_configuration)
+  puts deploy_configuration
+  configurator.write_config('deploy.yml', deploy_configuration)
+
+  # Create S3 bucket if necessary
+  s3 = AWS::S3.new(s3_endpoint: "s3-#{region}.amazonaws.com")
+  bucket = s3.buckets[bucket_name]
+  unless bucket.exists?
+    puts "\n## Creating new bucket"
+    bucket = s3.buckets.create bucket_name
+    puts "\n## Enabling static website hosting"
+    bucket.configure_website do |cfg|
+      cfg.index_document_suffix = "index.html"
+    end
+    puts "\n## Setting resource policies"
+    bucket.policy = AWS::S3::Policy.new do |p|
+      p.allow(:actions => ["s3:GetObject"], :resources => ["arn:aws:s3:::#{s3_bucket}/*"], :principals => ["*"])
+    end
   end
-  puts "\n## Enable read access to all resources"
-  bucket.policy = AWS::S3::Policy.new do |p|
-    p.allow(:actions => ["s3:GetObject"], :resources => ["arn:aws:s3:::#{s3_bucket}/*"], :principals => ["*"])
-  end
-  puts "\n## Website is hosted at http://#{s3_bucket}.s3-website-us-east-1.amazonaws.com"
+  puts "\n## Website is hosted at http://#{bucket_name}.s3-website-#{region}.amazonaws.com"
 end
 
 desc "Deploy public directory to Amazon S3"
 task :s3 do
+  Rake::Task["generate"].execute
   puts "## Checking AWS Credentials..."
   unless ENV['AWS_ACCESS_KEY_ID'] && ENV['AWS_SECRET_ACCESS_KEY']
     puts "\n## ERROR: Please setup up both ENV['AWS_ACCESS_KEY_ID'] and ENV['AWS_SECRET_ACCESS_KEY']"
     exit 1
   end
+  config = configurator.read_config('deploy.yml')
   puts "\n## Deploying website onto Amazon S3"
   s3 = AWS::S3.new
-  bucket = s3.buckets[s3_bucket]
-  puts "\n## Uploading public directory to bucket \"#{s3_bucket}\""
-  files = %x[find #{public_dir} -type f].split
+  bucket = s3.buckets[config[:bucket]]
+  puts "\n## Uploading public directory to bucket \"#{config[:bucket]}\""
+  files = %x[find #{config[:deploy_dir]} -type f].split
   files.map do |file_path|
     fd = File.open(file_path)
-    bucket_path = file_path.sub('public/', '')
+    bucket_path = file_path.sub("#{config[:deploy_dir]}/", '')
     obj = bucket.objects[bucket_path]
     # TODO: A fresh :generate task will always update resources, need a better
     # method for preventing full-site uploads on every deploy

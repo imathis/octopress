@@ -1,0 +1,9 @@
+---
+# ----------------------- #
+#   Amazon S3 Config      #
+#   deploy_default: s3    #
+# ----------------------- #
+
+# This will be configured for you when you run s3_init
+region:     "us-east-1"
+deploy_dir: "public"
