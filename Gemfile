@@ -16,6 +16,7 @@ group :development do
   gem 'tzinfo', '~> 0.3.35'
   gem 'stitch-rb'
   gem 'uglifier'
+  gem 'aws-sdk', '~> 1.8.3.1'
   
   # Guard related
   gem 'guard'
