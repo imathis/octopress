@@ -14,7 +14,7 @@ module Jekyll
     end
 
     def render_include(file, context)
-      tag = IncludeTag.new('', file, [])
+      tag = Tags::IncludeTag.new('', file, [])
       tag.render(context)
     end
   end
