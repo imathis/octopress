@@ -23,7 +23,7 @@ module Octopress
     #
     # Returns a Hash of the items in the configuration file (symbol keys)
     def read_config(path)
-      full_path = self.config_dir(path)
+      full_path = path.start_with?('/') ? path : self.config_dir(path)
       if File.exists? full_path
         begin
           configs = YAML.load(File.open(full_path))
@@ -58,16 +58,12 @@ module Octopress
     def read_configuration
       configs = {}
       Dir.glob(self.config_dir('defaults', '**', '*.yml')) do |filename|
-        file_yaml = YAML.load(File.read(filename))
-        unless file_yaml.nil?
-          configs = file_yaml.deep_merge(configs)
-        end
+        file_yaml = read_config(filename)
+        configs = file_yaml.deep_merge(configs)
       end
       Dir.glob(self.config_dir('*.yml')) do |filename|
-        file_yaml = YAML.load(File.read(filename))
-        unless file_yaml.nil?
-          configs = configs.deep_merge(file_yaml)
-        end
+        file_yaml = read_config(filename)
+        configs = configs.deep_merge(file_yaml)
       end
 
       configs.to_symbol_keys
