@@ -2,7 +2,7 @@ $:.unshift File.expand_path("lib", File.dirname(__FILE__)) # For use/testing whe
 require "octopress"
 require 'sass-globbing'
 
-config = Octopress::Configuration.new.read_configuration
+config = Octopress.configuration
 
 project_path = File.dirname(__FILE__)
 project_type = :stand_alone
