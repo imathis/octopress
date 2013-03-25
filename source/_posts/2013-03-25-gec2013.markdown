@@ -1,0 +1,21 @@
+---
+published: false
+author: Rafael Lima
+layout: post
+title: "Global Entrepreneurship Congress 2013 no Rio de Janeiro"
+date: 2013-03-25 15:00
+comments: true
+categories: 
+  - Tags
+  - Tags
+---
+
+Na semana passada aconteceu aqui no Rio de Janeiro o [Global Entrepreneurship Congress 2013](http://gec2013.com/), que é um congresso global realizado pela Endeavour em todo o mundo, onde empreendedores, investidores, pesquisadores, líderes e políticos trabalham em conjunto para ajudar a trazer idéias para a vida, impulsionar o crescimento econômico e ampliar o bem-estar humano.
+<!-- more -->
+
+Mais de 40 delegações de vários países do mundo estiveram presente participando ativamente do evento. Nós da HE:labs também estivemos presente e participamos de algumas atividades.
+
+O último dia foi mais marcante, pois foi a inauguração oficial do Startup Brasil, programa do governo brasileiro para acelerar o desenvolvimento de empresas nascentes de base tecnológica. O programa irá disponibilizar R$ 40 milhões e tem a meta de acelerar 150 startups de software e serviços de TI até 2014.
+
+Fique ligado, pois o edital será liberado ainda este mês.
+ 
