@@ -4,7 +4,7 @@
 # How To Use:
 #   1) Copy source file into your _plugins folder within your Jekyll project.
 #   2) Change modify the url variable in _config.yml to reflect your domain name.
-#   3) Run Jekyll: jekyll --server to re-generate your site.
+#   3) Run Jekyll: jekyll build to re-generate your site.
 #
 # Variables:
 #   * Change SITEMAP_FILE_NAME if you want your sitemap to be called something
@@ -270,11 +270,7 @@ module Jekyll
     #
     # Returns latest of two dates
     def greater_date(date1, date2)
-      if (date1 >= date2)
-        date1
-      else
-        date2
-      end
+      [date1, date2].max
     end
 
     # Is the page or post listed as something we want to exclude?

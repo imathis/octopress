@@ -114,7 +114,7 @@ task :generate do
   js_assets = Octopress::JSAssetsManager.new
   js_assets.compile
   system "compass compile --css-dir #{configuration[:source]}/stylesheets"
-  system "jekyll --no-server --no-auto #{'--no-future' if Octopress.env == 'production'}"
+  system "jekyll build #{"--drafts --trace" unless Octopress.env == 'production'}"
   unpublished = get_unpublished(Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*"), {env: Octopress.env, message: "\nThese posts were not generated:"})
   puts unpublished unless unpublished.empty?
   configurator.remove_configs_for_generation

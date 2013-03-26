@@ -8,7 +8,7 @@ require 'octopress'
 module Guard
   class Jekyll < Guard
 
-    VERSION = '0.0.1'
+    VERSION = '0.0.2'
 
     # Calls #run_all if the :all_on_start option is present.
     def start
@@ -20,7 +20,7 @@ module Guard
       if Watcher.match_files(self, Dir.glob('{,**/}*{,.*}').uniq).size > 0
         configurator = Octopress::Configuration.new
         configurator.write_configs_for_generation
-        system "jekyll#{' --no-future' if Octopress.env == 'production'}"
+        system "jekyll build #{"--drafts" unless Octopress.env == 'production'}"
         configurator.remove_configs_for_generation
       end
     end
@@ -28,7 +28,7 @@ module Guard
     def run_on_changes(_)
       configurator = Octopress::Configuration.new
       configurator.write_configs_for_generation
-      system "jekyll#{' --no-future' if Octopress.env == 'production'}"
+      system "jekyll build #{"--drafts" unless Octopress.env == 'production'}"
       configurator.remove_configs_for_generation
     end
   end
