@@ -7,6 +7,7 @@
 /.pygments-cache
 /_deploy
 /public
+/assets.old
 /sass.old
 /source.old
 /source/_stash
