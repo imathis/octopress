@@ -36,6 +36,7 @@
 #
 # Modified for Octopress by John W. Long
 #
+require File.expand_path('../../lib/colors.rb', __FILE__)
 require 'rexml/document'
 require 'fileutils'
 
@@ -193,7 +194,7 @@ module Jekyll
           changefreq.text = change_frequency
           url.add_element(changefreq)
         else
-          puts "ERROR: Invalid Change Frequency In #{page_or_post.name}"
+          $stderr.puts "ERROR: Invalid Change Frequency In #{page_or_post.name}".red
         end
       end
 
@@ -204,7 +205,7 @@ module Jekyll
           priority.text = page_or_post.data[PRIORITY_CUSTOM_VARIABLE_NAME]
           url.add_element(priority)
         else
-          puts "ERROR: Invalid Priority In #{page_or_post.name}"
+          $stderr.puts "ERROR: Invalid Priority In #{page_or_post.name}".red
         end
       end
 
