@@ -1,6 +1,19 @@
 require 'yaml'
 
 module Octopress
+  def self.configurator(root_dir = Octopress::Configuration::DEFAULT_CONFIG_DIR)
+    @configurator ||= Configuration.new(root_dir)
+  end
+
+  def self.configuration
+    @configuration ||= self.configurator.read_configuration
+  end
+
+  def self.clear_config!
+    @configurator = nil
+    @configuration = nil
+  end
+
   class Configuration
     DEFAULT_CONFIG_DIR = File.join(File.dirname(__FILE__), '../', '../' '_config')
     attr_accessor :config_directory
@@ -91,10 +104,9 @@ module Octopress
     #
     # Returns a Hash of the items which were written to the Jekyll configuration file
     def write_configs_for_generation
-      config = self.read_configuration
       jekyll_configs = {}
       File.open("_config.yml", "w") do |f|
-        jekyll_configs = config.to_string_keys.to_yaml :canonical => false
+        jekyll_configs = Octopress.configuration.to_string_keys.to_yaml :canonical => false
         f.write(jekyll_configs)
       end
 
