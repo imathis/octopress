@@ -15,7 +15,7 @@ module Octopress
       @js_assets_path = File.expand_path("../../assets/javascripts", File.dirname(__FILE__))
       
       # Read js dependencies from require_js.yml configuration
-      @dependencies = @configuration[:require_js][:dependencies].collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
+      @globals = @configuration[:require_js][:globals].collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
       @modules = @configuration[:require_js][:modules].collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
 
       @template_path = File.expand_path("../../#{@configuration[:source]}", File.dirname(__FILE__))
@@ -24,7 +24,7 @@ module Octopress
 
 
     def get_fingerprint
-      Digest::MD5.hexdigest(@modules.concat(@dependencies).uniq.map! do |path|
+      Digest::MD5.hexdigest(@modules.concat(@globals).uniq.map! do |path|
         "#{File.mtime(path).to_i}"
       end.join)
     end
@@ -43,8 +43,8 @@ module Octopress
       if File.exists?(file) and File.open(file) {|f| f.readline} =~ /#{@fingerprint}/
         false
       else
-        modules = @modules.delete_if { |f| @dependencies.include? f }
-        js = Stitch::Package.new(:dependencies => @dependencies, :paths => modules).compile
+        modules = @modules.delete_if { |f| @globals.include? f }
+        js = Stitch::Package.new(:dependencies => @globals, :paths => modules).compile
         js = "/* Octopress fingerprint: #{@fingerprint} */\n" + js
         js = Uglifier.new.compile js if Octopress.env == 'production'
         write_path = "#{@template_path}/#{@build_path}"

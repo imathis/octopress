@@ -4,11 +4,11 @@ var octopress = (function(){
       var mainNav = $('ul.main-navigation, ul[role=main-navigation]').before('<fieldset class="mobile-nav">')
       var mobileNav = $('fieldset.mobile-nav').append('<select>');
       mobileNav.find('select').append('<option value="">Navigate&hellip;</option>');
-      var addOption = function() {
+      var addOption = function(i, option) {
         mobileNav.find('select').append('<option value="' + this.href + '">&raquo; ' + $(this).text() + '</option>');
       }
-      mainNav.find('a').each(i, addOption);
-      $('ul.subscription a').each(i, addOption);
+      mainNav.find('a').each(addOption);
+      $('ul.subscription a').each(addOption);
       mobileNav.find('select').bind('change', function(event) {
         if (event.target.value) { window.location.href = event.target.value; }
       });
@@ -61,7 +61,7 @@ var octopress = (function(){
     , flashVideoFallback: function (){
       var flashplayerlocation = "/assets/jwplayer/player.swf",
           flashplayerskin = "/assets/jwplayer/glow/glow.xml";
-      $('video').each(i, function(video){
+      $('video').each(function(i, video){
         video = $(video);
         if (!Modernizr.video.h264 && swfobject.getFlashPlayerVersion() || window.location.hash.indexOf("flash-test") !== -1){
           video.children('source[src$=mp4]').first().map(i, function(source){
@@ -81,18 +81,12 @@ var octopress = (function(){
     }
 
     , wrapFlashVideos: function () {
-      $('object').each(i, function(object) {
-        object = $(object);
-        if ( $('param[name=movie]', object).length ) {
-          var wrapper = object.before('<div class="flash-video"><div>').previous();
-          $(wrapper).children().append(object);
+      $('object').each(function(i, object) {
+        if( $(object).find('param[name=movie]').length ){
+          $(object).wrap('<div class="flash-video">')
         }
       });
-      $('iframe[src*=vimeo],iframe[src*=youtube]').each(i, function(iframe) {
-        iframe = $(iframe);
-        var wrapper = iframe.before('<div class="flash-video"><div>').previous();
-        $(wrapper).children().append(iframe);
-      });
+      $('iframe[src*=vimeo],iframe[src*=youtube]').wrap('<div class="flash-video">')
     }
   }
 })();
@@ -101,7 +95,7 @@ $(document).ready(function() {
   octopress.wrapFlashVideos();
   octopress.testFeature(['maskImage', 'transform']);
   octopress.flashVideoFallback();
-  octopress.addCodeLineNumbers();
   octopress.addMobileNav();
   octopress.addSidebarToggler();
 });
+
