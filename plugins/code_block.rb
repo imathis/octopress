@@ -54,6 +54,8 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       @title = nil
       @caption = nil
+      @linkTitle = nil
+      @linkUrl = nil
       @filetype = nil
       @highlight = true
       if markup =~ /\s*lang:(\w+)/i
@@ -62,7 +64,9 @@ module Jekyll
       end
       if markup =~ CaptionUrlTitle
         @file = $1
-        @caption = "<figcaption><span>#{$1}</span><a href='#{$2}'>#{$3 || 'link'}</a></figcaption>"
+        @linkUrl = $2
+        @linkTitle = $3
+        @caption = "<figcaption><span>#{$1}</span></figcaption>"
       elsif markup =~ Caption
         @file = $1
         @caption = "<figcaption><span>#{$1}</span></figcaption>\n"
@@ -79,10 +83,16 @@ module Jekyll
       source = "<figure class='code'>"
       source += @caption if @caption
       if @filetype
-        source += " #{highlight(code, @filetype)}</figure>"
+        source += " #{highlight(code, @filetype)}"
       else
-        source += "#{tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'))}</figure>"
+        source += "#{tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'))}"
       end
+      if !@linkTitle.nil?
+        source += "<figcaption class='figfooter'><a href='#{@linkUrl}'>#{@linkTitle}</a></figcaption>"
+      elsif !@linkUrl.nil?
+        source += "<figcaption class='figfooter'><a href='#{@linkUrl}'>link</a></figcaption>"
+      end
+      source += "</figure>"
       source = safe_wrap(source)
       source = context['pygments_prefix'] + source if context['pygments_prefix']
       source = source + context['pygments_suffix'] if context['pygments_suffix']
