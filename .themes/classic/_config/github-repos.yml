@@ -6,6 +6,7 @@
 # Github repositories
 github_repos:
   user:
+  show_profile_link: true
 
   # Automatically select repositories based on:
   count: 4

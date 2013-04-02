@@ -1,9 +1,9 @@
-{% if site.github_user and site.github_repo_count > 0 %}
+{% if site.github_repos.user and site.github_repos.count > 0 %}
 <section>
   <h1>On GitHub</h1>
-  <div id="gh_repos" data-user="{{site.github_user}}" data-count="{{site.github_repo_count}}" data-skip="{{site.github_skip_forks}}" data-repos="{{site.github_repos | join:, }}"></div>
-  {% if site.github_show_profile_link %}
-  <a class="github-follow" href="https://github.com/{{site.github_user}}">Follow @{{site.github_user}}</a>
+  <div id="gh_repos" data-user="{{site.github_repos.user}}" data-count="{{site.github_repos.count}}" data-skip="{{site.github_repos.skip_forks}}" data-repos="{{site.github_repos | join:, }}"></div>
+  {% if site.github_repos.show_profile_link %}
+  <a class="github-follow" href="https://github.com/{{site.github_repos.user}}">Follow @{{site.github_repos.user}}</a>
   {% endif %}
 </section>
 {% endif %}

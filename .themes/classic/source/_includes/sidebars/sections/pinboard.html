@@ -1,15 +1,15 @@
-{% if site.pinboard_user %}
+{% if site.pinboard.user %}
 <section>
   <h1>My Pinboard</h1>
   <ul id="pinboard_linkroll">Fetching linkroll...</ul>
-  <p><a href="http://pinboard.in/u:{{ site.pinboard_user }}">My Pinboard Bookmarks &raquo;</a></p>
+  <p><a href="http://pinboard.in/u:{{ site.pinboard.user }}">My Pinboard Bookmarks &raquo;</a></p>
 </section>
 <script type="text/javascript">
   $(document).ready(function(){
     pinboard.getFeed({
         target: 'pinboard_linkroll' //id target for pinboard list
-      , user: "{{ site.pinboard_user }}"
-      , count: {{ site.pinboard_count }}
+      , user: "{{ site.pinboard.user }}"
+      , count: {{ site.pinboard.count }}
     });
   });
 </script>
