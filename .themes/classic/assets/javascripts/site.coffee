@@ -5,7 +5,7 @@ github    = require('github')
 
 Site =
   init: ->
-    adn.init 'imathis', { count: 3 }, (posts)->
-      console.log posts
+    # adn.init 'imathis', { count: 3 }, (posts)->
+    #   console.log posts
 
 module.exports = Site
