@@ -20,6 +20,7 @@
 # will output a figcaption with the title: Example 2 (test.js)
 #
 
+require File.expand_path('../../lib/colors.rb', __FILE__)
 require './plugins/pygments_code'
 require 'pathname'
 
@@ -62,21 +63,21 @@ module Jekyll
 
       unless @title_old.nil?
         @options[:title] ||= @title_old
-        puts "### ------------ WARNING ------------ ###"
-        puts "This include_code syntax is deprecated "
-        puts "Correct syntax: path/to/file.ext [title]"
-        puts "Update include for #{filepath}"
-        puts "### --------------------------------- ###"
+        puts "### ------------ WARNING ------------ ###".yellow
+        puts "This include_code syntax is deprecated ".yellow
+        puts "Correct syntax: path/to/file.ext [title]".yellow
+        puts "Update include for #{filepath}".yellow
+        puts "### --------------------------------- ###".yellow
       end
 
       if File.symlink?(code_path)
-        puts "Code directory '#{code_path}' cannot be a symlink"
-        return "Code directory '#{code_path}' cannot be a symlink"
+        puts "Code directory '#{code_path}' cannot be a symlink".yellow
+        return "Code directory '#{code_path}' cannot be a symlink".yellow
       end
 
       unless filepath.file?
-        puts "File #{filepath} could not be found"
-        return "File #{filepath} could not be found"
+        puts "File #{filepath} could not be found".yellow
+        return "File #{filepath} could not be found".yellow
       end
 
       Dir.chdir(code_path) do

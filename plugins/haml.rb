@@ -1,3 +1,5 @@
+require File.expand_path('../../lib/colors.rb', __FILE__)
+
 module Jekyll
   require 'haml'
   class HamlConverter < Converter
@@ -17,7 +19,7 @@ module Jekyll
         engine = Haml::Engine.new(content)
         engine.render
       rescue StandardError => e
-          puts "!!! HAML Error: " + e.message
+        $stderr.puts ("!!! HAML Error: " + e.message).red
       end
     end
   end
