@@ -100,7 +100,7 @@ module HighlightCode
 
   def number_lines (start, count, marks)
     start ||= 1
-    lines = "<td class='line-numbers' aria-hidden='true'><pre>"
+    lines = "<td class='line-numbers'><pre>"
     count.times do |index|
       classes = 'line-number'
       if marks.include? index + start
@@ -108,7 +108,7 @@ module HighlightCode
         classes += ' start' unless marks.include? index - 1 + start
         classes += ' end' unless marks.include? index + 1 + start
       end
-      lines += "<div data-line='#{index + start}' class='#{classes}'></div>"
+      lines += "<div class='#{classes}'>#{index + start}</div>"
     end
     lines += "</pre></td>"
   end
