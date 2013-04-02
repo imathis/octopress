@@ -6,19 +6,8 @@
 # Github repositories
 github_repos:
   user:
+  show_profile_link: true
 
   # Automatically select repositories based on:
   count: 4
   skip_forks: true # Don't show repos you've forked from others
-  sort_by_watchers: true # Show your top watched projects, set to false to sort by last update
-
-
-  # Instead of fetching automatically, specify a list of repositories to include
-  # Setting repos will ignore the automatic settings above
-  repos:
-
-  # Example:
-  # user: imathis
-  # repos:
-  #   - octopress
-  #   - hsl-color-picker

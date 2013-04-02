@@ -22,8 +22,7 @@ redcarpet:
     - superscript
     - smart
 pygments:     false           # Jekyll's default Python Pygments have been replaced by pygments.rb.
-include:
-  - .htaccess
+                              # Set to true to use Albino + Python Pygments
 
 env:            production    # affects asset compilation
 post_index_dir: source        # directory for your posts index page (if you put your index in source/blog/index.html, set this to 'source/blog')
