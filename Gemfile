@@ -28,7 +28,7 @@ group :development do
 end
 
 group :test do
-  gem "minitest", "~> 4.6"
+  gem "rspec", "~> 2.13.0"
 end
 
 gem 'sinatra', '~> 1.3.3'

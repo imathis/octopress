@@ -2,18 +2,15 @@ $:.unshift File.expand_path(File.dirname(__FILE__)) # For use/testing when no ge
 
 require "octopress/core_ext"
 require "octopress/configuration"
+require "octopress/inquirable_string"
 require "octopress/js_asset_manager"
 
 module Octopress
-  class InquirableString < String
-    def method_missing(name, *args, &block)
-      if(name =~ /^.*\?$/)
-        val = name.to_s.sub(/\?$/, '')
-        return self == val
-      else
-        super
-      end
-    end
+  # Static: Get absolute file path of the octopress lib directory
+  #
+  # Returns the absolute path to the octopress lib directory
+  def self.lib_root
+    File.dirname(__FILE__)
   end
 
   # Static: Fetches the Octopress environment

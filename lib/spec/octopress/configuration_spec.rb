@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require_relative '../../octopress'
+require "spec_helper"
 
 describe Octopress do
   describe ".configurator" do
@@ -16,7 +15,7 @@ describe Octopress do
     it "should accept a path pointing to a config directory" do
       Octopress.configurator(File.join(File.dirname(__FILE__), '../', 'fixtures', 'env'))
 
-      Octopress.env.must_equal 'config_specified_environment'
+      Octopress.env.should eq('config_specified_environment')
     end
   end
 
@@ -32,12 +31,10 @@ describe Octopress do
       ENV['OCTOPRESS_ENV'] = @old_env
     end
 
-    subject do
-      Octopress.configuration
-    end
+    let(:configuration) { Octopress.configuration }
 
     it "should provide access to the specified configuration" do
-      subject[:env].must_equal 'config_specified_environment'
+      configuration[:env].should eq('config_specified_environment')
     end
   end
 end
@@ -48,10 +45,7 @@ describe Octopress::Configuration do
       before do
         @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'no_override'))
       end
-
-      subject do
-        @octo_config.read_configuration
-      end
+      let(:configuration) { @octo_config.read_configuration }
 
       it "returns the default config with keys as symbols" do
         expected_config = { :url           => "http://yoursite.com",
@@ -60,7 +54,7 @@ describe Octopress::Configuration do
                             :author        => "Your Name",
                             :simple_search => "http://google.com/search",
                             :description   => nil }
-        subject.must_equal expected_config
+        configuration.should eq(expected_config)
       end
     end
 
@@ -68,10 +62,7 @@ describe Octopress::Configuration do
       before do
         @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'override'))
       end
-
-      subject do
-        @octo_config.read_configuration
-      end
+      let(:configuration) { @octo_config.read_configuration }
 
       it "returns the default config with keys as symbols" do
         expected_config = { :url           => "http://myownsite.com",
@@ -80,7 +71,7 @@ describe Octopress::Configuration do
                             :author        => "John Doe",
                             :simple_search => "http://google.com/search",
                             :description   => nil }
-        subject.must_equal expected_config
+        configuration.should eq(expected_config)
       end
     end
   end

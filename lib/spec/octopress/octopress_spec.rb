@@ -1,16 +1,14 @@
-require 'minitest/autorun'
-require_relative '../../octopress'
+require "spec_helper"
 
 describe Octopress do
   describe '#env' do
-    describe "when ENV['OCTOPRESS_ENV'] is specified" do
+    context "when ENV['OCTOPRESS_ENV'] is specified" do
+      let (:old_value) { ENV['OCTOPRESS_ENV'] }
       before do
-        @old_value = ENV['OCTOPRESS_ENV']
         ENV['OCTOPRESS_ENV'] = 'some_environment'
       end
-
       after do
-        ENV['OCTOPRESS_ENV'] = @old_value
+        ENV['OCTOPRESS_ENV'] = old_value
       end
 
       subject do
@@ -18,7 +16,7 @@ describe Octopress do
       end
 
       it "returns the environment as something that quacks like a string" do
-        subject.must_equal 'some_environment'
+        should eq('some_environment')
       end
 
       # For the InquirableString functionality...
@@ -28,7 +26,7 @@ describe Octopress do
         end
 
         it "returns true when the environment is set to 'some_environment'" do
-          subject.must_equal true
+          should be_true
         end
       end
 
@@ -38,7 +36,7 @@ describe Octopress do
         end
 
         it "returns false when the environment is set to 'some_environment'" do
-          subject.must_equal false
+          should be_false
         end
       end
     end
@@ -60,7 +58,7 @@ describe Octopress do
       end
 
       it "returns the environment as something that quacks like a string" do
-        subject.must_equal 'config_specified_environment'
+        should eq('config_specified_environment')
       end
 
       # For the InquirableString functionality...
@@ -70,7 +68,7 @@ describe Octopress do
         end
 
         it "returns true when the environment is set to 'config_specified_environment'" do
-          subject.must_equal true
+          should be_true
         end
       end
 
@@ -80,7 +78,7 @@ describe Octopress do
         end
 
         it "returns false when the environment is set to 'config_specified_environment'" do
-          subject.must_equal false
+          should be_false
         end
       end
     end
@@ -96,9 +94,9 @@ describe Octopress do
       end
 
       it "returns the initial environment value, then after it's changed, returns the new one" do
-        Octopress.env.must_equal 'value_a'
+        Octopress.env.should eq('value_a')
         ENV['OCTOPRESS_ENV'] = 'value_b'
-        Octopress.env.must_equal 'value_b'
+        Octopress.env.should eq('value_b')
       end
     end
   end
