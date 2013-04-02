@@ -2,6 +2,7 @@ $:.unshift File.expand_path(File.dirname(__FILE__)) # For use/testing when no ge
 
 require "octopress/core_ext"
 require "octopress/configuration"
+require "octopress/dependency_installer"
 require "octopress/inquirable_string"
 require "octopress/js_asset_manager"
 
@@ -11,6 +12,13 @@ module Octopress
   # Returns the absolute path to the octopress lib directory
   def self.lib_root
     File.dirname(__FILE__)
+  end
+
+  # Static: Get absolute file path of the main octopress installation
+  #
+  # Returns the absolute path of the main octopress installation
+  def self.root
+    File.dirname(self.lib_root)
   end
 
   # Static: Fetches the Octopress environment
