@@ -7,8 +7,8 @@ var octopress = (function(){
       var addOption = function() {
         mobileNav.find('select').append('<option value="' + this.href + '">&raquo; ' + $(this).text() + '</option>');
       }
-      mainNav.find('a').each(i, addOption);
-      $('ul.subscription a').each(i, addOption);
+      mainNav.find('a').each(addOption);
+      $('ul.subscription a').each(addOption);
       mobileNav.find('select').bind('change', function(event) {
         if (event.target.value) { window.location.href = event.target.value; }
       });
@@ -38,7 +38,7 @@ var octopress = (function(){
       }
       if (sections.length >= 3){ $('aside.sidebar').addClass('thirds'); }
     }
-    
+
     , testFeature: function (features) {
       getTestClasses = function (tests) {
         classes = '';
@@ -61,10 +61,10 @@ var octopress = (function(){
     , flashVideoFallback: function (){
       var flashplayerlocation = "/assets/jwplayer/player.swf",
           flashplayerskin = "/assets/jwplayer/glow/glow.xml";
-      $('video').each(i, function(video){
+      $('video').each(function(i, video){
         video = $(video);
         if (!Modernizr.video.h264 && swfobject.getFlashPlayerVersion() || window.location.hash.indexOf("flash-test") !== -1){
-          video.children('source[src$=mp4]').first().map(i, function(source){
+          video.children('source[src$=mp4]').first().map(function(source, i){
             var src = $(source).attr('src'),
                 id = 'video_'+Math.round(1 + Math.random()*(100000)),
                 width = video.attr('width'),
@@ -81,14 +81,14 @@ var octopress = (function(){
     }
 
     , wrapFlashVideos: function () {
-      $('object').each(i, function(object) {
+      $('object').each(function(i, object) {
         object = $(object);
         if ( $('param[name=movie]', object).length ) {
           var wrapper = object.before('<div class="flash-video"><div>').previous();
           $(wrapper).children().append(object);
         }
       });
-      $('iframe[src*=vimeo],iframe[src*=youtube]').each(i, function(iframe) {
+      $('iframe[src*=vimeo],iframe[src*=youtube]').each(function(i, iframe) {
         iframe = $(iframe);
         var wrapper = iframe.before('<div class="flash-video"><div>').previous();
         $(wrapper).children().append(iframe);
