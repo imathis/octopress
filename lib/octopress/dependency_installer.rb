@@ -117,7 +117,7 @@ module Octopress
 
       @plugins
     end
-    
+
     private
     # Private: Copy file to Octopress installation
     #
@@ -130,7 +130,7 @@ module Octopress
       destination = File.join(Octopress.root, file)
       FileUtils.cp_r source, destination
     end
-    
+
     # Private: Copy javascript files to local Octopress installation
     #
     # plugin - plugin name
@@ -146,11 +146,11 @@ module Octopress
         copy_file(plugin, File.join("assets", "javascripts", file))
       end
     end
-    
+
     # Private: Copy javascript files to local Octopress installation
     #
     # plugin - plugin name
-    # files - the filenames of the javascript files for this plugin relative to
+    # files - the filenames of the stylesheet files for this plugin relative to
     #         the stylesheets dir in the plugin's install dir
     #
     # Returns nothing
@@ -159,6 +159,14 @@ module Octopress
         copy_file(plugin, File.join("assets", "stylesheets", "custom", file))
       end
     end
+
+    # Private: Copy javascript files to local Octopress installation
+    #
+    # plugin - plugin name
+    # files - the filenames of the Jekyll plugin files for this plugin relative
+    #         to the plugin dir in the plugin's install dir
+    #
+    # Returns nothing
     def copy_plugins_files(plugin, files)
       files.each do |file|
         copy_file(plugin, File.join(Octopress.configuration[:plugins], file))
