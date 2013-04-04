@@ -72,10 +72,10 @@ function addCodeLineNumbers() {
 function flashVideoFallback(){
   var flashplayerlocation = "/assets/jwplayer/player.swf",
       flashplayerskin = "/assets/jwplayer/glow/glow.xml";
-  $('video').each(function(video){
+  $('video').each(function(i, video){
     video = $(video);
     if (!Modernizr.video.h264 && swfobject.getFlashPlayerVersion() || window.location.hash.indexOf("flash-test") !== -1){
-      video.children('source[src$=mp4]').first().map(function(i, source){
+      video.children('source[src$=mp4]').first().map(i, function(source){
         var src = $(source).attr('src'),
             id = 'video_'+Math.round(1 + Math.random()*(100000)),
             width = video.attr('width'),
@@ -92,18 +92,12 @@ function flashVideoFallback(){
 }
 
 function wrapFlashVideos() {
-  $('object').each(function(object) {
-    object = $(object);
-    if ( $('param[name=movie]', object).length ) {
-      var wrapper = object.before('<div class="flash-video"><div>').previous();
-      $(wrapper).children().append(object);
+  $('object').each(function(i, object) {
+    if( $(object).find('param[name=movie]').length ){
+      $(object).wrap('<div class="flash-video">')
     }
   });
-  $('iframe[src*=vimeo],iframe[src*=youtube]').each(function(iframe) {
-    iframe = $(iframe);
-    var wrapper = iframe.before('<div class="flash-video"><div>').previous();
-    $(wrapper).children().append(iframe);
-  });
+  $('iframe[src*=vimeo],iframe[src*=youtube]').wrap('<div class="flash-video">')
 }
 
 function renderDeliciousLinks(items) {
