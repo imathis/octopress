@@ -10,7 +10,7 @@ categories:
   - rafael lima
 ---
 
-As Startups brasileiras vêm crescendo cada vez mais e o Rio de Janeiro concentra boa parte dos principais negócios do ramo como investidores e aceleradorada entre outros. Cinco das nove aceleradoras contempladas para o Programa Start-Up Brasil do Governo Federal estão localizadas no Rio.
+As Startups brasileiras vêm crescendo cada vez mais e o Rio de Janeiro concentra boa parte dos principais negócios do ramo como investidores e aceleradoradas, entre outros. Cinco das nove aceleradoras contempladas para o Programa Start-Up Brasil do Governo Federal estão localizadas no Rio.
 
 O SEBRAE RJ e a StartupBase estão organizando um evento para aproximar as Startups, aceleradoras, investidores e os fatores importantes para as associações. E para debater sobre oportunidades, investimento e sucesso, estarão presentes diversos participantes. Dentre eles, o Rafael Lima sócio e mentor estratégico da [HE:labs](http://www.helabs.com.br), que se apresentará na noite do dia 09/04, no debate sobre "o ecossistema de startups do Rio".
 
