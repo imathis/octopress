@@ -45,6 +45,8 @@ task :install_configs, :theme do |t, args|
   mkdir_p "_config"
   if File.directory? ".themes/#{theme}/_config"
     cp_r ".themes/#{theme}/_config/.", "_config/defaults", :remove_destination=>true
+  end
+  unless File.exist?('_config/site.yml')
     user_config_site = <<-EOF
 ---
 # --------------------------- #
@@ -53,7 +55,8 @@ task :install_configs, :theme do |t, args|
 
 EOF
     File.open('_config/site.yml', 'w') { |f| f.write user_config_site }
-
+  end
+  unless File.exist?('_config/deploy.yml')
     user_config_deploy = <<-EOF
 ---
 # -------------------------- #
@@ -268,8 +271,14 @@ desc "Update theme source and style"
 task :update, :theme do |t, args|
   theme = args.theme || 'classic'
   Rake::Task[:update_source].invoke(theme)
+  Rake::Task[:update_configs].invoke(theme)
   Rake::Task[:update_stylesheets].invoke(theme)
   Rake::Task[:update_javascripts].invoke(theme)
+end
+
+task :update_configs, :theme do |t, args|
+  theme = args.theme || 'classic'
+  Rake::Task["install_configs"].invoke(theme)
 end
 
 desc "Move stylesheets to stylesheets.old, install stylesheets theme updates, replace stylesheets/custom with stylesheets.old/custom"
