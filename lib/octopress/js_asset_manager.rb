@@ -10,15 +10,23 @@ module Octopress
     attr_reader :config
 
     def initialize
-      configurator   = Octopress::Configuration.new
-      @configuration  = configurator.read_configuration
       @js_assets_path = File.expand_path("../../assets/javascripts", File.dirname(__FILE__))
       
-      # Read js dependencies from require_js.yml configuration
-      @globals = @configuration[:require_js][:globals].collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
-      @modules = @configuration[:require_js][:modules].collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
+      unless Octopress.configuration.has_key? :require_js
+        abort "No :require_js key in configuration. Cannot proceed.".red
+      end
+      unless Octopress.configuration[:require_js].has_key? :dependencies
+        abort "No :dependencies key in :require_js configuration. Cannot proceed.".red
+      end
+      unless Octopress.configuration[:require_js].has_key? :modules
+        abort "No :modules key in :require_js configuration. Cannot proceed.".red
+      end
 
-      @template_path = File.expand_path("../../#{@configuration[:source]}", File.dirname(__FILE__))
+      # Read js dependencies from require_js.yml configuration
+      @globals = Octopress.configuration[:require_js][:dependencies].collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
+      @modules = Octopress.configuration[:require_js][:modules].collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
+
+      @template_path = File.expand_path("../../#{Octopress.configuration[:source]}", File.dirname(__FILE__))
       @build_path = "/javascripts/build"
     end
 

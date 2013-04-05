@@ -18,18 +18,16 @@ module Guard
     # Call #run_on_change for all files which match this guard.
     def run_all
       if Watcher.match_files(self, Dir.glob('{,**/}*{,.*}').uniq).size > 0
-        configurator = Octopress::Configuration.new
-        configurator.write_configs_for_generation
+        Octopress.configurator.write_configs_for_generation
         system "jekyll build #{"--drafts" unless Octopress.env == 'production'}"
-        configurator.remove_configs_for_generation
+        Octopress.configurator.remove_configs_for_generation
       end
     end
     
     def run_on_changes(_)
-      configurator = Octopress::Configuration.new
-      configurator.write_configs_for_generation
+      Octopress.configurator.write_configs_for_generation
       system "jekyll build #{"--drafts" unless Octopress.env == 'production'}"
-      configurator.remove_configs_for_generation
+      Octopress.configurator.remove_configs_for_generation
     end
   end
 end
