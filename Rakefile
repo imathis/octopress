@@ -4,7 +4,6 @@ require 'rubygems'
 require 'bundler/setup'
 require 'yaml'
 require 'octopress'
-require 'octopress/js_asset_manager'
 require 'rake/testtask'
 require 'colors'
 require 'open3'
@@ -17,7 +16,7 @@ require 'open3'
 ###   Please do not change anything below if you want help --
 ###   otherwise, you're on your own ;-)
 
-configurator = Octopress.configurator
+configurator   = Octopress.configurator
 configuration  = Octopress.configuration
 full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
 
@@ -161,7 +160,7 @@ task :preview do
   [guardPid, rackupPid].each { |pid| Process.wait(pid) }
 end
 
-# usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
+# usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (will inquire for a title)
 desc "Begin a new post in #{configuration[:source]}/#{configuration[:posts_dir]}"
 task :new_post, :title do |t, args|
   title = get_arg(args, :title, "Enter a title for your post: ")
