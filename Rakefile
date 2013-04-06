@@ -2,9 +2,6 @@ $:.unshift File.expand_path("lib", File.dirname(__FILE__)) # For use/testing whe
 
 require "rubygems"
 require "bundler/setup"
-require "stringex"
-require 'time'
-require 'tzinfo'
 require 'rake/minify'
 require 'yaml'
 require 'octopress'
@@ -127,7 +124,13 @@ end
 desc "Begin a new post in #{configuration[:source]}/#{configuration[:posts_dir]}"
 task :new_post, :title do |t, args|
   title = get_arg(args, :title, "Enter a title for your post: ")
-  create_post(configuration, Time.now, title)
+  Octopress::Templates.post(configuration, Time.now, title) do |filename|
+    overwrite = false
+    if File.exist?(filename)
+      overwrite = ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    end
+    overwrite
+  end
 end
 
 # usage rake dated_post['yyyy-mm-dd hh:mm:ss',my-post] or rake dated_post['yyyy-mm-dd hh:mm:ss','my post post'] or rake dated_post (will inquire for a title and date/time)
@@ -135,7 +138,13 @@ desc "Begin a back- or forward-dated post in #{configuration[:source]}/#{configu
 task :dated_post, :posted_at, :title do |t, args|
   title = get_arg(args, :title, "Enter a title for your post: ")
   time = get_arg(args, :posted_at, "Enter a date/time for your post (YYYY-MM-DD HH:MM:SS): ")
-  create_post(configuration, Time.parse(time), title)
+  Octopress::Templates.post(configuration, Time.parse(time), title) do |filename|
+    overwrite = false
+    if File.exist?(filename)
+      overwrite = ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    end
+    overwrite
+  end
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
@@ -162,7 +171,7 @@ task :new_page, :filename do |t, args|
       abort("rake aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
     end
     puts "Creating new page: #{file}"
-    time = time_in_timezone(Time.now, configuration[:timezone])
+    time = Octopress::Utilities.time_in_timezone(Time.now, configuration[:timezone])
     open(file, 'w') do |page|
       page.puts "---"
       page.puts "layout: page"
@@ -480,48 +489,6 @@ def get_arg(args, name, prompt)
     val = get_stdin(prompt)
   end
   return val
-end
-
-def time_in_timezone(time, timezone)
-  unless timezone.nil? || timezone.empty? || timezone == 'local'
-    tz = TZInfo::Timezone.get(timezone) #setup Timezone object
-    adjusted_time = tz.utc_to_local(time.utc) #time object without correct offset
-    #time object with correct offset
-    time = Time.new(
-      adjusted_time.year,
-      adjusted_time.month,
-      adjusted_time.day,
-      adjusted_time.hour,
-      adjusted_time.min,
-      adjusted_time.sec,
-      tz.period_for_utc(time.utc).utc_total_offset())
-    #convert offset to utc instead of just ±0 if that was specified
-    if ['utc','zulu','universal','uct','gmt','gmt0','gmt+0','gmt-0'].include? timezone.downcase
-      time = time.utc
-    end
-  end
-  time
-end
-
-def create_post(configuration, time, title)
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(configuration[:source])
-  time = time_in_timezone(time, configuration[:timezone])
-  mkdir_p "#{configuration[:source]}/#{configuration[:posts_dir]}"
-  filename = "#{configuration[:source]}/#{configuration[:posts_dir]}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{configuration[:new_post_ext]}"
-  if File.exist?(filename)
-    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
-  end
-  puts "Creating new post: #{filename}"
-  open(filename, 'w') do |post|
-    post.puts "---"
-    post.puts "layout: post"
-    post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-    post.puts "date: #{time.iso8601}"
-    post.puts "comments: true"
-    post.puts "external-url: "
-    post.puts "categories: "
-    post.puts "---"
-  end
 end
 
 desc "list tasks"

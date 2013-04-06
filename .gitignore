@@ -17,3 +17,4 @@ vendor
 node_modules
 /.preview-mode
 /_config.yml
+/lib/tmp/
