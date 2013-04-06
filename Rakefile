@@ -2,12 +2,8 @@ $:.unshift File.expand_path("lib", File.dirname(__FILE__)) # For use/testing whe
 
 require 'rubygems'
 require 'bundler/setup'
-require 'stringex'
-require 'time'
-require 'tzinfo'
 require 'yaml'
 require 'octopress'
-require 'octopress/js_asset_manager'
 require 'rake/testtask'
 require 'colors'
 require 'open3'
@@ -20,7 +16,7 @@ require 'open3'
 ###   Please do not change anything below if you want help --
 ###   otherwise, you're on your own ;-)
 
-configurator = Octopress.configurator
+configurator   = Octopress.configurator
 configuration  = Octopress.configuration
 full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
 
@@ -126,11 +122,7 @@ end
 # usage rake generate_only[my-post]
 desc "Generate only the specified post (much faster)"
 task :generate_only, :filename do |t, args|
-  if args.filename
-    filename = args.filename
-  else
-    filename = get_stdin("Enter a post file name: ")
-  end
+  filename = get_arg(args, :filename, "Enter a post file name: ")
   puts "## Stashing other posts"
   Rake::Task["isolate"].invoke(filename)
   Rake::Task["generate"].execute
@@ -168,31 +160,30 @@ task :preview do
   [guardPid, rackupPid].each { |pid| Process.wait(pid) }
 end
 
-# usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
+# usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (will inquire for a title)
 desc "Begin a new post in #{configuration[:source]}/#{configuration[:posts_dir]}"
 task :new_post, :title do |t, args|
-  if args.title
-    title = args.title
-  else
-    title = get_stdin("Enter a title for your post: ")
+  title = get_arg(args, :title, "Enter a title for your post: ")
+  Octopress::Templates.post(configuration, Time.now, title) do |filename|
+    overwrite = false
+    if File.exist?(filename)
+      overwrite = ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    end
+    overwrite
   end
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(configuration[:source])
-  time = now_in_timezone(configuration[:timezone])
-  mkdir_p "#{configuration[:source]}/#{configuration[:posts_dir]}"
-  filename = "#{configuration[:source]}/#{configuration[:posts_dir]}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{configuration[:new_post_ext]}"
-  if File.exist?(filename)
-    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
-  end
-  puts "Creating new post: #{filename}"
-  open(filename, 'w') do |post|
-    post.puts "---"
-    post.puts "layout: post"
-    post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-    post.puts "date: #{time.iso8601}"
-    post.puts "comments: true"
-    post.puts "external-url: "
-    post.puts "categories: "
-    post.puts "---"
+end
+
+# usage rake dated_post['yyyy-mm-dd hh:mm:ss',my-post] or rake dated_post['yyyy-mm-dd hh:mm:ss','my post post'] or rake dated_post (will inquire for a title and date/time)
+desc "Begin a back- or forward-dated post in #{configuration[:source]}/#{configuration[:posts_dir]}"
+task :dated_post, :posted_at, :title do |t, args|
+  title = get_arg(args, :title, "Enter a title for your post: ")
+  time = get_arg(args, :posted_at, "Enter a date/time for your post (YYYY-MM-DD HH:MM:SS): ")
+  Octopress::Templates.post(configuration, Time.parse(time), title) do |filename|
+    overwrite = false
+    if File.exist?(filename)
+      overwrite = ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    end
+    overwrite
   end
 end
 
@@ -220,7 +211,7 @@ task :new_page, :filename do |t, args|
       abort("rake aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
     end
     puts "Creating new page: #{file}"
-    time = now_in_timezone(configuration[:timezone])
+    time = Octopress::Utilities.time_in_timezone(Time.now, configuration[:timezone])
     open(file, 'w') do |page|
       page.puts "---"
       page.puts "layout: page"
@@ -239,11 +230,7 @@ end
 # usage rake isolate[my-post]
 desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much more quickly."
 task :isolate, :filename do |t, args|
-  if args.filename
-    filename = args.filename
-  else
-    filename = get_stdin("Enter a post file name: ")
-  end
+  filename = get_arg(args, :filename, "Enter a post file name: ")
   FileUtils.mkdir(full_stash_dir) unless File.exist?(full_stash_dir)
   Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*") do |post|
     FileUtils.mv post, full_stash_dir unless post.include?(filename)
@@ -426,10 +413,7 @@ end
 
 desc "Update configurations to support publishing to root or sub directory"
 task :set_root_dir, :dir do |t, args|
-  path = args.dir || nil
-  if path.nil?
-    path = get_stdin("Please provide a directory: ")
-  end
+  path = get_arg(args, :dir, "Please provide a directory: ")
   if path
     if path == "/"
       path = ""
@@ -460,15 +444,14 @@ EOF
   end
 end
 
+URL_PROMPT=[
+  "Enter the read/write url for your repository",
+  "(For example, 'git@github.com:your_username/your_username.github.com)",
+  "Enter the read/write url for your repository: "
+]
 desc "Set up _deploy folder and deploy branch for GitHub Pages deployment"
 task :setup_github_pages, :repo do |t, args|
-  if args.repo
-    repo_url = args.repo
-  else
-    puts "Enter the read/write url for your repository"
-    puts "(For example, 'git@github.com:your_username/your_username.github.com)"
-    repo_url = get_stdin("Repository url: ")
-  end
+  repo_url = get_arg(args, :repo, URL_PROMPT)
   unless repo_url[-4..-1] == ".git"
     repo_url << ".git"
   end
@@ -619,6 +602,7 @@ def ok_failed(condition)
 end
 
 def get_stdin(message)
+  message = message.join("\n") if(message.is_a?(Array))
   print message
   STDIN.gets.chomp
 end
@@ -632,24 +616,10 @@ def ask(message, valid_options)
   answer
 end
 
-def now_in_timezone(timezone)
-  time = Time.now
-  unless timezone.nil? || timezone.empty? || timezone == 'local'
-    tz = TZInfo::Timezone.get(timezone) #setup Timezone object
-    adjusted_time = tz.utc_to_local(time.utc) #time object without correct offset
-    #time object with correct offset
-    time = Time.new(
-      adjusted_time.year,
-      adjusted_time.month,
-      adjusted_time.day,
-      adjusted_time.hour,
-      adjusted_time.min,
-      adjusted_time.sec,
-      tz.period_for_utc(time.utc).utc_total_offset())
-    #convert offset to utc instead of just ±0 if that was specified
-    if ['utc','zulu','universal','uct','gmt','gmt0','gmt+0','gmt-0'].include? timezone.downcase
-      time = time.utc
-    end
+def get_arg(args, name, prompt)
+  val = args.send(name)
+  if(!val)
+    val = get_stdin(prompt)
   end
-  time
+  return val
 end
