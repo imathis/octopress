@@ -16,6 +16,8 @@ Sabemos que em algum momento de nosso código podemos ter referências nulas, se
 
     NoMethodError: undefined method `name' for nil:NilClass
 
+<!-- more --> 
+
 Vamos a um exemplo: Temos uma classe Game responsável pelas informações de um dado jogo e um classe Report, responsável por imprimir os dados deste tal jogo.
 
 Vamos a classe Game:
