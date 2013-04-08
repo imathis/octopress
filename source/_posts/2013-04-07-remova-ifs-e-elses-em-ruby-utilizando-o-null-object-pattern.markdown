@@ -1,5 +1,4 @@
 ---
-published: false
 layout: post
 title: "Remova Ifs e Elses em Ruby utilizando o Null Object Pattern"
 date: 2013-04-07 11:16
