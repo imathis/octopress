@@ -9,14 +9,15 @@ categories:
   - ruby
   - OOP
   - Pattern
+  
 ---
 
 O [Null Object pattern](https://en.wikipedia.org/wiki/Null_object) tem como principal objetivo tratar o comportamento do valor `Null`, ou em ruby o `nil`.
-Sabemos que em algum momento de nosso código podemos ter referências nulas, sendo assim temos que verificar se tal refêrencia é nula ou não para não recebemos uma exception como a seguinte:
+Sabemos que em algum momento de nosso código podemos ter referências nulas, sendo assim, temos que verificar se tal refêrencia é nula ou não para não recebermos uma _exception_ como a seguinte:
 
     NoMethodError: undefined method `name' for nil:NilClass
 
-Vamos a um exemplo: Temos uma classe Game responsável pelas informações de um dado jogo, e um classe Report, responsável por imprimir os dados deste tal jogo.
+Vamos a um exemplo: Temos uma classe Game responsável pelas informações de um dado jogo e um classe Report, responsável por imprimir os dados deste tal jogo.
 
 Vamos a classe Game:
 
@@ -60,7 +61,7 @@ class Report
 end
 ```
 
-Como pode ver a nossa classe funciona muito bem para o Game no entanto se em algum momento recebemos uma referencia nula, por exemplo de um find do ActiveRecord receberemos a exception:
+Como podem ver, a nossa classe funciona muito bem para o Game. No entanto, se em algum momento recebermos uma referência nula (por exemplo de um find do ActiveRecord),  receberemos a seguinte exception:
 
 ```ruby
 game = nil
@@ -68,7 +69,7 @@ report = Report.new(game)
 puts report.show # undefined method `name' for nil:NilClass (NoMethodError) ...
 ```
 
-Vamos resolver utilizando o mais comum que seria utilizando `if` e `else`.
+Vamos resolvê-la utilizando os mais comuns: `if` e `else`.
 
 ```ruby
 class Report
@@ -111,8 +112,8 @@ class Report
 end
 ```
 
-Como pode ver alteramos os métodos da classe `Report` responsável por criar os campos de `Game` na exibição do relatório para tratar quando recebemos um valor nil.
-Até funciona, no entanto como pode ver estamos adicionando mais complexidade a simples métodos que apenas delegam o valor além de claramente estamos repetindo código. E é neste ponto que o Null Object Pattern vem para nos ajudar. Vamos aos refactories.
+Como podem ver, alteramos os métodos da classe `Report`, responsável por criar os campos de `Game` na exibição do relatório, para tratar quando recebemos um valor nil.
+Até funciona, mas como notamos, estamos adicionando mais complexidade a simples métodos que apenas delegam o valor, além de, claramente, estarmos repetindo código. E é neste ponto que o Null Object Pattern vem para nos ajudar. Vamos aos refactories.
 
 ```ruby
 class NullGame
@@ -158,7 +159,7 @@ class Report
 end
 ```
 
-Primeiro criamos uma classe `NullGame` responsável por definir os valores quando um `Game` for nulo. Em Seguida alteramos a classe `Report` para instanciar um `NullGame` caso o game seja nulo, e assim podemos alterar nossos métodos que funcionam como delegators para continuarem fazendo apenas isto.
+Primeiro criamos uma classe `NullGame` responsável por definir os valores quando um `Game` for nulo. Em Seguida, alteramos a classe `Report` para instanciar um `NullGame` (caso o game seja nulo) e assim, podemos alterar nossos métodos que funcionam como delegators para continuarem fazendo apenas isto.
 Veja como seria o comportamento de `Report` ao receber um `nil`:
 
 ```ruby
@@ -169,6 +170,6 @@ puts report.show # Game: no name
                  # Description: no description
 ```
 
-Como pode ver ao utilizarmos o Null Object Pattern conseguimos manter o nosso código muito mais Ruby Way utilizando classes coesas, com responsabilidades bem definidas e one line methods.
+Como podem ver, ao utilizarmos o Null Object Pattern, conseguimos manter o nosso código muito mais Ruby Way utilizando classes coesas, com responsabilidades bem definidas e one line methods.
 
-Para finalizar fica a dica da excelente palestra do [Ben Orenstein](https://twitter.com/@r00k) [Refactoring from Good to Great](http://www.confreaks.com/videos/1233-aloharuby2012-refactoring-from-good-to-great) de onde este post foi inspirado.
+Para finalizar fica a dica da excelente palestra do [Ben Orenstein](https://twitter.com/@r00k) [Refactoring from Good to Great](http://www.confreaks.com/videos/1233-aloharuby2012-refactoring-from-good-to-great) , de onde este post foi inspirado.
