@@ -30,4 +30,4 @@ group :test do
   gem "rspec", "~> 2.13.0"
 end
 
-gem 'sinatra', '~> 1.3.3'
+gem 'sinatra', '~> 1.4.2'
