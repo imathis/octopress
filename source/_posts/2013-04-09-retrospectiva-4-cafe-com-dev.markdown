@@ -13,8 +13,8 @@ Na última sexta, dia 5 de abril, aconteceu o nosso quarto Café com DEV com par
 
 <!-- more -->
 
-![Rodrigo Vidal](/images/posts/rodrigo-vidal.png)
- 
+![Rodrigo Vidal](/images/posts/rodrigo-vidal.jpg)
+
 Rodrigo, engenheiro e desenvolvedor, citou a história da composição, linguagens e objetivos da Função juntamente com a computabilidade. E ainda, explicou matematicamente como as Funções se aplicam e seus efeitos.
 
 Além disso, Funções de Alta Ordem, como ZIP, MAX e LENGHT e 'Essência do LINQ' foram detalhadamente explicadas.
