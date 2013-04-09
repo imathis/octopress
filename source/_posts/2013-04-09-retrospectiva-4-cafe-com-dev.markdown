@@ -9,7 +9,7 @@ categories:
 
 ---
 
-Na última sexta, dia 5 de abril, aconteceu o nosso quarto Café com DEV com participação de Rodrigo Vidal. O palestrante da vez explicou como ocorre a Programação Visual e seus mecanismos.
+Na última sexta, dia 5 de abril, aconteceu o nosso quarto Café com DEV com participação de Rodrigo Vidal. O palestrante da vez explicou como ocorre a Programação Funcional e seus mecanismos.
 
 <!-- more -->
 
