@@ -114,7 +114,7 @@ module HighlightCode
   end
 
   def parse_markup (input)
-    lang      = input.match(/\s*lang:([\S+)/i)
+    lang      = input.match(/\s*lang:(\S+)/i)
     title     = input.match(/\s*title:\s*(("(.+?)")|('(.+?)')|(\S+))/i)
     linenos   = input.match(/\s*linenos:(\w+)/i)
     escape    = input.match(/\s*escape:(\w+)/i)
