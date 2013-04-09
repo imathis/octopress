@@ -466,18 +466,18 @@ task :setup_github_pages, :repo do |t, args|
     repo_url = args.repo
   else
     puts "Enter the read/write url for your repository"
-    puts "(For example, 'git@github.com:your_username/your_username.github.com)"
+    puts "(For example, 'git@github.com:your_username/your_username.github.io)"
     repo_url = get_stdin("Repository url: ")
   end
   unless repo_url[-4..-1] == ".git"
     repo_url << ".git"
   end
-  raise "!! The repo URL that was input was malformed." unless (repo_url =~ /https:\/\/github\.com\/[^\/]+\/[^\/]+/).nil? or (repo_url =~ /git@github\.com:[^\/]+\/[^\/]+/).nil?
-  user_match = repo_url.match(/(:([^\/]+)|(github\.com\/([^\/]+)))/)
+  raise "!! The repo URL that was input was malformed." unless (repo_url =~ /https:\/\/github\.(?:io|com)\/[^\/]+\/[^\/]+/).nil? or (repo_url =~ /git@github\.(?:io|com):[^\/]+\/[^\/]+/).nil?
+  user_match = repo_url.match(/(:([^\/]+)|(github\.(?:io|com)\/([^\/]+)))/)
   user = user_match[2] || user_match[4]
-  branch = (repo_url =~ /\/[\w-]+\.github\.com/).nil? ? 'gh-pages' : 'master'
+  branch = (repo_url =~ /\/[\w-]+\.github\.(?:io|com)/).nil? ? 'gh-pages' : 'master'
   project = (branch == 'gh-pages') ? repo_url.match(/\/(.+)(\.git)/)[1] : ''
-  url = "http://#{user}.github.com"
+  url = "http://#{user}.github.io"
   url += "/#{project}" unless project == ''
   unless (`git remote -v` =~ /origin.+?octopress(?:\.git)?/).nil?
     # If octopress is still the origin remote (from cloning) rename it to octopress
