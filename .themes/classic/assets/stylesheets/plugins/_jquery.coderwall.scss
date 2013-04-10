@@ -1,0 +1,29 @@
+section.coderwall-root {
+  clear: both;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  padding: 0px;
+  padding-top: 5px;
+}
+.coderwall-root .coderwall-badge {
+  border: 0px;
+
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+}
+.coderwall-root .coderwall-badge:hover { }
+.coderwall-reset {
+  clear: both;
+  height: 0px;
+}
