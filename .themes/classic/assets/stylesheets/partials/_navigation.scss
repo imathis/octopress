@@ -134,4 +134,3 @@ body > nav {
   a[rel=subscribe-rss]{ @include mask-subscription-nav('rss.png'); }
   a[rel=subscribe-email]{ @include mask-subscription-nav('email.png'); }
 }
-

@@ -8,7 +8,7 @@ class ConfigTag < Liquid::Tag
     @tag = nil
     @classname = nil
     options.each do |option|
-      @tag = $1 if option =~ /tag:(\S+)/ 
+      @tag = $1 if option =~ /tag:(\S+)/
       @classname = $1 if option =~ /classname:(\S+)/
     end
   end
@@ -41,4 +41,3 @@ def config_tag(config, key, tag=nil, classname=nil)
 end
 
 Liquid::Template.register_tag('config_tag', ConfigTag)
-

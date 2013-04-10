@@ -43,7 +43,7 @@ Adn =
         $.removeCookie @cookie
         @timeline = []
         init user, options, callback
-      else 
+      else
         callback @template()
     else
       url =  "https://alpha-api.app.net/stream/0/users/@#{user}/posts?"
@@ -55,12 +55,12 @@ Adn =
         url:      url
         dataType: 'jsonp'
         error:    (err)  => callback @errorTemplate
-        success:  (response) => 
+        success:  (response) =>
           @timeline = @timeline.concat response.data
           if @timeline.length < options.count
             options.max_id = response.meta.max_id
             init user, options, callback
-          else 
+          else
             @timeline = @format @timeline.slice(0, options.count), user, options
             $.cookie @cookie, JSON.stringify @timeline, { path: '/' }
             callback @template()

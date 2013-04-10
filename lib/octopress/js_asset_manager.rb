@@ -11,7 +11,7 @@ module Octopress
 
     def initialize
       @js_assets_path = File.expand_path("../../assets/javascripts", File.dirname(__FILE__))
-      
+
       unless Octopress.configuration.has_key? :require_js
         abort "No :require_js key in configuration. Cannot proceed.".red
       end
@@ -47,7 +47,7 @@ module Octopress
 
       filename = url
       file = "#{@template_path + filename}"
-     
+
       if File.exists?(file) and File.open(file) {|f| f.readline} =~ /#{@fingerprint}/
         false
       else
@@ -66,4 +66,3 @@ module Octopress
     end
   end
 end
-

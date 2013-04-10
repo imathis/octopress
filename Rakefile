@@ -506,7 +506,7 @@ task :setup_github_pages, :repo do |t, args|
     unless exit_status.success?
       error = ''
       while line = stdout_err.gets do error << line end
-      puts "Be sure your repo (#{repo_url}) is set up properly and try again".red 
+      puts "Be sure your repo (#{repo_url}) is set up properly and try again".red
       abort error
     end
   end

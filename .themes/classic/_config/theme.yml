@@ -39,9 +39,9 @@ blog_index_sidebar: blog_index_default.html
 page_sidebar: page_default.html
 post_sidebar: post_default.html
 
-recent_posts: 5       # Posts in the sidebar Recent Posts section
+recent_posts: 5            # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on →"  # "Continue reading" link text at the bottom of excerpted articles
-excerpt_in_feed: false # Truncate excerpted articles in the atom feed
+excerpt_in_feed: false     # Truncate excerpted articles in the atom feed
 permalink_label: "Permalink"
 permalink_label_feed: "★ Permalink"
 linklog_marker: "→"

@@ -23,7 +23,7 @@
   {% endif %}
   {% if site.facebook_like %}
     {% if site.respectfully_social %}
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank">Share</a>
+      <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank">Share</a>
     {% else %}
       {% if post.title %}
         <div class="fb-like" data-href="{{ site.url }}{{ post.url }}" data-send="true" data-width="450" data-show-faces="false"></div>

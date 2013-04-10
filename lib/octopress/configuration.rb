@@ -97,9 +97,10 @@ module Octopress
           configs = file_yaml.deep_merge(configs)
         end
       end
-      
+
       configs.to_symbol_keys
     end
+
     # Static: Writes configuration files necessary for generation of the Jekyll site
     #
     # Returns a Hash of the items which were written to the Jekyll configuration file

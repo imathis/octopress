@@ -5,7 +5,7 @@ Delicious =
   cookie: 'delicious-feed'
   classname: 'delicious-feed'
 
-  template: (data) -> 
+  template: (data) ->
     helpers.linkFeed data, @classname
 
   errorTemplate: ->
@@ -30,7 +30,7 @@ Delicious =
         url:      "http://feeds.delicious.com/v2/json/#{user}?&count=#{options.count}&callback=?"
         dataType: 'jsonp'
         error:    (err)  => callback @errorTemplate
-        success:  (data) => 
+        success:  (data) =>
           data = @format data
           $.cookie @cookie, JSON.stringify data, { path: '/' }
           callback @template data
