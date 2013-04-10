@@ -1,0 +1,7 @@
+{% if site.coderwall.user %}
+<section>
+  <h1>Coderwall</h1>
+  <section class="coderwall" data-coderwall-username="{{ site.coderwall.user }}" data-coderwall-orientation="vertical" data-coderwall-badge-width="{{ site.coderwall.size }}"></section>
+  <div class="coderwall-reset"></div>
+</section>
+{% endif %}
