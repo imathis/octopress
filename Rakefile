@@ -64,6 +64,7 @@ deploy_method: rsync
 EOF
     File.open('_config/deploy.yml', 'w') { |f| f.write user_config_deploy }
 
+    mkdir_p "_config/environments"
     default_asset_config = <<-EOF
 ---
 assets:
@@ -80,7 +81,25 @@ assets:
   #
   output_style: compressed
 EOF
-    File.open('_config/defaults/assets.yml', 'w') { |f| f.write default_asset_config }
+    File.open('_config/environments/production.yml', 'w') { |f| f.write default_asset_config }
+
+    default_asset_config = <<-EOF
+---
+assets:
+  #
+  # Include source line comments in compiled SASS?
+  #
+  line_comments: false
+  #
+  # Compass CSS minification behavior.  Values are:
+  # * nested
+  # * expanded (recommended for development)
+  # * compact
+  # * compressed (recommended for production)
+  #
+  output_style: expanded
+EOF
+    File.open('_config/environments/development.yml', 'w') { |f| f.write default_asset_config }
   end
 end
 
