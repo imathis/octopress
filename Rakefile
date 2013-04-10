@@ -653,3 +653,18 @@ def now_in_timezone(timezone)
   end
   time
 end
+
+desc "Deploy website via s3cmd"
+task :s3cmd do
+  exclude = ""
+  if File.exists?('./s3cmd-exclude')
+    exclude = "--exclude-from='#{File.expand_path('./s3cmd-exclude')}'"
+  end
+  puts "## Deploying website via s3cmd"
+  destination = ensure_trailing_slash(configuration[:destination])
+  s3path = ensure_trailing_slash(configuration[:s3_path])
+  puts "Uploading new/changed files..."
+  ok_failed system("s3cmd --acl-public #{exclude} --progress sync #{destination} #{s3path}")
+  puts "Removing defunct files..."
+  ok_failed system("s3cmd --acl-public --skip-existing --delete-removed #{exclude} --progress sync #{destination} #{s3path}")
+end
