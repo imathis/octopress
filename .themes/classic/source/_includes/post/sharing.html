@@ -1,23 +1,23 @@
 <div class="sharing">
-  {% if site.twitter_tweet_button %}
+  {% if site.twitter.tweet_button %}
     {% if site.respectfully_social %}
       <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
     {% else %}
       {% if post.title %}
-        <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ post.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ post.url }}" >Tweet</a>
+        <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ post.url }}" data-via="{{ site.twitter.user }}" data-counturl="{{ site.url }}{{ post.url }}" >Tweet</a>
       {% else %}
-        <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" >Tweet</a>
+        <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter.user }}" data-counturl="{{ site.url }}{{ page.url }}" >Tweet</a>
       {% endif %}
     {% endif %}
   {% endif %}
-  {% if site.google_plus_one %}
+  {% if site.googleplus.plus_one %}
     {% if site.respectfully_social %}
       <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url={{site.url}}{{page.url}}" target="_blank">+1</a>
     {% else %}
       {% if post.title %}
-        <div class="g-plusone" data-href="{{ site.url }}{{ post.url }}" data-size="{{ site.google_plus_one_size }}"></div>
+        <div class="g-plusone" data-href="{{ site.url }}{{ post.url }}" data-size="{{ site.googleplus.plus_one_size }}"></div>
       {% else %}
-        <div class="g-plusone" data-href="{{ site.url }}{{ page.url }}" data-size="{{ site.google_plus_one_size }}"></div>
+        <div class="g-plusone" data-href="{{ site.url }}{{ page.url }}" data-size="{{ site.googleplus.plus_one_size }}"></div>
       {% endif %}
     {% endif %}
   {% endif %}
