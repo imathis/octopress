@@ -1,5 +1,4 @@
 adn       = require('adn')
-pinboard  = require('pinboard')
 delicious = require('delicious')
 github    = require('github')
 
