@@ -3,6 +3,8 @@ require "bundler/setup"
 require "stringex"
 require "./tasks/task_config"
 
+Dir.glob('tasks/*.rake').each { |r| import r }
+
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
   if File.directory?(TaskConfig::SOURCE_DIR) || File.directory?("sass")
