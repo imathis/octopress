@@ -1,47 +1,24 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "./tasks/task_config"
 
-## -- Rsync Deploy config -- ##
-# Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "user@domain.com"
-ssh_port       = "22"
-document_root  = "~/website.com/"
-rsync_delete   = false
-rsync_args     = ""  # Any extra arguments to pass to rsync
-deploy_default = "rsync"
-
-# This will be configured for you when you run config_deploy
-deploy_branch  = "gh-pages"
-
-## -- Misc Configs -- ##
-
-public_dir      = "public"    # compiled site directory
-source_dir      = "source"    # source file directory
-blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
-deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
-stash_dir       = "_stash"    # directory to stash posts for speedy generation
-posts_dir       = "_posts"    # directory for blog files
-themes_dir      = ".themes"   # directory for blog files
-new_post_ext    = "markdown"  # default new post file extension when using the new_post task
-new_page_ext    = "markdown"  # default new page file extension when using the new_page task
-server_port     = "4000"      # port for preview server eg. localhost:4000
-
+Dir.glob('tasks/*.rake').each { |r| import r }
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
-  if File.directory?(source_dir) || File.directory?("sass")
+  if File.directory?(TaskConfig::SOURCE_DIR) || File.directory?("sass")
     abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
   end
   # copy theme into working Jekyll directories
   theme = args.theme || 'classic'
-  puts "## Copying "+theme+" theme into ./#{source_dir} and ./sass"
-  mkdir_p source_dir
-  cp_r "#{themes_dir}/#{theme}/source/.", source_dir
+  puts "## Copying "+theme+" theme into ./#{TaskConfig::SOURCE_DIR} and ./sass"
+  mkdir_p TaskConfig::SOURCE_DIR
+  cp_r "#{TaskConfig::THEMES_DIR}/#{theme}/source/.", TaskConfig::SOURCE_DIR
   mkdir_p "sass"
-  cp_r "#{themes_dir}/#{theme}/sass/.", "sass"
-  mkdir_p "#{source_dir}/#{posts_dir}"
-  mkdir_p public_dir
+  cp_r "#{TaskConfig::THEMES_DIR}/#{theme}/sass/.", "sass"
+  mkdir_p "#{TaskConfig::SOURCE_DIR}/#{TaskConfig::POSTS_DIR}"
+  mkdir_p TaskConfig::PUBLIC_DIR
 end
 
 #######################
@@ -50,17 +27,17 @@ end
 
 desc "Generate jekyll site"
 task :generate do
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(TaskConfig::SOURCE_DIR)
   puts "## Generating Site with Jekyll"
-  system "compass compile --css-dir #{source_dir}/stylesheets"
+  system "compass compile --css-dir #{TaskConfig::SOURCE_DIR}/stylesheets"
   system "jekyll"
 end
 
 desc "Watch the site and regenerate when it changes"
 task :watch do
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(TaskConfig::SOURCE_DIR)
   puts "Starting to watch source with Jekyll and Compass."
-  system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exist?("#{source_dir}/stylesheets/screen.css")
+  system "compass compile --css-dir #{TaskConfig::SOURCE_DIR}/stylesheets" unless File.exist?("#{TaskConfig::SOURCE_DIR}/stylesheets/screen.css")
   jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll --auto")
   compassPid = Process.spawn("compass watch")
 
@@ -74,12 +51,12 @@ end
 
 desc "preview the site in a web browser"
 task :preview do
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
-  system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exist?("#{source_dir}/stylesheets/screen.css")
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(TaskConfig::SOURCE_DIR)
+  puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{TaskConfig::SERVER_PORT}"
+  system "compass compile --css-dir #{TaskConfig::SOURCE_DIR}/stylesheets" unless File.exist?("#{TaskConfig::SOURCE_DIR}/stylesheets/screen.css")
   jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll --auto")
   compassPid = Process.spawn("compass watch")
-  rackupPid = Process.spawn("rackup --port #{server_port}")
+  rackupPid = Process.spawn("rackup --port #{TaskConfig::SERVER_PORT}")
 
   trap("INT") {
     [jekyllPid, compassPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
@@ -90,16 +67,16 @@ task :preview do
 end
 
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
-desc "Begin a new post in #{source_dir}/#{posts_dir}"
+desc "Begin a new post in #{TaskConfig::SOURCE_DIR}/#{TaskConfig::POSTS_DIR}"
 task :new_post, :title do |t, args|
   if args.title
     title = args.title
   else
     title = get_stdin("Enter a title for your post: ")
   end
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  mkdir_p "#{source_dir}/#{posts_dir}"
-  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(TaskConfig::SOURCE_DIR)
+  mkdir_p "#{TaskConfig::SOURCE_DIR}/#{TaskConfig::POSTS_DIR}"
+  filename = "#{TaskConfig::SOURCE_DIR}/#{TaskConfig::POSTS_DIR}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{TaskConfig::NEW_POST_EXT}"
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -116,11 +93,11 @@ task :new_post, :title do |t, args|
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
-desc "Create a new page in #{source_dir}/(filename)/index.#{new_page_ext}"
+desc "Create a new page in #{TaskConfig::SOURCE_DIR}/(filename)/index.#{TaskConfig::NEW_PAGE_EXT}"
 task :new_page, :filename do |t, args|
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(TaskConfig::SOURCE_DIR)
   args.with_defaults(:filename => 'new-page')
-  page_dir = [source_dir]
+  page_dir = [TaskConfig::SOURCE_DIR]
   if args.filename.downcase =~ /(^.+\/)?(.+)/
     filename, dot, extension = $2.rpartition('.').reject(&:empty?)         # Get filename and extension
     title = filename
@@ -129,7 +106,7 @@ task :new_page, :filename do |t, args|
       page_dir << filename
       filename = "index"
     end
-    extension ||= new_page_ext
+    extension ||= TaskConfig::NEW_PAGE_EXT
     page_dir = page_dir.map! { |d| d = d.to_url }.join('/')                # Sanitize path
     filename = filename.downcase.to_url
 
@@ -157,16 +134,16 @@ end
 # usage rake isolate[my-post]
 desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much more quickly."
 task :isolate, :filename do |t, args|
-  stash_dir = "#{source_dir}/#{stash_dir}"
-  FileUtils.mkdir(stash_dir) unless File.exist?(stash_dir)
-  Dir.glob("#{source_dir}/#{posts_dir}/*.*") do |post|
-    FileUtils.mv post, stash_dir unless post.include?(args.filename)
+  TaskConfig::STASH_DIR = "#{TaskConfig::SOURCE_DIR}/#{TaskConfig::STASH_DIR}"
+  FileUtils.mkdir(TaskConfig::STASH_DIR) unless File.exist?(TaskConfig::STASH_DIR)
+  Dir.glob("#{TaskConfig::SOURCE_DIR}/#{TaskConfig::POSTS_DIR}/*.*") do |post|
+    FileUtils.mv post, TaskConfig::STASH_DIR unless post.include?(args.filename)
   end
 end
 
 desc "Move all stashed posts back into the posts directory, ready for site generation."
 task :integrate do
-  FileUtils.mv Dir.glob("#{source_dir}/#{stash_dir}/*.*"), "#{source_dir}/#{posts_dir}/"
+  FileUtils.mv Dir.glob("#{TaskConfig::SOURCE_DIR}/#{TaskConfig::STASH_DIR}/*.*"), "#{TaskConfig::SOURCE_DIR}/#{TaskConfig::POSTS_DIR}/"
 end
 
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
@@ -183,7 +160,7 @@ task :update_style, :theme do |t, args|
   end
   mv "sass", "sass.old"
   puts "## Moved styles into sass.old/"
-  cp_r "#{themes_dir}/"+theme+"/sass/", "sass"
+  cp_r "#{TaskConfig::THEMES_DIR}/"+theme+"/sass/", "sass"
   cp_r "sass.old/custom/.", "sass/custom"
   puts "## Updated Sass ##"
 end
@@ -191,19 +168,19 @@ end
 desc "Move source to source.old, install source theme updates, replace source/_includes/navigation.html with source.old's navigation"
 task :update_source, :theme do |t, args|
   theme = args.theme || 'classic'
-  if File.directory?("#{source_dir}.old")
-    puts "## Removed existing #{source_dir}.old directory"
-    rm_r "#{source_dir}.old", :secure=>true
+  if File.directory?("#{TaskConfig::SOURCE_DIR}.old")
+    puts "## Removed existing #{TaskConfig::SOURCE_DIR}.old directory"
+    rm_r "#{TaskConfig::SOURCE_DIR}.old", :secure=>true
   end
-  mkdir "#{source_dir}.old"
-  cp_r "#{source_dir}/.", "#{source_dir}.old"
-  puts "## Copied #{source_dir} into #{source_dir}.old/"
-  cp_r "#{themes_dir}/"+theme+"/source/.", source_dir, :remove_destination=>true
-  cp_r "#{source_dir}.old/_includes/custom/.", "#{source_dir}/_includes/custom/", :remove_destination=>true
-  cp "#{source_dir}.old/favicon.png", source_dir
-  mv "#{source_dir}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != source_dir
-  cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir && File.exists?("#{source_dir}.old/index.html")
-  puts "## Updated #{source_dir} ##"
+  mkdir "#{TaskConfig::SOURCE_DIR}.old"
+  cp_r "#{TaskConfig::SOURCE_DIR}/.", "#{TaskConfig::SOURCE_DIR}.old"
+  puts "## Copied #{TaskConfig::SOURCE_DIR} into #{TaskConfig::SOURCE_DIR}.old/"
+  cp_r "#{TaskConfig::THEMES_DIR}/"+theme+"/source/.", TaskConfig::SOURCE_DIR, :remove_destination=>true
+  cp_r "#{TaskConfig::SOURCE_DIR}.old/_includes/custom/.", "#{TaskConfig::SOURCE_DIR}/_includes/custom/", :remove_destination=>true
+  cp "#{TaskConfig::SOURCE_DIR}.old/favicon.png", TaskConfig::SOURCE_DIR
+  mv "#{TaskConfig::SOURCE_DIR}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != TaskConfig::SOURCE_DIR
+  cp "#{TaskConfig::SOURCE_DIR}.old/index.html", TaskConfig::SOURCE_DIR if blog_index_dir != TaskConfig::SOURCE_DIR && File.exists?("#{TaskConfig::SOURCE_DIR}.old/index.html")
+  puts "## Updated #{TaskConfig::SOURCE_DIR} ##"
 end
 
 ##############
@@ -219,8 +196,8 @@ task :deploy do
     Rake::Task[:generate].execute
   end
 
-  Rake::Task[:copydot].invoke(source_dir, public_dir)
-  Rake::Task["#{deploy_default}"].execute
+  Rake::Task[:copydot].invoke(TaskConfig::SOURCE_DIR, TaskConfig::PUBLIC_DIR)
+  Rake::Task["#{TaskConfig::DEPLOY_DEFAULT}"].execute
 end
 
 desc "Generate website and deploy"
@@ -241,16 +218,16 @@ task :rsync do
     exclude = "--exclude-from '#{File.expand_path('./rsync-exclude')}'"
   end
   puts "## Deploying website via Rsync"
-  ok_failed system("rsync -avze 'ssh -p #{ssh_port}' #{exclude} #{rsync_args} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
+  ok_failed system("rsync -avze 'ssh -p #{TaskConfig::SSH_PORT}' #{exclude} #{TaskConfig::RSYNC_ARGS} #{"--delete" unless TaskConfig::RSYNC_DELETE == false} #{TaskConfig::PUBLIC_DIR}/ #{TaskConfig::SSH_USER}:#{TaskConfig::DOCUMENT_ROOT}")
 end
 
 desc "deploy public directory to github pages"
 multitask :push do
   puts "## Deploying branch to Github Pages "
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
-  Rake::Task[:copydot].invoke(public_dir, deploy_dir)
-  puts "\n## copying #{public_dir} to #{deploy_dir}"
-  cp_r "#{public_dir}/.", deploy_dir
+  Rake::Task[:copydot].invoke(TaskConfig::PUBLIC_DIR, deploy_dir)
+  puts "\n## copying #{TaskConfig::PUBLIC_DIR} to #{deploy_dir}"
+  cp_r "#{TaskConfig::PUBLIC_DIR}/.", deploy_dir
   cd "#{deploy_dir}" do
     system "git add ."
     system "git add -u"
@@ -258,7 +235,7 @@ multitask :push do
     message = "Site updated at #{Time.now.utc}"
     system "git commit -m \"#{message}\""
     puts "\n## Pushing generated #{deploy_dir} website"
-    system "git push origin #{deploy_branch} --force"
+    system "git push origin #{TaskConfig::DEPLOY_BRANCH} --force"
     puts "\n## Github Pages deploy complete"
   end
 end
@@ -273,7 +250,7 @@ task :set_root_dir, :dir do |t, args|
       dir = "/" + args.dir.sub(/(\/*)(.+)/, "\\2").sub(/\/$/, '');
     end
     rakefile = IO.read(__FILE__)
-    rakefile.sub!(/public_dir(\s*)=(\s*)(["'])[\w\-\/]*["']/, "public_dir\\1=\\2\\3public#{dir}\\3")
+    rakefile.sub!(/TaskConfig::PUBLIC_DIR(\s*)=(\s*)(["'])[\w\-\/]*["']/, "TaskConfig::PUBLIC_DIR\\1=\\2\\3public#{dir}\\3")
     File.open(__FILE__, 'w') do |f|
       f.write rakefile
     end
@@ -292,8 +269,8 @@ task :set_root_dir, :dir do |t, args|
     File.open('_config.yml', 'w') do |f|
       f.write jekyll_config
     end
-    rm_rf public_dir
-    mkdir_p "#{public_dir}#{dir}"
+    rm_rf TaskConfig::PUBLIC_DIR
+    mkdir_p "#{TaskConfig::PUBLIC_DIR}#{dir}"
     puts "## Site's root directory is now '/#{dir.sub(/^\//, '')}' ##"
   end
 end
@@ -323,7 +300,7 @@ task :setup_github_pages, :repo do |t, args|
       system "git branch -m master source"
       puts "Master branch renamed to 'source' for committing your blog source files"
     else
-      unless !public_dir.match("#{project}").nil?
+      unless !TaskConfig::PUBLIC_DIR.match("#{project}").nil?
         system "rake set_root_dir[#{project}]"
       end
     end
@@ -345,8 +322,8 @@ task :setup_github_pages, :repo do |t, args|
     system "git branch -m gh-pages" unless branch == 'master'
     system "git remote add origin #{repo_url}"
     rakefile = IO.read(__FILE__)
-    rakefile.sub!(/deploy_branch(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_branch\\1=\\2\\3#{branch}\\3")
-    rakefile.sub!(/deploy_default(\s*)=(\s*)(["'])[\w-]*["']/, "deploy_default\\1=\\2\\3push\\3")
+    rakefile.sub!(/TaskConfig::DEPLOY_BRANCH(\s*)=(\s*)(["'])[\w-]*["']/, "TaskConfig::DEPLOY_BRANCH\\1=\\2\\3#{branch}\\3")
+    rakefile.sub!(/TaskConfig::DEPLOY_DEFAULT(\s*)=(\s*)(["'])[\w-]*["']/, "TaskConfig::DEPLOY_DEFAULT\\1=\\2\\3push\\3")
     File.open(__FILE__, 'w') do |f|
       f.write rakefile
     end
