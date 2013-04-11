@@ -1,17 +1,9 @@
 require "spec_helper"
 
 describe Octopress do
+  include Octopress::Test::Environment
+
   describe ".configurator" do
-    before do
-      Octopress.clear_config!
-      @old_env = ENV['OCTOPRESS_ENV']
-      ENV['OCTOPRESS_ENV'] = nil
-    end
-
-    after do
-      ENV['OCTOPRESS_ENV'] = @old_env
-    end
-
     it "should accept a path pointing to a config directory" do
       Octopress.configurator(File.join(File.dirname(__FILE__), '../', 'fixtures', 'env'))
 
@@ -21,14 +13,7 @@ describe Octopress do
 
   describe ".configuration" do
     before do
-      Octopress.clear_config!
-      @old_env = ENV['OCTOPRESS_ENV']
-      ENV['OCTOPRESS_ENV'] = nil
       Octopress.configurator(File.join(File.dirname(__FILE__), '../', 'fixtures', 'env'))
-    end
-
-    after do
-      ENV['OCTOPRESS_ENV'] = @old_env
     end
 
     let(:configuration) { Octopress.configuration }
@@ -40,6 +25,8 @@ describe Octopress do
 end
 
 describe Octopress::Configuration do
+  include Octopress::Test::Environment
+
   describe '#read_configuration' do
     describe "when no override" do
       before do

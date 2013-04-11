@@ -1,14 +1,12 @@
 require "spec_helper"
 
 describe Octopress do
+  include Octopress::Test::Environment
+
   describe '#env' do
     context "when ENV['OCTOPRESS_ENV'] is specified" do
-      let (:old_value) { ENV['OCTOPRESS_ENV'] }
       before do
         ENV['OCTOPRESS_ENV'] = 'some_environment'
-      end
-      after do
-        ENV['OCTOPRESS_ENV'] = old_value
       end
 
       subject do
@@ -43,14 +41,8 @@ describe Octopress do
 
     describe "when ENV['OCTOPRESS_ENV'] is NOT specified and a value is specified in config files" do
       before do
-        @old_value = ENV['OCTOPRESS_ENV']
         ENV['OCTOPRESS_ENV'] = nil
         Octopress.configurator(File.join(File.dirname(__FILE__), '..', 'fixtures', 'env'))
-      end
-
-      after do
-        ENV['OCTOPRESS_ENV'] = @old_value
-        Octopress.clear_config!
       end
 
       subject do
@@ -85,12 +77,7 @@ describe Octopress do
 
     describe "when the configuration value changes mid-execution" do
       before do
-        @old_value = ENV['OCTOPRESS_ENV']
         ENV['OCTOPRESS_ENV'] = 'value_a'
-      end
-
-      after do
-        ENV['OCTOPRESS_ENV'] = @old_value
       end
 
       it "returns the initial environment value, then after it's changed, returns the new one" do
