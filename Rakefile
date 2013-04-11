@@ -257,7 +257,7 @@ end
 
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache, and Compass-generated files."
 task :clean do
-  rm_rf [".pygments-cache", ".gist-cache", File.join(configuration[:source], "javascripts/build")]
+  rm_rf [".pygments-cache", ".gist-cache", File.join(configuration[:source], "javascripts", "build")]
   system "compass clean"
   puts "## Cleaned Compass-generated files, and various caches ##"
 end
