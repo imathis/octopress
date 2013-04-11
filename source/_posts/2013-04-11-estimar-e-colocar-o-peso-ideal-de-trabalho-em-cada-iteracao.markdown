@@ -1,7 +1,7 @@
 ---
 author: Eduardo Fiorezi
 layout: post
-title: "Estimar é colocar o peso ideal de trabalho em cada sprint"
+title: "Estimar é colocar o peso ideal de trabalho em cada iteração"
 date: 2013-04-12 09:00
 comments: true
 categories: 
@@ -20,13 +20,13 @@ Agora imagine que essa montanha difícil é um produto de software que você que
 
 Quero que você pense agora sobre o tamanho desta mochila, pois acredito que os passos para criação de software exigem pequenos passos e quanto menos peso seu time carregar mais tranquilo e garantido será para atingir o objetivo final. Quanto mais coisas desnecessárias você decidir levar na mochila maior será sua chance de desistir no caminho.
 
-Os times da HE:labs trabalham com Sprints de 1 semana em todos projetos longos, que é a quantidade mínima de tempo para que seja possível organizar a reunião com o cliente e o time definir as tarefas que serão feitas durante esta semana.
+Os times da HE:labs trabalham com iterações de 1 semana em todos projetos longos, que é a quantidade mínima de tempo para que seja possível organizar a reunião com o cliente e permitir que o time estime as tarefas necessárias para esta semana.
 
-A cada sprint(1 semana) decidimos com o cliente o que cabe na mochila, tudo é muito bem conversado, explicado e debatido com o time e cliente. Nosso time dá a idéia exata das vantagens e desvantagens de algumas decisões sobre o sistema. Cabe ao cliente escolher o que vai na mochila.
+A cada iteração(1 semana) decidimos com o cliente o que cabe na mochila, tudo é muito bem conversado, explicado e debatido entre o time e cliente. Nosso time dá a idéia exata das vantagens e desvantagens de algumas decisões sobre o sistema. Cabe ao cliente escolher o que vai na mochila.
 
-Uma semana de Sprint permite que o cliente analise cada passo durante essa caminhada rumo ao topo da montanha, ou seja, a cada semana ele sabe se o progresso feito foi valioso e importante para seu sistema. E a cada parada estamos lá para encher novamente a mochila.
+Uma semana de iteração permite que o cliente analise cada passo durante essa caminhada rumo ao topo da montanha, ou seja, a cada semana ele sabe se o progresso feito foi valioso e importante para seu sistema. A cada parada estamos lá para encher novamente a mochila e presseguir.
 
-A reunião de planejamento do sprint é extremamente importante, é neste momento que o time sabe como está indo o projeto e pode mudar o rumo para melhorar o ambiente da equipe e a comunicação com o cliente. A sintonia e confiança entre time e cliente é muito importante.
+A reunião de planejamento na iteração é extremamente importante, é neste momento que o time sabe como está indo o projeto e pode mudar o rumo para melhorar o ambiente da equipe e a comunicação com o cliente. A sintonia e confiança entre time e cliente é muito importante, o time deve ficar sempre atento aos fatores comportamentais da reunião.
 
 Para complementar o assunto, não deixe de ler o artigo [Estimativa - O Melhor que Podemos Fazer(tradução do Fábio Akita)](http://akitaonrails.com/2013/04/05/traducao-estimativa-o-melhor-que-podemos-fazer).
 
