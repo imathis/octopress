@@ -38,7 +38,7 @@ var octopress = (function(){
       }
       if (sections.length >= 3){ $('aside.sidebar').addClass('thirds'); }
     }
-    
+
     , testFeature: function (features) {
       getTestClasses = function (tests) {
         classes = '';
@@ -98,4 +98,3 @@ $(document).ready(function() {
   octopress.addMobileNav();
   octopress.addSidebarToggler();
 });
-

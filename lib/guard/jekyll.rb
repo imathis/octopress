@@ -23,7 +23,7 @@ module Guard
         Octopress.configurator.remove_configs_for_generation
       end
     end
-    
+
     def run_on_changes(_)
       Octopress.configurator.write_configs_for_generation
       system "jekyll build #{"--drafts" unless Octopress.env == 'production'}"

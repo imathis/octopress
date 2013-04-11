@@ -34,7 +34,7 @@ Pinboard =
         dataType: 'jsonp'
         jsonp:    'cb'
         error:    (err)  => callback @errorTemplate
-        success:  (data) => 
+        success:  (data) =>
           data = @format data
           $.cookie @cookie, JSON.stringify data, { path: '/' }
           callback @template data

@@ -42,17 +42,17 @@ figure.code {
   padding: 0;
   border: 0;
   margin-bottom: 1.5em;
-  pre { 
+  pre {
     @include border-radius(0px);
     @include box-shadow(none);
     background: none;
     color: $base1;
     border: none;
-    padding: 0; 
+    padding: 0;
     margin-bottom: 0;
     overflow: visible;
     font-style: normal;
-    font-weight: normal; 
+    font-weight: normal;
   }
   figcaption {
     position: relative;
@@ -86,7 +86,7 @@ figure.code {
         bottom: 0;
       }
     }
-    a { 
+    a {
       position: absolute; right: .8em;
       @include hover-link;
       color: inherit;
@@ -113,7 +113,7 @@ figure.code {
       border-bottom-width: 1px;
     }
   }
-  .unnumbered, .line-numbers { 
+  .unnumbered, .line-numbers {
     .marked:after { border-left-width: 2px; }
   }
 }
@@ -232,4 +232,3 @@ pre, figure .highlight {
   &::-webkit-scrollbar {  height: .5em; background: $solar-scroll-bg; }
   &::-webkit-scrollbar-thumb:horizontal { background: $solar-scroll-thumb;  -webkit-border-radius: 4px; border-radius: 4px }
 }
-

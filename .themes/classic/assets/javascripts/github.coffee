@@ -52,7 +52,7 @@ GitHub =
           url:      "https://api.github.com/users/#{user}/repos?callback=?"
           dataType: 'jsonp'
           error:    (err)  => callback @errorTemplate
-          success:  (data) => 
+          success:  (data) =>
             data =  @format(data.data, options)
             $.cookie @cookie, JSON.stringify data, { path: '/' }
             callback @template data

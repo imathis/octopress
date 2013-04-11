@@ -29,7 +29,7 @@ Helpers =
       .replace(/'/g, '&#39;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
-  
+
   # Url helpers
 
   trimUrl: (url)->
@@ -83,8 +83,8 @@ Helpers =
 
     if days is 0
       if      secs < 60   then say.just_now
-      else if secs < 120  then say.minute_ago 
-      else if secs < 3600 then mins + say.minutes_ago 
+      else if secs < 120  then say.minute_ago
+      else if secs < 3600 then mins + say.minutes_ago
       else if secs < 7200 then say.hour_ago
       else                     hours + say.hours_ago
     else

@@ -15,7 +15,7 @@ group :development do
   gem 'tzinfo', '~> 0.3.35'
   gem 'stitch-rb'
   gem 'uglifier'
-  
+
   # Guard related
   gem 'guard'
   gem 'guard-shell'

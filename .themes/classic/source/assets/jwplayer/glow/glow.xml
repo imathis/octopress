@@ -60,7 +60,7 @@
 				<element name="volumeSliderProgress" src="divider.png" />
 			</elements>
 		</component>
-		
+
 		<component name="display">
 			<settings>
 				<setting name="bufferinterval" value="250" />
@@ -74,7 +74,7 @@
 				<element name="bufferIcon" src="bufferIcon.png" />
 			</elements>
 		</component>
-		
+
 		<component name="dock">
 			<settings>
 				<setting name="fontcolor" value="0xFFFFFF" />

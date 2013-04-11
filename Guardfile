@@ -22,7 +22,7 @@ guard :jekyll do
 end
 
 guard :shell do
-  # If a non template file changes, copy it to destination 
+  # If a non template file changes, copy it to destination
   watch /^#{configuration[:source]}\/.+\.[^(md|markdown|textile|html|haml|slim|xml)]/ do |m|
     if File.exists?(m.first)
       file = File.basename(m.first)

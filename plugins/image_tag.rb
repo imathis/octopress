@@ -25,7 +25,7 @@ module Jekyll
       title = nil
       alt   = nil
       attributes = ['class', 'src', 'width', 'height', 'alt']
-      
+
       markup =~ /alt:(".+?")\s*/i
         alt = $1
         markup.sub! /alt:".+?"\s*/i, ''
