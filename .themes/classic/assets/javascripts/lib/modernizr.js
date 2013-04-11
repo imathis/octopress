@@ -50,7 +50,7 @@ window.Modernizr = (function( window, document, undefined ) {
       };
     }
     else {
-      hasOwnProp = function (object, property) { 
+      hasOwnProp = function (object, property) {
         return ((property in object) && is(object.constructor.prototype[property], 'undefined'));
       };
     }
@@ -254,7 +254,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
        }
 
-       return Modernizr; 
+       return Modernizr;
      };
 
 
@@ -456,7 +456,7 @@ Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0));};
 
 Modernizr.addTest('placeholder', function(){
 
-  return !!( 'placeholder' in ( Modernizr.input    || document.createElement('input')    ) && 
+  return !!( 'placeholder' in ( Modernizr.input    || document.createElement('input')    ) &&
              'placeholder' in ( Modernizr.textarea || document.createElement('textarea') )
            );
 

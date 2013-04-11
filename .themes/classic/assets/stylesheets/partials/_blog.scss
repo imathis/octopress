@@ -79,8 +79,8 @@ article {
       @extend .separator;
     }
     p:last-child { margin-bottom: 0; }
-    .comments-link { 
-      font-size: .8em; 
+    .comments-link {
+      font-size: .8em;
       color: inherit;
       &:hover, &:focus { color: $link-color-hover; }
     }

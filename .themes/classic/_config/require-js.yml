@@ -7,7 +7,7 @@
 
 require_js:
   # Dependiences are added first as globals
-  globals: 
+  globals:
     - lib/modernizr.js
     - lib/swfobject-dynamic.js
     - lib/*.*
