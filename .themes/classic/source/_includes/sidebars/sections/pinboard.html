@@ -1,6 +1,6 @@
 {% if site.pinboard.user %}
 <section>
   <h1>Pinboard</h1>
-  <script language="javascript" src="http://pinboard.in//widgets/v1/linkroll/?user={{ site.pinboard.user }}&count={{ site.pinboard.count }}"></script>
+  <div id="pinboard_linkroll" data-pinboard-user="{{ site.pinboard.user }}" data-pinboard-count="{{ site.pinboard.count }}"></div>
 </section>
 {% endif %}
