@@ -9,14 +9,15 @@ categories:
   - eduardo fiorezi
   - estimativas
   - sprint
+  
 ---
 ![http://www.flickr.com/photos/mermadon_1967/3682014732/sizes/l/in/photostream/](/images/posts/2013-04-12-estimar-e-colocar-o-peso-ideal-de-trabalho-em-cada-sprint.jpg)
 
-Imagine a seguinte situação, você pretende escalar uma montanha e deve levar apenas uma mochila, essa montanha é bem difícil e perigosa, nesta situação você levaria uma mochila pesada ou uma mochila leve?
+Imagine a seguinte situação: você pretende escalar uma montanha, bem difícil e perigosa, e deve levar apenas uma mochila. Nesta situação, você levaria uma mochila pesada ou uma mochila leve?
 
 <!-- more -->
 
-Agora imagine que essa montanha difícil é um produto de software que você quer criar e empreender, sabemos o quanto é dificil criar um sistema e faze-lo virar um sucesso, quantas pessoas no mundo conseguem alcançar o objetivo de escalar uma grande montanha ou criar um software de sucesso?
+Agora imagine que essa montanha difícil é um produto de software que você quer criar e empreender. Sabemos o quanto é dificil criar um sistema e fazê-lo virar um sucesso. Quantas pessoas no mundo conseguem alcançar o objetivo de escalar uma grande montanha ou criar um software?
 
 Quero que você pense agora sobre o tamanho desta mochila, pois acredito que os passos para criação de software exigem pequenos passos e quanto menos peso seu time carregar mais tranquilo e garantido será para atingir o objetivo final. Quanto mais coisas desnecessárias você decidir levar na mochila maior será sua chance de desistir no caminho.
 
