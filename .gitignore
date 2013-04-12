@@ -18,5 +18,4 @@
 /vendor
 /lib/vendor
 node_modules
-/.preview-mode
 /_config.yml
