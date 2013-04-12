@@ -257,7 +257,7 @@ end
 
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache, and Compass-generated files."
 task :clean do
-  rm_rf [".pygments-cache", ".gist-cache"]
+  rm_rf [".pygments-cache", ".gist-cache", File.join(configuration[:source], "javascripts", "build")]
   system "compass clean"
   puts "## Cleaned Compass-generated files, and various caches ##"
 end
@@ -265,6 +265,7 @@ end
 desc "Remove generated files (#{configuration[:destination]} directory)."
 task :clobber do
   rm_rf [configuration[:destination]]
+  puts "## Cleaned generated site in #{configuration[:destination]} ##"
 end
 
 desc "Update theme source and style"
