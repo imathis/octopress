@@ -656,6 +656,10 @@ end
 
 desc "Deploy website via s3cmd"
 task :s3cmd do
+  unless `which s3cmd`.strip.end_with?('/s3cmd')
+    puts "ERROR: You must install s3cmd first.  On OS X this can be done via MacPorts or Homebrew.  On other OSs, consult the relevant package manager.".red
+    exit 1
+  end
   exclude = ""
   if File.exists?('./s3cmd-exclude')
     exclude = "--exclude-from='#{File.expand_path('./s3cmd-exclude')}'"
