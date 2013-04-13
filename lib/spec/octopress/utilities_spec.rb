@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require_relative '../../octopress'
+require "spec_helper"
 
 describe Octopress::Utilities do
   describe '#time_in_timezone' do
@@ -7,7 +6,7 @@ describe Octopress::Utilities do
       Octopress::Utilities
     end
 
-    describe "when provided valid parameters in any timezone" do
+    context "when provided valid parameters in any timezone" do
       before do
         @old_tz = ENV['TZ']
       end
@@ -76,17 +75,17 @@ describe Octopress::Utilities do
       it "correctly converts from any timezone, to any timezone" do
         TIMEZONES.each do |base_tzname|
           base_tz = TZInfo::Timezone.get(base_tzname)
-          base_tz.wont_be_nil
+          base_tz.should_not be_nil
           ENV['TZ'] = base_tzname
           baseline = Time.local(2013, 1, 1, 0, 0, 0)
           TIMEZONES.each do |local_tzname|
             local_tz = TZInfo::Timezone.get(local_tzname)
-            local_tz.wont_be_nil
+            local_tz.should_not be_nil
             ENV['TZ'] = local_tzname
             local = Time.local(2013, 1, 1, 0, 0, 0)
             offset_seconds = (baseline - local).to_i
             expected_result = baseline - offset_seconds
-            subject.time_in_timezone(local, base_tzname).must_equal(baseline - offset_seconds)
+            subject.time_in_timezone(local, base_tzname).should eq(baseline - offset_seconds)
           end
         end
       end

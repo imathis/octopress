@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require_relative '../../octopress'
+require "spec_helper"
 
 describe Octopress::Templates do
   describe '#post' do
@@ -28,21 +27,21 @@ describe Octopress::Templates do
       Octopress::Templates
     end
 
-    describe "when provided valid parameters" do
+    context "when provided valid parameters" do
       it "creates a post based on the given timestamp and title" do
-        File.read(subject.post(*params)).wont_be_empty
+        File.read(subject.post(*params)).should_not be_empty
       end
     end
 
-    describe "when given a callback" do
+    context "when given a callback" do
       it "allows the callback to prevent overwriting existing files" do
         fname = post
 
-        lambda do
+        expect do
           subject.post(*params) { |filename| false }
-        end.must_raise(RuntimeError)
+        end.to raise_error(RuntimeError)
 
-        File.read(fname).must_equal(ALTERED_CONTENT)
+        File.read(fname).should eq(ALTERED_CONTENT)
       end
 
       it "allows the callback to allow overwriting existing files" do
@@ -50,19 +49,19 @@ describe Octopress::Templates do
 
         subject.post(*params) { |filename| true }
 
-        File.read(fname).wont_equal(ALTERED_CONTENT)
+        File.read(fname).should_not eq(ALTERED_CONTENT)
       end
     end
 
-    describe "when not given a callback" do
+    context "when not given a callback" do
       it "prevents overwriting existing files" do
         fname = post
 
-        lambda do
+        expect do
           subject.post(*params)
-        end.must_raise(RuntimeError)
+        end.to raise_error(RuntimeError)
 
-        File.read(fname).must_equal(ALTERED_CONTENT)
+        File.read(fname).should eq(ALTERED_CONTENT)
       end
     end
   end
