@@ -660,6 +660,14 @@ task :s3cmd do
     puts "ERROR: You must install s3cmd first.  On OS X this can be done via MacPorts or Homebrew.  On other OSs, consult the relevant package manager.".red
     exit 1
   end
+  if configuration[:destination].nil? || configuration[:destination] == ''
+    puts "ERROR: You must specify the 'destination' configuration setting.  This specifies where the 'generate' task will compile your site to.  A value of 'public' is typical.".red
+    exit 1
+  end
+  if configuration[:s3_path].nil? || configuration[:s3_path] == ''
+    puts "ERROR: You must specify the 's3_path' configuration setting.  This specifies the bucket where your site will be synced to.  The format is 's3://<bucket_name>/'.".red
+    exit 1
+  end
   exclude = ""
   if File.exists?('./s3cmd-exclude')
     exclude = "--exclude-from='#{File.expand_path('./s3cmd-exclude')}'"
