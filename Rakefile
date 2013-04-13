@@ -654,18 +654,32 @@ def now_in_timezone(timezone)
   time
 end
 
+S3CMD_NO_S3CMD_ERROR=[
+  "ERROR: You must install s3cmd first.  On OS X this can be done via MacPorts",
+  "ERROR: or Homebrew.  On other OSs, consult the relevant package manager."
+].join("\n").red
+S3CMD_DESTINATION_ERROR=[
+  "ERROR: You must specify the 'destination' configuration setting.  This",
+  "ERROR: specifies where the 'generate' task will compile your site to.  A",
+  "ERROR: value of 'public' is typical."
+].join("\n").red
+S3CMD_S3PATH_ERROR=[
+  "ERROR: You must specify the 's3_path' configuration setting.  This",
+  "ERROR: specifies the bucket where your site will be synced to.  The format",
+  "ERROR: is 's3://<bucket_name>/'."
+].join("\n").red
 desc "Deploy website via s3cmd"
 task :s3cmd do
   unless `which s3cmd`.strip.end_with?('/s3cmd')
-    puts "ERROR: You must install s3cmd first.  On OS X this can be done via MacPorts or Homebrew.  On other OSs, consult the relevant package manager.".red
+    puts S3CMD_NO_S3CMD_ERROR
     exit 1
   end
   if configuration[:destination].nil? || configuration[:destination] == ''
-    puts "ERROR: You must specify the 'destination' configuration setting.  This specifies where the 'generate' task will compile your site to.  A value of 'public' is typical.".red
+    puts S3CMD_DESTINATION_ERROR
     exit 1
   end
   if configuration[:s3_path].nil? || configuration[:s3_path] == ''
-    puts "ERROR: You must specify the 's3_path' configuration setting.  This specifies the bucket where your site will be synced to.  The format is 's3://<bucket_name>/'.".red
+    puts S3CMD_S3PATH_ERROR
     exit 1
   end
   exclude = ""
@@ -676,7 +690,9 @@ task :s3cmd do
   destination = ensure_trailing_slash(configuration[:destination])
   s3path = ensure_trailing_slash(configuration[:s3_path])
   puts "Uploading new/changed files..."
-  ok_failed system("s3cmd --acl-public #{exclude} --progress sync #{destination} #{s3path}")
+  ok_failed system("s3cmd", "--acl-public", exclude, "--progress", "sync",
+    destination, s3path)
   puts "Removing defunct files..."
-  ok_failed system("s3cmd --acl-public --skip-existing --delete-removed #{exclude} --progress sync #{destination} #{s3path}")
+  ok_failed system("s3cmd", "--acl-public", "--skip-existing",
+    "--delete-removed", exclude, "--progress", "sync", destination, s3path)
 end
