@@ -399,7 +399,7 @@ end
 # going to production -- unless the user has explicitly instructed us
 # otherwise.
 task :set_deployment_environment do
-  ENV['OCTOPRESS_ENV'] = 'production' unless(ENV['OCTOPRESS_ENV'])
+  ENV['OCTOPRESS_ENV'] = 'production' unless ENV['OCTOPRESS_ENV']
   configuration  = configurator.read_configuration
 end
 
