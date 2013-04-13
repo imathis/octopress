@@ -13,18 +13,19 @@ require 'colors'
 require 'open3'
 
 ### Configuring Octopress:
-###   Under _config/ you will find:
-###       site.yml, deploy.yml
+###   After running 'rake install', under _config/ you will find:
+###       site.yml, deploy.yml, environments/development.yml, and
+###       environments/production.yml
 ###   Here you can override Octopress's default configurations or add your own.
 ###   This Rakefile uses those config settings to do what it does.
 ###   Please do not change anything below if you want help --
 ###   otherwise, you're on your own ;-)
 
-configurator = Octopress.configurator
+configurator   = Octopress.configurator
 configuration  = Octopress.configuration
 full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
 
-desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
+desc "Initial setup for Octopress: generates per-environment configs, and copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
   theme = args.theme || 'classic'
   theme_configuration = configurator.read_theme_configuration(theme)
@@ -55,8 +56,7 @@ task :install_configs, :theme do |t, args|
 
 EOF
     File.open('_config/site.yml', 'w') { |f| f.write user_config_site }
-  end
-  unless File.exist?('_config/deploy.yml')
+
     user_config_deploy = <<-EOF
 ---
 # -------------------------- #
@@ -66,6 +66,46 @@ EOF
 deploy_method: rsync
 EOF
     File.open('_config/deploy.yml', 'w') { |f| f.write user_config_deploy }
+  end
+
+  mkdir_p "_config/environments"
+  unless File.exist?('_config/environments/production.yml')
+    production_config = <<-EOF
+---
+assets:
+  #
+  # Include source line comments in compiled SASS?
+  #
+  line_comments: true
+  #
+  # Compass CSS minification behavior.  Values are:
+  # * nested
+  # * expanded (recommended for development)
+  # * compact
+  # * compressed (recommended for production)
+  #
+  output_style: compressed
+EOF
+    File.open('_config/environments/production.yml', 'w') { |f| f.write production_config }
+  end
+  unless File.exist?('_config/environments/development.yml')
+    development_config = <<-EOF
+---
+assets:
+  #
+  # Include source line comments in compiled SASS?
+  #
+  line_comments: false
+  #
+  # Compass CSS minification behavior.  Values are:
+  # * nested
+  # * expanded (recommended for development)
+  # * compact
+  # * compressed (recommended for production)
+  #
+  output_style: expanded
+EOF
+    File.open('_config/environments/development.yml', 'w') { |f| f.write development_config }
   end
 end
 
@@ -109,8 +149,8 @@ end
 # Working with Jekyll #
 #######################
 
-desc "Generate jekyll site"
-task :generate do
+desc "Generate jekyll site (defaults to production mode)"
+task :generate => [:set_deployment_environment] do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." if configuration[:source].nil? || !File.directory?(configuration[:source])
   configurator.write_configs_for_generation
   puts "## Generating Site with Jekyll - ENV: #{Octopress.env}"
@@ -124,7 +164,7 @@ task :generate do
 end
 
 # usage rake generate_only[my-post]
-desc "Generate only the specified post (much faster)"
+desc "Generate only the specified post (much faster; defaults to development mode)"
 task :generate_only, :filename do |t, args|
   if args.filename
     filename = args.filename
@@ -356,13 +396,21 @@ end
 # Deploying  #
 ##############
 
+# Unpublicized helper task to ensure that at deploy-time we act like we're
+# going to production -- unless the user has explicitly instructed us
+# otherwise.
+task :set_deployment_environment do
+  ENV['OCTOPRESS_ENV'] = 'production' unless ENV['OCTOPRESS_ENV']
+  configuration  = configurator.read_configuration
+end
+
 desc "Default deploy task"
-task :deploy do
+task :deploy => :set_deployment_environment do
   Rake::Task["#{configuration[:deploy_default]}"].execute
 end
 
 desc "Generate website and deploy"
-task :gen_deploy => [:integrate, :generate, :deploy] do
+task :gen_deploy => [:integrate, :set_deployment_environment, :generate, :deploy] do
 end
 
 def ensure_trailing_slash(val)
