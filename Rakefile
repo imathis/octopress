@@ -656,17 +656,17 @@ end
 
 S3CMD_NO_S3CMD_ERROR=[
   "ERROR: You must install s3cmd first.  On OS X this can be done via MacPorts",
-  "ERROR: or Homebrew.  On other OSs, consult the relevant package manager."
+  "or Homebrew.  On other OSs, consult the relevant package manager."
 ].join("\n").red
 S3CMD_DESTINATION_ERROR=[
   "ERROR: You must specify the 'destination' configuration setting.  This",
-  "ERROR: specifies where the 'generate' task will compile your site to.  A",
-  "ERROR: value of 'public' is typical."
+  "specifies where the 'generate' task will compile your site to.  A",
+  "value of 'public' is typical."
 ].join("\n").red
 S3CMD_S3PATH_ERROR=[
   "ERROR: You must specify the 's3_path' configuration setting.  This",
-  "ERROR: specifies the bucket where your site will be synced to.  The format",
-  "ERROR: is 's3://<bucket_name>/'."
+  "specifies the bucket where your site will be synced to.  The format",
+  "is 's3://<bucket_name>/'."
 ].join("\n").red
 desc "Deploy website via s3cmd"
 task :s3cmd do
