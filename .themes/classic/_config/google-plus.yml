@@ -11,3 +11,4 @@ googleplus:
 
   # Google+ Sharing
   plus_one: false
+  plus_one_size: 32
