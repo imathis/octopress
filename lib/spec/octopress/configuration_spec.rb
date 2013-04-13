@@ -41,7 +41,7 @@ end
 
 describe Octopress::Configuration do
   describe '#read_configuration' do
-    describe "when no override" do
+    context "when no override" do
       before do
         @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'no_override'))
       end
@@ -58,7 +58,7 @@ describe Octopress::Configuration do
       end
     end
 
-    describe "when override" do
+    context "when override" do
       before do
         @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'override'))
       end
