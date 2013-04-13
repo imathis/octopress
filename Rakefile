@@ -690,9 +690,10 @@ task :s3cmd do
   destination = ensure_trailing_slash(configuration[:destination])
   s3path = ensure_trailing_slash(configuration[:s3_path])
   puts "Uploading new/changed files..."
-  ok_failed system("s3cmd", "--acl-public", exclude, "--progress", "sync",
-    destination, s3path)
+  ok_failed system(["s3cmd", "--acl-public", exclude, "--progress", "sync",
+    destination, s3path].join(" "))
   puts "Removing defunct files..."
-  ok_failed system("s3cmd", "--acl-public", "--skip-existing",
-    "--delete-removed", exclude, "--progress", "sync", destination, s3path)
+  ok_failed system(["s3cmd", "--acl-public", "--skip-existing",
+    "--delete-removed", exclude, "--progress", "sync", destination,
+    s3path].join(" "))
 end
