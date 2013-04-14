@@ -42,12 +42,26 @@ module Octopress
   end
 
   class Configuration
+    # The active configuration directory.
     attr_accessor :config_directory
 
+    # Initialize a new Configuration instance.  By default this will read files
+    # from the directory produced by `Octopress.default_config_root`, but that
+    # can be overridden.
+    #
+    # config_dir - If specified, the directory to use for configuration files.
+    # May be either absolute, or relative to the project root.
     def initialize(config_dir = Octopress.default_config_root)
       self.config_directory = File.expand_path(config_dir)
     end
 
+    # Returns an absolute path to the active configuration directory, or a
+    # subdirectory thereof.
+    #
+    # subdirs - Each parameter to this function is treated as a sub-directory
+    # of the active configuration directory.
+    #
+    # Returns an absolute path to the specified configuration directory.
     def config_dir(*subdirs)
       File.absolute_path(File.join(self.config_directory, *subdirs))
     end
