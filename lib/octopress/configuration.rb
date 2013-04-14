@@ -97,10 +97,10 @@ module Octopress
     #
     # path - the String path to the configuration file, relative to ./_config
     # obj  - the object to be dumped into the specified file in YAML form
-    #
-    # Returns the Hash for the configuration file.
     def write_config(path, obj)
-      YAML.dump(obj.to_string_keys, File.open(self.config_dir(path), 'w'))
+      File.open(self.config_dir(path), 'w') do
+        YAML.dump(obj.to_string_keys, fh)
+      end
     end
 
     # Reads all the configuration files into one hash.
