@@ -40,6 +40,7 @@ describe Octopress::Configuration do
                             :subtitle      => "A blogging framework for hackers.",
                             :author        => "Your Name",
                             :simple_search => "http://google.com/search",
+                            :env           => "development",
                             :description   => nil }
         configuration.should eq(expected_config)
       end
@@ -57,6 +58,7 @@ describe Octopress::Configuration do
                             :subtitle      => "How did this get here? I'm not good with computers",
                             :author        => "John Doe",
                             :simple_search => "http://google.com/search",
+                            :env           => "development",
                             :description   => nil }
         configuration.should eq(expected_config)
       end
