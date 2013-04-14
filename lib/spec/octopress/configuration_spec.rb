@@ -3,23 +3,28 @@ require "spec_helper"
 describe Octopress do
   include Octopress::Test::Environment
 
-  describe ".configurator" do
-    it "should accept a path pointing to a config directory" do
-      Octopress.configurator(File.join(File.dirname(__FILE__), '../', 'fixtures', 'env'))
+  CONFIG_PATH_OVERRIDE = File.join(File.dirname(__FILE__), '../', 'fixtures', 'no_override')
+  before do
+    Octopress.configurator(CONFIG_PATH_OVERRIDE)
+  end
 
-      Octopress.env.should eq('config_specified_environment')
+  describe ".configurator" do
+    subject do
+      Octopress.configurator
+    end
+
+    it "should use the path it was initialized with for its configuration" do
+      subject.config_dir.should eq(File.expand_path(CONFIG_PATH_OVERRIDE))
     end
   end
 
   describe ".configuration" do
-    before do
-      Octopress.configurator(File.join(File.dirname(__FILE__), '../', 'fixtures', 'env'))
+    subject do
+      Octopress.configuration[:title]
     end
 
-    let(:configuration) { Octopress.configuration }
-
     it "should provide access to the specified configuration" do
-      configuration[:env].should eq('config_specified_environment')
+      should eq('My Octopress Blog')
     end
   end
 end
