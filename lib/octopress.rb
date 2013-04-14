@@ -13,6 +13,10 @@ module Octopress
     File.dirname(__FILE__)
   end
 
+  def self.plugin_root
+    File.expand_path(File.join(self.lib_root, '..', 'plugins'))
+  end
+
   # Static: Fetches the Octopress environment
   def self.env
     # Not simply memoizing the result in case the configuration changes out
