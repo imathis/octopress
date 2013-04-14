@@ -88,6 +88,10 @@ delicious_count: 3
 disqus_short_name:
 disqus_show_comment_count: false
 
+# Juvia Comments
+juvia_site_key:
+juvia_host: juvia.yourhostnamehere.com
+
 # Google Analytics
 google_analytics_tracking_id:
 
