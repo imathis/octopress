@@ -8,7 +8,7 @@ module Octopress
   # found.
   #
   # Returns an instance of Octopress::Configuration.
-  def self.configurator(root_dir = Octopress::Configuration::DEFAULT_CONFIG_DIR)
+  def self.configurator(root_dir = Octopress.default_config_root)
     @configurator ||= Configuration.new(root_dir)
   end
 
@@ -42,10 +42,9 @@ module Octopress
   end
 
   class Configuration
-    DEFAULT_CONFIG_DIR = File.join(File.dirname(__FILE__), '../', '../' '_config')
     attr_accessor :config_directory
 
-    def initialize(config_dir = DEFAULT_CONFIG_DIR)
+    def initialize(config_dir = Octopress.default_config_root)
       self.config_directory = File.expand_path(config_dir)
     end
 
@@ -63,7 +62,7 @@ module Octopress
     #
     # Returns an absolute path to the specified location.
     def theme_config_dir(theme, *subdirs)
-      File.absolute_path(File.join(File.dirname(__FILE__), '../', '../' '.themes', theme, '_config', *subdirs))
+      File.absolute_path(File.join(Octopress.themes_root, theme, '_config', *subdirs))
     end
 
     # Reads the configuration of the specified file.
