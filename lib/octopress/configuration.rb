@@ -5,8 +5,16 @@ module Octopress
     @configurator ||= Configuration.new(root_dir)
   end
 
-  def self.configuration
-    @configuration ||= self.configurator.read_configuration
+  def self.configuration(default_environment = nil)
+    # If we're being given a hint about using an environment other than the one
+    # presently active, wipe the memoization and let the configs be re-read.
+    #
+    # This may be a *touch* wasteful, but ensures proper semantics across the
+    # board.
+    if(@configuration && default_environment != @configuration[:env])
+      @configuration = nil
+    end
+    @configuration ||= self.configurator.read_configuration(default_environment)
   end
 
   def self.clear_config!
@@ -68,7 +76,7 @@ module Octopress
     # Static: Reads all the configuration files into one hash
     #
     # Returns a Hash of all the configuration files, with each key being a symbol
-    def read_configuration
+    def read_configuration(default_environment = nil)
       configs = {}
       Dir.glob(self.config_dir('defaults', '**', '*.yml')) do |filename|
         file_yaml = read_config(filename)
@@ -78,8 +86,16 @@ module Octopress
         file_yaml = read_config(filename)
         configs = configs.deep_merge(file_yaml)
       end
-      env = ENV["OCTOPRESS_ENV"] || configs[:env]
-      configs[:env] = env if(env)
+      env = ENV["OCTOPRESS_ENV"] || default_environment || 'development'
+      if(env)
+        configs[:env] = env
+        # If we don't have an explicit OCTOPRESS_ENV and we DO have an explicit
+        # hint about what the environment should default to, then set
+        # OCTOPRESS_ENV so downstream processes will see the right value.
+        # However, don't bother setting it if we weren't given a hint and just
+        # fell through to the last-resort fallback.
+        ENV['OCTOPRESS_ENV'] = env if(default_environment)
+      end
       env_path = self.config_dir('environments', "#{configs[:env]}.yml")
       if(File.exist?(env_path))
         file_yaml = YAML.load(File.read(env_path))

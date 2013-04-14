@@ -25,7 +25,6 @@ pygments:     false           # Jekyll's default Python Pygments have been repla
 include:
   - .htaccess
 
-env:            production    # affects asset compilation
 post_index_dir: source        # directory for your posts index page (if you put your index in source/blog/index.html, set this to 'source/blog')
 stash_dir:      _stash        # directory to stash posts for speedy generation
 posts_dir:      _posts        # directory for blog files
