@@ -6,14 +6,17 @@ require "octopress/inquirable_string"
 require "octopress/js_asset_manager"
 
 module Octopress
-  # Static: Get absolute file path of the octopress lib directory
+  # Static: Get absolute file path of the octopress lib directory.
   #
-  # Returns the absolute path to the octopress lib directory
+  # Returns the absolute path to the octopress lib directory.
   def self.lib_root
     File.dirname(__FILE__)
   end
 
-  # Static: Fetches the Octopress environment
+  # Static: Fetches the Octopress environment.
+  #
+  # Returns an object that can be queried for the environment by treating it as
+  # a string, a symbol, or using a Rails-style `.foo?` method call.
   def self.env
     # Not simply memoizing the result in case the configuration changes out
     # from under us at runtime...  Not sure if that can happen, but just in

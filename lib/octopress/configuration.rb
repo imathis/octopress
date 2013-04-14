@@ -1,10 +1,24 @@
 require 'yaml'
 
 module Octopress
+  # Static: Retrieve an object that can read and write configuration files from
+  # the specified configuration directory.
+  #
+  # root_dir - Optional.  Where the hierarchy of configuration files can be
+  # found.
+  #
+  # Returns an instance of Octopress::Configuration.
   def self.configurator(root_dir = Octopress::Configuration::DEFAULT_CONFIG_DIR)
     @configurator ||= Configuration.new(root_dir)
   end
 
+  # Static: Retrieve the presently-loaded configuration, loading it if it has
+  # not been loaded already.
+  #
+  # default_environment - What environment to use if the OCTOPRESS_ENV
+  # environment variable is not set.  If `nil`, then defaults to `development`.
+  #
+  # Returns a hierarchical Hash structure whose keys are all symbols.
   def self.configuration(default_environment = nil)
     # If we're being given a hint about using an environment other than the one
     # presently active, wipe the memoization and let the configs be re-read.
@@ -17,6 +31,11 @@ module Octopress
     @configuration ||= self.configurator.read_configuration(default_environment)
   end
 
+  # Static: Wipe loaded configurations.  This will NOT wipe any instances of
+  # Octopress::Configuration or the configuration hash that you have already
+  # grabbed a reference to.  It will only ensure that subsequent calls to
+  # `Octopress.configurator` and `Octopress.configuration` start from a clean
+  # slate.
   def self.clear_config!
     @configurator = nil
     @configuration = nil
@@ -34,15 +53,26 @@ module Octopress
       File.absolute_path(File.join(self.config_directory, *subdirs))
     end
 
+    # Returns an absolute path to the configuration directory for the specified
+    # theme.
+    #
+    # theme   - The name of the theme.
+    # subdirs - If you want to specify a subdirectory within the theme's config
+    # directory, specify each element of the path as an extra parameter.
+    # e.g. `theme_config_dir('my_theme', 'subdir_1', 'subdir_2')`.
+    #
+    # Returns an absolute path to the specified location.
     def theme_config_dir(theme, *subdirs)
       File.absolute_path(File.join(File.dirname(__FILE__), '../', '../' '.themes', theme, '_config', *subdirs))
     end
 
-    # Static: Reads the configuration of the specified file
+    # Reads the configuration of the specified file.
     #
-    # path - the String path to the configuration file, relative to ./_config
+    # path - the String path to the configuration file. This is treated as
+    # an absolute path if it begins with `/`, otherwise it is treated as
+    # relative to `./_config`.
     #
-    # Returns a Hash of the items in the configuration file (symbol keys)
+    # Returns a hierarchical Hash structure whose keys are all symbols.
     def read_config(path)
       full_path = path.start_with?('/') ? path : self.config_dir(path)
       if File.exists? full_path
@@ -63,7 +93,8 @@ module Octopress
       end
     end
 
-    # Static: Writes the contents of a set of configurations to a path in the config directory
+    # Writes the contents of a set of configurations to a path in the config
+    # directory.
     #
     # path - the String path to the configuration file, relative to ./_config
     # obj  - the object to be dumped into the specified file in YAML form
@@ -73,9 +104,10 @@ module Octopress
       YAML.dump(obj.to_string_keys, File.open(self.config_dir(path), 'w'))
     end
 
-    # Static: Reads all the configuration files into one hash
+    # Reads all the configuration files into one hash.
     #
-    # Returns a Hash of all the configuration files, with each key being a symbol
+    # Returns a Hash of all the configuration files, with each key being a
+    # symbol.
     def read_configuration(default_environment = nil)
       configs = {}
       Dir.glob(self.config_dir('defaults', '**', '*.yml')) do |filename|
@@ -107,9 +139,10 @@ module Octopress
       configs.to_symbol_keys
     end
 
-    # Static: Reads all the theme's configuration files into one hash
+    # Reads all the theme's configuration files into one hash.
     #
-    # Returns a Hash of all the configuration files, with each key being a symbol
+    # Returns a Hash of all the configuration files, with each key being a
+    # symbol.
     def read_theme_configuration(theme)
       configs = {}
       Dir.glob(self.theme_config_dir(theme, '**', '*.yml')) do |filename|
@@ -122,9 +155,10 @@ module Octopress
       configs.to_symbol_keys
     end
 
-    # Static: Writes configuration files necessary for generation of the Jekyll site
+    # Writes configuration files necessary for generation of the Jekyll site.
     #
-    # Returns a Hash of the items which were written to the Jekyll configuration file
+    # Returns a Hash of the items which were written to the Jekyll
+    # configuration file.
     def write_configs_for_generation
       jekyll_configs = {}
       File.open("_config.yml", "w") do |f|
@@ -135,9 +169,9 @@ module Octopress
       jekyll_configs
     end
 
-    # Static: Removes configuration files required for site generation
+    # Removes configuration files required for site generation.
     #
-    # Returns the number of files deleted
+    # Returns the number of files deleted, which should always be 1.
     def remove_configs_for_generation
       File.unlink("_config.yml")
     end
