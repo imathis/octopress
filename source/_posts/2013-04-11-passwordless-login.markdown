@@ -160,6 +160,6 @@ end
 
 E isso já faz o login sem senha funcionar. O usuário se cadastra, recebe um link por email, clica no link, se loga e é redirecionado para a action que requer autenticação.
 
-Eu fiz uma aplicação exemplo que pode ser acessada [clicando aqui](http://passwordless-app.herokuapp.com) e o código também está no [GitHub](https://github.com/matheusbras/passwordless-app) com todos os testes. Sintam-se à vontade para mandar pull requests, issues e perguntas.
+Eu fiz uma aplicação exemplo que pode ser acessada [clicando aqui](http://passwordless.herokuapp.com) e o código também está no [GitHub](https://github.com/matheusbras/passwordless-app) com todos os testes. Sintam-se à vontade para mandar pull requests, issues e perguntas.
 
 Obrigado pela sua atenção e abraços!
