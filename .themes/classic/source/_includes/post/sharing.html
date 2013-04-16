@@ -4,9 +4,9 @@
       <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
     {% else %}
       {% if post.title %}
-        <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ post.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ post.url }}" >Tweet</a>
+          <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ post.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ post.url }}" data-size="{{ site.twitter_tweet_button_size }}" >Tweet</a>
       {% else %}
-        <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" >Tweet</a>
+        <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" data-size="{{ site.twitter_tweet_button_size }}" >Tweet</a>
       {% endif %}
     {% endif %}
   {% endif %}
