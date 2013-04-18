@@ -16,17 +16,18 @@ deploy_branch  = "gh-pages"
 
 ## -- Misc Configs -- ##
 
-public_dir      = "public"    # compiled site directory
-source_dir      = "source"    # source file directory
-blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
-deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
-stash_dir       = "_stash"    # directory to stash posts for speedy generation
-posts_dir       = "_posts"    # directory for blog files
-themes_dir      = ".themes"   # directory for blog files
-new_post_ext    = "markdown"  # default new post file extension when using the new_post task
-new_page_ext    = "markdown"  # default new page file extension when using the new_page task
-server_port     = "4000"      # port for preview server eg. localhost:4000
-
+public_dir      = "public"          # compiled site directory
+source_dir      = "source"          # source file directory
+blog_index_dir  = 'source'          # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
+deploy_dir      = "_deploy"         # deploy directory (for Github pages deployment)
+stash_dir       = "_stash"          # directory to stash posts for speedy generation
+posts_dir       = "_posts"          # directory for blog files
+themes_dir      = ".themes"         # directory for blog files
+new_post_ext    = "markdown"        # default new post file extension when using the new_post task
+new_page_ext    = "markdown"        # default new page file extension when using the new_page task
+server_port     = "4000"            # port for preview server eg. localhost:4000
+category_list   = "_categories.yml" # default list of categories
+use_categories  = true              # if true, prints the categories in posts.
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
@@ -104,13 +105,18 @@ task :new_post, :title do |t, args|
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
   puts "Creating new post: #{filename}"
+  if use_categories and File.exist?(category_list)
+      categories = File.read(category_list)
+  else
+      categories = "\n"
+  end
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
     post.puts "comments: true"
-    post.puts "categories: "
+    post.puts "categories: #{categories}"
     post.puts "---"
   end
 end
