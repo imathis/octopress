@@ -1,12 +1,20 @@
 require 'yaml'
 
 module Octopress
-  def self.configurator(root_dir = Octopress::Configuration::DEFAULT_CONFIG_DIR)
+  def self.configurator(root_dir = Octopress.default_config_root)
     @configurator ||= Configuration.new(root_dir)
   end
 
-  def self.configuration
-    @configuration ||= self.configurator.read_configuration
+  def self.configuration(default_environment = nil)
+    # If we're being given a hint about using an environment other than the one
+    # presently active, wipe the memoization and let the configs be re-read.
+    #
+    # This may be a *touch* wasteful, but ensures proper semantics across the
+    # board.
+    if(@configuration && default_environment != @configuration[:env])
+      @configuration = nil
+    end
+    @configuration ||= self.configurator.read_configuration(default_environment)
   end
 
   def self.clear_config!
@@ -15,11 +23,11 @@ module Octopress
   end
 
   class Configuration
-    DEFAULT_CONFIG_DIR = File.join(File.dirname(__FILE__), '../', '../' '_config')
+    # The active configuration directory.
     attr_accessor :config_directory
 
-    def initialize(config_dir = DEFAULT_CONFIG_DIR)
-      self.config_directory = config_dir
+    def initialize(config_dir = Octopress.default_config_root)
+      self.config_directory = File.expand_path(config_dir)
     end
 
     def config_dir(*subdirs)
@@ -27,7 +35,7 @@ module Octopress
     end
 
     def theme_config_dir(theme, *subdirs)
-      File.absolute_path(File.join(File.dirname(__FILE__), '../', '../' '.themes', theme, '_config', *subdirs))
+      File.absolute_path(File.join(Octopress.themes_root, theme, '_config', *subdirs))
     end
 
     # Static: Reads the configuration of the specified file
@@ -36,7 +44,7 @@ module Octopress
     #
     # Returns a Hash of the items in the configuration file (symbol keys)
     def read_config(path)
-      full_path = self.config_dir(path)
+      full_path = path.start_with?('/') ? path : self.config_dir(path)
       if File.exists? full_path
         begin
           configs = YAML.load(File.open(full_path))
@@ -62,22 +70,37 @@ module Octopress
     #
     # Returns the Hash for the configuration file.
     def write_config(path, obj)
-      YAML.dump(obj.to_string_keys, File.open(self.config_dir(path), 'w'))
+      File.open(self.config_dir(path), 'w') do
+        YAML.dump(obj.to_string_keys, fh)
+      end
     end
 
     # Static: Reads all the configuration files into one hash
     #
     # Returns a Hash of all the configuration files, with each key being a symbol
-    def read_configuration
+    def read_configuration(default_environment = nil)
       configs = {}
       Dir.glob(self.config_dir('defaults', '**', '*.yml')) do |filename|
-        file_yaml = YAML.load(File.read(filename))
-        unless file_yaml.nil?
-          configs = file_yaml.deep_merge(configs)
-        end
+        file_yaml = read_config(filename)
+        configs = file_yaml.deep_merge(configs)
       end
       Dir.glob(self.config_dir('*.yml')) do |filename|
-        file_yaml = YAML.load(File.read(filename))
+        file_yaml = read_config(filename)
+        configs = configs.deep_merge(file_yaml)
+      end
+      env = ENV["OCTOPRESS_ENV"] || default_environment || 'development'
+      if(env)
+        configs[:env] = env
+        # If we don't have an explicit OCTOPRESS_ENV and we DO have an explicit
+        # hint about what the environment should default to, then set
+        # OCTOPRESS_ENV so downstream processes will see the right value.
+        # However, don't bother setting it if we weren't given a hint and just
+        # fell through to the last-resort fallback.
+        ENV['OCTOPRESS_ENV'] = env if(default_environment)
+      end
+      env_path = self.config_dir('environments', "#{configs[:env]}.yml")
+      if(File.exist?(env_path))
+        file_yaml = YAML.load(File.read(env_path))
         unless file_yaml.nil?
           configs = configs.deep_merge(file_yaml)
         end

@@ -1,45 +1,37 @@
 require "spec_helper"
 
 describe Octopress do
+  include Octopress::Test::Environment
+
+  CONFIG_PATH_OVERRIDE = File.join(File.dirname(__FILE__), '../', 'fixtures', 'no_override')
+  before do
+    Octopress.configurator(CONFIG_PATH_OVERRIDE)
+  end
+
   describe ".configurator" do
-    before do
-      Octopress.clear_config!
-      @old_env = ENV['OCTOPRESS_ENV']
-      ENV['OCTOPRESS_ENV'] = nil
+    subject do
+      Octopress.configurator
     end
 
-    after do
-      ENV['OCTOPRESS_ENV'] = @old_env
-    end
-
-    it "should accept a path pointing to a config directory" do
-      Octopress.configurator(File.join(File.dirname(__FILE__), '../', 'fixtures', 'env'))
-
-      Octopress.env.should eq('config_specified_environment')
+    it "should use the path it was initialized with for its configuration" do
+      subject.config_dir.should eq(File.expand_path(CONFIG_PATH_OVERRIDE))
     end
   end
 
   describe ".configuration" do
-    before do
-      Octopress.clear_config!
-      @old_env = ENV['OCTOPRESS_ENV']
-      ENV['OCTOPRESS_ENV'] = nil
-      Octopress.configurator(File.join(File.dirname(__FILE__), '../', 'fixtures', 'env'))
+    subject do
+      Octopress.configuration[:title]
     end
-
-    after do
-      ENV['OCTOPRESS_ENV'] = @old_env
-    end
-
-    let(:configuration) { Octopress.configuration }
 
     it "should provide access to the specified configuration" do
-      configuration[:env].should eq('config_specified_environment')
+      should eq('My Octopress Blog')
     end
   end
 end
 
 describe Octopress::Configuration do
+  include Octopress::Test::Environment
+
   describe '#read_configuration' do
     describe "when no override" do
       before do
@@ -53,6 +45,7 @@ describe Octopress::Configuration do
                             :subtitle      => "A blogging framework for hackers.",
                             :author        => "Your Name",
                             :simple_search => "http://google.com/search",
+                            :env           => "development",
                             :description   => nil }
         configuration.should eq(expected_config)
       end
@@ -70,6 +63,7 @@ describe Octopress::Configuration do
                             :subtitle      => "How did this get here? I'm not good with computers",
                             :author        => "John Doe",
                             :simple_search => "http://google.com/search",
+                            :env           => "development",
                             :description   => nil }
         configuration.should eq(expected_config)
       end
