@@ -17,3 +17,23 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 end
+
+module Octopress
+  module Test
+    module Environment
+      def self.included(target)
+        target.instance_eval do
+          before do
+            Octopress.clear_config!
+            @old_env = ENV['OCTOPRESS_ENV']
+            ENV['OCTOPRESS_ENV'] = nil
+          end
+
+          after do
+            ENV['OCTOPRESS_ENV'] = @old_env
+          end
+        end
+      end
+    end
+  end
+end
