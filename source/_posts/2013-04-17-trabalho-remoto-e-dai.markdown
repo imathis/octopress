@@ -2,7 +2,7 @@
 author: Rafael Fiuza
 layout: post
 title: "Trabalho remoto, e daí?"
-date: 2013-04-11 11:15
+date: 2013-04-18 11:00
 comments: true
 categories:
   - Rafael Fiuza
@@ -20,7 +20,7 @@ Desde o início dos meus trabalhos de desenvolvimento de softwares e web, eu já
 <!-- more -->
 Mas qual é a diferença? É bom? É mais facil?
  
-Tirando a conclusão óbvia de que trabalho remoto significa remoto, existem algumas diferenças, mas também, muitas semelhanças. É um tipo de trabalho como qualquer outro, porém com desafios e valores diferentes. 
+Tirando a conclusão óbvia de que trabalho remoto significa remoto, existem algumas diferenças, mas também, muitas semelhanças. É um tipo de trabalho como qualquer outro, porém, com desafios e valores diferentes. 
 
 No trabalho remoto, o empregador e seus colegas de trabalho precisam ter total confiança em você. E, como isto é uma situação atípica, o profissional remoto precisa fazer valer essa confiança depositada. Para quem gosta desse desafio, só tem a ganhar. E para a empresa que aposta, também.
 
@@ -42,7 +42,7 @@ Trabalho em maior parte, diretamente de casa. Tenho todo o meio-ambiente familia
 
 Isso nos leva para a proxima característica:
 
-#Disciplina.
+#Disciplina
 Não me entendam mal, uma das pessoas menos disciplinadas e mais desorganizadas que conheço sou eu. Sou filho de um militar que era altamente disciplinado. Essa foi uma característica que não herdei (nota pessoal: considerar a possibilidade de ter sido adotado). No entanto, acredito totalmente que a forma como a HE:labs trabalha torna mais fácil esse tipo de trabalho. Somos times pequenos, auto geridos de desenvolvimento ágil com tarefas definidas e adequadas ao escopo de trabalho. Nunca fui tão produtivo e focado ao mesmo tempo. Ever!
 
 E o porquê disso é o que nos leva ao terceiro ponto:
