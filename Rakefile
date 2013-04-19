@@ -180,6 +180,7 @@ task :new_post, :title do |t, args|
   time = now_in_timezone(configuration[:timezone])
   mkdir_p "#{configuration[:source]}/#{configuration[:posts_dir]}"
   filename = "#{configuration[:source]}/#{configuration[:posts_dir]}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{configuration[:new_post_ext]}"
+  category_list = "# #{configuration[:category_list]}" if configuration[:use_default_categories_in_new_post]
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -191,7 +192,7 @@ task :new_post, :title do |t, args|
     post.puts "date: #{time.iso8601}"
     post.puts "comments: true"
     post.puts "external-url: "
-    post.puts "categories: "
+    post.puts "categories: #{category_list}"
     post.puts "---"
   end
 end
@@ -221,6 +222,7 @@ task :new_page, :filename do |t, args|
     end
     puts "Creating new page: #{file}"
     time = now_in_timezone(configuration[:timezone])
+    category_list = "categories: # #{configuration[:category_list]}"
     open(file, 'w') do |page|
       page.puts "---"
       page.puts "layout: page"
@@ -229,6 +231,7 @@ task :new_page, :filename do |t, args|
       page.puts "comments: true"
       page.puts "sharing: true"
       page.puts "footer: true"
+      page.puts "#{category_list}" if configuration[:use_default_categories_in_new_page]
       page.puts "---"
     end
   else
