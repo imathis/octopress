@@ -1,4 +1,5 @@
 ---
+author: Rodrigo Pinto
 layout: post
 title: "Construindo um projeto de sucesso"
 date: 2013-03-01 16:00

@@ -1,4 +1,5 @@
 ---
+author: Matheus Bras
 layout: post
 title: "Passwordless Login"
 date: 2013-04-11 11:15
@@ -28,7 +29,7 @@ Uma solução proposta por Ben Brown neste [post](http://notes.xoxco.com/post/27
 
 # Como eu resolvi esse problema
 
-Então vamos ao código: 
+Então vamos ao código:
 
 Primeiro, criei um model User com os campos _email_ e _access_token_.
 

@@ -1,4 +1,5 @@
 ---
+author: Crystal Affonso
 layout: post
 title: "SEBRAE Startup Rio"
 date: 2013-04-04 07:45

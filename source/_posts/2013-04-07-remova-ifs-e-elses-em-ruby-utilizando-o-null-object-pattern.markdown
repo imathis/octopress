@@ -1,4 +1,5 @@
 ---
+author: Mauro George
 layout: post
 title: "Remova Ifs e Elses em Ruby utilizando o Null Object Pattern"
 date: 2013-04-07 11:16
@@ -8,7 +9,7 @@ categories:
   - ruby
   - OOP
   - Pattern
-  
+
 ---
 
 O [Null Object pattern](https://en.wikipedia.org/wiki/Null_object) tem como principal objetivo tratar o comportamento do valor `Null`, ou em ruby o `nil`.
@@ -16,7 +17,7 @@ Sabemos que em algum momento de nosso código podemos ter referências nulas, se
 
     NoMethodError: undefined method `name' for nil:NilClass
 
-<!-- more --> 
+<!-- more -->
 
 Vamos a um exemplo: Temos uma classe Game responsável pelas informações de um dado jogo e um classe Report, responsável por imprimir os dados deste tal jogo.
 
