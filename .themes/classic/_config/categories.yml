@@ -1,0 +1,6 @@
+use_default_categories_in_new_post: false
+use_default_categories_in_new_page: true
+category_list:
+- news
+- octopress
+- programming
