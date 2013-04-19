@@ -1,5 +1,5 @@
-use_default_categories_in_new_post: false
-use_default_categories_in_new_page: true
+use_default_categories_in_new_post: true
+use_default_categories_in_new_page: false
 category_list:
 - news
 - octopress
