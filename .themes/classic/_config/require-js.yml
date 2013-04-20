@@ -7,11 +7,13 @@
 
 require_js:
   # Dependiences are added first as globals
-  globals:
+  lib: 
     - lib/modernizr.js
-    - lib/swfobject-dynamic.js
-    - lib/*.*
+    - lib/**/*.*
 
-  # files from the javascripts root path are wrapped with CommonJS functions
+  # Modules are wrapped with CommonJS functions and must be
+  # Example:
+  #   for file: assets/javascripts/modules/some-plugin/awesome.js
+  #   require like: var awesome = require('some-plugin/awesome')
   modules:
-    - '*.*'
+    - modules/
