@@ -61,10 +61,16 @@ var octopress = (function(){
     , wrapFlashVideos: function () {
       $('object').each(function(i, object) {
         if( $(object).find('param[name=movie]').length ){
-          $(object).wrap('<div class="flash-video">')
+          o = $(object)
+          ratio = (o.height()/o.width()*100)+'%';
+          o.wrap('<div class="flash-video"><div style="padding-bottom: '+ratio+'">')
         }
       });
-      $('iframe[src*=vimeo],iframe[src*=youtube]').wrap('<div class="flash-video">')
+      $('iframe[src*=vimeo],iframe[src*=youtube]').each(function(i, video) {
+        v = $(video)
+        ratio = (v.height()/v.width()*100)+'%';
+        $(video).wrap('<div class="flash-video"><div style="padding-bottom: '+ratio+'">')
+      });
     }
   }
 })();
