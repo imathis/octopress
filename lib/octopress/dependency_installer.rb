@@ -1,3 +1,4 @@
+require 'uri'
 require 'open3'
 require 'fileutils'
 
@@ -17,11 +18,15 @@ module Octopress
         installer.install plugin
       end
     end
+
     INSTALL_DIR           = File.join(Dir.pwd, ".plugins")
     USERNAME_REPO_REGEXP  = /^([a-z0-9\-_]+)\/([a-z0-9\-_]+)$/
     OCTOPRESS_REPO_REGEXP = /^[a-z0-9\-_]+$/
-    GIT_REPO_REGEXP       = /^(git:\/\/|https:\/\/|git@)[a-z0-9.]+(\/|:)([a-z0-9\-_]+)\/([a-z0-9\-_]+)\.git/
+    GIT_REPO_REGEXP       = /^(git:\/\/|https:\/\/|git@)([a-z0-9.]+)(\/|:)([a-z0-9\-_]+)\/([a-z0-9\-_]+)\.git/
 
+    # Public: Create a new DependencyInstaller and initialize instance variables
+    #
+    # Returns nothing
     def initialize
       @plugins = Set.new
     end
@@ -39,6 +44,26 @@ module Octopress
       else
         plugin
       end
+    end
+
+    # Public: Gets the directory for local storage
+    #
+    # plugin - the plugin name
+    #
+    # Returns the directory for the plugin
+    def namespace(plugin)
+      url = git_url(plugin)
+      match = url.match(GIT_REPO_REGEXP)
+      if match[1] == "git@"
+        url = "git://#{match[2]}/#{match[4]}/#{match[5]}.git"
+      end
+      path = URI(url).path
+      path[/([a-z0-9\-_]+)\/([a-z0-9\-_]+)\.git$/]
+        .gsub(/\.git$/, '')
+        .gsub(/octopress\//, '')
+        .gsub(/\s+/, '-')
+        .gsub(/\//, '-')
+        .gsub(/-+/, '-')
     end
 
     # Public: builds full installation directory path for plugin
@@ -100,9 +125,9 @@ module Octopress
     # Returns an Array of file paths which were copied
     def copy_files(plugin)
       manifest_yml = manifest(plugin)
-      copy_javascript_files(plugin, manifest_yml["javascripts"])
-      copy_stylesheets_files(plugin, manifest_yml["stylesheets"])
-      copy_plugins_files(plugin, manifest_yml["plugins"])
+      copy_javascript_files(plugin, manifest_yml["javascripts"]) if manifest_yml["javascripts"]
+      copy_stylesheets_files(plugin, manifest_yml["stylesheets"]) if manifest_yml["stylesheets"]
+      copy_plugins_files(plugin, manifest_yml["plugins"]) if manifest_yml["plugins"]
     end
 
     # Public: install a plugin and its dependencies
@@ -111,9 +136,7 @@ module Octopress
     #
     # Returns the Array of all plugins installed so far
     def install(plugin)
-      deps = build_dependencies_tree(plugin)
-      puts deps
-      @plugins.merge(deps)
+      @plugins.merge(build_dependencies_tree(plugin))
       @plugins.each do |plugin|
         copy_files(plugin)
       end
@@ -128,10 +151,10 @@ module Octopress
     # file - the file destination relative to the Octopress installation root
     #
     # Returns nothing
-    def copy_file(plugin, file)
-      source = File.join(install_dir(plugin), file)
+    def copy_file(plugin, repo_files, file)
+      source = File.join(install_dir(plugin), repo_files)
       destination = File.join(Octopress.root, file)
-      FileUtils.cp_r source, destination
+      FileUtils.cp_r(source, destination)
     end
 
     # Private: Copy javascript files to local Octopress installation
@@ -159,7 +182,7 @@ module Octopress
     # Returns nothing
     def copy_stylesheets_files(plugin, files)
       [files].flatten.each do |file|
-        copy_file(plugin, file, File.join("assets", "stylesheets", "custom", file))
+        copy_file(plugin, file, File.join("assets", "stylesheets", "plugins", namespace(plugin)))
       end
     end
 
@@ -172,7 +195,7 @@ module Octopress
     # Returns nothing
     def copy_plugins_files(plugin, files)
       [files].flatten.each do |file|
-        copy_file(plugin, file, File.join(Octopress.configuration[:plugins], file))
+        copy_file(plugin, file, File.join(Octopress.configuration[:plugins], File.basename(file)))
       end
     end
   end
