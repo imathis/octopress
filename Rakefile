@@ -51,7 +51,7 @@ end
 
 task :install_configs, :theme do |t, args|
   theme = args.theme || 'classic'
-  mkdir_p "_config"
+  mkdir_p "config"
   if File.directory? ".themes/#{theme}/config"
     cp_r ".themes/#{theme}/config/.", "config/defaults", :remove_destination=>true
   end
