@@ -3,6 +3,7 @@ $:.unshift File.expand_path(File.dirname(__FILE__)) # For use/testing when no ge
 require "octopress/core_ext"
 require "octopress/configuration"
 require "octopress/inquirable_string"
+require "octopress/dependency_installer"
 require "octopress/js_asset_manager"
 
 module Octopress
@@ -13,7 +14,16 @@ module Octopress
     File.dirname(__FILE__)
   end
 
+  # Static: Get absolute file path of the main octopress installation
+  #
+  # Returns the absolute path of the main octopress installation
+  def self.root
+    File.dirname(lib_root)
+  end
+
   # Static: Fetches the Octopress environment
+  #
+  # Returns the Octopress environment as an InquirableString
   def self.env
     # Not simply memoizing the result in case the configuration changes out
     # from under us at runtime...  Not sure if that can happen, but just in
