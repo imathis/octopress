@@ -1,6 +1,7 @@
 $:.unshift File.expand_path(File.dirname(__FILE__)) # For use/testing when no gem is installed
 
 require "octopress/core_ext"
+require "octopress/logger"
 require "octopress/configuration"
 require "octopress/inquirable_string"
 require "octopress/dependency_installer"
