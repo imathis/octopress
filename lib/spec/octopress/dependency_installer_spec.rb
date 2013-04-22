@@ -1,6 +1,38 @@
 require_relative '../spec_helper.rb'
 
 describe Octopress::DependencyInstaller do
+  describe "#namespace" do
+    context "when just a repo name is specified" do
+      let(:plugin) { "adn-timeline" }
+      subject { Octopress::DependencyInstaller.new.namespace(plugin) }
+      it { should eq("adn-timeline") }
+    end
+    context "when a username and repo name are specified" do
+      let(:plugin) { "imathis/adntimeline" }
+      subject { Octopress::DependencyInstaller.new.namespace(plugin) }
+      it { should eq("imathis-adntimeline") }
+    end
+    context "when a username and repo name are specified (with dash)" do
+      let(:plugin) { "imathis-/adn-timeline" }
+      subject { Octopress::DependencyInstaller.new.namespace(plugin) }
+      it { should eq("imathis-adn-timeline") }
+    end
+    context "when a full git:// URL is specified" do
+      let(:plugin) { "git://github.com/parkr/cool-plugin.git" }
+      subject { Octopress::DependencyInstaller.new.namespace(plugin) }
+      it { should eq("parkr-cool-plugin") }
+    end
+    context "when a full https:// URL is specified" do
+      let(:plugin) { "https://bitbucket.com/parkr/cool-plugin.git" }
+      subject { Octopress::DependencyInstaller.new.namespace(plugin) }
+      it { should eq("parkr-cool-plugin") }
+    end
+    context "when a full git SSH path is specified" do
+      let(:plugin) { "git@octopress.org:parkr/cool-plugin.git" }
+      subject { Octopress::DependencyInstaller.new.namespace(plugin) }
+      it { should eq("parkr-cool-plugin") }
+    end
+  end
   describe "#git_url" do
     context "when just a repo name is specified" do
       let(:plugin) { "adn-timeline" }
