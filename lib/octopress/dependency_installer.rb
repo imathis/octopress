@@ -12,7 +12,7 @@ module Octopress
       if plugins.is_a?(String)
         plugins = [plugins]
       end
-      installer = Installer.new(plugins)
+      installer = DependencyInstaller.new
       plugins.each do |plugin|
         installer.install plugin
       end
@@ -21,6 +21,10 @@ module Octopress
     USERNAME_REPO_REGEXP  = /^([a-z0-9\-_]+)\/([a-z0-9\-_]+)$/
     OCTOPRESS_REPO_REGEXP = /^[a-z0-9\-_]+$/
     GIT_REPO_REGEXP       = /^(git:\/\/|https:\/\/|git@)[a-z0-9.]+(\/|:)([a-z0-9\-_]+)\/([a-z0-9\-_]+)\.git/
+
+    def initialize
+      @plugins = Set.new
+    end
 
     # Public: constructs full git URL for a plugin
     #
@@ -43,7 +47,8 @@ module Octopress
     #
     # Returns the full path of the installation directory
     def install_dir(plugin)
-      File.join(INSTALL_DIR, File.basename(plugin).rstrip('.git'))
+      FileUtils.mkdir_p(INSTALL_DIR) unless File.exists?(INSTALL_DIR)
+      File.join(INSTALL_DIR, File.basename(plugin).gsub(/\.git$/, ''))
     end
 
     # Public: clones the remote repository to the plugin install directory
@@ -54,12 +59,8 @@ module Octopress
     def clone(plugin)
       unless File.directory?(install_dir(plugin))
         Open3.popen3("git clone #{git_url(plugin)} #{install_dir(plugin)}") do |stdin, stdout, stderr, wait_thr|
-          while (in_line = stdin.readline) || (err_line = stderr.readline)
-            STDOUT.puts in_line if in_line
-            STDERR.puts err_line if err_line
-          end
           exit_status = wait_thr.value
-          raise RuntimeError, "Error cloning #{plugin}" unless exit_status.exitstatus == 0
+          raise RuntimeError, "Error cloning #{plugin}".red unless exit_status.exitstatus == 0
         end
       end
       install_dir(plugin)
@@ -80,7 +81,6 @@ module Octopress
     #
     # Returns an array of plugin names that are dependencies of the one specified
     def build_dependencies_tree(plugin)
-      return [plugin]
       unless @plugins.include?(plugin)
         clone(plugin)
         mainfest_yml = manifest(plugin)
@@ -88,6 +88,8 @@ module Octopress
         manifest_yml["dependencies"].each do |dep|
           build_dependencies_tree(dep)
         end
+      else
+        Octopress::Logger.warn "Already installed #{plugin}."
       end
     end
 
@@ -98,10 +100,9 @@ module Octopress
     # Returns an Array of file paths which were copied
     def copy_files(plugin)
       manifest_yml = manifest(plugin)
-      files = manifest_yml["assets"]
-      copy_javascript_files(plugin, files["javascripts"])
-      copy_stylesheets_files(plugin, files["stylesheets"])
-      copy_plugins_files(plugin, files["plugins"])
+      copy_javascript_files(plugin, manifest_yml["javascripts"])
+      copy_stylesheets_files(plugin, manifest_yml["stylesheets"])
+      copy_plugins_files(plugin, manifest_yml["plugins"])
     end
 
     # Public: install a plugin and its dependencies
@@ -110,7 +111,9 @@ module Octopress
     #
     # Returns the Array of all plugins installed so far
     def install(plugin)
-      @plugins += build_dependencies_tree(plugin)
+      deps = build_dependencies_tree(plugin)
+      puts deps
+      @plugins.merge(deps)
       @plugins.each do |plugin|
         copy_files(plugin)
       end
@@ -139,11 +142,11 @@ module Octopress
     #
     # Returns nothing
     def copy_javascript_files(plugin, files)
-      files["globals"].each do |file|
-        copy_file(plugin, File.join("assets", "javascripts", "lib", file))
+      [files["lib"]].flatten.each do |file|
+        copy_file(plugin, file, File.join("assets", file))
       end
-      files["modules"].each do |file|
-        copy_file(plugin, File.join("assets", "javascripts", file))
+      [files["modules"]].flatten.each do |file|
+        copy_file(plugin, file, File.join("assets", file))
       end
     end
 
@@ -155,8 +158,8 @@ module Octopress
     #
     # Returns nothing
     def copy_stylesheets_files(plugin, files)
-      files.each do |file|
-        copy_file(plugin, File.join("assets", "stylesheets", "custom", file))
+      [files].flatten.each do |file|
+        copy_file(plugin, file, File.join("assets", "stylesheets", "custom", file))
       end
     end
 
@@ -168,8 +171,8 @@ module Octopress
     #
     # Returns nothing
     def copy_plugins_files(plugin, files)
-      files.each do |file|
-        copy_file(plugin, File.join(Octopress.configuration[:plugins], file))
+      [files].flatten.each do |file|
+        copy_file(plugin, file, File.join(Octopress.configuration[:plugins], file))
       end
     end
   end

@@ -32,7 +32,7 @@ task :install, :theme do |t, args|
     abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
   end
   # copy theme into working Jekyll directories
-  puts "## Installing "+theme+" theme"
+  puts "## Installing #{theme} theme"
   Rake::Task["install_source"].invoke(theme)
   Rake::Task["install_stylesheets"].invoke(theme)
   Rake::Task["install_javascripts"].invoke(theme)
@@ -40,13 +40,22 @@ task :install, :theme do |t, args|
   mkdir_p 'site'
 end
 
+desc "Install a plugin"
+task :install_plugin, :plugin do |t, args|
+  plugin = args.plugin
+  if plugin.nil? || plugin == ""
+    abort "You must specify a plugin.".red
+  end
+  Octopress::DependencyInstaller.install_all(plugin)
+end
+
 task :install_configs, :theme do |t, args|
   theme = args.theme || 'classic'
   mkdir_p "_config"
-  if File.directory? ".themes/#{theme}/_config"
-    cp_r ".themes/#{theme}/_config/.", "_config/defaults", :remove_destination=>true
+  if File.directory? ".themes/#{theme}/config"
+    cp_r ".themes/#{theme}/config/.", "config/defaults", :remove_destination=>true
   end
-  unless File.exist?('_config/site.yml')
+  unless File.exist?('config/site.yml')
     user_config_site = <<-EOF
 ---
 # --------------------------- #
@@ -54,9 +63,9 @@ task :install_configs, :theme do |t, args|
 # --------------------------- #
 
 EOF
-    File.open('_config/site.yml', 'w') { |f| f.write user_config_site }
+    File.open('config/site.yml', 'w') { |f| f.write user_config_site }
   end
-  unless File.exist?('_config/deploy.yml')
+  unless File.exist?('config/deploy.yml')
     user_config_deploy = <<-EOF
 ---
 # -------------------------- #
@@ -65,7 +74,7 @@ EOF
 
 deploy_method: rsync
 EOF
-    File.open('_config/deploy.yml', 'w') { |f| f.write user_config_deploy }
+    File.open('config/deploy.yml', 'w') { |f| f.write user_config_deploy }
   end
 end
 
