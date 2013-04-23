@@ -40,7 +40,7 @@ module Jekyll
     end
 
     def render(context)
-      if parts = @markup.match(/([\d]*) (.*)/)
+      if parts = @markup.match(/([^ ]*) (.*)/)
         gist, file = parts[1].strip, parts[2].strip
 
         @options[:title]     ||= file.empty? ? "Gist: #{gist}" : file
