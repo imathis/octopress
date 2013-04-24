@@ -18,7 +18,7 @@ Faço parte de alguns seletos grupos de pessoas: o primeiro desses grupos é o d
 Desde o início dos meus trabalhos de desenvolvimento de softwares e web, eu já trabalhava remotamente, mas nunca _fulltime_, era sempre meu trabalho secundário. E a HE:labs me deu a oportunidade de exercer minhas atividades, remotamente, em tempo integral.
 
 <!-- more -->
-Mas qual é a diferença? É bom? É mais facil?
+Mas qual é a diferença? É bom? É mais fácil?
  
 Tirando a conclusão óbvia de que trabalho remoto significa remoto, existem algumas diferenças, mas também, muitas semelhanças. É um tipo de trabalho como qualquer outro, porém, com desafios e valores diferentes. 
 
@@ -40,7 +40,7 @@ Não existe tempo fixo, mas sim, uma cobrança própria por produtividade. Mas n
 
 Trabalho em maior parte, diretamente de casa. Tenho todo o meio-ambiente familiar com suas rotinas, barulhos e distrações. Tenho uma filha de 2 anos que parece que aprendeu que quando o relógio passa das 19 horas, ela tem que me tirar da frente do notebook. 
 
-Isso nos leva para a proxima característica:
+Isso nos leva para a próxima característica:
 
 #Disciplina
 Não me entendam mal, uma das pessoas menos disciplinadas e mais desorganizadas que conheço sou eu. Sou filho de um militar que era altamente disciplinado. Essa foi uma característica que não herdei (nota pessoal: considerar a possibilidade de ter sido adotado). No entanto, acredito totalmente que a forma como a HE:labs trabalha torna mais fácil esse tipo de trabalho. Somos times pequenos, auto geridos de desenvolvimento ágil com tarefas definidas e adequadas ao escopo de trabalho. Nunca fui tão produtivo e focado ao mesmo tempo. Ever!
@@ -52,13 +52,13 @@ Esta era uma das características mais difíceis para eu conseguir ter.
 Veja bem, gosto de programar. Sempre falei para as pessoas que me perguntam que programar é como se fosse um mago, que com palavras mágicas faz coisas incríveis acontecerem.... ou gifs piscarem na tela, dependendo do designer.
 Mas de um modo geral, a única motivação que eu tinha era a de ganhar mais. E é lógico que esta não é uma motivação que faz bem. Em geral, isso nos faz trabalhar mais, ficarmos mais cansados e extressados e produzir menos.... [às vezes, bem menos.](http://www.ted.com/talks/dan_pink_on_motivation.html)
 
-O que me motiva atualmente é a falta de rotina. Hoje, posso programar da varanda da minha casa. Amanhã, poderei trabalhar em uma co-work. No próximo dia, poderei levar minha família para o shopping e trabalhar de um _coffee shop_. Posso ser produtivo de diversas maneiras, e espero dentro de algum tempo, trabalhar saltando de paraquedas (seria essa a definição de XP?).
+O que me motiva atualmente é a falta de rotina. Hoje, posso programar da varanda da minha casa. Amanhã, poderei trabalhar em uma co-working. No próximo dia, poderei levar minha família para o shopping e trabalhar de um _coffee shop_. Posso ser produtivo de diversas maneiras, e espero dentro de algum tempo, trabalhar saltando de paraquedas (seria essa a definição de XP?).
 
 O que me motiva é estar em um ambiente familiar, onde posso acompanhar a primeira vez que minha filha descobriu algo e não um repeteco do tipo "mostra pro papai agora que todo mundo já viu". O que me motiva é manter isso tudo e ser cada vez melhor apenas por ser melhor.
 
 Apenas gostaria de ressaltar que não estou de forma alguma dizendo que o trabalho da maneira tradicional não funciona ou que deixa sempre infeliz. Ou mesmo, que somente os profissionais remotos ficam com as melhores garotas. Mas posso dizer com quase absoluta certeza que, se a empresa aposta em trabalho remoto, é um bom lugar para se trabalhar.
 
-Acredito que trabalho remoto não seja para todos. Existem pessoas que são muito mais produtivas quando vão para o trabalho, ou que precisam de um tipo de ambiente propício a ele. Bem como existem metodologias que dificultam esse tipo de trabalho funcionar bem. Não é um tipo de trabalho mais fácil, mas para quem está disposto a pagar o preço, vale a pena.
+Acredito que trabalho remoto não seja para todos. Existem pessoas que são muito mais produtivas quando vão para o escritório, ou que precisam de um tipo de ambiente propício a ele. Bem como existem metodologias que dificultam esse tipo de trabalho funcionar bem. Não é um tipo de trabalho mais fácil, mas para quem está disposto a pagar o preço, vale a pena.
 
 
 
