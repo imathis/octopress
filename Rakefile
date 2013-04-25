@@ -109,7 +109,7 @@ end
 # Working with Jekyll #
 #######################
 
-desc "Generate jekyll site"
+desc "Generate Jekyll site"
 task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." if configuration[:source].nil? || !File.directory?(configuration[:source])
   configurator.write_configs_for_generation
@@ -402,7 +402,7 @@ multitask :push do
       system "git add ."
       system "git add -u"
       message = "Site updated at #{Time.now.utc}"
-      puts "\n## Commiting: #{message}"
+      puts "\n## Committing: #{message}"
       system "git commit -m \"#{message}\""
       puts "\n## Pushing generated #{configuration[:deploy_dir]} website"
       if system "git push origin #{configuration[:deploy_branch]}"
