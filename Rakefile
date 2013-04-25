@@ -48,7 +48,7 @@ end
 # Working with Jekyll #
 #######################
 
-desc "Generate jekyll site"
+desc "Generate Jekyll site"
 task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
@@ -254,7 +254,7 @@ multitask :push do
   cd "#{deploy_dir}" do
     system "git add ."
     system "git add -u"
-    puts "\n## Commiting: Site updated at #{Time.now.utc}"
+    puts "\n## Committing: Site updated at #{Time.now.utc}"
     message = "Site updated at #{Time.now.utc}"
     system "git commit -m \"#{message}\""
     puts "\n## Pushing generated #{deploy_dir} website"
