@@ -1,7 +1,5 @@
-require "spec_helper"
-
 describe Octopress do
-  describe '#env' do
+  describe '.env' do
     context "when ENV['OCTOPRESS_ENV'] is specified" do
       let (:old_value) { ENV['OCTOPRESS_ENV'] }
       before do
@@ -98,6 +96,43 @@ describe Octopress do
         ENV['OCTOPRESS_ENV'] = 'value_b'
         Octopress.env.should eq('value_b')
       end
+    end
+  end
+
+  describe ".configurator" do
+    before do
+      Octopress.clear_config!
+      @old_env = ENV['OCTOPRESS_ENV']
+      ENV['OCTOPRESS_ENV'] = nil
+    end
+
+    after do
+      ENV['OCTOPRESS_ENV'] = @old_env
+    end
+
+    it "should accept a path pointing to a config directory" do
+      Octopress.configurator(File.join(File.dirname(__FILE__), '../', 'fixtures', 'env'))
+
+      Octopress.env.should eq('config_specified_environment')
+    end
+  end
+
+  describe ".configuration" do
+    before do
+      Octopress.clear_config!
+      @old_env = ENV['OCTOPRESS_ENV']
+      ENV['OCTOPRESS_ENV'] = nil
+      Octopress.configurator(File.join(File.dirname(__FILE__), '../', 'fixtures', 'env'))
+    end
+
+    after do
+      ENV['OCTOPRESS_ENV'] = @old_env
+    end
+
+    let(:configuration) { Octopress.configuration }
+
+    it "should provide access to the specified configuration" do
+      configuration[:env].should eq('config_specified_environment')
     end
   end
 end
