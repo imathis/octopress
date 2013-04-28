@@ -71,7 +71,7 @@ function getTwitterFeed(user, count, replies) {
   count = parseInt(count, 10);
   $.ajax({
       url: "https://api.twitter.com/1/statuses/user_timeline/" + user + ".json?trim_user=true&count=" + (count + 20) + "&include_entities=1&exclude_replies=" + (replies ? "0" : "1") + "&callback=?"
-    , type: 'jsonp'
+    , dataType: 'jsonp'
     , error: function (err) { $('#tweets li.loading').addClass('error').text("Twitter's busted"); }
     , success: function(data) { showTwitterFeed(data.slice(0, count), user); }
   })
