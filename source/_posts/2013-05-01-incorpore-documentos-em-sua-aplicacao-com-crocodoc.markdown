@@ -57,4 +57,4 @@ Assim que o upload para o amazon S3 é finalizado é gerado uma url e apartir de
 
 Outra item fundamental é o suporte, as dúvidas foram tiradas por email com delay de no máximo 24 hrs para todas as perguntas.
 
-Nesse [link] (https://crocodoc.com/see-it-in-action/) é possível ver o crocodoc em ação.
+Nesse [link](https://crocodoc.com/see-it-in-action/) é possível ver o crocodoc em ação.
