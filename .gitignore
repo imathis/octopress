@@ -19,3 +19,4 @@
 /lib/vendor
 node_modules
 /_config.yml
+.preview-mode
