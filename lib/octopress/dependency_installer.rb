@@ -82,7 +82,12 @@ module Octopress
     #
     # Returns the file path to where the plugin was installed
     def clone(plugin)
-      unless File.directory?(install_dir(plugin))
+      if File.directory?(install_dir(plugin))
+        Open3.popen3("cd #{install_dir(plugin)} && git pull origin master") do |stdin, stdout, stderr, wait_thr|
+          exit_status = wait_thr.value
+          raise RuntimeError, "Error updating #{plugin}".red unless exit_status.exitstatus == 0
+        end
+      else
         Open3.popen3("git clone #{git_url(plugin)} #{install_dir(plugin)}") do |stdin, stdout, stderr, wait_thr|
           exit_status = wait_thr.value
           raise RuntimeError, "Error cloning #{plugin}".red unless exit_status.exitstatus == 0
