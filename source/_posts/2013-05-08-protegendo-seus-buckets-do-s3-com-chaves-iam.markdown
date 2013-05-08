@@ -15,7 +15,7 @@ categories:
 
 Você usa **buckets** do S3 para armazenar os uploads e assets da sua aplicação?
 
-A maioria das pessoas usam os mesmo dados de acesso (access key e secret access key) para acessar o(s) bucket(s), tanto em desenvolvimento quanto em produção.
+A maioria das pessoas usam os mesmos dados de acesso (access key e secret access key) para acessar o(s) bucket(s), tanto em desenvolvimento quanto em produção.
 
 Isso pode trazer alguns problemas para a aplicação...
 
