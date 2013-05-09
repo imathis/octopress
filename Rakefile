@@ -601,7 +601,8 @@ desc "Run all examples"
 RSpec::Core::RakeTask.new(:spec) do |t|
   t.pattern = "./lib/spec{,/*/**}/*_spec.rb"
 end
-task :test => :spec
+
+task :test => [:install, :generate, :spec]
 
 def get_unpublished(posts, options={})
   result = ""
