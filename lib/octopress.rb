@@ -36,4 +36,11 @@ module Octopress
     @env_raw = env_raw_tmp
     @env ||= InquirableString.new(@env_raw)
   end
+
+  # Static: Fetch the logger for Octopress
+  #
+  # Returns the Logger, based on Ruby's stdlib Logger
+  def self.logger
+    @@logger ||= Logger.build
+  end
 end

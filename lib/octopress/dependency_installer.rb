@@ -119,7 +119,7 @@ module Octopress
           build_dependencies_tree(dep)
         end
       else
-        Octopress::Logger.warn "Already installed #{plugin}."
+        Octopress.logger.warn "Already installed #{plugin}."
       end
     end
 
