@@ -1,15 +1,5 @@
 $:.unshift File.expand_path(File.dirname(__FILE__)) # For use/testing when no gem is installed
 
-require "octopress/core_ext"
-require "octopress/logger"
-require "octopress/formatters/base_formatter"
-require "octopress/formatters/simple_formatter"
-require "octopress/formatters/verbose_formatter"
-require "octopress/configuration"
-require "octopress/inquirable_string"
-require "octopress/dependency_installer"
-require "octopress/js_asset_manager"
-
 module Octopress
   # Static: Get absolute file path of the octopress lib directory
   #
@@ -47,3 +37,13 @@ module Octopress
     @@logger ||= Logger.build
   end
 end
+
+require "octopress/core_ext"
+require "octopress/logger"
+require "octopress/formatters/base_formatter"
+require "octopress/formatters/simple_formatter"
+require "octopress/formatters/verbose_formatter"
+require "octopress/configuration"
+require "octopress/inquirable_string"
+require "octopress/dependency_installer"
+require "octopress/js_asset_manager"
