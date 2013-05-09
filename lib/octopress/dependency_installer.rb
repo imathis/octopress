@@ -19,7 +19,7 @@ module Octopress
       end
     end
 
-    INSTALL_DIR           = File.join(Dir.pwd, ".plugins")
+    INSTALL_DIR           = File.join(Octopress.root, ".plugins")
     USERNAME_REPO_REGEXP  = /^([a-z0-9\-_]+)\/([a-z0-9\-_]+)$/
     OCTOPRESS_REPO_REGEXP = /^[a-z0-9\-_]+$/
     GIT_REPO_REGEXP       = /^(git:\/\/|https:\/\/|git@)([a-z0-9.]+)(\/|:)([a-z0-9\-_]+)\/([a-z0-9\-_]+)\.git/
@@ -48,22 +48,9 @@ module Octopress
 
     # Public: Gets the directory for local storage
     #
-    # plugin - the plugin name
-    #
     # Returns the directory for the plugin
-    def namespace(plugin)
-      url = git_url(plugin)
-      match = url.match(GIT_REPO_REGEXP)
-      if match[1] == "git@"
-        url = "git://#{match[2]}/#{match[4]}/#{match[5]}.git"
-      end
-      path = URI(url).path
-      path[/([a-z0-9\-_]+)\/([a-z0-9\-_]+)\.git$/]
-        .gsub(/\.git$/, '')
-        .gsub(/octopress\//, '')
-        .gsub(/\s+/, '-')
-        .gsub(/\//, '-')
-        .gsub(/-+/, '-')
+    def namespace
+      manifest_yml["slug"]
     end
 
     # Public: builds full installation directory path for plugin
@@ -130,9 +117,10 @@ module Octopress
     # Returns an Array of file paths which were copied
     def copy_files(plugin)
       manifest_yml = manifest(plugin)
-      copy_javascript_files(plugin, manifest_yml["javascripts"]) if manifest_yml["javascripts"]
-      copy_stylesheets_files(plugin, manifest_yml["stylesheets"]) if manifest_yml["stylesheets"]
-      copy_plugins_files(plugin, manifest_yml["plugins"]) if manifest_yml["plugins"]
+      %w[javascripts stylesheets plugins configs source].each do |type|
+        Octopress.logger.debug "Copying #{type} files for #{plugin}..."
+        send("copy_#{type}_files", plugin, manifest_yml[type])
+      end
     end
 
     # Public: install a plugin and its dependencies
@@ -205,5 +193,7 @@ module Octopress
         copy_file(plugin, file, File.join(Octopress.configuration[:plugins], File.basename(file)))
       end
     end
+
+
   end
 end
