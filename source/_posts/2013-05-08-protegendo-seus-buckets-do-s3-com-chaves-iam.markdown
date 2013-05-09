@@ -2,34 +2,36 @@
 author: Thiago Belem
 layout: post
 title: "Protegendo seus buckets do S3 com chaves IAM"
-date: 2013-05-08 12:55
+date: 2013-05-09 11:00
 comments: true
 categories:
   - Thiago Belem
   - S3
   - IAM
   - AWS
+
 ---
 
 ![image](/images/posts/2013-05-08/bucket.jpg)
 
 Você usa **buckets** do S3 para armazenar os uploads e assets da sua aplicação?
 
-A maioria das pessoas usam os mesmos dados de acesso (access key e secret access key) para acessar o(s) bucket(s), tanto em desenvolvimento quanto em produção.
+A maioria das pessoas usam os mesmos dados de acesso (_access key_ e _secret access key_) para acessar o(s) bucket(s), tanto em desenvolvimento quanto em produção.
 
 Isso pode trazer alguns problemas para a aplicação...
 
 <!-- more -->
+Como:
 
-* Os dados de acesso ao bucket (e provavelmente à conta do AWS) estão presentes nos arquivos de configuração
-* O bucket acessado (e bombardeado com arquivos de testes) é o mesmo bucket usado em produção
-* Não há nenhum tipo de restrição, quem estiver trabalhando no desenvolvimento do projeto terá acesso ao bucket com os arquivos de produção
+* Os dados de acesso ao bucket (e provavelmente à conta do AWS) estão presentes nos arquivos de configuração;
+* O bucket acessado (e bombardeado com arquivos de testes) é o mesmo bucket usado em produção;
+* Não há nenhum tipo de restrição, quem estiver trabalhando no desenvolvimento do projeto terá acesso ao bucket com os arquivos de produção.
 
-A solução para todos os problemas acima é restringir o acesso aos buckets, criando um bucket e um par de chaves para produção e outro para desenvolvimento.
+A solução para todos os problemas acima é restringir o acesso aos buckets, separando os dados de acesso (chaves) de cada um:
 
 # Crie dois buckets
 
-Não há nada de misterioso ou novo aqui, crie dois buckets:
+Não há nada de misterioso ou novo aqui, apenas crie dois buckets:
 
 * Um bucket para desenvolvimento: **meuprojeto-development**
 * Um bucket para production: **meuprojeto-produciton**
@@ -51,7 +53,7 @@ Não se esqueça de anotar as chaves de acesso de cada usuário:
 
 Agora que os usuários estão criados, precisamos definir permissões de acesso.
 
-Marque um usuário, vá em **Permissions** > **Attach User Policy** > Custom Policy.
+Marque um usuário. Para isso, vá em **Permissions** > **Attach User Policy** > Custom Policy.
 
 Dê um nome pra regra e use o seguinte template:
 
@@ -72,7 +74,7 @@ Dê um nome pra regra e use o seguinte template:
 }
 ```
 
-Substitua **NOME_DO_BUCKET** pelo nome do bucket, crie essa regra para o bucket de cada usuário.
+Substitua **NOME_DO_BUCKET** pelo nome do bucket criado anteriormente e crie essa regra para o bucket de cada usuário.
 
 # Conclusão
 
