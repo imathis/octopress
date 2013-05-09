@@ -159,6 +159,7 @@ module Octopress
     def copy_file(plugin, repo_files, file)
       source = File.join(install_dir(plugin), repo_files)
       destination = File.join(Octopress.root, file)
+      FileUtils.rm_rf(destination)
       FileUtils.cp_r(source, destination)
     end
 
