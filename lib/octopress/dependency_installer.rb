@@ -153,14 +153,15 @@ module Octopress
     # Private: Copy file to Octopress installation
     #
     # plugin - plugin name
-    # file - the file destination relative to the Octopress installation root
+    # file_or_dir - the file or directory to glob
+    # destination - where this file or directory is to go (WITH SLUG SUBDIR IF NEEDED)
     #
     # Returns nothing
-    def copy_file(plugin, repo_files, file)
-      source = File.join(install_dir(plugin), repo_files)
-      destination = File.join(Octopress.root, file)
-      FileUtils.rm_rf(destination)
-      FileUtils.cp_r(source, destination)
+    def copy_file(plugin, file_or_dir, destination)
+      source = File.join(install_dir(plugin), file_or_dir)
+      dest   = File.join(Octopress.root, destination)
+      FileUtils.rm_rf(dest)
+      FileUtils.cp_r(source, dest)
     end
 
     # Private: Copy javascript files to local Octopress installation
