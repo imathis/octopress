@@ -61,15 +61,10 @@ task :watch do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass."
   system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exist?("#{source_dir}/stylesheets/screen.css")
-  jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll --auto")
-  compassPid = Process.spawn("compass watch")
-
-  trap("INT") {
-    [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
-    exit 0
+  exec_wrapping {
+    Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll --auto")
+    Process.spawn("compass watch")
   }
-
-  [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
 end
 
 desc "preview the site in a web browser"
@@ -77,16 +72,11 @@ task :preview do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
   system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exist?("#{source_dir}/stylesheets/screen.css")
-  jekyllPid = Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll --auto")
-  compassPid = Process.spawn("compass watch")
-  rackupPid = Process.spawn("rackup --port #{server_port}")
-
-  trap("INT") {
-    [jekyllPid, compassPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
-    exit 0
+  exec_wrapping {
+    Process.spawn({"OCTOPRESS_ENV"=>"preview"}, "jekyll --auto")
+    Process.spawn("compass watch")
+    Process.spawn("rackup --port #{server_port}")
   }
-
-  [jekyllPid, compassPid, rackupPid].each { |pid| Process.wait(pid) }
 end
 
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
@@ -380,4 +370,24 @@ desc "list tasks"
 task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
+end
+
+
+def exec_wrapping
+  yield if block_given?
+  
+  pids = children_proc_of(Process.pid)
+  trap("INT") {
+    Process.kill(9, *pids) rescue Errno::ESRCH
+    # Kill the children processes of compass and jekyll, ie,fsevent_watch on mac os
+    Process.kill(9, *children_proc_of(*pids)) rescue Errno::ESRCH
+    exit 0
+  }
+  pids.each { |pid| Process.wait(pid) }
+end
+
+def children_proc_of(*pids)
+  tmp = pids.dup
+  ProcTable.ps { |ps| pids << ps.pid if pids.include?(ps.ppid) }
+  pids - tmp
 end
