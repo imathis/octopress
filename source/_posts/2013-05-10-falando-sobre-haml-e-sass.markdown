@@ -96,19 +96,19 @@ body
 
 A instalação é bem fácil: basta rodar o comando abaixo em seu terminal. Não esqueça de adicionar a _gem_ dentro do projeto.
 
-```shell
+```
 gem install haml
 ```
 
 Quando a etapa acima for concluída, rode o próximo comando que será adicionado no seu projeto:
 
-```shell
+```
 haml --rails meuprojeto/app
 ```
 
 Depois de executado, uma mensagem será exibida:
 
-```shell
+```
 Haml plugin added to meuprojeto
 ```
 
