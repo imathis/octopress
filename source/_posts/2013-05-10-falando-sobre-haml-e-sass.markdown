@@ -13,6 +13,8 @@ A [HAML](http://www.haml.info/) é uma _gem_ que facilita toda a parte visual de
 
 O framework **Ruby on Rails** ajuda bastante no quesito agilidade. E por que não ser mais ágil, não precisando ficar fechando tags do HTML? Isso é resolvido criando estilos mais ágeis e legíveis para alguém que, futuramente, venha mexer no seu código.
 
+<!-- more -->
+
 Eu, particularmente, estou começando a aprender e usá-la em alguns projetos web. Tenho mais costume com o HTML tradicional, mas é bem tranquilo usar a HAML. Ela utiliza as mesmas tags do HTML, mas a vantagen é que não precisa ficar fechando as tags. Em vez disso, você usa prefixos como `%` ou `.` para chamar as tags HTML. Não se preocupe, pois quando executado no browser, o HTML gerado será o tradicional.
 
 Antes o nome do arquivo que era `index.html` passa a ser `index.haml`.
