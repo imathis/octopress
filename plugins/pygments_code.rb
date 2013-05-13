@@ -82,7 +82,7 @@ module HighlightCode
     start = options[:start] || 1
     lines = options[:linenos] || true
     marks = options[:marks] || []
-    table = "<div class='highlight'><table>"
+    table = "<div class='highlight'><table><tr>"
     table += number_lines(start, code.lines.count, marks) if lines
     table += "<td class='main #{'unnumbered' unless lines} #{lang}'><pre>"
     code.lines.each_with_index do |line,index|
