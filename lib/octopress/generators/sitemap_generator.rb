@@ -36,7 +36,7 @@
 #
 # Modified for Octopress by John W. Long
 #
-require File.expand_path('../../lib/colors.rb', __FILE__)
+require 'colorator'
 require 'rexml/document'
 require 'fileutils'
 

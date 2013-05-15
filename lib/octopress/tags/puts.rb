@@ -16,7 +16,7 @@
 # Look out he's got a toaster.
 #
 
-module Jekyll
+module Octopress
   class Puts < Liquid::Block
     def initialize(tag_name, markup, tokens)
       super
@@ -35,4 +35,5 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('puts', Jekyll::Puts)
+Liquid::Template.register_tag('puts', Octopress::Puts)
+

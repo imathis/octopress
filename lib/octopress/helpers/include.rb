@@ -1,0 +1,30 @@
+module Octopress
+  module IncludeHelper
+    include Conditional
+
+    def render_include(file, context)
+      tag = Jekyll::Tags::IncludeTag.new('', file, [])
+      tag.render(context)
+    end
+
+    def exists(file, context)
+      base = Pathname.new(context.registers[:site].source || 'source').expand_path
+      File.exists? File.join(base, "_includes", file)
+    end
+
+    def get_include(files, context)
+      files = files.split("||").map do |file| 
+        file = file.strip
+        context[file].nil? ? file : context[file]
+      end
+
+      files.each_with_index do |f, i|
+        if exists(f, context)
+          break f
+        elsif i == files.size - 1
+          f == 'none' ? false : f
+        end
+      end
+    end
+  end
+end

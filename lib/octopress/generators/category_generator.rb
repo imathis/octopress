@@ -38,7 +38,7 @@ module Jekyll
       @name = 'index.html'
       self.process(@name)
       # Read the YAML data from the layout page.
-      self.read_yaml(File.join(base, '_layouts'), 'category_index.html')
+      return unless self.read_yaml(File.join(base, '_layouts'), 'category-index.html')
       self.data['category']    = category
       # Set the title for this page.
       title_prefix             = site.config['category_title_prefix'] || 'Category: '
@@ -65,7 +65,7 @@ module Jekyll
       @name = 'atom.xml'
       self.process(@name)
       # Read the YAML data from the layout page.
-      self.read_yaml(File.join(base, '_includes/custom'), 'category_feed.xml')
+      self.read_yaml(File.join(base, '_includes/custom'), 'category-feed.xml')
       self.data['category']    = category
       # Set the title for this page.
       title_prefix             = site.config['category_title_prefix'] || 'Category: '
@@ -108,33 +108,18 @@ module Jekyll
 
     # Loops through the list of category pages and processes each one.
     def write_category_indexes
-      if self.layouts.key? 'category_index'
-        dir = self.config['category_dir']
-        self.categories.keys.each do |category|
-          if category =~ /(.+)\[(.+)\]/
-            slug = $1.strip
-            title = $2.strip
-          else
-            slug = title = category
-          end
-          cat_dir = slug.to_url
-          cat_dir = File.join(dir, cat_dir) unless dir.nil? or dir.empty?
-          self.write_category_index(cat_dir, category, title)
+      return unless self.layouts.key? 'category_index'
+      dir = self.config['category_dir']
+      self.categories.keys.each do |category|
+        if category =~ /(.+)\[(.+)\]/
+          slug = $1.strip
+          title = $2.strip
+        else
+          slug = title = category
         end
-
-      # Throw an exception if the layout couldn't be found.
-      else
-        raise <<-ERR
-
-
-===============================================
- Error for category_generator.rb plugin
------------------------------------------------
- No 'category_index.html' in source/_layouts/
- Perhaps you haven't installed a theme yet.
-===============================================
-
-ERR
+        cat_dir = slug.to_url
+        cat_dir = File.join(dir, cat_dir) unless dir.nil? or dir.empty?
+        self.write_category_index(cat_dir, category, title)
       end
     end
   end

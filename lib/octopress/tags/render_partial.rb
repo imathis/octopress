@@ -1,5 +1,5 @@
 # Title: Render Partial Tag for Jekyll
-# Author: Brandon Mathis http://brandonmathis.com
+# Author: Brandon Mathis
 # Description: Import files on your filesystem into any blog post and render them inline.
 # Note: Paths are relative to the source directory, if you import a file with yaml front matter, the yaml will be stripped out.
 #
@@ -22,12 +22,29 @@
 #
 
 require 'pathname'
-require './plugins/octopress_filters'
 
 module Jekyll
 
+  # Create a new page class to allow partials to trigger post_filters
+  class ConvertiblePage
+    include Convertible
+    
+    attr_accessor :name, :content, :site, :ext, :output, :data
+    
+    def initialize(site, name, content)
+      @site     = site
+      @name     = name
+      @ext      = File.extname(name)
+      @content  = content
+      @data     = { layout: "no_layout" } # hack
+    end
+    
+    def render(payload, info)
+      do_layout(payload, { no_layout: nil })
+    end
+  end
+
   class RenderPartialTag < Liquid::Tag
-    include OctopressFilters
     def initialize(tag_name, markup, tokens)
       @file = nil
       @raw = false
@@ -49,27 +66,20 @@ module Jekyll
       end
 
       Dir.chdir(file_path) do
-        contents = file.read
-        if contents =~ /\A-{3}.+[^\A]-{3}\n(.+)/m
-          contents = $1.lstrip
+        content = file.read
+        
+        # Strip out yaml header from partials
+        if content =~ /\A-{3}.+[^\A]-{3}\n(.+)/m
+          content = $1.lstrip
         end
-        contents = pre_filter(contents, ext)
+
         if @raw
-          contents
+          content
         else
-          partial = Liquid::Template.parse(contents)
-          context.stack do
-            contents = partial.render(context)
-
-            site = context.registers[:site]
-            converter = site.converters.find { |c| c.matches(ext) }
-
-            if converter.nil?
-              contents
-            else
-              converter.convert(contents)
-            end
-          end
+          p = ConvertiblePage.new(context.registers[:site], @file, content)
+          payload = { 'page' => context.registers[:page], 'site' => context.registers[:site] }
+          p.render(payload, { registers: context.registers })
+          p.output
         end
       end
     end

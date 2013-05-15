@@ -91,8 +91,12 @@ module Jekyll
       self.class.to_s == 'Jekyll::Page'
     end
 
+    def is_convertible_page?
+      self.class.to_s == 'Jekyll::ConvertiblePage'
+    end
+
     def is_filterable?
-      is_post? or is_page?
+      is_post? or is_page? or is_convertible_page?
     end
 
     # Call the #pre_render methods on all of the loaded
