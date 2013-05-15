@@ -30,8 +30,7 @@ Seletores são padrões que indicam uma parte do código HTML, como se fossem en
 O código abaixo será usado pra exemplificar os seletores:
 
 
-```
-html cinemas.html
+```html cinemas.html
 <div class="theater">
   <div class="desc">
     <h2 class="name">Kinoplex Shopping Tijuca</h2>
