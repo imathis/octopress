@@ -70,7 +70,7 @@ module Octopress
     #
     # Returns a Hash of all the configuration files, with each key being a symbol
     def read_configuration
-      configs = Defaults.dup
+      configs = DEFAULTS.dup
       Dir.glob(self.config_dir('defaults', '**', '*.yml')) do |filename|
         file_yaml = YAML.load(File.read(filename))
         unless file_yaml.nil?
@@ -122,7 +122,7 @@ module Octopress
       File.unlink("_config.yml")
     end
 
-    Defaults = {
+    DEFAULTS = {
       url: 'http://yoursite.com',
       title: 'My Octopress Blog',
       subtitle: 'A blogging framework for hackers.',
@@ -171,7 +171,7 @@ module Octopress
       paginate:       10,              # Posts per page on the blog index
 
       ## Feed settings
-      
+
       feed: {
         limit:        20,            # Maximum number of posts to include in the feed
         url:          '/feed/',      # Link to templates feed
