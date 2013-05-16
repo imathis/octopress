@@ -35,6 +35,7 @@ module Octopress
     # path - the String path to the configuration file, relative to ./_config
     #
     # Returns a Hash of the items in the configuration file (symbol keys)
+
     def read_config(path)
       full_path = self.config_dir(path)
       if File.exists? full_path
@@ -69,7 +70,7 @@ module Octopress
     #
     # Returns a Hash of all the configuration files, with each key being a symbol
     def read_configuration
-      configs = {}
+      configs = Defaults.dup
       Dir.glob(self.config_dir('defaults', '**', '*.yml')) do |filename|
         file_yaml = YAML.load(File.read(filename))
         unless file_yaml.nil?
@@ -120,5 +121,82 @@ module Octopress
     def remove_configs_for_generation
       File.unlink("_config.yml")
     end
+
+    Defaults = {
+      url: 'http://yoursite.com',
+      title: 'My Octopress Blog',
+      subtitle: 'A blogging framework for hackers.',
+      author: 'Your Name',
+      description: '',
+
+      # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
+      root:         '/',
+      permalink:    '/:year/:month/:day/:title/',
+      source:       'source',          # source file directory
+      destination:  'public',          # compiled site directory
+      plugins:      ['lib/octopress/helpers', 'lib/octopress/tags', 'lib/octopress/filters', 'lib/octopress/generators', 'plugins'],
+      code_dir:     'downloads/code',
+      category_dir: 'categories',
+      include: ['.htaccess'],
+
+      markdown:     'redcarpet',
+      redcarpet: {
+        extensions: [
+          'no_intra_emphasis',
+          'strikethrough',
+          'autolink',
+          'superscript',
+          'smart',
+          'footnotes',
+        ]
+      },
+
+      # Default date format is "ordinal" (resulting in "July 22nd 2007")
+      # You can customize the format as defined in
+      # http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
+      # Additionally, %o will give you the ordinal representation of the day
+
+      date_format:    'ordinal',
+      env:            'production',    # affects asset compilation
+      post_index_dir: 'source',        # directory for your posts index page (if you put your index in source/blog/index.html, set this to 'source/blog')
+      stash_dir:      '_stash',        # directory to stash posts for speedy generation
+      posts_dir:      '_posts',        # directory for blog files
+      new_post_ext:   'markdown',      # default new post file extension when using the new_post task
+      new_page_ext:   'markdown',      # default new page file extension when using the new_page task
+      titlecase:      true,            # Converts page and post titles to titlecase
+      server_host:    '0.0.0.0',       # host ip address for preview server
+      server_port:    4000,            # port for preview server eg. localhost:4000
+      timezone:       'local',         # default time and date used to local timezone. Vew supported timezones (under TZ column): http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+      #paginate_path: page/:num,       # default path for pagination, eg. page/2/
+      paginate:       10,              # Posts per page on the blog index
+
+      ## Feed settings
+      
+      feed: {
+        limit:        20,            # Maximum number of posts to include in the feed
+        url:          '/feed/',      # Link to templates feed
+        email_url:    false,         # Link to email subscription page (if you offer it)
+        categories:   false,         # Generate individual feeds for each post category (potential performance hit)
+        author_email: false,         # Author email address to the feed
+      },
+
+      # Asset configuration
+
+      # Javascript assets stored in assets/javascripts and assets/javascripts/lib
+      # Are wrapped with CommonJS functions, combined, uglified and fingerprinted
+      # Supported files: .js, .coffee, .mustache, .eco, .tmpl
+
+      require_js: {
+        # Dependiences are added first as globals
+        lib: ['lib/modernizr.js', 'lib/**/*'],
+
+        # Modules are wrapped with CommonJS functions and must be
+        # Example:
+        #   for file: assets/javascripts/modules/some-plugin/awesome.js
+        #   require like: var awesome = require('some-plugin/awesome')
+        modules: ['modules']
+      }
+    }
   end
 end
+
