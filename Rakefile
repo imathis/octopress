@@ -20,7 +20,7 @@ require 'open3'
 ###   Please do not change anything below if you want help --
 ###   otherwise, you're on your own ;-)
 
-configurator = Octopress.configurator
+configurator   = Octopress.configurator
 configuration  = Octopress.configuration
 full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
 
@@ -105,7 +105,10 @@ end
 
 desc "Generate Jekyll site"
 task :generate do
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." if configuration[:source].nil? || !File.directory?(configuration[:source])
+  p configuration
+  if configuration[:source].nil? || !File.directory?(configuration[:source])
+    raise "### You haven't set anything up yet. First run `rake install[theme]` to set up an Octopress theme."
+  end
   configurator.write_configs_for_generation
   puts "## Generating Site with Jekyll - ENV: #{Octopress.env}"
   js_assets = Octopress::JSAssetsManager.new
@@ -587,7 +590,11 @@ RSpec::Core::RakeTask.new(:spec) do |t|
   t.pattern = "./lib/spec{,/*/**}/*_spec.rb"
 end
 
-task :test => [:install, :generate, :spec]
+task :test do
+  sh "bundle exec rake spec"
+  sh "bundle exec rake install"
+  sh "bundle exec rake generate"
+end
 
 def get_unpublished(posts, options={})
   result = ""

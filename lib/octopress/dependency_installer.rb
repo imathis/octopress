@@ -19,7 +19,7 @@ module Octopress
       end
     end
 
-    INSTALL_DIR           = File.join(Octopress.root, ".plugins")
+    CACHE_DIR             = File.join(Octopress.root, ".plugins")
     USERNAME_REPO_REGEXP  = /^([a-z0-9\-_]+)\/([a-z0-9\-_]+)$/
     OCTOPRESS_REPO_REGEXP = /^[a-z0-9\-_]+$/
     GIT_REPO_REGEXP       = /^(git:\/\/|https:\/\/|git@)([a-z0-9.]+)(\/|:)([a-z0-9\-_]+)\/([a-z0-9\-_]+)\.git/
@@ -27,8 +27,8 @@ module Octopress
     # Public: Create a new DependencyInstaller and initialize instance variables
     #
     # Returns nothing
-    def initialize
-      @plugins = Set.new
+    def initialize(plugins = [])
+      @plugins = Set.new.merge(plugins)
     end
 
     # Public: constructs full git URL for a plugin
@@ -49,8 +49,8 @@ module Octopress
     # Public: Gets the directory for local storage
     #
     # Returns the directory for the plugin
-    def namespace
-      manifest_yml["slug"]
+    def namespace(plugin)
+      manifest(plugin)["slug"]
     end
 
     # Public: builds full installation directory path for plugin
@@ -58,9 +58,9 @@ module Octopress
     # plugin - the plugin name
     #
     # Returns the full path of the installation directory
-    def install_dir(plugin)
-      FileUtils.mkdir_p(INSTALL_DIR) unless File.exists?(INSTALL_DIR)
-      File.join(INSTALL_DIR, File.basename(plugin).gsub(/\.git$/, ''))
+    def cache_dir(plugin)
+      FileUtils.mkdir_p(CACHE_DIR) unless File.exists?(CACHE_DIR)
+      File.join(CACHE_DIR, File.basename(plugin).gsub(/\.git$/, ''))
     end
 
     # Public: clones the remote repository to the plugin install directory
@@ -69,18 +69,18 @@ module Octopress
     #
     # Returns the file path to where the plugin was installed
     def clone(plugin)
-      if File.directory?(install_dir(plugin))
-        Open3.popen3("cd #{install_dir(plugin)} && git pull origin master") do |stdin, stdout, stderr, wait_thr|
+      if File.directory?(cache_dir(plugin))
+        Open3.popen3("cd #{cache_dir(plugin)} && git pull origin master") do |stdin, stdout, stderr, wait_thr|
           exit_status = wait_thr.value
           raise RuntimeError, "Error updating #{plugin}".red unless exit_status.exitstatus == 0
         end
       else
-        Open3.popen3("git clone #{git_url(plugin)} #{install_dir(plugin)}") do |stdin, stdout, stderr, wait_thr|
+        Open3.popen3("git clone #{git_url(plugin)} #{cache_dir(plugin)}") do |stdin, stdout, stderr, wait_thr|
           exit_status = wait_thr.value
           raise RuntimeError, "Error cloning #{plugin}".red unless exit_status.exitstatus == 0
         end
       end
-      install_dir(plugin)
+      cache_dir(plugin)
     end
 
     # Public: fetches the contents of the manifest file as a Hash
@@ -89,7 +89,7 @@ module Octopress
     #
     # Returns a Hash of the contents of the manifest file
     def manifest(plugin)
-      YAML.load_file(File.join(install_dir(plugin), "manifest.yml"))
+      YAML.load_file(File.join(cache_dir(plugin), "manifest.yml"))
     end
 
     # Public: build dependency tree for a plugin
@@ -117,9 +117,9 @@ module Octopress
     # Returns an Array of file paths which were copied
     def copy_files(plugin)
       manifest_yml = manifest(plugin)
-      %w[javascripts stylesheets plugins configs source].each do |type|
+      %w[javascripts stylesheets plugins config source].each do |type|
         Octopress.logger.debug "Copying #{type} files for #{plugin}..."
-        send("copy_#{type}_files", plugin, manifest_yml[type])
+        send("copy_#{type}_files", plugin)
       end
     end
 
@@ -140,31 +140,27 @@ module Octopress
     private
     # Private: Copy file to Octopress installation
     #
-    # plugin - plugin name
+    # plugin      - plugin name
     # file_or_dir - the file or directory to glob
     # destination - where this file or directory is to go (WITH SLUG SUBDIR IF NEEDED)
     #
     # Returns nothing
     def copy_file(plugin, file_or_dir, destination)
-      source = File.join(install_dir(plugin), file_or_dir)
+      source = File.join(cache_dir(plugin), file_or_dir)
       dest   = File.join(Octopress.root, destination)
       FileUtils.rm_rf(dest)
+      FileUtils.mkdir_p(File.directory?(dest) ? dest : File.dirname(dest))
+      FileUtils.mkdir_p(File.join(dest, namespace(plugin)))
+
+      Octopress.logger.debug "FileUtils.cp_r(#{source}, #{dest})"
       FileUtils.cp_r(source, dest)
     end
 
-    # Private: Copy javascript files to local Octopress installation
-    #
-    # plugin - plugin name
-    # files - the filenames of the javascript files for this plugin relative to
-    #         the javascripts dir in the plugin's install dir
-    #
-    # Returns nothing
-    def copy_javascript_files(plugin, files)
-      [files["lib"]].flatten.each do |file|
-        copy_file(plugin, file, File.join("assets", file))
-      end
-      [files["modules"]].flatten.each do |file|
-        copy_file(plugin, file, File.join("assets", file))
+    def globbed_filelist(plugin, *subdirs)
+      Dir.glob(File.join(cache_dir(plugin), *subdirs, "**", "*")).select do |filename|
+        File.file?(filename)
+      end.map do |filename|
+        filename.gsub(cache_dir(plugin), '')
       end
     end
 
@@ -175,10 +171,70 @@ module Octopress
     #         the stylesheets dir in the plugin's install dir
     #
     # Returns nothing
-    def copy_stylesheets_files(plugin, files)
-      [files].flatten.each do |file|
+    def copy_source_files(plugin)
+      source_files(plugin).each do |file|
+        copy_file(plugin, file, File.join(Octopress.configuration[:source] || "source", namespace(plugin)))
+      end
+    end
+
+    def source_files(plugin)
+      globbed_filelist(plugin, "source")
+    end
+
+    # Private: Copy javascript files to local Octopress installation
+    #
+    # plugin - plugin name
+    # files - the filenames of the stylesheet files for this plugin relative to
+    #         the stylesheets dir in the plugin's install dir
+    #
+    # Returns nothing
+    def copy_config_files(plugin)
+      config_files(plugin).each do |file|
+        copy_file(plugin, file, File.join("config", namespace(plugin)))
+      end
+    end
+
+    def config_files(plugin)
+      globbed_filelist(plugin, "configs")
+    end
+
+    # Private: Copy javascript files to local Octopress installation
+    #
+    # plugin - plugin name
+    #
+    # Returns nothing
+    def copy_javascripts_files(plugin)
+      javascripts_lib_files(plugin).each do |file|
+        copy_file(plugin, file, File.join("assets", file))
+      end
+      javascripts_modules_files(plugin).flatten.each do |file|
+        copy_file(plugin, file, File.join("assets", file))
+      end
+    end
+
+    def javascripts_lib_files(plugin)
+      globbed_filelist("javascripts", "lib")
+    end
+
+    def javascripts_modules_files(plugin)
+      globbed_filelist("javascripts", "modules")
+    end
+
+    # Private: Copy javascript files to local Octopress installation
+    #
+    # plugin - plugin name
+    # files - the filenames of the stylesheet files for this plugin relative to
+    #         the stylesheets dir in the plugin's install dir
+    #
+    # Returns nothing
+    def copy_stylesheets_files(plugin)
+      stylesheet_files(plugin).each do |file|
         copy_file(plugin, file, File.join("assets", "stylesheets", "plugins", namespace(plugin)))
       end
+    end
+
+    def stylesheet_files(plugin)
+      globbed_filelist(plugin, "stylesheets")
     end
 
     # Private: Copy javascript files to local Octopress installation
@@ -188,12 +244,15 @@ module Octopress
     #         to the plugin dir in the plugin's install dir
     #
     # Returns nothing
-    def copy_plugins_files(plugin, files)
-      [files].flatten.each do |file|
+    def copy_plugins_files(plugin)
+      plugin_files(plugin).each do |file|
         copy_file(plugin, file, File.join(Octopress.configuration[:plugins], File.basename(file)))
       end
     end
 
+    def plugin_files(plugin)
+      globbed_filelist(plugin, "stylesheets")
+    end
 
   end
 end
