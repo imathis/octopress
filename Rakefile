@@ -25,28 +25,13 @@ configuration  = Octopress.configuration
 full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
-task :install, :theme do |t, args|
-  theme = args.theme || 'classic'
-  theme_configuration = configurator.read_theme_configuration(theme)
-  if File.directory?(theme_configuration[:source])
-    abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
-  end
-  # copy theme into working Jekyll directories
-  puts "## Installing #{theme} theme"
-  Rake::Task["install_source"].invoke(theme)
-  Rake::Task["install_stylesheets"].invoke(theme)
-  Rake::Task["install_javascripts"].invoke(theme)
-  Rake::Task["install_configs"].invoke(theme)
-  mkdir_p 'site'
-end
-
-desc "Install a plugin"
-task :install_plugin, :plugin do |t, args|
+task :install, :plugin do |t, args|
   plugin = args.plugin
   if plugin.nil? || plugin == ""
-    abort "You must specify a plugin.".red
+    plugin = "classic-theme"
   end
   Octopress::DependencyInstaller.install_all(plugin)
+  mkdir_p 'site'
 end
 
 task :install_configs, :theme do |t, args|
