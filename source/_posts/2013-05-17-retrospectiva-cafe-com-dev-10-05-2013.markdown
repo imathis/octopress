@@ -13,7 +13,7 @@ categories:
 ---
 
 
-Na sexta-feira, dia 10/05, [Mauro George] (https://twitter.com/maurogeorge) apresentou a palestra **"Model of the Colossus"** para a galera que estava presente e pela internet!
+Na sexta-feira, dia 10/05, [Mauro George](https://twitter.com/maurogeorge) apresentou a palestra **"Model of the Colossus"** para a galera que estava presente e pela internet!
 
 <!--more-->
 
