@@ -591,9 +591,9 @@ end
 
 task :test do
   sh "bundle exec rake spec"
-  sh "bundle exec rake install['git@github.com:parkr/classic-theme.git']"
-  sh "bundle exec rake install['git@github.com:parkr/video-tag.git']"
-  sh "bundle exec rake install['git@github.com:parkr/adn-timeline.git']"
+  sh "bundle exec rake install['git://github.com/parkr/classic-theme.git']"
+  sh "bundle exec rake install['git://github.com/parkr/video-tag.git']"
+  sh "bundle exec rake install['git://github.com/parkr/adn-timeline.git']"
   sh "bundle exec rake generate"
 end
 
