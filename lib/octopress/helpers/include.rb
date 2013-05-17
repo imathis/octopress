@@ -22,7 +22,7 @@ module Octopress
         if exists(f, context)
           return f
         elsif i == files.size - 1
-          f == 'none' ? false : f
+          return f == 'none' ? false : f
         end
       end
     end

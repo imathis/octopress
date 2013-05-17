@@ -9,7 +9,7 @@ module Octopress
 
     def render(context)
       if evaluate_expression @markup, context
-        file = get_include(strip_expression(@markup, context), context).first
+        file = get_include(strip_expression(@markup, context), context)
         render_include(file, context) if file
       else
         ''
