@@ -9,7 +9,7 @@ module Octopress
 
     def render(context)
       if evaluate_expression @markup, context
-        file = get_include(strip_expression(@markup, context), context)
+        file = get_include(strip_expression(@markup, context), context).first
         render_include(file, context) if file
       else
         ''
@@ -33,7 +33,7 @@ module Octopress
     include VarHelpers
     include IncludeHelper
     HasContent = /(.*?)({=\s*render\s*})(.*)/im
-    
+
     def initialize(tag_name, markup, tokens)
       @markup = markup.strip
       super
