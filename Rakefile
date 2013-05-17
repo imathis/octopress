@@ -72,9 +72,9 @@ task :install_stylesheets, :theme do |t, args|
   rescue
     "The #{theme} theme must have a configuration file. This theme isn't compatable with Octopress 3.0 installation. You can probably still install it manually.".yellow
   end
-  mkdir_p "assets/stylesheets"
+  mkdir_p "stylesheets"
   if File.directory? stylesheets_dir
-    cp_r "#{stylesheets_dir}/.", "assets/stylesheets"
+    cp_r "#{stylesheets_dir}/.", "stylesheets"
   end
 end
 
@@ -87,9 +87,9 @@ task :install_javascripts, :theme do |t, args|
   rescue
     "The #{theme} theme must have a configuration file. This theme isn't compatable with Octopress 3.0 installation. You can probably still install it manually.".yellow
   end
-  mkdir_p "assets/javascripts"
+  mkdir_p "javascripts"
   if File.directory? javascripts_dir
-    cp_r "#{javascripts_dir}/.", "assets/javascripts"
+    cp_r "#{javascripts_dir}/.", "javascripts"
   end
 end
 
@@ -286,16 +286,16 @@ task :update_stylesheets, :theme do |t, args|
     puts "Removed existing assets.old/stylesheets directory"
   end
   mkdir_p "assets.old"
-  if File.directory?("assets/stylesheets")
-    mv "assets/stylesheets", "assets.old/stylesheets"
+  if File.directory?("stylesheets")
+    mv "stylesheets", "assets.old/stylesheets"
     puts "Moved stylesheets into assets.old/stylesheets"
   end
   Rake::Task["install_stylesheets"].invoke(theme)
   if File.directory?("assets.old/stylesheets/custom")
-    cp_r "assets.old/stylesheets/custom", "assets/stylesheets"
+    cp_r "assets.old/stylesheets/custom", "stylesheets"
   end
   if File.directory?("assets.old/stylesheets/plugins")
-    cp_r "assets.old/stylesheets/plugins", "assets/stylesheets"
+    cp_r "assets.old/stylesheets/plugins", "stylesheets"
   end
   rm_r ".sass-cache", :secure=>true if File.directory?(".sass-cache")
   puts "## Updated Stylesheets ##"
@@ -311,8 +311,8 @@ task :update_javascripts, :theme do |t, args|
       puts "Removed existing assets.old/javascripts directory"
     end
     mkdir_p "assets.old"
-    if File.directory?("assets/javascripts")
-      cp_r "assets/javascripts/.", "assets.old/javascripts"
+    if File.directory?("javascripts")
+      cp_r "javascripts/.", "assets.old/javascripts"
       puts "Copied javascripts into assets.old/javascripts"
     end
     Rake::Task[:install_javascripts].invoke(theme)

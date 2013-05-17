@@ -9,8 +9,8 @@ configurator   = Octopress::Configuration.new
 configuration  = configurator.read_configuration
 js_assets      = Octopress::JSAssetsManager.new
 
-stylesheets_dir    = "assets/stylesheets"
-javascripts_dir    = "assets/javascripts"
+stylesheets_dir    = "stylesheets"
+javascripts_dir    = "javascripts"
 
 guard :compass do
   watch %r{^#{stylesheets_dir}/(.*)\.s[ac]ss$}
