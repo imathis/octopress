@@ -34,12 +34,12 @@ module Octopress
   #
   # Returns the Logger, based on Ruby's stdlib Logger
   def self.logger
-    @@logger ||= Logger.build
+    @@logger ||= Ink.build
   end
 end
 
 require "octopress/core_ext"
-require "octopress/logger"
+require "octopress/ink"
 require "octopress/formatters/base_formatter"
 require "octopress/formatters/simple_formatter"
 require "octopress/formatters/verbose_formatter"
