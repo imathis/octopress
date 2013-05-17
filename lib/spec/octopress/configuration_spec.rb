@@ -13,7 +13,7 @@ describe Octopress do
     end
 
     it "should accept a path pointing to a config directory" do
-      Octopress.configurator(File.join(File.dirname(__FILE__), '../', 'fixtures', 'env'))
+      Octopress.configurator(File.expand_path('../fixtures/env', File.dirname(__FILE__)))
 
       Octopress.env.should eq('config_specified_environment')
     end
@@ -24,7 +24,7 @@ describe Octopress do
       Octopress.clear_config!
       @old_env = ENV['OCTOPRESS_ENV']
       ENV['OCTOPRESS_ENV'] = nil
-      Octopress.configurator(File.join(File.dirname(__FILE__), '../', 'fixtures', 'env'))
+      Octopress.configurator(File.expand_path('../fixtures/env', File.dirname(__FILE__)))
     end
 
     after do
@@ -46,15 +46,20 @@ describe Octopress::Configuration do
         @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'no_override'))
       end
       let(:configuration) { @octo_config.read_configuration }
+      let(:expected_config) {
+        { :url           => "http://yoursite.com",
+          :title         => "My Octopress Blog",
+          :subtitle      => "A blogging framework for hackers.",
+          :author        => "Your Name",
+          :simple_search => "http://google.com/search",
+          :description   => nil }
 
-      it "returns the default config with keys as symbols" do
-        expected_config = { :url           => "http://yoursite.com",
-                            :title         => "My Octopress Blog",
-                            :subtitle      => "A blogging framework for hackers.",
-                            :author        => "Your Name",
-                            :simple_search => "http://google.com/search",
-                            :description   => nil }
-        configuration.should eq(expected_config)
+      }
+
+      %w[url title subtitle author simple_search description].each do |key|
+        it "returns the correct value for #{key}" do
+          configuration[key.to_sym].should eq(expected_config[key.to_sym])
+        end
       end
     end
 
@@ -63,15 +68,19 @@ describe Octopress::Configuration do
         @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'override'))
       end
       let(:configuration) { @octo_config.read_configuration }
+      let(:expected_config) {
+        { :url           => "http://myownsite.com",
+          :title         => "My Octopress custom Blog",
+          :subtitle      => "How did this get here? I'm not good with computers",
+          :author        => "John Doe",
+          :simple_search => "http://google.com/search",
+          :description   => nil }
+      }
 
-      it "returns the default config with keys as symbols" do
-        expected_config = { :url           => "http://myownsite.com",
-                            :title         => "My Octopress custom Blog",
-                            :subtitle      => "How did this get here? I'm not good with computers",
-                            :author        => "John Doe",
-                            :simple_search => "http://google.com/search",
-                            :description   => nil }
-        configuration.should eq(expected_config)
+      %w[url title subtitle author simple_search description].each do |key|
+        it "returns the correct value for #{key}" do
+          configuration[key.to_sym].should eq(expected_config[key.to_sym])
+        end
       end
     end
   end
