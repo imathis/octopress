@@ -26,10 +26,6 @@ module Octopress
       File.absolute_path(File.join(self.config_directory, *subdirs))
     end
 
-    def theme_config_dir(theme, *subdirs)
-      File.absolute_path(File.join(File.dirname(__FILE__), '../', '../' '.themes', theme, '_config', *subdirs))
-    end
-
     # Static: Reads the configuration of the specified file
     #
     # path - the String path to the configuration file, relative to ./_config
