@@ -3,7 +3,7 @@ source "http://rubygems.org"
 group :development do
   gem 'rake', '~> 10.0.3'
   gem 'rack', '~> 1.5.0'
-  gem 'jekyll', '~> 1.0.0.beta4'
+  gem 'jekyll', '~> 1.0.0'
   gem 'redcarpet', '~> 2.2.2'
   gem 'RedCloth', '~> 4.2.9'
   gem 'haml', '~> 3.1.7'

@@ -4,6 +4,4 @@ rvm:
   - 1.9.3
   - 1.9.2
 script:
-  - bundle exec rake install
-  - bundle exec rake generate
   - bundle exec rake test

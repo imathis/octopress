@@ -20,33 +20,27 @@ require 'open3'
 ###   Please do not change anything below if you want help --
 ###   otherwise, you're on your own ;-)
 
-configurator = Octopress.configurator
+configurator   = Octopress.configurator
 configuration  = Octopress.configuration
 full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
-task :install, :theme do |t, args|
-  theme = args.theme || 'classic'
-  theme_configuration = configurator.read_theme_configuration(theme)
-  if File.directory?(theme_configuration[:source])
-    abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
+task :install, :plugin do |t, args|
+  plugin = args.plugin
+  if plugin.nil? || plugin == ""
+    plugin = "classic-theme"
   end
-  # copy theme into working Jekyll directories
-  puts "## Installing "+theme+" theme"
-  Rake::Task["install_source"].invoke(theme)
-  Rake::Task["install_stylesheets"].invoke(theme)
-  Rake::Task["install_javascripts"].invoke(theme)
-  Rake::Task["install_configs"].invoke(theme)
-  mkdir_p 'site'
+  Octopress::DependencyInstaller.install_all(plugin)
+  mkdir_p 'site', verbose: false
 end
 
 task :install_configs, :theme do |t, args|
   theme = args.theme || 'classic'
-  mkdir_p "_config"
-  if File.directory? ".themes/#{theme}/_config"
-    cp_r ".themes/#{theme}/_config/.", "_config/defaults", :remove_destination=>true
+  mkdir_p "config"
+  if File.directory? ".themes/#{theme}/config"
+    cp_r ".themes/#{theme}/config/.", "config/defaults", :remove_destination=>true
   end
-  unless File.exist?('_config/site.yml')
+  unless File.exist?('config/site.yml')
     user_config_site = <<-EOF
 ---
 # --------------------------- #
@@ -54,9 +48,9 @@ task :install_configs, :theme do |t, args|
 # --------------------------- #
 
 EOF
-    File.open('_config/site.yml', 'w') { |f| f.write user_config_site }
+    File.open('config/site.yml', 'w') { |f| f.write user_config_site }
   end
-  unless File.exist?('_config/deploy.yml')
+  unless File.exist?('config/deploy.yml')
     user_config_deploy = <<-EOF
 ---
 # -------------------------- #
@@ -65,7 +59,7 @@ EOF
 
 deploy_method: rsync
 EOF
-    File.open('_config/deploy.yml', 'w') { |f| f.write user_config_deploy }
+    File.open('config/deploy.yml', 'w') { |f| f.write user_config_deploy }
   end
 end
 
@@ -111,7 +105,9 @@ end
 
 desc "Generate Jekyll site"
 task :generate do
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." if configuration[:source].nil? || !File.directory?(configuration[:source])
+  if configuration[:source].nil? || !File.directory?(configuration[:source])
+    raise "### You haven't set anything up yet. First run `rake install[theme]` to set up an Octopress theme."
+  end
   configurator.write_configs_for_generation
   puts "## Generating Site with Jekyll - ENV: #{Octopress.env}"
   js_assets = Octopress::JSAssetsManager.new
@@ -592,7 +588,14 @@ desc "Run all examples"
 RSpec::Core::RakeTask.new(:spec) do |t|
   t.pattern = "./lib/spec{,/*/**}/*_spec.rb"
 end
-task :test => :spec
+
+task :test do
+  sh "bundle exec rake spec", verbose: false
+  sh "bundle exec rake install['git@github.com:parkr/classic-theme.git']", verbose: false
+  sh "bundle exec rake install['git@github.com:parkr/video-tag.git']", verbose: false
+  sh "bundle exec rake install['git@github.com:parkr/adn-timeline.git']", verbose: false
+  sh "bundle exec rake generate", verbose: false
+end
 
 def get_unpublished(posts, options={})
   result = ""
