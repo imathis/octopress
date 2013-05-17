@@ -13,14 +13,14 @@ module Octopress
     end
 
     def get_include(files, context)
-      files = files.split("||").map do |file| 
+      files = files.split("||").map do |file|
         file = file.strip
         context[file].nil? ? file : context[file]
       end
 
       files.each_with_index do |f, i|
         if exists(f, context)
-          break f
+          return f
         elsif i == files.size - 1
           f == 'none' ? false : f
         end
