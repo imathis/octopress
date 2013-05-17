@@ -39,8 +39,7 @@ module Octopress
     end
 
     def url
-      fingerprint = @fingerprint || get_fingerprint
-      Octopress.env == 'production' ?  "#{@build_path}/all-#{fingerprint}.js" : "#{@build_path}/all.js"
+      Octopress.env == 'production' ?  "#{@build_path}/all-#{@fingerprint || get_fingerprint}.js" : "#{@build_path}/all.js"
     end
 
     def compile
@@ -49,7 +48,7 @@ module Octopress
       filename = url
       file = "#{@template_path + filename}"
 
-      if File.exists?(file) and File.open(file) {|f| f.readline} =~ /#{@fingerprint}/
+      if File.size?(file) && File.open(file) {|f| f.readline} =~ /#{@fingerprint}/
         false
       else
         js = Stitch::Package.new(:dependencies => @lib, :paths => @modules).compile
@@ -63,6 +62,9 @@ module Octopress
 
         "Javascripts compiled to #{filename}."
       end
+    rescue Exception => e
+      Octopress.logger.fatal "Error reading file #{url}".red
+      raise e
     end
   end
 end
