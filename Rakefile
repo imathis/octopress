@@ -31,7 +31,7 @@ task :install, :plugin do |t, args|
     plugin = "classic-theme"
   end
   Octopress::DependencyInstaller.install_all(plugin)
-  mkdir_p 'site'
+  mkdir_p 'site', verbose: false
 end
 
 task :install_configs, :theme do |t, args|
@@ -105,7 +105,6 @@ end
 
 desc "Generate Jekyll site"
 task :generate do
-  p configuration
   if configuration[:source].nil? || !File.directory?(configuration[:source])
     raise "### You haven't set anything up yet. First run `rake install[theme]` to set up an Octopress theme."
   end
@@ -591,9 +590,11 @@ RSpec::Core::RakeTask.new(:spec) do |t|
 end
 
 task :test do
-  sh "bundle exec rake spec"
-  sh "bundle exec rake install"
-  sh "bundle exec rake generate"
+  sh "bundle exec rake spec", verbose: false
+  sh "bundle exec rake install['git@github.com:parkr/classic-theme.git']", verbose: false
+  sh "bundle exec rake install['git@github.com:parkr/video-tag.git']", verbose: false
+  sh "bundle exec rake install['git@github.com:parkr/adn-timeline.git']", verbose: false
+  sh "bundle exec rake generate", verbose: false
 end
 
 def get_unpublished(posts, options={})
