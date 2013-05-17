@@ -1,7 +1,7 @@
 require_relative '../spec_helper.rb'
 
-describe Octopress::Logger do
-  subject { Octopress::Logger.build }
+describe Octopress::Ink do
+  subject { Octopress::Ink.build }
 
   %w[debug warn info error].each do |method|
     it "responds to #{method} method" do
