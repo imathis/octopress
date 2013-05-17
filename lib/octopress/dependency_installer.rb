@@ -185,7 +185,8 @@ module Octopress
     # Returns nothing
     def copy_source_files(plugin)
       source      = File.join(cache_dir(plugin), "source")
-      destination = File.join(Octopress.root, Octopress.configuration[:source], namespace(plugin))
+      destination = File.join(Octopress.root, Octopress.configuration[:source])
+      destination = File.join(destination, namespace(plugin)) if manifest(plugin)["type"] != "theme"
       if File.directory?(source)
         copy_file_list(source, destination)
       end
