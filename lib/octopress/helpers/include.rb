@@ -12,12 +12,15 @@ module Octopress
       File.exists? File.join(base, "_includes", file)
     end
 
-    def get_include(files, context)
+    def get_files(files, context)
       files = files.split("||").map do |file|
         file = file.strip
         context[file].nil? ? file : context[file]
       end
+    end
 
+    def get_include(files, context)
+      files = get_files(files, context)
       files.each_with_index do |f, i|
         if exists(f, context)
           return f
