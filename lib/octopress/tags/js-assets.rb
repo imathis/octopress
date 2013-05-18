@@ -9,9 +9,15 @@ module Octopress
 
     def render(context)
       js_assets = Octopress::JSAssetsManager.new
-      js_assets.url
+      url = js_assets.url
+      if url
+        url = context['site.root'].sub(/\/\s*$/, '') + url
+        "<script src='#{url}' type='text/javascript'></script>"
+      else
+        ''
+      end
     end
   end
 end
 
-Liquid::Template.register_tag('js-assets', Octopress::JavascriptAssetsTag)
+Liquid::Template.register_tag('javascript-tag', Octopress::JavascriptAssetsTag)

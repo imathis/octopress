@@ -115,7 +115,7 @@ module Octopress
       permalink:    '/:year/:month/:day/:title/',
       source:       'source',          # source file directory
       destination:  'public',          # compiled site directory
-      plugins:      ['lib/octopress/helpers', 'lib/octopress/tags', 'lib/octopress/filters', 'lib/octopress/generators', 'plugins'],
+      plugins:      ['lib/octopress/helpers', 'lib/octopress/filters', 'lib/octopress/tags', 'lib/octopress/generators', 'plugins'],
       code_dir:     'downloads/code',
       category_dir: 'categories',
       include: ['.htaccess'],
@@ -169,7 +169,7 @@ module Octopress
 
       require_js: {
         # Dependiences are added first as globals
-        lib: ['lib/modernizr.js', 'lib/**/*'],
+        lib: ['lib/**/*'],
 
         # Modules are wrapped with CommonJS functions and must be
         # Example:

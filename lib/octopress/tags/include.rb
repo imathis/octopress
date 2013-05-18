@@ -32,7 +32,7 @@ module Octopress
   class WrapTag < Liquid::Block
     include VarHelpers
     include IncludeHelper
-    HasContent = /(.*?)({=\s*render\s*})(.*)/im
+    HasContent = /(.*?)({=\s*yield\s*})(.*)/im
 
     def initialize(tag_name, markup, tokens)
       @markup = markup.strip
@@ -43,7 +43,7 @@ module Octopress
       if content =~ HasContent
         $1 + render_include(file, context) + $3
       else
-        raise SyntaxError.new("Syntax Error in 'wrap_include' - Valid syntax: {% wrap_include template/file.html %}\n[<div>]{= render }[</div>]\n{% endwrap_include %}")
+        raise SyntaxError.new("Syntax Error in 'wrap_include' - Valid syntax: {% wrap_include template/file.html %}\n[<div>]{= yield }[</div>]\n{% endwrap_include %}")
       end
     end
 

@@ -5,15 +5,17 @@ $:.unshift File.expand_path("lib", File.dirname(__FILE__))
 require 'octopress'
 require 'guard/jekyll'
 
-configurator   = Octopress::Configuration.new
-configuration  = configurator.read_configuration
-js_assets      = Octopress::JSAssetsManager.new
-
 stylesheets_dir    = "stylesheets"
 javascripts_dir    = "javascripts"
 
-guard :compass do
-  watch %r{^#{stylesheets_dir}/(.*)\.s[ac]ss$}
+configurator   = Octopress::Configuration.new
+configuration  = configurator.read_configuration
+js_assets      = Octopress::JSAssetsManager.new if Dir.exists? javascripts_dir
+
+if Dir.exists? stylesheets_dir
+  guard :compass do
+    watch %r{^#{stylesheets_dir}/(.*)\.s[ac]ss$}
+  end
 end
 
 guard :jekyll do
@@ -32,7 +34,10 @@ guard :shell do
       "Copied #{m.first} -> #{path}"
     end
   end
-  watch /^#{javascripts_dir}\/.+\.(js|coffee|mustache|eco|tmpl)/ do |change|
-    js_assets.compile
+
+  if Dir.exists? javascripts_dir
+    watch /^#{javascripts_dir}\/.+\.(js|coffee|mustache|eco|tmpl)/ do |change|
+      js_assets.compile
+    end
   end
 end
