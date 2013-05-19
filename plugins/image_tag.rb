@@ -16,6 +16,8 @@
 # <img class="left half" src="http://site.com/images/ninja.png" width="150" height="150" title="Ninja Attack!" alt="Ninja in attack posture">
 #
 
+require 'fastimage'
+
 module Jekyll
 
   class ImageTag < Liquid::Tag
@@ -39,6 +41,28 @@ module Jekyll
 
     def render(context)
       if @img
+
+        # if src is defined (and it should be!), check if the filename has
+        # '@2x' suffix. in that case and if the size is not specified, get
+        # image's dimensions and set width and height half that size. this
+        # behavior is like on iOS.
+        # I've put this block of code here in render() instead of initialize(),
+        # because here I can have access to the site's config to get the
+        # source directory with images.
+        if File.basename(@img['src'], ".*").end_with?("@2x") and
+            !@img.has_key?('width') and !@img.has_key?('height')
+
+            # remove leading slashes
+            img_src = @img['src'].sub(/^\/*/, '')
+            image_file = (Pathname.new(context.registers[:site].source) + img_src).expand_path
+
+            dim = FastImage.size(image_file, :raise_on_failure=>true)
+            unless dim.nil?
+                @img['width'] = dim[0] / 2
+                @img['height'] = dim[1] / 2
+            end
+        end
+
         "<img #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")}>"
       else
         "Error processing input, expected syntax: {% img [class name(s)] [http[s]:/]/path/to/image [width [height]] [title text | \"title text\" [\"alt text\"]] %}"

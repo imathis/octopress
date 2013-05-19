@@ -13,6 +13,8 @@ group :development do
   gem 'rb-fsevent', '~> 0.9'
   gem 'stringex', '~> 1.4.0'
   gem 'liquid', '~> 2.3.0'
+  # to get image size in image_tag plugin
+  gem 'fastimage', '~> 1.4.0'
 end
 
 gem 'sinatra', '~> 1.4.2'
