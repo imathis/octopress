@@ -241,7 +241,6 @@ task :new_page, :filename do |t, args|
       time = now_in_timezone(configuration[:timezone])
       open(file, 'w') do |page|
         page.puts page_template.to_yaml.gsub(/^:/m,'')
-        page.puts "date: #{time.iso8601}"
         page.puts "---"
       end
     rescue
