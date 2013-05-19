@@ -251,9 +251,25 @@ module Octopress
     # Returns nothing
     def copy_stylesheets_files(plugin)
       source      = File.join(cache_dir(plugin), "stylesheets")
-      destination = File.join(Octopress.root, "stylesheets", namespace(plugin))
+      sass_dir    = File.join(Octopress.root, "stylesheets")
+      destination = File.join(sass_dir, namespace(plugin))
       if File.directory?(source)
         copy_file_list(source, destination)
+      end
+      default_sass = File.join(sass_dir, "screen.scss") 
+      plugins_dir = File.join(sass_dir, "plugins")
+      FileUtils.mkdir_p plugins_dir unless Dir.exists? plugins_dir
+      unless File.exists? default_sass
+        open(default_sass, 'w') do |sass|
+          sass.puts '@import "theme/_theme";  // Import theme partials'
+          sass.puts '@import "plugins/**/*";  // Auto import all plugins'
+        end
+      end
+      if Dir[plugins_dir+'/*'].empty?
+        default_plugin_sass = File.join(sass_dir, "plugins", "plugins.scss")
+        open(default_plugin_sass, 'w') do |sass|
+          sass.puts '//* Plugin code installed here will be automatically imported *//'
+        end
       end
     end
 
