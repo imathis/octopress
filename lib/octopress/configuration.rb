@@ -68,13 +68,13 @@ module Octopress
     def read_configuration
       configs = DEFAULTS.dup
       Dir.glob(self.config_dir('defaults', '**', '*.yml')) do |filename|
-        file_yaml = YAML.load(File.read(filename))
+        file_yaml = read_config(filename)
         unless file_yaml.nil?
           configs = configs.deep_merge(file_yaml)
         end
       end
       Dir.glob(self.config_dir('*.yml')) do |filename|
-        file_yaml = YAML.load(File.read(filename))
+        file_yaml = read_config(filename)
         unless file_yaml.nil?
           configs = configs.deep_merge(file_yaml)
         end
@@ -176,13 +176,13 @@ module Octopress
       paginate:       10,              # Posts per page on the blog index
 
       # Templates - these can be overridden in site.yml and themes can ship with their own default templates.
-        
+
       templates: {
         post: PostTemplate,
         linkpost: LinkPostTemplate,
         page: PageTemplate,
       },
-        
+
 
       # Feed settings
 
