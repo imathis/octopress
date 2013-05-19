@@ -196,21 +196,12 @@ module Octopress
 
       # Asset configuration
 
-      # Javascript assets stored in assets/javascripts and assets/javascripts/lib
+      # Javascript assets stored in javascripts/lib and javascripts/modules
       # Are wrapped with CommonJS functions, combined, uglified and fingerprinted
       # Supported files: .js, .coffee, .mustache, .eco, .tmpl
 
-      require_js: {
-
-        # Dependiences are added first as globals
-        lib: ['lib/**/*'],
-
-        # Modules are wrapped with CommonJS functions and must be
-        # Example:
-        #   for file: assets/javascripts/modules/some-plugin/awesome.js
-        #   require like: var awesome = require('some-plugin/awesome')
-        modules: ['modules']
-      }
+      # Dependiences from lib are added first as globals
+      js_lib: ['lib/**/*']
     }
   end
 end
