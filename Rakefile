@@ -11,9 +11,10 @@ require 'octopress/js_asset_manager'
 require 'rake/testtask'
 require 'colors'
 require 'open3'
+require 'helpers/titlecase'
 
 ### Configuring Octopress:
-###   Under _config/ you will find:
+###   Under config/ you will find:
 ###       site.yml, deploy.yml
 ###   Here you can override Octopress's default configurations or add your own.
 ###   This Rakefile uses those config settings to do what it does.
@@ -110,9 +111,13 @@ task :generate do
   end
   configurator.write_configs_for_generation
   puts "## Generating Site with Jekyll - ENV: #{Octopress.env}"
-  js_assets = Octopress::JSAssetsManager.new
-  js_assets.compile
-  system "compass compile --css-dir #{configuration[:source]}/stylesheets"
+  if Dir.exists? "javascripts"
+    js_assets = Octopress::JSAssetsManager.new
+    js_assets.compile
+  end
+  if Dir.exists? "stylesheets"
+    system "compass compile --css-dir #{configuration[:source]}/stylesheets" if Dir.exists? "stylesheets"
+  end
   system "jekyll build #{"--drafts --trace" unless Octopress.env == 'production'}"
   unpublished = get_unpublished(Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*"), {env: Octopress.env, message: "\nThese posts were not generated:"})
   puts unpublished unless unpublished.empty?
@@ -172,61 +177,77 @@ task :new_post, :title do |t, args|
   else
     title = get_stdin("Enter a title for your post: ")
   end
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(configuration[:source])
+  title = title.titlecase if configuration[:titlecase]
   time = now_in_timezone(configuration[:timezone])
-  mkdir_p "#{configuration[:source]}/#{configuration[:posts_dir]}"
-  filename = "#{configuration[:source]}/#{configuration[:posts_dir]}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{configuration[:new_post_ext]}"
+
+  posts_dir = "#{configuration[:source]}/#{configuration[:posts_dir]}"
+  mkdir_p posts_dir unless Dir.exists? posts_dir
+  post_template = configuration[:templates][:post]
+  filename = "#{configuration[:source]}/#{configuration[:posts_dir]}/#{time.strftime('%Y-%m-%d')}-#{title.to_url}.#{post_template.delete(:extension)}"
+
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
-  puts "Creating new post: #{filename}"
-  open(filename, 'w') do |post|
-    post.puts "---"
-    post.puts "layout: post"
-    post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-    post.puts "date: #{time.iso8601}"
-    post.puts "comments: true"
-    post.puts "external-url: "
-    post.puts "categories: "
-    post.puts "---"
+
+  begin
+    post_template[:date] = time.iso8601 if post_template[:date]
+    post_template[:title] = title.gsub(/&/,'&amp;') if post_template[:title]
+    open(filename, 'w') do |post|
+      post.puts post_template.to_yaml.gsub(/^:/m,'')
+      post.puts "---"
+    end
+  rescue
+    Raise "Failed to create post: #{filename}"
   end
+  puts "Created new post: #{filename}"
 end
 
-# usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
+# usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page/index.html")
 desc "Create a new page in #{configuration[:source]}/(filename)/index.#{configuration[:new_page_ext]}"
 task :new_page, :filename do |t, args|
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(configuration[:source])
   args.with_defaults(:filename => 'new-page')
-  page_dir = [configuration[:source]]
-  if args.filename.downcase =~ /(^.+\/)?(.+)/
+
+  if args.filename.downcase =~ /(^.+\/)?(.+?)\/?$/
+    page_dir = [configuration[:source]]
     filename, dot, extension = $2.rpartition('.').reject(&:empty?)         # Get filename and extension
-    title = filename
     page_dir.concat($1.downcase.sub(/^\//, '').split('/')) unless $1.nil?  # Add path to page_dir Array
+    title = filename
+
     if extension.nil?
       page_dir << filename
       filename = "index"
     end
-    extension ||= configuration[:new_page_ext]
+
     page_dir = page_dir.map! { |d| d = d.to_url }.join('/')                # Sanitize path
     filename = filename.downcase.to_url
 
-    mkdir_p page_dir
+    page_template = configuration[:templates][:page]
+    ext = page_template.delete :extension
+
+    extension ||= ext
+
     file = "#{page_dir}/#{filename}.#{extension}"
+
     if File.exist?(file)
       abort("rake aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
     end
-    puts "Creating new page: #{file}"
-    time = now_in_timezone(configuration[:timezone])
-    open(file, 'w') do |page|
-      page.puts "---"
-      page.puts "layout: page"
-      page.puts "title: \"#{title}\""
-      page.puts "date: #{time.iso8601}"
-      page.puts "comments: true"
-      page.puts "sharing: true"
-      page.puts "footer: true"
-      page.puts "---"
+
+    mkdir_p page_dir unless Dir.exists? page_dir
+
+    page_template[:date] = time.iso8601 if page_template[:date]
+    page_template[:title] = title.gsub(/&/,'&amp;') if page_template[:title]
+
+    begin
+      time = now_in_timezone(configuration[:timezone])
+      open(file, 'w') do |page|
+        page.puts page_template.to_yaml.gsub(/^:/m,'')
+        page.puts "date: #{time.iso8601}"
+        page.puts "---"
+      end
+    rescue
+      raise "Failed to create page: #{filename}"
     end
+    puts "New page created: #{file}"
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
   end
@@ -254,8 +275,10 @@ end
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache, and Compass-generated files."
 task :clean do
   rm_rf [".pygments-cache", ".gist-cache", File.join(configuration[:source], "javascripts", "build")]
-  system "compass clean"
-  puts "## Cleaned Compass-generated files, and various caches ##"
+  if Dir.exists? "stylesheets"
+    system "compass clean"
+    puts "## Cleaned Compass-generated files, and various caches ##"
+  end
 end
 
 desc "Remove generated files (#{configuration[:destination]} directory)."
