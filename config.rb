@@ -16,7 +16,7 @@ http_fonts_path             = "#{http_path}/fonts"
 css_dir                     = "#{config[:destination]}/stylesheets"
 
 # Local development paths
-sass_dir                    = "assets/stylesheets"
+sass_dir                    = "stylesheets"
 images_dir                  = "#{config[:source]}/images"
 fonts_dir                   = "#{config[:source]}/fonts"
 generated_images_dir        = "#{config[:source]}/images"
