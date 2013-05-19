@@ -23,12 +23,12 @@ module Octopress
           abort "No :modules key in :require_js configuration. Cannot proceed.".red
         end
 
-        lib_path = Octopress.configuration[:require_js][:lib]
-        modules_path = Octopress.configuration[:require_js][:modules]
+        @lib_config = Octopress.configuration[:require_js][:lib]
+        modules_config = Octopress.configuration[:require_js][:modules]
 
         # Read js dependencies from require_js.yml configuration
-        @lib = lib_path.collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
-        @modules = modules_path.collect {|item| "#{@js_assets_path}/#{item}" }.flatten.uniq
+        @lib = @lib_config.collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
+        @modules = modules_config.collect {|item| "#{@js_assets_path}/#{item}" }.flatten.uniq
         @module_files = @modules.collect {|item| Dir[item+'/**/*'] }.flatten.uniq
 
       else
@@ -38,9 +38,7 @@ module Octopress
 
 
     def get_fingerprint
-      Digest::MD5.hexdigest(@module_files.concat(@lib).uniq.map! do |path|
-        "#{File.mtime(path).to_i}"
-      end.join)
+      Digest::MD5.hexdigest(@module_files.concat(@lib).uniq.map! { |path| "#{File.mtime(path).to_i}" }.join + @lib_config.join)
     end
 
     def url
@@ -72,7 +70,8 @@ module Octopress
         if identical(file)
           "identical ".green + relative_file
         else
-          write_msg = (File.exists? file ? "overwrite " : "   create ").green + relative_file
+          write_msg = (File.exists?(file) ? "overwrite " : "   create ").green + relative_file
+          puts "compiling javascripts..."
 
           js = Stitch::Package.new(:dependencies => @lib, :paths => @modules).compile
           js = Uglifier.new.compile js if Octopress.env == 'production'
