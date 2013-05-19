@@ -32,7 +32,6 @@ task :install, :plugin do |t, args|
     plugin = "classic-theme"
   end
   Octopress::DependencyInstaller.install_all(plugin)
-  mkdir_p 'site', verbose: false
 end
 
 task :install_configs, :theme do |t, args|
@@ -113,7 +112,7 @@ task :generate do
   puts "## Generating Site with Jekyll - ENV: #{Octopress.env}"
   if Dir.exists? "javascripts"
     js_assets = Octopress::JSAssetsManager.new
-    js_assets.compile
+    puts js_assets.compile
   end
   if Dir.exists? "stylesheets"
     system "compass compile --css-dir #{configuration[:source]}/stylesheets" if Dir.exists? "stylesheets"

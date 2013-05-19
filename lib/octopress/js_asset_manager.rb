@@ -10,20 +10,27 @@ module Octopress
     attr_reader :config
 
     def initialize
-      @js_assets_path = File.expand_path("../../javascripts", File.dirname(__FILE__))
+      @js_assets_path = File.join(Octopress.root, "javascripts")
 
       if Dir.exists? @js_assets_path
-        unless Octopress.configuration.has_key? :js_lib
-          abort "No :js_lib key in configuration. Cannot proceed.".red
+        unless Octopress.configuration.has_key? :require_js
+          abort "No :require_js key in configuration. Cannot proceed.".red
+        end
+        unless Octopress.configuration[:require_js].has_key? :lib
+          abort "No :lib key in :require_js configuration. Cannot proceed.".red
+        end
+        unless Octopress.configuration[:require_js].has_key? :modules
+          abort "No :modules key in :require_js configuration. Cannot proceed.".red
         end
 
-        # Read js dependencies from require_js.yml configuration
-        @lib = Octopress.configuration[:js_lib].collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
-        @modules = "#{@js_assets_path}/modules"
-        @module_files = Dir[@modules+'/**/*']
+        lib_path = Octopress.configuration[:require_js][:lib]
+        modules_path = Octopress.configuration[:require_js][:modules]
 
-        @template_path = File.expand_path("../../#{Octopress.configuration[:source]}", File.dirname(__FILE__))
-        @build_path = "/javascripts/build"
+        # Read js dependencies from require_js.yml configuration
+        @lib = lib_path.collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
+        @modules = modules_path.collect {|item| "#{@js_assets_path}/#{item}" }.flatten.uniq
+        @module_files = @modules.collect {|item| Dir[item+'/**/*'] }.flatten.uniq
+
       else
         @js_assets_path = false
       end
@@ -37,39 +44,51 @@ module Octopress
     end
 
     def url
+      "/javascripts/build/" + filename
+    end
+
+    def filename
       if @js_assets_path
-        Octopress.env == 'production' ?  "#{@build_path}/all-#{@fingerprint || get_fingerprint}.js" : "#{@build_path}/all.js"
+        Octopress.env == 'production' ?  "all-#{@fingerprint || get_fingerprint}.js" : "all.js"
       else
         false
       end
+    end
+
+    def identical(file)
+      File.size?(file) && File.open(file) {|f| f.readline} =~ /#{@fingerprint}/
     end
 
     def compile
       if @js_assets_path
         @fingerprint = get_fingerprint
 
-        filename = url
-        file = "#{@template_path + filename}"
+        relative_dir = File.join(Octopress.configuration[:source], "javascripts/build")
+        dir = File.join(Octopress.root, relative_dir)
 
-        if File.size?(file) && File.open(file) {|f| f.readline} =~ /#{@fingerprint}/
-          false
+        relative_file = File.join(relative_dir, filename)
+        file = File.join(dir, filename)
+
+        if identical(file)
+          "identical ".green + relative_file
         else
-          js = Stitch::Package.new(:dependencies => @lib, :paths => @modules).compile
-          js = "/* Octopress fingerprint: #{@fingerprint} */\n" + js
-          js = Uglifier.new.compile js if Octopress.env == 'production'
-          write_path = "#{@template_path}/#{@build_path}"
+          write_msg = (File.exists? file ? "overwrite " : "   create ").green + relative_file
 
-          (Dir["#{write_path}/*"]).each { |f| FileUtils.rm_rf(f) }
-          FileUtils.mkdir_p write_path
+          js = Stitch::Package.new(:dependencies => @lib, :paths => @modules).compile
+          js = Uglifier.new.compile js if Octopress.env == 'production'
+          js = "/* Octopress fingerprint: #{@fingerprint} */\n" + js
+
+          FileUtils.rm_rf dir
+          FileUtils.mkdir_p dir
           File.open(file, 'w') { |f| f.write js }
 
-          "Javascripts compiled to #{filename}."
+          write_msg
         end
       else
-        false
+        '' # return no message no javascripts to compile 
       end
     rescue Exception => e
-      Octopress.logger.fatal "Error reading file #{url}".red
+      Octopress.logger.fatal "failed to compile javascripts".red
       raise e
     end
   end

@@ -37,7 +37,7 @@ guard :shell do
 
   if Dir.exists? javascripts_dir
     watch /^#{javascripts_dir}\/.+\.(js|coffee|mustache|eco|tmpl)/ do |change|
-      js_assets.compile
+      puts js_assets.compile
     end
   end
 end
