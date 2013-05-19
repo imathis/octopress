@@ -20,4 +20,4 @@ module Octopress
   end
 end
 
-Liquid::Template.register_tag('javascript-tag', Octopress::JavascriptAssetsTag)
+Liquid::Template.register_tag('javascript_tag', Octopress::JavascriptAssetsTag)
