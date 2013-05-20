@@ -53,6 +53,9 @@ end
 # stdlib
 require 'logger'
 
+# gems
+require 'colorator'
+
 # octopress
 require "octopress/command"
 require_all "octopress/commands"
