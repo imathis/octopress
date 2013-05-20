@@ -1,5 +1,5 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-require File.expand_path("../../octopress", __FILE__)
+require File.expand_path("../../lib/octopress", __FILE__)
 require 'rspec'
 require 'rspec/autorun'
 
