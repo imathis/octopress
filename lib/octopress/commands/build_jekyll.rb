@@ -9,16 +9,18 @@ module Octopress
 
         def build_jekyll
           Octopress.logger.info "## Building Site with Jekyll - ENV: #{Octopress.env}"
+          Octopress.configurator.write_configs_for_generation
           system "jekyll build #{"--drafts --trace" unless Octopress.env == 'production'}"
+          Octopress.configurator.remove_configs_for_generation
         end
 
         def print_unpublished(options)
-          unpublished = get_unpublished
+          unpublished = get_unpublished(
             Dir.glob("#{options[:source]}/#{options[:posts_dir]}/*.*"),
             {
               env: Octopress.env,
               message: "\nThese posts were not generated:"
-            }
+            })
           Octopress.logger.info(unpublished) unless unpublished.empty?
         end
 
