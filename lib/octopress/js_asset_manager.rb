@@ -42,7 +42,7 @@ module Octopress
     end
 
     def url
-      "/javascripts/build/" + filename
+      @js_assets_path ?  "/javascripts/build/" + filename : false
     end
 
     def filename
