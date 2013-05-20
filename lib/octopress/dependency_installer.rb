@@ -267,13 +267,6 @@ module Octopress
       plugins_dir = File.join(sass_dir, "plugins")
       FileUtils.mkdir_p plugins_dir unless Dir.exists? plugins_dir
 
-      unless File.exists? default_sass
-        open(default_sass, 'w') do |sass|
-          sass.puts '@import "theme/_theme";  // Import theme partials'
-          sass.puts '@import "plugins/**/*";  // Auto import all plugins'
-        end
-      end
-
       if Dir[plugins_dir+'/*'].empty?
         default_plugin_sass = File.join(sass_dir, "plugins", "plugins.scss")
         open(default_plugin_sass, 'w') do |sass|

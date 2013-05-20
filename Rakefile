@@ -146,7 +146,7 @@ task :preview do
   Rake::Task["generate"].execute
   guardPid = Process.spawn("guard")
   puts "Starting Rack, serving to http://#{configuration[:server_host]}:#{configuration[:server_port]}"
-  rackupPid = Process.spawn("rackup --host #{configuration[:server_host]} --port #{configuration[:server_port]}")
+  rackupPid = Process.spawn("rackup config/rack.rb --host #{configuration[:server_host]} --port #{configuration[:server_port]}")
 
   trap("INT") {
     [guardPid, rackupPid].each { |pid| Process.kill(3, pid) rescue Errno::ESRCH }
