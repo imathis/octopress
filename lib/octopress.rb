@@ -55,6 +55,11 @@ require 'logger'
 
 # gems
 require 'colorator'
+require 'open3'
+require 'stringex'
+require 'time'
+require 'tzinfo'
+require 'safe_yaml'
 
 # octopress
 require "octopress/command"

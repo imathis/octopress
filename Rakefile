@@ -133,39 +133,6 @@ task :validate do
   end
 end
 
-require 'rubygems'
-require 'bundler/setup'
-require 'stringex'
-require 'time'
-require 'tzinfo'
-require 'yaml'
-require 'octopress'
-require 'octopress/js_asset_manager'
-require 'rake/testtask'
-require 'open3'
-require 'helpers/titlecase'
-
-### Configuring Octopress:
-###   Under config/ you will find:
-###       site.yml, deploy.yml
-###   Here you can override Octopress's default configurations or add your own.
-###   This Rakefile uses those config settings to do what it does.
-###   Please do not change anything below if you want help --
-###   otherwise, you're on your own ;-)
-
-configurator   = Octopress.configurator
-configuration  = Octopress.configuration
-full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
-
-desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
-task :install, :plugin do |t, args|
-  plugin = args.plugin
-  if plugin.nil? || plugin == ""
-    plugin = "classic-theme"
-  end
-  Octopress::Commands::Install.run(plugin)
-end
-
 task :install_configs, :theme do |t, args|
   theme = args.theme || 'classic'
   mkdir_p "config"
@@ -193,42 +160,6 @@ deploy_method: rsync
 EOF
     File.open('config/deploy.yml', 'w') { |f| f.write user_config_deploy }
   end
-end
-
-desc "Install stylesheets for a theme"
-task :install_stylesheets, :theme do |t, args|
-  theme = args.theme || 'classic'
-  theme_configuration = configurator.read_theme_configuration(theme)
-  begin
-    stylesheets_dir = File.join(".themes/#{theme}", theme_configuration[:theme][:stylesheets_dir])
-  rescue
-    "The #{theme} theme must have a configuration file. This theme isn't compatable with Octopress 3.0 installation. You can probably still install it manually.".yellow
-  end
-  mkdir_p "stylesheets"
-  if File.directory? stylesheets_dir
-    cp_r "#{stylesheets_dir}/.", "stylesheets"
-  end
-end
-
-desc "Install javascript assets for a theme"
-task :install_javascripts, :theme do |t, args|
-  theme = args.theme || 'classic'
-  theme_configuration = configurator.read_theme_configuration(theme)
-  begin
-    javascripts_dir = File.join(".themes/#{theme}", theme_configuration[:theme][:javascripts_dir])
-  rescue
-    "The #{theme} theme must have a configuration file. This theme isn't compatable with Octopress 3.0 installation. You can probably still install it manually.".yellow
-  end
-  mkdir_p "javascripts"
-  if File.directory? javascripts_dir
-    cp_r "#{javascripts_dir}/.", "javascripts"
-  end
-end
-
-task :install_source, :theme do |t, args|
-  theme = args.theme || 'classic'
-  mkdir_p "source/_posts"
-  cp_r ".themes/#{theme}/source/.", 'source'
 end
 
 #######################
