@@ -88,9 +88,12 @@ module Octopress
     # Returns a Hash of the items which were written to the Jekyll configuration file
     def write_configs_for_generation
       jekyll_configs = {}
-      File.open("_config.yml", "w") do |f|
-        jekyll_configs = Octopress.configuration.to_string_keys.to_yaml :canonical => false
-        f.write(jekyll_configs)
+
+      Dir.chdir(Octopress.root) do
+        File.open("_config.yml", "w") do |f|
+          jekyll_configs = Octopress.configuration.to_string_keys.to_yaml :canonical => false
+          f.write(jekyll_configs)
+        end
       end
 
       jekyll_configs
@@ -100,7 +103,9 @@ module Octopress
     #
     # Returns the number of files deleted
     def remove_configs_for_generation
-      File.unlink("_config.yml")
+      Dir.chdir(Octopress.root) do
+        File.unlink("_config.yml")
+      end
     end
 
     PostTemplate = YAML.load <<-YAML
