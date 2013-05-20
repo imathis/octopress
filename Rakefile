@@ -139,6 +139,10 @@ end
 #
 #############################################################################
 
+configurator   = Octopress.configurator
+configuration  = Octopress.configuration
+full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
+
 # usage rake generate_only[my-post]
 desc "Generate only the specified post (much faster)"
 task :generate_only, :filename do |t, args|
