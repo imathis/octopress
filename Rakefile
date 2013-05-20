@@ -133,46 +133,11 @@ task :validate do
   end
 end
 
-task :install_configs, :theme do |t, args|
-  theme = args.theme || 'classic'
-  mkdir_p "config"
-  if File.directory? ".themes/#{theme}/config"
-    cp_r ".themes/#{theme}/config/.", "config/defaults", :remove_destination=>true
-  end
-  unless File.exist?('config/site.yml')
-    user_config_site = <<-EOF
----
-# --------------------------- #
-#      User Configuration     #
-# --------------------------- #
-
-EOF
-    File.open('config/site.yml', 'w') { |f| f.write user_config_site }
-  end
-  unless File.exist?('config/deploy.yml')
-    user_config_deploy = <<-EOF
----
-# -------------------------- #
-#      Deployment Config     #
-# -------------------------- #
-
-deploy_method: rsync
-EOF
-    File.open('config/deploy.yml', 'w') { |f| f.write user_config_deploy }
-  end
-end
-
-#######################
-# Working with Jekyll #
-#######################
-
-desc "Generate Jekyll site"
-task :generate do
-  if configuration[:source].nil? || !File.directory?(configuration[:source])
-    raise "### You haven't set anything up yet. First run `rake install[theme]` to set up an Octopress theme."
-  end
-  Octopress::Commands::Build.run(nil, Octopress.configuration)
-end
+#############################################################################
+#
+# Tasks to be removed/moved to commands
+#
+#############################################################################
 
 # usage rake generate_only[my-post]
 desc "Generate only the specified post (much faster)"
