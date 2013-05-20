@@ -300,7 +300,7 @@ task :clean do
 end
 
 task :nuke do
-  rm_rf %w[.plugins _site config javascripts plugins source stylesheets]
+  rm_rf %w[.plugins _site config javascripts plugins public source stylesheets]
 end
 
 desc "Remove generated files (#{configuration[:destination]} directory)."
