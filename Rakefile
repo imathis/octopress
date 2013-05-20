@@ -100,6 +100,7 @@ task :gemspec => :validate do
   # replace name version and date
   replace_header(head, :name)
   replace_header(head, :version)
+  replace_header(head, :date)
   #comment this out if your rubyforge_project has a different name
   replace_header(head, :rubyforge_project)
 
@@ -113,7 +114,7 @@ task :gemspec => :validate do
     join("\n")
 
   # piece file back together and write
-  manifest = "  s.files = %w[\n#{files}\n  ]\n"
+  manifest = "  octo.files = %w[\n#{files}\n  ]\n"
   spec = [head, manifest, tail].join("  # = MANIFEST =\n")
   File.open(gemspec_file, 'w') { |io| io.write(spec) }
   puts "Updated #{gemspec_file}"
@@ -121,7 +122,7 @@ end
 
 desc "Validate #{gemspec_file}"
 task :validate do
-  libfiles = Dir['lib/*'] - ["lib/#{name}.rb", "lib/#{name}"]
+  libfiles = Dir['lib/*'] - ["lib/#{name}.rb", "lib/#{name}", "lib/guard"]
   unless libfiles.empty?
     puts "Directory `lib` should only contain a `#{name}.rb` file and `#{name}` dir."
     exit!
