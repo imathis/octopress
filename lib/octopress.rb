@@ -1,4 +1,4 @@
-$:.unshift File.expand_path(File.dirname(__FILE__)) # For use/testing when no gem is installed
+$:.unshift File.expand_path(File.dirname(__FILE__))
 
 module Octopress
   # Static: Get absolute file path of the octopress lib directory
@@ -50,6 +50,10 @@ def require_all(path)
   end
 end
 
+# stdlib
+require 'logger'
+
+# octopress
 require "octopress/core_ext"
 require "octopress/ink"
 require_all "octopress/formatters"
