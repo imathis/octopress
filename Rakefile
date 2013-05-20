@@ -108,19 +108,7 @@ task :generate do
   if configuration[:source].nil? || !File.directory?(configuration[:source])
     raise "### You haven't set anything up yet. First run `rake install[theme]` to set up an Octopress theme."
   end
-  configurator.write_configs_for_generation
-  puts "## Generating Site with Jekyll - ENV: #{Octopress.env}"
-  if Dir.exists? "javascripts"
-    js_assets = Octopress::JSAssetsManager.new
-    puts js_assets.compile
-  end
-  if Dir.exists? "stylesheets"
-    system "compass compile --css-dir #{configuration[:source]}/stylesheets" if Dir.exists? "stylesheets"
-  end
-  system "jekyll build #{"--drafts --trace" unless Octopress.env == 'production'}"
-  unpublished = get_unpublished(Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*"), {env: Octopress.env, message: "\nThese posts were not generated:"})
-  puts unpublished unless unpublished.empty?
-  configurator.remove_configs_for_generation
+  Octopress::Commands::Build.run(args, options)
 end
 
 # usage rake generate_only[my-post]
