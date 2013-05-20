@@ -604,10 +604,10 @@ end
 
 task :test do
   sh "bundle exec rake spec"
-  sh "bundle exec rake install['classic-theme']"
-  sh "bundle exec rake install['video-tag']"
-  sh "bundle exec rake install['adn-timeline']"
-  sh "bundle exec rake generate"
+  sh "bundle exec bin/octopress install classic-theme"
+  sh "bundle exec bin/octopress install video-tag"
+  sh "bundle exec bin/octopress install adn-timeline"
+  sh "bundle exec bin/octopress build"
 end
 
 def get_unpublished(posts, options={})
