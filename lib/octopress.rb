@@ -61,6 +61,8 @@ require 'time'
 require 'tzinfo'
 require 'safe_yaml'
 
+SafeYAML::OPTIONS[:suppress_warnings] = true
+
 # octopress
 require "octopress/command"
 require_all "octopress/commands"
