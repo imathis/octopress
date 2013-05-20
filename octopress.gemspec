@@ -1,7 +1,4 @@
 # -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'octopress'
 
 Gem::Specification.new do |octo|
   octo.specification_version = 2 if octo.respond_to? :specification_version=
