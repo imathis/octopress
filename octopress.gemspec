@@ -29,8 +29,6 @@ Gem::Specification.new do |octo|
     README.markdown
     Rakefile
     bin/octopress
-    lib/colors.rb
-    lib/console
     lib/guard/jekyll.rb
     lib/octopress.rb
     lib/octopress/command.rb
@@ -58,6 +56,7 @@ Gem::Specification.new do |octo|
     lib/octopress/ink.rb
     lib/octopress/inquirable_string.rb
     lib/octopress/js_asset_manager.rb
+    lib/octopress/scaffold/.gitignore
     lib/octopress/scaffold/config/compass.rb
     lib/octopress/scaffold/config/rack.rb
     lib/octopress/scaffold/config/site.yml
@@ -72,6 +71,7 @@ Gem::Specification.new do |octo|
     lib/octopress/tags/render-partial.rb
     lib/octopress/tags/return.rb
     lib/octopress/version.rb
+    octopress.gemspec
     spec/fixtures/env/defaults/classic.yml
     spec/fixtures/no_override/defaults/classic.yml
     spec/fixtures/override/defaults/classic.yml
