@@ -2,7 +2,7 @@ module Octopress
   module Commands
     class Install < Command
       class << self
-        def run(args, options)
+        def run(args, options = {})
           plugins = plugin_list(args)
           if plugins.empty?
             Octopress.logger.warn "No plugin or theme specified."

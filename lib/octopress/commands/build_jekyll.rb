@@ -2,7 +2,7 @@ module Octopress
   module Commands
     class BuildJekyll < Command
       class << self
-        def run(args, options)
+        def run(args, options = {})
           build_jekyll
           print_unpublished(options)
         end
