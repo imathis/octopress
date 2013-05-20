@@ -21,6 +21,7 @@
             user: '{{site.github_user}}',
             count: {{site.github_repo_count}},
             skip_forks: {{site.github_skip_forks}},
+            skip_repos: [ {% for repo in site.github_skip_repos %}"{{repo}}"{% unless forloop.last %}, {% endunless %}{% endfor %} ],
             target: '#gh_repos'
         });
     });

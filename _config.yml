@@ -67,6 +67,7 @@ github_user:
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
+github_skip_repos: []  # list of repos to hide from the sidebar. ex: [blog, username.github.io, old_embarrassing_project]
 
 # Twitter
 twitter_user:
