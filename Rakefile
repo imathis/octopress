@@ -108,7 +108,7 @@ task :generate do
   if configuration[:source].nil? || !File.directory?(configuration[:source])
     raise "### You haven't set anything up yet. First run `rake install[theme]` to set up an Octopress theme."
   end
-  Octopress::Commands::Build.run(args, options)
+  Octopress::Commands::Build.run(nil, Octopress.configuration)
 end
 
 # usage rake generate_only[my-post]
