@@ -15,7 +15,7 @@ module Octopress
   end
 
   class Configuration
-    DEFAULT_CONFIG_DIR = File.join(File.dirname(__FILE__), '../', '../' 'config')
+    DEFAULT_CONFIG_DIR = File.join(Dir.pwd, 'config')
     attr_accessor :config_directory
 
     def initialize(config_dir = DEFAULT_CONFIG_DIR)
