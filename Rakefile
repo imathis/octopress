@@ -267,6 +267,10 @@ task :clean do
   end
 end
 
+task :nuke do
+  rm_rf %w[.plugins _site config javascripts plugins source stylesheets]
+end
+
 desc "Remove generated files (#{configuration[:destination]} directory)."
 task :clobber do
   rm_rf [configuration[:destination]]
@@ -600,9 +604,9 @@ end
 
 task :test do
   sh "bundle exec rake spec"
-  sh "bundle exec rake install['git://github.com/parkr/classic-theme.git']"
-  sh "bundle exec rake install['git://github.com/parkr/video-tag.git']"
-  sh "bundle exec rake install['git://github.com/parkr/adn-timeline.git']"
+  sh "bundle exec rake install['classic-theme']"
+  sh "bundle exec rake install['video-tag']"
+  sh "bundle exec rake install['adn-timeline']"
   sh "bundle exec rake generate"
 end
 
