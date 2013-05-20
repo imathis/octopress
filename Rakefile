@@ -31,7 +31,7 @@ task :install, :plugin do |t, args|
   if plugin.nil? || plugin == ""
     plugin = "classic-theme"
   end
-  Octopress::DependencyInstaller.install_all(plugin)
+  Octopress::Commands::Install.run(plugin)
 end
 
 task :install_configs, :theme do |t, args|
