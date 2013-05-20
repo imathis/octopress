@@ -15,7 +15,7 @@ module Octopress
   end
 
   class Configuration
-    DEFAULT_CONFIG_DIR = File.join(Dir.pwd, 'config')
+    DEFAULT_CONFIG_DIR = File.join(Octopress.root, 'config')
     attr_accessor :config_directory
 
     def initialize(config_dir = DEFAULT_CONFIG_DIR)
@@ -31,7 +31,6 @@ module Octopress
     # path - the String path to the configuration file, relative to ./_config
     #
     # Returns a Hash of the items in the configuration file (symbol keys)
-
     def read_config(path)
       full_path = self.config_dir(path)
       if File.exists? full_path
