@@ -11,7 +11,7 @@ Gem::Specification.new do |octo|
   octo.authors       = ["Brandon Mathis", "Parker Moore"]
   octo.email         = %w[brandon@imathis.com parkrmoore@gmail.com]
   octo.description   = %q{Octopress is an obsessively designed framework for Jekyll blogging. It's easy to configure and easy to deploy. Sweet huh?}
-  octo.summary       = %q{TODO: Write a gem summary}
+  octo.summary       = %q{Octopress is an obsessively designed framework for Jekyll blogging.}
   octo.homepage      = "http://octopress.org"
 
   octo.rdoc_options = ["--charset=UTF-8"]
