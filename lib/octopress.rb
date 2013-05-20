@@ -54,12 +54,13 @@ end
 require 'logger'
 
 # octopress
-require "octopress/core_ext"
-require "octopress/ink"
-require_all "octopress/formatters"
-require "octopress/configuration"
-require "octopress/inquirable_string"
-require "octopress/dependency_installer"
-require "octopress/js_asset_manager"
 require "octopress/command"
 require_all "octopress/commands"
+require "octopress/configuration"
+require "octopress/core_ext"
+require "octopress/dependency_installer"
+require_all "octopress/formatters"
+require "octopress/ink"
+require "octopress/inquirable_string"
+require "octopress/js_asset_manager"
+require "octopress/version"
