@@ -12,7 +12,7 @@ module Octopress
   #
   # Returns the absolute path of the main octopress installation
   def self.root
-    File.dirname(lib_root)
+    Dir.pwd
   end
 
   # Static: Fetches the Octopress environment
