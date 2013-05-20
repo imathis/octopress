@@ -38,12 +38,24 @@ module Octopress
   end
 end
 
+# Require all of the Ruby files in the given directory.
+#
+# path - The String relative path from here to the directory.
+#
+# Returns nothing.
+def require_all(path)
+  glob = File.join(File.dirname(__FILE__), path, '*.rb')
+  Dir[glob].each do |f|
+    require f
+  end
+end
+
 require "octopress/core_ext"
 require "octopress/ink"
-require "octopress/formatters/base_formatter"
-require "octopress/formatters/simple_formatter"
-require "octopress/formatters/verbose_formatter"
+require_all "octopress/formatters"
 require "octopress/configuration"
 require "octopress/inquirable_string"
 require "octopress/dependency_installer"
 require "octopress/js_asset_manager"
+require "octopress/command"
+require_all "octopress/commands"
