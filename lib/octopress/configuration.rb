@@ -51,6 +51,23 @@ module Octopress
       end
     end
 
+    # Static: Concatenates javacript lib instead of merging (the default behavior for other configs)
+    # 
+    # current - current configuration hash
+    # new     - hash which hasn't yet been merged
+    #
+    # Returns a concatenated array of javascript lib configurations
+
+    def add_js_lib(current, new)
+      begin
+        new_lib = new[:require_js][:lib]
+        new_lib = [new_lib] unless new_lib.kind_of?(Array)
+        new[:require_js][:lib] = current[:require_js][:lib].concat new_lib
+      rescue
+      end
+      new
+    end
+
     # Static: Writes the contents of a set of configurations to a path in the config directory
     #
     # path - the String path to the configuration file, relative to ./_config
@@ -69,12 +86,14 @@ module Octopress
       Dir.glob(self.config_dir('defaults', '**', '*.yml')) do |filename|
         file_yaml = read_config(filename)
         unless file_yaml.nil?
+          file_yaml = add_js_lib(configs, file_yaml)
           configs = configs.deep_merge(file_yaml)
         end
       end
       Dir.glob(self.config_dir('*.yml')) do |filename|
         file_yaml = read_config(filename)
         unless file_yaml.nil?
+          file_yaml = add_js_lib(configs, file_yaml)
           configs = configs.deep_merge(file_yaml)
         end
       end
@@ -210,7 +229,7 @@ module Octopress
       require_js: {
 
         # Dependiences are added first as globals
-        lib: ['lib/**/*'],
+        lib: ['lib/jquery-1.9.1.js', 'lib/jquery.cookie.js'],
 
         # Modules are wrapped with CommonJS functions and must be
         # Example:

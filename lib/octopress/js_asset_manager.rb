@@ -24,6 +24,8 @@ module Octopress
         end
 
         @lib_config = Octopress.configuration[:require_js][:lib]
+        @lib_config = [@lib_config] unless @lib_config.kind_of?(Array)
+        @lib_config << "lib/**/*"
         modules_config = Octopress.configuration[:require_js][:modules]
 
         # Read js dependencies from require_js.yml configuration
