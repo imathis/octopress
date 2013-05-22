@@ -25,11 +25,12 @@ module Octopress
 
         @lib_config = Octopress.configuration[:require_js][:lib]
         @lib_config = [@lib_config] unless @lib_config.kind_of?(Array)
-        @lib_config << "lib/**/*"
         modules_config = Octopress.configuration[:require_js][:modules]
 
         # Read js dependencies from require_js.yml configuration
-        @lib = @lib_config.collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
+        @lib = @lib_config.collect {|item| Dir.glob("#{@js_assets_path}/lib/#{item}") }
+        @lib.concat(Dir.glob("#{@js_assets_path}/lib/**/*")).flatten.uniq
+
         @modules = modules_config.collect {|item| "#{@js_assets_path}/#{item}" }.flatten.uniq
         @module_files = @modules.collect {|item| Dir[item+'/**/*'] }.flatten.uniq
 

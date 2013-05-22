@@ -229,7 +229,7 @@ module Octopress
       require_js: {
 
         # Dependiences are added first as globals
-        lib: ['lib/jquery-1.9.1.js', 'lib/jquery.cookie.js'],
+        lib: ['jquery-1.9.1.js', 'jquery.cookie.js'],
 
         # Modules are wrapped with CommonJS functions and must be
         # Example:
