@@ -10,6 +10,7 @@ categories:
   - css
   - design responsivo
   - mikael carrara
+  - media queries
 ---
 
 Irei a partir de hoje lançar uma série de posts com minhas considerações a respeito de design responsivo.
@@ -33,19 +34,17 @@ Separo uma versão só para Web por questões de compatibilidade com *Internet E
 
 ```html
 <!--[if IE]>
-  <link href="site-web.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="site-web.css" media="screen" />
 <![endif]-->
 ```
 
 Outros *browsers* com maior suporte a especificação das *CSS3* aplicam as *Media Queries* como explicado no início do post. Então juntando tudo ficaria assim:
 
 ```html
-<link href="site-core.css" />
-<link href="site-web.css" media="screen and (min-width:801px)" />
-<link href="site-mobile.css" media="handheld, screen and (max-width:801px)" />
+<link type="text/css" rel="stylesheet" href="site-core.css" />
+<link type="text/css" rel="stylesheet" href="site-web.css" media="screen and (min-width:801px)" />
+<link type="text/css" rel="stylesheet" href="site-mobile.css" media="handheld, screen and (max-width:801px)" />
 ```
-
-Não se esqueça dos atributos **rel="stylesheet"** e **type="text/css"**.
 
 Então, explicando melhor: Estou dizendo que o *CSS* para Web só deve ser exibido quando a largura **mínima** do navegador for no mínimo **801px** e a versão mobile apenas em resoluções com largura **máxima** de **801px**. O arquivo **site-core.css** como já explicado, alimenta os outros dois com estilos genéricos.
 
@@ -107,8 +106,12 @@ Se você não domina completamente todos os elementos da sua interface no navega
 
 **Conclusão:** Você precisa pensar para que cada dispositivo tenha a melhor experiência possível dentro de suas limitações. Através das *Media Queries* podemos definir estilos específicos para cada contexto e assim otimizar a experiência do usuário em diferentes situações.
 
-No próximo post tentarei falar mais sobre *Viewports* e *Media Queries*.
+## Outros posts da série
 
-[site]: http://www.mikaelcarrara.com
-[twitter]: http://twitter.com/mikaelcarrara
-[dribbble]: http://dribbble.com/mikaelcarrara
+[Design Responsivo Parte II: Listagens e Galerias]: http://helabs.com.br/blog/2013/05/24/design-responsivo-parte-ii-listagens-e-galerias/
+
+## Links
+
+[Site Pessoal]: http://www.mikaelcarrara.com
+[Linkedin]: br.linkedin.com/in/mikaelcarrara/
+[Portfólio no Dribbble]: http://dribbble.com/mikaelcarrara
