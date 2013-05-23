@@ -7,7 +7,7 @@ Gem::Specification.new do |octo|
 
   octo.name          = "octopress"
   octo.version       = '3.0.0.beta1'
-  octo.date          = '2013-05-20'
+  octo.date          = '2013-05-23'
   octo.authors       = ["Brandon Mathis", "Parker Moore"]
   octo.email         = %w[brandon@imathis.com parkrmoore@gmail.com]
   octo.description   = %q{Octopress is an obsessively designed framework for Jekyll blogging. It's easy to configure and easy to deploy. Sweet huh?}
@@ -54,11 +54,14 @@ Gem::Specification.new do |octo|
     lib/octopress/inquirable_string.rb
     lib/octopress/js_asset_manager.rb
     lib/octopress/scaffold/.gitignore
-    lib/octopress/scaffold/config/compass.rb
-    lib/octopress/scaffold/config/rack.rb
-    lib/octopress/scaffold/config/site.yml
-    lib/octopress/scaffold/stylesheets/plugins/plugins.scss
-    lib/octopress/scaffold/stylesheets/screen.scss
+    lib/octopress/scaffold/site/config/compass.rb
+    lib/octopress/scaffold/site/config/rack.rb
+    lib/octopress/scaffold/site/config/site.yml
+    lib/octopress/scaffold/site/javascripts/lib/ios-rotate-scaling-fix.js
+    lib/octopress/scaffold/site/javascripts/lib/jquery-1.9.1.js
+    lib/octopress/scaffold/site/javascripts/lib/jquery.cookie.js
+    lib/octopress/scaffold/site/stylesheets/plugins/.gitkeep
+    lib/octopress/scaffold/site/stylesheets/screen.scss
     lib/octopress/tags/assign.rb
     lib/octopress/tags/capture.rb
     lib/octopress/tags/config-tag.rb
