@@ -1,3 +1,30 @@
+PATH
+  remote: .
+  specs:
+    octopress (3.0.0.beta1)
+      RedCloth (~> 4.2.9)
+      compass (~> 0.12.2)
+      guard (~> 1.8.0)
+      guard-coffeescript (~> 1.3.0)
+      guard-compass (~> 0.0.6)
+      guard-shell (~> 0.5.1)
+      haml (~> 3.1.7)
+      jekyll (~> 1.0.2)
+      json (~> 1.7.7)
+      liquid (~> 2.3.0)
+      rack (~> 1.5.0)
+      rb-fchange (~> 0.0.6)
+      rb-fsevent (~> 0.9.3)
+      rb-inotify (~> 0.9.0)
+      redcarpet (~> 2.2.2)
+      rubypants (~> 0.2.0)
+      sass-globbing (~> 1.0.0)
+      sinatra (~> 1.4.2)
+      stitch-rb (~> 0.0.8)
+      stringex (~> 1.4.0)
+      tzinfo (~> 0.3.35)
+      uglifier (~> 2.1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -116,27 +143,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  RedCloth (~> 4.2.9)
-  compass (~> 0.12.2)
-  guard
-  guard-coffeescript
-  guard-compass
-  guard-shell
-  haml (~> 3.1.7)
-  jekyll (~> 1.0.0)
-  json (~> 1.7.7)
-  liquid (~> 2.3.0)
-  rack (~> 1.5.0)
+  octopress!
   rake (~> 10.0.3)
-  rb-fchange
-  rb-fsevent
-  rb-inotify
-  redcarpet (~> 2.2.2)
   rspec (~> 2.13.0)
-  rubypants (~> 0.2.0)
-  sass-globbing (~> 1.0.0)
-  sinatra (~> 1.4.2)
-  stitch-rb
-  stringex (~> 1.4.0)
-  tzinfo (~> 0.3.35)
-  uglifier

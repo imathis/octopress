@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+
+$:.unshift File.join(File.dirname(__FILE__), *%w{ .. lib })
+
+require 'commander/import'
+require 'octopress'
+
+program :name, 'octopress'
+program :version, Octopress::VERSION
+program :description, 'Octopress is an obsessively designed framework for Jekyll blogging. It\'s easy to configure and easy to deploy. Sweet huh?'
+
+default_command :help
+
+command :create do |c|
+  c.syntax = "octopress new PATH"
+  c.description = "Creates a new instance of the latest Octopress installation"
+
+  c.action do |args, options|
+    Octopress::Commands::Create.run(args.join(" "))
+  end
+end
+
+command :generate do |c|
+  c.syntax = "octopress generate (page PATH|post NAME)"
+  c.description = "Creates a new page or post with the given name"
+
+  c.action do |args, options|
+    options = Octopress.configuration.deep_merge(options.__hash__)
+    Octopress::Commands::Generate.run(args, options)
+  end
+end
+
+command :build do |c|
+  c.syntax = "octopress build"
+  c.description = "Generate Octopress site"
+
+  c.action do |args, options|
+    options = Octopress.configuration.deep_merge(options.__hash__)
+    Octopress::Commands::Build.run(nil, options)
+  end
+end
+
+command :deploy do |c|
+  c.syntax = "octopress deploy [OPTIONS]"
+  c.description = "Deploy static site"
+
+  c.action do |args, options|
+    options = Octopress.configuration.deep_merge(options.__hash__)
+    Octopress::Commands::Deploy.run(args, options)
+  end
+end
+
+command :install do |c|
+  c.syntax = "octopress install NAME"
+  c.description = "Install a theme or plugin"
+
+  c.action do |args, options|
+    options = Octopress.configuration.deep_merge(options.__hash__)
+    Octopress::Commands::Install.run(args, options)
+  end
+end

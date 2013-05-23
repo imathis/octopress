@@ -1,127 +1,147 @@
 $:.unshift File.expand_path("lib", File.dirname(__FILE__)) # For use/testing when no gem is installed
 
 require 'rubygems'
-require 'bundler/setup'
-require 'stringex'
-require 'time'
-require 'tzinfo'
-require 'yaml'
+require 'rake'
+require 'date'
 require 'octopress'
-require 'octopress/js_asset_manager'
-require 'rake/testtask'
-require 'colors'
-require 'open3'
-require 'helpers/titlecase'
 
-### Configuring Octopress:
-###   Under config/ you will find:
-###       site.yml, deploy.yml
-###   Here you can override Octopress's default configurations or add your own.
-###   This Rakefile uses those config settings to do what it does.
-###   Please do not change anything below if you want help --
-###   otherwise, you're on your own ;-)
+#############################################################################
+#
+# Helper functions
+#
+#############################################################################
+
+def name
+  @name ||= Dir['*.gemspec'].first.split('.').first
+end
+
+def version
+  Octopress::VERSION
+end
+
+def date
+  Date.today.to_s
+end
+
+def rubyforge_project
+  name
+end
+
+def gemspec_file
+  "#{name}.gemspec"
+end
+
+def gem_file
+  "#{name}-#{version}.gem"
+end
+
+def replace_header(head, header_name)
+  head.sub!(/(\.#{header_name}\s*= ').*'/) { "#{$1}#{send(header_name)}'"}
+end
+
+#############################################################################
+#
+# Standard tasks
+#
+#############################################################################
+
+task :default => :test
+
+require 'rspec/core/rake_task'
+desc "Run all examples"
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.pattern = "./spec{,/*/**}/*_spec.rb"
+end
+
+desc "Open an irb session preloaded with this library"
+task :console do
+  sh "irb -rubygems -r ./lib/#{name}.rb"
+end
+
+#############################################################################
+#
+# Custom tasks (add your own tasks here)
+#
+#############################################################################
+
+#############################################################################
+#
+# Packaging tasks
+#
+#############################################################################
+
+desc "Create tag v#{version} and build and push #{gem_file} to Rubygems"
+task :release => :build do
+  abort "WHOA NOT YET"
+  unless `git branch` =~ /^\* master$/
+    puts "You must be on the master branch to release!"
+    exit!
+  end
+  sh "git commit --allow-empty -a -m 'Release #{version}'"
+  sh "git tag v#{version}"
+  sh "git push origin master"
+  sh "git push origin v#{version}"
+  sh "gem push pkg/#{name}-#{version}.gem"
+end
+
+desc "Build #{gem_file} into the pkg directory"
+task :build => :gemspec do
+  sh "mkdir -p pkg"
+  sh "gem build #{gemspec_file}"
+  sh "mv #{gem_file} pkg"
+end
+
+desc "Generate #{gemspec_file}"
+task :gemspec => :validate do
+  # read spec file and split out manifest section
+  spec = File.read(gemspec_file)
+  head, manifest, tail = spec.split("  # = MANIFEST =\n")
+
+  # replace name version and date
+  replace_header(head, :name)
+  replace_header(head, :version)
+  replace_header(head, :date)
+  #comment this out if your rubyforge_project has a different name
+  replace_header(head, :rubyforge_project)
+
+  # determine file list from git ls-files
+  files = `git ls-files`.
+    split("\n").
+    sort.
+    reject { |file| file =~ /^\./ }.
+    reject { |file| file =~ /^(rdoc|pkg)/ }.
+    map { |file| "    #{file}" }.
+    join("\n")
+
+  # piece file back together and write
+  manifest = "  octo.files = %w[\n#{files}\n  ]\n"
+  spec = [head, manifest, tail].join("  # = MANIFEST =\n")
+  File.open(gemspec_file, 'w') { |io| io.write(spec) }
+  puts "Updated #{gemspec_file}"
+end
+
+desc "Validate #{gemspec_file}"
+task :validate do
+  libfiles = Dir['lib/*'] - ["lib/#{name}.rb", "lib/#{name}", "lib/guard"]
+  unless libfiles.empty?
+    puts "Directory `lib` should only contain a `#{name}.rb` file and `#{name}` dir."
+    exit!
+  end
+  unless Dir['VERSION*'].empty?
+    puts "A `VERSION` file at root level violates Gem best practices."
+    exit!
+  end
+end
+
+#############################################################################
+#
+# Tasks to be removed/moved to commands
+#
+#############################################################################
 
 configurator   = Octopress.configurator
 configuration  = Octopress.configuration
 full_stash_dir = "#{configuration[:source]}/#{configuration[:stash_dir]}"
-
-desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
-task :install, :plugin do |t, args|
-  plugin = args.plugin
-  if plugin.nil? || plugin == ""
-    plugin = "classic-theme"
-  end
-  Octopress::DependencyInstaller.install_all(plugin)
-end
-
-task :install_configs, :theme do |t, args|
-  theme = args.theme || 'classic'
-  mkdir_p "config"
-  if File.directory? ".themes/#{theme}/config"
-    cp_r ".themes/#{theme}/config/.", "config/defaults", :remove_destination=>true
-  end
-  unless File.exist?('config/site.yml')
-    user_config_site = <<-EOF
----
-# --------------------------- #
-#      User Configuration     #
-# --------------------------- #
-
-EOF
-    File.open('config/site.yml', 'w') { |f| f.write user_config_site }
-  end
-  unless File.exist?('config/deploy.yml')
-    user_config_deploy = <<-EOF
----
-# -------------------------- #
-#      Deployment Config     #
-# -------------------------- #
-
-deploy_method: rsync
-EOF
-    File.open('config/deploy.yml', 'w') { |f| f.write user_config_deploy }
-  end
-end
-
-desc "Install stylesheets for a theme"
-task :install_stylesheets, :theme do |t, args|
-  theme = args.theme || 'classic'
-  theme_configuration = configurator.read_theme_configuration(theme)
-  begin
-    stylesheets_dir = File.join(".themes/#{theme}", theme_configuration[:theme][:stylesheets_dir])
-  rescue
-    "The #{theme} theme must have a configuration file. This theme isn't compatable with Octopress 3.0 installation. You can probably still install it manually.".yellow
-  end
-  mkdir_p "stylesheets"
-  if File.directory? stylesheets_dir
-    cp_r "#{stylesheets_dir}/.", "stylesheets"
-  end
-end
-
-desc "Install javascript assets for a theme"
-task :install_javascripts, :theme do |t, args|
-  theme = args.theme || 'classic'
-  theme_configuration = configurator.read_theme_configuration(theme)
-  begin
-    javascripts_dir = File.join(".themes/#{theme}", theme_configuration[:theme][:javascripts_dir])
-  rescue
-    "The #{theme} theme must have a configuration file. This theme isn't compatable with Octopress 3.0 installation. You can probably still install it manually.".yellow
-  end
-  mkdir_p "javascripts"
-  if File.directory? javascripts_dir
-    cp_r "#{javascripts_dir}/.", "javascripts"
-  end
-end
-
-task :install_source, :theme do |t, args|
-  theme = args.theme || 'classic'
-  mkdir_p "source/_posts"
-  cp_r ".themes/#{theme}/source/.", 'source'
-end
-
-#######################
-# Working with Jekyll #
-#######################
-
-desc "Generate Jekyll site"
-task :generate do
-  if configuration[:source].nil? || !File.directory?(configuration[:source])
-    raise "### You haven't set anything up yet. First run `rake install[theme]` to set up an Octopress theme."
-  end
-  configurator.write_configs_for_generation
-  puts "## Generating Site with Jekyll - ENV: #{Octopress.env}"
-  if Dir.exists? "javascripts"
-    js_assets = Octopress::JSAssetsManager.new
-    puts js_assets.compile
-  end
-  if Dir.exists? "stylesheets"
-    system "compass compile --css-dir #{configuration[:source]}/stylesheets" if Dir.exists? "stylesheets"
-  end
-  system "jekyll build #{"--drafts --trace" unless Octopress.env == 'production'}"
-  unpublished = get_unpublished(Dir.glob("#{configuration[:source]}/#{configuration[:posts_dir]}/*.*"), {env: Octopress.env, message: "\nThese posts were not generated:"})
-  puts unpublished unless unpublished.empty?
-  configurator.remove_configs_for_generation
-end
 
 # usage rake generate_only[my-post]
 desc "Generate only the specified post (much faster)"
@@ -158,7 +178,7 @@ task :preview do
   Rake::Task["generate"].execute
   guardPid = Process.spawn("guard")
   puts "Starting Rack, serving to http://#{configuration[:server_host]}:#{configuration[:server_port]}"
-  rackupPid = Process.spawn("rackup --host #{configuration[:server_host]} --port #{configuration[:server_port]}")
+  rackupPid = Process.spawn("rackup config/rack.rb --host #{configuration[:server_host]} --port #{configuration[:server_port]}")
 
   trap("INT") {
     [guardPid, rackupPid].each { |pid| Process.kill(3, pid) rescue Errno::ESRCH }
@@ -277,6 +297,10 @@ task :clean do
     system "compass clean"
     puts "## Cleaned Compass-generated files, and various caches ##"
   end
+end
+
+task :nuke do
+  rm_rf %w[.plugins _site config javascripts plugins public source stylesheets]
 end
 
 desc "Remove generated files (#{configuration[:destination]} directory)."
@@ -601,21 +625,13 @@ task :list_drafts do
   puts unpublished.empty? ? "There are no posts currently in draft" : unpublished
 end
 
-#
-# Run tests for Octopress module, found in lib/.
-#
-require 'rspec/core/rake_task'
-desc "Run all examples"
-RSpec::Core::RakeTask.new(:spec) do |t|
-  t.pattern = "./lib/spec{,/*/**}/*_spec.rb"
-end
 
 task :test do
   sh "bundle exec rake spec"
-  sh "bundle exec rake install['git://github.com/parkr/classic-theme.git']"
-  sh "bundle exec rake install['git://github.com/parkr/video-tag.git']"
-  sh "bundle exec rake install['git://github.com/parkr/adn-timeline.git']"
-  sh "bundle exec rake generate"
+  sh "bundle exec bin/octopress install classic-theme"
+  sh "bundle exec bin/octopress install video-tag"
+  sh "bundle exec bin/octopress install adn-timeline"
+  sh "bundle exec bin/octopress build"
 end
 
 def get_unpublished(posts, options={})

@@ -130,7 +130,7 @@ module Octopress
       manifest_yml = manifest(plugin)
       %w[javascripts stylesheets plugins config source includes].each do |type|
         Octopress.logger.debug "Copying #{type} files for #{plugin}..."
-        send("copy_#{type}_files", plugin)
+        send("copy_#{type}_files", plugin) if(File.directory?(File.join(cache_dir(plugin), type)))
       end
     end
 
@@ -266,13 +266,6 @@ module Octopress
       default_sass = File.join(sass_dir, "screen.scss") 
       plugins_dir = File.join(sass_dir, "plugins")
       FileUtils.mkdir_p plugins_dir unless Dir.exists? plugins_dir
-
-      unless File.exists? default_sass
-        open(default_sass, 'w') do |sass|
-          sass.puts '@import "theme/_theme";  // Import theme partials'
-          sass.puts '@import "plugins/**/*";  // Auto import all plugins'
-        end
-      end
 
       if Dir[plugins_dir+'/*'].empty?
         default_plugin_sass = File.join(sass_dir, "plugins", "plugins.scss")
