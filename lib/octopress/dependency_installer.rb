@@ -130,7 +130,7 @@ module Octopress
       manifest_yml = manifest(plugin)
       %w[javascripts stylesheets plugins config source includes].each do |type|
         Octopress.logger.debug "Copying #{type} files for #{plugin}..."
-        send("copy_#{type}_files", plugin) if(File.dir?(cache_dir(plugin), type))
+        send("copy_#{type}_files", plugin) if(File.directory?(File.join(cache_dir(plugin), type)))
       end
     end
 
