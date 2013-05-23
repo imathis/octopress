@@ -13,9 +13,7 @@ module Jekyll
     #
     # Returns nothing.
     def read_posts(dir)
-      base = File.join(self.source, dir, '_posts')
-      return unless File.exists?(base)
-      entries = Dir.chdir(base) { filter_entries(Dir['**/*']) }
+      entries = get_entries(dir, '_posts')
 
       # first pass processes, but does not yet render post content
       entries.each do |f|
@@ -32,17 +30,10 @@ module Jekyll
           end
 
           if post.published && (self.future || post.date <= self.time)
-            self.posts << post
-            post.categories.each { |c| self.categories[c] << post }
-            post.tags.each { |c| self.tags[c] << post }
+            aggregate_post_info(post)
           end
         end
       end
-
-      self.posts.sort!
-
-      # limit the posts if :limit_posts option is set
-      self.posts = self.posts[-limit_posts, limit_posts] if limit_posts
     end
   end
 end
