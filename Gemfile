@@ -3,7 +3,7 @@ source "http://rubygems.org"
 group :development do
   gem 'rake', '~> 0.9'
   gem 'jekyll', '~> 1.0'
-  gem 'rdiscount', '~> 2.0.7'
+  gem 'rdiscount', '~> 1.6.8'
   gem 'RedCloth', '~> 4.2.9'
   gem 'haml', '~> 3.1.7'
   gem 'compass', '~> 0.12.2'
