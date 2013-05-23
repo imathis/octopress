@@ -108,10 +108,10 @@ Se você não domina completamente todos os elementos da sua interface no navega
 
 ## Outros posts da série
 
-[Design Responsivo Parte II: Listagens e Galerias]: http://helabs.com.br/blog/2013/05/24/design-responsivo-parte-ii-listagens-e-galerias/
+[Design Responsivo Parte II: Listagens e Galerias](http://helabs.com.br/blog/2013/05/24/design-responsivo-parte-ii-listagens-e-galerias/)
 
 ## Links
 
-[Site Pessoal]: http://www.mikaelcarrara.com
-[Linkedin]: br.linkedin.com/in/mikaelcarrara/
-[Portfólio no Dribbble]: http://dribbble.com/mikaelcarrara
+- [Site Pessoal](http://www.mikaelcarrara.com)
+- [Linkedin](br.linkedin.com/in/mikaelcarrara/)
+- [Portfólio no Dribbble](http://dribbble.com/mikaelcarrara)
