@@ -41,7 +41,7 @@ module Octopress
 
 
     def get_fingerprint
-      Digest::MD5.hexdigest(@module_files.concat(@lib).uniq.map! { |path| "#{File.mtime(path).to_i}" }.join + @lib_config.join)
+      Digest::MD5.hexdigest(@module_files.concat(@lib).flatten.uniq.map! { |path| "#{File.mtime(path).to_i}" }.join + @lib_config.join)
     end
 
     def url
@@ -76,7 +76,7 @@ module Octopress
           write_msg = (File.exists?(file) ? "overwrite " : "   create ").green + relative_file
           puts "compiling javascripts..."
 
-          js = Stitch::Package.new(:dependencies => @lib, :paths => @modules).compile
+          js = Stitch::Package.new(:dependencies => @lib.flatten, :paths => @modules.flatten).compile
           js = Uglifier.new.compile js if Octopress.env == 'production'
           js = "/* Octopress fingerprint: #{@fingerprint} */\n" + js
 
