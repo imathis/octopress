@@ -2,10 +2,10 @@ require 'json'
 
 module Octopress
   class ConfigTag < Liquid::Tag
-    def initialize(tag_name, options, tokens)
+    def initialize(tag_name, markup, tokens)
       super
-      options = options.split(' ').map {|i| i.strip }
-      @key = options.slice!(0)
+      options = markup.split(' ').map {|i| i.strip }
+      @key = markup.slice!(0)
       @tag = nil
       @classname = nil
       options.each do |option|
@@ -42,4 +42,4 @@ module Octopress
   end
 end
 
-Liquid::Template.register_tag('config_tag', Octopress::ConfigTag)
+Liquid::Template.register_tag('config-tag', Octopress::ConfigTag)
