@@ -263,13 +263,13 @@ module Octopress
         copy_file_list(source, destination)
       end
 
-      default_sass = File.join(sass_dir, "screen.scss") 
+      default_sass = File.join(sass_dir, "screen.scss")
       plugins_dir = File.join(sass_dir, "plugins")
       FileUtils.mkdir_p plugins_dir unless Dir.exists? plugins_dir
 
       unless File.exists? default_sass
         open(default_sass, 'w') do |sass|
-          sass.puts '@import "theme/_theme";  // Import theme partials'
+          sass.puts '@import "theme/_style";  // Import theme partials'
           sass.puts '@import "plugins/**/*";  // Auto import all plugins'
         end
       end
