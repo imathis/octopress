@@ -170,7 +170,7 @@ module Octopress
       new_page_ext:   'markdown',      # default new page file extension when using the new_page task
       titlecase:      true,            # Converts page and post titles to titlecase
       server_host:    '0.0.0.0',       # host ip address for preview server
-      server_port:    4000,            # port for preview server eg. localhost:4000
+      port:           4000,            # port for preview server eg. localhost:4000
       timezone:       'local',         # default time and date used to local timezone. Vew supported timezones (under TZ column): http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
       #paginate_path: page/:num,       # default path for pagination, eg. page/2/
       paginate:       10,              # Posts per page on the blog index
