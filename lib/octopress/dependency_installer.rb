@@ -218,6 +218,7 @@ module Octopress
       if File.directory?(source)
         copy_file_list(source, destination)
       end
+      scaffold_configs(File.join(Octopress.root, "config"))
     end
 
     def config_files(plugin)
@@ -262,24 +263,7 @@ module Octopress
       if File.directory?(source)
         copy_file_list(source, destination)
       end
-
-      default_sass = File.join(sass_dir, "screen.scss")
-      plugins_dir = File.join(sass_dir, "plugins")
-      FileUtils.mkdir_p plugins_dir unless Dir.exists? plugins_dir
-
-      unless File.exists? default_sass
-        open(default_sass, 'w') do |sass|
-          sass.puts '@import "theme/_style";  // Import theme partials'
-          sass.puts '@import "plugins/**/*";  // Auto import all plugins'
-        end
-      end
-
-      if Dir[plugins_dir+'/*'].empty?
-        default_plugin_sass = File.join(sass_dir, "plugins", "plugins.scss")
-        open(default_plugin_sass, 'w') do |sass|
-          sass.puts '//* Plugin code installed here will be automatically imported *//'
-        end
-      end
+      scaffold_stylesheets(sass_dir)
     end
 
     # Private: Copy javascript files to local Octopress installation
@@ -300,6 +284,61 @@ module Octopress
 
     def plugin_files(plugin)
       globbed_filelist(plugin, "plugins")
+    end
+
+    # Private: Write scaffold SCSS files needed.
+    #
+    # sass_dir - where the sass should go
+    #
+    # Returns nothing
+    def scaffold_stylesheets(sass_dir)
+      default_sass = File.join(sass_dir, "screen.scss")
+      plugins_dir = File.join(sass_dir, "plugins")
+      FileUtils.mkdir_p plugins_dir unless Dir.exists? plugins_dir
+
+      unless File.exists? default_sass
+        open(default_sass, 'w') do |sass|
+          sass.puts '@import "theme/_style";  // Import theme partials'
+          sass.puts '@import "plugins/**/*";  // Auto import all plugins'
+        end
+      end
+
+      if Dir["#{plugins_dir}/*"].empty?
+        default_plugin_sass = File.join(sass_dir, "plugins", "plugins.scss")
+        open(default_plugin_sass, 'w') do |sass|
+          sass.puts '//* Plugin code installed here will be automatically imported *//'
+        end
+      end
+    end
+
+    # Private: Write scaffold config files
+    #
+    # config_dir - where the configs go
+    #
+    # Returns nothing
+    def scaffold_configs(config_dir)
+      site_yml   = File.join(config_dir, "site.yml")
+      deploy_yml = File.join(config_dir, "deploy.yml")
+
+      unless File.exist?(site_yml)
+        File.open(site_yml, 'w') do |f|
+          f.puts "---"
+          f.puts "# --------------------------- #"
+          f.puts "#      User Configuration     #"
+          f.puts "# --------------------------- #"
+          f.puts ""
+        end
+      end
+      unless File.exist?(deploy_yml)
+        File.open(deploy_yml, 'w') do |f|
+          f.puts "---"
+          f.puts "# -------------------------- #"
+          f.puts "#      Deployment Config     #"
+          f.puts "# -------------------------- #"
+          f.puts ""
+          f.puts "deploy_method: rsync"
+        end
+      end
     end
 
   end
