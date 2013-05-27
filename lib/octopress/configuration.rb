@@ -15,7 +15,7 @@ module Octopress
   end
 
   class Configuration
-    DEFAULT_CONFIG_DIR = File.join(File.dirname(__FILE__), '../', '../' 'config')
+    DEFAULT_CONFIG_DIR = File.join(Octopress.root, 'config')
     attr_accessor :config_directory
 
     def initialize(config_dir = DEFAULT_CONFIG_DIR)
@@ -31,7 +31,6 @@ module Octopress
     # path - the String path to the configuration file, relative to ./_config
     #
     # Returns a Hash of the items in the configuration file (symbol keys)
-
     def read_config(path)
       full_path = self.config_dir(path)
       if File.exists? full_path
@@ -52,6 +51,23 @@ module Octopress
       end
     end
 
+    # Static: Concatenates javacript lib instead of merging (the default behavior for other configs)
+    # 
+    # current - current configuration hash
+    # new     - hash which hasn't yet been merged
+    #
+    # Returns a concatenated array of javascript lib configurations
+
+    def add_js_lib(current, new)
+      begin
+        new_lib = new[:require_js][:lib]
+        new_lib = [new_lib] unless new_lib.kind_of?(Array)
+        new[:require_js][:lib] = current[:require_js][:lib].concat new_lib
+      rescue
+      end
+      new
+    end
+
     # Static: Writes the contents of a set of configurations to a path in the config directory
     #
     # path - the String path to the configuration file, relative to ./_config
@@ -70,12 +86,14 @@ module Octopress
       Dir.glob(self.config_dir('defaults', '**', '*.yml')) do |filename|
         file_yaml = read_config(filename)
         unless file_yaml.nil?
+          file_yaml = add_js_lib(configs, file_yaml)
           configs = configs.deep_merge(file_yaml)
         end
       end
       Dir.glob(self.config_dir('*.yml')) do |filename|
         file_yaml = read_config(filename)
         unless file_yaml.nil?
+          file_yaml = add_js_lib(configs, file_yaml)
           configs = configs.deep_merge(file_yaml)
         end
       end
@@ -88,9 +106,12 @@ module Octopress
     # Returns a Hash of the items which were written to the Jekyll configuration file
     def write_configs_for_generation
       jekyll_configs = {}
-      File.open("_config.yml", "w") do |f|
-        jekyll_configs = Octopress.configuration.to_string_keys.to_yaml :canonical => false
-        f.write(jekyll_configs)
+
+      Dir.chdir(Octopress.root) do
+        File.open("_config.yml", "w") do |f|
+          jekyll_configs = Octopress.configuration.to_string_keys.to_yaml :canonical => false
+          f.write(jekyll_configs)
+        end
       end
 
       jekyll_configs
@@ -100,7 +121,9 @@ module Octopress
     #
     # Returns the number of files deleted
     def remove_configs_for_generation
-      File.unlink("_config.yml")
+      Dir.chdir(Octopress.root) do
+        File.unlink("_config.yml")
+      end
     end
 
     PostTemplate = YAML.load <<-YAML
@@ -139,7 +162,7 @@ module Octopress
       permalink:    '/:year/:month/:day/:title/',
       source:       'source',          # source file directory
       destination:  'public',          # compiled site directory
-      plugins:      ['lib/octopress/helpers', 'lib/octopress/filters', 'lib/octopress/tags', 'lib/octopress/generators', 'plugins'],
+      plugins:      ['lib/octopress/liquid_helpers', 'lib/octopress/filters', 'lib/octopress/tags', 'lib/octopress/generators', 'plugins'],
       code_dir:     'downloads/code',
       category_dir: 'categories',
       include: ['.htaccess'],
@@ -207,7 +230,7 @@ module Octopress
       require_js: {
 
         # Dependiences are added first as globals
-        lib: ['lib/**/*'],
+        lib: ['jquery-1.9.1.js', 'jquery.cookie.js'],
 
         # Modules are wrapped with CommonJS functions and must be
         # Example:

@@ -24,10 +24,13 @@ module Octopress
         end
 
         @lib_config = Octopress.configuration[:require_js][:lib]
+        @lib_config = [@lib_config] unless @lib_config.kind_of?(Array)
         modules_config = Octopress.configuration[:require_js][:modules]
 
         # Read js dependencies from require_js.yml configuration
-        @lib = @lib_config.collect {|item| Dir.glob("#{@js_assets_path}/#{item}") }.flatten.uniq
+        @lib = @lib_config.collect {|item| Dir.glob("#{@js_assets_path}/lib/#{item}") }
+        @lib.concat(Dir.glob("#{@js_assets_path}/lib/**/*")).flatten.uniq
+
         @modules = modules_config.collect {|item| "#{@js_assets_path}/#{item}" }.flatten.uniq
         @module_files = @modules.collect {|item| Dir[item+'/**/*'] }.flatten.uniq
 
@@ -38,11 +41,11 @@ module Octopress
 
 
     def get_fingerprint
-      Digest::MD5.hexdigest(@module_files.concat(@lib).uniq.map! { |path| "#{File.mtime(path).to_i}" }.join + @lib_config.join)
+      Digest::MD5.hexdigest(@module_files.concat(@lib).flatten.uniq.map! { |path| "#{File.mtime(path).to_i}" }.join + @lib_config.join)
     end
 
     def url
-      "/javascripts/build/" + filename
+      @js_assets_path ?  "/javascripts/build/" + filename : false
     end
 
     def filename
@@ -73,7 +76,7 @@ module Octopress
           write_msg = (File.exists?(file) ? "overwrite " : "   create ").green + relative_file
           puts "compiling javascripts..."
 
-          js = Stitch::Package.new(:dependencies => @lib, :paths => @modules).compile
+          js = Stitch::Package.new(:dependencies => @lib.flatten, :paths => @modules.flatten).compile
           js = Uglifier.new.compile js if Octopress.env == 'production'
           js = "/* Octopress fingerprint: #{@fingerprint} */\n" + js
 
