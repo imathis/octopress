@@ -166,6 +166,7 @@ module Octopress
       post_index_dir: 'source',        # directory for your posts index page (if you put your index in source/blog/index.html, set this to 'source/blog')
       stash_dir:      '_stash',        # directory to stash posts for speedy generation
       posts_dir:      '_posts',        # directory for blog files
+      deploy_dir:     '_deploy',       # directory whose contents are to be deployed
       new_post_ext:   'markdown',      # default new post file extension when using the new_post task
       new_page_ext:   'markdown',      # default new page file extension when using the new_page task
       titlecase:      true,            # Converts page and post titles to titlecase
