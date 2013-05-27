@@ -38,6 +38,19 @@ module Octopress
   end
 end
 
+# stdlib
+require 'logger'
+
+# gems
+require 'colorator'
+require 'open3'
+require 'stringex'
+require 'time'
+require 'tzinfo'
+require 'safe_yaml'
+
+SafeYAML::OPTIONS[:suppress_warnings] = true
+
 require "octopress/core_ext"
 require "octopress/ink"
 require "octopress/formatters/base_formatter"
@@ -47,3 +60,4 @@ require "octopress/configuration"
 require "octopress/inquirable_string"
 require "octopress/dependency_installer"
 require "octopress/js_asset_manager"
+require "octopress/rake"
