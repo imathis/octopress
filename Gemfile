@@ -30,6 +30,7 @@ end
 group :test do
   gem "rspec", "~> 2.13.0"
   gem 'simplecov', '~> 0.7.1'
+  gem 'rubocop', '~> 0.8.0'
 end
 
 gem 'sinatra', '~> 1.4.2'

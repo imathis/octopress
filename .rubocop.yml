@@ -1,0 +1,119 @@
+# For now, due to the mess, turn a few things off to focus on more important
+# items.  Ultimately we'd like things to pass static analyzers cleanly.
+Encoding:
+  Enabled: false
+
+LineLength:
+  Enabled: false
+  Max: 90
+
+StringLiterals:
+  Enabled: false
+
+SpaceAfterComma:
+  Enabled: false
+
+SpaceAroundOperators:
+  Enabled: false
+
+SpaceAroundBraces:
+  Enabled: false
+
+ParenthesesAroundCondition:
+  Enabled: false
+
+AvoidPerlBackrefs:
+  Enabled: false
+
+HashSyntax:
+  Enabled: false
+
+SpaceAroundEqualsInParameterDefault:
+  Enabled: false
+
+AsciiComments:
+  Enabled: false
+
+MethodLength:
+  Enabled: false
+
+CollectionMethods:
+  Enabled: false
+
+FavorPercentR:
+  Enabled: false
+
+FavorUnlessOverNegatedIf:
+  Enabled: false
+
+HandleExceptions:
+  Enabled: false
+
+PercentR:
+  Enabled: false
+
+IfUnlessModifier:
+  Enabled: false
+
+AvoidPerlisms:
+  Enabled: false
+
+Semicolon:
+  Enabled: false
+
+WhenThen:
+  Enabled: false
+
+IfWithSemicolon:
+  Enabled: false
+
+ReduceArguments:
+  Enabled: false
+
+RescueModifier:
+  Enabled: false
+
+WhileUntilModifier:
+  Enabled: false
+
+FavorUntilOverNegatedWhile:
+  Enabled: false
+
+ParameterLists:
+  Enabled: false
+
+SpaceAfterControlKeyword:
+  Enabled: false
+
+Blocks:
+  Enabled: false
+
+SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+EmptyLines:
+  Enabled: false
+
+RescueException:
+  Enabled: false
+
+AndOr:
+  Enabled: false
+
+WordArray:
+  Enabled: false
+
+AlignParameters:
+  Enabled: false
+
+LeadingCommentSpace:
+  Enabled: false
+
+UnlessElse:
+  Enabled: false
+
+AccessControl:
+  Enabled: false
+
+EmptyLiteral:
+  Enabled: false
