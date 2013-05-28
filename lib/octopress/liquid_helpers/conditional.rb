@@ -1,14 +1,14 @@
 module Octopress
   module Conditional
-    Expression = /(.+?)\s+(unless|if)\s+(.+)/i
-    Ternary = /(.*?)\(\s*(.+?)\s+\?\s+(.+?)\s+:\s+(.+?)\s*\)(.+?)?/
+    EXPRESSION = /(.+?)\s+(unless|if)\s+(.+)/i
+    TERNARY = /(.*?)\(\s*(.+?)\s+\?\s+(.+?)\s+:\s+(.+?)\s*\)(.+?)?/
 
     def strip_expression(markup, context = false)
-      if markup =~ Ternary
+      if markup =~ TERNARY
         result = evaluate_ternary($2, $3, $4, context)
         markup = "#{$1} #{result} #{$5}"
       end
-      markup =~ Expression ? $1 : markup
+      markup =~ EXPRESSION ? $1 : markup
     end
 
     def evaluate_ternary(expression, if_true, if_false, context)
@@ -16,7 +16,7 @@ module Octopress
     end
 
     def evaluate_expression(markup, context)
-      if markup =~ Expression
+      if markup =~ EXPRESSION
         evaluate($2, $3, context)
       else
         true

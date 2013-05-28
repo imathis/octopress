@@ -1,8 +1,8 @@
 module Octopress
   class Capture < Liquid::Block
     include Conditional
-    WordRegex = '[[:word:]]'
-    Syntax = /(#{WordRegex}+)\s*(\+=)?/o
+    WORD_REGEX = '[[:word:]]'
+    SYNTAX = /(#{WORD_REGEX}+)\s*(\+=)?/o
     def initialize(tag_name, markup, tokens)
       @markup = markup
       super
@@ -10,7 +10,7 @@ module Octopress
 
     def render(context)
       if evaluate_expression @markup, context
-        if strip_expression(@markup, context).strip =~ Syntax
+        if strip_expression(@markup, context).strip =~ SYNTAX
           @to = $1
           @operator = $2
         else
