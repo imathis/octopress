@@ -94,7 +94,7 @@ GEM
     rubypants (0.2.0)
     safe_yaml (0.7.1)
     sass (3.2.9)
-    sass-globbing (1.0.0)
+    sass-globbing (1.1.0.pre.0)
       sass (>= 3.1)
     sinatra (1.4.2)
       rack (~> 1.5, >= 1.5.2)
@@ -134,7 +134,7 @@ DEPENDENCIES
   redcarpet (~> 2.2.2)
   rspec (~> 2.13.0)
   rubypants (~> 0.2.0)
-  sass-globbing (~> 1.0.0)
+  sass-globbing (~> 1.1.0.pre.0)
   sinatra (~> 1.4.2)
   stitch-rb
   stringex (~> 1.4.0)
