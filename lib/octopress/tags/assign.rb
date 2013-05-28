@@ -9,7 +9,7 @@ module Octopress
     end
 
     def render(context)
-      if strip_expression(@markup, context).strip =~ VarSyntax
+      if strip_expression(@markup, context).strip =~ VAR_SYNTAX
         @to = $1
         @operator = $2
         @from = $3
