@@ -1,0 +1,98 @@
+# For now, due to the mess, turn a few things off to focus on more important
+# items.  Ultimately we'd like things to pass static analyzers cleanly.
+Encoding:
+  Enabled: false
+
+LineLength:
+  Enabled: false
+  Max: 90
+
+StringLiterals:
+  Enabled: false
+
+SpaceAfterComma:
+  Enabled: false
+
+BraceAfterPercent:
+  Enabled: false
+
+SpaceAroundOperators:
+  Enabled: false
+
+SpaceAroundBraces:
+  Enabled: false
+
+ParenthesesAroundCondition:
+  Enabled: false
+
+PercentLiterals:
+  Enabled: false
+
+AvoidPerlBackrefs:
+  Enabled: false
+
+HashSyntax:
+  Enabled: false
+
+SpaceAroundEqualsInParameterDefault:
+  Enabled: false
+
+AsciiComments:
+  Enabled: false
+
+MethodLength:
+  Enabled: false
+
+AmpersandsPipesVsAndOr:
+  Enabled: false
+
+CollectionMethods:
+  Enabled: false
+
+FavorPercentR:
+  Enabled: false
+
+FavorUnlessOverNegatedIf:
+  Enabled: false
+
+HandleExceptions:
+  Enabled: false
+
+PercentR:
+  Enabled: false
+
+IfUnlessModifier:
+  Enabled: false
+
+MultilineBlocks:
+  Enabled: false
+
+AvoidPerlisms:
+  Enabled: false
+
+Semicolon:
+  Enabled: false
+
+WhenThen:
+  Enabled: false
+
+IfWithSemicolon:
+  Enabled: false
+
+ReduceArguments:
+  Enabled: false
+
+RescueModifier:
+  Enabled: false
+
+WhileUntilModifier:
+  Enabled: false
+
+SingleLineBlocks:
+  Enabled: false
+
+FavorUntilOverNegatedWhile:
+  Enabled: false
+
+ParameterLists:
+  Enabled: false
