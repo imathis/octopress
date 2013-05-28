@@ -1,12 +1,8 @@
 describe Octopress do
   describe '#env' do
     context "when ENV['OCTOPRESS_ENV'] is specified" do
-      let (:old_value) { ENV['OCTOPRESS_ENV'] }
       before do
         ENV['OCTOPRESS_ENV'] = 'some_environment'
-      end
-      after do
-        ENV['OCTOPRESS_ENV'] = old_value
       end
 
       subject do
