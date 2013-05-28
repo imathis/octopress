@@ -1,17 +1,7 @@
 describe Octopress do
   describe ".configurator" do
-    before do
-      Octopress.clear_config!
-      @old_env = ENV['OCTOPRESS_ENV']
-      ENV['OCTOPRESS_ENV'] = nil
-    end
-
-    after do
-      ENV['OCTOPRESS_ENV'] = @old_env
-    end
-
     it "should accept a path pointing to a config directory" do
-      Octopress.configurator(File.expand_path('../fixtures/env', File.dirname(__FILE__)))
+      Octopress.configurator(fixture_path('env'))
 
       Octopress.env.should eq('config_specified_environment')
     end
@@ -19,16 +9,8 @@ describe Octopress do
 
   describe ".configuration" do
     before do
-      Octopress.clear_config!
-      @old_env = ENV['OCTOPRESS_ENV']
-      ENV['OCTOPRESS_ENV'] = nil
-      Octopress.configurator(File.expand_path('../fixtures/env', File.dirname(__FILE__)))
+      Octopress.configurator(fixture_path('env'))
     end
-
-    after do
-      ENV['OCTOPRESS_ENV'] = @old_env
-    end
-
     let(:configuration) { Octopress.configuration }
 
     it "should provide access to the specified configuration" do
@@ -41,7 +23,7 @@ describe Octopress::Configuration do
   describe '#read_configuration' do
     describe "when no override" do
       before do
-        @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'no_override'))
+        @octo_config = Octopress::Configuration.new(fixture_path('no_override'))
       end
       let(:configuration) { @octo_config.read_configuration }
       let(:expected_config) {
@@ -63,7 +45,7 @@ describe Octopress::Configuration do
 
     describe "when override" do
       before do
-        @octo_config = Octopress::Configuration.new(File.join(File.dirname(__FILE__), '../', 'fixtures', 'override'))
+        @octo_config = Octopress::Configuration.new(fixture_path('override'))
       end
       let(:configuration) { @octo_config.read_configuration }
       let(:expected_config) {
