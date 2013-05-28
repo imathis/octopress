@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require File.expand_path("../helpers/titlecase.rb", File.dirname(__FILE__))
 module Octopress
   module ContentFilters
