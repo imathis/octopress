@@ -1,3 +1,7 @@
+$:.unshift File.expand_path("../", File.dirname(__FILE__))
+
+require 'helpers/titlecase'
+
 module Octopress
   class Rake
     def self.init!(ctx)
