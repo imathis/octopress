@@ -1,5 +1,3 @@
-require_relative '../spec_helper.rb'
-
 describe Octopress::DependencyInstaller do
   # describe "#namespace" do
   #   context "when just a repo name is specified" do
