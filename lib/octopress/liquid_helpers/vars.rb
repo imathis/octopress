@@ -1,6 +1,6 @@
 module Octopress
   module VarHelpers
-    VarSyntax = /(#{Liquid::VariableSignature}+)\s*(=|\+=)\s*(.*)\s*/o
+    VAR_SYNTAX = /(#{Liquid::VariableSignature}+)\s*(=|\+=)\s*(.*)\s*/o
 
     def determine_value(vars, context)
       vars.each do |var|
