@@ -81,3 +81,39 @@ FavorUntilOverNegatedWhile:
 
 ParameterLists:
   Enabled: false
+
+SpaceAfterControlKeyword:
+  Enabled: false
+
+Blocks:
+  Enabled: false
+
+SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+EmptyLines:
+  Enabled: false
+
+RescueException:
+  Enabled: false
+
+AndOr:
+  Enabled: false
+
+WordArray:
+  Enabled: false
+
+AlignParameters:
+  Enabled: false
+
+LeadingCommentSpace:
+  Enabled: false
+
+UnlessElse:
+  Enabled: false
+
+AccessControl:
+  Enabled: false
+
+EmptyLiteral:
+  Enabled: false
