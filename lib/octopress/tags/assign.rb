@@ -11,12 +11,19 @@ module Octopress
     def render(context)
       if strip_expression(@markup, context).strip =~ VarSyntax
         @to = $1
-        @from = $2
+        @operator = $2
+        @from = $3
       else
         raise SyntaxError.new("Syntax Error in 'assign' - Valid syntax: assign [var] = [source]")
       end
       if evaluate_expression @markup, context
-        context.scopes.last[@to] = get_value(@from, context)
+        value = get_value(@from, context)
+
+        if @operator == '+=' && !context.scopes.last[@to].nil?
+          context.scopes.last[@to] += value 
+        else
+          context.scopes.last[@to] = value
+        end
       end
       ''
     end
