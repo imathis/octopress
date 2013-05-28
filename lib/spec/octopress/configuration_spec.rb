@@ -1,5 +1,3 @@
-require "spec_helper"
-
 describe Octopress do
   describe ".configurator" do
     before do

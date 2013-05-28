@@ -1,5 +1,3 @@
-require "spec_helper"
-
 describe Octopress do
   describe '#env' do
     context "when ENV['OCTOPRESS_ENV'] is specified" do

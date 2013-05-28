@@ -1,5 +1,3 @@
-require_relative '../spec_helper.rb'
-
 describe Octopress::Ink do
   subject { Octopress::Ink.build }
 

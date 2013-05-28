@@ -1,4 +1,5 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
+require './lib/spec/support/simplecov'
 require File.expand_path("../../octopress", __FILE__)
 require 'rspec'
 require 'rspec/autorun'
