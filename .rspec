@@ -1,2 +1,5 @@
 --color
+--require ./lib/spec/spec_helper.rb
 -I./lib/spec
+--default-path ./lib/spec/octopress
+--pattern ./lib/spec/octopress/**/*_spec.rb
