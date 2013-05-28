@@ -13,9 +13,6 @@ StringLiterals:
 SpaceAfterComma:
   Enabled: false
 
-BraceAfterPercent:
-  Enabled: false
-
 SpaceAroundOperators:
   Enabled: false
 
@@ -23,9 +20,6 @@ SpaceAroundBraces:
   Enabled: false
 
 ParenthesesAroundCondition:
-  Enabled: false
-
-PercentLiterals:
   Enabled: false
 
 AvoidPerlBackrefs:
@@ -41,9 +35,6 @@ AsciiComments:
   Enabled: false
 
 MethodLength:
-  Enabled: false
-
-AmpersandsPipesVsAndOr:
   Enabled: false
 
 CollectionMethods:
@@ -62,9 +53,6 @@ PercentR:
   Enabled: false
 
 IfUnlessModifier:
-  Enabled: false
-
-MultilineBlocks:
   Enabled: false
 
 AvoidPerlisms:
@@ -86,9 +74,6 @@ RescueModifier:
   Enabled: false
 
 WhileUntilModifier:
-  Enabled: false
-
-SingleLineBlocks:
   Enabled: false
 
 FavorUntilOverNegatedWhile:
