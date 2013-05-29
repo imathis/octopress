@@ -18,7 +18,7 @@ layout: nil
   {% for post in site.categories[page.category] limit: 5 %}
     <entry>
       {% include feed_entry.xml %}
-      <content type="html"><![CDATA[{{ content | markdownify | cdata_escape }}]]></content>
+      <content type="html"><![CDATA[{{ content | cdata_escape }}]]></content>
     </entry>
   {% endfor %}
 </feed>
