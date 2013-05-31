@@ -14,7 +14,7 @@ categories:
   
 ---
 
-No dia 24/05, também rolou Café com DEV para o pessoal de Londrina! O encontro aconteceu no _Junt.us Espaço Colaborativo_ e teve como palestrante, [Eduardo Fiorezi](https://twitter.com/eduardofiorezi) apresentando como tema "Conheça um time de desenvolvimento ágil em seu DNA". 
+No dia 24/05, também rolou Café com DEV para o pessoal de Londrina! O encontro aconteceu no _Junt.us Espaço Colaborativo_ e teve como palestrante [Eduardo Fiorezi](https://twitter.com/eduardofiorezi) apresentando como tema "Conheça um time de desenvolvimento ágil em seu DNA". 
 
 <!--more-->
 
