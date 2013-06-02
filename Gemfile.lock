@@ -102,7 +102,7 @@ GEM
     rubypants (0.2.0)
     safe_yaml (0.7.1)
     sass (3.2.9)
-    sass-globbing (1.1.0.pre.0)
+    sass-globbing (1.1.0)
       sass (>= 3.1)
     simplecov (0.7.1)
       multi_json (~> 1.0)
@@ -147,7 +147,7 @@ DEPENDENCIES
   rspec (~> 2.13.0)
   rubocop (~> 0.8.0)
   rubypants (~> 0.2.0)
-  sass-globbing (~> 1.1.0.pre.0)
+  sass-globbing (~> 1.1.0)
   simplecov (~> 0.7.1)
   sinatra (~> 1.4.2)
   stitch-rb
