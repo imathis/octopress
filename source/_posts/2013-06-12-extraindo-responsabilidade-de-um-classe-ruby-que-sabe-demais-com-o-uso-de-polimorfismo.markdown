@@ -15,6 +15,8 @@ categories:
 
 Já falei anteriormente um pouco sobre o uso do pattern decorator no rails [neste link](http://helabs.com.br/blog/2013/01/28/extraindo-a-responsabilidade-de-fat-models-com-o-uso-de-decorators/). Em algum momento a lógica pode ser tão complexa que quebraríamos os decorators em _decorators especializados_.
 
+<!--more-->
+
 Vamos a um exemplo: dado um `PostDecorator` com apenas um método público `show`, responsável por exibir um post, podemos reduzir a sua complexidade e manter a responsabilidade única de cada classe, baseando-se no tipo de status. Mas como? 
 
 ```ruby
