@@ -1,8 +1,8 @@
 ---
-published: false
+published: true
 author: Mauro George
 layout: post
-title: "Extraindo responsábilidade de um classe ruby que sabe demais com o uso de polimorfismo"
+title: "Extraindo responsabilidade de um classe ruby utilizando polimorfismo"
 date: 2013-06-12
 comments: true
 categories:
@@ -10,11 +10,12 @@ categories:
   - decorator
   - model
   - rails
+  
 ---
 
-Já falei anteriormente um pouco sobre o uso do [pattern decorator no rails aqui](http://helabs.com.br/blog/2013/01/28/extraindo-a-responsabilidade-de-fat-models-com-o-uso-de-decorators/). E em algum momento a lógica pode ser tão complexa que quebramos os decorators em decorators especializados.
+Já falei anteriormente um pouco sobre o uso do pattern decorator no rails [neste link](http://helabs.com.br/blog/2013/01/28/extraindo-a-responsabilidade-de-fat-models-com-o-uso-de-decorators/). Em algum momento a lógica pode ser tão complexa que quebraríamos os decorators em _decorators especializados_.
 
-Vamos a um exemplo: dado um `PostDecorator` que tem apenas um método público `show` responsável por exibir um post como podemos reduzir a sua complexidade e manter a responsábilidade única de cada classe, dado que ela é baseado no tipo de status.
+Vamos a um exemplo: dado um `PostDecorator` com apenas um método público `show`, responsável por exibir um post, podemos reduzir a sua complexidade e manter a responsabilidade única de cada classe, baseando-se no tipo de status. Mas como? 
 
 ```ruby
 class PostDecorator
@@ -37,7 +38,7 @@ class PostDecorator
 end
 ```
 
-o primeiro passo que poderiamos fazer seria extrair a lógica de cada um dos status para classes especializadas, delegando as responsábilidades. Exemplo:
+o primeiro passo que poderíamos fazer seria extrair a lógica de cada um dos status para classes especializadas, delegando as responsabilidades. Exemplo:
 
 ```ruby
 class PostDecorator
@@ -68,11 +69,11 @@ class PostPublishedDecorator
 end
 ```
 
-já ficou melhor, agora a responsábilidade foi dividida.
+Agora ficou melhor, já que a responsabilidade foi dividida.
 
-Um outro pequeno refactory que poderiamos fazer é melhorar esta verificação de `if post.status == "draft"` podemos implementar em nosso model `Post#draft?` e `Post#published?`.
+Um outro pequeno refactory que poderíamos fazer é melhorar essa verificação de `if post.status == "draft"`. Podendo implementar em nosso model `Post#draft?` e `Post#published?`.
 
-E assim encapsulamos a lógica de `#draft?` e `#published?` pois se a complexidade aumentar teriamos que mudar em N contextos que fazem a verificação de tal lógica, agora que elas estão encapsuladas caso a lógica mude teremos que alterar apenas no model.
+E assim, encapsulamos a lógica de `#draft?` e `#published?`, pois se a complexidade aumentar, teremos que mudar N contextos que fazem a verificação de tal lógica. Como agora elas estão encapsuladas, caso a lógica mude, teremos que alterar apenas no model.
 
 ```ruby
 class PostDecorator
@@ -95,13 +96,13 @@ class PostDecorator
 end
 ```
 
-Para evitarmos criar todos estes métodos na mão podemos utilizar a gem [Jacaranda](https://github.com/maurogeorge/jacaranda) que foi a minha primeira gem ;)
+Para evitarmos criar todos estes métodos na mão, podemos utilizar a _gem_ [Jacaranda](https://github.com/maurogeorge/jacaranda) que foi a minha primeira gem ;)
 
-Mas ainda não é o melhor que podemos fazer, para este caso. Vamos agora ao uso de polimorfismo!
+Mas ainda não é o melhor que podemos fazer para este caso. Vamos agora ao uso de polimorfismo:
 
 ## Resolvendo com o uso de polimorfismo
 
-Podemos usar de polimorfismo para dependendo do status do post, instanciar e utilizar o decorator correto.
+Podemos usar _polimorfismo_ para, dependendo do status do post, instanciar e utilizar o decorator correto.
 
 ```ruby
 class PostDecorator
@@ -124,8 +125,8 @@ class PostDecorator
 end
 ```
 
-Como pode ver criamos o método `post_decorator` que retorna a classe correta, em seguida instanciamos ela e chamamos o método `show` na classe especifica.
-Caso não conheça utilizamos o [`constantize`](http://api.rubyonrails.org/classes/ActiveSupport/Inflector.html#method-i-constantize) do ActiveSupport que nos retorna uma constante de mesmo nome baseado string recebida.
+Como pode-se notar, criamos o método `post_decorator` que retorna a classe correta. Em seguida, instanciamos ela e chamamos o método `show` na classe específica.
+Caso não seja de seu conhecimento, utilizamos o [`constantize`](http://api.rubyonrails.org/classes/ActiveSupport/Inflector.html#method-i-constantize) do ActiveSupport que nos retorna uma constante de mesmo nome baseado na string recebida.
 
 Agora vamos aos testes do nosso `PostDecorator`:
 
@@ -169,9 +170,9 @@ describe PostDecorator do
 end
 ```
 
-Como pode ver os nossos testes ficaram bem simples, testando apenas se a delegação foi feita corretamente, pois a implementação teria sido testada unitariamente em cada uma das classes especializadas(`PostDraftDecorator` e `PostPublishedDecorator`).
+Como visualiza-se acima, nossos testes ficaram bem simples. Testamos apenas se a delegação foi feita corretamente, pois a implementação seria testada unitariamente em cada uma das classes especializadas (`PostDraftDecorator` e `PostPublishedDecorator`).
 
 ## Conclusão
 
-Como pode ver utilizando de polimorfismo, agora nossa classe `PostDecorator` pode instanciar outros decorators e não precisamos mais de ifs e elses, apenas criar uma nova classe como `PostUnpublishedDecorator` e todos os posts com o status unpublished usarão esta nova classe, pois estamos seguindo a convenção.
+Utilizando _polimorfismo_, agora nossa classe `PostDecorator` pode instanciar outros decorators e não precisaremos mais dos _ifs_ e _elses_. Apenas crie uma nova classe como `PostUnpublishedDecorator` e todos os posts com o status **unpublished** usarão esta nova classe, pois segue-se a convenção.
 
