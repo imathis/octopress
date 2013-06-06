@@ -40,7 +40,7 @@ class PostDecorator
 end
 ```
 
-o primeiro passo que poderíamos fazer seria extrair a lógica de cada um dos status para classes especializadas, delegando as responsabilidades. Exemplo:
+O primeiro passo que poderíamos fazer seria extrair a lógica de cada um dos status para classes especializadas, delegando as responsabilidades. Exemplo:
 
 ```ruby
 class PostDecorator
