@@ -3,7 +3,7 @@ published: true
 author: Mauro George
 layout: post
 title: "Extraindo responsabilidade de um classe ruby utilizando polimorfismo"
-date: 2013-06-12
+date: 2013-06-06
 comments: true
 categories:
   - mauro george
