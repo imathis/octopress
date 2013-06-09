@@ -2,6 +2,7 @@
 
 module Octopress
   module UrlFilters
+    include UrlHelpers
     
     # Replaces relative urls with full urls
     
@@ -9,18 +10,6 @@ module Octopress
       url ||= '/'
       input.gsub /(\s+(href|src)\s*=\s*["|']{1})(\/(?!\/)[^\"'>]*)/ do
         $1+url+$3
-      end
-    end
-
-    # Prepend a local url with a file path
-    # remote urls and urls beginning with ! will be ignored
-    
-    def prepend_url(input, path='')
-      path += '/' unless path.match /\/$/
-      if input.match /^!/
-        input.gsub(/^(!)(.+)/, '\2')
-      else
-        input.gsub(/^(\/)?([^:]+?)$/, "#{path}"+'\2')
       end
     end
 
@@ -37,6 +26,7 @@ module Octopress
         $2
       end
     end
+
   end
 end
 

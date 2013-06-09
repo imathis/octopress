@@ -15,10 +15,9 @@ module Octopress
     end
 
     def render(context)
-      config_tag(context.registers[:site].config, @key, @tag, @classname)
+      config_tag(context, @key, @tag, @classname)
     end
   end
-
 end
 
 Liquid::Template.register_tag('config_tag', Octopress::ConfigTag)
