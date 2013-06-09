@@ -19,27 +19,6 @@ module Octopress
     end
   end
 
-  def config_tag(config, key, tag=nil, classname=nil)
-    options     = key.split('.').map { |k| config[k] }.last #reference objects with dot notation
-    tag       ||= 'div'
-    classname ||= key.sub(/_/, '-').sub(/\./, '-')
-    output      = "<#{tag} class='#{classname}'"
-
-    if options.respond_to? 'keys'
-      options.each do |k,v|
-        unless v.nil?
-          v = v.join ',' if v.respond_to? 'join'
-          v = v.to_json if v.respond_to? 'keys'
-          output += " data-#{k.sub'_','-'}='#{v}'"
-        end
-      end
-    elsif options.respond_to? 'join'
-      output += " data-value='#{config[key].join(',')}'"
-    else
-      output += " data-value='#{config[key]}'"
-    end
-    output += "></#{tag}>"
-  end
 end
 
 Liquid::Template.register_tag('config_tag', Octopress::ConfigTag)

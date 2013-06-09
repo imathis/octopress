@@ -34,3 +34,4 @@ class String
     replace(smart_capitalize)
   end
 end
+
