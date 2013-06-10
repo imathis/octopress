@@ -4,7 +4,7 @@ module Octopress
   class Ink < Logger
     def self.build
       logger = Logger.new(STDOUT)
-      logger.level = Logger::WARN
+      logger.level = Logger::INFO
       logger.formatter = Formatters::SimpleFormatter.new
       logger
     end
