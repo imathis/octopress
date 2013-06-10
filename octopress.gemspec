@@ -55,4 +55,5 @@ Gem::Specification.new do |octo|
 
   octo.add_development_dependency('rake', '~> 10.0.3')
   octo.add_development_dependency('rspec', '~> 2.13.0')
+  octo.add_development_dependency('rubocop', '~> 0.8.2')
 end
