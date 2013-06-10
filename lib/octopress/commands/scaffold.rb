@@ -8,6 +8,7 @@ module Octopress
         includes
         layouts
         lib
+        lib/rake
         javascripts
         javascripts/lib
         javascripts/modules
