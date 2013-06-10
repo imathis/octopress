@@ -1,0 +1,54 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require File.expand_path("../lib/octopress", File.dirname(__FILE__))
+require 'commander/import'
+
+program :version, Octopress::VERSION
+program :description, 'Octopress is an obsessively designed framework for Jekyll blogging.'+
+                      'It\'s easy to configure and easy to deploy. Sweet huh?'
+ 
+command :new do |c|
+  c.syntax = 'octopress new [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    # Do something or c.when_called Octopress::Commands::New
+  end
+end
+
+command :scaffold do |c|
+  c.syntax = 'octopress scaffold (plugin|theme) [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+
+  c.action do |args, options|
+    Octopress::Commands::Scaffold.process(args, options.__hash__)
+  end
+end
+
+command :build do |c|
+  c.syntax = 'octopress build [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    # Do something or c.when_called Octopress::Commands::Build
+  end
+end
+
+command :serve do |c|
+  c.syntax = 'octopress serve [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    # Do something or c.when_called Octopress::Commands::Serve
+  end
+end
+
