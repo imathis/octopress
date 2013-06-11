@@ -8,16 +8,26 @@ module Octopress
 
     def self.init!(context)
       @plugins.each do |plugin|
-        plugin_tasks = File.join(plugin.root, 'lib', plugin.name, 'tasks.rake')
-        if(File.exist?(plugin_tasks))
-          context.instance_eval do
-            load plugin_tasks
+        if plugin.tasks.size > 0
+          plugin.tasks.each do |task_file|
+            context.instance_eval do
+              load task_file
+            end
           end
         end
       end
     end
 
-    def self.root; return self.const_get(:ROOT); end
-    def self.name; return self.to_s.underscore; end
+    def self.root
+      self.const_get(:ROOT)
+    end
+
+    def self.name
+      self.to_s.underscore
+    end
+
+    def self.tasks
+      Dir[File.join(self.root, 'lib', self.name, 'rake', '*.rake')]
+    end
   end
 end
