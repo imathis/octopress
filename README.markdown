@@ -18,7 +18,7 @@ Check out [Octopress.org](http://octopress.org/docs) for guides and documentatio
 
 [![Build Status](https://travis-ci.org/imathis/octopress.png?branch=2.1)](https://travis-ci.org/imathis/octopress)
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+See [CONTRIBUTING.markdown](CONTRIBUTING.markdown).
 
 ## License
 (The MIT License)
