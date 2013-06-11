@@ -38,7 +38,10 @@ module Octopress
             FileUtils.cp(scaffold_file("plugin-name.gemspec"), "#{plugin_name}.gemspec")
             File.open("MANIFEST.yml", "w") { |f| f.write(plugin_yaml(plugin_name)) }
             File.open("lib/#{ruby_name(plugin_name)}.rb", "w") do |f|
-              f.puts "class #{plugin_class(plugin_name)}"
+              f.puts "require 'octopress'"
+              f.puts
+              f.puts "class #{plugin_class(plugin_name)} < Octopress::Plugin"
+              f.puts "  ROOT = File.expand_path('../../', __FILE__)"
               f.puts "end"
             end
             File.open("Gemfile", "w") do |f|
