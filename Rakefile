@@ -23,10 +23,10 @@ end
 
 task :test do
   sh "bundle exec rake spec"
-  sh "bundle exec rake install['classic-theme']"
-  sh "bundle exec rake install['video-tag']"
-  sh "bundle exec rake install['adn-timeline']"
-  sh "bundle exec rake generate"
+  #sh "bundle exec rake install['classic-theme']"
+  #sh "bundle exec rake install['video-tag']"
+  #sh "bundle exec rake install['adn-timeline']"
+  #sh "bundle exec rake generate"
 end
 
 def get_stdin(message)

@@ -1,6 +1,8 @@
 $:.unshift File.expand_path(File.dirname(__FILE__)) # For use/testing when no gem is installed
 
 module Octopress
+  VERSION = '3.0.0.beta1'
+
   # Static: Get absolute file path of the octopress lib directory
   #
   # Returns the absolute path to the octopress lib directory
@@ -38,6 +40,12 @@ module Octopress
   end
 end
 
+def require_all(relative_path)
+  Dir[File.expand_path("../#{relative_path}/**/*", __FILE__)].entries.each do |f|
+    require f
+  end
+end
+
 # stdlib
 require 'logger'
 
@@ -51,6 +59,7 @@ require 'safe_yaml'
 
 SafeYAML::OPTIONS[:suppress_warnings] = true
 
+# octopress
 require "octopress/core_ext"
 require "octopress/ink"
 require "octopress/formatters/base_formatter"
@@ -60,5 +69,7 @@ require "octopress/configuration"
 require "octopress/inquirable_string"
 require "octopress/dependency_installer"
 require "octopress/js_asset_manager"
+require "octopress/command"
+require_all "octopress/commands"
 require "octopress/rake"
-require "colorator"
+require "octopress/plugin"

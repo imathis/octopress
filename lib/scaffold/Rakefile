@@ -1,0 +1,142 @@
+require 'rubygems'
+require 'bundler'
+Bundler.require
+require 'rake/clean'
+require 'safe_yaml'
+
+#############################################################################
+#
+# Configure Rake's clean/clobber tasks.
+#
+#############################################################################
+
+# 'rake clean' is for intermediate/temporary files not meant for direct
+# consumption by the user.  Output from Compass, cache directories, etc are
+# good examples here.
+# CLEAN.include(...)
+
+# 'rake clobber' is for generated files meant for direct consumption by the
+# user.  Release packages, generated docs/coverage reports, etc are good
+# examples here.
+CLOBBER.include('pkg/*')
+
+
+#############################################################################
+#
+# Helper functions
+#
+#############################################################################
+
+def manifest
+  @manifest ||= YAML.safe_load_file(File.expand_path("../MANIFEST.yml", __FILE__))
+end
+
+def name
+  @name ||= manifest["slug"]
+end
+
+def ruby_name
+  name.gsub(/-/, '_')
+end
+
+require "./lib/#{ruby_name}"
+
+def version
+  manifest["version"]
+end
+
+def date
+  Date.today.to_s
+end
+
+def gemspec_file
+  "#{name}.gemspec"
+end
+
+def gem_file
+  "#{name}-#{version}.gem"
+end
+
+def replace_header(head, header_name)
+  head.sub!(/(\.#{header_name}\s*= ').*'/) { "#{$1}#{send(header_name)}'"}
+end
+
+#############################################################################
+#
+# Standard tasks
+#
+#############################################################################
+
+task :default => :test
+
+desc "Open an irb session preloaded with this library"
+task :console do
+  require 'irb'
+  ARGV.clear
+  IRB.start
+end
+
+#############################################################################
+#
+# Packaging tasks
+#
+#############################################################################
+
+desc "Create tag v#{version} and build and push #{gem_file} to Rubygems"
+task :release => :build do
+  unless `git branch` =~ /^\* master$/
+    puts "You must be on the master branch to release!"
+    exit!
+  end
+  sh "git commit --allow-empty -a -m 'Release #{version}'"
+  sh "git tag v#{version}"
+  sh "git push origin master"
+  sh "git push origin v#{version}"
+  sh "gem push pkg/#{name}-#{version}.gem"
+end
+
+desc "Build #{gem_file} into the pkg directory"
+task :build => :gemspec do
+  sh "mkdir -p pkg"
+  sh "gem build #{gemspec_file}"
+  sh "mv #{gem_file} pkg"
+end
+
+desc "Generate #{gemspec_file}"
+task :gemspec => :validate do
+  # read spec file and split out manifest section
+  spec = File.read(gemspec_file)
+  head, manifest, tail = spec.split("  # = MANIFEST =\n")
+
+  replace_header(head, :date)
+
+  # determine file list from git ls-files
+  # TODO: Certain files don't belong in the gem...
+  files = `git ls-files`.
+    split("\n").
+    sort.
+    reject { |file| file =~ /^\./ }.
+    reject { |file| file =~ /^(rdoc|pkg)/ }.
+    reject { |file| file =~ /^Gemfile(\.lock)?$/ }.
+    map { |file| "    #{file}" }.
+    join("\n")
+
+  # piece file back together and write
+  manifest = "  octo.files = %w[\n#{files}\n  ]\n"
+  spec = [head, manifest, tail].join("  # = MANIFEST =\n")
+  File.open(gemspec_file, 'w') { |io| io.write(spec) }
+  puts "Updated #{gemspec_file}"
+end
+
+desc "Validate #{gemspec_file}"
+task :validate do
+  libfiles = Dir['lib/*'] - ["lib/#{ruby_name}.rb", "lib/#{ruby_name}"]
+  unless libfiles.empty?
+    puts "Directory `lib` should only contain a `#{name}.rb` file and `#{name}` dir."
+    exit!
+  end
+  if Dir['MANIFEST.yml'].empty?
+    puts "A `MANIFEST.yml` file must exist in your root with at least your plugin slug and version."
+    exit!
+  end
+end
