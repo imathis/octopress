@@ -21,7 +21,7 @@ module Jekyll
     end
 
     def render(context)
-      if parts = @text.match(/([\d]*) (.*)/)
+      if parts = @text.match(/([a-zA-Z\d]*) (.*)/)
         gist, file = parts[1].strip, parts[2].strip
         script_url = script_url_for gist, file
         code       = get_cached_gist(gist, file) || get_gist_from_web(gist, file)
