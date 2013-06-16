@@ -20,7 +20,7 @@ Uma das grandes verdades da refatoração é que um código limpo é mais fácil
 
 > Refatorar é alterar a estrutura do código sem alterar o seu comportamento.
 
-Conforme a metáfoda do Kent Beck, chamada de dois chapéus (The Two Hats), durante o desenvolvimento você deve dividir o tempo em duas tarefas distintas: adicionar novas funcionalidades e refatorar. Enquanto estiver adicionando uma nova funcionalidade, você não pode alterar outro código existente, apenas adiciona novos testes e funcionalidades. Quando você refatora, não adiciona novas funcionalidades, apenas reestrutura seu código. Essa troca de chapéus deve ser feita frequentemente.
+Conforme a metáfora do Kent Beck, chamada de dois chapéus (The Two Hats), durante o desenvolvimento você deve dividir o tempo em duas tarefas distintas: adicionar novas funcionalidades e refatorar. Enquanto estiver adicionando uma nova funcionalidade, você não pode alterar outro código existente, apenas adiciona novos testes e funcionalidades. Quando você refatora, não adiciona novas funcionalidades, apenas reestrutura seu código. Essa troca de chapéus deve ser feita frequentemente.
 
 Dentro da prática de desenvolvimento orientado a testes temos o uso contínuo de refatoracão, pois, os testes ajudam o desenvolvedor a ter um feedback rápido sobre suas mudanças e ter a certeza que nada quebrou no comportamento que foi pensado.
 
