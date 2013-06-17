@@ -14,6 +14,7 @@ Vejo várias pessoas falando sobre refatoracão, mas esse assunto é mais comple
 
 Uma das grandes verdades da refatoração é que um código limpo é mais fácil de receber mudanças que um código complexo.
 
+
 <!--more-->
 
 [Kent Beck](http://en.wikipedia.org/wiki/Kent_Beck) e [Ward Cunningham](http://en.wikipedia.org/wiki/Ward_Cunningham) trabalhavam com Smalltalk desde os anos 80. O ambiente  cultural do desenvolvimento de Smalltalk favorecia o ciclo de compilar-linkar-executar rapidamente. Esses caras ajudaram a difundir essa prática que era muito comum no ambiente Smalltalk. Hoje temos ferramentas de ótima qualidade em todas a linguagens de desenvolvimento atuais.
