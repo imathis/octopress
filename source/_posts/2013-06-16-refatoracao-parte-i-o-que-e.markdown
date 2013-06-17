@@ -14,7 +14,7 @@ categories:
 
 Vejo várias pessoas falando sobre refatoração, mas este assunto é mais complexo do que os desenvolvedores imaginam. Para se ter a real profundidade do assunto é necessária uma leitura minuciosa do [livro Refactoring](http://www.amazon.com/Refactoring-Ruby-Edition-Jay-Fields/dp/0321603508) de Jay Fields, Shane Harvie, Martin Fowler e Kent Beck.
 
-Uma das grandes verdades da refatoração é um código limpo ser mais fácil de receber mudanças do que um complexo.
+Uma das grandes verdades da refatoração é que um código limpo é mais fácil de receber mudanças do que um complexo.
 
 
 <!--more-->
