@@ -12,21 +12,21 @@ categories:
   
 ---
 
-Vejo várias pessoas falando sobre refatoracão, mas este assunto é mais complexo do que os desenvolvedores imaginam. Para se ter a real profundidade do assunto é necessária uma leitura minuciosa do [livro Refactoring](http://www.amazon.com/Refactoring-Ruby-Edition-Jay-Fields/dp/0321603508) de Jay Fields, Shane Harvie, Martin Fowler e Kent Beck.
+Vejo várias pessoas falando sobre refatoração, mas este assunto é mais complexo do que os desenvolvedores imaginam. Para se ter a real profundidade do assunto é necessária uma leitura minuciosa do [livro Refactoring](http://www.amazon.com/Refactoring-Ruby-Edition-Jay-Fields/dp/0321603508) de Jay Fields, Shane Harvie, Martin Fowler e Kent Beck.
 
-Uma das grandes verdades da refatoração é que um código limpo é mais fácil de receber mudanças que um código complexo.
+Uma das grandes verdades da refatoração é um código limpo ser mais fácil de receber mudanças do que um complexo.
 
 
 <!--more-->
 
-[Kent Beck](http://en.wikipedia.org/wiki/Kent_Beck) e [Ward Cunningham](http://en.wikipedia.org/wiki/Ward_Cunningham) trabalhavam com Smalltalk desde os anos 80. O ambiente cultural de desenvolvimento do Smalltalk favorecia o ciclo de compilar-linkar-executar rapidamente. Estes caras ajudaram a difundir esta prática  muito comum no ambiente Smalltalk. Hoje, temos ferramentas de ótima qualidade em todas as linguagens de desenvolvimentos atuais.
+[Kent Beck](http://en.wikipedia.org/wiki/Kent_Beck) e [Ward Cunningham](http://en.wikipedia.org/wiki/Ward_Cunningham) trabalhavam com Smalltalk desde os anos 80. O ambiente cultural deste desenvolvimento favorecia o ciclo de compilar-linkar-executar rapidamente. Estes caras ajudaram a difundir esta prática  muito comum no ambiente Smalltalk. Hoje, temos ferramentas de ótima qualidade em todas as linguagens de desenvolvimentos atuais.
 
 > Refatorar é alterar a estrutura do código sem alterar o seu comportamento. 
 
 
-Conforme a metáfora de Kent Beck, chamada de dois chapéus (The Two Hats), durante o desenvolvimento você deve dividir o tempo em duas tarefas distintas: adicionar novas funcionalidades e refatorar. Enquanto estiver adicionando uma nova funcionalidade, você não pode alterar outro código existente, apenas adicione novos testes e funcionalidades. Quando você refatora, não adicione novas funcionalidades, apenas reestruture seu código. Essa troca de chapéus deve ser feita frequentemente.
+Conforme a metáfora de Kent Beck, chamada de dois chapéus (The Two Hats), durante o desenvolvimento deve-se dividir o tempo em duas tarefas distintas: adicionar novas funcionalidades e refatorar. Enquanto estiver adicionando uma nova funcionalidade, não deve-se alterar outro código existente, apenas adicione novos testes e funcionalidades. Quando você refatora, não adicione novas funcionalidades, apenas reestruture seu código. Esta troca de chapéus deve ser feita frequentemente.
 
-Dentro da prática de desenvolvimento orientado a testes temos o uso contínuo de refatoracão, pois os testes ajudam o desenvolvedor a ter um feedback rápido sobre suas mudanças e ter a certeza de que nada quebrou no comportamento pensado.
+Dentro da prática de desenvolvimento orientado a testes temos o uso contínuo de refatoração, pois os testes ajudam o desenvolvedor a ter um feedback rápido sobre suas mudanças e ter a certeza de que nada quebrou no comportamento pensado.
 
 ##Por que refatorar?
 
@@ -40,11 +40,11 @@ O código de um sistema deve dizer exatamente o que ele faz. Aplicar pequenas re
 Quando você altera a estrutura de um código, você garante e revisa certos comportamentos que deseja. Neste momento, pode-se identificar alguma situação que não foi prevista por você ou pelos integrantes do time.
 
 ###Porque ajuda você a programar mais rápido
-Um bom design de código ajuda na evolução do sistema, pois tudo torna-se mais simples de entender. Pode parecer “perda de tempo” efetuar esta melhoria constante de código, mas na prática um código organizado irá facilitar muito sua vida de programador.
+Um bom design de código ajuda na evolução do sistema, pois tudo torna-se mais simples de entender. Pode parecer “perda de tempo” efetuar esta melhoria constante de código, mas na prática, um código organizado irá facilitar muito sua vida de programador.
 
 ...
 
-Eu gosto muito da frase de Kent Beck em que ele diz: “Eu não sou um grande programador; Sou apenas um bom programador com excelentes hábitos”. Acredito que bons programadores necessitem cultivar estes hábitos. E a refatoração merece um espaço considerável no nosso dia a dia de desenvolvedores de software.
+Eu gosto muito da frase de Kent Beck, onde diz: “Eu não sou um grande programador; Sou apenas um bom programador com excelentes hábitos”. Acredito que bons programadores necessitem cultivar estes hábitos. E a refatoração merece um espaço considerável no nosso dia a dia de desenvolvedores de software.
 
 
 No próximo artigo vou falar sobre os "mal cheiros" de códigos.
