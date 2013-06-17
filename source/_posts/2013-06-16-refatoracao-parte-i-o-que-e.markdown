@@ -1,4 +1,5 @@
 ---
+author: Eduardo Fiorezi
 layout: post
 title: "Refatoração Parte I - O que é?!"
 date: 2013-06-16 18:17
