@@ -16,6 +16,16 @@
 # code snippet
 # {% endcodeblock %}
 #
+# To set the line numbering start with a particular number (default is 1), use firstline:N where N is the number to use for the first line of code. This is useful when the codeblock contains just a fragment of code.
+# {% codeblock mail.c firstline:345 https://github.com/php/php-src/blob/PHP-5.4.16/ext/standard/mail.c#L348 See the complete file on GitHub %}
+# fprintf(sendmail, "To: %s\n", to);
+# fprintf(sendmail, "Subject: %s\n", subject);
+# if (hdr != NULL) {
+#   fprintf(sendmail, "%s\n", hdr);
+# }
+# fprintf(sendmail, "\n%s\n", message);
+# {% endcodeblock %}
+#
 # Example:
 #
 # {% codeblock Got pain? painreleif.sh http://site.com/painreleief.sh Download it! %}
@@ -51,14 +61,20 @@ module Jekyll
     include TemplateWrapper
     CaptionUrlTitle = /(\S[\S\s]*)\s+(https?:\/\/\S+|\/\S+)\s*(.+)?/i
     Caption = /(\S[\S\s]*)/
+    FirstLine = /\s*firstline:(\d+)/
     def initialize(tag_name, markup, tokens)
       @title = nil
       @caption = nil
       @filetype = nil
       @highlight = true
+      @firstline = 1
       if markup =~ /\s*lang:(\S+)/i
         @filetype = $1
         markup = markup.sub(/\s*lang:(\S+)/i,'')
+      end
+      if markup =~ FirstLine
+        @firstline = $1.to_i
+        markup = markup.sub(FirstLine,'')
       end
       if markup =~ CaptionUrlTitle
         @file = $1
@@ -79,9 +95,9 @@ module Jekyll
       source = "<figure class='code'>"
       source += @caption if @caption
       if @filetype
-        source += " #{highlight(code, @filetype)}</figure>"
+        source += " #{highlight(code, @filetype, @firstline)}</figure>"
       else
-        source += "#{tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'))}</figure>"
+        source += "#{tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'), '', @firstline)}</figure>"
       end
       source = safe_wrap(source)
       source = context['pygments_prefix'] + source if context['pygments_prefix']
