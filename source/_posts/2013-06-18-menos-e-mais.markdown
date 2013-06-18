@@ -32,4 +32,4 @@ A abordagem “lean” reduz estas restrições e oferece uma metodologia cient�
 
 Saia da ideia, execute-a e defina o melhor primeiro passo que você puder dar. Nós da HE, já ajudamos mais de 50 Startups a começarem suas atividades e validarem suas ideias. Não só produzimos o MVP, como também, damos uma espécie de consultoria para quem quer começar seu négocio na WEB.
 
-Se ainda não conhece, acesse o site do Startup DEV e conheça nosso serviço voltado para quem busca o sucesso.
+Se ainda não conhece, acesse o site do [Startup DEV](http://startupdev.com.br/) e conheça nosso serviço voltado para quem busca o sucesso.
