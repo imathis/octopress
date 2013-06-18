@@ -16,6 +16,8 @@ categories:
 
 A ideia é empreender inovando da forma mais simples possível. Usando o mínimo de recursos e o máximo de velocidade para economizar dinheiro e diminuir riscos. Fazer uma empresa enxuta começando com um produto mínimo viável e através de um processo iterativo de aprendizagem e validação qualitativa junto ao cliente, buscar o ajuste do produto ao mercado. Para só então, crescer em escala e estrutura.
 
+<!--more-->
+
 ### Quanto menos se escode, melhor.
 
 Fale com o maior número de pessoas possível e nunca guarde uma ideia pra si. O brasileiro é muito restritivo em compartilhar ideias e isto é uma besteira. Cada vez que você compartilha algo, esta ideia é melhorada. Esse negócio de roubo de ideia é relativo. Se roubaram sua ideia a culpa foi sua de não ter sido competente suficiente de desenvolvê-la antes. Quem sempre vai ganhar o mercado é aquele que executar primeiro e melhor. Neste mundo, o ideal é pedir dicas, indicações, conversar e, obviamente, executar suas ideias.
