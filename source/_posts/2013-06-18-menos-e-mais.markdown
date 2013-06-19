@@ -18,7 +18,7 @@ A ideia é empreender inovando da forma mais simples possível. Usando o mínimo
 
 <!--more-->
 
-### Quanto menos se escode, melhor.
+### Quanto menos esconder, melhor.
 
 Fale com o maior número de pessoas possível e nunca guarde uma ideia pra si. O brasileiro é muito restritivo em compartilhar ideias e isto é uma besteira. Cada vez que você compartilha algo, esta ideia é melhorada. Esse negócio de roubo de ideia é relativo. Se roubaram sua ideia a culpa foi sua de não ter sido competente suficiente de desenvolvê-la antes. Quem sempre vai ganhar o mercado é aquele que executar primeiro e melhor. Neste mundo, o ideal é pedir dicas, indicações, conversar e, obviamente, executar suas ideias.
 
