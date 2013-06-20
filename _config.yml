@@ -96,5 +96,8 @@ disqus_show_comment_count: false
 # Google Analytics
 google_analytics_tracking_id:
 
+# Yandex.Metrika (http://metrika.yandex.ru/?&ncrnd=6249)
+yandex_metrika_tracking_id:
+
 # Facebook Like
 facebook_like: false
