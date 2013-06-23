@@ -7,6 +7,7 @@ categories:
   - facebook login
   - oauth
   - omniauth
+  - matheus bras
 ---
 
 Eu falei anteriormente sobre o [Passwordless Login](http://helabs.com.br/blog/2013/04/11/passwordless-login/) e agora vou falar sobre o Login via Facebook. Este post será mais como uma 'receita' de como implementar na sua aplicação Rails. Então, vamos lá.
@@ -22,7 +23,7 @@ Todo mundo que você conhece tem uma conta no Facebook, certo? Até minha mãe f
 - As gems 'omniauth' e 'omniauth-facebook'
 - Alguns métodos e controllers
 
-### Criando um aplicativo no Facebook
+## Criando um aplicativo no Facebook
 
 Acesse [http://developers.facebook.com/apps](http://developers.facebook.com/apps) e clique em "**Criar Novo Aplicativo**". Digite o nome do seu App e um namespace.
 
@@ -49,7 +50,7 @@ Se você estiver configurando a App para desenvolvimento local, o host será "ht
 
 E é isso para o aplicativo do Facebook. Vamos pro Rails agora.
 
-### A parte do Rails...
+## A parte do Rails...
 
 Primeiro, adicione no seu Gemfile estas gems:
 
@@ -71,7 +72,72 @@ Note que a opção "scope" tem o valor "email". Isso significa que pediremos per
 Precisamos agora de um model para o usuário:
 
 ```ruby
-  $ rails g model User name:string email:string access_token:string uid:string photo_url:string
+  $ rails g model User name:string email:string access_token:string uid:string photo_url:string provider:string
   $ rake db:migrate
 ```
+
+Precisamos também de um controller para cuidar da autênticação, vamos criar o SessionsController:
+
+```ruby
+  $ rails g controller Sessions
+```
+
+Neste controller vamos implementar algumas actions:
+
+```ruby
+  # encoding: UTF-8
+  class SessionsController < ApplicationController
+    def create
+      auth = request.env["omniauth.auth"]
+      user = User.find_or_create_with_omniauth(auth)
+      session[:user_id] = user.id
+      redirect_to secret_page_path, :notice => "Opa! Você está online!"
+    end
+
+    def failure
+      redirect_to root_url
+    end
+
+    def destroy
+      session[:user_id] = nil
+      redirect_to root_url, :notice => "Volte em breve!"
+    end
+  end
+```
+
+A action create vai receber as informações do usuário enviado pelo Facebook, através do request.env["omniauth.auth"], caso ele não exista no banco de dados, nós criamos o usuário ou então nós somente encontramos ele através do método, que ainda vamos implementar no model User, find_or_create_with_omniauth(). Você pode saber mais sobre o Auth Hash, [clique aqui](https://github.com/mkdynamic/omniauth-facebook#auth-hash). A action failure vai redirecionar o usuário para o root_url, caso a autênticação falhe. E a action destroy, vai simplesmente deslogar o usuário.
+
+Agora vamos criar as rotas para esse controller:
+
+```ruby
+  match "/auth/:provider/callback" => "sessions#create", as: :auth_callback
+  match "/auth/failure" => "sessions#failure", as: :auth_failure
+  match "/logout" => "sessions#destroy", as: :logout
+```
+
+Lembra que quando criamos o aplicativo no Facebook definimos a url para login como http://localhost:3000/auth/facebook/callback? Essa rota aponta para a action create do nosso SessionsController. Você pode mudar a rota para a action create, mas lembre-se de mudar nas configurações do aplicativo do Facebook também.
+
+Vamos voltar ao model User para implementar o método find_or_create_with_omniauth:
+
+```ruby
+  def self.find_or_create_with_omniauth(auth)
+    user = self.find_or_create_by_provider_and_uid(auth.provider, auth.uid)
+    user.assign_attributes({ name: auth.info.name, email: auth.info.email, photo_url: auth.info.image, access_token: auth.credentials.token })
+    user.save!
+    user
+  end
+```
+
+Na primeira linha do método tenta achar o usuário pelos campos provider e uid, caso não seja encontrado nos criamos um. Logo na linha debaixo nós setamos alguns atributos pelo Auth Hash, como: nome, email, avatar e o access_token. Então salvamos o usuário e o retornamos na última linha.
+
+Então para finalizar só precisamos criar algum link para que o usuário clique e faça o login. Adicione na view da sua preferência:
+
+```ruby
+  <%= link_to "Login com Facebook", "/auth/facebook" %>
+```
+
+E pronto. O usuário já pode fazer o login usando o Facebook na sua aplicação Rails. Como no outro post, eu também preparei uma aplicação exemplo no [Heroku](https://facebook-login-example.herokuapp.com/) e disponibilizei o código no [Github](https://github.com/matheusbras/facebook-login-example). É uma versão modificada da aplicação do outro exemplo. ;)
+
+Heroku -> https://facebook-login-example.herokuapp.com/
+Github -> https://github.com/matheusbras/facebook-login-example
 
