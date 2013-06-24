@@ -29,7 +29,7 @@ Acesse [http://developers.facebook.com/apps](http://developers.facebook.com/apps
 
 ![image](/images/posts/facebook-login/img0.png)
 
-Próximo passo é pegar o APP ID e o APP Secret e configurá-los como variáveis de ambiente da sua aplicação Rails. Normalmente, colocamos as variáveis no .rvmrc do projeto, mas nada impede que você crie um arquivo .yml e salve essas informações.
+Próximo passo é pegar o _APP ID_ e o _APP Secret_ e configurá-los como variáveis de ambiente da sua aplicação Rails. Normalmente, colocamos as variáveis no _.rvmrc_ do projeto, mas nada impede que você crie um arquivo _.yml_ e salve essas informações.
 
 ![image](/images/posts/facebook-login/img1.png)
 
@@ -38,13 +38,13 @@ Próximo passo é pegar o APP ID e o APP Secret e configurá-los como variáveis
   export FACEBOOK_APP_SECRET= #{APP_SECRET}
 ```
 
-Existe a opção de deixar o aplicativo no Facebook em modo Sandbox. Caso esteja ativado, somente você ou outras pessoas que estiverem cadastradas como desenvolvedores ou testers poderão usar sua aplicação para fazer o login. Caso você prefira que qualquer pessoa possa se logar sem precisar dar permissão. Para ver as configurações de permissões, clique em "Privilégios de desenvolvedores" na sidebar.
+Existe a opção de deixar o aplicativo no Facebook em modo Sandbox. Caso esteja ativado, somente você ou outras pessoas que estiverem cadastradas como desenvolvedores ou testers poderão usar sua aplicação para fazer o login. Caso você prefira que qualquer pessoa possa se logar sem precisar dar permissão. Para ver as configurações de permissões, clique em "**Privilégios de desenvolvedores**" na sidebar.
 
 ![image](/images/posts/facebook-login/img2.png)
 
-Depois, na seção "Selecione o modo como seu aplicativo se integra com Facebook" clique em "Site com o Login do Facebook". Em Site URL, coloque a url onde o Facebook vai enviar as informações da autênticação. Normalmente o path "/auth/facebook/callback" é usado com a gem "omniauth". Vou explicar isso melhor depois.
+Depois, na seção "**Selecione o modo como seu aplicativo se integra com Facebook**" clique em "**Site com o Login do Facebook**". Em _Site URL_, coloque a url onde o Facebook vai enviar as informações da autênticação. Normalmente o path _"/auth/facebook/callback"_ é usado com a gem _"omniauth"_. Vou explicar isso melhor depois.
 
-Se você estiver configurando a App para desenvolvimento local, o host será "http://localhost:3000" ou qualquer que seja seu host local.
+Se você estiver configurando a App para desenvolvimento local, o host será "**http://localhost:3000**" ou qualquer que seja seu host local.
 
 ![image](/images/posts/facebook-login/img4.png)
 
@@ -59,7 +59,7 @@ Primeiro, adicione no seu Gemfile estas gems:
   gem 'omniauth-facebook'
 ```
 
-Depois, crie um arquivo chamado "omniauth.rb" em config/initializers:
+Depois, crie um arquivo chamado _"omniauth.rb"_ em config/initializers:
 
 ```ruby
   Rails.application.config.middleware.use OmniAuth::Builder do
@@ -76,7 +76,7 @@ Precisamos agora de um model para o usuário:
   $ rake db:migrate
 ```
 
-Precisamos também de um controller para cuidar da autênticação, vamos criar o SessionsController:
+Precisamos também de um controller para cuidar da autênticação, vamos criar o _SessionsController_:
 
 ```ruby
   $ rails g controller Sessions
@@ -105,7 +105,7 @@ Neste controller vamos implementar algumas actions:
   end
 ```
 
-A action create vai receber as informações do usuário enviado pelo Facebook, através do request.env["omniauth.auth"], caso ele não exista no banco de dados, nós criamos o usuário ou então nós somente encontramos ele através do método, que ainda vamos implementar no model User, find_or_create_with_omniauth(). Você pode saber mais sobre o Auth Hash, [clique aqui](https://github.com/mkdynamic/omniauth-facebook#auth-hash). A action failure vai redirecionar o usuário para o root_url, caso a autênticação falhe. E a action destroy, vai simplesmente deslogar o usuário.
+A action _create_ vai receber as informações do usuário enviado pelo Facebook, através do _request.env["omniauth.auth"]_, caso ele não exista no banco de dados, nós criamos o usuário ou então nós somente encontramos ele através do método, que ainda vamos implementar no model _User_, find_or_create_with_omniauth(). Você pode saber mais sobre o Auth Hash, [clique aqui](https://github.com/mkdynamic/omniauth-facebook#auth-hash). A action _failure_ vai redirecionar o usuário para o root_url, caso a autênticação falhe. E a action _destroy_, vai simplesmente deslogar o usuário.
 
 Agora vamos criar as rotas para esse controller:
 
@@ -115,9 +115,9 @@ Agora vamos criar as rotas para esse controller:
   match "/logout" => "sessions#destroy", as: :logout
 ```
 
-Lembra que quando criamos o aplicativo no Facebook definimos a url para login como http://localhost:3000/auth/facebook/callback? Essa rota aponta para a action create do nosso SessionsController. Você pode mudar a rota para a action create, mas lembre-se de mudar nas configurações do aplicativo do Facebook também.
+Lembra que quando criamos o aplicativo no Facebook definimos a url para login como **http://localhost:3000/auth/facebook/callback**? Essa rota aponta para a action create do nosso _SessionsController_. Você pode mudar a rota para a action create, mas lembre-se de mudar nas configurações do aplicativo do Facebook também.
 
-Vamos voltar ao model User para implementar o método find_or_create_with_omniauth:
+Vamos voltar ao model _User_ para implementar o método *find_or_create_with_omniauth*:
 
 ```ruby
   def self.find_or_create_with_omniauth(auth)
@@ -128,7 +128,7 @@ Vamos voltar ao model User para implementar o método find_or_create_with_omniau
   end
 ```
 
-Na primeira linha do método tenta achar o usuário pelos campos provider e uid, caso não seja encontrado nos criamos um. Logo na linha debaixo nós setamos alguns atributos pelo Auth Hash, como: nome, email, avatar e o access_token. Então salvamos o usuário e o retornamos na última linha.
+Na primeira linha do método tenta achar o usuário pelos campos provider e uid, caso não seja encontrado nos criamos um. Logo na linha debaixo nós setamos alguns atributos pelo Auth Hash, como: *nome, email, avatar e o access_token*. Então salvamos o usuário e o retornamos na última linha.
 
 Então para finalizar só precisamos criar algum link para que o usuário clique e faça o login. Adicione na view da sua preferência:
 
