@@ -1,4 +1,5 @@
 ---
+author: Matheus Bras
 layout: post
 title: "Implementando Login via Facebook na sua App Rails"
 date: 2013-06-24 10:00
