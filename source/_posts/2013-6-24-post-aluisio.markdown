@@ -2,25 +2,35 @@
 published: false
 author: Aluísio Azevedo
 layout: post
-title: "no-title yet"
+title: "Ferramentas para Designers"
 comments: true
 categories:
   - design
-  - css
-  - html
-  - ferramentas
   - front-end
+  - ferramentas
 ---
 
-Introdução
-Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+
+
+Projetando interfaces para aplicações web diariamente, uma das mais coisas importantes, é ter uma gama de ferramentas para e deixar o processo de trabalho mais produtivo.
+
+Neste post, irei listar algumas ferramentas que eu uso no meu dia-a-dia, e que agilizam o processo de design e front-end para web.
 
 <!-- more -->
 
 
-### Softwares mais usados
 
-Photoshop e Illustrator são os softwares que utilizamos quando precisamos fazer o design de interfaces ou criar assets como, ícones, ilustrações ou tratar imagens. Apesar destes dois softwares conseguirem resolver a maioria dos problemas, através do novo [serviço de cloud](http://www.adobe.com/products/creativecloud.html), você pode ter acesso a todos os softwares da Adobe.
+### Softwares Gráficos
+
+Photoshop e Illustrator são os softwares que mais utilizo quando preciso fazer o design de uma interface ou criar assets como, ícones, ilustrações, etc. Agora com o novo [serviço de cloud ](http://www.adobe.com/products/creativecloud.html), você pode ter acesso a todos os softwares da Adobe.
+
+
+
+### Wireframes
+
+http://www.balsamiq.com/
+
+https://moqups.com/#!/
 
 
 
@@ -29,7 +39,7 @@ Photoshop e Illustrator são os softwares que utilizamos quando precisamos fazer
 
 Little Ipsum
 
-Apesar de existirem diversos geradores de Lorem Ipsum pela web , o Little Ipsum  permite que com apenas alguns cliques, eu tenha o número de palavras ou paragrafos necessários para serem colados aonde é preciso, sem que eu precise sair da janela em que estou trabalhando.
+Apesar de existirem diversos geradores de Lorem Ipsum pela web , o Little Ipsum funciona de maneira mais prática, já que é um plugin (para Mac OS),  desfazendo a necessidade de abrir uma página web p
 
 
 Frank Eye
@@ -52,8 +62,10 @@ Criação de grids em arquivos .psd também não é uam tarefa muito simples, o 
 
 ### Controle de Arquivos
 
-Além do já consagrado Dropbox, algumas empresas estão focando em desenvolver ferramntas para controle de arquivos para designers .
-O Pixel Lapse é um aplicativo para o controle, distribuição e versionamento de arquivos, facilitando o trabalho em conjunto entre a equipe e apresentação aos clientes do resultado final e processo.
+Além do já consagrado Dropbox, algumas ferramentas estão nascendo com o foco no controle de arquivos para designers .
+O [Pixel Lapse] (https://www.pixelapse.com/) e o [Layer Vault] (https://layervault.com/) são aplicações para o controle, armazenamento e versionamento de arquivos 
+
+que facilitam o trabalho em conjunto entre equipes, principalmente remotas,  e também e apresentação aos clientes do resultado final e processo.
 
 
 
@@ -61,22 +73,20 @@ O Pixel Lapse é um aplicativo para o controle, distribuição e versionamento d
 
 ### Grids
 
-O Gridset App  além da criação de grids, permite também o gerenciamento dos seus grids. Conta com um grande numero de templates para a criaçao de grids fixos e resposivos.
+O site Gridset (https://gridsetapp.com/) , além da criação de grids, permite também o gerenciamento dos seus grids. Conta também com um grande número de templates para a criação de grids fixos e resposivos.
+
 
 
 
 
 ### Cores
 
-O Kuler,  plugin de cores da adobe é bastante avançado e permite uma série de recursos para a criação e gerenciamenteo de paleta de cores, além de ter integração com os softwares da adobe.
-
-https://kuler.adobe.com/
+O [Kuler] (https://kuler.adobe.com/) é bastante avançado e possui uma série de recursos para a criação e gerenciamento de paleta de cores, além de ter integração com os softwares da adobe.
 
 
+Já o [Color Lovers] (http://www.colourlovers.com/) funciona como uma  comunidade aonde você consegue criar, gerenciar, e ver ótimas referências de paletas criadas por outros designers.
 
-Um site que já é bem antigo mas continua tendo bastante utilidade também é o Color Lovers, . Funciona como uma  cominidade aonde você consegue criar, gerenciar e ver ótimas referencias de paletas criadas por outras pessoas.
 
-http://www.colourlovers.com/
 
 
 
@@ -84,24 +94,24 @@ http://www.colourlovers.com/
 
 ### Tipografia
 
-Web fonts já estao difundidas e sendo amplamate utilizadas, mas são muitas opções e é dificil encontrar e gerenciar todas elas
-
-O Typecast é um excelente aplicaticvo para poder gerenciar o seu arsenal , te permitindo separar por projetos, comparar fontes entre outros recusros.
+Web fonts já estão difundidas e sendo amplamate utilizadas, mas são muitas opções, tornando difícil  para encontrar e gerenciar todas elas. O Typecast é uma aplicação excelente para poder gerenciar, organizar por projetos,  comparar fontes, entre outros recusros.
 
 http://typecast.com/
 
 
 
-O hello happy e soma design possuem uma bela lista das melhores fontes disponiveis no diretorio do google
 
-http://somadesign.ca/demos/better-google-fonts/
-
-http://hellohappy.org/beautiful-web-type/
+###  Live Reload
+### Browser Stack
 
 
 
-Conclusão
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur.
+### E você?
+
+Já usa algum desses recursos? Tem outras sugestões para acrescentar?
+Compartilhe suas ferramentas nos comentários também!
+
+
 
 
 
