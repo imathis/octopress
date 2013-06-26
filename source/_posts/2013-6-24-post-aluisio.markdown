@@ -8,101 +8,82 @@ categories:
   - design
   - front-end
   - ferramentas
+  - processos
 ---
 
 
 
-Projetando interfaces para aplicações web diariamente, uma das mais coisas importantes, é ter uma gama de ferramentas para e deixar o processo de trabalho mais produtivo.
+Projetando interfaces para aplicações web diariamente, uma das coisas mais importantes, é ter uma gama de ferramentas para deixar o processo de trabalho mais produtivo.
 
-Neste post, irei listar algumas ferramentas que eu uso no meu dia-a-dia, e que agilizam o processo de design e front-end para web.
+Neste post, irei listar algumas ferramentas que eu uso no meu dia a dia, e que agilizam o design e desenvolvimento front-end.
 
 <!-- more -->
 
 
 
-### Softwares Gráficos
+### Alguns Plugins
 
-Photoshop e Illustrator são os softwares que mais utilizo quando preciso fazer o design de uma interface ou criar assets como, ícones, ilustrações, etc. Agora com o novo [serviço de cloud ](http://www.adobe.com/products/creativecloud.html), você pode ter acesso a todos os softwares da Adobe.
+![image](/images/posts/plugins.png)
 
+[Little Ipsum] (http://littleipsum.com/)
+Apesar de existirem diversos geradores de Lorem Ipsum pela web , o Little Ipsum funciona de maneira mais prática como um plugin para OS X.
 
+[Frank DeLoupe] (http://www.jumpzero.com/frank/)
+Este color-picker também funciona como um plugin para OS X, você pode utilizalo para copiar o rgb ou hexadecimal de uma cor. Ele também guarda o histórico das últimas cores que você utilizou.
 
-### Wireframes
+[Corner Editor](http://photoshopscripts.wordpress.com/2013/02/03/corner-editor-photoshop-script/)
+Pra quem sofre criação e edição de bordas arredondas em elementos no photoshop este script é uma mão na roda.
 
-http://www.balsamiq.com/
-
-https://moqups.com/#!/
-
-
-
-### Plugins
-
-
-Little Ipsum
-
-Apesar de existirem diversos geradores de Lorem Ipsum pela web , o Little Ipsum funciona de maneira mais prática, já que é um plugin (para Mac OS),  desfazendo a necessidade de abrir uma página web p
-
-
-Frank Eye
-
-Este color picker funciona como um plugin, independente de o que voce estiver trabalhando você pode utilizalo para copiar o rgb ou hexadecimal de uma cor, ele também guarda o historico das ultimas cores que você utilizou.
-
-
-Nome do Plugin
-
-Pra quem sofre com o velho  problema de criação de bordas arredondas em elementos no photoshop, este plugin ajuda bastante e é muito fácil de instalar e utilizar.
-
-
-
-Guide Guide
-
-Criação de grids em arquivos .psd também não é uam tarefa muito simples, o guide guide é um plugin que ao ser instalado permite criar diversas configuracoes de grid de maneira muto pratica e rapida.
+[Guide Guide](http://guideguide.me/)
+Criação de grids no Photoshop não é uma tarefa muito agradável. Este script permite criar linhas guias para o seu documento com apenas alguns cliques .
 
 
 
 
 ### Controle de Arquivos
 
-Além do já consagrado Dropbox, algumas ferramentas estão nascendo com o foco no controle de arquivos para designers .
-O [Pixel Lapse] (https://www.pixelapse.com/) e o [Layer Vault] (https://layervault.com/) são aplicações para o controle, armazenamento e versionamento de arquivos 
+![image](/images/posts/layervault.png)
 
-que facilitam o trabalho em conjunto entre equipes, principalmente remotas,  e também e apresentação aos clientes do resultado final e processo.
-
-
+Além do já consagrado Dropbox, algumas ferramentas estão sendo criadas com o foco no controle de arquivos para designers .
+O [Pixel Lapse] (https://www.pixelapse.com/) e o [Layer Vault] (https://layervault.com/) são aplicações para o controle, armazenamento e versionamento de arquivos, que podem melhorar muito o seu workflow e agilizar o processo entre o time.
 
 
 
 ### Grids
 
-O site Gridset (https://gridsetapp.com/) , além da criação de grids, permite também o gerenciamento dos seus grids. Conta também com um grande número de templates para a criação de grids fixos e resposivos.
+![image](/images/posts/grid.png)
 
-
+O site Gridset (https://gridsetapp.com/) , além da criação de grids, permite também o gerenciamento dos seus grids. Conta também com um grande número de templates já definidos de grids.
 
 
 
 ### Cores
 
-O [Kuler] (https://kuler.adobe.com/) é bastante avançado e possui uma série de recursos para a criação e gerenciamento de paleta de cores, além de ter integração com os softwares da adobe.
+![image](/images/posts/colors.png)
 
+O [Kuler] (https://kuler.adobe.com/) é um aplicativo bastante avançado e possui uma série de recursos para a criação e gerenciamento de paleta de cores, além de ter integração com os softwares da adobe.
 
 Já o [Color Lovers] (http://www.colourlovers.com/) funciona como uma  comunidade aonde você consegue criar, gerenciar, e ver ótimas referências de paletas criadas por outros designers.
 
 
 
-
-
-
-
 ### Tipografia
 
-Web fonts já estão difundidas e sendo amplamate utilizadas, mas são muitas opções, tornando difícil  para encontrar e gerenciar todas elas. O Typecast é uma aplicação excelente para poder gerenciar, organizar por projetos,  comparar fontes, entre outros recusros.
+![image](/images/posts/type.png)
 
-http://typecast.com/
-
-
+Web fonts já estão difundidas e sendo amplamente utilizadas, mas são muitas opções, tornando difícil  para encontrar e gerenciar todas elas. O [Typecast] (http://typecast.com/) é uma aplicação excelente para poder gerenciar, organizar por projetos,  comparar fontes, entre outros recusros.
 
 
-###  Live Reload
-### Browser Stack
+
+### HTML e CSS
+
+![image](/images/posts/sublime.png)
+
+Live Reload
+Para fazer o design direto no browser está ferramenta é essencial. O [Live Reload]  (http://livereload.com/) faz com que ao alterar um arquivo HTML, CSS ou uma imagem, o navegador seja atualizado sem a necessidade de um reload na página manualmente.
+
+Browser Stack
+o [Browser Stack] (http://www.browserstack.com/) é uma aplicação web para testes cross-browser. Com ele você consegue visualizar o seu projeto em diferentes browsers e versões rapidamente.
 
 
 
