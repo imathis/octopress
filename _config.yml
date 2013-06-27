@@ -81,6 +81,9 @@ google_plus_one_size: medium
 googleplus_user:
 googleplus_hidden: false
 
+# Google Plus Comments
+googleplus_comments_hidden: true
+
 # Pinboard
 pinboard_user:
 pinboard_count: 3
