@@ -18,7 +18,7 @@ No dia 24/05, também rolou Café com DEV para o pessoal de Londrina! O encontro
 
 <!--more-->
 
-![image](/images/cafelondrina.jpg)
+![image](/images/cafelondrina.JPG)
 
 O evento bombou, tendo mais de 20 participantes! Dentre eles, pessoas de outras cidades próximas a Londrina compareceram! "O pessoal ficou atento do primeiro ao último minuto e fizeram muitas perguntas sobre como são os processos da HE; como aplicar metodologias ágeis nos seus ambientes e etc." - Eduardo sobre o _feedback_ da palestra.
 
