@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "Usando decorators nos models Rails de forma intrusiva"
 date: 2013-06-26 20:08
 author: Rodrigo Pinto
@@ -10,6 +11,7 @@ categories:
   - rails
   - patterns
   - active decorator
+  
 ---
 
 Muito já se falou sobre decorators nos últimos tempos, até mesmo por [aqui][dec]. Melhorar a legibilidade e remover lógica das views de uma aplicação é um assunto que [me interessa][tech] já faz algum tempo. Nesse post vou falar sobre a alternativa que no meu ponto de vista preencheu a lacuna do problema decorators de views no rails .
