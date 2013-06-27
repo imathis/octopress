@@ -22,7 +22,7 @@ A palestra bombou! Muita gente acompanhou presencial e ao vivo pelo Eventials! N
 
 A galera interagiu bastante com o palestrante e foi muito proveitoso para todos! O evento aconteceu no Espaço Curto Circuito (Av 13 de maio, nº13 - sala 616, Cinelândia) e foi regado a snacks, café e RedBull.
 
-![image](/images/cafecomdev14.jpg)
+![image](/images/cafecomdev14.JPG)
 
 Lembrando que esta semana a HE:Rio receberá, também no Espaço Curto Circuito, [Diego Dukão](https://twitter.com/diegodukao) falando sobre "Porque você não deve fazer seu app nativo (ou introdução ao PhoneGap)". Para se inscrever, [clique aqui](https://docs.google.com/a/helabs.com.br/forms/d/1Nk_RWEfTLwPghczIAZnbCUaSDPhZd7Kna20wk0IQblk/viewform).
 
