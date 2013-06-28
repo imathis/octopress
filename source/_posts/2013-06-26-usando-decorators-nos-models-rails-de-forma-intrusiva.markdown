@@ -1,8 +1,8 @@
 ---
 layout: post
-published: false
+published: true
 title: "Usando decorators nos models Rails de forma intrusiva"
-date: 2013-06-26 20:08
+date: 2013-06-28 15:00
 author: Rodrigo Pinto
 comments: true
 categories:
@@ -14,11 +14,11 @@ categories:
   
 ---
 
-Muito já se falou sobre decorators nos últimos tempos, até mesmo por [aqui][dec]. Melhorar a legibilidade e remover lógica das views de uma aplicação é um assunto que [me interessa][tech] já faz algum tempo. Nesse post vou falar sobre a alternativa que no meu ponto de vista preencheu a lacuna do problema decorators de views no rails .
+Muito já se falou sobre decorators nos últimos tempos, até mesmo por [aqui][dec]. Melhorar a legibilidade e remover lógica das views de uma aplicação é um assunto que [me interessa][tech] já faz algum tempo. Nesse post falarei sobre a alternativa que, no meu ponto de vista, preencheu a lacuna do problema decorators de views no rails .
 
 <!--more-->
 
-Existem diversas formas de implementar um decorator e já existem diversas gems que auxiliam nesse trabalho, como o [simple_presenter][sp] e o [draper][draper]. O que me incomodava em todas nas diversas soluções existentes, é que o desenvolvedor teria de passar o objeto ou a coleção de objetos para a classe do decorator, para que o objeto fosse _decorado_. Pensando no caso de uma action, ela teria de ser alterada, como pode ser visto no exemplo a seguir:
+Há diversas formas de implementar um decorator e já existem inúmeras gems que auxiliam neste trabalho, como o [simple_presenter][sp] e o [draper][draper]. O que me incomodava em todas as diversas soluções existentes, é  o desenvolvedor ter que passar o objeto ou a coleção de objetos para a classe do decorator para que fosse _decorado_. Pensando no caso de uma action, ela teria de ser alterada, como pode ser visto no exemplo a seguir:
 
 ```ruby
 # any controller...
@@ -28,9 +28,9 @@ def index
 end
 ```
 
-Esse tipo de solução sempre me incomodou, e eu mantive minha busca por alguma solução que funcionasse de forma intrusiva, sem que fosse preciso modificar a chamada na action. E essa solução existe, chama-se [active_decorator][ad].
+Esse tipo de solução sempre me incomodou, e eu mantive minha busca por alguma que funcionasse de forma intrusiva, sem que fosse preciso modificar a chamada na action. E esta solução existe, chama-se [active_decorator][ad].
 
-O active_decorator _injeta_ o decorator em um model, ou em uma coleção de models ou uma instância do ActiveRecord::Relation automaticamente a partir de um controller ou renderizando uma view com `:collection` ou `:object` ou `:local`, sendo assim, não é preciso alterar nenhuma chamada no seu controller.
+O active_decorator _injeta_ automaticamente o decorator em um model, ou em uma coleção de models ou uma instância do ActiveRecord::Relation a partir de um controller ou renderizando uma view com `:collection` ou `:object` ou `:local`. Sendo assim, não é preciso alterar nenhuma chamada no seu controller.
 
 Vamos ver o exemplo anterior usando o active decorator.
 
@@ -42,7 +42,7 @@ def index
 end
 ```
 
-Existindo um `UserDecorator` e um `ArticleDecorator`, os objectos das coleções serão automaticamente _decorados_ quando forem ser usados nas views.
+Existindo um `UserDecorator` e um `ArticleDecorator`, os objetos das coleções serão automaticamente _decorados_ quando forem ser usados nas views.
 
 Veja um exemplo mais completo:
 
