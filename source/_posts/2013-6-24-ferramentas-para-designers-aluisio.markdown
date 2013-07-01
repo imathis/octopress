@@ -24,7 +24,7 @@ Nesse post, irei listar algumas ferramentas que eu uso no meu dia a dia. E que a
 
 ### Alguns Plugins
 
-![image](/images/posts/plugins.png)
+![image](/images/plugins.png)
 
 [**Little Ipsum**](http://littleipsum.com/)
 Apesar de existirem diversos geradores de _Lorem Ipsum_ pela web , o **Little Ipsum** funciona de maneira mais prática como um plugin para OS X.
@@ -43,7 +43,7 @@ Criação de _grids_ no Photoshop não é uma tarefa muito agradável. Este scri
 
 ### Controle de Arquivos
 
-![image](/images/posts/layervault.png)
+![image](/images/layervault.png)
 
 Além do já consagrado Dropbox, algumas ferramentas estão sendo criadas com o foco no controle de arquivos para designers .
 O [**Pixel Lapse**](https://www.pixelapse.com/) e o [**Layer Vault**](https://layervault.com/) são aplicações para o controle, armazenamento e versionamento de arquivos. Eles podem melhorar muito o seu workflow e agilizar o processo entre o time.
@@ -52,7 +52,7 @@ O [**Pixel Lapse**](https://www.pixelapse.com/) e o [**Layer Vault**](https://la
 
 ### Grids
 
-![image](/images/posts/grid.png)
+![image](/images/grid.png)
 
 O site [**Gridset**](https://gridsetapp.com/) , além da criação de grids, permite também o gerenciamento dos seus grids. Conta também com um grande número de templates já definidos de grids.
 
@@ -60,7 +60,7 @@ O site [**Gridset**](https://gridsetapp.com/) , além da criação de grids, per
 
 ### Cores
 
-![image](/images/posts/colors.png)
+![image](/images/colors.png)
 
 O [**Kuler**](https://kuler.adobe.com/) é um aplicativo bastante avançado e possui uma série de recursos para a criação e gerenciamento de paleta de cores. Além de ter integração com os softwares da Adobe.
 
@@ -70,7 +70,7 @@ Já o [**Color Lovers**](http://www.colourlovers.com/), funciona como uma  comun
 
 ### Tipografia
 
-![image](/images/posts/type.png)
+![image](/images/type.png)
 
 Web fonts já estão difundidas e sendo amplamente utilizadas, mas são muitas opções, tornando difícil para encontrar e gerenciar todas elas. O [**Typecast**](http://typecast.com/) é uma aplicação excelente para poder gerenciar, organizar por projetos, comparar fontes, dentre outros recursos.
 
@@ -78,7 +78,7 @@ Web fonts já estão difundidas e sendo amplamente utilizadas, mas são muitas o
 
 ### HTML e CSS
 
-![image](/images/posts/sublime.png)
+![image](/images/sublime.png)
 
 **Live Reload**
 
