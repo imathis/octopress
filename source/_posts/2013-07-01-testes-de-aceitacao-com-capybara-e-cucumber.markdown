@@ -98,11 +98,11 @@ Dado /^que eu estou na página do formulario$/ do
 end
 
 Quando /^eu preencher todos os campos$/ do
-  fill_in "user_nome", :with=> "Rodrigo Reginato"
-  fill_in "user_endereco", :with=> "Rua alagoas 3872"
-  fill_in "user_telefone", :with=> '4398765425'
-  page.select "SC", :from => 'user_estado'
-  page.choose("user_tipo_fisico")
+  fill_in "usuario_nome", :with=> "Rodrigo Reginato"
+  fill_in "usuario_endereco", :with=> "Rua alagoas 3872"
+  fill_in "usuario_telefone", :with=> '4398765425'
+  page.select "SC", :from => 'usuario_estado'
+  page.choose("usuario_tipo_fisico")
 end  
 
 E /^clicar em "(.*?)"$/ do |nome_do_botao|
