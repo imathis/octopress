@@ -95,7 +95,7 @@ Agora crie um arquivo “/features/step_definitions/valida_form_steps.rb” com 
 ```ruby
 # encoding: utf-8
 Dado /^que eu estou na página do formulario$/ do
-  visit new_user_path
+  visit new_usuario_path
 end
 
 Quando /^eu preencher todos os campos$/ do
