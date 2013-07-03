@@ -57,9 +57,13 @@ Crie um arquivo “/features/valida_form.feature” onde será escrito os **Cen�
 ```ruby
 # encoding: utf-8
 # language: pt
-**Funcionalidade**: Preencher o formulário
+Funcionalidade: Preencher o formulário
 
-  **Cenário**: Deve preencher todos os campos do formulário e salvar com sucesso, dado que estou na página do formulário. Quando preencher todos os campo e clicar em salvar, deve-se receber a mensagem "Cadastrado com Sucesso".
+  Cenário: Deve preencher todos os campos do forumlário e salvar com sucesso
+    Dado que eu estou na página do formulario
+    Quando eu preencher todos os campos
+    E clicar em "Salvar"
+    Então então deve ver receber a mensagem "Usuarios cadastrado com sucesso"
 ```
 
 Após salvar este arquivo, execute novamente o comando:
