@@ -18,35 +18,35 @@ A ideia desse post é mostrar um pouco como funciona o **capybara** com o **cucu
 
 <!--more-->
 
-Vou criar um projeto com apenas um formulário para usar de exemplo para os testes de aceitação. Usarei o _ruby 2.0.0-p0_ e o _rails 3.2.13_.
+Vou criar um projeto com apenas um formulário para usar de exemplo para os testes de aceitação. Usarei o _ruby 2.0.0-p0_ e _rails 3.2.13_.
 
-**Cucumber** é uma _gem_ que cria um novo ambiente no projeto e permite a escrita de testes de aceitação em uma linguagem muito próxima da natural. 
+**Cucumber** é uma _gem_ que cria um novo ambiente no projeto e permite a escrita de testes de aceitação em uma linguagem muito próxima da natural.
 
 **Capybara** também é uma _gem_ que ajuda a testar aplicações web, simulando como um usuário real iria interagir com o aplicativo.
 
-Primeira etapa é adicionar a _gem_ **cucumber** em seu gemfile. Adicione também a _gem_ **database_cleanear**, ela não é obrigatória, mas altamente recomendável. E por último, o **'bundle install'**.
+Primeira etapa é adicionar a _gem_ **cucumber** em seu gemfile. Adicione também a _gem_ **database_cleaner**. Ela não é obrigatória, mas altamente recomendável. E por último, o **'bundle install'**.
 
 ```ruby
-group :test do   
-  gem 'cucumber-rails', :require => false   
-  gem 'database_cleaner' 
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
 end
 ```
 
 Após a instalação das gems, rode o comando para gerar os aquivos de configuração do cucumber.
 
-```ruby
+```bash
 $ rails generate cucumber:install
 ```
 
 Agora execute o comando:
 
-```ruby
+```bash
 $ rake cucumber
 ```
 Você deve obter o resultado a seguir:
 
-```ruby
+```bash
 0 scenarios
 0 steps
 0m0.000s
@@ -54,7 +54,7 @@ Você deve obter o resultado a seguir:
 
 Crie um arquivo “/features/valida_form.feature” onde será escrito os **Cenários**. Descreva a ação de como o sistema deve se comportar.
 
-```ruby
+```cucumber
 # encoding: utf-8
 # language: pt
 Funcionalidade: Preencher o formulário
@@ -63,18 +63,18 @@ Funcionalidade: Preencher o formulário
     Dado que eu estou na página do formulario
     Quando eu preencher todos os campos
     E clicar em "Salvar"
-    Então então deve ver receber a mensagem "Usuarios cadastrado com sucesso"
+    Então deve ver receber a mensagem "Usuarios cadastrado com sucesso"
 ```
 
 Após salvar este arquivo, execute novamente o comando:
 
-```ruby
+```bash
 $ rake cucumber
 ```
 
 O resultado obtido será:
 
-```ruby
+```bash
 1 scenario (1 undefined)
 4 steps (4 undefined)
 0m0.812s
@@ -82,7 +82,7 @@ O resultado obtido será:
 
 Próximo passo para agilizar o processo será a criação de um **scaffold** de Usuário e validar a presença de todos os campos.
 
-```ruby
+```bash
 $ rails g scaffold usuario nome:string endereco:string telefone:string estado:string tipo:string
 $ rake db:migrate
 ```
@@ -92,7 +92,7 @@ O **capybara** vai nos ajudar a preencher os fields do formulário.
 
 Agora crie um arquivo “/features/step_definitions/valida_form_steps.rb” com o conteúdo abaixo:
 
-```ruby
+```cucumber
 # encoding: utf-8
 Dado /^que eu estou na página do formulario$/ do
   visit new_usuario_path
@@ -104,27 +104,27 @@ Quando /^eu preencher todos os campos$/ do
   fill_in "usuario_telefone", :with=> '4398765425'
   page.select "SC", :from => 'usuario_estado'
   page.choose("usuario_tipo_fisico")
-end  
+end
 
 E /^clicar em "(.*?)"$/ do |nome_do_botao|
   find_button(nome_do_botao).click
   save_and_open_page
-end  
+end
 
-Então /^então deve ver receber a mensagem "(.*?)"$/ do |mensagem|
+Então /^deve ver receber a mensagem "(.*?)"$/ do |mensagem|
   page.has_content?(mensagem)
-end   
+end
 ```
 
 Após adicionar este código rode novamente o comando:
 
-```ruby
+```bash
 $ rake cucumber
 ```
 
 O resultado obtido será:
 
-```ruby
+```bash
 1 scenario (1 passed)
 4 steps (4 passed)
 0m0.425s
@@ -156,7 +156,7 @@ gem 'selenium-webdriver'
 
 Adicione @javascript na primeira linha antes do **Cenário** iniciar.
 
-```ruby
+```cucumber
 @javascript
 Cenário: Deve preencher todos os campos do formulário e salvar com sucesso
 ```
