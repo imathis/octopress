@@ -2,23 +2,24 @@
 author: Thiago Belem
 layout: post
 title: "Gerenciando assets com o Bower"
-date: 2013-07-03 15:35
+date: 2013-07-08 13:35
 comments: true
 categories:
   - Thiago Belem
   - Bower
   - Node.js
+  
 ---
 
 ![Bower](http://bower.io/img/bower-logo.png "Bower")
 
-O Bower ([bower.io](http://bower.io)), criado pelo galerê do **Twitter**, é um "gerenciador de pacotes para web", mas especificamente para pacotes de front-end.
+O Bower ([bower.io](http://bower.io)), criado pelo galerê do **Twitter**, é um "gerenciador de pacotes para web", mas especificamente para pacotes de Front-end.
 
-A idéia por trás dele é bem simples: você lista as dependências de JS (jQuery, jQuery Highlight, Backbone e etc.) em um arquivo `bower.json` que fica dentro do seu projeto, e controla a instalação/atualização desses pacotes por linha de comando.
+A ideia por trás dele é bem simples: você lista as dependências de JS (jQuery, jQuery Highlight, Backbone e etc.) em um arquivo `bower.json` que fica dentro do seu projeto, e controla a instalação/atualização desses pacotes por linha de comando.
 
 ### Intalando o Bower
 
-Antes de tudo, você vai precisar o [Node.js](http://nodejs.org/) e o [NPM](http://npmjs.org/) instalados na sua máquina.
+Antes de tudo, você vai precisar do [Node.js](http://nodejs.org/) e do [NPM](http://npmjs.org/) instalados na sua máquina.
 
 Agora é só usar o NPM para instalar o Bower globalmente no seu sistema:
 
@@ -47,11 +48,11 @@ Onde `<package>` pode ser um dos seguintes itens:
 * Um atalho para um repositório no GitHub, por exemplo `someone/some-package`
 * A URL de um arquivo `zip` ou `tar.gz`
 
-Todos os pacotes serão instalados numa pasta `bower_components` dentro do seu projeto, e a idéia é que você nunca altere o conteúdo dessa pasta nem dos pacotes dentro dela, por isso uma boa é colocá-la no seu `.gitignore`.
+Todos os pacotes serão instalados numa pasta `bower_components` dentro do seu projeto. E a ideia é que você nunca altere o conteúdo dessa pasta, nem dos pacotes dentro dela. Por isso, uma boa é colocá-la no seu `.gitignore`.
 
 ### Definindo as dependências do seu projeto no bower.json
 
-O conteúdo do arquivo do seu bower.json descreve o seu projeto e suas dependências, num projeto onde usamos o **jQuery** e o **Angular.js**, ele seria mais ou menos assim:
+O conteúdo do arquivo do seu bower.json descreve o seu projeto e suas dependências num projeto onde usamos o **jQuery** e o **Angular.js**. Ele seria mais ou menos assim:
 
 ```json
 {
@@ -64,7 +65,7 @@ O conteúdo do arquivo do seu bower.json descreve o seu projeto e suas dependên
 }
 ```
 
-E após rodar o comando de instalação:
+Após rodar o comando de instalação:
 
 ```bash
 bower install
@@ -96,13 +97,13 @@ Se amanhã sair outra versão do jQuery, podemos atualizá-lo com:
 bower update
 ```
 
-E o jQuery será atualizado, mas o Angular permancerá na versão 1.0.7 pois foi assim que definimos no nosso `bower.json`.
+E o jQuery será atualizado, mas o Angular permancerá na versão 1.0.7, pois foi assim que definimos no nosso `bower.json`.
 
 ### Incluindo assets instalados com o Bower
 
-Claro que esse passo é opcional se você tiver incluindo assets de outra forma (Sprockets?), mas vou deixar aqui um pequeno exempo pra não ficarem dúvidas.
+Claro que esse passo é opcional se você estiver incluindo assets de outra forma (Sprockets?). Mas vou deixar aqui um pequeno exemplo para não ficarem dúvidas.
 
-Para incluir os arquivos de um projeto não existe magia negra, é só usar o caminho completo:
+Para incluir os arquivos de um projeto, não existe magia negra, é só usar o caminho completo:
 
 ```html
 <script src="/bower_components/jquery/jquery.min.js"></script>
@@ -111,6 +112,6 @@ Para incluir os arquivos de um projeto não existe magia negra, é só usar o ca
 
 ### Conclusão
 
-Acredito que o Bower tenha bastante futuro pois estamos cada vez mais tirando as dependências de dentro dos nossos projetos e repositórios, deixando apenas o que é realmente único e importante para a aplicação.
+Acredito que o Bower tenha bastante futuro, pois estamos cada vez mais tirando as dependências de dentro dos nossos projetos e repositórios, deixando apenas o que é realmente único e importante para a aplicação.
 
 Até a próxima!
