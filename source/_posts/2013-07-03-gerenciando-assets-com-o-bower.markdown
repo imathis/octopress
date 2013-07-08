@@ -15,6 +15,8 @@ categories:
 
 O Bower ([bower.io](http://bower.io)), criado pelo galerê do **Twitter**, é um "gerenciador de pacotes para web", mas especificamente para pacotes de Front-end.
 
+<!--more-->
+
 A ideia por trás dele é bem simples: você lista as dependências de JS (jQuery, jQuery Highlight, Backbone e etc.) em um arquivo `bower.json` que fica dentro do seu projeto, e controla a instalação/atualização desses pacotes por linha de comando.
 
 ### Intalando o Bower
