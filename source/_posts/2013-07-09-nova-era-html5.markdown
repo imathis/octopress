@@ -21,12 +21,12 @@ Novos elementos foram introduzidos no HTML5: todos têm a finalidade de facilita
 
 - Os principais elementos de estrutura básica do HTML5 são:
 
-&lt;header&gt; - cabeçalho da página ou de uma seção;
-&lt;section&gt; - cada seção do conteúdo;
-&lt;article&gt; - um item do conteúdo dentro da página ou da seção;
-&lt;footer&gt; - o rodapé da página ou de uma seção;
-&lt;nav&gt; - o conjunto de links que formam a navegação, seja o menu principal do site ou links relacionados ao conteúdo da página;
-&lt;aside&gt; - conteúdo relacionado ao artigo (como arquivos e posts relacionados em um blog, por exemplo).
+* &lt;header&gt; - cabeçalho da página ou de uma seção;
+* &lt;section&gt; - cada seção do conteúdo;
+* &lt;article&gt; - um item do conteúdo dentro da página ou da seção;
+* &lt;footer&gt; - o rodapé da página ou de uma seção;
+* &lt;nav&gt; - o conjunto de links que formam a navegação, seja o menu principal do site ou links relacionados ao conteúdo da página;
+* &lt;aside&gt; - conteúdo relacionado ao artigo (como arquivos e posts relacionados em um blog, por exemplo).
 
 Abaixo mostrarei 2 exemplos da marcação no HTML e no HTML5: 
 
