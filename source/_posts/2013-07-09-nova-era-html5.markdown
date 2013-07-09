@@ -15,6 +15,8 @@ Nesse meu novo post falarei sobre a linguagem de marcação HTML5.
 O **Hyper Text Markup Language** (Linguagem de marcação de hipertexto), conhecido como código HTML, está presente em todas as páginas da WEB.
 Há, aproximadamente, dez anos, o HTML está presente na vida dos internautas. Possui uma grande aceitação pelas pessoas que o usam. O código HTML já está se adequando para sua quinta versão(HTML5), deste modo, poderá beneficiar os desenvolvedores e todos os usuários da internet.
 
+<!--more-->
+
 Novos elementos foram introduzidos no HTML5: todos têm a finalidade de facilitar a compreensão e a manutenção do código. Alguns deles são uma evolução natural do elemento < div > focado na semântica; outros, no entanto, surgiram da necessidade de padronizar a maneira de se publicar conteúdo. 
 
 - Os principais elementos de estrutura básica do HTML5 são:
