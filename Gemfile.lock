@@ -11,6 +11,7 @@ GEM
       sass (~> 3.1)
     directory_watcher (1.4.1)
     fast-stemmer (1.0.1)
+    fastimage (1.4.0)
     fssm (0.2.9)
     haml (3.1.7)
     jekyll (0.12.0)
@@ -53,6 +54,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth (~> 4.2.9)
   compass (~> 0.12.2)
+  fastimage (~> 1.4.0)
   haml (~> 3.1.7)
   jekyll (~> 0.12)
   liquid (~> 2.3.0)
