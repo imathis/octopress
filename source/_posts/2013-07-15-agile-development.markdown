@@ -15,6 +15,8 @@ categories:
 
 Uma abordagem de projeto ágil ou **Agile Development** permite definirmos iterações/sprints semanais e fazermos *deploy* para testarmos uma nova funcionalidade com mais rapidez e eficiência. Do ponto de vista da UX: Se nossos usuários aceitarem e usarem essa nova funcionalidade, manteremos-na.
 
+<!--more-->
+
 Em cada início de iteração (XP) ou *sprint* (SCRUM), definimos o que será desenvolvido com a certeza que em 1 semana (ou 1 mês) determinada funcionalidade estará em produção para testes A/B, por exemplo. Ou simplesmente ser mantida para ver como os usuários reagem ou se interessam por ela.
 
 Já uma abordagem em cascata (em inglês *waterfall approach*) é a mais tradicional e utilizada. Ela trata as etapas do projeto separadamente, como fases distintas e tudo isso num processo só de escopo fechado. O maior problema dessa abordagem é que uma etapa precisa que a anterior esteja 100% completa para que possa ser iniciada.
