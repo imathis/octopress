@@ -278,7 +278,7 @@ Outro aspecto relevante de ser analisado são os números de faturamento e venda
 
 **Número de clientes:** 6;
 
-**Faturamento:** R$ 1.2344,90;
+**Faturamento:** R$ 1.234,90;
 
 **Bitcoins vendidos:** 5.40369498
 
