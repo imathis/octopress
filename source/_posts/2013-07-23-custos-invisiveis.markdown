@@ -6,15 +6,17 @@ title: "Custos invisíveis"
 date: 2013-07-23 11:34
 comments: true
 categories: 
-   - TI
-   - projetos
-   - he:labs
-   
-
+  - TI
+  - gastos
+  - business
+  - helabs
   
-  ---
+---
+
 
 Em qualquer tipo de projeto ou operação existem os custos diretos e os indiretos. Os diretos são aqueles fáceis de se perceber, pois implicam na saída direta de dinheiro. Neste custo estão incluídos o pagamento de uma equipe, a compra de equipamentos, a conta de luz, o gasto com servidores, entre outros.
+
+<!--more-->
 
 Reduzir os custos diretos, dependendo do caso, chamados também de custos fixos. São os que almejam os gerentes de projetos, _termo que não gostamos na HE:labs_, mas que é utilizado universalmente no ambiente de TI corporativo.
 
