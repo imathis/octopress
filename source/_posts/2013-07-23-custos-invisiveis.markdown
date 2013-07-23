@@ -26,11 +26,11 @@ Contudo nem sempre reduzir os custos diretos é bom. Deve ser avaliado um contex
 
 Vou analisar o caso da hospedagem dos aplicativos que desenvolvemos:
 
-Na HE:labs, nós recomendamos enfaticamente a utilização do Heroku[http://heroku.com/] como plataforma de hospedagem para todos os nossos clientes, incluindo grandes clientes corporativos. Todos utilizam, sem exceção.
+Na HE:labs, nós recomendamos enfaticamente a utilização do [Heroku](http://heroku.com/) como plataforma de hospedagem para todos os nossos clientes, incluindo grandes clientes corporativos. Todos utilizam, sem exceção.
 
 O motivo é bem simples: apesar do custo direto ser relativamente alto se comparado com outros serviços de hospedagem, os custos indiretos são de longe os mais baixos existentes hoje e com vantagens técnicas diretas bem maiores.
 
-Usando o Heroku como plataforma de hospedagem, a equipe está sempre livre para criar a maior quantidade de funcionalidades. E também, de se aproveitar de recursos avançados como ElasticSearch, memcached, websocket, entre muitos outros addons[https://addons.heroku.com/], sem ter que se preocupar em como o Heroku vai fazer para disponibilizar aquele serviço.
+Usando o Heroku como plataforma de hospedagem, a equipe está sempre livre para criar a maior quantidade de funcionalidades. E também, de se aproveitar de recursos avançados como ElasticSearch, memcached, websocket, entre muitos outros [addons](https://addons.heroku.com/), sem ter que se preocupar em como o Heroku vai fazer para disponibilizar aquele serviço.
 
 Outras vantagens de se utilizar o Heroku inclui: elasticidade imediata, alta disponibilidade e imunidade a erosão. Todos estes tópicos são muito relevantes nos dias atuais.
 
