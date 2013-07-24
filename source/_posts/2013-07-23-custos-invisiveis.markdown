@@ -10,6 +10,9 @@ categories:
   - gastos
   - business
   - helabs
+  - heroku
+  - continuous integration
+  - continuous deployment
   
 ---
 
