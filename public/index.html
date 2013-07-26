@@ -9,8 +9,22 @@
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="I started using MongoDB at Gogobot a little while ago.
-While using it, I encountered some problems, but for the most part, things went pretty smooth &hellip;">
+  <meta name="description" content="Usually, when I have to do something in my code, I add a TODO comment (and forget about it). For example 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+class &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +92,112 @@ While using it, I encountered some problems, but for the most part, things went 
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/26/a-better-todo-comment-for-your-code/">Better TODO Comment for Your Code</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-26T14:38:00+03:00" pubdate data-updated="true">Jul 26<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/07/26/a-better-todo-comment-for-your-code/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Usually, when I have to do something in my code, I add a TODO comment (and forget about it).</p>
+
+<p>For example</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">UserThank</span>
+</span><span class='line'>  <span class="k">module</span> <span class="nn">Scores</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">_score</span>
+</span><span class='line'>      <span class="k">return</span> <span class="no">Scoring</span><span class="o">::</span><span class="no">UserLeaderboard</span><span class="o">::</span><span class="no">WEIGHTS</span><span class="o">[</span><span class="ss">:thanks</span><span class="o">]</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="c1"># TODO: Should this be the user attached to the activity or should this be the thanked user?</span>
+</span><span class='line'>   <span class="c1"># Ask product and change the code</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">_receiver</span>
+</span><span class='line'>      <span class="o">[</span><span class="nb">self</span><span class="o">.</span><span class="n">user</span><span class="o">]</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I have the shortcuts to show all TODO in vim, but it&#8217;s clearly not in my muscle memory and not in any kind of memory, natural or computerized, I just don&#8217;t do it enough, so it adds up and I feel bad about it.</p>
+
+<p>Today, while coding I encountered this case, where clearly it&#8217;s not just a simple thing, it&#8217;s not just something I as an engineer care about, it&#8217;s a product related thing and affects core user experience.</p>
+
+<p>So, I think I found a better way to actually make sure I DO my TODO.</p>
+
+<p>I thought to myself, what do I notice every single time, I never overlook…</p>
+
+<p>The answer was clear, tests, if a test fails I will never overlook it, will never deploy if a single test fails, same goes for the rest of the team.</p>
+
+<p>so here&#8217;s the solution</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">context</span> <span class="s2">&quot;User Thank&quot;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">it</span> <span class="s2">&quot;should score the user&quot;</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">pending</span> <span class="s2">&quot;This is pending some investigation on the product side, right now I will fail it&quot;</span> <span class="k">do</span>
+</span><span class='line'>      <span class="kp">true</span><span class="o">.</span><span class="n">should</span> <span class="n">be_true</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I make use of a super useful Rspec feature, where you pass false or an exception into a pending block, it fails the spec.</p>
+
+<p>I just describe the problem in detail, and that&#8217;s it, this is a piece of code that will be dealt with, before deploy.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1272,57 +1392,6 @@ In a vim session I mapped a key like this</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux/">Copy All Files From a Folder Into a Folder Without the Confirmation on Linux</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-31T18:17:00+03:00" pubdate data-updated="true">Jul 31<span>st</span>, 2012</time>
-        
-         | <a href="/blog/2012/07/31/copy-all-files-from-a-folder-into-a-folder-without-the-confirmation-on-linux/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>As a developer, there are things that never mind how many times you&#8217;ll do them, you will never ever remember how to do it exactly without googling for a couple of minutes or looking through the last executed list of commands on the terminal.</p>
-
-<p>For me, one of those things is how to copy all files and folders from source to destination with automatic reply yes to overwrite requests.</p>
-
-<p>Here&#8217;s how you do it</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>cp -apRv &lt;source_folder&gt;/* &lt;dest_folder&gt;/ --reply<span class="o">=</span>yes
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Enjoy!</p>
-
-<p>And #notetoself, no need to google anymore, find it on my blog ;)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1344,6 +1413,10 @@ In a vim session I mapped a key like this</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/26/a-better-todo-comment-for-your-code/">Better TODO comment for your code</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid/">DO NOT use the callbacks that require persistence in Mongoid</a>
       </li>
     
@@ -1357,10 +1430,6 @@ In a vim session I mapped a key like this</p>
     
       <li class="post">
         <a href="/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works/">RailsConf 2012 talk - How Gogobot works</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/">organizing your specs into groups and running them separately</a>
       </li>
     
   </ul>

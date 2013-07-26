@@ -5,11 +5,26 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: MongoDB - Avi Tzurel</title>
+  <title>Better TODO comment for your code - Avi Tzurel</title>
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="Category: MongoDB">
+  <meta name="description" content="Usually, when I have to do something in my code, I add a TODO comment (and forget about it). For example 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+class &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +33,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avi.ioblog/categories/mongodb/">
+  <link rel="canonical" href="http://avi.io/blog/2013/07/26/a-better-todo-comment-for-your-code/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -76,50 +91,163 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: MongoDB</h1>
+    
+      <h1 class="entry-title">Better TODO Comment for Your Code</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-26T14:38:00+03:00" pubdate data-updated="true">Jul 26<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>Usually, when I have to do something in my code, I add a TODO comment (and forget about it).</p>
 
-  
-  <h2>2013</h2>
+<p>For example</p>
 
-<article>
-  
-<h1><a href="/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid/">DO NOT use the callbacks that require persistence in Mongoid</a></h1>
-<time datetime="2013-02-19T22:10:00+02:00" pubdate><span class='month'>Feb</span> <span class='day'>19</span> <span class='year'>2013</span></time>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">UserThank</span>
+</span><span class='line'>  <span class="k">module</span> <span class="nn">Scores</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">_score</span>
+</span><span class='line'>      <span class="k">return</span> <span class="no">Scoring</span><span class="o">::</span><span class="no">UserLeaderboard</span><span class="o">::</span><span class="no">WEIGHTS</span><span class="o">[</span><span class="ss">:thanks</span><span class="o">]</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="c1"># TODO: Should this be the user attached to the activity or should this be the thanked user?</span>
+</span><span class='line'>   <span class="c1"># Ask product and change the code</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">_receiver</span>
+</span><span class='line'>      <span class="o">[</span><span class="nb">self</span><span class="o">.</span><span class="n">user</span><span class="o">]</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/mongodb/'>MongoDB</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-on-rails/'>Ruby on rails</a></span>
-</footer>
+
+<p>I have the shortcuts to show all TODO in vim, but it&#8217;s clearly not in my muscle memory and not in any kind of memory, natural or computerized, I just don&#8217;t do it enough, so it adds up and I feel bad about it.</p>
+
+<p>Today, while coding I encountered this case, where clearly it&#8217;s not just a simple thing, it&#8217;s not just something I as an engineer care about, it&#8217;s a product related thing and affects core user experience.</p>
+
+<p>So, I think I found a better way to actually make sure I DO my TODO.</p>
+
+<p>I thought to myself, what do I notice every single time, I never overlook…</p>
+
+<p>The answer was clear, tests, if a test fails I will never overlook it, will never deploy if a single test fails, same goes for the rest of the team.</p>
+
+<p>so here&#8217;s the solution</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">context</span> <span class="s2">&quot;User Thank&quot;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">it</span> <span class="s2">&quot;should score the user&quot;</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">pending</span> <span class="s2">&quot;This is pending some investigation on the product side, right now I will fail it&quot;</span> <span class="k">do</span>
+</span><span class='line'>      <span class="kp">true</span><span class="o">.</span><span class="n">should</span> <span class="n">be_true</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<p>I make use of a super useful Rspec feature, where you pass false or an exception into a pending block, it fails the spec.</p>
 
-
-
-<article>
-  
-<h1><a href="/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">Problems with Mongoid and Sidekiq- Brainstorming</a></h1>
-<time datetime="2013-01-30T20:13:00+02:00" pubdate><span class='month'>Jan</span> <span class='day'>30</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/mongodb/'>MongoDB</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-on-rails/'>Ruby on rails</a></span>
-</footer>
-
-
-</article>
-
+<p>I just describe the problem in detail, and that&#8217;s it, this is a piece of code that will be dealt with, before deploy.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Avi Tzurel</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-26T14:38:00+03:00" pubdate data-updated="true">Jul 26<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/general/'>general</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2013/07/26/a-better-todo-comment-for-your-code/" data-via="KensoDev" data-counturl="http://avi.io/blog/2013/07/26/a-better-todo-comment-for-your-code/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/02/19/do-not-use-the-callbacks-that-require-persistence-in-mongoid/" title="Previous Post: DO NOT use the callbacks that require persistence in Mongoid">&laquo; DO NOT use the callbacks that require persistence in Mongoid</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -267,7 +395,10 @@
       var disqus_shortname = 'avi-io';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://avi.io/blog/2013/07/26/a-better-todo-comment-for-your-code/';
+        var disqus_url = 'http://avi.io/blog/2013/07/26/a-better-todo-comment-for-your-code/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

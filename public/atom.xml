@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Tzurel]]></title>
   <link href="http://avi.io/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2013-07-26T14:37:36+03:00</updated>
+  <updated>2013-07-26T14:47:59+03:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,83 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Better TODO comment for your code]]></title>
+    <link href="http://avi.io/blog/2013/07/26/a-better-todo-comment-for-your-code/"/>
+    <updated>2013-07-26T14:38:00+03:00</updated>
+    <id>http://avi.io/blog/2013/07/26/a-better-todo-comment-for-your-code</id>
+    <content type="html"><![CDATA[<p>Usually, when I have to do something in my code, I add a TODO comment (and forget about it).</p>
+
+<p>For example</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">UserThank</span>
+</span><span class='line'>  <span class="k">module</span> <span class="nn">Scores</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">_score</span>
+</span><span class='line'>      <span class="k">return</span> <span class="no">Scoring</span><span class="o">::</span><span class="no">UserLeaderboard</span><span class="o">::</span><span class="no">WEIGHTS</span><span class="o">[</span><span class="ss">:thanks</span><span class="o">]</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="c1"># TODO: Should this be the user attached to the activity or should this be the thanked user?</span>
+</span><span class='line'>   <span class="c1"># Ask product and change the code</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">_receiver</span>
+</span><span class='line'>      <span class="o">[</span><span class="nb">self</span><span class="o">.</span><span class="n">user</span><span class="o">]</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I have the shortcuts to show all TODO in vim, but it&#8217;s clearly not in my muscle memory and not in any kind of memory, natural or computerized, I just don&#8217;t do it enough, so it adds up and I feel bad about it.</p>
+
+<p>Today, while coding I encountered this case, where clearly it&#8217;s not just a simple thing, it&#8217;s not just something I as an engineer care about, it&#8217;s a product related thing and affects core user experience.</p>
+
+<p>So, I think I found a better way to actually make sure I DO my TODO.</p>
+
+<p>I thought to myself, what do I notice every single time, I never overlook…</p>
+
+<p>The answer was clear, tests, if a test fails I will never overlook it, will never deploy if a single test fails, same goes for the rest of the team.</p>
+
+<p>so here&#8217;s the solution</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">context</span> <span class="s2">&quot;User Thank&quot;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">it</span> <span class="s2">&quot;should score the user&quot;</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">pending</span> <span class="s2">&quot;This is pending some investigation on the product side, right now I will fail it&quot;</span> <span class="k">do</span>
+</span><span class='line'>      <span class="kp">true</span><span class="o">.</span><span class="n">should</span> <span class="n">be_true</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I make use of a super useful Rspec feature, where you pass false or an exception into a pending block, it fails the spec.</p>
+
+<p>I just describe the problem in detail, and that&#8217;s it, this is a piece of code that will be dealt with, before deploy.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[DO NOT use the callbacks that require persistence in Mongoid]]></title>
