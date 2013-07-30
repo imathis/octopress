@@ -90,15 +90,11 @@ module Jekyll
     #  +category+     is the category currently being processed.
     def write_category_index(category_dir, category)
       index = CategoryIndex.new(self, self.source, category_dir, category)
-      index.render(self.layouts, site_payload)
-      index.write(self.dest)
       # Record the fact that this page has been added, otherwise Site::cleanup will remove it.
       self.pages << index
 
       # Create an Atom-feed for each index.
       feed = CategoryFeed.new(self, self.source, category_dir, category)
-      feed.render(self.layouts, site_payload)
-      feed.write(self.dest)
       # Record the fact that this page has been added, otherwise Site::cleanup will remove it.
       self.pages << feed
     end
