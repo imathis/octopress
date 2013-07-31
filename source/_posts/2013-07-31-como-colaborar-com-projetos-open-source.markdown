@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Como colaborar com projetos open-source"
-date: 2013-07-31 05:24
+date: 2013-07-31 15:20
 comments: true
 author: Pedro Nascimento
 categories: 
