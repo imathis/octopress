@@ -28,7 +28,7 @@ Um simples "isso pode ser fechado?" também ajuda.
 
 ###Faça backports e publique-os
 
-Às vezes você se encontra em um projeto com dependências mais antigas, onde precisa resolver certos problemas que já foram resolvidos para versões mais recentes e precisa fazer o backport das soluções. Após consertar para seu projeto interno, contribua de volta. Existem inúmeros exemplos:
+Às vezes você se encontra em um projeto com dependências mais antigas, onde precisa resolver certos problemas que já foram anteriormente resolvidos para versões mais recentes. E ainda, necessita fazer o backport das soluções. Após consertar para seu projeto interno, contribua de volta. Existem inúmeros exemplos:
 
 * [lunks/kiqstand](https://github.com/lunks/kiqstand)
 * [grosser/rails2_asset_pipeline](https://github.com/grosser/rails2_asset_pipeline)
