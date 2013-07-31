@@ -10,7 +10,7 @@ categories:
 
 ---
 
-Atualmente, quase todas as empresas de desenvolvimento de software usam algum projeto open-source no seu dia a dia. Nós da HE:labs acreditamos que faz parte do nosso trabalho contribuir de volta. Isto é, colaborar com projetos open-source e melhorar o conteúdo disponível para a comunidade. Mas muitas vezes, desenvolvedores e designers ficam perdidos em como contribuir. Vou tentar listar algumas formas produtivas de fazê-lo, seja em projetos grandes, como o [Rails](https://github.com/rails/rails), ou mesmo em projetos menores, que por ventura você tenha utilizado e/ou tenha interesse em contribuir.
+Atualmente, quase todas as empresas de desenvolvimento de software usam algum projeto open-source no seu dia a dia. Nós da HE:labs acreditamos que faz parte do nosso trabalho contribuir de volta. Isto é, colaborar com projetos open-source e melhorar o conteúdo disponível para a comunidade. Mas muitas vezes, desenvolvedores e designers ficam perdidos em como contribuir. Vou tentar listar algumas formas produtivas de fazê-lo, seja em projetos grandes, como o [Rails](https://github.com/rails/rails), ou mesmo em projetos menores, que, porventura, você tenha utilizado e/ou tenha interesse em contribuir.
 
 <!--more-->
 
