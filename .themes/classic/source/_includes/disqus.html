@@ -2,6 +2,9 @@
 {% if site.disqus_short_name and page.comments != false %}
 <script type="text/javascript">
       var disqus_shortname = '{{ site.disqus_short_name }}';
+      var disqus_config = function () { 
+        this.language = '{{ site.disqus_language }}'';
+      };
       {% if page.comments == true %}
         {% comment %} `page.comments` can be only be set to true on pages/posts, so we embed the comments here. {% endcomment %}
         // var disqus_developer = 1;
