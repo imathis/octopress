@@ -1,0 +1,79 @@
+---
+published: false
+author: Aluísio Azevedo
+layout: post
+title: "Lean UX"
+date: 2013-08-05 10:45
+comments: true
+categories:
+  - design
+  - lean
+  - ux
+  - agile
+  - aluisio azevedo
+---
+
+
+Hoje em dia com ciclos de desenvolvimento cada vez mais curtos, novos softwares e novas features são lançados cada vez mais rápido no mercado. Para se destacar com o seu produto neste meio, é preciso não só entregar software funcionando, mas também manter a qualidade da esperiência de uso dele.
+
+Dentro dessa nova perspectiva, vem surgindo os conceitos de Lean UX, onde através da combinação de metodologias e práticas do Len Startup e Design Thinking, os processos de projetos do design de experiencia tradicional são aplicados aos ciclos de desenvilvimento agil.
+
+<!-- more -->
+
+
+Ao invés de metodos em cascata, aonde o processo de design é fragmentado em várias etapas que atuam quase de forma independende cada uma, o processo é aplicado dentro da realidade de ciclos menores de trabalho, mais iterativos, e com feedbacks constantes entre todos os membros da equipe e também os usuários do produto.
+
+
+
+Alguns dos principais pontos são:
+
+
+
+### Participação de todos
+
+Todos os envolvidos no projeto devem atuar nas decisões e participar das reuniões para definição de escopo e decisões de design. É muito importante a troca de experiencias e colaboração entre todos os membros do time, aumentando o poder da equipe em melhorar o produto com diferentes pontos de vista.
+
+
+### Manter o foco na solução do problema
+
+Ao invés de sair implementando features levantadas pelo seu cliente, você deve ter em mente que por trá disso existe um problema a ser resolvido. O papel do time é entender este problema e resolve-lo da melhor forma possível, economizando o máximo de recursos que puder.
+
+
+### Conhecimento compartilhado
+
+É importante que o conhecimento do projeto esteja sendo compartilhado e absorvido por todos na equipe. Falhas em comunicação podem acarretar em iterações perdidas. Todos devem manter o conhecimento geral do produto, das condições de mercado que ele está inserido, dos tipos de usuários entre outras características. Quanto mais colaborativo e constante é este processo, menos tempo é perdido com documentações e guidelines de design desnecessários.
+
+
+### Software on-line > documentação
+
+Documentos não vão resolver os problemas dos usuários, software funcionando sim. Por isso é importante manter o time afastado das documentações e focado nos resultados. Medir o impacto de novas features para os usuários e manter a melhor experiencia de uso possível é mais relevante do que gerar documentos que vão ficar perdidos com o tempo.
+
+
+### É permitido falhar
+
+Permissão para falhar gera uma cultura de experimentação e com isso um ambiente mais criativido e inovador. É essencial que estes ambientes aconteçam em um projeto de ux, para que a equipe consiga experiementar novas soluções, aprender com as falhas e contruir produtos melhores a partir dessas experiencias.
+
+
+### Pesquisas contínuas
+
+Entender o que pensam, como agem e como estão usando o produto que você está desenvolvendo são tarefas que devem ser realizadas regularmente durante o processo de desenvolvimento. Porém o mais importante, é que neste processo, todo o time esteja envolvido para que todos possam criar empatia pelos problemnas que os usuários estão enfentando e possam trabalhar com isso em mente nas melhorias do software.
+
+
+
+
+
+Adotando estas práticas é possível mudar o mindset sobre design, ao invés de documentos, pode-se conversar em cima do que funcionou ou não dentro de uma implementação e validação. O livro [Lean UX - Applying Lean Principles to Improve User Experience](http://www.leanuxbook.com/), escrito pelo designer [Jeff Gothelf](http://www.jeffgothelf.com/blog/), é uma excelente fonte de recursos para entender melhor e conseguir por em prática metodologias que vão melhorar o seu processo como designer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
