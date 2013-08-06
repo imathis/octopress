@@ -2,6 +2,9 @@ require "rubygems"
 require "bundler/setup"
 require "stringex"
 
+# Needed to print out description of rake tasks for rake >= 0.9.2.2
+Rake::TaskManager.record_task_metadata = true
+
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 ssh_user       = "user@domain.com"
@@ -386,7 +389,15 @@ def ask(message, valid_options)
 end
 
 desc "list tasks"
-task :list do
-  puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
-  puts "(type rake -T for more detail)\n\n"
+task :list, :verbose do |t, args|
+  args.with_defaults(:verbose => false)
+  if not args.verbose
+    puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
+    puts "(type 'rake list[true]' for more details)"
+  else
+    puts "Tasks: " 
+    (Rake::Task.tasks - [Rake::Task[:list]]).each do |task|
+      puts "  '#{task.name}' - #{task.full_comment}"
+    end
+  end
 end
