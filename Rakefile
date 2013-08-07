@@ -389,15 +389,34 @@ def ask(message, valid_options)
 end
 
 desc "list tasks"
-task :list, :verbose do |t, args|
-  args.with_defaults(:verbose => false)
-  if not args.verbose
-    puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
-    puts "(type 'rake list[true]' for more details)"
-  else
-    puts "Tasks: " 
-    (Rake::Task.tasks - [Rake::Task[:list]]).each do |task|
-      puts "  '#{task.name}' - #{task.full_comment}"
-    end
+task :list do
+  tasks_excl_list = Rake::Task.tasks.reject { |task| task.name == "list" or task.name == "list_long" }
+
+  puts "Tasks: #{tasks_excl_list.join(', ')}"
+  puts "(type 'rake -T <task>' to show descriptions on a single task)"
+  puts "(type 'rake list_long' to show a list of all tasks with their descriptions)"
+end
+
+desc "list tasks with descriptions"
+task :list_long do 
+  tasks_excl_list = Rake::Task.tasks.reject { |task| task.name == "list" or task.name == "list_long" }
+  
+  # The longest task name
+  maxlen = tasks_excl_list.map { |task| task.name.length }.max
+  # Limit of chars to print for description
+  desc_lim = 80 
+
+  # Create pairs of left-justified, tabbed task names and truncated comments
+  tasks_to_print = tasks_excl_list.map { |task| 
+      [
+          "  '#{task.name}'".ljust(maxlen + 4), 
+          if task.full_comment.length <= desc_lim then task.full_comment else task.full_comment[0..desc_lim-4] + "..." end
+      ]
+  }
+
+  puts "Tasks: " 
+  tasks_to_print.each do |name, desc|
+    puts "#{name} - #{desc}"
   end
+  puts "(type 'rake -T <task>' to show full descriptions on a single task)"
 end
