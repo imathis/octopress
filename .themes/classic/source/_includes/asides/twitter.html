@@ -2,14 +2,9 @@
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating...</li>
+    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/{{ site.twitter_user }}"  data-widget-id="{{ site.twitter_widget_id }}"  data-link-color="#1863a1" data-tweet-limit="{{ site.twitter_tweet_count }}" data-chrome="noheader nofooter transparent noscrollbar">Tweets by @{{ site.twitter_user }}</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("{{site.twitter_user}}", {{site.twitter_tweet_count}}, {{site.twitter_show_replies}});
-    });
-  </script>
-  <script src="{{ root_url }}/javascripts/twitter.js" type="text/javascript"> </script>
   {% if site.twitter_follow_button %}
     <a href="http://twitter.com/{{ site.twitter_user }}" class="twitter-follow-button" data-show-count="{{ site.twitter_show_follower_count }}">Follow @{{ site.twitter_user }}</a>
   {% else %}
