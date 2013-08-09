@@ -3,9 +3,6 @@ module Jekyll
   # Extended plugin type that allows the plugin
   # to be called on varous callback methods.
   #
-  # Examples:
-  # https://github.com/tedkulp/octopress/blob/master/plugins/post_metaweblog.rb
-  # https://github.com/tedkulp/octopress/blob/master/plugins/post_twitter.rb
   class PostFilter < Plugin
 
     #Called before post is sent to the converter. Allows

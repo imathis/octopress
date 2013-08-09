@@ -1,5 +1,10 @@
-module Jekyll
+require 'colorator'
+begin
   require 'haml'
+rescue LoadError
+end
+
+module Jekyll
   class HamlConverter < Converter
     safe true
     priority :low
@@ -17,7 +22,7 @@ module Jekyll
         engine = Haml::Engine.new(content)
         engine.render
       rescue StandardError => e
-          puts "!!! HAML Error: " + e.message
+        $stderr.puts ("!!! HAML Error: " + e.message).red
       end
     end
   end

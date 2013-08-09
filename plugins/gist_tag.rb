@@ -1,5 +1,6 @@
 # A Liquid tag for Jekyll sites that allows embedding Gists and showing code for non-JavaScript enabled browsers and readers.
-# by: Brandon Tilly
+# Written by: Brandon Mathis, Parker Moore
+# Inspired by: Brandon Tilly
 # Source URL: https://gist.github.com/1027674
 # Post http://brandontilley.com/2011/01/31/gist-tag-for-jekyll.html
 #
@@ -8,66 +9,75 @@
 require 'cgi'
 require 'digest/md5'
 require 'net/https'
+require 'fileutils'
 require 'uri'
+require './plugins/pygments_code'
 
 module Jekyll
   class GistTag < Liquid::Tag
-    def initialize(tag_name, text, token)
+    include HighlightCode
+    def initialize(tag_name, markup, token)
       super
-      @text           = text
       @cache_disabled = false
+      @original_markup = markup
       @cache_folder   = File.expand_path "../.gist-cache", File.dirname(__FILE__)
+
+      opts = parse_markup(markup)
+      @markup = clean_markup(markup)
+
+      @options = {
+        lang:      opts[:lang],
+        title:     opts[:title],
+        lineos:    opts[:lineos],
+        marks:     opts[:marks],
+        url:       opts[:url],
+        link_text: opts[:link_text] || 'Gist page',
+        start:     opts[:start],
+        end:       opts[:end]
+      }
+
       FileUtils.mkdir_p @cache_folder
     end
 
     def render(context)
-      if parts = @text.match(/([a-zA-Z\d]*) (.*)/)
+      if parts = @markup.match(/([\d]*) (.*)/)
         gist, file = parts[1].strip, parts[2].strip
-        script_url = script_url_for gist, file
-        code       = get_cached_gist(gist, file) || get_gist_from_web(gist, file)
-        html_output_for script_url, code
+
+        @options[:title]     ||= file.empty? ? "Gist: #{gist}" : file
+        @options[:url]       ||= "https://gist.github.com/#{gist}"
+        @options[:lang]      ||= file.empty? ? @options[:lang] || '' : file.split('.')[-1]
+        @options[:no_cache]    = @cache_disabled
+        @options[:cache_path]  = @cache_disabled ? nil : get_cache_path(@cache_folder, get_cache_file(gist, file), @markup + @options.to_s)
+
+        cache = read_cache(@options[:cache_path])
+
+        unless cache
+          code = get_gist_from_web(gist, file)
+          code = get_range(code, @options[:start], @options[:end])
+          begin
+            code = highlight(code, @options)
+          rescue MentosError => e
+            markup = "{% gist #{@original_markup} %}"
+            highlight_failed(e, "{% gist gist_id [filename] [lang:language] [title:title] [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, file)
+          end
+        end
+        code || cache
       else
-        ""
+        "Gist formatting error, format should be {% gist gist_id [filename] %}"
       end
-    end
-
-    def html_output_for(script_url, code)
-      code = CGI.escapeHTML code
-      <<-HTML
-<div><script src='#{script_url}'></script>
-<noscript><pre><code>#{code}</code></pre></noscript></div>
-      HTML
-    end
-
-    def script_url_for(gist_id, filename)
-      url = "https://gist.github.com/#{gist_id}.js"
-      url = "#{url}?file=#{filename}" unless filename.nil? or filename.empty?
-      url
     end
 
     def get_gist_url_for(gist, file)
       "https://raw.github.com/gist/#{gist}/#{file}"
     end
 
-    def cache(gist, file, data)
-      cache_file = get_cache_file_for gist, file
-      File.open(cache_file, "w") do |io|
-        io.write data
-      end
-    end
-
-    def get_cached_gist(gist, file)
-      return nil if @cache_disabled
-      cache_file = get_cache_file_for gist, file
-      File.read cache_file if File.exist? cache_file
-    end
-
-    def get_cache_file_for(gist, file)
+    def get_cache_file(gist, file)
       bad_chars = /[^a-zA-Z0-9\-_.]/
       gist      = gist.gsub bad_chars, ''
       file      = file.gsub bad_chars, ''
-      md5       = Digest::MD5.hexdigest "#{gist}-#{file}"
-      File.join @cache_folder, "#{gist}-#{file}-#{md5}.cache"
+      name  = gist
+      name += "-#{file}" unless file.empty?
+      name
     end
 
     def get_gist_from_web(gist, file)
@@ -84,17 +94,12 @@ module Jekyll
       https.verify_mode = OpenSSL::SSL::VERIFY_NONE
       request           = Net::HTTP::Get.new raw_uri.request_uri
       data              = https.request request
-      if data.code.to_i != 200
-        raise RuntimeError, "Gist replied with #{data.code} for #{gist_url}"
-      end
-      data              = data.body
-      cache gist, file, data unless @cache_disabled
-      data
+      data.body.to_s
     end
   end
 
   class GistTagNoCache < GistTag
-    def initialize(tag_name, text, token)
+    def initialize(tag_name, markup, token)
       super
       @cache_disabled = true
     end
