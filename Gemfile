@@ -11,7 +11,7 @@ group :development do
   gem 'rubypants', '~> 0.2.0'
   gem 'stringex', '~> 1.4.0'
 
-  gem 'guard-jekyll-plus', '~> 1.4.5'
+  gem 'guard-jekyll-plus', '~> 1.4.6'
   gem 'guard-compass', '~> 0.0.8'
   gem 'rb-inotify', '~> 0.9.0'
   gem 'rb-fsevent', '~> 0.9.3'
