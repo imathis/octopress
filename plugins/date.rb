@@ -45,3 +45,42 @@ module Octopress
   end
 end
 
+module Jekyll
+  class Post
+    include Octopress::Date
+
+    # Copy the #initialize method to #old_initialize, so we can redefine #initialize
+    #
+    alias_method :old_initialize, :initialize
+    attr_accessor :date_formatted, :updated, :updated_formatted
+
+    def initialize(site, source, dir, name)
+      old_initialize(site, source, dir, name)
+      format = self.site.config['date_format']
+      self.date_formatted = format_date(self.date, format) unless self.date.nil?
+      unless self.updated.nil?
+        self.updated = Time.parse(self.updated.to_s)
+        self.updated_formatted = format_date(self.updated, format)
+      end
+    end
+  end
+
+  class Page
+    include Octopress::Date
+
+    # Copy the #initialize method to #old_initialize, so we can redefine #initialize
+    #
+    alias_method :old_initialize, :initialize
+    attr_accessor :date_formatted, :updated, :updated_formatted
+
+    def initialize(site, source, dir, name)
+      old_initialize(site, source, dir, name)
+      format = self.site.config['date_format']
+      self.date_formatted = format_date(self.date, format) unless self.data['date'].nil?
+      unless self.updated.nil?
+        self.updated = Time.parse(self.updated.to_s)
+        self.updated_formatted = format_date(self.updated, format)
+      end
+    end
+  end
+end
