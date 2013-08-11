@@ -59,8 +59,8 @@ module Jekyll
       format = self.site.config['date_format']
       self.data['date_formatted'] = format_date(self.date, format) unless self.data['date'].nil?
       unless self.data['updated'].nil?
-        self.updated = Time.parse(self.data['updated'].to_s)
-        self.data['updated_formatted'] = format_date(self.updated, format)
+        self.data['updated'] = Time.parse(self.data['updated'].to_s)
+        self.data['updated_formatted'] = format_date(self.data['updated'], format)
       end
     end
   end
@@ -78,8 +78,8 @@ module Jekyll
       format = self.site.config['date_format']
       self.data['date_formatted'] = format_date(self.date, format) unless self.data['date'].nil?
       unless self.data['updated'].nil?
-        self.updated = Time.parse(self.data['updated'].to_s)
-        self.data['updated_formatted'] = format_date(self.updated, format)
+        self.data['updated'] = Time.parse(self.data['updated'].to_s)
+        self.data['updated_formatted'] = format_date(self.data['updated'], format)
       end
     end
   end
