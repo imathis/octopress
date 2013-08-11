@@ -27,24 +27,17 @@ require './plugins/pygments_code'
 module Jekyll
 
   class IncludeCodeTag < Liquid::Tag
-    include HighlightCode
     def initialize(tag_name, markup, tokens)
       @file = nil
       @title_old = nil
       @original_markup = markup
 
-      opts     = parse_markup(markup)
-      @options = {
-        lang:      opts[:lang],
-        title:     opts[:title],
-        lineos:    opts[:lineos],
-        marks:     opts[:marks],
-        url:       opts[:url],
+      opts = Octopress::Pygments.parse_markup(markup)
+      @options = opts.merge({
         link_text: opts[:link_text] || 'view raw',
-        start:     opts[:start]     || 1,
-        end:       opts[:end]
-      }
-      markup     = clean_markup(markup)
+        start:     opts[:start]     || 1
+      })
+      markup = Octopress::Pygments.clean_markup(markup)
 
       if markup.strip =~ /(^\S*\.\S+) *(.+)?/i
         @file = $1
@@ -88,10 +81,10 @@ module Jekyll
         code = filepath.read
         code = get_range(code, @options[:start], @options[:end])
         begin
-          highlight(code, @options)
+          Octopress::Pygments.highlight(code, @options)
         rescue MentosError => e
           markup = "{% include_code #{@original_markup} %}"
-          highlight_failed(e, "{% include_code [title] [lang:language] path/to/file [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, filepath)
+          Octopress::Pygments.highlight_failed(e, "{% include_code [title] [lang:language] path/to/file [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, filepath)
         end
       end
     end

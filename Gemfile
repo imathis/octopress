@@ -16,6 +16,8 @@ group :development do
   gem 'rb-inotify', '~> 0.9.0'
   gem 'rb-fsevent', '~> 0.9.3'
   gem 'rb-fchange', '~> 0.0.6'
+
+  gem 'jekyll-page-hooks'
 end
 
 gem 'rack', '~> 1.5.2'

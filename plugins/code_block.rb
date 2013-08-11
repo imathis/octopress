@@ -42,52 +42,46 @@
 # </figure>
 #
 require './plugins/pygments_code'
-require './plugins/raw'
 
 module Jekyll
 
   class CodeBlock < Liquid::Block
-    include HighlightCode
     TitleUrlLinkText = /(\S[\S\s]*)\s+(https?:\/\/\S+|\/\S+)\s*(.+)?/i
     Title = /(\S[\S\s]*)/
     def initialize(tag_name, markup, tokens)
-      @original_markup = markup
-      opts     = parse_markup(markup)
-      @options = {
-        lang:      opts[:lang],
-        title:     opts[:title],
-        lineos:    opts[:lineos],
-        marks:     opts[:marks],
-        url:       opts[:url],
-        link_text: opts[:link_text] || 'link',
-        start:     opts[:start]     || 1,
-      }
-      markup     = clean_markup(markup)
 
-      if markup =~ TitleUrlLinkText
-        @options[:title]     ||= $1
-        @options[:url]       ||= $2
-        @options[:link_text] ||= $3
-      elsif markup =~ Title
-        @options[:title]     ||= $1
+      @markup = markup
+      clean_markup = Octopress::Pygments.clean_markup(markup)
+      if clean_markup =~ TitleUrlLinkText
+        @options = {
+          title:     $1,
+          url:       $2,
+          link_text: $3
+        }
+      elsif clean_markup =~ Title
+        @options = { title: $1 }
       end
+
       # grab lang from filename in title
       if @options[:title] =~ /\S[\S\s]*\w+\.(\w+)/ && @options[:lang].nil?
-        @options[:lang]      ||= $1
+        @options[:lang] = $1
       end
+
+      @options = Octopress::Pygments.parse_markup(markup, @options)
+
       super
     end
 
     def render(context)
       begin
         code = super.strip
-        code = highlight(code, @options)
+        code = Octopress::Pygments.highlight(code, @options)
         code = context['pygments_prefix'] + code if context['pygments_prefix']
         code = code + context['pygments_suffix'] if context['pygments_suffix']
         code
       rescue MentosError => e
-        markup = "{% codeblock #{@original_markup} %}"
-        highlight_failed(e, "{% codeblock [lang:language] [title] [url] [link text] [start:#] [mark:#,#-#] [linenos:false] %}\ncode\n{% endcodeblock %}", markup, code)
+        markup = "{% codeblock #{@markup} %}"
+        Octopress::Pygments.highlight_failed(e, "{% codeblock [lang:language] [title] [url] [link text] [start:#] [mark:#,#-#] [linenos:false] %}\ncode\n{% endcodeblock %}", markup, code)
       end
     end
   end

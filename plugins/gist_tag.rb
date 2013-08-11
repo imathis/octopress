@@ -1,8 +1,5 @@
 # A Liquid tag for Jekyll sites that allows embedding Gists and showing code for non-JavaScript enabled browsers and readers.
 # Written by: Brandon Mathis, Parker Moore
-# Inspired by: Brandon Tilly
-# Source URL: https://gist.github.com/1027674
-# Post http://brandontilley.com/2011/01/31/gist-tag-for-jekyll.html
 #
 # Example usage: {% gist 1027674 gist_tag.rb %} //embeds a gist for this plugin
 
@@ -15,26 +12,18 @@ require './plugins/pygments_code'
 
 module Jekyll
   class GistTag < Liquid::Tag
-    include HighlightCode
     def initialize(tag_name, markup, token)
       super
       @cache_disabled = false
       @original_markup = markup
-      @cache_folder   = File.expand_path "../.gist-cache", File.dirname(__FILE__)
+      @cache_folder = File.expand_path "../.gist-cache", File.dirname(__FILE__)
 
-      opts = parse_markup(markup)
-      @markup = clean_markup(markup)
+      @options = Octopress::Pygments.parse_markup(markup, )
+      @markup = Octopress::Pygments.clean_markup(markup)
 
-      @options = {
-        lang:      opts[:lang],
-        title:     opts[:title],
-        lineos:    opts[:lineos],
-        marks:     opts[:marks],
-        url:       opts[:url],
-        link_text: opts[:link_text] || 'Gist page',
-        start:     opts[:start],
-        end:       opts[:end]
-      }
+      @options = opts.merge({
+        link_text: opts[:link_text] || 'Gist page'
+      })
 
       FileUtils.mkdir_p @cache_folder
     end
@@ -55,10 +44,10 @@ module Jekyll
           code = get_gist_from_web(gist, file)
           code = get_range(code, @options[:start], @options[:end])
           begin
-            code = highlight(code, @options)
+            code = Octopress::Pygments.highlight(code, @options)
           rescue MentosError => e
             markup = "{% gist #{@original_markup} %}"
-            highlight_failed(e, "{% gist gist_id [filename] [lang:language] [title:title] [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, file)
+            Octopress::Pygments.highlight_failed(e, "{% gist gist_id [filename] [lang:language] [title:title] [start:#] [end:#] [range:#-#] [mark:#,#-#] [linenos:false] %}", markup, code, file)
           end
         end
         code || cache
