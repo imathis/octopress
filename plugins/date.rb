@@ -52,7 +52,7 @@ module Jekyll
     # Copy the #initialize method to #old_initialize, so we can redefine #initialize
     #
     alias_method :old_initialize, :initialize
-    attr_accessor :date_formatted, :updated, :updated_formatted
+    attr_accessor :updated
 
     def initialize(site, source, dir, name)
       old_initialize(site, source, dir, name)
@@ -71,7 +71,7 @@ module Jekyll
     # Copy the #initialize method to #old_initialize, so we can redefine #initialize
     #
     alias_method :old_initialize, :initialize
-    attr_accessor :date_formatted, :updated, :updated_formatted
+    attr_accessor :updated
 
     def initialize(site, source, dir, name)
       old_initialize(site, source, dir, name)
