@@ -57,10 +57,10 @@ module Jekyll
     def initialize(site, source, dir, name)
       old_initialize(site, source, dir, name)
       format = self.site.config['date_format']
-      self.date_formatted = format_date(self.date, format) unless self.date.nil?
-      unless self.updated.nil?
-        self.updated = Time.parse(self.updated.to_s)
-        self.updated_formatted = format_date(self.updated, format)
+      self.data['date_formatted'] = format_date(self.date, format) unless self.data['date'].nil?
+      unless self.data['updated'].nil?
+        self.updated = Time.parse(self.data['updated'].to_s)
+        self.data['updated_formatted'] = format_date(self.updated, format)
       end
     end
   end
@@ -76,10 +76,10 @@ module Jekyll
     def initialize(site, source, dir, name)
       old_initialize(site, source, dir, name)
       format = self.site.config['date_format']
-      self.date_formatted = format_date(self.date, format) unless self.data['date'].nil?
-      unless self.updated.nil?
-        self.updated = Time.parse(self.updated.to_s)
-        self.updated_formatted = format_date(self.updated, format)
+      self.data['date_formatted'] = format_date(self.date, format) unless self.data['date'].nil?
+      unless self.data['updated'].nil?
+        self.updated = Time.parse(self.data['updated'].to_s)
+        self.data['updated_formatted'] = format_date(self.updated, format)
       end
     end
   end
