@@ -69,15 +69,19 @@
         <lastmod>2013-07-26T14:47:48+03:00</lastmod>
     </url>
     <url>
+        <loc>http://avi.io/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/</loc>
+        <lastmod>2013-08-14T17:46:20+03:00</lastmod>
+    </url>
+    <url>
         <loc>http://avi.io/about/</loc>
         <lastmod>2013-04-11T18:30:48+03:00</lastmod>
     </url>
     <url>
         <loc>http://avi.io/blog/archives/</loc>
-        <lastmod>2013-07-26T14:47:48+03:00</lastmod>
+        <lastmod>2013-08-14T17:46:20+03:00</lastmod>
     </url>
     <url>
         <loc>http://avi.io/</loc>
-        <lastmod>2013-07-26T14:47:48+03:00</lastmod>
+        <lastmod>2013-08-14T17:46:20+03:00</lastmod>
     </url>
 </urlset>

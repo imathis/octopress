@@ -9,22 +9,7 @@
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="Usually, when I have to do something in my code, I add a TODO comment (and forget about it). For example 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-class &hellip;">
+  <meta name="description" content="I have been working with Sidekiq for quite a while now, having many jobs per day working (multiple millions of jobs.) Sometimes, I queue up tasks to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +77,80 @@ class &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/">Move Jobs From One Queue to Another - Sidekiq</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-14T17:36:00+03:00" pubdate data-updated="true">Aug 14<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have been working with Sidekiq for quite a while now, having many jobs per day working (multiple millions of jobs.)</p>
+
+<p>Sometimes, I queue up tasks to a queue called <code>#{queue_name}_pending</code>, I do this so I can manage the load on the servers. (For example: Stop writing to Mongo, Stop importing contact etc&#8230;)</p>
+
+<p>This way, I can queue up many jobs, and I can move it to the real queue whenever I feel like it or whenever the problem is solved.</p>
+
+<p>I was looking for a way to move tasks from one queue to another.</p>
+
+<p>There&#8217;s nothing built into Sidekiq for this, but obviously, you can just use redis built in commands to do it.</p>
+
+<p>Here&#8217;s the code to do it</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">count_block</span> <span class="o">=</span> <span class="nb">proc</span><span class="p">{</span> <span class="no">Sidekiq</span><span class="o">.</span><span class="n">redis</span> <span class="k">do</span> <span class="o">|</span><span class="n">conn</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">conn</span><span class="o">.</span><span class="n">llen</span><span class="p">(</span><span class="s2">&quot;queue:</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">while</span> <span class="n">count_block</span><span class="o">.</span><span class="n">call</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</span><span class='line'>  <span class="no">Sidekiq</span><span class="o">.</span><span class="n">redis</span> <span class="k">do</span> <span class="o">|</span><span class="n">conn</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">conn</span><span class="o">.</span><span class="n">rpoplpush</span> <span class="s2">&quot;queue:</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">_pending&quot;</span><span class="p">,</span> <span class="s2">&quot;queue:</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will move all the items from one queue to another until there are no more jobs.</p>
+
+<p>b.t.w
+Obviously, the <code>_pending</code> queues don&#8217;t have any workers assigned to them, the purpose of it is a place holder so the jobs won&#8217;t go to waste and we can resume work when we can.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1192,206 +1251,6 @@ It acts as a data warehouse and the workflows are being managed by the app.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/05/problem-with-running-spec-in-vim/">Problem With Running Spec in Vim</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-05T22:02:00+03:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/08/05/problem-with-running-spec-in-vim/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have been using Vim for almost a week now.</p>
-
-<p>I am using the <a href="http://github.com/astrails/dotvim">dotvim</a> configuration by <a href="http://astrails.com">Astrails</a>.</p>
-
-<p>All in all, the configuration is awesome and I completely love it, it&#8217;s the longest time period I have ever used Vim. Considering that the second place is about 5 minutes, that&#8217;s super impressive.</p>
-
-<p>I only have one problem with it.</p>
-
-<p>I took the spec running functions from <a href="https://github.com/garybernhardt">Gary Bernhardt</a> <a href="https://github.com/garybernhardt/dotfiles/">dotfiles</a>, I just remapped the keys differently.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-</span><span class='line'>" RUNNING TESTS
-</span><span class='line'>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-</span><span class='line'>map &lt;leader&gt;' :call RunTestFile()&lt;cr&gt;
-</span><span class='line'>map &lt;leader&gt;; :call RunNearestTest()&lt;cr&gt;
-</span><span class='line'>
-</span><span class='line'>function! RunTestFile(...)
-</span><span class='line'>    if a:0
-</span><span class='line'>        let command_suffix = a:1
-</span><span class='line'>    else
-</span><span class='line'>        let command_suffix = ""
-</span><span class='line'>    endif
-</span><span class='line'>
-</span><span class='line'>    " Run the tests for the previously-marked file.
-</span><span class='line'>    let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
-</span><span class='line'>    if in_test_file
-</span><span class='line'>        call SetTestFile()
-</span><span class='line'>    elseif !exists("t:grb_test_file")
-</span><span class='line'>        return
-</span><span class='line'>    end
-</span><span class='line'>    call RunTests(t:grb_test_file . command_suffix)
-</span><span class='line'>endfunction
-</span><span class='line'>
-</span><span class='line'>function! RunNearestTest()
-</span><span class='line'>    let spec_line_number = line('.')
-</span><span class='line'>    call RunTestFile(":" . spec_line_number . " -b")
-</span><span class='line'>endfunction
-</span><span class='line'>
-</span><span class='line'>function! SetTestFile()
-</span><span class='line'>    " Set the spec file that tests will be run for.
-</span><span class='line'>    let t:grb_test_file=@%
-</span><span class='line'>endfunction
-</span><span class='line'>
-</span><span class='line'>function! RunTests(filename)
-</span><span class='line'>    " Write the file and run tests for the given filename
-</span><span class='line'>    :w
-</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-</span><span class='line'>    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-</span><span class='line'>    if match(a:filename, '\.feature$') != -1
-</span><span class='line'>        exec ":!script/features " . a:filename
-</span><span class='line'>    else
-</span><span class='line'>        if filereadable("script/test")
-</span><span class='line'>            exec ":!script/test " . a:filename
-</span><span class='line'>        elseif filereadable("Gemfile")
-</span><span class='line'>            exec ":!bundle exec rspec --color " . a:filename
-</span><span class='line'>        else
-</span><span class='line'>            exec ":!rspec --color " . a:filename
-</span><span class='line'>        end
-</span><span class='line'>    end
-</span><span class='line'>endfunction
-</span><span class='line'>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-</span><span class='line'>" RUNNING TESTS
-</span><span class='line'>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""</span></code></pre></td></tr></table></div></figure>
-
-
-<p>As you can see, I mapped <code>,;</code> to run line specs, and <code>,'</code> to run the entire spec file.</p>
-
-<p>The problem is, that the terminal exists immediately after the result, does not wait for me to hit <code>Enter</code> or anything.</p>
-
-<p>You can see the problem demo in this YouTube Video</p>
-
-<iframe width="" height="" src="http://www.youtube.com/embed/gUB48XwNq0M " frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-
-
-<p>I asked this question on StackOverflow <a href="http://stackoverflow.com/questions/11785035/vim-issue-with-running-specs-in-ruby-rspec/11785791#11785791">here</a></p>
-
-<p>Someone suggested it might be a trailing character, but I checked and there&#8217;s nothing like that.</p>
-
-<p>The same person suggested to map just <code>ls</code> like so:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>nmap &lt;leader&gt;ls :!ls&lt;cr&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>But this command does not exit.</p>
-
-<p>Another thing I tried is this
-In a vim session I mapped a key like this</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>map &lt;Leader&gt;~ :!rspec %&lt;cr&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When I used it, the terminal did not exit as well.</p>
-
-<p>Vim Experts, what am I missing here?</p>
-
-<p>Running specs all the time is something crucial to my workflow, I don&#8217;t want to hide vim very time, it breaks my flow.</p>
-
-<p>Any help appreciated.</p>
-
-<p>My entire vim configuration is here: <a href="http://www.github.com/kensodev/dotvim">link</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1413,6 +1272,10 @@ In a vim session I mapped a key like this</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/">Move jobs from one queue to another - Sidekiq</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/26/a-better-todo-comment-for-your-code/">Better TODO comment for your code</a>
       </li>
     
@@ -1426,10 +1289,6 @@ In a vim session I mapped a key like this</p>
     
       <li class="post">
         <a href="/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">Problems with Mongoid and Sidekiq- Brainstorming</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works/">RailsConf 2012 talk - How Gogobot works</a>
       </li>
     
   </ul>

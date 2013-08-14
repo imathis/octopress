@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Tzurel]]></title>
   <link href="http://avi.io/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2013-07-26T14:47:59+03:00</updated>
+  <updated>2013-08-14T17:46:34+03:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Move jobs from one queue to another - Sidekiq]]></title>
+    <link href="http://avi.io/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/"/>
+    <updated>2013-08-14T17:36:00+03:00</updated>
+    <id>http://avi.io/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq</id>
+    <content type="html"><![CDATA[<p>I have been working with Sidekiq for quite a while now, having many jobs per day working (multiple millions of jobs.)</p>
+
+<p>Sometimes, I queue up tasks to a queue called <code>#{queue_name}_pending</code>, I do this so I can manage the load on the servers. (For example: Stop writing to Mongo, Stop importing contact etc&#8230;)</p>
+
+<p>This way, I can queue up many jobs, and I can move it to the real queue whenever I feel like it or whenever the problem is solved.</p>
+
+<p>I was looking for a way to move tasks from one queue to another.</p>
+
+<p>There&#8217;s nothing built into Sidekiq for this, but obviously, you can just use redis built in commands to do it.</p>
+
+<p>Here&#8217;s the code to do it</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">count_block</span> <span class="o">=</span> <span class="nb">proc</span><span class="p">{</span> <span class="no">Sidekiq</span><span class="o">.</span><span class="n">redis</span> <span class="k">do</span> <span class="o">|</span><span class="n">conn</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">conn</span><span class="o">.</span><span class="n">llen</span><span class="p">(</span><span class="s2">&quot;queue:</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">while</span> <span class="n">count_block</span><span class="o">.</span><span class="n">call</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</span><span class='line'>  <span class="no">Sidekiq</span><span class="o">.</span><span class="n">redis</span> <span class="k">do</span> <span class="o">|</span><span class="n">conn</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">conn</span><span class="o">.</span><span class="n">rpoplpush</span> <span class="s2">&quot;queue:</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">_pending&quot;</span><span class="p">,</span> <span class="s2">&quot;queue:</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will move all the items from one queue to another until there are no more jobs.</p>
+
+<p>b.t.w
+Obviously, the <code>_pending</code> queues don&#8217;t have any workers assigned to them, the purpose of it is a place holder so the jobs won&#8217;t go to waste and we can resume work when we can.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Better TODO comment for your code]]></title>

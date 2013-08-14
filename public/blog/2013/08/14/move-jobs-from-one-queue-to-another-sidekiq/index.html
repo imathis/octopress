@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>searching through the history of commands you ran in terminal - Avi Tzurel</title>
+  <title>Move jobs from one queue to another - Sidekiq - Avi Tzurel</title>
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="Whenever I am logged in to a server or even when I am working on my own machine, I keep searching through the command history through up and down &hellip;">
+  <meta name="description" content="I have been working with Sidekiq for quite a while now, having many jobs per day working (multiple millions of jobs.) Sometimes, I queue up tasks to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/">
+  <link rel="canonical" href="http://avi.io/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Searching Through the History of Commands You Ran in Terminal</h1>
+      <h1 class="entry-title">Move Jobs From One Queue to Another - Sidekiq</h1>
     
     
       <p class="meta">
@@ -96,7 +96,7 @@
   
 
 
-<time datetime="2012-08-09T00:06:00+03:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
+<time datetime="2013-08-14T17:36:00+03:00" pubdate data-updated="true">Aug 14<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -105,35 +105,43 @@
   </header>
 
 
-<div class="entry-content"><p>Whenever I am logged in to a server or even when I am working on my own machine, I keep searching through the command history through up and down arrows.</p>
+<div class="entry-content"><p>I have been working with Sidekiq for quite a while now, having many jobs per day working (multiple millions of jobs.)</p>
 
-<p>While this can be efficient if you have 2-3 commands, it can be quite frustrating to find specific commands.</p>
+<p>Sometimes, I queue up tasks to a queue called <code>#{queue_name}_pending</code>, I do this so I can manage the load on the servers. (For example: Stop writing to Mongo, Stop importing contact etc&#8230;)</p>
 
-<p>That is something I keep doing over and over again, and now I have a better way, I just grep through the list of commands, find the one I want, copy it and paste it into a new command, and I&#8217;m done.</p>
+<p>This way, I can queue up many jobs, and I can move it to the real queue whenever I feel like it or whenever the problem is solved.</p>
 
-<p>This saves me <strong>a lot</strong> of time.</p>
+<p>I was looking for a way to move tasks from one queue to another.</p>
 
-<p>Here&#8217;s how:</p>
+<p>There&#8217;s nothing built into Sidekiq for this, but obviously, you can just use redis built in commands to do it.</p>
 
-<p>To show the history of commands you just do:</p>
+<p>Here&#8217;s the code to do it</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>history</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">count_block</span> <span class="o">=</span> <span class="nb">proc</span><span class="p">{</span> <span class="no">Sidekiq</span><span class="o">.</span><span class="n">redis</span> <span class="k">do</span> <span class="o">|</span><span class="n">conn</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">conn</span><span class="o">.</span><span class="n">llen</span><span class="p">(</span><span class="s2">&quot;queue:</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">while</span> <span class="n">count_block</span><span class="o">.</span><span class="n">call</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</span><span class='line'>  <span class="no">Sidekiq</span><span class="o">.</span><span class="n">redis</span> <span class="k">do</span> <span class="o">|</span><span class="n">conn</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">conn</span><span class="o">.</span><span class="n">rpoplpush</span> <span class="s2">&quot;queue:</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">_pending&quot;</span><span class="p">,</span> <span class="s2">&quot;queue:</span><span class="si">#{</span><span class="n">queue_name</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<p>You probably know the rest, but you can just pipe the history into grep and search your history</p>
+<p>This will move all the items from one queue to another until there are no more jobs.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>history | grep {command_or_part_of_command}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>For example:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>history | grep cp -R</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Enjoy!</p>
+<p>b.t.w
+Obviously, the <code>_pending</code> queues don&#8217;t have any workers assigned to them, the purpose of it is a place holder so the jobs won&#8217;t go to waste and we can resume work when we can.</p>
 </div>
 
 
@@ -156,12 +164,12 @@
   
 
 
-<time datetime="2012-08-09T00:06:00+03:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
+<time datetime="2013-08-14T17:36:00+03:00" pubdate data-updated="true">Aug 14<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/general/'>General</a>
+    <a class='category' href='/blog/categories/general/'>General</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
   
 </span>
 
@@ -170,7 +178,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/" data-via="KensoDev" data-counturl="http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/" data-via="KensoDev" data-counturl="http://avi.io/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/" >Tweet</a>
   
   
   
@@ -181,10 +189,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/08/09/making-nokogiri-install-again-on-mountain-lion/" title="Previous Post: Making Nokogiri install again on Mountain Lion">&laquo; Making Nokogiri install again on Mountain Lion</a>
+        <a class="basic-alignment left" href="/blog/2013/07/26/a-better-todo-comment-for-your-code/" title="Previous Post: Better TODO comment for your code">&laquo; Better TODO comment for your code</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/" title="Next Post: organizing your specs into groups and running them separately">organizing your specs into groups and running them separately &raquo;</a>
       
     </p>
   </footer>
@@ -343,8 +349,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/';
-        var disqus_url = 'http://avi.io/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/';
+        var disqus_identifier = 'http://avi.io/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/';
+        var disqus_url = 'http://avi.io/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/';
         var disqus_script = 'embed.js';
       
     (function () {

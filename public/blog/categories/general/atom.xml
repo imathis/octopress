@@ -4,7 +4,7 @@
   <title><![CDATA[Category: General | Avi Tzurel]]></title>
   <link href="http://avi.io/blog/categories/general/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2013-07-26T14:47:59+03:00</updated>
+  <updated>2013-08-14T17:46:34+03:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Move jobs from one queue to another - Sidekiq]]></title>
+    <link href="http://avi.io/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/"/>
+    <updated>2013-08-14T17:36:00+03:00</updated>
+    <id>http://avi.io/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq</id>
+    <content type="html"><![CDATA[<p>I have been working with Sidekiq for quite a while now, having many jobs per day working (multiple millions of jobs.)</p>
+
+<p>Sometimes, I queue up tasks to a queue called <code>#{queue_name}_pending</code>, I do this so I can manage the load on the servers. (For example: Stop writing to Mongo, Stop importing contact etc...)</p>
+
+<p>This way, I can queue up many jobs, and I can move it to the real queue whenever I feel like it or whenever the problem is solved.</p>
+
+<p>I was looking for a way to move tasks from one queue to another.</p>
+
+<p>There's nothing built into Sidekiq for this, but obviously, you can just use redis built in commands to do it.</p>
+
+<p>Here's the code to do it</p>
+
+<p>```ruby</p>
+
+<pre><code>count_block = proc{ Sidekiq.redis do |conn|
+  conn.llen("queue:#{queue_name}")  
+end }
+
+while count_block.call &gt; 0
+  Sidekiq.redis do |conn|
+    conn.rpoplpush "queue:#{queue_name}_pending", "queue:#{queue_name}"
+  end
+end
+</code></pre>
+
+<p>```</p>
+
+<p>This will move all the items from one queue to another until there are no more jobs.</p>
+
+<p>b.t.w
+Obviously, the <code>_pending</code> queues don't have any workers assigned to them, the purpose of it is a place holder so the jobs won't go to waste and we can resume work when we can.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[organizing your specs into groups and running them separately]]></title>
