@@ -59,5 +59,5 @@ Every interaction is both precious and an opportunity to delight.
 {% endblockquote %}
 
 For those who appreciate the little things, you'll notice in the Twitter example above, the url is truncated and drops the protocol segment.
-Sometimes (like with Twitter) ading a link title doesn't really make sense, but showing the full url is noisy and distracting.
+Sometimes (like with Twitter) adding a link title doesn't really make sense, but showing the full url is noisy and distracting.
 For this reason, the blockquote plugin automatically strips out the protocol, and if the url is longer than 32 characters it truncates the url on a forward slash for beauty's sake.
