@@ -153,6 +153,9 @@ ERR
     # Returns string
     #
     def category_links(categories)
+      if !categories
+        return ""
+      end
       categories = categories.sort!.map { |c| category_link c }
 
       case categories.length
