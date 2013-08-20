@@ -176,6 +176,17 @@ ERR
       "<a class='category' href='/#{dir}/#{category.to_url}/'>#{category}</a>"
     end
 
+    # Outputs a single category as a link.
+    #  
+    #   +category+ is a category string to format as a link
+    #
+    # Returns
+    #  
+    def category_link_for_name(category)
+      dir = @context.registers[:site].config['category_dir']
+      "/#{dir}/#{category.to_url}/"
+    end
+
     # Outputs the post.date as formatted html, with hooks for CSS styling.
     #
     #  +date+ is the date object to format as HTML.
