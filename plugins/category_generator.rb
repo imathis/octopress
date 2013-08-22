@@ -180,7 +180,7 @@ ERR
     #  
     #   +category+ is a category string to format as a link
     #
-    # Returns
+    # Returns string
     #  
     def category_link_for_name(category)
       dir = @context.registers[:site].config['category_dir']
