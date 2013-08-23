@@ -358,7 +358,7 @@ task :setup_github_pages, :repo do |t, args|
       f.write rakefile
     end
   end
-  puts "\n---\n## Now you can deploy to #{url} with `rake deploy` ##"
+  puts "\n---\n## Now you can deploy to #{blog_url(user, project)} with `rake deploy` ##"
 end
 
 def ok_failed(condition)
@@ -390,6 +390,7 @@ def blog_url(user, project)
     "http://#{user}.github.io"
   end
   url += "/#{project}" unless project == ''
+  url
 end
 
 desc "list tasks"
