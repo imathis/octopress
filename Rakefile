@@ -390,6 +390,7 @@ def blog_url(user, project)
     "http://#{user}.github.io"
   end
   url += "/#{project}" unless project == ''
+  url
 end
 
 desc "list tasks"
