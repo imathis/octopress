@@ -227,6 +227,18 @@ desc "Generate website and deploy"
 task :gen_deploy => [:integrate, :generate, :deploy] do
 end
 
+# See http://octopress.org/docs/deploying/heroku/
+desc "Heroku deploy task"
+task :deploy_heroku do
+  system 'git add .'
+  system 'git commit -m "site updated"'
+  system 'git push heroku master'
+end
+
+desc "Generate website and deploy to Heroku"
+task :gen_deploy_heroku => [:integrate, :generate, :deploy_heroku] do
+end
+
 desc "copy dot files for deployment"
 task :copydot, :source, :dest do |t, args|
   FileList["#{args.source}/**/.*"].exclude("**/.", "**/..", "**/.DS_Store", "**/._*").each do |file|
@@ -248,7 +260,7 @@ desc "deploy public directory to github pages"
 multitask :push do
   puts "## Deploying branch to Github Pages "
   puts "## Pulling any updates from Github Pages "
-  cd "#{deploy_dir}" do 
+  cd "#{deploy_dir}" do
     system "git pull"
   end
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
