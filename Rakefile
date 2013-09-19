@@ -307,7 +307,7 @@ task :setup_github_pages, :repo do |t, args|
     repo_url = args.repo
   else
     puts "Enter the read/write url for your repository"
-    puts "(For example, 'git@github.com:your_username/your_username.github.io)"
+    puts "(For example, 'git@github.com:your_username/your_username.github.io.git)"
     puts "           or 'https://github.com/your_username/your_username.github.io')"
     repo_url = get_stdin("Repository url: ")
   end
