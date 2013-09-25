@@ -25,6 +25,6 @@ If you have a question, or if you love helping others:
 
 If you want to help out, [fork Octopress on Github](http://github.com/imathis/octopress) and send me a pull request.
 This site is also part of the Octopress project and if you find errors you can [post issues](http://github.com/imathis/octopress/issues/)
-or send me a pull request for the [site branch](http://github.com/imathis/octopress/tree/site).
+or send me a pull request for the [site-2.1 branch](http://github.com/imathis/octopress/tree/site-2.1).
 
 Please file all development issues on [Octopress's main repository](https://github.com/imathis/octopress/issues).
