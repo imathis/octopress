@@ -9,7 +9,7 @@ footer: false
 Here are some nice and easy ways to deploy your Octopress blog.
 
 ## Github Pages
-Hosting your blog with Github's [Pages service](http://pages.github.com) is free and allows custom domains. To deploy you simply push your repository to Gihub.
+Hosting your blog with Github's [Pages service](http://pages.github.com) is free and allows custom domains. To deploy you simply push your repository to Github.
 This is a great way to host a personal blog, or even a multi-author blog, where contributions can be handled with pull requests and commit access.
 
 [Deploying to Github Pages &raquo;](/docs/deploying/github)
