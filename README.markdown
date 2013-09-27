@@ -8,6 +8,7 @@ Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
 4. **It's easy to use.** A collection of rake tasks simplifies development and makes deploying a cinch.
 5. **Ships with great plug-ins** some original and others from the Jekyll community &mdash; tested and improved.
 
+**Note**: Octopress requires a minimum Ruby version of `1.9.3-p0`.
 
 ## Documentation
 
