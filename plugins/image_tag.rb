@@ -29,8 +29,8 @@ module Jekyll
         if /(?:"|')(?<title>[^"']+)?(?:"|')\s+(?:"|')(?<alt>[^"']+)?(?:"|')/ =~ @img['title']
           @img['title']  = title
           @img['alt']    = alt
-        else
-          @img['alt']    = @img['title'].gsub!(/"/, '&#34;') if @img['title']
+        elsif @img['title']
+          @img['alt'] = @img['title'] = @img['title'].gsub(/"/, '&#34;')
         end
         @img['class'].gsub!(/"/, '') if @img['class']
       end
