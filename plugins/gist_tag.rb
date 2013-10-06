@@ -88,6 +88,9 @@ module Jekyll
 
     def handle_gist_redirecting(data)
       redirected_url = data.header['Location']
+      if redirected_url.nil? || redirected_url.empty?
+        raise ArgumentError, "GitHub replied with a 302 but didn't provide a location in the response headers."
+      end
       get_web_content(redirected_url)
     end
 
