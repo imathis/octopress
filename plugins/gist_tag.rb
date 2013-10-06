@@ -71,26 +71,24 @@ module Jekyll
     end
 
     def get_gist_from_web(gist, file)
-      gist_url          = get_gist_url_for gist, file
-      data = get_web_content gist_url
-      data = handle_gist_redirecting data
+      gist_url = get_gist_url_for(gist, file)
+      data     = get_web_content(gist_url)
+
+      if data.code.to_i == 302
+        data = handle_gist_redirecting(data)
+      end
+
       if data.code.to_i != 200
         raise RuntimeError, "Gist replied with #{data.code} for #{gist_url}"
       end
-      data            = data.body
-      cache gist, file, data unless @cache_disabled
-      data
+
+      cache(gist, file, data.body) unless @cache_disabled
+      data.body
     end
 
     def handle_gist_redirecting(data)
-      if data.code.to_i == 302
-        redirected_url  = data.header['Location']
-        data = get_web_content redirected_url
-        if data.code.to_i != 200
-          raise RuntimeError, "Gist replied with #{data.code} for #{gist_url}"
-        end
-      end
-      data
+      redirected_url = data.header['Location']
+      get_web_content(redirected_url)
     end
 
     def get_web_content(url)
