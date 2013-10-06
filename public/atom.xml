@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Tzurel]]></title>
   <link href="http://avi.io/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2013-08-14T18:23:04+03:00</updated>
+  <updated>2013-10-06T16:13:28+03:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to easily generate beautiful api documentation]]></title>
+    <link href="http://avi.io/blog/2013/10/06/how-to-easily-generate-beautiful-api-documentation/"/>
+    <updated>2013-10-06T15:48:00+03:00</updated>
+    <id>http://avi.io/blog/2013/10/06/how-to-easily-generate-beautiful-api-documentation</id>
+    <content type="html"><![CDATA[<p>We recently opened a couple of API endpoints at <a href="http://gogobot.com">Gogobot</a> to the public.</p>
+
+<p>I was looking for a way to generate API documentation in a good looking way, one that will appeal to my fellow developers.</p>
+
+<p>After a little while search with Google, I thought I had it nailed with a Twitter Bootstrap theme, but the way I had to generate the documentation was too manual, I had to edit lots of files and I really didn&#8217;t find it &#8220;easy&#8221;.</p>
+
+<p>So, I was looking around some more, and I finally found a really easy way to generate API documentation here: <a href="http://apidoc.js">apidocjs.com</a></p>
+
+<p>It really nailed everything I was looking for:</p>
+
+<ol>
+<li>Super easy customizable template.</li>
+<li>Intuitive documentation</li>
+<li>Document versioning</li>
+<li>Version compare</li>
+</ol>
+
+
+<p>Everything is super easy and at your fingertips.</p>
+
+<p>One thing that I have to say badly about it, is that it&#8217;s using an old deprecated Markdown parser, but I am already working to fix it and post a Pull Request for it (Gotta love open source)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Move jobs from one queue to another - Sidekiq]]></title>
