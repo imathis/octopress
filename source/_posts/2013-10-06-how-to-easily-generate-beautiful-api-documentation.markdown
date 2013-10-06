@@ -12,7 +12,7 @@ I was looking for a way to generate API documentation in a good looking way, one
 
 After a little while search with Google, I thought I had it nailed with a Twitter Bootstrap theme, but the way I had to generate the documentation was too manual, I had to edit lots of files and I really didn't find it "easy".
 
-So, I was looking around some more, and I finally found a really easy way to generate API documentation here: [apidocjs.com](http://apidoc.js)
+So, I was looking around some more, and I finally found a really easy way to generate API documentation here: [apidocjs.com](http://apidocjs.com/)
 
 It really nailed everything I was looking for:
 
