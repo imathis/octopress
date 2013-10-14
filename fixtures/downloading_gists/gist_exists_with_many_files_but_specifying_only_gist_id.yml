@@ -1,0 +1,178 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gist.github.com/raw/6964587
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+  response:
+    status:
+      code: 302
+      message: 
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sun, 17 Nov 2013 21:14:54 GMT
+      content-type:
+      - text/html; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 302 Found
+      strict-transport-security:
+      - max-age=31536000
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      access-control-allow-origin:
+      - https://render.github.com
+      location:
+      - https://gist.github.com/jbrains/6964587/raw
+      x-served-by:
+      - github-fe102-cp1-prd.iad.github.net
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 68123b87-e66b-43da-8e88-25f0d636b8f6
+      x-runtime:
+      - '0.006445'
+      vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: <html><body>You are being <a href="https://gist.github.com/jbrains/6964587/raw">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 21:14:55 GMT
+- request:
+    method: get
+    uri: https://gist.github.com/jbrains/6964587/raw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sun, 17 Nov 2013 21:14:55 GMT
+      content-type:
+      - text/plain; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      strict-transport-security:
+      - max-age=31536000
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      access-control-allow-origin:
+      - https://render.github.com
+      etag:
+      - '"152b1cb9b394116b9b9d4942b0401a52"'
+      content-disposition:
+      - inline
+      content-transfer-encoding:
+      - binary
+      x-served-by:
+      - github-fe102-cp1-prd.iad.github.net
+      cache-control:
+      - private
+      x-request-id:
+      - 3f74dee2-08ed-4544-a1a9-fbe9aeb4b3f0
+      x-runtime:
+      - '0.009741'
+      vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: |
+        public interface GistWithMultipleFiles {}
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 21:14:55 GMT
+- request:
+    method: get
+    uri: https://gist.github.com/jbrains/6964587/raw/Gist1.java
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sun, 17 Nov 2013 21:14:56 GMT
+      content-type:
+      - text/plain; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      strict-transport-security:
+      - max-age=31536000
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      access-control-allow-origin:
+      - https://render.github.com
+      etag:
+      - '"152b1cb9b394116b9b9d4942b0401a52"'
+      content-disposition:
+      - inline
+      content-transfer-encoding:
+      - binary
+      x-served-by:
+      - github-fe103-cp1-prd.iad.github.net
+      cache-control:
+      - private
+      x-request-id:
+      - dc8f3554-1648-4aa7-9872-80236f00d835
+      x-runtime:
+      - '0.011330'
+      vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: |
+        public interface GistWithMultipleFiles {}
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 21:14:56 GMT
+recorded_with: VCR 2.7.0

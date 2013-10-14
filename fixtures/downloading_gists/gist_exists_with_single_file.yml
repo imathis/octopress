@@ -1,0 +1,163 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gist.github.com/jbrains/4111662/raw/TestingIoFailure.java
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sun, 17 Nov 2013 17:42:28 GMT
+      content-type:
+      - text/plain; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      strict-transport-security:
+      - max-age=31536000
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      access-control-allow-origin:
+      - https://render.github.com
+      etag:
+      - '"93491d36f2231f211142b9006f573e20"'
+      content-disposition:
+      - inline
+      content-transfer-encoding:
+      - binary
+      x-served-by:
+      - github-fe102-cp1-prd.iad.github.net
+      cache-control:
+      - private
+      x-request-id:
+      - 67d27ae2-76cf-4661-9a93-f7e93467d565
+      x-runtime:
+      - '0.012830'
+      vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: |
+        @Test
+        public void ioFailure() throws Exception {
+            final IOException ioFailure = new IOException("Simulating a failure writing to the file.");
+            try {
+                new WriteTextToFileActionImpl() {
+                    @Override
+                    protected FileWriter fileWriterOn(File path) throws IOException {
+                        return new FileWriter(path) {
+                            @Override
+                            public void write(String str, int off, int len) throws IOException {
+                                throw ioFailure;
+                            }
+                        };
+                    }
+                }.writeTextToFile("::text::", new File("anyWritableFile.txt"));
+                fail("How did you survive the I/O failure?!");
+            } catch (IOException success) {
+                if (success != ioFailure)
+                    throw success;
+            }
+        }
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 17:42:28 GMT
+- request:
+    method: get
+    uri: https://gist.github.com/jbrains/4111662/raw/TestingIoFailure.java
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sun, 17 Nov 2013 17:42:28 GMT
+      content-type:
+      - text/plain; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      strict-transport-security:
+      - max-age=31536000
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      access-control-allow-origin:
+      - https://render.github.com
+      etag:
+      - '"93491d36f2231f211142b9006f573e20"'
+      content-disposition:
+      - inline
+      content-transfer-encoding:
+      - binary
+      x-served-by:
+      - github-fe103-cp1-prd.iad.github.net
+      cache-control:
+      - private
+      x-request-id:
+      - 6d2be703-f4e0-4031-b009-4c10c843f1f2
+      x-runtime:
+      - '0.018564'
+      vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: |
+        @Test
+        public void ioFailure() throws Exception {
+            final IOException ioFailure = new IOException("Simulating a failure writing to the file.");
+            try {
+                new WriteTextToFileActionImpl() {
+                    @Override
+                    protected FileWriter fileWriterOn(File path) throws IOException {
+                        return new FileWriter(path) {
+                            @Override
+                            public void write(String str, int off, int len) throws IOException {
+                                throw ioFailure;
+                            }
+                        };
+                    }
+                }.writeTextToFile("::text::", new File("anyWritableFile.txt"));
+                fail("How did you survive the I/O failure?!");
+            } catch (IOException success) {
+                if (success != ioFailure)
+                    throw success;
+            }
+        }
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 17:42:28 GMT
+recorded_with: VCR 2.7.0

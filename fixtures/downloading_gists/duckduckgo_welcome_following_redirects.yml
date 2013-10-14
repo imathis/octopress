@@ -1,0 +1,175 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.duckduckgo.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+  response:
+    status:
+      code: 301
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Sun, 17 Nov 2013 18:36:43 GMT
+      content-type:
+      - text/html
+      content-length:
+      - '178'
+      connection:
+      - close
+      location:
+      - https://duckduckgo.com/
+      expires:
+      - Sun, 17 Nov 2013 18:36:44 GMT
+      cache-control:
+      - max-age=1
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body
+        bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 18:36:43 GMT
+- request:
+    method: get
+    uri: https://duckduckgo.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Sun, 17 Nov 2013 18:36:43 GMT
+      content-type:
+      - text/html; charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      expires:
+      - Sun, 17 Nov 2013 18:36:44 GMT
+      cache-control:
+      - max-age=1
+      strict-transport-security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<!--[if IEMobile 7 ]> <html lang=\"en_US\" class=\"no-js
+        iem7\"> <![endif]-->\n<!--[if lt IE 7]> <html class=\"ie6 lt-ie10 lt-ie9 lt-ie8
+        lt-ie7\" lang=\"en_US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"ie7
+        lt-ie10 lt-ie9 lt-ie8\" lang=\"en_US\"> <![endif]-->\n<!--[if IE 8]>    <html
+        class=\"ie8 lt-ie10 lt-ie9\" lang=\"en_US\"> <![endif]-->\n<!--[if IE 9]>
+        \   <html class=\"ie9 lt-ie10\" lang=\"en_US\"> <![endif]-->\n<!--[if (gte
+        IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang=\"en_US\"><!--<![endif]-->\n\n
+        \ <head>\n    <link rel=\"canonical\" href=\"https://duckduckgo.com/\">\n\n<link
+        rel=\"stylesheet\" href=\"/s604.css\" type=\"text/css\">\n<script type=\"text/javascript\"
+        src=\"/locales/en_US/LC_MESSAGES/duckduckgo-duckduckgo+sprintf+gettext+locale-simple.20131026.164123.js\"></script>\n<script
+        type=\"text/javascript\" src=\"/d1045.js\"></script>\n\n<link title=\"DuckDuckGo\"
+        type=\"application/opensearchdescription+xml\" rel=\"search\" href=\"/opensearch_ssl.xml\">\n\n<meta
+        http-equiv=\"content-type\" content=\"text/html; charset=UTF-8;charset=utf-8\">\n<meta
+        name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1,
+        user-scalable=0\"/>\n<meta name=\"HandheldFriendly\" content=\"true\"/>\n\n<meta
+        name=\"apple-mobile-web-app-capable\" content=\"yes\" />\n<!--link rel=\"icon\"
+        href=\"/assets/ddg-icon-256x160.png\" type=\"image/png\"-->\n<link rel=\"image_src\"
+        href=\"/assets/logo_homepage.normal.v101.png\"/>\n<link rel=\"shortcut icon\"
+        href=\"/favicon.ico\" type=\"image/x-icon\">\n<link rel=\"apple-touch-icon\"
+        href=\"/assets/logo_icon128.v101.png\"/>\n\n<link title=\"DuckDuckGo\" type=\"application/opensearchdescription+xml\"
+        rel=\"search\" href=\"/opensearch_ssl.xml\">\n\n<meta name=\"twitter:site\"
+        value=\"@duckduckgo\">\n<meta name=\"twitter:url\" value=\"https://duckduckgo.com/\">\n\n<meta
+        property=\"og:url\" content=\"https://duckduckgo.com/\" />\n<meta property=\"og:site_name\"
+        content=\"DuckDuckGo\" />\n\n\n\t<title>Search DuckDuckGo</title>\n<meta property=\"og:title\"
+        content=\"Search DuckDuckGo\" />\n<meta name=\"twitter:title\" value=\"Search
+        DuckDuckGo\">\n\n<meta name=\"apple-itunes-app\" content=\"app-id=663592361\"
+        />\n\n\n\t \n\t  <META NAME=\"Description\" CONTENT=\"Search anonymously.
+        Find instantly. DuckDuckGo is a search engine that does not track you and,
+        has more instant answers and less spam/clutter.\">\n<style type=\"text/css\">\n\thtml
+        {\n\t\toverflow-y:auto;\n\t\tpadding-bottom:31px;\n\t\theight: auto;\n\t}\t\n\tbody
+        {\n\t\theight:100%;\n\t}\n\ta:visited{color:#1168CC}\n\t#t{padding-top:20px}\n\t#content_wrapper_homepage
+        { \n\t\ttop:12%;\n\t\tposition:relative;\t\t\n\t\t-webkit-transition: all
+        0.25s ease-out;\n\t\t-moz-transition: all 0.25s ease-out;\n\t\t-o-transition:
+        all 0.25s ease-out;\n\t\ttransition: all 0.25s ease-out;\n\t}\n\t@media only
+        screen and (max-width: 320px) {\n\t\t#content_wrapper_homepage{top: 20px;}\n\t}\n</style>\n\t\n
+        \ </head>\n  <body id=\"pg-index\" class=\"yui-skin-sam\">\n\n\t\n\n    <div
+        id=\"add_to_browser\" class=\"modal grp_modal\"></div>\n\t<div id=\"add_to_browser_homepage\"
+        class=\"modal grp_modal\"></div>\n\t\n      \n\t    <div id=\"content_wrapper_homepage\">\n\t
+        \     <div id=\"content_homepage\">\n\t\t    \n\t\t<a id=\"logo_homepage_link\"
+        title=\"About DuckDuckGo\" href=\"/about\">\n\t\t\t<div id=\"logo_homepage\">About
+        DuckDuckGo</div>\n\t\t</a>\n\n<!--\n\t\t<a id=\"logo_homepage_link\" title=\"Marie
+        Curie\" href=\"/Marie_Curie\">\n\t\t\t<div id=\"logo_homepage\">Marie Curie</div>\n\t\t</a>\n//-->\n\n\n\n\n\n\n\n\n\t\t<form
+        name=\"x\" method=\"POST\" action=\"/html\" id=\"search_form_homepage\" onSubmit=\"return
+        nbr()\">\n\t\t\t<div id=\"search_wrapper_homepage\">\n\t\t\t\t<input id=\"search_button_homepage\"
+        tabindex=\"2\" type=\"submit\" value=\"\"/>\n\t\t\t\t<a id=\"search_dropdown_homepage\"
+        class=\"btn\" href=\"javascript:;\" onClick=\"nbc(1);\"></a>\n\t\t\t</div>\n\t\t\t<input
+        type=\"text\" autocomplete=\"off\" name=\"q\" autofocus tabindex=\"1\" onclick=\"if
+        (this.value=='put search terms here') {this.value='';this.style.color='#000000';};if
+        (is_mobile) DDG.toggle('footer_homepage');\" onblur=\"if (is_mobile) DDG.toggle('footer_homepage',1)\"
+        id=\"search_form_input_homepage\" onFocus=\"if ('rc' in window) {nua('nro',rc)};fq=1;\"
+        onBlur=\"fq=0\" value=\"\">\n\t\t\t<select id=\"bang\" size=\"2\" onChange=\"if
+        (ip) nbb(this);\" onClick=\"if (!ip) nbb(this);\" onBlur=\"nbc(1)\"></select>\n\n<script
+        type=\"text/javascript\">\nvar karr = new Array('t','ka','kb','kc','kd','ke','kf','kg','kh','ki','kj','kk','kl','km','kn','ko','kp','kq','kr','ks','kt','ku','kv','kw','kx','ky','kz','k1','k2','k3','k4','k5','k6','k7','k8','k9','kaa','kab','kac','kad','kae','kaf','kag','kah','kai','kaj','kak','kal','kam','kan','kao','kap','kaq','kar','kas','kat','kau','kav','kaw','kax','kay','kaz','key');\nfor
+        (var i=0;i<karr.length;i++) {\n  var kre=new RegExp('[\\?\\&]'+karr[i]+'=([^\\&]+)');\n
+        \ var ktmp='';\n\n  if (kre.test(window.location.href)) {\n      ktmp=decodeURIComponent(RegExp.$1);\n
+        \     if (ktmp.length<11) document.write('<input type=\"hidden\" name=\"'+karr[i]+'\"
+        value=\"'+ktmp+'\">');\n      eval(karr[i]+'=ktmp');\n  }\n\n  if (karr[i]=='ki'
+        && ( (ktmp&&ktmp==-1) || YAHOO.util.Cookie.get(\"i\")=='-1' ) ) {\n    document.write('<input
+        type=\"hidden\" name=\"v\" value=\"n\">');\n\n  } else if (karr[i]=='kg')
+        {\n    if ( (ktmp && ktmp=='p') || YAHOO.util.Cookie.get(\"g\")=='p') document.x.method='POST';\n
+        \   else document.x.method='GET';\n\n  } else if (karr[i]=='kh') {\n    if
+        ( (!ktmp || ktmp=='1' || YAHOO.util.Cookie.get(\"h\") == '1' ) && !document.location.port
+        && document.location.protocol != 'https:' && window.location.hostname.indexOf('.onion')==-1)
+        document.x.action='https://'+window.location.host+'/';\n    else if ( ( (ktmp
+        && ktmp=='-1') || YAHOO.util.Cookie.get(\"h\") == '-1' )  && document.location.protocol
+        != 'http:') document.x.action='http://'+window.location.host+'/';\n    else
+        document.x.action='/';\n  }\n}\n\n//console.log(w.key);\n</script>\n\n\n\t\t</form>\n\n\n\t
+        \ \n\t\n\n\t<!-- en_US All Settings -->\n\t\t\n<div id=\"tagline_homepage\">\nSearch
+        <a href=\"http://donttrack.us/\">anonymously</a>.\n&nbsp;Find <a href=\"/goodies/\">instantly</a>.\n</div>\n\t\t\n\t\t<div
+        id=\"error_homepage\"></div>\n\t\t<div style=\"clear:both;margin-top:20px;\"></div>\t\n\n\n\t\n\t
+        \ \n\t    \t </div> <!-- content_homepage //-->\n\t      </div> <!-- content_wrapper_homepage
+        //-->\t\n\t    <div id=\"footer_homepage\">\n\t<div id=\"footer_homepage_left\">\n\n\t<a
+        href=\"http://ddg.gg\" title=\"DuckDuckGo short domain!\" class=\"palm-hide\">ddg.gg</a>\n\t<a
+        href=\"/spread/\">Help Spread DuckDuckGo!</a>\n\n\t</div>\n\t<div id=\"footer_homepage_right\">\n\t\t<script
+        type=\"text/javascript\">\n\t\t\tnib(0,'','','',0,0);\n\t\t\tnib(0,'','&nbsp;&nbsp;','',0,1);\n\t\t\t{function
+        seterr(str) {var error=document.getElementById('error_homepage');\n\t\t\terror.innerHTML=str;\n\t\t\tYAHOO.util.Dom.setStyle(error,'display','block');}var
+        err=new RegExp('[\\?\\&]e=([^\\&]+)');var errm=new Array();errm['2']='no search';errm['3']='search
+        too long';errm['4']='no UTF\\u002d8 encoding';if (err.test(window.location.href))
+        seterr('Oops, '+(errm[RegExp.$1]?errm[RegExp.$1]:'there was an error.')+'
+        &nbsp;Please try again');};if (ip) setTimeout('nuo(1)',250);nip(1)\n\t\t</script>\n\t\t&nbsp;\n\t\t<a
+        href=\"#\" onclick=\"DDG.toggleall('grp_modal',-1,'more_menu');DDG.toggle('more_menu')\"
+        onmouseover=\"DDG.toggleall('grp_modal',-1);DDG.toggle('more_menu')\">More</a>\t\t\n\t\t<ul
+        id=\"more_menu\" class=\"grp_modal\">\n\t\t\t<li><a href=\"/about/\" tabindex=\"-1\">About</a></li>\n<li><a
+        href=\"/settings/\" tabindex=\"-1\">Settings</a></li>\n<li><a href=\"/goodies/\"
+        tabindex=\"-1\">Goodies</a></li>\n<li><a href=\"/feedback/\" tabindex=\"-1\">Help</a></li>\n<li><a
+        href=\"/press/\" tabindex=\"-1\">Press</a></li>\n<li class=\"more_menu_header
+        header_button_menu_header\">PRIVACY&nbsp;&nbsp;&nbsp;&nbsp;</li>\n<li><a href=\"/privacy/\"
+        tabindex=\"-1\">Policy</a></li>\n<li><a href=\"http://donttrack.us/\" tabindex=\"-1\">DontTrack</a></li>\n<li><a
+        href=\"http://dontbubble.us/\" tabindex=\"-1\">DontBubble</a></li>\n<li><a
+        href=\"http://whatisdnt.com/\" tabindex=\"-1\">WhatIsDNT</a></li>\n<li><a
+        href=\"http://fixtracking.com/\" tabindex=\"-1\">FixTracking</a></li>\n<li
+        class=\"more_menu_header header_button_menu_header\">GET INVOLVED&nbsp;&nbsp;&nbsp;&nbsp;</li>\n<li><a
+        href=\"http://dukgo.com/forum\" tabindex=\"-1\">Discuss</a></li>\n<li><a href=\"http://duckduckhack.com/\"
+        tabindex=\"-1\">Develop</a></li>\n<li><a href=\"https://dukgo.com/translate\"
+        tabindex=\"-1\">Translate</a></li>\n<li><a href=\"/supportus\" tabindex=\"-1\">Support
+        Us</a></li>\n\n\t\t</ul>\n\t</div>\n</div>\n\n<script type=\"text/javascript\">\n\tsetTimeout('document.x.q.focus()',50);\n\tif
+        (kurl) {\n\t  document.getElementById(\"logo_homepage_link\").href += (document.getElementById(\"logo_homepage_link\").href.indexOf('?')==-1
+        ? '?t=i' : '') + kurl;\n\t}\n\tfq=1;\n\tric=0;\nvar ref=new RegExp('[\\?\\&]add=([^\\&]+)');\nif
+        (ref.test(window.location.href) || (document.referrer && document.referrer.indexOf('duckduckgo.com/')==-1))
+        {\n//   console.log(document.referrer);\n   if (document.getElementById('trig_add_to_browser'))
+        setTimeout(\"DDG.mv_elem('add_to_browser','trig_add_to_browser');DDG.toggle('add_to_browser');\",50);\n}\n</script>\n\t
+        \ \n\t\n    \n  </body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 18:36:43 GMT
+recorded_with: VCR 2.7.0

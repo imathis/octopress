@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gist.github.com/raw/-1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sun, 17 Nov 2013 17:42:46 GMT
+      content-type:
+      - text/html; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 404 Not Found
+      strict-transport-security:
+      - max-age=31536000
+      x-request-id:
+      - b1a18219-4a10-465b-9daa-68878536fe5d
+      x-runtime:
+      - '0.001211'
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+            <title>Server Error &middot; Gist</title>
+            <style type="text/css" media="screen">
+              body {
+                background: #f1f1f1;
+                font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+                text-rendering: optimizeLegibility;
+                -webkit-font-smoothing: antialiased; }
+
+              .container { margin: 100px auto; width: 600px; text-align: center; }
+
+              a { color: #4183c4; text-decoration: none; }
+              a:visited { color: #4183c4 }
+              a:hover { text-decoration: none; }
+
+              h1 { letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px; text-shadow: 0 1px 0 #fff; }
+              p { color: rgba(0, 0, 0, 0.5); margin: 20px 0 40px; }
+
+              ul { border-top: 1px solid #ccc; list-style: none; margin: 20px 0; padding: 20px 0; }
+              li { display: table-cell; font-weight: bold; width: 1%; }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>OH NOES, 404.</h1>
+              <p>We seem to have missed the <em>gist</em> of that <em>gist</em> you were looking for.</p>
+              <ul id="error-suggestions">
+                  <li><a href="https://github.com/contact">Contact Support</a></li>
+                  <li><a href="https://status.github.com">Status Site</a></li>
+                  <li><a href="https://twitter.com/github">@github</a></li>
+              </ul>
+              <p><img src="https://github.s3.amazonaws.com/media/maint-logo.png" alt="GitHub"></p>
+            </div>
+          </body>
+        </html>
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 17:42:45 GMT
+recorded_with: VCR 2.7.0

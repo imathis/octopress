@@ -1,0 +1,218 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gist.github.com/raw/4111662/TestingIoFailure.java
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+  response:
+    status:
+      code: 302
+      message: 
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sun, 17 Nov 2013 20:45:53 GMT
+      content-type:
+      - text/html; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 302 Found
+      strict-transport-security:
+      - max-age=31536000
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      access-control-allow-origin:
+      - https://render.github.com
+      location:
+      - https://gist.github.com/jbrains/4111662/raw/TestingIoFailure.java
+      x-served-by:
+      - github-fe102-cp1-prd.iad.github.net
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 23566b5f-00da-4c13-bdfe-13432e835264
+      x-runtime:
+      - '0.006403'
+      vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: <html><body>You are being <a href="https://gist.github.com/jbrains/4111662/raw/TestingIoFailure.java">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 20:45:53 GMT
+- request:
+    method: get
+    uri: https://gist.github.com/jbrains/4111662/raw/TestingIoFailure.java
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sun, 17 Nov 2013 20:45:54 GMT
+      content-type:
+      - text/plain; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      strict-transport-security:
+      - max-age=31536000
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      access-control-allow-origin:
+      - https://render.github.com
+      etag:
+      - '"93491d36f2231f211142b9006f573e20"'
+      content-disposition:
+      - inline
+      content-transfer-encoding:
+      - binary
+      x-served-by:
+      - github-fe103-cp1-prd.iad.github.net
+      cache-control:
+      - private
+      x-request-id:
+      - 8cc33dbe-c108-4db2-84f0-511955db6483
+      x-runtime:
+      - '0.016495'
+      vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: |
+        @Test
+        public void ioFailure() throws Exception {
+            final IOException ioFailure = new IOException("Simulating a failure writing to the file.");
+            try {
+                new WriteTextToFileActionImpl() {
+                    @Override
+                    protected FileWriter fileWriterOn(File path) throws IOException {
+                        return new FileWriter(path) {
+                            @Override
+                            public void write(String str, int off, int len) throws IOException {
+                                throw ioFailure;
+                            }
+                        };
+                    }
+                }.writeTextToFile("::text::", new File("anyWritableFile.txt"));
+                fail("How did you survive the I/O failure?!");
+            } catch (IOException success) {
+                if (success != ioFailure)
+                    throw success;
+            }
+        }
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 20:45:54 GMT
+- request:
+    method: get
+    uri: https://gist.github.com/jbrains/4111662/raw/TestingIoFailure.java
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Sun, 17 Nov 2013 20:45:55 GMT
+      content-type:
+      - text/plain; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      strict-transport-security:
+      - max-age=31536000
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      access-control-allow-origin:
+      - https://render.github.com
+      etag:
+      - '"93491d36f2231f211142b9006f573e20"'
+      content-disposition:
+      - inline
+      content-transfer-encoding:
+      - binary
+      x-served-by:
+      - github-fe103-cp1-prd.iad.github.net
+      cache-control:
+      - private
+      x-request-id:
+      - 5039b06b-d699-4748-ac84-d5736558463b
+      x-runtime:
+      - '0.011352'
+      vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: |
+        @Test
+        public void ioFailure() throws Exception {
+            final IOException ioFailure = new IOException("Simulating a failure writing to the file.");
+            try {
+                new WriteTextToFileActionImpl() {
+                    @Override
+                    protected FileWriter fileWriterOn(File path) throws IOException {
+                        return new FileWriter(path) {
+                            @Override
+                            public void write(String str, int off, int len) throws IOException {
+                                throw ioFailure;
+                            }
+                        };
+                    }
+                }.writeTextToFile("::text::", new File("anyWritableFile.txt"));
+                fail("How did you survive the I/O failure?!");
+            } catch (IOException success) {
+                if (success != ioFailure)
+                    throw success;
+            }
+        }
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 20:45:55 GMT
+recorded_with: VCR 2.7.0

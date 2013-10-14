@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.duckduckgo.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+  response:
+    status:
+      code: 301
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Sun, 17 Nov 2013 18:36:43 GMT
+      content-type:
+      - text/html
+      content-length:
+      - '178'
+      connection:
+      - close
+      location:
+      - https://duckduckgo.com/
+      expires:
+      - Sun, 17 Nov 2013 18:36:44 GMT
+      cache-control:
+      - max-age=1
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body
+        bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 18:36:43 GMT
+recorded_with: VCR 2.7.0
