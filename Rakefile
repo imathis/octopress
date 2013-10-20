@@ -234,6 +234,25 @@ task :copydot, :source, :dest do |t, args|
   end
 end
 
+desc "compress output files"
+task :compress do
+
+    require 'jekyll'
+    CONF = Jekyll.configuration({})
+    public_dir = CONF["destination"]
+    puts "## Compressing html"
+    Dir.glob("#{public_dir}/**/*.{htm,html}").each do|ourfile|
+        linedata = ""
+        File.open(ourfile).readlines.each do |line|
+            line = line.gsub(/\s+/, " ").strip.delete("\n")
+            linedata << line
+    end
+    compfile = open(ourfile, "w")
+    compfile.write(linedata)
+    compfile.close
+    end 
+end
+
 desc "Deploy website via rsync"
 task :rsync do
   exclude = ""
