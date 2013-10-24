@@ -119,7 +119,7 @@ module Jekyll
 ===============================================
  Error for category_generator.rb plugin
 -----------------------------------------------
- No 'category_index.hmtl' in source/_layouts/
+ No 'category_index.html' in source/_layouts/
  Perhaps you haven't installed a theme yet.
 ===============================================
 
@@ -191,4 +191,3 @@ ERR
   end
 
 end
-
