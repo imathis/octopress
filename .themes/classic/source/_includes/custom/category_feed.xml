@@ -4,7 +4,7 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %} | {{ site.title }}]]></title>
+  <title><![CDATA[{% if site.titlecase %}{{ page.title | titlecase | cdata_escape }}{% else %}{{ page.title | cdata_escape }}{% endif %} | {{ site.title | cdata_escape }}]]></title>
   <link href="{{ site.url }}/{{ page.feed_url }}" rel="self"/>
   <link href="{{ site.url }}/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
