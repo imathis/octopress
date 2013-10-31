@@ -8,8 +8,7 @@ categories: release
 ---
 
 Octopress is a framework designed by [Brandon Mathis](http://brandonmathis.com) for [Jekyll](http://github.com/mojombo/jekyll), the blog aware static site generator powering [Github Pages](http://pages.github.com).
-To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress
-All of that is already taken care of. Simply [clone or fork Octopress](https://github.com/imathis/octopress), install dependencies and the theme, and you're set.
+To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress, all of that is already taken care of. Simply [clone or fork Octopress](https://github.com/imathis/octopress), install dependencies and the theme, and you're set.
 
 ## What's new in 2.0?
 
@@ -19,7 +18,7 @@ Octopress comes with:
 
 - A semantic HTML5 template
 - A Mobile first responsive layout (rotate, or resize your browser and see)
-- Built in 3rd party support for Twitter, Google Plus One, Disqus Comments, Pinboard, Delicious, and Google Analytics
+- Built in 3rd party support for Twitter, Google Plus, Disqus Comments, Pinboard, Delicious, and Google Analytics
 - An easy deployment strategy using Github pages or Rsync
 - Built in support for POW and Rack servers
 - Easy theming with Compass and Sass
@@ -47,6 +46,6 @@ For more plugins check out the [plugin list](/docs/plugins)
 
 Octopress is really easy to set up and deploy, [start here](/docs/setup).
 
-For now that's it. Check out the [docs](/docs), [kick the tires](http://github.com/imathis/octopress), post [issues](http://github.com/imathis/octopress/issues) send me [support requests](http://convore.com/octopress/support) and tell all your friends.
+For now that's it. Check out the [docs](/docs), [kick the tires](http://github.com/imathis/octopress), post [issues](http://github.com/imathis/octopress/issues), send me [support requests](http://convore.com/octopress/support), and tell all your friends.
 
 Oh, and if you like, follow [@octopress](http://twitter.com/octopress) and [@imathis](http://twitter.com/imathis) on Twitter.
