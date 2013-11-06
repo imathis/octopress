@@ -107,7 +107,7 @@ module Jekyll
     def write_category_indexes
       if self.layouts.key? 'category_index'
         dir = self.config['category_dir'] || 'categories'
-        self.categories.keys.each do |category|
+        downcase_categories(self.categories).keys.each do |category|
           self.write_category_index(File.join(dir, category.to_url), category)
         end
 
@@ -125,6 +125,26 @@ module Jekyll
 
 ERR
       end
+    end
+
+    # Convert categories into downcase keys to solve issue that 'Git' and 'git' will override each other
+    alias orig_site_payload site_payload
+    def site_payload
+        h = orig_site_payload
+        payload = h["site"]
+        payload['categories'] = downcase_categories(payload['categories'])
+
+        h["site"] = payload
+        h
+    end
+
+    def downcase_categories(categories)
+        downcase_categories = {}
+        categories.each do |k, v|
+          downcase_categories[k.downcase] ||= []
+          downcase_categories[k.downcase] += v
+        end
+        downcase_categories
     end
 
   end
