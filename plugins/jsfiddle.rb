@@ -29,7 +29,7 @@ module Jekyll
 
     def render(context)
       if @fiddle
-        "<iframe style=\"width: #{@width}; height: #{@height}\" src=\"http://jsfiddle.net/#{@fiddle}/embedded/#{@sequence}/#{@skin}/\"></iframe>"
+        "<iframe style=\"width: #{@width}; height: #{@height}\" frameborder=\"0\" seamless=\"seamless\" src=\"http://jsfiddle.net/#{@fiddle}/embedded/#{@sequence}/#{@skin}/\"></iframe>"
       else
         "Error processing input, expected syntax: {% jsfiddle shorttag [tabs] [skin] [height] [width] %}"
       end
