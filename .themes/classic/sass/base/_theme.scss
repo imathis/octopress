@@ -36,7 +36,7 @@ $nav-border-right: lighten($nav-bg, 7) !default;
 
 /* Sidebar colors */
 $sidebar-bg: #f2f2f2 !default;
-$sidebar-link-color: $link-color !default;
+$sidebar-link-color: $text-color !default;
 $sidebar-link-color-hover: $link-color-hover !default;
 $sidebar-link-color-active: $link-color-active !default;
 $sidebar-color: change-color(mix($text-color, $sidebar-bg, 80), $hue: hue($sidebar-bg), $saturation: saturation($sidebar-bg)/2) !default;
