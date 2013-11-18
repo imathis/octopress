@@ -23,11 +23,15 @@ module Jekyll
     def render(context)
       if parts = @text.match(/([a-zA-Z\d]*) (.*)/)
         gist, file = parts[1].strip, parts[2].strip
+      else
+        gist, file = @text.strip, ""
+      end
+      if gist.empty?
+        ""
+      else
         script_url = script_url_for gist, file
         code       = get_cached_gist(gist, file) || get_gist_from_web(gist, file)
         html_output_for script_url, code
-      else
-        ""
       end
     end
 
