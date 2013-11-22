@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: MongoDB, | Avi Tzurel]]></title>
+  <link href="http://avi.io/blog/categories/mongodb-/atom.xml" rel="self"/>
+  <link href="http://avi.io/"/>
+  <updated>2013-11-22T16:57:35+02:00</updated>
+  <id>http://avi.io/</id>
+  <author>
+    <name><![CDATA[Avi Tzurel]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Export mongo collection to json with query (and a bonus)]]></title>
+    <link href="http://avi.io/blog/2013/11/22/export-mongo-collection-to-json-with-query/"/>
+    <updated>2013-11-22T16:39:00+02:00</updated>
+    <id>http://avi.io/blog/2013/11/22/export-mongo-collection-to-json-with-query</id>
+    <content type="html"><![CDATA[<p>I work a lot with MongoDB, and this is not the "Why not MongoDB" or "Why MongoDB" type of post, I know it's popular to trash Mongo lately.</p>
+
+<p>Anyway, while working with Mongo, from time to time I need to export a collection, or a subset of the collection based on a query.</p>
+
+<p>I love using <code>mongoexport</code> because you basically get JSON file out of it (or CSV) and from there on you can pretty much do anything you want with it.</p>
+
+<p>You can use Amazon's MapReduce or any other solution you may want.</p>
+
+<p>For example, when I do usually is export a list I need, load it into Rails console and work with the output, queue it up to the worker list etc...</p>
+
+<p>Let's cover some scenarios I use the most</p>
+
+<h2>Export Collection To JSON</h2>
+
+<p>Actually, I never use it, since the collections are too big for the disk to handle at once, we have a sharded collection, so no one-disk solution can hold the data.</p>
+
+<p>That been said, I think for most people this can be very useful.</p>
+
+<p><code>
+mongoexport --host HOST --port PORT --db DB_NAME -u USERNAME -p PASSWORD --collection COLLECTION_NANE -q '{}' --out YOUR_FILENAME.json
+</code></p>
+
+<h2>Export part of the collection to JSON (using a query)</h2>
+
+<p><code>
+mongoexport --host HOST --port PORT --db DB_NAME -u USERNAME -p PASSWORD --collection COLLECTION_NANE -q '{ "some_numeric_field": { "$gte": 100 } }' --out YOUR_FILENAME.json
+</code></p>
+
+<p>The most important part here is that the -q options needs to be a valid JSON format query that Mongo knows how to handle <code>{ "some_numeric_field": { "$gte": 100 } }</code>. You can of course use far more complicated queries, but for most cases I don't need to.</p>
+
+<h2>Bonus</h2>
+
+<p>I use <a href="http://kapeli.com/dash">Dash</a> every day, multiple times a day, so it was only natural to have a dash snippet that I can use</p>
+
+<p>Dash snippets are basically a way to paste some code using a shortcode, so typing <code>mongoexport</code> in the console pops up a window where I can complete the rest of the command easily without remembering the options.</p>
+
+<p>Here's the Dash snippets</p>
+
+<p><code>
+mongoexport --host __host__ --port __port__ --db __db-name__ -u __username__ -p __pass__ --collection __collection__ -q '__query__' --out __filename__.json
+</code></p>
+
+<p>And this is what the window looks like when I type the shortcode, I tab through the place holders and there's a no-brainer way to remember the command and the options.</p>
+
+<p><img src="https://www.evernote.com/shard/s54/sh/12b3d1f2-1db6-4263-9776-0b6e209f9be6/d8a1a1191a075b3d2c71262b70e2b86b/res/8d37de67-11a7-4708-a79a-e59b7a278bef/skitch.png?resizeSmall&amp;width=832" alt="dash snippet window" /></p>
+]]></content>
+  </entry>
+  
+</feed>

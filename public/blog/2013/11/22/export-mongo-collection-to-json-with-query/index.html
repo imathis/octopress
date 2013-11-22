@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Problems with Mongoid and Sidekiq- Brainstorming - Avi Tzurel</title>
+  <title>Export mongo collection to json with query (and a bonus) - Avi Tzurel</title>
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="A few weeks back, we started slowly upgrading all of our queues at Gogobot to work with Sidekiq. Posts on how awesome the experience was and how much &hellip;">
+  <meta name="description" content="I work a lot with MongoDB, and this is not the &#8220;Why not MongoDB&#8221; or &#8220;Why MongoDB&#8221; type of post, I know it&#8217;s popular to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">
+  <link rel="canonical" href="http://avi.io/blog/2013/11/22/export-mongo-collection-to-json-with-query/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Problems With Mongoid and Sidekiq- Brainstorming</h1>
+      <h1 class="entry-title">Export Mongo Collection to Json With Query (and a Bonus)</h1>
     
     
       <p class="meta">
@@ -96,7 +96,7 @@
   
 
 
-<time datetime="2013-01-30T20:13:00+02:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
+<time datetime="2013-11-22T16:39:00+02:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -105,66 +105,51 @@
   </header>
 
 
-<div class="entry-content"><p>A few weeks back, we started slowly upgrading all of our queues at <a href="http://www.gogobot.com">Gogobot</a> to work with <a href="https://github.com/mperham/sidekiq">Sidekiq</a>.</p>
+<div class="entry-content"><p>I work a lot with MongoDB, and this is not the &#8220;Why not MongoDB&#8221; or &#8220;Why MongoDB&#8221; type of post, I know it&#8217;s popular to trash Mongo lately.</p>
 
-<p>Posts on how awesome the experience was and how much better Sidekiq is from <a href="http://github.com/defunkt/sidekiq">Resque</a> coming soon, though with all the good came some bad.</p>
+<p>Anyway, while working with Mongo, from time to time I need to export a collection, or a subset of the collection based on a query.</p>
 
-<h2>Summary of the solution</h2>
+<p>I love using <code>mongoexport</code> because you basically get JSON file out of it (or CSV) and from there on you can pretty much do anything you want with it.</p>
 
-<p>With Sidekiq, we are processing around <strong>25X more</strong> jobs than what we were doing with Resque, processing around 15,000,000 jobs per day, at paces of over 1K per second at times (at peak we go up well past that)</p>
+<p>You can use Amazon&#8217;s MapReduce or any other solution you may want.</p>
 
-<p>This is how many jobs we processed today…</p>
+<p>For example, when I do usually is export a list I need, load it into Rails console and work with the output, queue it up to the worker list etc&#8230;</p>
 
-<p><img src="http://d.pr/i/O9aU+" alt="Sidekiq history graph for today" /></p>
+<p>Let&#8217;s cover some scenarios I use the most</p>
 
-<p>And this is a snapshot of our realtime graph</p>
+<h2>Export Collection To JSON</h2>
 
-<p><img src="http://d.pr/i/7Fkr+" alt="Realtime graph snapshot" /></p>
+<p>Actually, I never use it, since the collections are too big for the disk to handle at once, we have a sharded collection, so no one-disk solution can hold the data.</p>
 
-<p>On the MongoDB side we are working with Mongoid and we have a shared environment, 9 shards with 3 replicas in each shard, all running through 2 routers.</p>
+<p>That been said, I think for most people this can be very useful.</p>
 
-<p>Our production mongoid config looks like this</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">op_timeout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">connection_timeout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">sessions</span><span class="p-Indicator">:</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">hosts</span><span class="p-Indicator">:</span>
-</span><span class='line'>        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">HOST_NAME:27017</span> <span class="c1">#Single router R0</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">USER_NAME</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">PASSWORD</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">DATABASE_NAME</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
-</span><span class='line'>        <span class="l-Scalar-Plain">consistency</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">:eventual</span>
-</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mongoexport --host HOST --port PORT --db DB_NAME -u USERNAME -p PASSWORD --collection COLLECTION_NANE -q '{}' --out YOUR_FILENAME.json</span></code></pre></td></tr></table></div></figure>
 
 
-<p>We are using latest versions of all relevant gems (Sidekiq, Mongoid, Moped, Redis)</p>
+<h2>Export part of the collection to JSON (using a query)</h2>
 
-<h2>All seems fine right? What&#8217;s the problem?</h2>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mongoexport --host HOST --port PORT --db DB_NAME -u USERNAME -p PASSWORD --collection COLLECTION_NANE -q '{ "some_numeric_field": { "$gte": 100 } }' --out YOUR_FILENAME.json</span></code></pre></td></tr></table></div></figure>
 
-<p>The problem is that we have too many connections opening and closing to our mongo instances. (~25-40 new connections per second).</p>
 
-<p>Each time a job is picked up, a connection to Mongo is opened and when the job is done, this connection is closed (using Kiqstand middleware).</p>
+<p>The most important part here is that the -q options needs to be a valid JSON format query that Mongo knows how to handle <code>{ "some_numeric_field": { "$gte": 100 } }</code>. You can of course use far more complicated queries, but for most cases I don&#8217;t need to.</p>
 
-<p>This is causing huge loads on our router server, and causing mongo to run out of file descriptors at times.</p>
+<h2>Bonus</h2>
 
-<h2>SO?</h2>
+<p>I use <a href="http://kapeli.com/dash">Dash</a> every day, multiple times a day, so it was only natural to have a dash snippet that I can use</p>
 
-<p>More then anything, this post is a callout for discussion with anyone using similar solution with similar scale and can assist, I know I would love to brainstorm on how to solve this problem.</p>
+<p>Dash snippets are basically a way to paste some code using a shortcode, so typing <code>mongoexport</code> in the console pops up a window where I can complete the rest of the command easily without remembering the options.</p>
+
+<p>Here&#8217;s the Dash snippets</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mongoexport --host __host__ --port __port__ --db __db-name__ -u __username__ -p __pass__ --collection __collection__ -q '__query__' --out __filename__.json</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And this is what the window looks like when I type the shortcode, I tab through the place holders and there&#8217;s a no-brainer way to remember the command and the options.</p>
+
+<p><img src="https://www.evernote.com/shard/s54/sh/12b3d1f2-1db6-4263-9776-0b6e209f9be6/d8a1a1191a075b3d2c71262b70e2b86b/res/8d37de67-11a7-4708-a79a-e59b7a278bef/skitch.png?resizeSmall&amp;width=832" alt="dash snippet window" /></p>
 </div>
 
 
@@ -187,12 +172,12 @@
   
 
 
-<time datetime="2013-01-30T20:13:00+02:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
+<time datetime="2013-11-22T16:39:00+02:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/mongodb/'>MongoDB</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-on-rails/'>Ruby on rails</a>
+    <a class='category' href='/blog/categories/mongodb-/'>MongoDB,</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
   
 </span>
 
@@ -201,7 +186,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/" data-via="KensoDev" data-counturl="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2013/11/22/export-mongo-collection-to-json-with-query/" data-via="KensoDev" data-counturl="http://avi.io/blog/2013/11/22/export-mongo-collection-to-json-with-query/" >Tweet</a>
   
   
   
@@ -212,10 +197,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works/" title="Previous Post: RailsConf 2012 talk - How Gogobot works">&laquo; RailsConf 2012 talk - How Gogobot works</a>
+        <a class="basic-alignment left" href="/blog/2013/10/06/how-to-easily-generate-beautiful-api-documentation/" title="Previous Post: How to easily generate beautiful api documentation">&laquo; How to easily generate beautiful api documentation</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/02/04/building-the-gogobot-social-graph/" title="Next Post: building the gogobot social graph">building the gogobot social graph &raquo;</a>
       
     </p>
   </footer>
@@ -374,8 +357,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/';
-        var disqus_url = 'http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/';
+        var disqus_identifier = 'http://avi.io/blog/2013/11/22/export-mongo-collection-to-json-with-query/';
+        var disqus_url = 'http://avi.io/blog/2013/11/22/export-mongo-collection-to-json-with-query/';
         var disqus_script = 'embed.js';
       
     (function () {

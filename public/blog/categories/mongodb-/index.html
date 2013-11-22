@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Problems with Mongoid and Sidekiq- Brainstorming - Avi Tzurel</title>
+  <title>Category: MongoDB, - Avi Tzurel</title>
   <meta name="author" content="Avi Tzurel">
 
   
-  <meta name="description" content="A few weeks back, we started slowly upgrading all of our queues at Gogobot to work with Sidekiq. Posts on how awesome the experience was and how much &hellip;">
+  <meta name="description" content="Category: MongoDB,">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/">
+  <link rel="canonical" href="http://avi.ioblog/categories/mongodb-/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -76,156 +76,36 @@
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">Problems With Mongoid and Sidekiq- Brainstorming</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-30T20:13:00+02:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
-        
-         | <a href="#disqus_thread">Comments</a>
-        
-      </p>
+    <h1 class="entry-title">Category: MongoDB,</h1>
     
   </header>
-
-
-<div class="entry-content"><p>A few weeks back, we started slowly upgrading all of our queues at <a href="http://www.gogobot.com">Gogobot</a> to work with <a href="https://github.com/mperham/sidekiq">Sidekiq</a>.</p>
-
-<p>Posts on how awesome the experience was and how much better Sidekiq is from <a href="http://github.com/defunkt/sidekiq">Resque</a> coming soon, though with all the good came some bad.</p>
-
-<h2>Summary of the solution</h2>
-
-<p>With Sidekiq, we are processing around <strong>25X more</strong> jobs than what we were doing with Resque, processing around 15,000,000 jobs per day, at paces of over 1K per second at times (at peak we go up well past that)</p>
-
-<p>This is how many jobs we processed today…</p>
-
-<p><img src="http://d.pr/i/O9aU+" alt="Sidekiq history graph for today" /></p>
-
-<p>And this is a snapshot of our realtime graph</p>
-
-<p><img src="http://d.pr/i/7Fkr+" alt="Realtime graph snapshot" /></p>
-
-<p>On the MongoDB side we are working with Mongoid and we have a shared environment, 9 shards with 3 replicas in each shard, all running through 2 routers.</p>
-
-<p>Our production mongoid config looks like this</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">op_timeout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">connection_timeout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">sessions</span><span class="p-Indicator">:</span>
-</span><span class='line'>    <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">hosts</span><span class="p-Indicator">:</span>
-</span><span class='line'>        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">HOST_NAME:27017</span> <span class="c1">#Single router R0</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">USER_NAME</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">PASSWORD</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">DATABASE_NAME</span>
-</span><span class='line'>      <span class="l-Scalar-Plain">options</span><span class="p-Indicator">:</span>
-</span><span class='line'>        <span class="l-Scalar-Plain">consistency</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">:eventual</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We are using latest versions of all relevant gems (Sidekiq, Mongoid, Moped, Redis)</p>
-
-<h2>All seems fine right? What&#8217;s the problem?</h2>
-
-<p>The problem is that we have too many connections opening and closing to our mongo instances. (~25-40 new connections per second).</p>
-
-<p>Each time a job is picked up, a connection to Mongo is opened and when the job is done, this connection is closed (using Kiqstand middleware).</p>
-
-<p>This is causing huge loads on our router server, and causing mongo to run out of file descriptors at times.</p>
-
-<h2>SO?</h2>
-
-<p>More then anything, this post is a callout for discussion with anyone using similar solution with similar scale and can assist, I know I would love to brainstorm on how to solve this problem.</p>
-</div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">Avi Tzurel</span></span>
-
-      
-
-
-
-
-
+  <div id="blog-archives" class="category">
 
 
 
   
+  <h2>2013</h2>
+
+<article>
+  
+<h1><a href="/blog/2013/11/22/export-mongo-collection-to-json-with-query/">Export mongo collection to json with query (and a bonus)</a></h1>
+<time datetime="2013-11-22T16:39:00+02:00" pubdate><span class='month'>Nov</span> <span class='day'>22</span> <span class='year'>2013</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/mongodb-/'>MongoDB,</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a></span>
+</footer>
 
 
-<time datetime="2013-01-30T20:13:00+02:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/mongodb/'>MongoDB</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-on-rails/'>Ruby on rails</a>
-  
-</span>
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/" data-via="KensoDev" data-counturl="http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/" >Tweet</a>
-  
-  
-  
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works/" title="Previous Post: RailsConf 2012 talk - How Gogobot works">&laquo; RailsConf 2012 talk - How Gogobot works</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2013/02/04/building-the-gogobot-social-graph/" title="Next Post: building the gogobot social graph">building the gogobot social graph &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  </section>
+
+  
+</article>
 
 </div>
 
@@ -373,10 +253,7 @@
       var disqus_shortname = 'avi-io';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/';
-        var disqus_url = 'http://avi.io/blog/2013/01/30/problems-with-mongoid-and-sidekiq-brainstorming/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
