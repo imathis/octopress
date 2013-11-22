@@ -50,4 +50,4 @@ mongoexport --host __host__ --port __port__ --db __db-name__ -u __username__ -p 
 
 And this is what the window looks like when I type the shortcode, I tab through the place holders and there's a no-brainer way to remember the command and the options.
 
-![dash snippet window](https://www.evernote.com/shard/s54/sh/12b3d1f2-1db6-4263-9776-0b6e209f9be6/d8a1a1191a075b3d2c71262b70e2b86b/res/8d37de67-11a7-4708-a79a-e59b7a278bef/skitch.png?resizeSmall&width=832)
+![dash snippet window](http://f.cl.ly/items/2x3G2t3N2o2I0817220t/Screenshot_11_22_13__4_56_PM.png)
