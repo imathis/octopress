@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Avi Tzurel]]></title>
   <link href="http://avi.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2013-11-22T16:57:35+02:00</updated>
+  <updated>2013-11-22T17:01:50+02:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Export mongo collection to json with query (and a bonus)]]></title>
+    <title type="html"><![CDATA[Real life usage for mongoexport (and a bonus)]]></title>
     <link href="http://avi.io/blog/2013/11/22/export-mongo-collection-to-json-with-query/"/>
     <updated>2013-11-22T16:39:00+02:00</updated>
     <id>http://avi.io/blog/2013/11/22/export-mongo-collection-to-json-with-query</id>

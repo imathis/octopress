@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Export mongo collection to json with query (and a bonus)"
+title: "Real life usage for mongoexport (and a bonus)"
 date: 2013-11-22 16:39
 comments: true
-categories: MongoDB, Ruby 
+categories: MongoDB Ruby 
 ---
 
 I work a lot with MongoDB, and this is not the "Why not MongoDB" or "Why MongoDB" type of post, I know it's popular to trash Mongo lately.
