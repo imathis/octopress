@@ -67,6 +67,7 @@ github_user:
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
+github_blacklist_repos: "" # Comma-separated list of repositories you don't want to appear in the Github widget
 
 # Twitter
 twitter_user:
