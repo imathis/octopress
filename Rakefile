@@ -174,6 +174,10 @@ task :clean do
   rm_rf [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
 end
 
+desc "Perform combined update_style and update_source tasks"
+task :update => [:update_style, :update_source] do
+end
+
 desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"
 task :update_style, :theme do |t, args|
   theme = args.theme || 'classic'
