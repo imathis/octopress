@@ -4,7 +4,7 @@
   <title><![CDATA[Avi Tzurel]]></title>
   <link href="http://avi.io/atom.xml" rel="self"/>
   <link href="http://avi.io/"/>
-  <updated>2013-11-22T17:16:44+02:00</updated>
+  <updated>2013-12-03T20:25:19+02:00</updated>
   <id>http://avi.io/</id>
   <author>
     <name><![CDATA[Avi Tzurel]]></name>
@@ -12,6 +12,177 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Upload folder to S3 recursively]]></title>
+    <link href="http://avi.io/blog/2013/12/03/upload-folder-to-s3-recursively/"/>
+    <updated>2013-12-03T19:46:00+02:00</updated>
+    <id>http://avi.io/blog/2013/12/03/upload-folder-to-s3-recursively</id>
+    <content type="html"><![CDATA[<p>Lately, I needed to upload a folder to S3 with all of it&#8217;s files.</p>
+
+<p>The use-case is compiling assets on the CI and then uploading it to S3 for the CDN to consume.</p>
+
+<p>While searching for a gem that does it I encountered <a href="https://github.com/chrishein/s3_uploader">s3_uploader</a>, but I really didn&#8217;t like it because it&#8217;s using Fog.</p>
+
+<p>Generally, I don&#8217;t like gems that use other gems for no apparent reason, there&#8217;s absolutely no reason to include fog in my project just to upload files recursively.</p>
+
+<p>I did however, like that it&#8217;s using multi threads in order to do the upload so I am doing the same in my solution.</p>
+
+<p>I wrote a solution that uses the aws-s3 Ruby SDK, which was already included in my project anyway.</p>
+
+<p>Here&#8217;s the code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">S3FolderUpload</span>
+</span><span class='line'>  <span class="kp">attr_reader</span> <span class="ss">:folder_path</span><span class="p">,</span> <span class="ss">:total_files</span><span class="p">,</span> <span class="ss">:bucket</span><span class="p">,</span> <span class="ss">:s3_connection</span>
+</span><span class='line'>  <span class="kp">attr_accessor</span> <span class="ss">:files</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># Initialize the upload class</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1"># folder_path - path to the folder that you want to upload</span>
+</span><span class='line'>  <span class="c1"># bucket - The bucket you want to upload to</span>
+</span><span class='line'>  <span class="c1"># aws_key - Your key generated by AWS defaults to the environemt setting AWS_KEY_ID</span>
+</span><span class='line'>  <span class="c1"># aws_secret - The secret generated by AWS</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1"># Examples</span>
+</span><span class='line'>  <span class="c1">#   =&gt; uploader = S3FolderUpload.new(&quot;some_route/test_folder&quot;, &#39;your_bucket_name&#39;)</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span> <span class="n">bucket</span><span class="p">,</span> <span class="n">aws_key</span> <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;AWS_KEY_ID&#39;</span><span class="o">]</span><span class="p">,</span> <span class="n">aws_secret</span> <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;AWS_SECRET&#39;</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>    <span class="vi">@folder_path</span>       <span class="o">=</span> <span class="n">folder_path</span>
+</span><span class='line'>    <span class="vi">@bucket</span>            <span class="o">=</span> <span class="n">bucket</span>
+</span><span class='line'>    <span class="vi">@files</span>             <span class="o">=</span> <span class="no">Dir</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">folder_path</span><span class="si">}</span><span class="s2">/**/*&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="vi">@total_files</span>       <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">length</span>
+</span><span class='line'>    <span class="vi">@s3_connection</span>     <span class="o">=</span> <span class="no">AWS</span><span class="o">::</span><span class="no">S3</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:access_key_id</span> <span class="o">=&gt;</span> <span class="n">aws_key</span><span class="p">,</span>
+</span><span class='line'>                                    <span class="ss">:secret_access_key</span> <span class="o">=&gt;</span> <span class="n">aws_secret</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># public: Upload files from the folder to S3</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1"># thread_count - How many threads you want to use (defaults to 5)</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1"># Examples</span>
+</span><span class='line'>  <span class="c1">#   =&gt; uploader.upload!(20)</span>
+</span><span class='line'>  <span class="c1">#     true</span>
+</span><span class='line'>  <span class="c1">#   =&gt; uploader.upload!</span>
+</span><span class='line'>  <span class="c1">#     true</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1"># Returns true when finished the process</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">upload!</span><span class="p">(</span><span class="n">thread_count</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">file_number</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'>    <span class="n">mutex</span>       <span class="o">=</span> <span class="no">Mutex</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>    <span class="n">threads</span>     <span class="o">=</span> <span class="o">[]</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">thread_count</span><span class="o">.</span><span class="n">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">threads</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="no">Thread</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">until</span> <span class="n">files</span><span class="o">.</span><span class="n">empty?</span>
+</span><span class='line'>          <span class="n">mutex</span><span class="o">.</span><span class="n">synchronize</span> <span class="k">do</span>
+</span><span class='line'>            <span class="n">file_number</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span class='line'>            <span class="no">Thread</span><span class="o">.</span><span class="n">current</span><span class="o">[</span><span class="s2">&quot;file_number&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="n">file_number</span>
+</span><span class='line'>          <span class="k">end</span>
+</span><span class='line'>          <span class="n">file</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">pop</span> <span class="k">rescue</span> <span class="kp">nil</span>
+</span><span class='line'>          <span class="k">next</span> <span class="k">unless</span> <span class="n">file</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="c1"># I had some more manipulation here figuring out the git sha</span>
+</span><span class='line'>          <span class="c1"># For the sake of the example, we&#39;ll leave it simple</span>
+</span><span class='line'>          <span class="c1">#</span>
+</span><span class='line'>          <span class="n">path</span> <span class="o">=</span> <span class="n">file</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="nb">puts</span> <span class="s2">&quot;[</span><span class="si">#{</span><span class="no">Thread</span><span class="o">.</span><span class="n">current</span><span class="o">[</span><span class="s2">&quot;file_number&quot;</span><span class="o">]</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">total_files</span><span class="si">}</span><span class="s2">] uploading...&quot;</span>
+</span><span class='line'>          <span class="n">data</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</span><span class='line'>          <span class="k">next</span> <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">directory?</span> <span class="n">data</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="nb">puts</span> <span class="s2">&quot;Path: </span><span class="si">#{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>          <span class="n">obj</span> <span class="o">=</span> <span class="n">s3_connection</span><span class="o">.</span><span class="n">buckets</span><span class="o">[</span><span class="n">bucket</span><span class="o">].</span><span class="n">objects</span><span class="o">[</span><span class="n">path</span><span class="o">]</span>
+</span><span class='line'>          <span class="n">obj</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">{})</span>
+</span><span class='line'>        <span class="k">end</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>    <span class="n">threads</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span> <span class="n">t</span><span class="o">.</span><span class="n">join</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The usage is really simple</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">uploader</span> <span class="o">=</span> <span class="no">S3FolderUpload</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;folder_name&#39;</span><span class="p">,</span> <span class="s1">&#39;your_bucket&#39;</span><span class="p">,</span> <span class="n">aws_key</span><span class="p">,</span> <span class="n">aws_secret</span><span class="p">)</span>
+</span><span class='line'><span class="n">uploader</span><span class="o">.</span><span class="n">upload!</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Since it&#8217;s using Threads, the upload is really fast, both from local machines and from servers.</p>
+
+<p>Have fun coding!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Real life usage for mongoexport (and a bonus)]]></title>

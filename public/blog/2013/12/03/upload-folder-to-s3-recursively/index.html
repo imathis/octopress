@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Upload folder to S3 recursively - Avi Tzurel</title>
+  <meta name="author" content="Avi Tzurel">
+
+  
+  <meta name="description" content="Lately, I needed to upload a folder to S3 with all of it&#8217;s files. The use-case is compiling assets on the CI and then uploading it to S3 for &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://avi.io/blog/2013/12/03/upload-folder-to-s3-recursively/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Avi Tzurel" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33891290-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Avi Tzurel</a></h1>
+  
+    <h2>Blogging about Ruby/Rails and related web stuff</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:avi.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Upload Folder to S3 Recursively</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-03T19:46:00+02:00" pubdate data-updated="true">Dec 3<span>rd</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Lately, I needed to upload a folder to S3 with all of it&#8217;s files.</p>
+
+<p>The use-case is compiling assets on the CI and then uploading it to S3 for the CDN to consume.</p>
+
+<p>While searching for a gem that does it I encountered <a href="https://github.com/chrishein/s3_uploader">s3_uploader</a>, but I really didn&#8217;t like it because it&#8217;s using Fog.</p>
+
+<p>Generally, I don&#8217;t like gems that use other gems for no apparent reason, there&#8217;s absolutely no reason to include fog in my project just to upload files recursively.</p>
+
+<p>I did however, like that it&#8217;s using multi threads in order to do the upload so I am doing the same in my solution.</p>
+
+<p>I wrote a solution that uses the aws-s3 Ruby SDK, which was already included in my project anyway.</p>
+
+<p>Here&#8217;s the code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">S3FolderUpload</span>
+</span><span class='line'>  <span class="kp">attr_reader</span> <span class="ss">:folder_path</span><span class="p">,</span> <span class="ss">:total_files</span><span class="p">,</span> <span class="ss">:bucket</span><span class="p">,</span> <span class="ss">:s3_connection</span>
+</span><span class='line'>  <span class="kp">attr_accessor</span> <span class="ss">:files</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># Initialize the upload class</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1"># folder_path - path to the folder that you want to upload</span>
+</span><span class='line'>  <span class="c1"># bucket - The bucket you want to upload to</span>
+</span><span class='line'>  <span class="c1"># aws_key - Your key generated by AWS defaults to the environemt setting AWS_KEY_ID</span>
+</span><span class='line'>  <span class="c1"># aws_secret - The secret generated by AWS</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1"># Examples</span>
+</span><span class='line'>  <span class="c1">#   =&gt; uploader = S3FolderUpload.new(&quot;some_route/test_folder&quot;, &#39;your_bucket_name&#39;)</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span> <span class="n">bucket</span><span class="p">,</span> <span class="n">aws_key</span> <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;AWS_KEY_ID&#39;</span><span class="o">]</span><span class="p">,</span> <span class="n">aws_secret</span> <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;AWS_SECRET&#39;</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>    <span class="vi">@folder_path</span>       <span class="o">=</span> <span class="n">folder_path</span>
+</span><span class='line'>    <span class="vi">@bucket</span>            <span class="o">=</span> <span class="n">bucket</span>
+</span><span class='line'>    <span class="vi">@files</span>             <span class="o">=</span> <span class="no">Dir</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">folder_path</span><span class="si">}</span><span class="s2">/**/*&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="vi">@total_files</span>       <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">length</span>
+</span><span class='line'>    <span class="vi">@s3_connection</span>     <span class="o">=</span> <span class="no">AWS</span><span class="o">::</span><span class="no">S3</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:access_key_id</span> <span class="o">=&gt;</span> <span class="n">aws_key</span><span class="p">,</span>
+</span><span class='line'>                                    <span class="ss">:secret_access_key</span> <span class="o">=&gt;</span> <span class="n">aws_secret</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># public: Upload files from the folder to S3</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1"># thread_count - How many threads you want to use (defaults to 5)</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1"># Examples</span>
+</span><span class='line'>  <span class="c1">#   =&gt; uploader.upload!(20)</span>
+</span><span class='line'>  <span class="c1">#     true</span>
+</span><span class='line'>  <span class="c1">#   =&gt; uploader.upload!</span>
+</span><span class='line'>  <span class="c1">#     true</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1"># Returns true when finished the process</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">upload!</span><span class="p">(</span><span class="n">thread_count</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">file_number</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'>    <span class="n">mutex</span>       <span class="o">=</span> <span class="no">Mutex</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>    <span class="n">threads</span>     <span class="o">=</span> <span class="o">[]</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">thread_count</span><span class="o">.</span><span class="n">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">threads</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="no">Thread</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">until</span> <span class="n">files</span><span class="o">.</span><span class="n">empty?</span>
+</span><span class='line'>          <span class="n">mutex</span><span class="o">.</span><span class="n">synchronize</span> <span class="k">do</span>
+</span><span class='line'>            <span class="n">file_number</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span class='line'>            <span class="no">Thread</span><span class="o">.</span><span class="n">current</span><span class="o">[</span><span class="s2">&quot;file_number&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="n">file_number</span>
+</span><span class='line'>          <span class="k">end</span>
+</span><span class='line'>          <span class="n">file</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">pop</span> <span class="k">rescue</span> <span class="kp">nil</span>
+</span><span class='line'>          <span class="k">next</span> <span class="k">unless</span> <span class="n">file</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="c1"># I had some more manipulation here figuring out the git sha</span>
+</span><span class='line'>          <span class="c1"># For the sake of the example, we&#39;ll leave it simple</span>
+</span><span class='line'>          <span class="c1">#</span>
+</span><span class='line'>          <span class="n">path</span> <span class="o">=</span> <span class="n">file</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="nb">puts</span> <span class="s2">&quot;[</span><span class="si">#{</span><span class="no">Thread</span><span class="o">.</span><span class="n">current</span><span class="o">[</span><span class="s2">&quot;file_number&quot;</span><span class="o">]</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">total_files</span><span class="si">}</span><span class="s2">] uploading...&quot;</span>
+</span><span class='line'>          <span class="n">data</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</span><span class='line'>          <span class="k">next</span> <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">directory?</span> <span class="n">data</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="nb">puts</span> <span class="s2">&quot;Path: </span><span class="si">#{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>          <span class="n">obj</span> <span class="o">=</span> <span class="n">s3_connection</span><span class="o">.</span><span class="n">buckets</span><span class="o">[</span><span class="n">bucket</span><span class="o">].</span><span class="n">objects</span><span class="o">[</span><span class="n">path</span><span class="o">]</span>
+</span><span class='line'>          <span class="n">obj</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">{})</span>
+</span><span class='line'>        <span class="k">end</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>    <span class="n">threads</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span> <span class="n">t</span><span class="o">.</span><span class="n">join</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The usage is really simple</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">uploader</span> <span class="o">=</span> <span class="no">S3FolderUpload</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;folder_name&#39;</span><span class="p">,</span> <span class="s1">&#39;your_bucket&#39;</span><span class="p">,</span> <span class="n">aws_key</span><span class="p">,</span> <span class="n">aws_secret</span><span class="p">)</span>
+</span><span class='line'><span class="n">uploader</span><span class="o">.</span><span class="n">upload!</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Since it&#8217;s using Threads, the upload is really fast, both from local machines and from servers.</p>
+
+<p>Have fun coding!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Avi Tzurel</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-03T19:46:00+02:00" pubdate data-updated="true">Dec 3<span>rd</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/devops/'>Devops</a>, <a class='category' href='/blog/categories/general/'>General</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2013/12/03/upload-folder-to-s3-recursively/" data-via="KensoDev" data-counturl="http://avi.io/blog/2013/12/03/upload-folder-to-s3-recursively/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/11/22/export-mongo-collection-to-json-with-query/" title="Previous Post: Real life usage for mongoexport (and a bonus)">&laquo; Real life usage for mongoexport (and a bonus)</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Avi Tzurel</h1>
+  <img src="https://si0.twimg.com/profile_images/1126793975/4991222376_977467af43_m.jpg" width="128" height="128" style="height: 128px; width: 128px; border-radius: 6px">
+  <p>
+  	Owner @ <a href="http://www.kensodev.com">KensoDev</a>, a boutique software consultancy based in Israel More <a href="/about">about me</a>.
+  </p>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/12/03/upload-folder-to-s3-recursively/">Upload folder to S3 recursively</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/22/export-mongo-collection-to-json-with-query/">Real life usage for mongoexport (and a bonus)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/06/how-to-easily-generate-beautiful-api-documentation/">How to easily generate beautiful api documentation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/">Move jobs from one queue to another - Sidekiq</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/26/a-better-todo-comment-for-your-code/">Better TODO comment for your code</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("KensoDev", 5, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/KensoDev" class="twitter-follow-button" data-show-count="true">Follow @KensoDev</a>
+  
+</section>
+
+
+
+
+
+<section>
+  <h1>My Coderwall</h1>
+  <ul id="cw_badges">
+    <li class="loading">Status updating...</li>
+  </ul>
+
+  <script type="text/javascript">
+    var coderwall = (function(){
+      function render(options, badges){
+        var fragment = '',
+            t = $(options.target)[0],
+            height = 65,
+            width = 65,
+            index;
+
+        for (index in badges) {
+          fragment += '<a class="cw_badge"title="' + badges[index].description + '" href="http://coderwall.com/' + options.user + '">';
+          fragment +=   '<img alt="' + badges[index].description + '" height="' + width + '" width="' + height + '" src="' + badges[index].badge + '"/>';
+          fragment += '</a>';
+        }
+
+        t.innerHTML = fragment;
+      }
+      return {
+        showBadges: function(options){
+          $.ajax({
+              url: 'http://coderwall.com/' + options.user + '.json?callback=?'
+            , type: 'jsonp'
+            , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
+            , success: function(res) {
+                render(options, res.data.badges);
+            }
+          });
+        }
+      };
+    })();
+
+    $.domReady(function(){
+      if (!window.jXHR){
+        var jxhr = document.createElement('script');
+        jxhr.type = 'text/javascript';
+        jxhr.src = '/javascripts/libs/jXHR.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(jxhr, s);
+      }
+      if (!window.$){
+        var b = document.createElement('script');
+        b.type = 'text/javascript';
+        b.src = '/javascripts/ender.js';
+        var sc = document.getElementsByTagName('script')[0];
+        sc.parentNode.insertBefore(jxhr, s);
+      }
+      coderwall.showBadges({
+        user: 'kensodev',
+        target: '#cw_badges'
+      });
+    });
+  </script>
+  <style type="text/css">
+    .cw_badge img {
+      padding: 5px;
+      border: 0 none !important;
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      -o-box-shadow: none !important;
+      box-shadow: none !important;
+    }
+  </style>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Avi Tzurel -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'avi-io';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://avi.io/blog/2013/12/03/upload-folder-to-s3-recursively/';
+        var disqus_url = 'http://avi.io/blog/2013/12/03/upload-folder-to-s3-recursively/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
