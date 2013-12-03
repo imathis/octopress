@@ -1,0 +1,387 @@
+$base03:          #002b36 !default; //darkest blue
+$base02:          #073642 !default; //dark blue
+$base01:          #586e75 !default; //darkest gray
+$base00:          #657b83 !default; //dark gray
+$base0:           #839496 !default; //medium gray
+$base1:           #93a1a1 !default; //medium light gray
+$base2:           #eee8d5 !default; //cream
+$base3:           #fdf6e3 !default; //white
+$solar-yellow:    #b58900 !default;
+$solar-orange:    #cb4b16 !default;
+$solar-red:       #dc322f !default;
+$solar-magenta:   #d33682 !default;
+$solar-violet:    #6c71c4 !default;
+$solar-blue:      #268bd2 !default;
+$solar-cyan:      #2aa198 !default;
+$solar-green:     #859900 !default;
+
+$solarized: light !default;
+
+@if $solarized == light {
+
+  $_base03: $base03;
+  $_base02: $base02;
+  $_base01: $base01;
+  $_base00: $base00;
+  $_base0:  $base0;
+  $_base1:  $base1;
+  $_base2:  $base2;
+  $_base3:  $base3;
+
+  $base03:  $_base3;
+  $base02:  $_base2;
+  $base01:  $_base1;
+  $base00:  $_base0;
+  $base0:   $_base00;
+  $base1:   $_base01;
+  $base2:   $_base02;
+  $base3:   $_base03;
+}
+
+$pre-bg: #eee;
+$pre-border: lighten($color-border, 10%);
+
+article{
+  code, pre{
+    background: $pre-bg;
+    border: 1px solid $pre-border;
+    font-family: $font-mono;
+  }
+  code{
+    font-size: 0.9em;
+    padding: 1px 3px;
+    margin: 0 3px;
+    @include border-radius(5px);
+  }
+  pre{
+    font-size: 1 / 0.9em;
+    line-height: 1.5;
+    margin-top: 15px;
+    padding: 5px 15px;
+    overflow-x: auto;
+    @include border-radius(5px);
+    code{
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      @include border-radius(0);
+    }
+  }
+}
+
+figure.code{
+  background: $pre-bg;
+  border: 1px solid $pre-border;
+  margin-top: 15px;
+  padding: 5px 15px;
+  @include border-radius(5px);
+  figcaption{
+    font-size: 0.9em;
+    position: relative;
+    span{
+      margin: -5px -15px 0;
+      padding: 5px 15px;
+      display: block;
+      @include background(linear-gradient(top, $pre-border, $pre-bg));
+      &:empty{
+        display: none;
+      }
+    }
+    a{
+      position: absolute;
+      top: 5px;
+      right: 0;
+    }
+  }
+  code, pre{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    @include border-radius(0);
+  }
+  .highlight{
+    overflow-x: auto;
+  }
+  .line-numbers{
+    border-right: 1px solid $pre-border;
+    font-family: $font-mono;
+    padding-right: 15px;
+    text-align: right;
+  }
+  table{
+    border: none;
+    text-align: left;
+    margin-top: 0 !important;
+    td{
+      text-align: left;
+    }
+  }
+  td.code{
+    width: 100%;
+    padding-left: 15px;
+    overflow-x: auto;
+  }
+}
+.entry-content .gist{
+  background: $pre-bg;
+  color: $color-meta;
+  padding: 30px 15px 5px;
+  margin-top: 15px;
+  border: 1px solid $pre-border;
+  position: relative;
+  overflow: hidden;
+  @include border-radius(5px);
+  .gist-file{
+    margin: 0;
+    .gist-data{
+      background: none;
+      border: none;
+      pre{
+        font: 0.9em $font-mono;
+        line-height: 1.5;
+      }
+    }
+    .gist-meta{
+      font: 300 0.9em $color-font;
+      line-height: 1.5;
+      margin: 0 -16px -6px;
+      padding: 5px 15px;
+      @include background(linear-gradient(top, $pre-bg, $pre-border));
+      a{
+        color: $color-main01;
+        &:first-of-type{
+          position: absolute;
+          top: 5px;
+          right: 15px;
+          z-index: 1;
+        }
+        &:nth-of-type(2){
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 5px 15px;
+          width: 100%;
+          @include background(linear-gradient(top, $pre-border, $pre-bg));
+        }
+      }
+    }
+  }
+}
+figure.code, .gist-highlight{
+  .c {
+    color:$base01 !important;
+    font-style: italic !important;
+  }
+  /* Comment */
+  .cm {
+    color:$base01 !important;
+    font-style: italic !important;
+  }
+  /* Comment.Multiline */
+  .cp {
+    color:$base01 !important;
+    font-style: italic !important;
+  }
+  /* Comment.Preproc */
+  .c1 {
+    color:$base01 !important;
+    font-style: italic !important;
+  }
+  /* Comment.Single */
+  .cs {
+    color:$base01 !important;
+    font-weight:bold !important;
+    font-style: italic !important;
+  }
+  /* Comment.Special */
+  .err {
+    color:$solar-red !important;
+    background: none !important;
+  }
+  /* Error */
+  .k {
+    color: $solar-orange !important;
+  }
+  /* Keyword */
+  .o {
+    color:$base1 !important;
+    font-weight: bold !important;
+  }
+  /* Operator */
+  .p {
+    color: $base1 !important;
+  }
+  /* Operator */
+  .ow {
+    color:$solar-cyan !important;
+    font-weight: bold !important;
+  }
+  /* Operator.Word */
+  .gd {
+    color:$base1 !important;
+    background-color:mix($solar-red,$base03,25%) !important;
+    display: inline-block;
+  }
+  /* Generic.Deleted */
+  .gd .x {
+    color:$base1 !important;
+    background-color:mix($solar-red,$base03,35%) !important;
+    display: inline-block;
+  }
+  /* Generic.Deleted.Specific */
+  .ge {
+    color:$base1 !important;
+    font-style: italic !important;
+  }
+  /* Generic.Emph */
+  .gh {
+    color: $base01 !important;
+  }
+  /* Generic.Heading */
+  .gi {
+    color:$base1 !important;
+    background-color:mix($solar-green,$base03,20%) !important;
+    display: inline-block;
+  }
+  /* Generic.Inserted */
+  .gi .x {
+    color:$base1 !important;
+    background-color:mix($solar-green,$base03,40%) !important;
+    display: inline-block;
+  }
+  /* Generic.Inserted.Specific */
+  .gs {
+    color:$base1 !important;
+    font-weight: bold !important;
+  }
+  /* Generic.Strong */
+  .gu {
+    color: $solar-violet !important;
+  }
+  /* Generic.Subheading */
+  .kc {
+    color:$solar-green !important;
+    font-weight: bold !important;
+  }
+  /* Keyword.Constant */
+  .kd {
+    color: $solar-blue !important;
+  }
+  /* Keyword.Declaration */
+  .kp {
+    color:$solar-orange !important;
+    font-weight: bold !important;
+  }
+  /* Keyword.Pseudo */
+  .kr {
+    color:$solar-magenta !important;
+    font-weight: bold !important;
+  }
+  /* Keyword.Reserved */
+  .kt {
+    color: $solar-cyan !important;
+  }
+  /* Keyword.Type */
+  .n {
+    color:$solar-blue !important;
+  }
+  .na {
+    color: $solar-blue !important;
+  }
+  /* Name.Attribute */
+  .nb {
+    color: $solar-green !important;
+  }
+  /* Name.Builtin */
+  .nc {
+    color: $solar-magenta !important;
+  }
+  /* Name.Class */
+  .no {
+    color: $solar-yellow !important;
+  }
+  /* Name.Constant */
+  .nl {
+    color:$solar-green !important;
+  }
+  .ne {
+    color:$solar-blue !important;
+    font-weight: bold !important;
+  }
+  /* Name.Exception */
+  .nf {
+    color:$solar-blue !important;
+    font-weight: bold !important;
+  }
+  /* Name.Function */
+  .nn {
+    color: $solar-yellow !important;
+  }
+  /* Name.Namespace */
+  .nt {
+    color:$solar-blue !important;
+    font-weight: bold !important;
+  }
+  /* Name.Tag */
+  .nx {
+    color:$solar-yellow !Important;
+  }
+  .vg {
+    color: $solar-blue !important;
+  }
+  /* Name.Variable.Global */
+  .vi {
+    color: $solar-blue !important;
+  }
+  /* Name.Variable.Instance */
+  .nv {
+    color: $solar-blue !important;
+  }
+  /* Name.Variable */
+  .mf {
+    color: $solar-cyan !important;
+  }
+  /* Literal.Number.Float */
+  .m {
+    color: $solar-cyan !important;
+  }
+  /* Literal.Number */
+  .mh {
+    color: $solar-cyan !important;
+  }
+  /* Literal.Number.Hex */
+  .mi {
+    color: $solar-cyan !important;
+  }
+  /* Literal.Number.Integer */
+  .s {
+    color: $solar-cyan !important;
+  }
+  /* Literal.String */
+  .sd {
+    color: $solar-cyan !important;
+  }
+  /* Literal.String.Doc */
+  .s2 {
+    color: $solar-cyan !important;
+  }
+  /* Literal.String.Double */
+  .se {
+    color: $solar-red !important;
+  }
+  /* Literal.String.Escape */
+  .si {
+    color: $solar-blue !important;
+  }
+  /* Literal.String.Interpol */
+  .sr {
+    color: $solar-cyan !important;
+  }
+  /* Literal.String.Regex */
+  .s1 {
+    color: $solar-cyan !important;
+  }
+  /* Literal.String.Single */
+}

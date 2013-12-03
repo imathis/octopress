@@ -1,0 +1,30 @@
+* + table {
+  border-style:solid;
+  border-width:1px;
+  border-color:#e7e3e7;
+}
+
+* + table th, * + table td {
+  border-style:dashed;
+  border-width:1px;
+  border-color:#e7e3e7;
+  padding: 10px;
+}
+
+* + table th {
+  border-style:solid;
+  font-weight:bold;
+  background: url("/images/noise.png?1330434582") repeat scroll left top #F7F3F7;
+}
+
+* + table th[align="left"], * + table td[align="left"] {
+  text-align:left;
+}
+
+* + table th[align="right"], * + table td[align="right"] {
+  text-align:right;
+}
+
+* + table th[align="center"], * + table td[align="center"] {
+  text-align:center;
+}

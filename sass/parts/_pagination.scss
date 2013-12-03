@@ -1,0 +1,34 @@
+#pagenavi{
+  font-family: $font-title;
+  height: 15 + 10px;
+  position: relative;
+  margin-bottom: 50px;
+  a{
+    background: $color-main01;
+    color: #fff;
+    display: block;
+    line-height: 15px;
+    opacity: 0.7;
+    padding: 5px 15px;
+    @include border-radius(15px);
+    @include transition(0.3s);
+    &:hover{
+      opacity: 1;
+    }
+    &:before, &:after{
+      font-family: $font-icon;
+    }
+  }
+  .prev{
+    &:before{
+      content: "\f053";
+      padding-right: 15px;
+    }
+  }
+  .next{
+    &:after{
+      content: "\f054";
+      padding-left: 15px;
+    }
+  }
+}

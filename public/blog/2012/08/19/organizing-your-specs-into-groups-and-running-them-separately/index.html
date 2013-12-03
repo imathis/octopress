@@ -1,36 +1,22 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>organizing your specs into groups and running them separately - Avi Tzurel</title>
-  <meta name="author" content="Avi Tzurel">
+	<meta charset="utf-8">
+	<title>organizing your specs into groups and running them separately | Avi Tzurel</title>
+	<meta name="author" content="Avi Tzurel">
 
-  
-  <meta name="description" content="A while back I answered this StackOverflow question. When you have a lot of specs, it makes sense to run them in separate logical groups and not just &hellip;">
-  
+	
+	<meta name="description" content="Organizing Your Specs Into Groups and Running Them Separately 19Aug A while back I answered this StackOverflow question. When you have a lot of &hellip;">
+	
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="Avi Tzurel" type="application/atom+xml">
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
+	<link href="/atom.xml" rel="alternate" title="Avi Tzurel" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+	
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-33891290-1']);
@@ -44,68 +30,38 @@
   </script>
 
 
+	
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Avi Tzurel</a></h1>
+<body>
+	<header id="header" class="inner"><nav><ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul></nav>
+</header>
+	<div id="content" class="inner"><article class="post"><header>
   
-    <h2>Blogging about Ruby/Rails and related web stuff</h2>
+  <h1 class="title">Organizing Your Specs Into Groups and Running Them Separately</h1>
   
-</hgroup>
+  
+
+
+
+
+
+
+
+
+	
+		<time datetime="2012-08-19T13:57:00+03:00">
+			<span class="day">19</span><span class="month">Aug</span>
+		</time>
+	
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+<div class="entry-content">
   
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:avi.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
-  <header>
-    
-      <h1 class="entry-title">Organizing Your Specs Into Groups and Running Them Separately</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-19T13:57:00+03:00" pubdate data-updated="true">Aug 19<span>th</span>, 2012</time>
-        
-         | <a href="#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><p>A while back I answered <a href="http://stackoverflow.com/questions/10029250/organizing-rspec-2-tests-into-unit-and-integration-categories-in-rails/10029504#10029504">this StackOverflow question</a>.</p>
+    <p>A while back I answered <a href="http://stackoverflow.com/questions/10029250/organizing-rspec-2-tests-into-unit-and-integration-categories-in-rails/10029504#10029504">this StackOverflow question</a>.</p>
 
 <p>When you have a lot of specs, it makes sense to run them in separate logical groups and not just with <code>rspec spec</code> or something like that.</p>
 
@@ -170,209 +126,82 @@
 </span><span class='line'>  <span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
-</div>
 
-
-  <footer>
-    <p class="meta">
-      
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Avi Tzurel</span></span>
-
-      
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-19T13:57:00+03:00" pubdate data-updated="true">Aug 19<span>th</span>, 2012</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/general/'>General</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/ruby-/'>Ruby,</a>, <a class='category' href='/blog/categories/on/'>on</a>, <a class='category' href='/blog/categories/rails-/'>rails,</a>
-  
-</span>
-
-
-    </p>
     
       <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/" data-via="KensoDev" data-counturl="http://avi.io/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/" >Tweet</a>
-  
-  
-  
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4daee9911f9dfcb4"></script>
 </div>
+    
+  
+  
+  <footer class="meta">
+    
+
+
+
+	<div class="tags"><a class='category' href='/blog/categories/general/'>General</a><a class='category' href='/blog/categories/ruby/'>Ruby</a><a class='category' href='/blog/categories/ruby-/'>Ruby,</a><a class='category' href='/blog/categories/on/'>on</a><a class='category' href='/blog/categories/rails-/'>rails,</a></div>
 
     
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2012/08/09/searching-through-the-history-of-commands-you-ran-in-terminal/" title="Previous Post: searching through the history of commands you ran in terminal">&laquo; searching through the history of commands you ran in terminal</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/11/13/railsconf-2012-talk-how-gogobot-works/" title="Next Post: RailsConf 2012 talk - How Gogobot works">RailsConf 2012 talk - How Gogobot works &raquo;</a>
+      <a class="comment" href="/blog/2012/08/19/organizing-your-specs-into-groups-and-running-them-separately/#disqus_thread">Comments</a>
       
-    </p>
+    
   </footer>
-</article>
-
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-  </section>
-
+  
 </div>
 
-<aside class="sidebar">
-  
-    <section>
-  <h1>Avi Tzurel</h1>
-  <img src="https://si0.twimg.com/profile_images/1126793975/4991222376_977467af43_m.jpg" width="128" height="128" style="height: 128px; width: 128px; border-radius: 6px">
-  <p>
-  	Owner @ <a href="http://www.kensodev.com">KensoDev</a>, a boutique software consultancy based in Israel More <a href="/about">about me</a>.
-  </p>
-</section><section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/12/03/upload-folder-to-s3-recursively/">Upload folder to S3 recursively</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/22/export-mongo-collection-to-json-with-query/">Real life usage for mongoexport (and a bonus)</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/10/06/how-to-easily-generate-beautiful-api-documentation/">How to easily generate beautiful api documentation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/08/14/move-jobs-from-one-queue-to-another-sidekiq/">Move jobs from one queue to another - Sidekiq</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/26/a-better-todo-comment-for-your-code/">Better TODO comment for your code</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("KensoDev", 5, true);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/KensoDev" class="twitter-follow-button" data-show-count="true">Follow @KensoDev</a>
-  
-</section>
-
-
-
-
-
-<section>
-  <h1>My Coderwall</h1>
-  <ul id="cw_badges">
-    <li class="loading">Status updating...</li>
-  </ul>
-
-  <script type="text/javascript">
-    var coderwall = (function(){
-      function render(options, badges){
-        var fragment = '',
-            t = $(options.target)[0],
-            height = 65,
-            width = 65,
-            index;
-
-        for (index in badges) {
-          fragment += '<a class="cw_badge"title="' + badges[index].description + '" href="http://coderwall.com/' + options.user + '">';
-          fragment +=   '<img alt="' + badges[index].description + '" height="' + width + '" width="' + height + '" src="' + badges[index].badge + '"/>';
-          fragment += '</a>';
-        }
-
-        t.innerHTML = fragment;
-      }
-      return {
-        showBadges: function(options){
-          $.ajax({
-              url: 'http://coderwall.com/' + options.user + '.json?callback=?'
-            , type: 'jsonp'
-            , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
-            , success: function(res) {
-                render(options, res.data.badges);
-            }
-          });
-        }
-      };
-    })();
-
-    $.domReady(function(){
-      if (!window.jXHR){
-        var jxhr = document.createElement('script');
-        jxhr.type = 'text/javascript';
-        jxhr.src = '/javascripts/libs/jXHR.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(jxhr, s);
-      }
-      if (!window.$){
-        var b = document.createElement('script');
-        b.type = 'text/javascript';
-        b.src = '/javascripts/ender.js';
-        var sc = document.getElementsByTagName('script')[0];
-        sc.parentNode.insertBefore(jxhr, s);
-      }
-      coderwall.showBadges({
-        user: 'kensodev',
-        target: '#cw_badges'
-      });
-    });
-  </script>
-  <style type="text/css">
-    .cw_badge img {
-      padding: 5px;
-      border: 0 none !important;
-      -moz-box-shadow: none !important;
-      -webkit-box-shadow: none !important;
-      -o-box-shadow: none !important;
-      box-shadow: none !important;
-    }
-  </style>
-</section>
-
-  
-</aside>
-
-
-    </div>
+<section id="comment">
+	<div id="disqus_thread" aria-live="polite">
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> 
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Avi Tzurel -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+</section>
+</article></div>
+	<footer id="footer" class="inner"><div class="social alignright">
+	
+	
+	
+	<a class="twitter" href="http://twitter.com/KensoDev" title="Twitter">Twitter</a>
+	
+	
+	
+	<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+</div>
+<p>&copy; 2013 Avi Tzurel</p>
+<div class="clearfix"></div></footer>
+	<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('.entry-content').each(function(i){
+			var _i = i;
+			$(this).find('img').each(function(){
+				var alt = $(this).attr('alt');
 
-</footer>
-  
+				if (alt == '' || typeof alt == 'undefined'){
+					$(this).wrap('<a href="'+$(this).attr('src')+'" class="fancybox" rel="gallery'+_i+'" />');
+				} else {
+					$(this).after('<span class="caption">'+alt+'</span>').wrap('<a href="'+$(this).attr('src')+'" class="fancybox" title="'+alt+'" rel="gallery'+_i+'" />');
+				}
+			});
+		});
+		$('.fancybox').fancybox();
+	})(jQuery);
+</script>
+<div id="phasebeam">
+	<canvas id="canvas"></canvas>
+</div>
+<script src="/javascripts/phasebeam.js"></script>
+
 
 <script type="text/javascript">
       var disqus_shortname = 'avi-io';
@@ -389,33 +218,6 @@
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
-
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
 
 
 

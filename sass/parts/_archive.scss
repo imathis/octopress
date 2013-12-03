@@ -1,0 +1,110 @@
+#archive-header{
+  height: 2em;
+  margin-bottom: 50px;
+  h1{
+    color: rgba(255,255,255,0.7);
+    font-family: $font-title;
+    font-weight: normal;
+    line-height: 1;
+  }
+  .search{
+    input[type="text"]{
+      background: rgba(0,0,0,0.3);
+      border: none;
+      color: rgba(255,255,255,0.7);
+      font: 0.9em $font-title;
+      padding: 7px 12px;
+      width: 150px;
+    }
+  }
+}
+.archives{
+  background: #fff;
+  border: 1px solid #ddd;
+  color: $color-font;
+  margin-bottom: 50px;
+  box-shadow: 0 0 16px rgba(0,0,0,0.3);
+  text-align: justify;
+  position: relative;
+  @include border-radius(3px);
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $meta-width;
+    height: 100%;
+    @include background(linear-gradient(left, #ddd, #fff));
+  }
+  .year{
+    color: $color-meta;
+    font: 2em $font-title;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+  }
+  article{
+    border-left: 1px solid $color-border;
+    margin-left: $meta-width + 20*2px;
+    padding: 15px 20px;
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: -5px;
+      width: 7px;
+      height: 7px;
+      border: 1px solid $color-border;
+      background: #fff;
+      z-index: 1;
+      @include transform(rotate(45deg));
+    }
+    &:last-of-type{
+      &:before{
+        display: none;
+      }
+    }
+    .title{
+      font-family: $font-title;
+      font-weight: normal;
+      line-height: 1.1;
+      a{
+        color: $color-font;
+      }
+    }
+    footer{
+      color: $color-meta;
+      font-size: 0.9em;
+      line-height: 1.6em;
+      margin-top: 5px;
+      a{
+        color: $color-meta;
+        &:hover{
+          color: darken($color-meta, 20%);
+        }
+      }
+      time{
+        &:before{
+          content: "\f073";
+          font-family: $font-icon;
+          padding-right: 10px;
+        }
+      }
+      .tags{
+        display: inline-block;
+        margin-left: 25px;
+        &:before{
+          content: "\f02c";
+          font-family: $font-icon;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
+.archive{
+  box-shadow: none;
+  border: none;
+  margin-bottom: 0;
+}

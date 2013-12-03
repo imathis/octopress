@@ -1,0 +1,46 @@
+@import "social/*.png";
+#footer{
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  a{
+    color: #fff;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .social{
+    a{
+      display: inline-block;
+      opacity: 0.7;
+      width: 16px;
+      height: 16px;
+      margin-left: 10px;
+      float: left;
+      @include hide-text;
+      @include transition(0.3s);
+      &:hover{
+        opacity: 1;
+      }
+      &.facebook{
+        @include social-sprite(facebook);
+      }
+      &.google{
+        @include social-sprite(google);
+      }
+      &.github{
+        @include social-sprite(github);
+      }
+      &.twitter{
+        @include social-sprite(twitter);
+      }
+      &.rss{
+        @include social-sprite(rss);
+      }
+      &.pinterest{
+        @include social-sprite(pinterest);
+      }
+    }
+  }
+}

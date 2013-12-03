@@ -1,1 +1,20 @@
+<div class="social alignright">
+	{% if site.facebook_user %}
+	<a class="facebook" href="http://www.facebook.com/{{ site.facebook_user }}" title="Facebook">Facebook</a>
+	{% endif %}
+	{% if site.googleplus_user %}
+	<a class="google" href="https://plus.google.com/{{ site.googleplus_user }}" title="Google+">Google+</a>
+	{% endif %}
+	{% if site.twitter_user %}
+	<a class="twitter" href="http://twitter.com/{{ site.twitter_user }}" title="Twitter">Twitter</a>
+	{% endif %}
+	{% if site.github_user %}
+	<a class="github" href="https://github.com/{{ site.github_user }}" title="GitHub">GitHub</a>
+	{% endif %}
+	{% if site.pinterest_user %}
+	<a class="pinterest" href="https://pinterest.com/{{ site.pinterest_user }}" title="Pinterest">Pinterest</a>
+	{% endif %}
+	<a class="rss" href="{{ site.subscribe_rss }}" title="RSS">RSS</a>
+</div>
 {% include custom/footer.html %}
+<div class="clearfix"></div>
