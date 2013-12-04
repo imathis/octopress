@@ -41,7 +41,7 @@ module Octopress
       end
       date_formatted
     end
-    
+
     # Returns the date-specific liquid attributes
     def liquid_date_attributes
       date_format = self.site.config['date_format']
@@ -62,9 +62,13 @@ module Jekyll
 
     # Convert this Convertible's data to a Hash suitable for use by Liquid.
     # Overrides the default return data and adds any date-specific liquid attributes
-    alias :super_to_liquid :to_liquid
-    def to_liquid
-      super_to_liquid.deep_merge(liquid_date_attributes)
+    def to_liquid(attrs = nil)
+      puts "Post#to_liquid called"
+      attrs = (attrs || {}).deep_merge(liquid_date_attributes)
+      further_data = Hash[(attrs || self.class::ATTRIBUTES_FOR_LIQUID).map { |attribute|
+        [attribute, send(attribute)]
+      }]
+      data.deep_merge(further_data)
     end
   end
 
@@ -73,9 +77,12 @@ module Jekyll
 
     # Convert this Convertible's data to a Hash suitable for use by Liquid.
     # Overrides the default return data and adds any date-specific liquid attributes
-    alias :super_to_liquid :to_liquid
-    def to_liquid
-      super_to_liquid.deep_merge(liquid_date_attributes)
+    def to_liquid(attrs = nil)
+      attrs = (attrs || {}).deep_merge(liquid_date_attributes)
+      further_data = Hash[(attrs || self.class::ATTRIBUTES_FOR_LIQUID).map { |attribute|
+        [attribute, send(attribute)]
+      }]
+      data.deep_merge(further_data)
     end
   end
 end
