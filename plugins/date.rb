@@ -46,7 +46,7 @@ module Octopress
     def liquid_date_attributes
       date_format = self.site.config['date_format']
       date_attributes = {}
-      date_attributes['date_formatted']    = format_date(self.data['date'], date_format)    if self.data.has_key?('date')
+      date_attributes['date_formatted']    = self.respond_to?('date') ? format_date(self.date, date_format) : (format_date(self.data['date'], date_format) if self.data.has_key?('date'))
       date_attributes['updated_formatted'] = format_date(self.data['updated'], date_format) if self.data.has_key?('updated')
       date_attributes
     end
