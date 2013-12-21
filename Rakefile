@@ -212,7 +212,7 @@ end
 
 desc "Default deploy task"
 task :deploy do
-  if File.exist?("#{source_dir}/#{stash_dir}")
+  unless Dir.glob("#{source_dir}/#{stash_dir}/*").empty?
     abort('run `rake integrate` before `rake deploy`')
   end
 
