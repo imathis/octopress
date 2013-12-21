@@ -212,6 +212,10 @@ end
 
 desc "Default deploy task"
 task :deploy do
+  if File.exist?("#{source_dir}/#{stash_dir}")
+    abort('run `rake integrate` before `rake deploy`')
+  end
+
   # Check if preview posts exist, which should not be published
   if File.exists?(".preview-mode")
     puts "## Found posts in preview mode, regenerating files ..."
