@@ -251,7 +251,7 @@ multitask :push do
   cd "#{deploy_dir}" do 
     system "git pull"
   end
-  (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
+  (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) unless f =~ /CNAME/}
   Rake::Task[:copydot].invoke(public_dir, deploy_dir)
   puts "\n## Copying #{public_dir} to #{deploy_dir}"
   cp_r "#{public_dir}/.", deploy_dir
