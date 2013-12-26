@@ -13,12 +13,12 @@ module Jekyll
       paginate(site, template_page(site)) if Pager.pagination_enabled?(site)
     end
 
-    # Paginates the blog's posts. Renders the index.haml file into paginated
-    # directories, e.g.: page2/index.haml, page3/index.haml, etc and adds more
+    # Paginates the blog's posts. Renders the index.html file into paginated
+    # directories, e.g.: page2/index.html, page3/index.html, etc and adds more
     # site-wide data.
     #
     # site - The Site.
-    # page - The index.haml Page that requires pagination.
+    # page - The index.html Page that requires pagination.
     #
     # {"paginator" => { "page" => <Number>,
     #                   "per_page" => <Number>,
@@ -49,7 +49,6 @@ module Jekyll
     # site - the Jekyll::Site object
     #
     # Returns the Jekyll::Page which will act as the pager template
-    #wak
     def template_page(site)
       site.pages.dup.select do |page|
         Pager.pagination_candidate?(site.config, page)
@@ -78,7 +77,6 @@ module Jekyll
     # file   - The String filename of the file.
     #
     # Returns true if pagination is enabled, false otherwise.
-    #def self.pagination_enabled?(config, file)
     def self.pagination_enabled?(site)
       !site.config['paginate'].nil? && site.pages.size > 0
     end
@@ -93,7 +91,7 @@ module Jekyll
       page_dir = File.dirname(File.expand_path(remove_leading_slash(page.path), config['source']))
       paginate_path = remove_leading_slash(config['paginate_path'])
       paginate_path = File.expand_path(paginate_path, config['source'])
-      (page.name == 'index.html' || page.name == 'index.haml') &&
+      (page.name =~ /index.\w+/) &&
           in_hierarchy(config['source'], page_dir, File.dirname(paginate_path))
     end
 
