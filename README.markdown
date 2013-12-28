@@ -13,7 +13,9 @@ Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
 ## Documentation
 
 Check out [Octopress.org](http://octopress.org/docs) for guides and documentation.
-
+It should all apply to our current stable version (found in the `master`
+branch). If this is not the case, [please submit a
+fix to our docs repo](https://github.com/octopress/docs).
 
 ## Contributing
 
