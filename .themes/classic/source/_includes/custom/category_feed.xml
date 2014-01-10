@@ -22,6 +22,12 @@ layout: nil
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>{{ site.url }}{{ post.id }}</id>
     <content type="html"><![CDATA[{{ post.content | expand_urls: site.url | markdownify | cdata_escape }}]]></content>
+    {% if post.author %}
+      {% assign author = post.author %}
+    {% else %}
+      {% assign author = site.author %}
+    {% endif %}
+    <author><name><![CDATA[{{ author | strip_html }}]]></name></author>
   </entry>
   {% endfor %}
 </feed>
