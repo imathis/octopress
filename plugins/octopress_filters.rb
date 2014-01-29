@@ -8,8 +8,8 @@ require 'rubypants'
 module OctopressFilters
   include BacktickCodeBlock
   include TemplateWrapper
-  def pre_filter(input)
-    input = render_code_block(input)
+  def pre_filter(input, ext)
+    input = render_code_block(input, ext)
     input.gsub /(<figure.+?>.+?<\/figure>)/m do
       safe_wrap($1)
     end
@@ -25,7 +25,7 @@ module Jekyll
     include OctopressFilters
     def pre_render(post)
       if post.ext.match('html|textile|markdown|md|haml|slim|xml')
-        post.content = pre_filter(post.content)
+        post.content = pre_filter(post.content, post.ext)
       end
     end
     def post_render(post)
