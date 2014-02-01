@@ -188,7 +188,7 @@ task :update_style, :theme do |t, args|
   mv "sass", "sass.old"
   puts "## Moved styles into sass.old/"
   cp_r "#{themes_dir}/"+theme+"/sass/", "sass", :remove_destination=>true
-  cp_r "sass.old/custom/.", "sass.old/custom/", :remove_destination=>true
+  cp_r "sass.old/custom/.", "sass/custom/", :remove_destination=>true
   puts "## Updated Sass ##"
 end
 
