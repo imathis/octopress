@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://JonathanHennessy.github.io/sitemap.xml 
