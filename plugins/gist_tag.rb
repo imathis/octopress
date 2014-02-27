@@ -78,7 +78,11 @@ module Jekyll
       gist_url = get_gist_url_for(gist, file)
       data     = get_web_content(gist_url)
 
-      if data.code.to_i == 302
+      if data.code.to_i == 301 || data.code.to_i == 302
+        data = handle_gist_redirecting(data)
+      end
+
+      if data.code.to_i == 301 || data.code.to_i == 302
         data = handle_gist_redirecting(data)
       end
 
