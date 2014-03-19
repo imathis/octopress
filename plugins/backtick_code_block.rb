@@ -22,9 +22,6 @@ module BacktickCodeBlock
         @caption = "<figcaption><span>#{$2}</span></figcaption>"
       end
 
-      if str.match(/\A( {4}|\t)/)
-        str = str.gsub(/^( {4}|\t)/, '')
-      end
       if @lang.nil? || @lang == 'plain'
         code = tableize_code(str.gsub('<','&lt;').gsub('>','&gt;'))
         "<figure class='code'>#{@caption}#{code}</figure>"
