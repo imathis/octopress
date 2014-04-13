@@ -1,0 +1,28 @@
+---
+layout: post
+title: "PuppetConf 2013"
+date: 2013-09-02 20:22
+comments: true
+categories: puppet
+---
+PuppetConf 2013 was an amazing experience. I could spend tons of time talking about all the things that went on but here are a  few of the things that really stood out to me.
+
+# Developer Days and Open Spaces
+The developer day stuff was great. While I didn't get a chance to sit down and hack on much myself, it was great to be able to catch up with people in the community and talk about the things that are coming down the pipeline and need to be worked on. 
+
+The real win of Wednesday was the open space sessions that Michael Stanke put on. The discussions around testing and best practices/patterns were amazing. I feel like I got a ton out of just sitting and talking to others in the community. With that said, I am going to officially put it out there that I bought puppetbestpractices.com and my goal is to start collecting talks, slide decks and blog posts about patterns and module construction in one place. I haven't decided how I am going to set it up yet, but I will make a decision soon.
+
+# Being a Speaker
+This is probably the biggest speaking opportunity I have ever had. Puppet Labs not only did a great job putting on the conference but I felt super well taken care of as a speaker. 
+
+As I walked the halls I got a ton of positive response about my presentation. It was great to run into people and have them tell me, "great talk," or ask questions about testing. I am looking forward to digging even deeper into testing and better understanding how rspec-system is going to become part of my workflow.
+
+# The Sessions
+While I didn't make it to as many sessions as I would have liked, the ones I did attend were great. I was impressed by how much knowledge each session was jam packed with. I can't wait to go through and listen to all of the sessions as they are released.
+
+In the meantime, the slides can be found at [http://www.slideshare.net/PuppetLabs/puppetconf-at-a-glance](http://www.slideshare.net/PuppetLabs/puppetconf-at-a-glance).
+
+# The Hallway Track
+Wow. I can't even begin to list the tremendous number of amazing people I met while at PuppetConf. Whether it was getting a chance to catch up with [@puppetmasterd](https://twitter.com/puppetmasterd) himself or seeing old friends like [@botchagalupe](https://twitter.com/botchagalupe) and [@mitchellh](https://twitter.com/mitchellh) the people are what really took the conference to the next level for me. Sitting down for, what must have been more than 2 hours, with [@davemangot](https://twitter.com/davemangot) talking DevOps and systems architecture was one of the most enjoyable things I have done in a long time.
+
+Lets just say, I am looking forward to PuppetConf 2014.
