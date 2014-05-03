@@ -142,7 +142,7 @@ module Jekyll
     def fill_posts(site, urlset)
       last_modified_date = nil
       site.posts.each do |post|
-        if !excluded?(post.name)
+        if !(excluded?(post.name) || exclude_by_flag?(post.data))
           url = fill_url(site, post)
           urlset.add_element(url)
         end
@@ -161,7 +161,7 @@ module Jekyll
     # Returns last_modified_date of index page
     def fill_pages(site, urlset)
       site.pages.each do |page|
-        if !excluded?(page.name)
+        if !(excluded?(page.name) || exclude_by_flag?(page.data))
           path = page.full_path_to_source
           if File.exists?(path)
             url = fill_url(site, page)
@@ -282,6 +282,10 @@ module Jekyll
     # Returns boolean
     def excluded?(name)
       EXCLUDED_FILES.include? name
+    end
+
+    def exclude_by_flag?(data)
+        return data["exclude_from_sitemap"]
     end
 
     def posts_included?(name)
