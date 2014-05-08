@@ -32,7 +32,7 @@ Otherwise, you can install the gem but running:
 
 The code can be found at:
 
-* [https://github.com/cwebberOps/knife-supermarket](https://github.com/cwebberOps/knife-supermarket])
+* [https://github.com/cwebberOps/knife-supermarket](https://github.com/cwebberOps/knife-supermarket)
 
 Finally, the gem can be found at:
 
