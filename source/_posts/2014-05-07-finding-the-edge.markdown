@@ -25,7 +25,7 @@ Not only was this my first knife plugin, this was my first Ruby Gem. After some 
 The real take away from all of this was the reminder that I enjoy life the most when living out on the edge of my comfort zone. As I approach that edge, it means that I am learning more and able to experience new things. As my time at Chef begins, I am looking forward to more opportunities to get pushed to the edge and over the edge of my comfort zone. 
 
 ## The Results
-If you are running [Chef-DK](http://www.getchef.com/downloads/chef-dk/) you can install the plugin by running:
+If you are running [Chef DK](http://www.getchef.com/downloads/chef-dk/) you can install the plugin by running:
     $ chef gem install knife-supermarket
 Otherwise, you can install the gem but running:
     $ gem install knife-supermarket
