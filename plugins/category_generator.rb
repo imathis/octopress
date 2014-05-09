@@ -106,7 +106,8 @@ module Jekyll
     # Loops through the list of category pages and processes each one.
     def write_category_indexes
       if self.layouts.key? 'category_index'
-        dir = self.config['category_dir'] || 'categories'
+        dir = self.config['category_dir']
+        dir = 'categories' if dir.nil?
         self.categories.keys.each do |category|
           self.write_category_index(File.join(dir, category.to_url), category)
         end
@@ -173,7 +174,8 @@ ERR
     #
     def category_link(category)
       dir = @context.registers[:site].config['category_dir']
-      "<a class='category' href='/#{dir}/#{category.to_url}/'>#{category}</a>"
+      dir = 'categories' if dir.nil?
+      "<a class='category' href='/#{dir + '/' unless dir.empty?}#{category.to_url}/'>#{category}</a>"
     end
 
     # Outputs the post.date as formatted html, with hooks for CSS styling.
