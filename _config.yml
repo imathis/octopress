@@ -6,6 +6,9 @@ url: http://yoursite.com
 title: My Octopress Blog
 subtitle: A blogging framework for hackers.
 author: Your Name
+# If you want to use duckduckgo as search engine
+# use the following line for simple_search and set quack_search to true
+# simple_search: https://www.duckduckgo.com/
 simple_search: https://www.google.com/search
 description:
 
@@ -98,3 +101,6 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+# Duckduckgo as search engine
+quack_search: false
