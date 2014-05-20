@@ -2,7 +2,7 @@
 
 LIFECYCLE_CONFIG='http://util.cwebber.net/15_day_expire.json'
 
-if [ "${CI_BRANCH}" -ne "master" ]; then
+if [[ "${CI_BRANCH}" -ne "master" ]]; then
 
   # Note to self: When you burn yourself because you are not dealing with www
   # and underscores, remember... you did it to yourself
