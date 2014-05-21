@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Shaving The Dev/Working Environment Yak"
-date: 2014-05-20 15:02:33 -0700
+date: 2014-05-21 10:34:33 -0700
 comments: true
 categories: chef ruby rvm
 ---
@@ -34,3 +34,8 @@ As mentioned before, I installed the above using the `chef gem install` command 
 
 ## Rub a Little RVM on It
 
+So... I have a little confession to make. While I still don't consider myself a developer, I have found that over the years writing ruby has been a lot of fun for those pesky web interfaces and complicated scripts that I write. Most of my ruby code would make a good dev cry, but it is still an easy language to get work done in. To that end, having a sane ruby dev environment has also been important for various reasons. Even in the time I have worked at Chef I have found myself writing code to automate things. (For example, I wrote a tool to grab all the neat things going on with Supermarket. That code is on GitHub as [cwebberOps/supermarket-report](https://github.com/cwebberOps/supermarket-report).) While I get that bundler is awesome, I still like to be able to separate out my ruby and my gemsets.
+
+So I looked at chruby and chgems and a little at rbenv. Both left me wanting to go back to rvm, so that is what I did. The interesting thing is that if you have a ruby selected via rvm you lose out on the awesome that is Chef DK. So to get things the way I want them, I have set my default ruby to the system ruby in rvm by running `rvm use system --default`. For whatever reason, I then have to load a new shell for my prompt to not complain about `rvm-prompt` being missing. This setup has worked well. My general workflow is to open a new session in tmux and when I switch into a project have the `.rvmrc` change me to the right ruby. An alternative approach can be found over on [Joshua Timberman's blog](http://jtimberman.housepub.org/blog/2014/04/30/chefdk-and-ruby/) about how he uses Chef DK.
+
+All things equal, the general setup of things hasn't been too bad. While having two workstations I use regularly has added to the confusion at times. As I have gotten things squared away, things just tend to work. A huge shout out to the folks working hard on Chef DK, it has for sure made my experience delightful.
