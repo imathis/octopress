@@ -79,13 +79,13 @@ module Jekyll
       data     = get_web_content(gist_url)
 
       locations = Array.new
-      while (data.code.to_i == 301 || data.code.to_i == 302)
+      while data.is_a?(Net::HTTPRedirection)
         data = handle_gist_redirecting(data)
         break if locations.include? data.header['Location']
         locations << data.header['Location']
       end
 
-      if data.code.to_i != 200
+      unless data.is_a?(Net::HTTPSuccess)
         raise RuntimeError, "Gist replied with #{data.code} for #{gist_url}"
       end
 
