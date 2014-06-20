@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://wei2912.github.io
+title: wei2912's blog
+subtitle: A blog about both programming-related and non-programming-related stuff.
+author: Wei En
 simple_search: https://www.google.com/search
 description:
 
@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: wei2912.supp0rt@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
