@@ -35,12 +35,19 @@ Here's a few examples:
 To sound more impressive and convincing, use idioms.
 
 * 笨蛋/白痴 -> 痴人说梦 (usage is *very* different, check usage before attempting)
-* 
 
 # Advanced
 
 To ensure that no one actually understands you, throw in a couple of quotes from classical chinese literature.
 
+* 知人者智，自知者明。(from 道德经, 三十三章; Knowing others is wisdom, knowing the self is enlightenment.)
+* 三十辐共一毂，当其无，有车之用。埏埴以为器，当其无，有器之用。凿户牖以为室，当其无，有室之用。故有之以为利，无之以为用。(from 道德经, 十一章; Thirty spokes make a wheel, but it is the space of the wheel where there is nothing that makes it useful. Clay makes a vessel, but it is the space of the vessel where there is nothing that makes it useful. We pierce doors and windows to make a house, but it is these spaces where there is nothing that makes it useful. Therefore just as we consider what we have to be beneficial, we should consider what we do not have to be of use.)
+* 巧言令色、鮮矣仁。 (from 论语·学而; Fine words and an appearance that appeals to others; this type of person has no virtue - note the irony when you say this)
+
 # If you care only about programming...
 
 ...then you can learn how to write Enterprise Quality Code at [FizzBuzzEnterpriseEdition](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition).
+
+# Also...
+
+This list is non-exhaustive. Feel free to comment and add on. :)
