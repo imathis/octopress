@@ -39,7 +39,6 @@ end
 
 
 module OctopressLiquidFilters
-  include Octopress::Date
 
   # Used on the blog index to split posts on the <!--more--> marker
   def excerpt(input)
