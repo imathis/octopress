@@ -1,8 +1,9 @@
 #custom filters for Octopress
 require './plugins/backtick_code_block'
-require './plugins/post_filters'
+require 'jekyll-page-hooks'
+require 'jekyll-sitemap'
+require 'jekyll-date-format'
 require './plugins/raw'
-require './plugins/date'
 require 'rubypants'
 
 module OctopressFilters
@@ -21,7 +22,7 @@ module OctopressFilters
 end
 
 module Jekyll
-  class ContentFilters < PostFilter
+  class ContentFilters < PageHooks
     include OctopressFilters
     def pre_render(post)
       if post.ext.match('html|textile|markdown|md|haml|slim|xml')

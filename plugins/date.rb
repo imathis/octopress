@@ -63,8 +63,8 @@ module Jekyll
     # Convert this Convertible's data to a Hash suitable for use by Liquid.
     # Overrides the default return data and adds any date-specific liquid attributes
     alias :super_to_liquid :to_liquid
-    def to_liquid
-      super_to_liquid.deep_merge(liquid_date_attributes)
+    def to_liquid(attrs = nil)
+      Utils.deep_merge_hashes super_to_liquid(attrs), liquid_date_attributes
     end
   end
 
@@ -74,8 +74,8 @@ module Jekyll
     # Convert this Convertible's data to a Hash suitable for use by Liquid.
     # Overrides the default return data and adds any date-specific liquid attributes
     alias :super_to_liquid :to_liquid
-    def to_liquid
-      super_to_liquid.deep_merge(liquid_date_attributes)
+    def to_liquid(attrs = nil)
+      Utils.deep_merge_hashes super_to_liquid(attrs), liquid_date_attributes
     end
   end
 end
