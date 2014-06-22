@@ -7,7 +7,7 @@ categories:  test-kitchen, chef
 ---
 The more I work with [test-kitchen](http://kitchen.ci), the more I have wanted a different workflow. Essentially, I really liked the idea of concurrency, but I struggled to parse the output. As a result, I found myself opening a number of windows in tmux and running `kitchen test <OS>`.
 
-This idea combined with some Saturday night hacking has resulted in `kitchen-tmux`. Instead of going through each OS, I create a new session and then a window for each of the instances in tmux, kicking off  `kitchen test`. I haven't used it as part of my workflow yet, but playing with it a bit, this seems like it is going to be a huge win. You can find the code on [GitHub](https://github.com/cwebberOps/dotfiles/blob/master/bin/kitchen-tmux) or below:
+This idea combined with some Saturday night hacking has resulted in `kitchen-tmux`. Instead of going through each OS, I create a new session and then a window in tmux for each of the instances in test-kitchen. From there each window kicks off  `kitchen test` for that instance. I haven't used it as part of my workflow yet, but playing with it a bit, this seems like it is going to be a huge win. You can find the code on [GitHub](https://github.com/cwebberOps/dotfiles/blob/master/bin/kitchen-tmux) or below:
 
 {% codeblock lang:bash %}
 #!/bin/bash
