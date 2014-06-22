@@ -1,6 +1,6 @@
 #custom filters for Octopress
-#require './plugins/backtick_code_block'
 require 'octopress-codefence'
+require 'octopress-codeblock'
 require 'octopress-gist'
 require 'jekyll-sitemap'
 require 'jekyll-date-format'

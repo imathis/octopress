@@ -55,6 +55,8 @@ GEM
     mercenary (0.3.3)
     octopress-code-highlighter (4.0.0)
       colorator (~> 0.1.0)
+    octopress-codeblock (1.0.0)
+      octopress-code-highlighter (~> 4.0.0)
     octopress-codefence (1.4.2)
       jekyll-page-hooks (>= 1.0.2)
       octopress-code-highlighter (~> 4.0.0)
@@ -102,8 +104,9 @@ DEPENDENCIES
   jekyll-date-format (~> 1.0)
   jekyll-page-hooks (~> 1.2)
   jekyll-sitemap
-  octopress-codefence
-  octopress-gist
+  octopress-codeblock (~> 1.0.0)
+  octopress-codefence (~> 1.4.2)
+  octopress-gist (~> 1.2.0)
   rake (~> 10.0)
   rb-fsevent (~> 0.9)
   rdiscount (~> 2.0)
