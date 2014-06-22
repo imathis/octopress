@@ -1,0 +1,14 @@
+.highlight pre,
+pre:not(.code-highlight-pre) {
+  @include octopress-highlight-style;
+  padding: 1em .8rem;
+  border-radius: .4em;
+  margin: 1.8em 0;
+  @include octopress-solarized-code;
+}
+
+pre, pre code { 
+  * { box-sizing: border-box; }
+  font-size: 13px;
+  font-family: "PT Mono", "Source Code Pro", Inconsolata-dz, Inconsolata, Menlo, Monaco, 'Andale Mono', 'lucida console', 'Courier New', monospace;
+}
