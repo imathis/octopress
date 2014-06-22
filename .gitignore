@@ -3,6 +3,7 @@
 .sass-cache
 .gist-cache
 .pygments-cache
+.code-highlighter-cache
 _deploy
 public
 sass.old

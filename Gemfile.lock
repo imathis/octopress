@@ -53,6 +53,11 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mercenary (0.3.3)
+    octopress-code-highlighter (4.0.0)
+      colorator (~> 0.1.0)
+    octopress-codefence (1.4.2)
+      jekyll-page-hooks (>= 1.0.2)
+      octopress-code-highlighter (~> 4.0.0)
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.8)
@@ -95,6 +100,7 @@ DEPENDENCIES
   jekyll-date-format (~> 1.0)
   jekyll-page-hooks (~> 1.2)
   jekyll-sitemap
+  octopress-codefence
   rake (~> 10.0)
   rb-fsevent (~> 0.9)
   rdiscount (~> 2.0)

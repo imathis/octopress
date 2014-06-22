@@ -21,13 +21,11 @@
 #
 #
 
-require 'pathname'
-require './plugins/octopress_filters'
+require 'jekyll-page-hooks'
 
 module Jekyll
 
   class RenderPartialTag < Liquid::Tag
-    include OctopressFilters
     def initialize(tag_name, markup, tokens)
       @file = nil
       @raw = false
@@ -40,7 +38,7 @@ module Jekyll
 
     def render(context)
       file_dir = (context.registers[:site].source || 'source')
-      file_path = Pathname.new(file_dir).expand_path
+      file_path = File.expand_path(file_dir)
       file = file_path + @file
 
       unless file.file?
@@ -52,7 +50,9 @@ module Jekyll
         if contents =~ /\A-{3}.+[^\A]-{3}\n(.+)/m
           contents = $1.lstrip
         end
-        contents = pre_filter(contents)
+
+        content = parse_convertible(content, context)
+        
         if @raw
           contents
         else
@@ -63,6 +63,14 @@ module Jekyll
         end
       end
     end
+
+    # Ensure jekyll page hooks are processed
+    def parse_convertible(content, context)
+      page = Jekyll::ConvertiblePartial.new(context.registers[:site], @path, content)
+      page.render({})
+      page.output.strip
+    end
+        
   end
 end
 
