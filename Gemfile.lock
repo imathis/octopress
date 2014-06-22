@@ -58,6 +58,8 @@ GEM
     octopress-codefence (1.4.2)
       jekyll-page-hooks (>= 1.0.2)
       octopress-code-highlighter (~> 4.0.0)
+    octopress-gist (1.2.0)
+      octopress-code-highlighter (~> 4.0.0)
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.8)
@@ -101,6 +103,7 @@ DEPENDENCIES
   jekyll-page-hooks (~> 1.2)
   jekyll-sitemap
   octopress-codefence
+  octopress-gist
   rake (~> 10.0)
   rb-fsevent (~> 0.9)
   rdiscount (~> 2.0)
