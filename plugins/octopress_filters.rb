@@ -2,6 +2,7 @@
 require 'octopress-codefence'
 require 'octopress-codeblock'
 require 'octopress-gist'
+require 'octopress-render-code'
 require 'jekyll-sitemap'
 require 'jekyll-date-format'
 require './plugins/raw'
