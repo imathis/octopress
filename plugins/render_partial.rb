@@ -36,37 +36,75 @@ module Jekyll
       super
     end
 
-    def render(context)
-      file_dir = (context.registers[:site].source || 'source')
-      file_path = File.expand_path(file_dir)
-      file = file_path + @file
+    def expand_path(context)
+      root = context.registers[:site].source
 
-      unless file.file?
+      # If relative path, e.g. ./somefile, ../somefile
+      if @file =~ /^\.+\//
+        page = context['page']
+        if local_dir = page['dir']
+          File.join(root, local_dir, @file)
+        else
+          local_dir = File.dirname(page['path'])
+          File.join(root, local_dir, @file)
+        end
+
+      # If absolute or relative to a user directory, e.g. /Users/Bob/somefile or ~/somefile
+      elsif @file =~ /^[\/~]/
+        File.expand_path(@file)
+
+      # Otherwise, assume relative to site root
+      else
+        File.join(root, @file)
+      end
+  
+    end
+
+    def render(context)
+      file = expand_path(context)
+
+      unless File.exists?(file)
         return "File #{file} could not be found"
       end
 
-      Dir.chdir(file_path) do
-        contents = file.read
-        if contents =~ /\A-{3}.+[^\A]-{3}\n(.+)/m
-          contents = $1.lstrip
-        end
+      content = File.open(file).read
 
-        content = parse_convertible(content, context)
-        
-        if @raw
-          contents
-        else
-          partial = Liquid::Template.parse(contents)
-          context.stack do
-            partial.render(context)
-          end
-        end
+      raw_content = {}
+
+      content = content.gsub /{%\s*raw\s*%}(.+?){% endraw %}/m do
+        data = $1
+        key = Digest::MD5.hexdigest(data)
+        raw_content[key] = data
+        key
       end
+
+      content = parse_convertible(content, context, file)
+
+      if content =~ /\A-{3}(.+[^\A])-{3}\n(.+)/m
+        local_vars = SafeYAML.load($1.strip)
+        content = $2.strip
+      end
+
+      return content if @raw
+
+      partial = Liquid::Template.parse(content)
+
+      content = context.stack {
+        if local_vars
+          context['page'] = Jekyll::Utils.deep_merge_hashes(context['page'], local_vars)
+        end
+        partial.render!(context)
+      }.strip
+
+      raw_content.each { |k, v| content.sub!(k, v) }
+      
+      content
+
     end
 
     # Ensure jekyll page hooks are processed
-    def parse_convertible(content, context)
-      page = Jekyll::ConvertiblePartial.new(context.registers[:site], @path, content)
+    def parse_convertible(content, context, path)
+      page = Jekyll::ConvertiblePartial.new(context.registers[:site], path, content)
       page.render({})
       page.output.strip
     end
