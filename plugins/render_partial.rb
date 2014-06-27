@@ -74,11 +74,9 @@ module Jekyll
       content = content.gsub /{%\s*raw\s*%}(.+?){% endraw %}/m do
         data = $1
         key = Digest::MD5.hexdigest(data)
-        raw_content[key] = data
+        raw_content[key] = "{% raw %}#{data}{% endraw %}"
         key
       end
-
-      content = parse_convertible(content, context, file)
 
       if content =~ /\A-{3}(.+[^\A])-{3}\n(.+)/m
         local_vars = SafeYAML.load($1.strip)
@@ -97,9 +95,8 @@ module Jekyll
       }.strip
 
       raw_content.each { |k, v| content.sub!(k, v) }
-      
-      content
 
+      parse_convertible(content, context, file)
     end
 
     # Ensure jekyll page hooks are processed
