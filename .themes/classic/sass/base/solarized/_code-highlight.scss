@@ -121,7 +121,7 @@
   position: relative;
   text-align: center;
   line-height: 2em;
-  text-shadow: #fff 0 1px 0;
+  text-shadow: rgba(#fff, .8) 0 1px 0;
   color: #474747;
   font-weight: normal;
   margin-bottom: 0;
@@ -138,7 +138,7 @@
   position: absolute; right: .8em;
   color: #666;
   z-index: 1;
-  text-shadow: #cbcccc 0 1px 0;
+  text-shadow: rgba(#fff, .8) 0 1px 0;
   padding-left: 3em;
 }
 
