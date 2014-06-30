@@ -10,6 +10,7 @@ group :development do
   gem 'octopress-codeblock', '~> 1.0'
   gem 'octopress-gist', '~> 1.3'
   gem 'octopress-render-code', '~> 1.0'
+  gem 'octopress-render-tag', '~> 1.0'
   gem 'rdiscount', '~> 2.0'
   gem 'RedCloth', '~> 4.2'
   gem 'haml', '~> 4.0'
