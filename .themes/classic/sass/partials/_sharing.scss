@@ -1,10 +1,10 @@
 .sharing {
   p.meta + & {
-    padding: { top: 1em; left: 0; }
+    padding: { left: 0; top: 1em; bottom: .8em; }
     background: $img-border top left repeat-x;
   }
 }
 
-.twitter-share-button { line-height: 1.2rem; vertical-align: top; }
+.twitter-share-button { line-height: 1.2em; vertical-align: top; }
 
-.fb-like { line-height: 1.2rem; vertical-align: top; }
+.fb-like { line-height: 1.2em; vertical-align: top; }
