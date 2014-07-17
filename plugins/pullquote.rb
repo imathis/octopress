@@ -22,6 +22,8 @@
 #
 # Note: this plugin now creates pullquotes with the class of pullquote-right by default
 
+require 'rubypants'
+
 module Jekyll
 
   class PullquoteTag < Liquid::Block

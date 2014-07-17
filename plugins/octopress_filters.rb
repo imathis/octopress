@@ -6,7 +6,6 @@ require 'octopress-render-code'
 require 'octopress-render-tag'
 require 'jekyll-sitemap'
 require 'jekyll-date-format'
-require 'rubypants'
 
 module OctopressLiquidFilters
 
