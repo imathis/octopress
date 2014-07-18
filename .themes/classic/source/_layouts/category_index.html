@@ -3,14 +3,14 @@ layout: page
 footer: false
 ---
 
-<div id="blog-archives" class="category">
+<div id="blog-archives" class="category" itemscope itemtype="http://schema.org/Blog">
 {% for post in site.categories[page.category] %}
 {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 {% unless year == this_year %}
   {% assign year = this_year %}
   <h2>{{ year }}</h2>
 {% endunless %}
-<article>
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   {% include archive_post.html %}
 </article>
 {% endfor %}
