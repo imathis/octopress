@@ -3,14 +3,16 @@ layout: default
 ---
 
 <div>
-<article role="article">
+<article role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   {% if page.title %}
   <header>
-    <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+    <h1 class="entry-title" itemprop="name headline">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
     {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
   </header>
   {% endif %}
+  <div class="entry-content" itemprop="articleBody">
   {{ content }}
+  </div>
   {% unless page.footer == false %}
     <footer>
       {% if page.date or page.author %}<p class="meta">
