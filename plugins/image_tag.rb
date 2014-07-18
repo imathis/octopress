@@ -24,13 +24,21 @@ module Jekyll
     def initialize(tag_name, markup, tokens)
       attributes = ['class', 'src', 'width', 'height', 'title']
 
-      if markup =~ /(?<class>\S.*\s+)?(?<src>(?:https?:\/\/|\/|\S+\/)\S+( +\S+)*\.\S+)(?:\s+(?<width>\d+))?(?:\s+(?<height>\d+))?(?<title>\s+.+)?/i
+      if markup =~ /(?<class>\S.*\s+)?(?<src>(?:https?:\/\/|\/|\S+\/)\S+( +\S+)*\.\S+)(?:\s+(?<width>\d+%?))?(?:\s+(?<height>\d+%?))?(?<title>\s+.+)?/i
         @img = attributes.reduce({}) { |img, attr| img[attr] = $~[attr].strip if $~[attr]; img }
         if /(?:"|')(?<title>[^"']+)?(?:"|')\s+(?:"|')(?<alt>[^"']+)?(?:"|')/ =~ @img['title']
           @img['title']  = title
           @img['alt']    = alt
         else
           @img['alt']    = @img['title'].gsub!(/"/, '&#34;') if @img['title']
+        end
+        if /\d+%/ =~ @img['width']
+          @img['style'] = "width: #{@img['width']};"
+          @img.delete('width')
+        end
+        if /\d+%/ =~ @img['height']
+          @img['style'] = "#{@img['style']} height: #{@img['height']};"
+          @img.delete('height')
         end
         @img['class'].gsub!(/"/, '') if @img['class']
       end
