@@ -2,11 +2,14 @@
 layout: default
 ---
 
-<div class="blog-index">
+<div class="blog-index" itemscope itemtype="http://schema.org/Blog">
+  <meta itemprop="name" content="{{site.title}}" />
+  <meta itemprop="description" content="{{site.description}}" />
+  <meta itemprop="url" content="{{site.url}}" />
   {% assign index = true %}
   {% for post in paginator.posts %}
   {% assign content = post.content %}
-    <article>
+    <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
       {% include article.html %}
     </article>
   {% endfor %}

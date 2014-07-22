@@ -4,14 +4,17 @@ title: Blog Archive
 footer: false
 ---
 
-<div id="blog-archives">
+<div id="blog-archives" itemscope itemtype="http://schema.org/Blog">
+<meta itemprop="name" content="{{site.title}}" />
+<meta itemprop="description" content="{{site.description}}" />
+<meta itemprop="url" content="{{site.url}}" />
 {% for post in site.posts reverse %}
 {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 {% unless year == this_year %}
   {% assign year = this_year %}
   <h2>{{ year }}</h2>
 {% endunless %}
-<article>
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   {% include archive_post.html %}
 </article>
 {% endfor %}

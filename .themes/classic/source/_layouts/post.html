@@ -4,7 +4,10 @@ single: true
 ---
 
 <div>
-<article class="hentry" role="article">
+<article class="hentry" role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <meta itemprop="name" content="{{site.title}}" />
+  <meta itemprop="description" content="{{site.description}}" />
+  <meta itemprop="url" content="{{site.url}}" />
   {% include article.html %}
   <footer>
     <p class="meta">

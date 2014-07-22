@@ -2,7 +2,10 @@
 layout: default
 ---
 
-<div>
+<div itemscope itemtype="http://schema.org/Blog">
+<meta itemprop="name" content="{{site.title}}" />
+<meta itemprop="description" content="{{site.description}}" />
+<meta itemprop="url" content="{{site.url}}" />
 <article role="article">
   {% if page.title %}
   <header>
@@ -10,7 +13,9 @@ layout: default
     {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
   </header>
   {% endif %}
+  <div class="entry-content">
   {{ content }}
+  </div>
   {% unless page.footer == false %}
     <footer>
       {% if page.date or page.author %}<p class="meta">
