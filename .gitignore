@@ -3,6 +3,8 @@
 .sass-cache
 .gist-cache
 .pygments-cache
+.code-highlighter-cache
+Gemfile.lock
 _deploy
 public
 sass.old

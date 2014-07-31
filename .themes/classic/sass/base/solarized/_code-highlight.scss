@@ -1,0 +1,175 @@
+@include solarized-theme($solarized);
+
+// Inilne <code> element styles
+//
+code,
+kbd,
+samp,
+tt {
+  color: inherit;
+  background-color: $code-bg;
+  border: 1px solid $code-border;
+  font-family: $code-font-family;
+  border-radius: 3px;
+  font-size: $code-font-size;
+  &:before, &:after {
+    content: "\00a0";
+    letter-spacing: -0.2em;
+  }
+}
+
+// Overide <code> styles beneath <pre>
+//
+pre code {
+  &:before, &:after {
+    content: none;
+  }
+  border: none;
+  background: none;
+  border-raidus: 0;
+  font-size: inherit;
+}
+
+// Basic pre styles
+//
+pre, pre code { 
+  * { box-sizing: border-box; }
+  font-size: $pre-font-size;
+  font-family: $pre-font-family;
+}
+
+// Styles for pre's which aren't highlighted by Octopress's highlighter
+//
+.highlight pre,
+pre:not(.code-highlight-pre),
+.code-highlight {
+  span { font-style: normal; font-weight: normal; }
+
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
+  line-height: 1.45em;
+}
+
+
+// Styles for Octopress highlighted code blocks.
+//
+.code-highlight-figure {
+  margin: 1.8em 0;
+  font-size: 14px;
+  * { box-sizing: border-box; }
+  background: none;
+  padding: 0;
+  border: 0;
+
+  pre { margin: { top: 0; bottom: 0; } }
+  
+}
+
+.code-highlight-caption {
+  position: relative;
+  text-align: center;
+  line-height: 2em;
+  text-shadow: rgba(#fff, .8) 0 1px 0;
+  color: #474747;
+  font-weight: normal;
+  margin-bottom: 0;
+  background-color: #ccc;
+  @include background(linear-gradient(#ffffff, #f0f0f0 6%, #e5e5e5 90%, #e5e5e5));
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
+  border: 1px solid #cbcbcb;
+  + .code-highlight { border-top: 0; }
+}
+
+.code-highlight-caption-link { 
+  position: absolute; right: .8em;
+  color: #666;
+  z-index: 1;
+  text-shadow: rgba(#fff, .8) 0 1px 0;
+  padding-left: 3em;
+}
+
+.highlight pre,
+pre:not(.code-highlight-pre) {
+  padding: 1em .8rem;
+  border-radius: .4em;
+  margin: 1.8em 0;
+}
+
+.code-highlight-pre {
+  width: 100%;
+  margin-bottom: 0;
+  display: table;
+}
+
+.code-highlight-row {
+  display: table-row;
+  width: 100%;
+
+  &:before, .code-highlight-line {
+    padding: {left: $pre-line-padding + .8; right: $pre-line-padding + .8 }
+  }
+
+  &:first-child {
+    &:before, .code-highlight-line { padding-top: $pre-line-padding; }
+  }
+
+  &:last-child {
+    &:before, .code-highlight-line { padding-bottom: $pre-line-padding; }
+  }
+
+  &.numbered {
+
+    &:before, .code-highlight-line {
+      padding: {left: $pre-line-padding; right: $pre-line-padding }
+    }
+
+    &:before {
+      display: table-cell;
+      content: attr(data-line);
+      min-width: 1.2em;
+      text-align: right;
+      line-height: 1.45em;
+    }
+  }
+}
+
+.code-highlight-line {
+  display: table-cell;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+
+.marked-line {
+  position: relative;
+  .code-highlight-line {
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; bottom: 0; right: 0;
+      border-right: 1px solid $pre-marker-border;
+    }
+  }
+  &.unnumbered .code-highlight-line:before {
+    border-left: 3px solid $pre-marker-border-left;
+  }
+  &.numbered:before {
+    border-left: 3px solid $pre-marker-border-left;
+  }
+}
+
+.start-marked-line {
+  &:before, .code-highlight-line:before {
+    border-top: 1px solid $pre-marker-border;
+  }
+}
+
+.end-marked-line {
+  &:before, .code-highlight-line:before {
+    border-bottom: 1px solid $pre-marker-border;
+  }
+}

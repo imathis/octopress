@@ -1,0 +1,25 @@
+$solar-base03:        #002b36; //darkest blue
+$solar-base02:        #073642; //dark blue
+$solar-base01:        #586e75; //darkest gray
+$solar-base00:        #657b83; //dark gray
+$solar-base0:         #839496; //medium gray
+$solar-base1:         #93a1a1; //medium light gray
+$solar-base2:         #f2f2f2; //very light gray
+$solar-base3:         #ffffff; //white
+$solar-yellow:        #b58900;
+$solar-orange:        #cb4b16;
+$solar-red:           #dc322f;
+$solar-magenta:       #d33682;
+$solar-violet:        #6c71c4;
+$solar-blue:          #268bd2;
+$solar-cyan:          #2aa198;
+$solar-green:         #859900;
+
+$pre-marker:              rgba(#00baff, .5) !default;
+$pre-marker-border:       rgba($pre-marker, .13) !default;
+$pre-marker-border-left:  $pre-marker;
+
+$code-bg:                 rgba(#fff, .3);
+$code-border:             rgba(#000, .1);
+
+$solarized: dark;

@@ -1,0 +1,161 @@
+$pre-line-padding:  .8em !default;
+$pre-font-family:   "Source Code Pro", Inconsolata-dz, Inconsolata, Menlo, Monaco, Consolas, "Liberation Mono", Courier, monospace !default;
+$pre-font-size:     13px !default;
+
+$code-font-family:  $pre-font-family;
+$code-font-size:    .85em !default;
+
+%octopress-diff-bg {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0; right: 0; top: 0; bottom: 0;
+}
+
+@mixin octopress-diff-bg($bg) {
+  &:after {
+    background: $bg;
+    @extend %octopress-diff-bg;
+  }
+}
+
+@mixin solarized-theme($s: dark) {
+  // Core colors
+  $base03:  if($s == light, $solar-base3, $solar-base03);
+  $base02:  if($s == light, $solar-base2, $solar-base02);
+  $base01:  if($s == light, $solar-base1, $solar-base01);
+  $base00:  if($s == light, $solar-base0, $solar-base00);
+  $base0:   if($s == light, $solar-base00, $solar-base0);
+  $base1:   if($s == light, $solar-base01, $solar-base1);
+  $base2:   if($s == light, $solar-base02, $solar-base2);
+  $base3:   if($s == light, $solar-base03, $solar-base3);
+
+  $pre-marker-bg: if($s == light, rgba($pre-marker, .05), rgba($pre-marker, .13));
+
+  $pre-bg: $base03;
+  $pre-color: $base1;
+  $pre-border: darken($base02, 5);
+  $code-highlight-border: $pre-border;
+
+  .code-highlight-pre {
+    background: darken($base03, 1);
+  }
+
+  .code-highlight-row.numbered:before {
+    color: $base01;
+    @if $solarized == light {
+      background: lighten($base03, 1);
+      border-right: 1px solid darken($base02, 2);
+      text-shadow: lighten($base02, 2) 0 -1px;
+    } @else {
+      background: $base02;
+      border-right: 1px solid darken($base03, 2);
+      box-shadow: lighten($base02, 2) -1px 0 inset;
+      text-shadow: darken($base02, 10) 0 -1px;
+    }
+  }
+
+  .marked-line {
+    .code-highlight-line:before {
+      background: $pre-marker-bg;
+    }
+
+    &.numbered:before {
+      background: $pre-marker-bg;
+      border-right-color: darken($pre-marker-bg, 20);
+    }
+  }
+
+  .highlight pre,
+  pre:not(.code-highlight-pre),
+  .code-highlight {
+    border: 1px solid $code-highlight-border;
+    background: $pre-bg;
+    color: $base1;
+  }
+
+  pre {
+    span { color: $base1; }
+
+    .c      { color: $base01; font-style: italic; }                      /* Comment */
+    .cm     { color: $base01; font-style: italic; }                      /* Comment.Multiline */
+    .cp     { color: $base01; font-style: italic;  }                     /* Comment.Preproc */
+    .c1     { color: $base01; font-style: italic; }                      /* Comment.Single */
+    .cs     {                                                            /* Comment.Special */
+              color: $base01; 
+              font-weight: bold;
+              font-style: italic; }
+    .err    { color: $solar-red; background: none; }                     /* Error */
+    .k      { color: $solar-orange; }                                    /* Keyword */
+    .o      { color: $base1; font-weight: bold; }                        /* Operator */
+    .p      { color: $base1; }                                           /* Operator */
+    .ow     { color: $solar-cyan; font-weight: bold; }                   /* Operator.Word */
+    .gd     { 
+              color: $base1;                                             /* Generic.Deleted */
+              @include octopress-diff-bg(mix($solar-red, $base03, 25%));
+            }
+    .gd .x  {                                                            /* Generic.Deleted.Specific */
+              color: $base1;
+              @include octopress-diff-bg(mix($solar-red, $base03, 35%)); 
+            }
+    .ge     {                                                            /* Generic.Emph */
+              color: $base1;
+              font-style: italic; }
+    //.gr     { color: #aa0000 }                                         /* Generic.Error */
+    .gh     { color: $base01; }                                          /* Generic.Heading */
+    .gi     {                                                            /* Generic.Inserted */
+              color: $base1;
+              @include octopress-diff-bg(mix($solar-green, $base03, 20%)); 
+            }
+    .gi .x  {                                                            /* Generic.Inserted.Specific */
+              color: $base1;
+              @include octopress-diff-bg(mix($solar-green, $base03, 40%)); 
+            }
+    .go     { color: $base0; }                                           /* Generic.Output */
+    .gp     { color: $solar-cyan; }                                      /* Generic.Prompt */
+    .gs     { color: $base1; font-weight: bold; }                        /* Generic.Strong */
+    .gu     { color: $solar-violet; }                                    /* Generic.Subheading */
+    .gt     { color: $solar-red; }                                       /* Generic.Traceback */
+    .kc     { color: $solar-green; font-weight: bold; }                  /* Keyword.Constant */
+    .kd     { color: $solar-blue; }                                      /* Keyword.Declaration */
+    .kp     { color: $solar-orange; font-weight: bold; }                 /* Keyword.Pseudo */
+    .kr     { color: $solar-magenta; font-weight: bold; }                /* Keyword.Reserved */
+    .kt     { color: $solar-cyan; }                                      /* Keyword.Type */
+    .n      { color: $solar-blue; }
+    .na     { color: $solar-blue; }                                      /* Name.Attribute */
+    .nb     { color: $solar-green; }                                     /* Name.Builtin */
+    .nc     { color: $solar-magenta;}                                    /* Name.Class */
+    .no     { color: $solar-yellow; }                                    /* Name.Constant */
+    .ni     { color: $solar-magenta; }                                   /* Name.Entity */
+    .nl     { color: $solar-green; }
+    .ne     { color: $solar-blue; font-weight: bold; }                   /* Name.Exception */
+    .nf     { color: $solar-blue; font-weight: bold; }                   /* Name.Function */
+    .nn     { color: $solar-yellow; }                                    /* Name.Namespace */
+    .nt     { color: $solar-blue; font-weight: bold; }                   /* Name.Tag */
+    .nx     { color: $solar-yellow; }
+    .bp     { color: $base1;  }                                          /* Name.Builtin.Pseudo */
+    .vc     { color: $solar-green; }                                     /* Name.Variable.Class */
+    .vg     { color: $solar-blue; }                                      /* Name.Variable.Global */
+    .vi     { color: $solar-blue; }                                      /* Name.Variable.Instance */
+    .nv     { color: $solar-blue; }                                      /* Name.Variable */
+    .w      { color: $base00; }                                          /* Text.Whitespace */
+    .mf     { color: $solar-cyan; }                                      /* Literal.Number.Float */
+    .m      { color: $solar-cyan; }                                      /* Literal.Number */
+    .mh     { color: $solar-cyan; }                                      /* Literal.Number.Hex */
+    .mi     { color: $solar-cyan; }                                      /* Literal.Number.Integer */
+    .mo     { color: $solar-cyan; }                                      /* Literal.Number.Oct */
+    .s      { color: $solar-cyan; }                                      /* Literal.String */
+    .sb     { color: $solar-green; }                                     /* Literal.String.Backtick */
+    .sc     { color: $solar-green; }                                     /* Literal.String.Char */
+    .sd     { color: $solar-cyan; }                                      /* Literal.String.Doc */
+    .s2     { color: $solar-cyan; }                                      /* Literal.String.Double */
+    .se     { color: $solar-red; }                                       /* Literal.String.Escape */
+    .sh     { color: $solar-green; }                                     /* Literal.String.Heredoc */
+    .si     { color: $solar-blue; }                                      /* Literal.String.Interpol */
+    .sx     { color: $solar-green; }                                     /* Literal.String.Other */
+    .sr     { color: $solar-cyan; }                                      /* Literal.String.Regex */
+    .s1     { color: $solar-cyan; }                                      /* Literal.String.Single */
+    .ss     { color: $solar-orange; }                                    /* Literal.String.Symbol */
+    .il     { color: $solar-yellow; }                                    /* Literal.Number.Integer.Long */
+  }
+}

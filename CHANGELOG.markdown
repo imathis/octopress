@@ -1,5 +1,10 @@
 # Octopress Changelog
 
+## 2.1
+
+- Now using on Jekyll 2.0
+- Upgraded all syntax highlighting plugins (now using external gem plugins)
+
 ## 2.0
 
 - Now based on [mojombo/jekyll](http://github.com/mojombo/jekyll)
