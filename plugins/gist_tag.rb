@@ -50,7 +50,7 @@ module Jekyll
     end
 
     def get_gist_url_for(gist, file)
-      "https://gist.github.com/raw/#{gist}/#{file}"
+      "https://gist.githubusercontent.com/raw/#{gist}/#{file}"
     end
 
     def cache(gist, file, data)
@@ -78,8 +78,11 @@ module Jekyll
       gist_url = get_gist_url_for(gist, file)
       data     = get_web_content(gist_url)
 
-      if data.code.to_i == 302
+      locations = Array.new
+      while (data.code.to_i == 301 || data.code.to_i == 302)
         data = handle_gist_redirecting(data)
+        break if locations.include? data.header['Location']
+        locations << data.header['Location']
       end
 
       if data.code.to_i != 200
@@ -95,6 +98,7 @@ module Jekyll
       if redirected_url.nil? || redirected_url.empty?
         raise ArgumentError, "GitHub replied with a 302 but didn't provide a location in the response headers."
       end
+
       get_web_content(redirected_url)
     end
 
