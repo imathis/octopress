@@ -1,8 +1,8 @@
 #custom filters for Octopress
 require './plugins/backtick_code_block'
-require 'jekyll-page-hooks'
+require 'octopress-hooks'
 require 'jekyll-sitemap'
-require 'jekyll-date-format'
+require 'octopress-date-format'
 require './plugins/raw'
 require 'rubypants'
 
