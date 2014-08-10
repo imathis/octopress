@@ -1,41 +1,49 @@
 require './plugins/pygments_code'
 
 module BacktickCodeBlock
-  include HighlightCode
   AllOptions = /([^\s]+)\s+(.+?)\s+(https?:\/\/\S+|\/\S+)\s*(.+)?/i
   LangCaption = /([^\s]+)\s*(.+)?/i
-  def render_code_block(input)
-    @options = nil
-    @caption = nil
-    @lang = nil
-    @url = nil
-    @title = nil
-    input.gsub(/^`{3} *([^\n]+)?\n(.+?)\n`{3}/m) do
-      @options = $1 || ''
-      str = $2
+  def render_code_block(input, ext)
+    input.encode!("UTF-8")
+    input.gsub /^`{3}(.+?)`{3}/m do
+      str = $1.to_s
+      str.gsub /([^\n]+)?\n(.+?)\Z/m do
+        markup = $1 || ''
+        code = $2.to_s
 
-      if @options =~ AllOptions
-        @lang = $1
-        @caption = "<figcaption><span>#{$2}</span><a href='#{$3}'>#{$4 || 'link'}</a></figcaption>"
-      elsif @options =~ LangCaption
-        @lang = $1
-        @caption = "<figcaption><span>#{$2}</span></figcaption>"
-      end
+        @options = {}
+        clean_markup = Octopress::Pygments.clean_markup(markup)
 
-      if str.match(/\A( {4}|\t)/)
-        str = str.gsub(/^( {4}|\t)/, '')
-      end
-      if @lang.nil? || @lang == 'plain'
-        code = tableize_code(str.gsub('<','&lt;').gsub('>','&gt;'))
-        "<figure class='code'>#{@caption}#{code}</figure>"
-      else
-        if @lang.include? "-raw"
-          raw = "``` #{@options.sub('-raw', '')}\n"
-          raw += str
-          raw += "\n```\n"
-        else
-          code = highlight(str, @lang)
-          "<figure class='code'>#{@caption}#{code}</figure>"
+        if clean_markup =~ AllOptions
+          @options = {
+            lang: $1,
+            title: $2,
+            url: $3,
+            link_text: $4,
+          }
+        elsif clean_markup =~ LangCaption
+          @options = {
+            lang: $1,
+            title: $2,
+            url: nil,
+            link_text: "link",
+          }
+        end
+
+        # Extra default options
+        @options[:linenos] = true
+        @options[:marks] = []
+        @options[:start] = 1
+        @options[:end] = nil
+        @options = Octopress::Pygments.parse_markup(markup, @options)
+
+        begin
+          code = Octopress::Pygments.highlight(code, @options)
+          code = "<notextile>#{code}</notextile>" if ext.match(/textile/)
+          code
+        rescue MentosError => e
+          markup = "```#{original_markup}"
+          Octopress::Pygments.highlight_failed(e, "```[language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]\ncode\n```", markup, code)
         end
       end
     end
