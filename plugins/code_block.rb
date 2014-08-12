@@ -47,8 +47,6 @@ require './plugins/raw'
 module Jekyll
 
   class CodeBlock < Liquid::Block
-    include HighlightCode
-    include TemplateWrapper
     CaptionUrlTitle = /(\S[\S\s]*)\s+(https?:\/\/\S+|\/\S+)\s*(.+)?/i
     Caption = /(\S[\S\s]*)/
     def initialize(tag_name, markup, tokens)
@@ -79,11 +77,11 @@ module Jekyll
       source = "<figure class='code'>"
       source += @caption if @caption
       if @filetype
-        source += "#{highlight(code, @filetype)}</figure>"
+        source += "#{HighlightCode::highlight(code, @filetype)}</figure>"
       else
-        source += "#{tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'))}</figure>"
+        source += "#{HighlightCode::tableize_code(code.lstrip.rstrip.gsub(/</,'&lt;'))}</figure>"
       end
-      source = safe_wrap(source)
+      source = TemplateWrapper::safe_wrap(source)
       source = context['pygments_prefix'] + source if context['pygments_prefix']
       source = source + context['pygments_suffix'] if context['pygments_suffix']
       source

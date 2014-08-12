@@ -7,32 +7,38 @@ require './plugins/raw'
 require 'rubypants'
 
 module OctopressFilters
-  include BacktickCodeBlock
-  include TemplateWrapper
-  def pre_filter(input)
-    input = render_code_block(input)
-    input.gsub /(<figure.+?>.+?<\/figure>)/m do
-      safe_wrap($1)
+  def self.pre_filter(page)
+    if page.ext.match('html|textile|markdown|md|haml|slim|xml')
+      input = BacktickCodeBlock::render_code_block(page.content)
+      page.content = input.gsub /(<figure.+?>.+?<\/figure>)/m do
+        TemplateWrapper::safe_wrap($1)
+      end
     end
   end
-  def post_filter(input)
-    input = unwrap(input)
-    RubyPants.new(input).to_html
+  def self.post_filter(page)
+    if page.ext.match('html|textile|markdown|md|haml|slim|xml')
+      input = TemplateWrapper::unwrap(page.content)
+      page.content = RubyPants.new(input).to_html
+    end
   end
-end
 
-module Jekyll
-  class ContentFilters < PageHooks
-    include OctopressFilters
-    def pre_render(post)
-      if post.ext.match('html|textile|markdown|md|haml|slim|xml')
-        post.content = pre_filter(post.content)
-      end
+  class PageFilters < Octopress::Hooks::Page
+    def pre_render(page)
+      OctopressFilters::pre_filter(page)
     end
+
+    def post_render(page)
+      OctopressFilters::post_filter(page)
+    end
+  end
+
+  class PostFilters < Octopress::Hooks::Post
+    def pre_render(post)
+      OctopressFilters::pre_filter(post)
+    end
+
     def post_render(post)
-      if post.ext.match('html|textile|markdown|md|haml|slim|xml')
-        post.content = post_filter(post.content)
-      end
+      OctopressFilters::post_filter(post)
     end
   end
 end
