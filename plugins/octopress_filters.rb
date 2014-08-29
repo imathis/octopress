@@ -17,9 +17,10 @@ module OctopressFilters
   end
   def self.post_filter(page)
     if page.ext.match('html|textile|markdown|md|haml|slim|xml')
-      input = TemplateWrapper::unwrap(page.content)
-      page.content = RubyPants.new(input).to_html
+      page.output = TemplateWrapper::unwrap(page.output)
     end
+
+    page.output = RubyPants.new(page.output).to_html
   end
 
   class PageFilters < Octopress::Hooks::Page
