@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Traurig"
+date: 2014-09-19 20:21:19 +0200
+comments: true
+categories: [video, sehtipp]
+---
+L30, ein einsamer Roboter, sucht Freunde.... Mit einem überraschendem Ende.
+{% vimeo 105329112 %}
