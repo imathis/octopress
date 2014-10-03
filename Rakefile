@@ -175,7 +175,7 @@ end
 
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
 task :clean do
-  rm_rf [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
+  rm_rf [Dir.glob(".pygments-cache/**"), Dir.glob(".gist-cache/**"), Dir.glob(".sass-cache/**"), "source/stylesheets/screen.css"]
 end
 
 desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"
