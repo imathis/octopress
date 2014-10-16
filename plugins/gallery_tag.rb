@@ -1,4 +1,4 @@
-BASE_DIR = 'source/images/galleries'
+BASE_DIR = 'source/media/galleries'
 
 module ImageList
   def image_list( name )
@@ -12,8 +12,8 @@ module ImageList
     dir.sort.each do | d |
       image = File.basename(d, File.extname(d))
       unless d =~ /^\./ || d =~ /thumbs/
-        #list << %Q{<a href="/images/galleries/#{name}/#{d}" rel="shadowbox" title="#{image}"><img src="/images/galleries/#{name}/thumbs/#{d}" /></a>}
-	list << %Q{<a href="/images/galleries/#{name}/#{d}"><img src="/images/galleries/#{name}/thumbs/#{d}"/></a>}
+        #list << %Q{<a href="/media/galleries/#{name}/#{d}" rel="shadowbox" title="#{image}"><img src="/media/galleries/#{name}/thumbs/#{d}" /></a>}
+	list << %Q{<a href="/media/galleries/#{name}/#{d}"><img src="/media/galleries/#{name}/thumbs/#{d}"/></a>}
       end
     end
     list << %Q{</div> <!--class="fotorama" data-nav="thumbs" -->}
