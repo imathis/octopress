@@ -14,7 +14,7 @@ Wenn man den Push-Service der FritzBox mit Google-Mail verknüpfen will muss man
 
 #### Anwendungsspezifisches Passwort erstellen
 
-{% img right http://gvr.me/media/googleAppPassword.png 150 150 googleAppPassword %}
+{% img right /media/googleAppPassword.png 150 150 googleAppPassword %}
 
 Unter den [securtiy settings](https://www.google.com/settings/security)  des Google-Accounts definiert man sich ein (eigenes) Anwendungsspezifisches Passwort. Dieses Passwort merken oder aber einfach den Tab offenlassen.
 
@@ -24,7 +24,7 @@ Unter den [securtiy settings](https://www.google.com/settings/security)  des Goo
 1. Navigiere to System-&gt;Push Service
 2. Aktiviere die "FRITZ!Box Push Service aktiv" checkbox, jetzt kann man die Mailservereinstellungen anpassen.
 
-{% img right http://gvr.me/media/fritzPushService.png 250 250 fritzPushService %}
+{% img right /media/fritzPushService.png 250 250 fritzPushService %}
 
 #### Eingabe der Account Daten
 
