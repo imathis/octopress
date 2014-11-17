@@ -5,10 +5,10 @@
   {% endif %}
 </ul>
   {% if site.simple_search %}
-<form action="{{ site.simple_search }}" method="get">
+<form action="{{ site.simple_search }}" method="get" onsubmit="this['q'].value = this['q_raw'].value + ' site:{{ site.url | shorthand_url }}';">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    <input type="hidden" name="q" value="" />
+    <input class="search" type="text" name="q_raw" results="0" placeholder="Search"/>
   </fieldset>
 </form>
   {% endif %}
