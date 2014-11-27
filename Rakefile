@@ -341,7 +341,7 @@ task :setup_github_pages, :repo do |t, args|
       end
     end
   end
-  url = blog_url(user, project)
+  url = blog_url(user, project, source_dir)
   jekyll_config = IO.read('_config.yml')
   jekyll_config.sub!(/^url:.*$/, "url: #{url}")
   File.open('_config.yml', 'w') do |f|
@@ -388,9 +388,10 @@ def ask(message, valid_options)
   answer
 end
 
-def blog_url(user, project)
-  url = if File.exists?('source/CNAME')
-    "http://#{IO.read('source/CNAME').strip}"
+def blog_url(user, project, source_dir)
+  cname = "#{source_dir}/CNAME"
+  url = if File.exists?(cname)
+    "http://#{IO.read(cname).strip}"
   else
     "http://#{user.downcase}.github.io"
   end
