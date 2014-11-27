@@ -389,8 +389,9 @@ def ask(message, valid_options)
 end
 
 def blog_url(user, project)
-  url = if File.exists?('source/CNAME')
-    "http://#{IO.read('source/CNAME').strip}"
+  cname = "#{source_dir}/CNAME"
+  url = if File.exists?(cname)
+    "http://#{IO.read(cname).strip}"
   else
     "http://#{user.downcase}.github.io"
   end
