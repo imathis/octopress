@@ -153,7 +153,7 @@ ERR
     # Returns string
     #
     def category_links(categories)
-      categories = categories.sort!.map { |c| category_link c }
+      categories = categories.to_a.sort!.map { |c| category_link c }
 
       case categories.length
       when 0
