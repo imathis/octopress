@@ -6,9 +6,5 @@ comments: false
 sharing: true
 footer: true
 ---
-<!--Enable embedded 500px images-->
-<script src="//500px.com/embed.js" type="text/javascript"></script>
 
-TODO
-{% 500px 93210131 %}
-
+{% include custom/contact.html %}

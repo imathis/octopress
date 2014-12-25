@@ -1,24 +1,14 @@
 ---
-layout: blog
-title: "500px"
+layout: post
+title: "Ibis"
 date: 2014-12-24 13:34:57 +1100
 comments: true
-categories: [Pics] 
+categories: [Images, 500px, Birds, Sydney] 
 ---
 
 <!--Enable embedded 500px images-->
 <script src="//500px.com/embed.js" type="text/javascript"></script>
 
-TODO
 {% 500px 93210131 %}
 
-Some more text.   
-``Text``
-And more
-
-``` bash Test code block
-for i in 1 2 3 4 5
-do
-   echo "Hello world $i"
-done
-```
+Snapped this last week while in Hyde Park, Sydney. Great contrast against the lawn in the background.
