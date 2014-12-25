@@ -1,0 +1,23 @@
+#pagenavi{
+	padding: 20px 0;
+	height: 20px;
+	line-height: 20px;
+	position: relative;
+	.prev, .next{
+		position: absolute;
+	}
+	.prev{
+		left: 0;
+	}
+	.next{
+		right: 0;
+	}
+	.center{
+		text-align: center;
+		width: 100%;
+		display: block;
+		@media screen and (max-width: 400px){
+			display: none;
+		}
+	}
+}

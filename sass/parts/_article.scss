@@ -1,0 +1,153 @@
+article{
+	padding-top: 40px;
+	position: relative;
+	header {
+		margin-bottom: 1.5em;
+	}
+	h2.title{
+		font-size: 36px;
+		font-weight: 300;
+		line-height: 1;
+		margin-left:0px;
+		text-align:left;
+		border-bottom: 0px;
+		a{
+			color: #333;
+		}
+		a:hover{
+		color: $color-main;
+		border-bottom: 0px;
+		}
+		@media screen and (max-width: 620px) {
+		font-size: 18px;
+		}
+
+	}
+
+	.entry-content{
+		line-height: 1.5;
+		text-align: justify;
+		a{
+			&:hover{
+				text-decoration:none;
+
+			}
+		}
+		p, blockquote, ul, ol, dl, table, iframe, h1, h2, h3, h4, h5, h6, .video-container{
+			margin-top: 1.5em;
+			margin-bottom: 1.5em;
+		}
+		ul, ol, dl{
+			margin-left: 20px;
+			ul, ol, dl{
+				margin-top: 0;
+			}
+		}
+		strong{
+			font-weight: bold;
+		}
+		em{
+			font-style: italic;
+		}
+		p{
+			margin-top: 10px;
+		}
+		h2{
+			font-weight: 300;
+			border-bottom: 1px solid $color-gray04;
+			position: relative;
+			&:before{
+				content: "";
+				position: absolute;
+				bottom: -2px;
+				border-bottom: 1px solid $color-gray05;
+				width: 100%;
+			}
+		}
+
+		img, video{
+			max-width: 100%;
+			height: auto;
+			-webkit-border-radius:5px;
+			-moz-border-radius:5px;
+			border-radius:5px;
+			-webkit-border-radius:5px;
+			-moz-border-radius:5px;
+			border-radius:5px;
+			-webkit-box-shadow:0 0 15px rgba(0,0,0,0.35);
+			-moz-box-shadow:0 0 15px rgba(0,0,0,0.35);
+			box-shadow:0 0 15px rgba(0,0,0,0.35);
+			border-bottom: 0px;
+		}
+
+		blockquote{
+			background: $color-gray04;
+			border-left: 5px solid $color-gray03;
+			padding: 15px 20px;
+			margin-top: 10px;
+			& > p:first-of-type{
+				margin-top: 0;
+			}
+		}
+		iframe{
+			border: none;
+		}
+		table{
+			background: $color-gray04;
+			border: 1px solid $color-gray03;
+			border-spacing: 0;
+			margin-top: 10px;
+			th{
+				background: $color-gray03;
+				padding: 0 15px;
+			}
+			td{
+				text-align: center;
+			}
+			tr{
+				&:nth-of-type(2n){
+					background: #d5d5d5;
+				}
+			}
+		}
+		.caption{
+			display: block;
+			font-size: 0.9em;
+			color: $color-gray02;
+			padding-left: 25px;
+			position: relative;
+		}
+		.video-container{
+			position: relative;
+			padding-bottom: 56.25%;
+			padding-top: 30px;
+			height: 0;
+			overflow: hidden;
+			iframe, object, embed{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				margin-top: 0;
+			}
+		}
+	}
+}
+.share{
+	padding: 15px 0;
+	text-align: center;
+	@media screen and (max-width: 620px) {
+	padding-left: 0px;
+	}
+	ul {
+		list-style: none;
+		li {
+			display: inline;
+			padding: 0 2px;
+			a:link,a:visited {
+				border: none;
+			}
+		}
+	}
+}

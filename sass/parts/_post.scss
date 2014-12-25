@@ -1,0 +1,32 @@
+.post{
+	.meta{
+		font-size: 0.9em;
+		color: #333;
+		@media screen and (max-width: 620px){
+			width: auto;
+		}
+		a {
+ 			text-decoration:none;
+			color:#333;
+			-webkit-transition:border .25s linear;
+			-moz-transition:border .25s linear;
+			-ms-transition:border .25s linear;
+			transition:border .25s linear;
+			outline:none;
+		}
+
+		a:link,a:visited {
+			border-bottom:1px solid rgba(191,2,34,0);
+		}
+
+		a:hover {
+			border-bottom:1px solid #bf0222;
+		}
+		.date, .tags, .comments{
+			@media screen and (max-width: 620px){
+				@include inline-block;
+				margin-right: 30px;
+			}
+		}
+	}
+}

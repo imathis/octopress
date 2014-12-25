@@ -1,0 +1,37 @@
+.archives{
+	padding: 40px 0 1.5em;
+	h2 {
+		@media screen and (max-width: 600px){
+			font-size: 18px;
+		}
+	}
+	article{
+		&:first-of-type{
+			h3 {
+				margin: 0;
+			}
+		}
+		margin-left: 200px;
+		padding: 0;
+		@media screen and (max-width: 600px) {
+			margin-left: 0;
+			&:first-of-type{
+				h3 {
+					margin: 1.2em 0 0 0;
+				}
+			}
+		}
+		.meta{
+			color: $color-gray02;
+			font-size: 0.9em;
+			line-height: 2;
+			a{
+				color: $color-gray02;
+				@include transition(0.3s);
+				&:hover{
+					color: $color-gray01;
+				}
+			}
+		}
+	}
+}

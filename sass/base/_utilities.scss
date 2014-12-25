@@ -1,0 +1,24 @@
+@mixin square($property){
+	width: $property;
+	height: $property;
+}
+@mixin user-select($select){
+	-moz-user-select: $select;
+	-khtml-user-select: $select;
+	-webkit-user-select: $select;
+	-o-user-select: $select;
+	user-select: $select;
+}
+@mixin border-shadow($top: $color-gray05, $bottom: $color-gray04){
+	border-top: 1px solid $top;
+	border-bottom: 1px solid $bottom;
+}
+@mixin center($width, $height){
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: $width/(-2);
+	margin-top: $height/(-2);
+	width: $width;
+	height: $height;
+}
