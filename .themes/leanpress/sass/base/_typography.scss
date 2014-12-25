@@ -1,0 +1,26 @@
+.pullquote-right:before,
+.pullquote-left:before {
+  /* Reset metrics. */
+  padding: 0;
+  border: none;
+
+  /* Content */
+  content: attr(data-pullquote);
+
+  /* Pull out to the right, modular scale based margins. */
+  float: right;
+  width: 45%;
+  margin: .5em 0 1em 1.5em;
+
+  /* Baseline correction */
+  position: relative;
+  top: 7px;
+  font-size: 1.4em;
+  line-height: 1.45em;
+}
+
+.pullquote-left:before {
+  /* Make left pullquotes align properly. */
+  float: left;
+  margin: .5em 1.5em 1em 0;
+}

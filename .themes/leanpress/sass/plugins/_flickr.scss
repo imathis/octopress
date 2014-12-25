@@ -1,0 +1,136 @@
+.flickr-set, .gallery {
+  text-align: center;
+}
+
+.flickr-set figure, .gallery li {
+  display: inline-block;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  vertical-align: middle;
+}
+
+.gallery li {
+  list-style-type: none;
+}
+
+figcaption {
+  font-size: 8px;
+  line-height: 1.6em;
+}
+
+.illustration figcaption {
+  max-width: 40em;
+}
+
+.flickr-thumbnail {
+  @extend .flex-content;
+  @extend .basic-alignment;
+  @include shadow-box;
+  @include box-sizing(content-box);
+  background: #fff;
+}
+
+.flickr-thumbnail .description {
+  display: none;
+}
+
+.flickr-thumbnail h1 {
+  font-size: small;
+  font-family: $sans;
+  text-align: center;
+}
+
+.flickr-set figcaption {
+  display: none;
+}
+
+figure.video-preview {
+  position: relative;
+}
+figure.video-preview .video-icon {
+  display: block;
+  position: absolute;
+  width: 2em;
+  height: 1.5em;
+  bottom: 0.75em;
+  left: 0.75em;
+  color: white;
+  text-align: center;
+  background: #000; /* fallback */
+  background: rgba(0, 0, 0, 0.5);
+  @include border-radius(0.25em);
+  border: 1px solid white; /* color fallback */
+  border-color: rgba(255, 255, 255, 0.5);
+  /* this just gets the triangle visually balanced - would have to change for some other icon */
+  padding-left: .2em;
+  padding-top: .1em;
+  padding-right: .15em;
+}
+
+.noborder figure, .noborder, figure img, figure video, figure .flash-video {
+  @include border-radius(0px);
+  @include box-shadow(none);
+  @include box-sizing(content-box);
+  border: none;
+}
+
+/* otherwise, defaults to bottom, but leaves space for the 
+   descenders in the otherwise empty anchor */
+figure a img, figure a video, figure a .flash-video {
+  vertical-align: middle;
+}
+
+
+/* customization for fancybox */
+/* fonts  and layout */
+.fancybox-title, .fancybox-title h1, .fancybox-title .description {
+  font-family: $sans !important;
+  text-align: center;
+}
+
+.fancybox-title {
+  max-height: 6em;
+  overflow-y: auto;
+}
+
+.flickr-thumbnail h1 {
+  font-weight: normal;
+}
+
+.flickr-thumbnail h1, .fancybox-title h1 {
+  margin: 0.25em;
+  font-size: 1em !important;
+}
+
+.flickr-link {
+  padding-left: 18px;
+  background: url(data:image/gif;base64,R0lGODlhEAAQAKUgAP8Aev8Ag/8HiwBT3QJX2gRg3ABq3iF94f1EpPpstVuY5P2Cvnaq6vKeyJO56IXI8vu83vLN4dXX1Mfb9f3V5OHi4PHf6Onr6Oru8+/18vz07P34+fH++f388/n+//z++////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEKACAALAAAAAAQABAAAAaBQFBlSCwWhZ+kcrkcMp9Kp2ezpCqpQ0/S+tloP9qNlHFQTMAQBGKRdCoGBYIBQwkA7AnPEFPoxx8LdwGDHEMbfn+BgwECHBISHQwEkwcYFgJ3AAuOEhkZDgoMGBsZEQkIDZ6PFxcarhoXGBkcs7GrrLi5ube6vRe8vrsgj8TFxiBBADs=) center left no-repeat;
+}
+
+.flickr-link h1 {
+	font-size: 8px;
+	}
+
+
+/* always show navigation */
+.fancybox-nav {
+  width: 60px;       
+}
+
+.fancybox-nav span {
+  visibility: visible;
+  opacity: 0.20;
+}
+
+.fancybox-nav:hover span {
+  opacity: 1;
+}
+
+.fancybox-next {
+  right: -100px;
+}
+
+.fancybox-prev {
+  left: -100px;
+}
+
