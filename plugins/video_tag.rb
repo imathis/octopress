@@ -22,11 +22,11 @@ module Jekyll
     @width = ''
 
     def initialize(tag_name, markup, tokens)
-      if markup =~ /(https?:\S+)(\s+(https?:\S+))?(\s+(https?:\S+))?(\s+(\d+)\s(\d+))?(\s+(https?:\S+))?/i
-        @video  = [$1, $3, $5].compact
-        @width  = $7
-        @height = $8
-        @poster = $10
+      if markup =~ /((https?:\/\/|\/)\S+)(\s+((https?:\/\/|\/)\S+))?(\s+((https?:\/\/|\/)\S+))?(\s+(\d+)\s(\d+))?(\s+((https?:\/\/|\/)\S+))?/i
+        @video  = [$1, $4, $7].compact
+        @width  = $10
+        @height = $11
+        @poster = $13
       end
       super
     end
