@@ -161,7 +161,7 @@ end
 # usage rake isolate[my-post]
 desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much more quickly."
 task :isolate, :filename do |t, args|
-  puts ">>> !! Please provide a fillename, eg. rake isolate[my_post]" unless args.filename?
+  puts ">>> !! Please provide a filename, eg. rake isolate[my_post]" unless args.filename?
   if args.filename?
     stash_dir = "#{source_dir}/#{stash_dir}"
     FileUtils.mkdir(stash_dir) unless File.exist?(stash_dir)
