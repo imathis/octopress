@@ -1,17 +1,31 @@
 # octopress_bash_completion
-This will auto complete options for used in [Octopress](http://octopress.org/)
+This will auto complete targets for used in [Octopress](http://octopress.org/)
 
 ---
 # Install
 * copy rake to /etc/bash_completion.d/
 * relogin or `. /etc/bash_completion.d/rake`
 
-# Auto complete options
-* deploy 
-* generate 
-* preview 
-* watch 
+# Auto complete targets
+* deploy
+* generate
+* preview
+* watch
 * new_post
+* new_page
+* isolate
+* integrate
+* clean
+* update_style
+* update_source
+* gen_deploy
+* copydot
+* rsync
+* set_root_dir
+* setup_github_pages
+* list
+* -T
+* install
 
 # Tested environment
 * Ubuntu 14.04

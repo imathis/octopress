@@ -1,10 +1,13 @@
 _rake() 
 {
-    local cur prev opts
+    local current_keyin_str targets
     COMPREPLY=()
-    cur="${COMP_WORDS[COMP_CWORD]}"
-    opts="deploy generate preview watch new_post"
+    current_keyin_str="${COMP_WORDS[COMP_CWORD]}"
+    targets="deploy generate preview watch new_post new_page isolate \
+          integrate clean update_style update_source gen_deploy   \
+          copydot rsync set_root_dir setup_github_pages list -T   \
+          install"
 
-    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    COMPREPLY=( $(compgen -W "${targets}" -- ${current_keyin_str}) )
 }
 complete -F _rake rake
