@@ -22,32 +22,38 @@ module Jekyll
     @width = ''
 
     def initialize(tag_name, markup, tokens)
-      if markup =~ /(https?:\S+)(\s+(https?:\S+))?(\s+(https?:\S+))?(\s+(\d+)\s(\d+))?(\s+(https?:\S+))?/i
-        @video  = [$1, $3, $5].compact
-        @width  = $7
-        @height = $8
-        @poster = $10
-      end
+      @videos = markup.scan(/((https?:\/\/|\/)\S+\.(webm|ogv|mp4)\S*)/i).map(&:first).compact
+      @poster = markup.scan(/((https?:\/\/|\/)\S+\.(png|gif|jpe?g)\S*)/i).map(&:first).compact.first
+      @sizes  = markup.scan(/\s(\d\S+)/i).map(&:first).compact
       super
     end
 
     def render(context)
       output = super
-      type = {
-        'mp4' => "type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'",
-        'ogv' => "type='video/ogg; codecs=theora, vorbis'",
-        'webm' => "type='video/webm; codecs=vp8, vorbis'"
+      types = {
+        '.mp4' => "type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'",
+        '.ogv' => "type='video/ogg; codecs=theora, vorbis'",
+        '.webm' => "type='video/webm; codecs=vp8, vorbis'"
       }
-      if @video.size > 0
-        video =  "<video width='#{@width}' height='#{@height}' preload='none' controls poster='#{@poster}'>"
-        @video.each do |v|
-          t = v.match(/([^\.]+)$/)[1]
-          video += "<source src='#{v}' #{type[t]}>"
+      if @videos.size > 0
+        video =  "<video #{sizes} preload='metadata' controls #{poster}>"
+        @videos.each do |v|
+          video << "<source src='#{v}' #{types[File.extname(v)]}>"
         end
         video += "</video>"
       else
         "Error processing input, expected syntax: {% video url/to/video [url/to/video] [url/to/video] [width height] [url/to/poster] %}"
       end
+    end
+
+    def poster
+      "poster='#{@poster}'" if @poster
+    end
+
+    def sizes
+      attrs = "width='#{@sizes[0]}'" if @sizes[0]
+      attrs += " height='#{@sizes[1]}'" if @sizes[1]
+      attrs
     end
   end
 end
