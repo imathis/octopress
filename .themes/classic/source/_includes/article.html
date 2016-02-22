@@ -1,7 +1,8 @@
 {% unless page.no_header %}
   <header>
     {% if index %}
-      <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+      {% capture entryhref %}{% if post.external_url %}{{ post.external_url }}{% else %}{{ root_url}}{{ post.url }}{% endif %}{% endcapture %}
+      <h1 class="entry-title"><a href="{{ entryhref }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
     {% else %}
       <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
     {% endif %}
@@ -12,6 +13,7 @@
            | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread"
              data-disqus-identifier="{% if post.meta.disqus_id %}{{ post.meta.disqus_id }}{% else %}{{ site.url }}{{ post.url }}{% endif %}">Comments</a>
         {% endif %}
+        {% if post.external_url %}<a href="{{ root_url }}{{ post.url }}">Permalink</a>{% endif %}
       </p>
     {% endunless %}
   </header>
