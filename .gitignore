@@ -3,6 +3,8 @@
 .sass-cache
 .gist-cache
 .pygments-cache
+.ruby-version
+.ruby-gemset
 _deploy
 public
 sass.old

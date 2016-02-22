@@ -5,7 +5,6 @@ require 'sinatra/base'
 $root = ::File.dirname(__FILE__)
 
 class SinatraStaticServer < Sinatra::Base
-
   get(/.+/) do
     send_sinatra_file(request.path) {404}
   end
@@ -19,7 +18,6 @@ class SinatraStaticServer < Sinatra::Base
     file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
     File.exist?(file_path) ? send_file(file_path) : missing_file_block.call
   end
-
 end
 
 run SinatraStaticServer
