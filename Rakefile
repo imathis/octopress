@@ -178,6 +178,15 @@ task :clean do
   rm_rf [Dir.glob(".pygments-cache/**"), Dir.glob(".gist-cache/**"), Dir.glob(".sass-cache/**"), "source/stylesheets/screen.css"]
 end
 
+desc "Cleans all *.markdown files for a faster site generation"
+# Suggestion for a faster site generation explained in http://alvarogarcia7.github.io/blog/2015/07/13/faster-site-generation-for-octopress-2/ 
+task :ignore do
+  cd "#{source_dir}/#{posts_dir}"
+  system "git update-index --assume-unchanged $(ls *.markdown)"
+  system "rm $(ls *.markdown)"
+end
+
+
 desc "Move sass to sass.old, install sass theme updates, replace sass/custom with sass.old/custom"
 task :update_style, :theme do |t, args|
   theme = args.theme || 'classic'
