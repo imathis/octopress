@@ -209,6 +209,7 @@ $solar-scroll-thumb: rgba(#fff, .2);
 }
 
 pre, .highlight, .gist-highlight {
+  -webkit-overflow-scrolling: touch;
   &::-webkit-scrollbar {  height: .5em; background: $solar-scroll-bg; }
   &::-webkit-scrollbar-thumb:horizontal { background: $solar-scroll-thumb;  -webkit-border-radius: 4px; border-radius: 4px }
 }
