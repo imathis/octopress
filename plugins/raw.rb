@@ -8,7 +8,7 @@ module TemplateWrapper
   end
   # This must be applied after the
   def self.unwrap(input)
-    input.gsub /<div class='bogus-wrapper'><notextile>(.+?)<\/notextile><\/div>/m do
+    input.gsub /<div class=['"]bogus-wrapper['"]><notextile>(.+?)<\/notextile><\/div>/m do
       $1
     end
   end
