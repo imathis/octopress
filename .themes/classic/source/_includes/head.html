@@ -11,6 +11,20 @@
   <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  <meta name="twitter:image" content="{{ site.url }}/favicon.png">
+  <meta name="twitter:site" content="{% if site.twitter_user %} @{{ site.twitter_user }} {% endif %}">
+  <meta name="twitter:creator" content="{% if site.twitter_user %} @{{ site.twitter_user }} {% endif %}">
+
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/favicon.png">
+  <meta property="og:site_name" content="{{ site.title }}">
+
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
