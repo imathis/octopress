@@ -401,6 +401,12 @@ end
 
 desc "list tasks"
 task :list do
-  puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
-  puts "(type rake -T for more detail)\n\n"
+  if verbose == true
+    system "rake -T"
+  else
+    puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
+    puts "(use -v or --verbose for more detail)\n\n"
+  end
 end
+
+task :default => [:list]
