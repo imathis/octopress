@@ -32,6 +32,10 @@ if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
   `chcp 65001`
 end
 
+task :default do
+  system "rake --tasks"
+end
+
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
   if File.directory?(source_dir) || File.directory?("sass")
