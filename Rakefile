@@ -248,6 +248,16 @@ task :rsync do
   ok_failed system("rsync -avze 'ssh -p #{ssh_port}' #{exclude} #{rsync_args} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
 end
 
+desc "Deploy website locally"
+task :local do
+  exclude = ""
+  if File.exists?('./rsync-exclude')
+    exclude = "--exclude-from '#{File.expand_path('./rsync-exclude')}'"
+  end
+  puts "## Deploying website to #{document_root}"
+  ok_failed system("rsync -av #{exclude} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{document_root}")
+end
+
 desc "deploy public directory to github pages"
 multitask :push do
   puts "## Deploying branch to Github Pages "
