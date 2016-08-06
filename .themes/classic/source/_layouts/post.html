@@ -25,6 +25,12 @@ single: true
     </p>
   </footer>
 </article>
+{% if site.googleplus_comments_hidden != true and page.comments == true %}
+  <section>
+    <h1>Comments</h1>
+    <div id="googleplus_thread" aria-live="polite">{% include post/googleplus_thread.html %}</div>
+  </section>
+{% endif %}
 {% if site.disqus_short_name and page.comments == true %}
   <section>
     <h1>Comments</h1>

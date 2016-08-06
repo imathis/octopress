@@ -1,0 +1,14 @@
+{% comment %} Load script if Google+ comments are enabled and `page.comments` is either empty (index) or set to true {% endcomment %}
+{% if site.googleplus_comments_hidden != true and page.comments != false %}
+<div id="comments"></div>
+<script src="https://apis.google.com/js/plusone.js">
+</script>
+<script>
+gapi.comments.render('comments', {
+    href: '{{ site.url }}{{ page.url }}',
+    width: '624',
+    first_party_property: 'BLOGGER',
+    view_type: 'FILTERED_POSTMOD'
+});
+</script>
+{% endif %}
