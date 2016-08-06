@@ -26,6 +26,7 @@ themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
 server_port     = "4000"      # port for preview server eg. localhost:4000
+publish_default = "false"     # default published status for new posts and pages
 
 if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
   puts '## Set the codepage to 65001 for Windows machines'
@@ -114,6 +115,7 @@ task :new_post, :title do |t, args|
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')}"
     post.puts "comments: true"
+    post.puts "published: #{publish_default}"
     post.puts "categories: "
     post.puts "---"
   end
@@ -151,6 +153,7 @@ task :new_page, :filename do |t, args|
       page.puts "comments: true"
       page.puts "sharing: true"
       page.puts "footer: true"
+      page.puts "published: #{publish_default}"
       page.puts "---"
     end
   else
