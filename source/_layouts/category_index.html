@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+{% for post in site.categories[page.category] %}
+	{% include archive_post.html %}
+{% endfor %}

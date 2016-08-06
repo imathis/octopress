@@ -1,0 +1,18 @@
+/* Fix fancybox style for Octopress.
+ * This is taken from the photos_tag.rb Photos Tag plugin for Jekyll by Devin Weaver.
+ * (https://gist.github.com/sukima/2631877)
+ * If you have both plugins, you should probably either eliminate the 
+ * {% fancyboxstylefix %} tag from your markup, or this CSS. Otherwise you might go a
+ * bit crazy if you need to modify it and something seems to be overwriting your changes.
+ */
+.fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+

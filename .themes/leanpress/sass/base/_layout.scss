@@ -1,0 +1,70 @@
+$max-width: 550px;
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: $font-default;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.5;
+	background: $color-background;
+    color: $color-gray01;
+	@media screen and (max-width: 1040px){
+		margin: 0 20px;
+	}
+	@media screen and (max-width: 600px){
+		font-size: 13px;
+		margin: 0 20px;
+	}
+}
+
+h1{
+	font-size: 36px;
+}
+h2{
+	font-size: 36px;
+	line-height:1;
+	font-weight:300;
+}
+h3{
+	font-size: 20px;
+	line-height: 1.2;
+	margin: 1.2em 0 0 0;
+	font-weight: normal;
+	display: block;
+	@media screen and (max-width: 620px) {
+	font-size: 15px;
+		}
+	}
+a {
+ 	text-decoration:none;
+	color:#bf0222;
+	-webkit-transition:border .25s linear;
+	-moz-transition:border .25s linear;
+	-ms-transition:border .25s linear;
+	transition:border .25s linear;
+	outline:none;
+}
+
+a:hover {
+	border-bottom:1px solid #bf0222;
+}
+
+.alignleft{
+	float: left;
+}
+.alignright{
+	float: right;
+}
+.clearfix{
+	@include pie-clearfix;
+}
+.inner{
+	width: $max-width;
+	margin: 0 auto;
+	@media screen and (max-width: 1040px){
+		width: 100%;
+	}
+}

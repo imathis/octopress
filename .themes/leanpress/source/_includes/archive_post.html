@@ -1,0 +1,19 @@
+{% capture date %}{{ post.date }}{% endcapture %}
+{% capture this_year %}{{ date | date: "%Y" }}{% endcapture %}
+{% unless year == this_year %}
+	{% assign year = this_year %}
+	{% unless forloop.first %}
+		</section>
+	{% endunless %}
+	<section class="archives"><h2>{{ date | date: "%Y" }}</h1>
+{% endunless %}
+<article>
+	<h3><a href="{{ root_url }}{{ post.url }}">{{post.title}}</a></h3>
+	<div class="meta">
+		<span class="date">{{ date | date: "%b %e" }}</span>
+		<span class="tags">{% include post/categories.html %}</span>
+	    {% if site.disqus_short_name and post.comments == true and site.disqus_show_comment_count == true %}
+	    <span class="comments"><a href="{{ root_url }}{{ post.url }}#disqus_thread">Comments</a></span>
+	    {% endif %}
+	</div>
+</article>
