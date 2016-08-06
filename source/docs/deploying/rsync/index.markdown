@@ -66,4 +66,4 @@ git config branch.master.remote origin
 
 ## Deploying to a subdirectory
 
-If for you wanted to host an Octopress blog at `http://yoursite.com/blog/` you would need to configure Octopress for [deploying to a subdirectory](/docs/deploying/subdir).
+If, for example, you wanted to host an Octopress blog at `http://yoursite.com/blog/` you would need to configure Octopress for [deploying to a subdirectory](/docs/deploying/subdir).
