@@ -26,6 +26,7 @@ themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
 server_port     = "4000"      # port for preview server eg. localhost:4000
+edit_new_pages  = true
 
 if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
   puts '## Set the codepage to 65001 for Windows machines'
@@ -117,6 +118,10 @@ task :new_post, :title do |t, args|
     post.puts "categories: "
     post.puts "---"
   end
+
+  if edit_new_pages
+    exec ENV['EDITOR'], filename
+  end
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
@@ -152,6 +157,10 @@ task :new_page, :filename do |t, args|
       page.puts "sharing: true"
       page.puts "footer: true"
       page.puts "---"
+    end
+
+    if edit_new_pages
+      exec ENV['EDITOR'], file
     end
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
