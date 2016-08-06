@@ -94,6 +94,10 @@ delicious_count: 3
 disqus_short_name:
 disqus_show_comment_count: false
 
+# Intense Debate Comments
+intense_debate_acct:
+intense_debate_show_comment_count: false
+
 # Google Analytics
 google_analytics_tracking_id:
 
