@@ -93,9 +93,20 @@ task :preview do
   [jekyllPid, compassPid, rackupPid].each { |pid| Process.wait(pid) }
 end
 
-# usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
+# usage rake new_post[my-new-post, categories] or rake new_post['my new post','categories'] or rake new_post (defaults to "new-post")
+# param: categories  is a colon separated category list e.g. books:docs:reading list:bookmarks
 desc "Begin a new post in #{source_dir}/#{posts_dir}"
-task :new_post, :title do |t, args|
+task :new_post, :title, :categories do |t, args|
+
+  categories = ""
+  if args.categories
+    categories = args.categories
+    categories_a = categories.split(/:/)
+    categories = categories_a.join(', ')
+  else
+    categories = ""
+  end
+
   if args.title
     title = args.title
   else
@@ -114,7 +125,7 @@ task :new_post, :title do |t, args|
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')}"
     post.puts "comments: true"
-    post.puts "categories: "
+    post.puts "categories: [#{categories}]"
     post.puts "---"
   end
 end
