@@ -4,10 +4,10 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "user@domain.com"
+ssh_user       = "indu@atria.uberspace.de"
 ssh_port       = "22"
-document_root  = "~/website.com/"
-rsync_delete   = false
+document_root  = "~/gvr.me/"
+rsync_delete   = true
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
 
@@ -22,6 +22,7 @@ blog_index_dir  = 'source'    # directory for your blog's index page (if you put
 deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
+drafts_dir      = "_drafts"   # directory for draft blog files
 themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
@@ -115,6 +116,7 @@ task :new_post, :title do |t, args|
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')}"
     post.puts "comments: true"
     post.puts "categories: "
+    post.puts "published: false"
     post.puts "---"
   end
 end
@@ -208,6 +210,70 @@ task :update_source, :theme do |t, args|
   mv "#{source_dir}/index.html", "#{blog_index_dir}", :force=>true if blog_index_dir != source_dir
   cp "#{source_dir}.old/index.html", source_dir if blog_index_dir != source_dir && File.exists?("#{source_dir}.old/index.html")
   puts "## Updated #{source_dir} ##"
+end
+
+# usage rake new_draft[my-new-draft] or rake new_draft['my new draft']
+desc "Begin a new draft in #{source_dir}/#{drafts_dir}"
+task :new_draft, :title do |t, args|
+  if args.title
+    title = args.title
+  else
+    title = get_stdin("Enter a title for your post: ")
+  end
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  mkdir_p "#{source_dir}/#{drafts_dir}"
+  filename = "#{source_dir}/#{drafts_dir}/#{title.to_url}.#{new_post_ext}"
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  puts "Creating new draft: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "layout: post"
+    post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+    post.puts "published: false"
+    post.puts "category: nil"
+    post.puts "tags:  "
+    post.puts "---"
+  end
+  system "open #{filename}"
+end
+
+# usage rake publish_draft
+desc "Select a draft to publish from #{source_dir}/#{drafts_dir} on the current date."
+task :publish_draft do
+  drafts_path = "#{source_dir}/#{drafts_dir}"
+  drafts = Dir.glob("#{drafts_path}/*.#{new_post_ext}")
+  drafts.each_with_index do |draft, index|
+    begin
+      content = File.read(draft)
+      if content =~ /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
+        data = YAML.load($1)
+      end
+    rescue => e
+      puts "Error reading file #{draft}: #{e.message}"
+    rescue SyntaxError => e
+      puts "YAML Exception reading #{draft}: #{e.message}"
+    end
+    puts "  [#{index}]  #{data['title']}"
+  end
+  puts "Publish which draft? "
+  answer = STDIN.gets.chomp
+  if /\d+/.match(answer) and not drafts[answer.to_i].nil?
+    mkdir_p "#{source_dir}/#{posts_dir}"
+    source = drafts[answer.to_i]
+    filename = source.gsub(/#{drafts_path}\//, '')
+    dest = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{filename}"
+    puts "Publishing post to: #{dest}"
+    File.open(source) { |source_file|
+      contents = source_file.read
+      contents.gsub!(/^published: false$/, "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}")
+      File.open(dest, "w+") { |f| f.write(contents) }
+    }
+    FileUtils.rm(source)
+  else
+    puts "Index not found!"
+  end
 end
 
 ##############
@@ -364,6 +430,18 @@ task :setup_github_pages, :repo do |t, args|
     end
   end
   puts "\n---\n## Now you can deploy to #{repo_url} with `rake deploy` ##"
+end
+
+# usage rake deploy_heroku
+desc "Commits all source changes and pushes to master and source"
+task :deploy_gvr do
+  Rake::Task[:generate].execute
+  Rake::Task[:deploy].execute
+  system "git add ."
+  message = "Updated gvr.me at #{Time.now.utc}"
+  system "git commit -am '#{message}'"
+  system "git push source master"
+  system "git push source source"
 end
 
 def ok_failed(condition)
