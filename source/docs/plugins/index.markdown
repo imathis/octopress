@@ -16,6 +16,7 @@ Octopress ships with the following plugins. Many have been written specially for
 - [Gist Tag](/docs/plugins/gist-tag/) - *automatically downloads and embeds Github gists*
 - [jsFiddle](/docs/plugins/jsfiddle-tag/) - *embeds code from jsFiddle*
 - [Image Tag](/docs/plugins/image-tag/) - *easily post images with class names and titles*
+- [Directory Tag](/docs/plugins/directory-tag/) - *dynamically generate image galleries and other lists of files*
 - [Render Partial](/docs/plugins/render-partial/) - *insert any file into another post or page*
 - [Block Quote](/docs/plugins/blockquote/) - *generate beautiful, semantic block quotes*
 - [Pull Quote](/docs/plugins/pullquote/) - *generate CSS only pull quotes &mdash; no duplicate data, no javascript*
