@@ -117,6 +117,8 @@ task :new_post, :title do |t, args|
     post.puts "categories: "
     post.puts "---"
   end
+  puts "Creating symlink 'latest' pointing to #{filename}"
+  %x[ln -sf #{filename} latest]
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
