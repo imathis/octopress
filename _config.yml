@@ -96,6 +96,8 @@ disqus_show_comment_count: false
 
 # Google Analytics
 google_analytics_tracking_id:
+google_analytics_set_domain_name:         # Tracking one domain with multiple subdomains
+google_analytics_set_allow_linker: false  # Tracking multiple top-level domains
 
 # Facebook Like
 facebook_like: false
