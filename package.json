@@ -1,0 +1,26 @@
+{
+  "name": "octopress",
+  "description": "Octopress is an obsessively designed framework for Jekyll blogging.",
+  "version": "0.2.0", // Version number?
+  "keywords": ["jekyll", "octopress", "sass"],
+  "homepage": "http://octopress.org/",
+  "author": {
+    "name": "Brandon Mathis",
+    "email": "brandon@imathis.com",
+    "web": "http://brandonmathis.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imathis/octopress/octopress.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT License",
+      "url": "http://opensource.org/licenses/mit-license.html"
+    }
+  ],
+  "dependencies": {
+    "ruby": "1.9.3",
+    // Extra dependencies?
+  }
+}
