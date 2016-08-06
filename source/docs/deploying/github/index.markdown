@@ -41,6 +41,7 @@ from Github telling you that your commit has been received and will be published
 **Don't forget** to commit the source for your blog.
 
 ```sh
+git checkout -b source
 git add .
 git commit -m 'your message'
 git push origin source
