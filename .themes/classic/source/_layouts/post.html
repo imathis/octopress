@@ -6,6 +6,20 @@ single: true
 <div>
 <article class="hentry" role="article">
   {% include article.html %}
+    <nav class="pagination">
+       <div>
+         {% if page.previous.url %} 
+           <a href="{{page.previous.url}}" title="Previous Post: 
+  {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+         {% endif %}
+         || 
+         {% if page.next.url %} 
+         <a href="{{page.next.url}}" title="next Post: 
+  {{page.next.title}}">{{page.next.title}} &raquo; </a>
+         {% endif %}
+       </div>
+     </nav>
+  
   <footer>
     <p class="meta">
       {% include post/author.html %}
