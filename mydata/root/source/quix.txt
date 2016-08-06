@@ -1,0 +1,133 @@
+> This is a Quix Command File -*- javascript -*-
+> 
+> For the syntax of this file, please refer to http://quixapp.com/syntax/
+>
+
+@Basic commands
+@These are the most basic commands Quix offers, but possibly also the most powerful ones.
+a       http://www.amazon.com/s/?field-keywords=%s							Amazon Search
+def    http://www.google.com/search?q=define:%s							Google Define a word
+dict	http://www.google.com/dictionary?langpair=en%7Cen&q=%s&hl=en&aq=f	Google Dictionary for a word
+e       mailto:?subject=%t&body=%s%0A%0A%09%r%0A%0A							Email link
+find		javascript:s='%s';if(s==''){void(s=prompt('Find%20text:',''));}s='('+s+')';x=new%20RegExp(s,'gi');rn=Math.floor(Math.random()*100);rid='z'%20+%20rn;b%20=%20document.body.innerHTML;b=b.replace(x,'<span%20name='%20+%20rid%20+%20'%20id='%20+%20rid%20+%20'%20style=\'color:#000;background-color:yellow;%20font-weight:bold;\'>$1</span>');void(document.body.innerHTML=b);alert('Found%20'%20+%20document.getElementsByName(rid).length%20+%20'%20matches.');window.scrollTo(0,document.getElementsByName(rid)[0].offsetTop); 	Find in current page, usage: 'find test' will highlight all occurrences of 'test' and will take you to the first occurrence. Just 'find' will open a prompt.
+g       http://www.google.com/search?q=%s									Google Search
+gbs     http://blogsearch.google.com/blogsearch?q=%s						Google Blog Search
+imdb    http://www.imdb.com/find?s=all&q=%s									IMDB Search
+img     http://www.google.com/images?q=%s									Google Image Search
+map     http://www.google.com/maps?q=%s										Google Maps
+gs      http://www.google.com/search?q=site:%d%20%s							Search the current site with Google
+nf      http://www.netflix.com/Search?v1=%s									Netflix Search
+php     http://php.net/search.php?show=quickref&pattern=%s  				PHP Function Search
+tr      http://translate.google.com/translate?u=%r&tl=%s					Translate the current page
+w       http://wikipedia.org/wiki/Special:Search/%s_         				Wikipedia Search
+read 	javascript:(function(){readStyle='style-newspaper';readSize='size-medium';readMargin='margin-narrow';_readability_script=document.createElement('SCRIPT');_readability_script.type='text/javascript';_readability_script.src='http://lab.arc90.com/experiments/readability/js/readability.js?x='+(Math.random());document.getElementsByTagName('head')[0].appendChild(_readability_script);_readability_css=document.createElement('LINK');_readability_css.rel='stylesheet';_readability_css.href='http://lab.arc90.com/experiments/readability/css/readability.css';_readability_css.type='text/css';_readability_css.media='screen';document.getElementsByTagName('head')[0].appendChild(_readability_css);_readability_print_css=document.createElement('LINK');_readability_print_css.rel='stylesheet';_readability_print_css.href='http://lab.arc90.com/experiments/readability/css/readability-print.css';_readability_print_css.media='print';_readability_print_css.type='text/css';document.getElementsByTagName('head')[0].appendChild(_readability_print_css);})(); Readability
+wa		http://www.wolframalpha.com/input/?i=%s								Wolfram Alpha Search
+
+@Social commands
+@These commands are for dealing with social networks and social sites.
+h       javascript:if(!location.href.match('gethopper.com'))void((function()%7Bvar%20script%3Ddocument.createElement('script')%3Bscript.setAttribute('type'%2C'text%2Fjavascript')%3Bscript.setAttribute('charset'%2C'UTF-8')%3Bscript.setAttribute('src'%2C'https%3A%2F%2Fgethopper.com%2Fbookmarklet.js%3Fr%3D'%2BMath.random()*99999999)%3Bdocument.body.appendChild(script)%7D)())%3B Share with Hopper
+pb		http://pinboard.in/add?next=same&url=%re&description=%s&title=%t	Bookmark current page with PinBoard
+db	    http://delicious.com/save?url=%r&title=%t&v=5&jump=yes&notes=%s   	Bookmark the current page in Delicious
+bi          javascript:var%20e=document.createElement('script');e.setAttribute('language','javascript');e.setAttribute('src','//bitly.com/bookmarklet/load.js');document.body.appendChild(e);void(0); Bit.ly the current page.
+d           javascript:(function(){s=document.createElement("script");s.type="text/javascript";s.src="http://www.diigo.com/javascripts/webtoolbar/diigolet_b_h_b.js";document.body.appendChild(s);})(); Diigolet Bookmarklet
+drl         javascript:(function(){DIIGO_R_TEST=false;DIIGO_R_SCRIPT=document.createElement('SCRIPT');DIIGO_R_SCRIPT.type='text/javascript';DIIGO_R_SCRIPT.src='http://www.diigo.com/javascripts/readlater.js';document.getElementsByTagName('body')[0].appendChild(DIIGO_R_SCRIPT)})();  Diigo Read Later Bookmarklet
+fb		http://www.facebook.com/share.php?u=%r&t=%t							Share the current page on Facebook
+gb		http://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=%r&title=%t&annotation=%s	Bookmark with Google Bookmarks
+li		javascript:(function(){d=document,l=d.location,f='http://www.linkedin.com/shareArticle?mini=true&ro=false&trk=bookmarklet&title='+encodeURIComponent(d.title)+'&url='+encodeURIComponent(l.href),a=function(){if(!window.open(f,'News','width=520,height=570,toolbar=0,location=0,status=0,scrollbars=yes')){l.href=f;}};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0);}else{a();}})()				Share the current page on LinkedIn
+tp	    http://twitter.com/home?status=%s%20%t%20%r							Tweet the current page
+ts       http://search.twitter.com/search?q=%s								Twitter Search
+t       http://twitter.com/%s												Twitter User
+tumblr	javascript:d=document;w=window;e=w.getSelection;k=d.getSelection;x=d.selection;s=(e?e():(k)?k():(x?x.createRange().text:0));f='http://www.tumblr.com/share';l=d.location,e=encodeURIComponent;p='?v=3&u='+e(l.href)%20+'&t='+e(d.title)%20+'&s='+e(s);u=f+p;try{if(!/^(.*\.)?tumblr[^.]*$/.test(l.host))throw(0);tstbklt();}catch(z){a%20=function(){if(!w.open(u,'t','toolbar=0,resizable=0,status=1,width=450,height=430'))l.href=u;};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();}void(0)						Share on Tumblr
+post	javascript:var%20b=document.body;POSTEROUS___bookmarklet_domain='http://posterous.com';if(b&&!document.xmlVersion){void(z=document.createElement('script'));void(z.type='text/javascript');void(z.src='http://posterous.com/javascripts/bookmarklet2.js');void(b.appendChild(z));}else{}				Share on Posterous
+su		http://www.stumbleupon.com/submit?url=%r&title=%t					Submit to StumbleUpon.
+buf		script:http://bufferapp.com/js/bookmarklet.v1.js					Buffer to tweet the current page with <a href="http://bufferapp.com">Buffer App</a>.
+
+@SEO
+@As an SEO you have dozens of things you can check on a site, Quix aims to make those things simpler by adding a large set of easy to remember and use commands for SEO's.
+archive		http://web.archive.org/web/*/%r											Check archive.org for the current page
+can			http://www.nickgerner.com/canonicalizable/?homepage_input=%d			Check whether the domain canonicalizes its homepage correctly
+dmoz 		http://search.dmoz.org/cgi-bin/search?search=%d        					Searches DMOZ for the current Domain
+gbd  		http://blogsearch.google.com/blogsearch?num=10&q=link%3A%d  			Search Google Blogsearch for links to the current Domain
+gbu  		http://blogsearch.google.com/blogsearch?num=10&q=link%3A%r  			Search Google Blogsearch for links to the current URL
+gc			http://google.com/search?strip=1&q=cache:%r%20%s    					Google cache for current page
+gi			http://google.com/insights/search/#q=%s&cmpt=q      					Google Insight for the keyword phrase
+gwt  		https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http%3A%2F%2F%d%2F  	Google Webmaster Tools for current domain
+h       	http://quixapp.com/headers/?r=%re&s=%s         							Header info for the current URL
+kd			http://tools.davidnaylor.co.uk/keyworddensity/?url=%r&keyword=%s		<a href="http://tools.davidnaylor.co.uk/keyworddensity/">Keyword Density check</a> and way more
+linkcheck  	http://validator.w3.org/checklink?uri=%r              					Check the links on the current URL
+maj			https://www.majesticseo.com/search.php?q=%d								Check strong pages & backlinks for the current domain using <a href="http://www.majesticseo.com/">Majestic SEO</a>
+nofollow	style:http://quixapp.com/js/nofollow.css 								Shows all nofollows
+rh		javascript:ReplaceHeadings();function%20ReplaceHeadings(){var%20j;for(i=0;i<6;i++){hx=document.getElementsByTagName("h"+i);len=hx.length;for(j=0;j<len;j++){tmp=hx[j].innerHTML;hx[j].innerHTML='<span%20style="color:#F00;">&lt;H'+i+'&gt;</span>'+tmp+'<span%20style="color:#F00;">&lt;/H'+i+'&gt;</span>';}}} Replaces all headings with &lt;hx&gt;original content&lt;hx&gt; in a HTML document
+seo  		http://quixapp.com/seo/?r=%re                     						Does a quick SEO checkup of the current page
+seocss		style:http://quixapp.com/js/seo.css										Show heading structure, links and nofollows using CSS.
+seothis     javascript:var%20w=window.open('http://quixapp.com/seo/?r=%re');window.open('http://quixapp.com/headers/?r=%r&s=%s');window.open('http://google.com/search?q=cache:%r&strip=1');window.open('https://siteexplorer.search.yahoo.com/search?p=%r&bwm=i&bwmo=d&bwmf=u');w.focus(); Open SEO tabs
+snippet		http://www.google.com/webmasters/tools/richsnippets?url=%r		See how this page would render with Google Rich Snippets
+yd			https://siteexplorer.search.yahoo.com/search?p=%d&bwm=i&bwmo=d&bwmf=s	Yahoo Inlinks for current Domain
+yl			https://siteexplorer.search.yahoo.com/search?p=%r&bwm=i&bwmo=d&bwmf=u	Yahoo Inlinks for current Page
+ydir 		http://search.yahoo.com/search/dir?ei=UTF-8&p=%d&h=c   					Searches Yahoo! directory for the current Domain
+kwte		https://adwords.google.com/select/KeywordToolExternal					Go to the AdWords External keyword tool
+kwc			http://google.com/search?q=intitle:%22%s%22%20inanchor:%22%s%22&pws=0			Keyword competition check Google
+
+@Webmaster
+@Webmasters often have dozens of bookmarklets for all sorts of simple checks, Quix replaces a <em>lot</em> of those bookmarklets by giving you simple to remember commands to deal with them.
+cse             javascript:(function(){var%20a=window,b=document,c=encodeURIComponent,d=a.open('http://www.google.com/cse/manage/bookmarklet?url='+c(b.location)%20+%20'','coop_popup','left='+((a.screenX||a.screenLeft)+10)+',top='+((a.screenY||a.screenTop)+10)+',height=420px,width=700px,resizable=1,alwaysRaised=1,scrollbars=1');a.setTimeout(function(){d.focus()},300)})();        Google Marker for custom search engines.
+csstoggle	javascript:var%20Lt=document.getElementsByTagName('LINK');for(var%20x=0,ss=[];Lt[x];x++){var%20rel=Lt[x].rel;if(typeof(rel)=='string'&&rel.toLowerCase().indexOf('style')+1){ss[ss.length]=Lt[x];}}for(var%20x=0;ss[x];x++){ss[x].disabled=!ss[x].disabled;} 	Toggle css on and off
+fblint      http://developers.facebook.com/tools/lint/?url=%r						Gives feedback from Facebook about your markup.
+firebug		javascript:firebug=document.createElement('script');firebug.setAttribute('src','http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js');document.body.appendChild(firebug);(function(){if(window.firebug.version){firebug.init();}else{setTimeout(arguments.callee);}})();void(firebug);  Loads <a href="http://getfirebug.com/lite.html">Firebug lite</a>.
+font 		javascript:(function()%20{if(typeof%20jQuery=='undefined'){var%20jqit=document.createElement('script');jqit.type='text/javascript';jqit.src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';document.getElementsByTagName('head')[0].appendChild(jqit);}%20_my_script=document.createElement('script');_my_script.type='text/javascript';_my_script.src='http://font-friend.googlecode.com/svn/trunk/font-friend.js';document.getElementsByTagName('head')[0].appendChild(_my_script);})(); Font overlay with <a href="http://somadesign.ca/projects/fontfriend/">FontFriend</a>
+host	    http://quixapp.com/host/%d/%s											Host info for the current domain.
+html5		http://html5.validator.nu/?doc=%r										HTML5 validate the current page.
+jquery		http://api.jquery.com/%s/												Check jQuery API documentation.
+lastmod		javascript:function%20gett(w){try{var%20lm=new%20Date(w.document.lastModified);if(lm>maxd)maxd=lm;for(var%20i=0;F=w.frames[i];i++){gett(F);}}catch(e){}}var%20now=new%20Date();var%20maxd=new%20Date(document.lastModified);gett(window);if(maxd.getTime()==0||now.toUTCString()==maxd.toUTCString()){alert('Page%20is%20dynamically%20generated,%20cannot%20determine%20date.');}else{alert('Page%20was%20last%20modified%20'+maxd.toLocaleString());}	Last modified date of a page.
+myip    	http://quixapp.com/ip/													Your current IP & homepage.
+p3p        	http://validator.w3.org/p3p/20020128/p3p.pl?uri=%r    					Check the P3P policies of the current page.
+register	http://quixapp.com/register/%s											Register a domain (f.i. use <code>register test123.com</code>).
+window		javascript:s='%s';s2=s.split('%20');window.resizeTo(s2[0],s2[1]); 		Resize browser (might only work with single windows in some browsers).
+ruler       script:http://quixapp.com/js/ruler.js 									Shows a ruler that can be used to measure elements.
+sg    		javascript:(function(){var%20s=document.createElement('div');s.innerHTML='Loading...';s.style.color='black';s.style.padding='20px';s.style.position='fixed';s.style.zIndex='9999';s.style.fontSize='3.0em';s.style.border='2px%20solid%20black';s.style.right='40px';s.style.top='40px';s.setAttribute('class','selector_gadget_loading');s.style.background='white';document.body.appendChild(s);s=document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('src','http://www.selectorgadget.com/stable/lib/selectorgadget.js?raw=true');document.body.appendChild(s);})();    <a href="http://www.selectorgadget.com/">SelectorGadget</a>: point and click CSS selectors
+speed      	http://tools.pingdom.com/fpt/?url=%r                  					Do a <a href="http://tools.pingdom.com/">Pingdom speedtest</a> of the current URL.
+gspeed     	http://pagespeed.googlelabs.com/#url=%re&mobile=false					Do a Google <a href="http://pagespeed.googlelabs.com/">page speed test</a> of the current URL.
+spriteme    script:http://spriteme.org/spriteme.js 									Sprite the current page using <a href="http://spriteme.org">Spriteme</a>.
+vs			http://onebuttonmouse.com/tools/isource/?url=%r							View source of the current URL.
+w3c        	http://validator.w3.org/check?uri=%r&outline=1        					Validate the current page.
+w3css      	http://jigsaw.w3.org/css-validator/validator?uri=%r   					Validate the CSS of the current page.
+whois   	http://quixapp.com/whois/%d/%s							                Whois info for the current domain.
+xray        script:http://westciv.com/xray/thexray.js 								<a href="http://www.westciv.com/xray/">XRAY</a> the current page.
+salayer      javascript:s=document.body.appendChild(document.createElement('script'));s.id='fs';s.language='javascript';void(s.src='http://slayeroffice.com/tools/suite/suite.js');             Slayeroffice.com Tools Suite
+
+@Quix
+@In a meta sort of way, Quix provides some commands that should help you to debug Quix.
+help		http://quixapp.com/help/#%s                           							Help file
+quix		http://quixapp.com/%s/															Takes you to the specified Quix page
+yoast   	http://www.google.com/search?q=%s%20site:yoast.com&btnI=I%27m+Feeling+Lucky 	Lucky search on Yoast
+resize		http://quixapp.com/resize/?s=%s													Resize image / video while maintaining aspect ratio
+
+@Analytics
+@Some simple scripts to detect which web analytics program a site is running and to debug 	Google Analytics 
+da          script:http://quixapp.com/js/detect-analytics.js 								Detect the current sites analytics
+ga          script:http://quixapp.com/js/ga-analyzer.js 									Analyze Google Analytics settings on the current page
+gaexport	script:http://quixapp.com/js/ga-export.js 										Make the export function in Google Analytics export way more lines (credits: <a href="http://arjansnaterse.nl/download-limit-google-analytics-export-part-2">Arjan Snaterse</a>)
+bitlyside	script:http://bit.ly/bookmarklet/load.js										<a href="http://bit.ly/pages/tools/sidebar/">Bit.ly Sidebar</a>
+
+@URL Shortening
+@A group of URL shorteners
+bitly		http://bit.ly/?v=3&u=%re&s=%s%20%te					Shorten with <a href="http://bit.ly/">bit.ly</a>
+awesm		http://create.awe.sm/url/share?target=%re&version=1 	Shorten with <a href="http://awe.sm/">awe.sm</a>
+googl		script:http://quixapp.com/js/quix-googl.js				Shorten with Goo.gl
+
+@App Integration commands
+@Integrate with cool programs on all platforms.
+evernote		javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title);}})();		Clip current page with <a href="http://www.evernote.com/">Evernote</a>
+grsub			script:http://quixapp.com/js/grsub.js					Subscribe in Google Reader
+grnote	javascript:b=document.body;GR________bookmarklet_domain='http://www.google.com';if(b&&!document.xmlVersion){void(z=document.createElement('script'));void(z.src='http://www.google.com/reader/ui/link-bookmarklet.js');void(b.appendChild(z));}else{}	Note current page in Google Reader
+tubesock		tubesock://%r											Download video with <a href="http://stinkbot.com/Tubesock/">Tubesock</a>
+
+@Mac Integration commands
+@A lot of Mac programs allow easy integration with browsers by allowing for URL's like <code>tweetie:</code> to open them. These commands take full advantage of that.
+cssedit			cssedit:previewandextract?%r							Preview and extract current page in <a href="http://macrabbit.com/cssedit/">CSSEdit</a>
+mars			marsedit:title=%t&url=%r&text=%s						Start a blogpost in <a href="http://www.red-sweater.com/marsedit/">Marsedit</a> about the current URL
+pukka			pukka:url=%re&title=%t&extended=%s						Bookmark the current page using <a href="http://codesorcery.net/pukka">Pukka</a>
+tt				tweetie:%su%20%t%20%r									Tweet the current page with <a href="http://www.atebits.com/">Tweetie</a>
+snap			littlesnapper://snap/%r									Snap the current page in <a href="http://www.realmacsoftware.com/littlesnapper/">LittleSnapper</a>
+delibar			Delibar://bpost&!p!&%r&!p!&%t&!p!&%s					Bookmark the current page using <a href="http://www.delibarapp.com/">Delibar</a>
+shove			shovebox://url?url=%r&title=%t							Catch current page in <a href="http://www.wonderwarp.com/shovebox/">Shovebox</a>

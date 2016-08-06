@@ -1,0 +1,18 @@
+#+BEGIN_HTML
+---
+title:             "My Coding Religion"
+description:       "whatever"
+date:              "2012-01-23 Mon 23:40:34"
+layout:            post
+comments:          true
+author:            Neil Smithline
+published:         false
+---
+#+END_HTML
+
+* Technical Religious Beliefs
+Individuals, teams, companies, and even cross-company development projects such as a 3^rd-party implementing a plug-in should be produced in the most efficient, reusable, and maintainable manner. This includes:
+- Reusing or adding parameters to code rather than copying-and-pasting.
+- Applications should strictly enforce boundaries based on layering, packages, objects, etc...
+- The use of appropriate tools, interaction models, programming languages, documentation practices, and other technical choices.
+- Most importantly, business requirements should be made with full knowledge of the technical cost and take precedence over technical best-practices.

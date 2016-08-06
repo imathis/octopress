@@ -1,0 +1,34 @@
+
+#+BEGIN_HTML
+---
+title:             "This Blog Is Now Hosted For Free (and it's slashdot proof too)"
+description:       "How I managed to both have my cake and eat it too."
+layout:            post
+date:              2012-02-03 Fri 21:49:09
+categories:        [tech, blogging-tech]
+comments:          true        
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+While there are many free or nearly free blog hosting sites available, most of them come with a long list of restrictions. Either they restrict you to using their blogging software, throw ads on your pages, give you the "unlimited bandwidth" plan that they'll cut off if your site gets too much traffic, limit you to only the ugly themes, etc.
+
+But [[http://www.neilsmithline.com][www.neilsmithline.com]] is now hosted on a site that charges me nothing, doesn't put ads on my pages, couldn't care less about the theme I use, and, should I ever be lucky enough, survive [[http://en.wikipedia.org/wiki/Slashdotting][slashdotting]]. The only restriction is that my blog has to be static. Being that I already had a static blog (see [[about-this-blogs-tech.org][previous posting]]), this was no problem for me at all. I've used lots of dynamic blogs ([[http://en.wikipedia.org/wiki/Drupal][Drupal]], [[http://en.wikipedia.org/wiki/Wordpress][WordPress]], [[http://en.wikipedia.org/wiki/Joomla][Joomla]], [[http://en.wikipedia.org/wiki/Blogger_%28service%29][Blogger]], [[http://en.wikipedia.org/wiki/Movable_Type][Movable Type]], etc.) and just found that "dynamic" is a short way of saying that the blogging system is going to do what it wants and not what I want.
+#+HTML: <!-- more -->
+
+Along with the free hosting I get automatic version control, well-managed collaboration (not that I have any collaborators), data redundancy, eternal archiving (I probably won't need it that long but it's nice to know that nothing will get lost), and the ability to get a copy of my data onto my local machine whenever I want it.
+
+My choice of blogging technology was largely influenced by these two blog postings, [[http://decafbad.com/blog/2011/06/08/further-jekyll-notes][1]] and [[http://decafbad.com/blog/2011/06/08/moved-to-jekyll][2]], and email conversations I had with their author, [[https://plus.google.com/114487965928288927815/about][Les Orchard]]. While Les went with [[https://github.com/mojombo/jekyll][Jekyll]], I preferred the simpler [[http://nanoblogger.sourceforge.net/][NanoBlogger]]. Les uses [[http://github.com][Github.com]] for versioning his blog but hosts his blog on his own site as he wants full control of what is published. I simply couldn't agree with him more. 
+
+When I moved to my new blogging framework, I quickly got my blog up and running using NanoBlogger for site generation and sftp to publish it to my VPS. Today I investigated replacing sftp with Github and its notification framework. This would essentially mirror Les's blog system except that I am running NanoBlogger locally while he runs Jekyll. 
+
+As I was investigating using Github for transportation and archiving of my blog, I decided to take another look at [[http://pages.github.com/][Github Pages]]. And then, like a lightning bolt, it occurred to me. When I publish my blog by pushing it to Github, if the repository has the magic name of /neil-smithline.github.com/, then Github would publish my blog at [[http://neil-smithline.github.com/]] automatically. There simply was no benefit to serve my blog from my VPS as Github would do it far better than I could on my VPS.
+
+The only problem I foresee is that I run more than just my blog on [[http://www.nelismithline.com][www.neilsmithline.com]]. But the other applications I run are only for my private use so I can just map them to another sub-domain such as /whatever.neilsmithline.com/. For example, I've been playing with a cloud-based bookmarking system, [[http://www.phoboslab.org/projects/asaph][Asaph]], that allows you to run your own cloud bookmark server. But I can access it at and, if you have an interest, can view it at: [[http://www2.neilsmithline.com/asaph/]].
+
+All-in-all, it's like a nerd's dream come true :-D
+
+*UPDATED: Sat Feb 11 13:12:02 EST 2012*
+
+There seems to be another problem with hosting my blog on Github. While practically all of Github requires SSL, there appears to be no way to get a Github hosted website to use SSL. Thinking about it, the task seems inherently difficult. Github makes all of its sources file public but you must protect your site's SSL private key. Currently, all site information is stored in the Github repository. A private SSL key could only be added if Github updated their configuration to allow the key to be stored out-of-band (ie: not in the repository).

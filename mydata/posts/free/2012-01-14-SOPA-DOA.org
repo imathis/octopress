@@ -1,0 +1,27 @@
+#+BEGIN_HTML
+---
+title:             "SOPA DOA? Not Quite But Getting There"
+description:       "In response to massive public outcries, SOPA looks like it will die or end up a bill with no teeth."
+date:              "2012-01-14 Sat 00:18:39"
+layout:            post
+categories:        [free-speech]
+comments:          true         
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+While not dead, SOPA is losing its teeth. Despite having had its major backer remove one of the more totalitarian portions from the bill (the ability to block non-US DNS addresses), SOPA appears unable to make progress in Congress. 
+
+In a [[http://cnet.co/ArcHPH][CNET]] article (via [[http://bit.ly/zMTg3h][Slashdot]]), the [[wiki:RIAA][RIAA]] whines:
+#+BEGIN_QUOTE
+    Instead of helping to come up with mechanisms to deny access to
+    the U.S. market by foreign criminals," the RIAA wrote, "the
+    opposition just keeps saying no. It is incumbent upon them to help
+    develop language that will ensure that criminals can't access our
+    market, while at the same time protecting our need for national
+    cybersecurity.
+#+END_QUOTE
+
+As [[SOPA-the-end-of-free-speech.org][discussed previously]], SOPA claims to support American businesses while it really supports the very large media companies and stifles smaller companies and individuals rights to publish.
+
+As I've stated in my previous [[SOPA-the-end-of-free-speech.org][posting about SOPA]], I am strongly opposed to [[wiki:Piracy of software][piracy]] as I am a software engineer (ie: software pays my rent). But I also believe that piracy can be dealt with without destroying [[wiki:Freedom_of_speech][free speech]]. My viewpoints are similar to those of the [[wiki:Electronic_Frontier_Foundation][EFF]] and differ from the [[wiki:Free_Software_Foundation][FSF]]'s viewpoint which opposes proprietary software altogether.

@@ -1,0 +1,34 @@
+#+BEGIN_HTML
+---
+title:              The Litigious Trio
+description::       Brief discussion about Google, Apple, and Microsoft's attempts to "litigate" rather than "innovate" technology
+layout:             post
+date:               2011-12-28 Wed 12:04:20
+categories:         [online-freedom, litigious-trio, litigation]
+published:          true
+author:             Neil Smithline
+---
+#+END_HTML
+          
+This posting is best viewed as part of the series of postings about [[http://neilsmithline.com/archives/litigious-trio/index.html][The Litigious Trio]] and, in a larger context, [[http://neilsmithline.com/archives/online-freedom/index.html][Online Freedom]].
+
+To be clear, /The Litigious Trio/ are, in alphabetical order, [[http://apple.com][Apple]], [[http://google.com][Google]] and [[http://microsoft.com][Microsoft]]. While they are three wonderful technology companies, over time, each has turned to an increasingly large amount of litigation to enforce their current market status.
+
+While I do not believe that the three companies actively collaborate with each other to hinder the success of smaller companies, I believe that selfish[fn:1] business practices by the trio have had the affect of having created a three company monopoly[fn:2]. While the three companies are locked in a near-endless stream of litigation against each other, this is rather typical amongst large corporate competitors. I can't say that I'm in favor of such litigation but I the three companies can spend their money that way if they want to. They have more than enough of it.
+
+But when /The Litigious Trio/, behaving in a pseudo-monopolistic manner, use litigation to block competition from smaller companies, they end up stifling innovation. 
+#+HTML: <!-- more -->
+
+Furthermore, /The Litigious Trio/ are not necessarily the most user-friendly companies. They, along with [[http://en.wikipedia.org/wiki/Facebook][Facebook]], are some of the leaders in gathering information about its users. Consider the following:
+  - Nearly all of Google's revenue comes from advertising. Their advertising is so valuable, and profitable, because they are able to sell well targeted ads. That is, they know so much about each user that they can sell ad space for that specific user for more than other advertising vendors. The article, [[http://www.globalreports.com/?article=12][We Are Google's Products]], provides a good summary of this concept. 
+  - Google has a near-monopoly on internet advertising. The US Senate [[http://tech.slashdot.org/story/11/12/21/1356246/senators-recommend-ftc-perform-antitrust-investigation-of-google][has recently requested]] the [[http://en.wikipedia.org/wiki/Federal_Trade_Commission][FTC]] to investigate this.
+  - Microsoft's [[https://www.google.com/search?q=microsoft+antitrust&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox-a][monopolistic practices]] have been discussed and challenged by courts around the world for years.
+  - Apple is currently under investigation for [[http://www.huffingtonpost.com/2011/12/07/us-justice-department-apple-ebooks_n_1134983.html][price fixing on its eBooks]], has just been fined for [[http://www.pluggedin.co.uk/article/apple-fined-over-misleading-customers-italy][charging customers in Italy]] for providing federally mandated, free support, and has tried to [[http://apple.slashdot.org/story/11/08/09/1832254/sale-of-samsung-galaxy-tab-blocked-in-the-eu][destroy Samsung's mobile market]] by presenting [[http://yro.slashdot.org/story/11/08/15/1758224/flawed-evidence-in-eu-apple-vs-samsung-case][falsified evidence]] to courts around the world. While this last claim seems hard to believe, an [[http://www.pcworld.com/article/238047/apple_offers_flawed_evidence_in_lawsuit_against_samsung.html][easily accessible description and images]] demonstrate that Apple is either incompetent or dishonest.
+
+
+The only question seems to be whether the public is motivated to address this problem and what the public can do to address it. The reason monopolies are illegal is because fighting them is difficult.
+
+** Footnotes
+[fn:1] I use /selfish/ as defined in the book [[http://www.amazon.com/gp/product/0199291152/ref=as_li_ss_tl?ie=UTF8&tag=mygee-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0199291152][The Selfish Gene]]. If you've not have the pleasure, I strongly recommend the book. You can also see a brief [[http://en.wikipedia.org/wiki/The_Selfish_Gene#.22Selfish.22_genes][definition]] from the [[http://en.wikipedia.org/wiki/][Wikipedia]]. 
+
+[fn:2] I'm not an expert in [[http://en.wikipedia.org/wiki/History_of_competition_law][competitive law]] (eg: I just learned that term) and I have used the term /monopoly/ or /pseudo-monopoly/ rather loosely. I believe that what /The Litigious Trio/ are partaking in is more similar to [[http://en.wikipedia.org/wiki/Tacit_collusion][tacit collusion]], [[http://en.wikipedia.org/wiki/Conscious_parallelism][conscious parallelism]], and [[http://en.wikipedia.org/wiki/Patent_misuse][patent misuse]]. It is perhaps best described as an [[http://en.wikipedia.org/wiki/Oligopoly][oligopoly]] or a [[http://en.wikipedia.org/wiki/Natural_monopoly][natural monopoly]] that involves three companies rather than one.

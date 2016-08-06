@@ -1,0 +1,31 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+// //////////////////////////////////////////////////////////////////////// 
+// By default, Octopress does not indent lists but has a configuration
+// swich so they will be indented. But I do not like the indentation so I
+// just put it here. I think the use of relative sizes (eg: 'em's and
+// '%'s) will make this work on different screens sizes. ul,ul ul,ul
+// ////////////////////////////////////////////////////////////////////////
+ol,ol,ol ul,ol ol { margin-left: 5%; }
+
+h2 {
+    padding-top: 0.8em;
+    margin-bottom: 1% !important;
+    background: $img-border top left repeat-x;
+}
+.entry-content + h2:first-child, header + h2 { padding-top: 0; }
+h2:first-child, header + h2 { background: none; }
+.feature {
+    padding-top: .5em;
+    //margin-bottom: 1%;
+    padding-bottom: 1em;
+    background: $img-border bottom left repeat-x;
+    font-size: 2.0em; font-style: italic;
+    line-height: 1.3em;
+}
+
+// Bold and italic are broken. I wonder If I have broken them or if
+// they just came that way?
+strong, b { font-weight: bold; }
+i { font-style: italic; }

@@ -1,0 +1,146 @@
+#+BEGIN_HTML
+
+---
+layout:         post
+title1:         "Octopress Is Pretty Great"
+date:           2012-05-26 13:32
+comments:       true
+categories:     [blogging-tech, octopress, jekyll]
+published:      true
+---
+
+#+END_HTML
+
+#+MACRO: relative_link          @<a href="{{ root_url }}$1" title="$2">$3@</a>
+#+MACRO: absolute_link           @<a href="http:/$1" title="$2">$3@</a>
+
+* Jekyll Overview
+I have simply fallen in love with [[http://bit.ly/KT1aFT][Octopress]]. I think I mentioned previously that Octopress is an auto-configuration tool wrapped around [[http://bit.ly/Jm1bmc][Jekyll]]. And Jekyll is the technology behind [[http://bit.ly/Krch8n][Github pages]]. As such, if you use Jekyll for your blogging platform, you can preview your blog locally, push it to Github, and let Github do all the page serving. 
+
+This isn't actually as much work for the Github servers as you may think. Jekyll is a [[http://bit.ly/KrdOeu][static]] [[http://bit.ly/KrdUmf][blogging system]] with no [[http://bit.ly/KrdX1s][CMS support]]. A static blog needs to be [[http://bit.ly/Kre8tB][compiled]] whenever content is modified, but once compiled, the only thing the server needs to do is serve the pages. Dynamic blogging systems such as [[http://bit.ly/KreoZJ][Wordpress]] and [[http://bit.ly/KreuAH][Joomla]] are programs that run on the server and work interactively with the web server to produce each page.
+
+* Configuration
+Octopress's biggest addition to Jekyll is that it automagically configures Jekyll for you. I have found that configuring Jekyll is a bit of a pain. Jekyll decided to trade easy configuration for flexibility. This is a common decision in applications and one I can't really argue with.
+#+HTML: <!-- more -->
+
+But Octopress packages a mostly configured Jekyll installation in a neat little package. The introductory paragraph on [[http://bit.ly/KT1aFT][Octopress.org]] states:
+#+BEGIN_QUOTE
+Octopress is a framework designed by Brandon Mathis for Jekyll, the blog aware static site generator powering Github Pages. To start blogging with Jekyll, you have to write your own HTML templates, CSS, Javascripts and set up your configuration. But with Octopress All of that is already taken care of. Simply clone or fork Octopress, install dependencies and the theme, and you're set.
+#+END_QUOTE
+
+While that may sound a bit intimidating to the less-computer literate, the Octopress site carefully steps you through the process. I've installed and used Wordpress, Joomla, [[http://bit.ly/KrgcC1][Drupal]], [[http://bit.ly/wq2Ien][Nanoblogger]], and many other blogging systems. I can say that Octopress is, by far, the easiest. 
+
+The above quote states three steps for installing Octopress but there are actually a few more steps:
+0) Install Git
+1) Clone or fork Octopress
+2) Install dependencies
+3) Install theme
+1) Configure your blog
+1) Configure deployment
+
+*** Git
+If you don't have [[http://bit.ly/KrgU2a][Git]] installed, you need to install it. This was a trivial task for most users but, thanks to the clever folk at Github, has become idiot-proof. Github created a [[http://bit.ly/KrhqgF][Mac OS X]] and [[http://windows.github.com/][Windows]] application that allows easy use of Github. These make installing and using Git user-friendly for those who prefer to avoid [[http://bit.ly/xOIkfJ][CLI]]s.
+
+*** Clone Or Fork Octopress
+Cloning Octopress, simpler than forking it, is a single command line 
+: git clone git://github.com/imathis/octopress.git octopress
+It takes only a few mouse clicks if you are using one of Github's applications to do the clone. 
+
+*** Install Dependencies
+Installing the dependencies is, yet again, a few simple CLI commands described in an easy-to-read style on Octopress's [[http://bit.ly/LExpsY][setup]] page.
+
+*** Install The Theme
+Installing the theme is a single CLI command:
+: rake install
+There are additional theme installation options but you can simply ignore them as the defaults work well. In a subsequent blog post I'll discuss how I have made a minor alteration to the Octopress installation that allows me to entirely change my theme as often as I like without losing any data. Simple theme changes (eg: page colors) are easy to make at anytime. 
+
+*** Configure Your Blog
+Configuring your blog is perhaps the most complicated step in the entire installation process. You'll need to open a text editor such as [[http://bit.ly/LEyD7l][Textedit]] on a Mac or [[http://bit.ly/LEyRvo][Notepad]] on Windows. 
+
+The configuration file is written in a format called [[http://bit.ly/LEzjd3][YAML]]. That sounds a lot scarier than it actually is. Octopress's [[http://bit.ly/Mlynfm][configuration page]] states that you just need to edit the existing =_config.yml=, and modify the following lines:
+: url:                # For rewriting urls for RSS, etc
+: title:              # Used in the header and title tags
+: subtitle:           # A description used in the header
+: author:             # Your name, for RSS, Copyright, Metadata
+: simple_search:      # Search engine for simple site search
+: description:        # A default meta description for your site
+: subscribe_rss:      # Url for your blog's feed, defauts to /atom.xml
+: subscribe_email:    # Url to subscribe by email (service required)
+: email:              # Email address for the RSS feed if you want it.
+
+Several of the configuration options have default values or can be left empty.
+
+This configuration step in Octopress differs from other blogging systems only in that you have to use Textedit or Notepad to enter the data. Many other systems allow you to enter the data into a [[http://bit.ly/n1i2v2][GUI]] or a web page. 
+
+*** Configuring Deployment
+Configuring your deployment, the final setup action, involves telling Octopress what computer is going to [[http://bit.ly/LECz8n][host]] your blog. While you can run your blog right on your desktop or laptop, it will only be visible by other people in your home or office. This is helpful if you want to preview your blog before "publishing" it so the rest of the world can see it but when you want to publish your blog you will need to have access to a hosting computer (AKA: a server) that is on the internet [[http://bit.ly/LEIgTI][24x7]].
+
+Getting access to a server can be less than straightforward and almost always costs money. But this is rather simple with Octopress because:
+  - Octopress is a static blog. This is compared to a dynamic blog that requires programs to interact with the server. Once Octopress has done its job, you just need to put the blog into the right location on your server and everything will magically work.
+  - Octopress, the blogging system that tries to make configuration easy, has carefully documented, in easy-to-read text, three different ways to [[http://bit.ly/LEGcuN][host your blog]] on a server. Two of them are absolutely free: Github itself (the one I use) and [[http://bit.ly/LEGIsK][Heroku]]. The third strategy using [[http://bit.ly/LEIdHt][rsync]] is a bit more complex and typically costs some money to use. That being said, the documentation guides you to a hosting company that charges only $5 a month for server access. Unless you *know* that you need a server for something besides hosting a blog, I strongly recommend going with one of the other options. 
+
+As I said, I am using Github to host my blog. It takes exactly one line to configure your blog to use Github. I haven't used the other deployment mechanisms but Heroku seems to be of equal complexity while rsync definitely requires more work and a greater knowledge of computers.
+
+*** Configuration Summary
+While there is a lot of descriptive text above, the entire configuration process took me a couple of hours the first time and about 20 minutes the second time. Unless you are like me and enjoy trying stupid things, you'll only need to install it once :-) I would imagine that a non-technical users could easily install Octopress in half a day.
+
+The only exception that I can think of would be if you're on a Windows computer and have lots of difficulties installing the dependencies. Mac OSX and Linux come with most of the dependencies pre-installed. I don't think that Windows does.
+
+* It's Blogging Time!
+Before you can actually start to blog, you need to choose an editor and a markup language. While you can change these at anytime, you need one of each to blog. I'll discuss this in a subsequent blog posting where I discuss my personal Octopress configuration.
+
+Now that everything is configured, it's time to blog. While this involves using the command line, it is a trivial usage. When you want to create a new post you execute the command:
+: rake 'new_post[Name Of My Post]'
+The reason why that is the magical incantation to create a new post is unimportant. All you need to do is remember (or be able to lookup) that command.
+
+When the =rake= command finishes, it will tell you the name of the file for your new posting. Just open the file and start typing. If you want to see a preview of your blog before publishing it to the server, run the command
+: rake preview
+
+Then you can open your web browser to http://localhost:4000 to see your blog. I strongly recommend that you copy-and-paste that URL and then bookmark it. 
+
+Once you are ready to publish your blog to the world, execute the command
+: rake gen_deploy
+And /voila/! You have updated your blog.
+
+* Octopress Summary
+*** Cons
+***** Configuration
+Configuring Octopress is definitely more complex than configuring a blog on Blogger.com or a similar service. If you are looking for the easiest solution, no-frills solution, go with one of those.
+
+***** Single Computer Publishing
+While I haven't seen it explicitly stated in any documentation for Octopress or Jekyll, they really are intended to publish new posts from a single computer. You can author the posts on any computer or network service. The first option that jumps into my head is [[http://bit.ly/KTgaWb][Google Docs]]. But to publish (ie: to deploy) your site from more than one computer will definitely require extra configuration, computer skills, and tinkering. If you absolutely must /publish/ from multiple computers, the online blogging systems may be a better choice.
+
+*** Pros
+***** Configuration
+While configuring a blog on a site like Blogger is definitely easier than configuring Octopress, if Blogger doesn't meet your needs, I think Octopress is easier to manage than all Joomla, Drupal, and all of its competitors -- at least the ones I've seen.
+
+***** Content Possession
+When you use a site like Blogger.com, the content you have posted is in the possession of Blogger. They determine how they will store your content, how they will let you export it, modify it, delete it, etc... But with Octopress, you are always in possession of your content. In order to have your blog visible on the web, you must deploy it to a server, but that is just a copy of your content. You are always in possession of the original content.
+
+***** Content Accessibility
+Whether you are using an online blogging service such as Blogger.com or hosting your own blogging application such as Joomla or Drupal, your postings are typically not stored in a convenient manner. Even if the blogging system lets you get access to all of your content, the content is frequently meaningless or difficult to use.
+
+But with Octopress, the content for each posting is in a file. One file for each posting. While I've not discussed choosing an editor or a markup language in this posting, it is your choice of editor and markup language that determine what you can do with your content.
+
+For example, I was blogging with Nanoblogger for a few months. As it required continual tinkering, I moved to Octopress. Like Octopress, Nanoblogger lets you choose your editor and markup language. Because both blogging systems give you accessibility to your content, I was able to convert about 20 Nanoblogger postings into Octopress postings in about 20 minutes. I imagine it would have taken less computer-savvy users as long as 2-3 minutes a posting. 
+
+The one-file-one-posting principal of Octopress, and Nanoblogger, make life so much simpler.
+
+***** And It Looks Good Too!
+Even after customizing them, I find that Wordpress blogs tend to be drap and all look like [[http://bit.ly/KThoAU][this]] and that Blogger.com blogs require lots of tinkering but still tend to look like [[http://bit.ly/KThtVf][this]]. On the other hand, Octopress blogs tend to look like the [[http://bit.ly/KT1aFT][Octopress homepage]] or my [[http://bit.ly/yGGszW][blog]].
+
+IMO, Octopress looks great out of the box. I am partial to using dark themes where black, white, and shades of gray are the main colors. It took me about 10 minutes to change the default [[http://bit.ly/KT1aFT][colors for Octopress]] to use my preferred [[http://bit.ly/yGGszW][color pallette]].
+
+***** It Will Grow With You
+I think that Octopress's greatest features are the above mentioned ease-of-configuration and the fact that, while it is hidden from you, it is built on a very strong blogging engine, Jekyll. So, if you wake up one day and say "Gee. I wish my blog could do XYZ.", the odds are that it can. Just google "Jekyll blogs XYZ" and, at least for reasonable XYZs, you'll find that instructions about reconfiguring your blog so it can do XYZ.
+
+There are also many discussion groups, forums, and helpful Jekyll users in the blogosphere that can offer suggestions, provide pointers, or even make a small modification to Octopress/Jekyll so that XYZ is easy to do.
+
+* Future Postings About Octopress
+This is now my second posting about Octopress. My {{{relative_url(2012/05/14/new-blog-tech, First Posting, first posting)}}} discussed my initial opinions about Octopress. They were largely positive but so too were my {{{relative_url(/blog/2011/12/07/new-blog-tech, Nanoblogger Posting, initial impressions)}}} of Nanoblogger. 
+
+At the time of writing this blog posting I'm certain that I'm going to love Octopress. (Though, if I change my mind, I am in possession of my own content so it is easy to switch to another platform.)
+
+My next posting about Octopress will explain the minor modifications I have made to Octopress. I made these modifications to accomplish two goals:
+  1) Allow me to easily use [[http://bit.ly/zhYdcB][Org Mode]] as my markup language and [[http://emacswiki.org][Emacs]] as my editor. While I simply love this setup, I imagine that it will only be of interest to preexisting Emacs users.
+  2) Keep my content totally separate from the Octopress's content. By this I mean that if, you were to burn my computer as I'm typing these very words, I could have Octopress up and running on a new computer with all of my content, including postings, images, etc.., in about 20 minutes. IMO, this an improvement on Octopress's configuration and should probably be changed in Octopress.

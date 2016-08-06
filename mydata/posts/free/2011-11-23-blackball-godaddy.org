@@ -1,0 +1,27 @@
+#+BEGIN_HTML
+---
+title:             "Vote With Your Money: Blackball GoDaddy For Propagandizing SOPA"
+layout:            post
+date:              "Fri Dec 23 07:58:22 EST 2011"
+description:       "GoDaddy, in an outstanding outpouring of propaganda, has spoken up in favor of SOPA"
+categories:        [free-speech]
+comments:          true         
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+[[http://godaddy.com][GoDaddy]] has just released its [[http://support.godaddy.com/godaddy/go-daddys-position-on-sopa/?isc=smtwsup][official statement]] (via [[http://yro.slashdot.org/story/11/12/23/0253207/godaddy-backs-sopa][Slashdot]] via [[http://www.ibtimes.com/articles/271730/20111222/sopa-bill-2012-godaddy-reveals-support.htm][ibtimes.com]]) on SOPA. You can read my opinions on SOPA in my recent blog posting [[id:06BB29E4-D6B3-430E-B5A3-FDC6716A0ED3][SOPA: The End Of Free Speech]]. While I can't imagine the business logic that motivated GoDaddy, I respect the free publication of opinions contrary to my own. In fact, my objections to [[https://wfc2.wiredforchange.com/o/9042/p/dia/action/public/?action_KEY=8173][SOPA]] are that it allows corporations to prohibit contrary opinions. Should SOPA pass, GoDaddy, if they chose to worry about lil' ol' me, could, with the effort of a single letter, have my blog shut down for posting about this article.
+#+HTML: <!-- more -->
+
+While SOPA provides real teeth for corporations to control any use of their name, it will continue to allow companies to state, or misstate, legal facts. As such, GoDaddy has published its "[[http://support.godaddy.com/godaddy/go-daddys-position-on-sopa/?isc=smtwsup][official statement]]" about SOPA that is simply loaded with <insert your favorite term for BS here>.
+
+*** Good Intentions
+    
+    In our view, Internet policy should strive to balance the sometimes competing goals of the global free flow of information (which is clearly critical to U.S. businesses), with enforcement of the rule of law. We don't see those competing goals as mutually exclusive, but rather, complimentary. In fact, that balance is essential to a flourishing, yet safe, Internet.
+
+Why some members of the Internet ecosystem do not believe it is their responsibility to participate in finding that balance is unclear to us. We've found that balance in the past in the child protection and counterfeit pharmaceuticals contexts, for example, where we voluntarily take action against customers whose websites or domain names violate the law. So far, none of our voluntary action has stifled legitimate capitalism online. And neither will robust intellectual property enforcement.
+
+The question should be how, not whether, we develop a notice and takedown regime in a responsible and responsive way. At Go Daddy, we are proud of our best practices and believe that they exemplify a model for the rest of the ecosystem. In 2010, we voluntarily took action and shut down more than 30,000 illegal online pharmacies. And, I spend a great deal of my working (and non-working) hours each day working to keep the Internet a better and safer place, especially for children.
+
+And we are responsive to intellectual property holders, even absent a clear mandate by Congress to take action.

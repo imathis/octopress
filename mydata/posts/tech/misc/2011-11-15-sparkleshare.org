@@ -1,0 +1,46 @@
+#+BEGIN_HTML
+---
+title:             "Sparkleshare: Maybe An Open, Privately Hosted, Dropbox Alternative"
+layout:            post
+date:              "Thu Dec 15 10:04:43 EST 2011"
+description:       "Sparkleshare is an up-and-coming Dropbox alternative that is ready, or nearly ready, for real use."
+categories:        [tech, cloud-computing, sparkleshare]
+comments:          true
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+ 
+[[http://dropbox.com][Dropbox]] took the internet by storm with its free storage and ease of
+access. But Dropbox comes with a limited amount of data, a level of
+secureness that is hard-to-understand, and rather proprietary.
+
+[[http://sparkleshare.org][Sparkleshare]] is an [[http://en.wikipedia.org/wiki/Free_and_Open_Source_Software][open source]] alternative to Dropbox that hit my
+radar screen about 6 months ago. I played with it a bit back then but
+it didn't seem to be quite there. I think I was using an early-alpha,
+pre-release version so I this was to be expected.
+#+HTML: <!-- more -->
+
+I gave it another try earlier this week and seem to be pretty happy
+with it. Some of the things I like about it include:
+  1) I get to host it on my own server. This means the data is
+     private. I own it. Nobody else has a copy of it. Etc.
+  1) I have been renting a Linux [[http://en.wikipedia.org/wiki/Virtual_private_server][VPS]] from [[http://rosehosting.com][RoseHosting.com]] ($20/month)
+     for many years so they provide me with a convenient, managed, and
+     relatively secure place to host Sparkleshare.
+  1) It only took me about 5 minutes to install and configure
+     sparkleshare on my Linux VPS. Not because I'm brilliant but
+     because Linux doesn't suck and Sparkleshare requires no special
+     server software. Just a few standard packages such as [[http://en.wikipedia.org/wiki/Git_%28software%29][Git]] and a
+     copy-and-paste of one command line. The client install (Mac OS X)
+     was equally simple.
+  1) Being that it is [[http://en.wikipedia.org/wiki/Free_and_Open_Source_Software][FOSS]], there is continual scrutiny of the source
+     code to maintain quality and security.
+
+The only real objection I have with it is that Dropbox allows [[http://en.wikipedia.org/wiki/Symbolic_link][symbolic
+links]] in the Dropbox folder so I don't need to have all of my files in
+one directory. I haven't yet gotten this to work on Sparkleshare.
+Either I just haven't figured it out, someone else will add it
+shortly, or, being it is [[http://www.wikipedia.com/Foss][FOSS]], I'll add it if I get motivated enough
+(BTW: I'm voting for someone else implementing it).
+

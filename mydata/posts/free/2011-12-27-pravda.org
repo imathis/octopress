@@ -1,0 +1,77 @@
+#+BEGIN_HTML
+---
+title:             "Corporate Censorship In The Digital Age"
+layout:            post
+date:              "Tue Dec 27 08:58:30 EST 2011"
+description:       "How Can There Be Freedom Of Information Without Freedom Of Distribution Channels?"
+categories:        [tech, free-speech]
+comments:          true 
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+** Measuring Freedom
+While I'll leave it to historians and politicians to debate the validity of this statement, IMO, a country's freedom can be understood by [[http://en.wikipedia.org/wiki/Guesstimation][guestimating]] the answers two simple questions:
+  1) How freely the citizens are allowed to travel -- both within their country as well as in-and-out of their country.
+  1) How freely the government allows information to be dispersed.
+
+While this posting only focuses on freedom of information, I mention the above because I feel that it is important to keep in mind how critical freedom of information is. 
+
+When free information flow is impacted, it does not matter whether it is censored by a totalitarian government to control the thoughts of its people or a search provider to stay out of trouble legal troubles (see [[http://en.wikipedia.org/][Wikipedia]]'s article on [[http://en.wikipedia.org/wiki/Criticism_of_Google#Censorship][Google Censorship]] and [[http://technorati.com/technology/article/google-censorship-rising-faster-than-ever/][recent statistics]] about Google's censoring)[fn:1].
+#+HTML: <!-- more -->
+
+*** Recent Attempts At Total Information Control
+During the heat of the [[http://en.wikipedia.org/wiki/Cold_War][cold war]], [[http://en.wikipedia.org/wiki/Pravda#The_Soviet_period][Pravda]], /The/ official newspaper of the [[http://en.wikipedia.org/wiki/Soviet_Union][Soviet Union]]'s [[http://en.wikipedia.org/wiki/Communist_Party_of_the_Soviet_Union][Communist Party]], was well-known for distributing [[http://en.wikipedia.org/wiki/Propaganda][propaganda]] while, at the same time, the Soviet Union also restricted all non-official forms of information distribution. Today, China's [[http://en.wikipedia.org/wiki/Great_firewall][Great Firewall]] and its government-managed [[http://tech.slashdot.org/story/11/12/26/2217215/chinas-parallel-online-universe][substitution of popular web sites]] are attempts at total information control.
+
+While not directly relevant to this article, the Soviet Union used to inhibit and China currently inhibits the free movement of their citizens. That is, they score poorly on both of the [[*Measuring Freedomns][above questions]].
+
+** America's Current Loss Of Freedom[fn:2]
+Whatever its benefits may be, any honest review of laws such as [[http://neilsmithline.com/archives/2011/12/11/sopa_the_end_of_free_speech/index.htmlSOPA][SOPA]] must state that they will lead to a reduction in information dispersal. Opinions about the exact quantity and quality of information dispersal reduction varies greatly. The protractors state that the intent of the law is to reduce illegal content dispersal (ie: [[http://en.wikipedia.org/wiki/Software_piracy][piracy]]).
+
+But it is more difficult to understand how [[http://google.com][Google]] and [[http://apple.com][Apple]] have, I suspect unintentionally, teamed up with [[http://microsoft.com][Microsoft]] to seriously threaten the dispersal of information. Restricting information dispersal isn't their goal Their goal is corporate success. But when it comes to basic human rights such as information dispersal, motivation doesn't really seem important.
+
+*** Brief History Lesson (especially for people who don't remember life before the web)
+In America, information dispersal used to rely on America's famous [[http://en.wikipedia.org/wiki/Freedom_of_the_press][Freedom Of The Press]]. Public awareness as to the degree of control [[http://en.wikipedia.org/wiki/Big_business][big business]] plays in the /free/ press has been growing for a century or more. Besides the growth in public awareness, the press has been increasingly controlled by big business (think pre- and post-[[http://en.wikipedia.org/wiki/William_Randolph_Hearst#Yellow_journalism][Hearst]]). But when things were looking the bleakest, out of nowhere, the internet came to the rescue.
+
+In perhaps the only prediction of the internet's future that has come true, the web allowed average people to become publishers. [[http://en.wikipedia.org/wiki/Blog][Blogs]], [[http://en.wikipedia.org/wiki/Podcasts][podcasts]] (popularized by and named for Apple's [[http://en.wikipedia.org/wiki/iPod][iPod]]), and [[http://en.wikipedia.org/wiki/YouTube][YouTube]] (now owned by Google) have truly enabled any person with access to a computer to publish their opinion, however inaccurate, insane, or just plain stupid that might be. The growth of the web led to an ensuing INFORMATION OVERLOAD. While this had a negative impact on people's access to the information they desire, people and technology seem to have managed it.
+
+*** The Current Problem
+The basic problem is that today, information storage, editing and dispersal occurs in just a few ways:
+  1) Traditional media such as newspaper, cable TV, and /<yawn>/ broadcast TV.
+  1) Desktop [[http://en.wikipedia.org/wiki/Operating_system][operating systems]]: This includes Windows and Mac OS X.
+  1) Mobile operating systems: This includes [[http://en.wikipedia.org/wiki/Ios][iOS]] on Apple's iPhones and iPads, Google's [[http://en.wikipedia.org/wiki/Android_%28operating_system%29][Android]] on mobile phones and tablets as well as their [[http://en.wikipedia.org/wiki/ChromeOS][ChromeOS]] [[http://en.wikipedia.org/wiki/netbook][netbooks]], Microsoft's [[http://en.wikipedia.org/wiki/Windows_Phone][Windows Phone]], etc...
+  1) Internet-based [[http://en.wikipedia.org/wiki/Cloud_storage][Cloud Storage]]: Of the nine [[http://en.wikipedia.org/wiki/Cloud_storage#Examples_of_cloud_storage][examples]] of cloud storage on the [[http:wikipedia.com][Wikipedia]] at the time of writing this article, four of them belong to Google, Microsoft, or Apple. 
+  1) Other online storage: Microsoft's [[http://hotmail.com][Hotmail]] and Google's [[http://en.wikipedia.org/wiki/Gmail][Gmail]], [[http://en.wikipedia.org/wiki/Google_docs][Docs]], YouTube, [[http://en.wikipedia.org/wiki/Blogger][Blogger]], and numerous other services run by these three companies provide many other forms of cloud storage.
+  1) SOCIAL WEB SITES: specifically FACEBOOK and TWITTER. While not yet a seriously contender, Google is trying to muscle its way into this market with GOOGLE+ and previously GOOGLE BUZZ.
+  1) SEARCH ENGINES: Search engines are the digital compasses that point people to information.
+  1) ONLINE REFERENCES: While I don't have any statistics, I imagine that the Wikipedia is the largest online reference. Other sites such as IMDB and DICTIONARY.com are also significant players. To a lesser extent, sites such as GOOGLE SCHOLARS and EXPEDIA cannot be discounted.
+
+While this is an incomplete list of a collection of different types of data-related companies, it is clear that Microsoft, Apple, and Google are dominant in this arena.
+
+In addition to the above, the actual means of information delivery is via [[http://en.wikipedia.org/wiki/Web_browsers][web browsers]] and a collection of less-important applications such as [[http://en.wikipedia.org/wiki/iTunes][iTunes]] and the seemingly infinite collection of TWITTER CLIENTS.
+
+** The Freedom Crisis
+   Of the major players discussed in the [[*The Current Problem][previous section]], only two of them meet any reasonable definition of INDEPENDENT: The Wikipedia[fn:3] and the Firefox browser. Every other major player is a for-profit company. While companies such as Facebook and Twitter attempt allow uncensored content to be published by users, they are still for-profit companies.
+
+Out of the for-profit companies, Google, Apple, and Microsoft are dominant in numerous categories. They are certainly happy to throw their weight around. 
+  - Apple has been trying to [[http://apple.slashdot.org/story/11/08/09/1832254/sale-of-samsung-galaxy-tab-blocked-in-the-eu][destroy Samsung's mobile market]] by presenting [[http://yro.slashdot.org/story/11/08/15/1758224/flawed-evidence-in-eu-apple-vs-samsung-case][falsified evidence]] to courts.
+  - A question about [[http://apple.slashdot.org/story/11/12/27/0216217/techrights-recommends-an-apple-boycott][boycotting Apple]] has made the front page of [[http://slashdot.org][Slashdot]]. If you are unfamiliar with the great influence of Slashdot, reading about the [[http://en.wikipedia.org/wiki/Slashdot_effect][Slashdot Effect]] should give you some perspective.
+  - Google tried to shut down [[http://en.wikipedia.org/wiki/CyanogenMod][Cyanogen(mod)]], a replacement for Google's [[http://en.wikipedia.org/wiki/Android_(operating_system)][Android]] mobile operating system.
+  - This [[http://www.google.com/search?q=microsoft+lawsuit&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox-a&tbs=qdr:y][Google search]] for /Microsoft lawsuits/ returns 24 million hits for the past year.
+  - While only indirectly related, [[http://www.godaddy.com][GoDaddy.com]], the [[http://support.google.com/a/bin/answer.py?hl=en&answer=47610][preferred]] [[http://en.wikipedia.org/wiki/Domain_registrar][domain registrar]] for [[http://en.wikipedia.org/wiki/Google_Sites][Google Sites]], has [[http://yro.slashdot.org/index2.pl?fhfilter=godaddy][hit Slashdot's home page]] five times in the past three days.
+
+
+** Footnotes
+
+[fn:1] Please note that I am a believer of /reasonable/ restrictions on intellectual property. For example, I consider [[http://www.xda-developers.com/][XDA-Developers]] to be one of the most liberal content distributors. Their site is full of ways to hack, modify, and replace the software that comes on mobile phones. They have successfully battled legal challenges from both Microsoft and Google.
+
+But the same site has seemingly super-human, volunteer moderators that monitor and remove links to PROPRIETARY SOFTWARE. This [[http://forum.xda-developers.com/showthread.php?t=935185][example]] is just the first hit I found from a quick Google search. In addition to the site's speedy moderators, the very active user community also helps to regulate postings on the site (see the [[http://forum.xda-developers.com/showpost.php?p=11020601&postcount=7][seventh posting]] on the above page). 
+
+The XDA-Developers' community clearly appreciates the freedom the site provides while respecting the legal rights of software owners and the difficulties challenging those rights can cause the site.
+
+[fn:2] I have limited this article to freedom in America. While I feel the issues I raise are universal, I do not feel I have enough knowledge to speak confidently about other countries so I have omitted them.
+
+[fn:3] Have you donated your $5 to the Wikipedia? Have you ever edited the Wikipedia? /Free/ speech isn't free. The next time you find a typo in the Wikipedia, either correct it or add a note to the [[http://en.wikipedia.org/wiki/Talk_page#Talk_page][Talk]] page. The Talk page is a great place to point out a problem when you are lacking the time, knowledge, or motivation to correct the page. While I am far from a major contributor to the Wikipedia, my [[http://en.wikipedia.org/wiki/Special:Contributions/Neil_Smithline][contribution page]] shows that I have edited pages across a wide range of topics -- many that I really know nothing about.  [[http://en.wikipedia.org/wiki/User:Neil_Smithline][user page]] or just give...
+
+#+HTML: <a title="Just Give: Wikipedia" href="http://wikimediafoundation.org/w/index.php?title=WMFJA085/en/US&amp;utm_source=JustGive&amp;utm_medium=sidebar&amp;utm_campaign=20110130SB003&amp;language=en&amp;uselang=en&amp;country=US&amp;referrer=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FUser:NeilSmithline"><img width="305" height="117" src="//upload.wikimedia.org/wikipedia/commons/1/1d/Wikipedia-world-info-229x88.png" alt="Click to vote for free information"/></a>

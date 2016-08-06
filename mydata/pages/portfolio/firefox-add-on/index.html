@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>---</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="---"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-05-24 09:06:48 EDT"/>
+<meta name="author" content="Neil Smithline"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">---</h1>
+
+
+layout:         page
+title:          "Firefox Add-On"
+date:           2012-05-23 20:40
+comments:       true
+sharing:        true
+footer:         true
+published:      true
+---
+
+
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>    <script src="http://code.jquery.com/ui/1.8.20/jquery-ui.min.js" type="text/javascript"></script>    <script src="http://jquery-ui.googlecode.com/svn/tags/latest/external/jquery.bgiframe-2.1.2.js" type="text/javascript"></script>    <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/minified/i18n/jquery-ui-i18n.min.js" type="text/javascript"></script>
+
+<p>
+<b>Languages:</b> JavaScript and some RDF
+</p>
+<p>
+The <a href="#HTTP-bit.ly-kkbh43">AMO Up Top Version Info</a> add-on makes browsing Mozilla's <a href="http://bit.ly/koj4dd">add-on site</a>, frequently called AMO, a little easier. 
+</p>
+<p>
+By default, an AMO odd-on page lists browser version compatibility at the very bottom of the page. Once you find the browser version section you have to click on the label to make the versioning information visible. AMO Up Top Version Info adds the most relevant version information to the top of an add-on page.
+</p>
+
+
+<div id="myaccordion">
+
+<h3><a href='#'>Before Image</a></h3><div class="jquery-first-tab jquery-tab accordion-first-tab accordion-tab">
+<p>
+<img src="{{ root<sub>url</sub> }}/assets/screen-snapshots/amo-up-top-version-info-before.png" alt="before"/> 
+</p>
+
+
+</div> <br/><br/><!-- jquery-tab --><h3><a href='#'>After Image</a></h3><div class="jquery-tab accordion-tab"> 
+<p>
+<img src="{{ root<sub>url</sub> }}/assets/screen-snapshots/amo-up-top-version-info-after.png" alt="after"/> 
+</div> <!-- jquery-tab --> </div> <!-- myaccordion --> 
+<script type="text/javascript">$(function() {$("#myaccordion").accordion({collapsible: true, autoHeight: false});});</script>
+
+
+There is also a UserScript version (see below) of this add-on. The UserScript version is both simpler and more efficient. The UserScript was converted to an add-on to learn about Firefox add-ons. 
+</p>
+<p>
+I now have a UserScript and a <a href="https://developer.mozilla.org/en/extensions/bootstrapped_extensions">restartless/bootstrapped</a> add-on using <a href="http://bit.ly/mbs7qq">JetPack/Add-On Builder</a> (big and cumbersome). I'm in the middle of implementing a restartless version of the add-on without JetPack. That requires a greater understanding of the <a href="http://mzl.la/mbrld6">XUL Framework</a> but produces a much smaller add-on. Lastly, if it ever reaches the top of my priority list, I'll write an <a href="http://mzl.la/mbsodv">old-school</a> version of the add-on.
+</p></div>
+
+</body>
+</html>

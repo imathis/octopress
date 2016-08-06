@@ -1,0 +1,18 @@
+#+BEGIN_HTML
+
+---
+layout:         page
+title:          "UserScripts"
+Date:           2012-05-23 20:40
+comments:       true
+sharing:        true
+footer:         true
+published:      false
+---
+
+#+END_HTML
+
+{{{language_start}}}JavaScript and minimal YAML-like configuration{{{language_end}}}
+[[http://bit.ly/rrxire][UserScripts]] are tiny web browser add-ons. I have a couple in my [[http://bit.ly/jkwjhb][UserScripts Github repository]] (I've written others but stopped using them and misplaced them prior to becoming a [[http://bit.ly/jkshbu][Github]] fan. If you are running [[http://www.mozilla.org/en-us/firefox/fx/][Mozilla Firefox]] with either the [[http://bit.ly/kk9a6r][Greasemonkey]] or [[http://bit.ly/kk9jhu][Scriptish]] (my preference) add-ons or using [[http://bit.ly/kk8pdu][Google Chrome]], you can install them and try them out in just a few seconds.
+
+One of the two UserScripts is a port of my AMO Up Top Version Info Firefox add-on. The other UserScript, [[http://bit.ly/jkwjhb][Timely Google Search: Year]], changes the default search for google to pages no older than one year. I simply hate nothing more than wasting my time on a link that was last modified in 2009. The technology world just moves too fast. I question whether I should produce a /Timely Google Search: 6 Months/ version.

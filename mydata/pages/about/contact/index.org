@@ -1,0 +1,81 @@
+#+BEGIN_HTML
+
+---
+layout:         page
+title:          "Contact Information"
+date:           2012-05-21 00:11
+comments:       true
+sharing:        true
+footer:         true
+published:      true
+---
+
+#+END_HTML
+
+#+MACRO: relative_link           @<a href="{{ root_url }}$1" title="$2">$3@</a>
+#+MACRO: absolute_link           @<a href="http:/$1" title="$2">$3@</a>
+
+*** Email
+My email address is:
+#+BEGIN_CENTER
+@<img src="{{ root_url }}/assets//email-images/blog-neilsmithline-com.png" alt="Your browser did not display email address. Are you blocking images? You can contact me by sending email to the user 'blog' in the domain 'neilsmihline.com'." title="My email address."/> 
+#+END_CENTER
+You cannot copy-and-paste the address as it is an image. Sorry about the inconvenience but it stops [[http://bit.ly/K5IdjZ][web crawlers]] from sending me spam.
+
+*** Phone
+You can call me from this web page courtesy of [[http://bit.ly/KoQxgV][Google Voice]]:
+  - Click on the "Call Me" icon below.
+  - Enter your name and phone number into the widget.
+  - Click the "Connect" button.
+  - When your phone rings, answer it.
+  - Once you pick up you'll hear the phone on my end ringing. I'll answer it if I can.
+
+#+BEGIN_HTML
+<style type="text/css">
+    div.flash-video { height:100px; width:250px; }
+</style>
+
+<object type="application/x-shockwave-flash" data="https://clients4.google.com/voice/embed/webCallButton"><param name="movie" value="https://clients4.google.com/voice/embed/webCallButton" /><param name="wmode" value="transparent" /><param name="FlashVars" value="id=eea51078ff6725b038a69d0625bee1c11137b4b1&style=0" /></object>
+
+#+END_HTML
+
+If you prefer, you can contact me directly at 408-634-5764. (see footnote [1])
+
+*** Fax
+You can fax me at 206-666-5090.[2]
+
+*** LinkedIn
+You can connect with me on [[http://linkd.in/KE1CZj][LinkedIn]]. 
+
+*** Snail Mail
+If you do need to snail mail me something, it is best to give me a heads-up so I know to look for it between all of the advertising circulars that I tend to dump. Paper is YAAM (Yet Another Archaic Medium).
+
+***** Mailing Address[3]
+#+BEGIN_EXAMPLE 
+Neil Smithline
+831 Beacon St.
+Suite #255
+Newton Centre, MA 02465
+#+END_EXAMPLE
+
+***** Physical Address[4]
+#+BEGIN_EXAMPLE 
+Neil Smithline
+1600 Washington St.
+Apt 314
+West Newton, MA 02459
+#+END_EXAMPLE
+# LocalWords:  Smi Forgeddabout myaccordion
+
+* Footnotes
+
+[1] I'm quite proud of that number. Why you ask? Three reasons.
+1) 408 is the area code for [[http://en.wikipedia.org/wiki/Silicon_valley][Silicon Valley]] -- The home for all true nerds. While I live in Boston, my heart is in San Jose. 
+1) It is a vanity number. The number is 408-Neil-Smi, the first 7 letters of my name. Getting the number was simple but waiting 2 years until it or a similarly cool number became available was a bit trying.
+1) It's simply geekilicious. I count this as an electronic toy and one can never have too many of those.
+
+[2] It, of course, gets delivered to me via email. As mentioned above, paper is YAAM.
+
+[3] Just in case you're wondering, the box number for my mailing address was carefully chosen. After learning assembler on the {{{absolute_link(/en.wikipedia.org/wiki/Apple_II_series#Apple_II_Plus, Wikipedia's Apple II Plus page, Apple II Plus)}}} with its 8-bit [[http://bit.ly/K5IZxg][6502 processor]], I think it is more likely that I'll forget my name before I forget the highest number you can hold in 8 bits.
+
+[4] I just got lucky on this apartment number. I didn't even notice that it was a cool number until my then 15yo son said that we had the *[[http://bit.ly/K5Hbob][pi]]* apartment (geekness is obviously hereditary). Once he pointed it out, I had no choice but to get a small gold, circular sticker so I could add the decimal point.

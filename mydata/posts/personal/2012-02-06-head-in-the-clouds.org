@@ -1,0 +1,16 @@
+#+BEGIN_HTML
+---
+title:             "Learning About Cloud Computing"
+description:       "Figuring out whatever 'cloud computing' really is can be quite educational."
+date:              "2012-02-06 Mon 21:22:31"
+layout:            post
+categories:        [misc, cloud-computing]
+comments:          true
+published:         false
+author:            Neil Smithline
+---
+#+END_HTML
+
+Sometime around January 2011 I decided to spend some of my free time trying to understand what the heck [[http://en.wikipedia.org/wiki/Cloud_computing][cloud computing]] is, how much of it actually works, and what its pros and cons are. Being that doing is the best way of learning, I decided to move into the /the cloud/. 
+
+Once I decided that I would move my computing into the cloud, I immediately ran into a problem: /What does "moving into the cloud" mean?/ Being 

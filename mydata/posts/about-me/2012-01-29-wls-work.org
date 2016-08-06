@@ -1,0 +1,28 @@
+#+BEGIN_HTML
+---
+
+title:             "WLS Work"
+description:       ""
+date:              "2012-01-29 Sun 16:01:13"
+layout:            post
+comments:          true
+published:         false
+---
+#+END_HTML
+
+
+- 1/7/2012
+  - weblogic.security.spi: http://docs.oracle.com/cd/E24329_01/apirefs.1211/e24391/weblogic/security/spi/package-summary.html
+    Note the "V2" classes.
+  - WLS Overview: http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html 
+  - Backwards compatibility: http://docs.oracle.com/cd/E24329_01/apirefs.1211/e24391/weblogic/security/package-summary.html
+  - Common Criteria Evaluations: http://www.oracle.com/technetwork/topics/security/oracle-cc-evalweblogic-083241.html
+  - Believe prolific throughout Oracle Fusion Middleware (http://www.oracle.com/technetwork/middleware/fusion-middleware/overview/index.html)
+  - Products: SOA Suite, WebCenter Portal and maybe other WebCenter products, WLS, App Server, BPEL, PBM, Portal, WebLogic Integration, WebLogic Portal,  
+
+http://docs.oracle.com/cd/E21764_01/web.1111/b32511/intro_ws.htm#autoId0
+Web Services Security and Administration in Oracle Fusion Middleware 11g
+
+The following highlights the main features of Oracle Fusion Middleware 11g Release 1 (11.1.1):
+
+    Oracle Web Services Manager (WSM) security and management has been completely redesigned and rearchitected. The previous release, Oracle WSM 10g, was delivered as a standalone product or as a component of the Oracle SOA Suite. In the 11g release, Oracle WSM has been integrated into the Oracle WebLogic Server. For complete details, see "Examining the Rearchitecture of Oracle WSM in Oracle Fusion Middleware".

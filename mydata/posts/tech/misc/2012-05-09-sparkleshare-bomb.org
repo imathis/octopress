@@ -1,0 +1,25 @@
+#+BEGIN_HTML
+---
+title:             "SparkleShare Doesn't Sparkle"
+description:       "Why I traded SparkleShare for rsync."
+layout:            post
+date:              2012-05-09 Wed 23:12
+categories:        [tech, cloud-computing, sparkleshare]
+comments:          true         
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+Based on a LifeHacker posting, I previously blogged about giving SparkleShare a try.. It was cool. A free Dropbox with private hosting. So I installed, configured, and started using SparkleShare. While I was quite excited when I embarked upon my journey using SparkleShare, things didn't work out as well as I had hoped.
+
+I quickly found out that SparkleShare doesn't handle symbolic links. Not at all. There's no workaround. The problem is that SparkleShare relies on Git for synchronization and Git doesn't support symbolic links. At least for me, this rendered SparkleShare useless. 
+
+When I moved to Dropbox directory, what I had been using for synchronization before SparkleShare, had no files in it, just a bunch of symbolic links. But with SparkleShare, you have to move all your directories into your SparkleShare directory and then scatter symbolic links around your system where the you want the directories to be. This caused a variety of minor but really annoying problems.
+
+But SparkleShare totally fails if you want to synchronize a directory that has symbolic links in it. SparkleShare's forum was covered with complaints about the symbolic link problem.
+
+I am currently using the following scheme for file distribution/backups:
+  - I'm using rsync to keep my media, bin directory, dot-files, and the like in sync on all my computers.
+  - For actual backups, I've been using Crashplan for years and couldn't be happier.
+  - And, in the past week or two, I've put Dropbox synchronization back into the mix to manage synchronization between Org Mode files on my computers and MobileOrg files on my Android. Despite the strong cult following that Dropbox has, synching with my mobile seems to be the only effective use I can find for it. 

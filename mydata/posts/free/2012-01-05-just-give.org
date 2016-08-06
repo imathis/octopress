@@ -1,0 +1,93 @@
+#+BEGIN_HTML
+---
+title:             "Stop PTSD, Support The Wikipedia"
+description:       "My 'Just Give1 campaign to encourage people to sponsor the Wikipedia."
+date:              "2012-01-05 Thu 16:02:44"
+layout:            post
+categories:        [misc, free-speech]
+comments:          true
+published:         true
+author:            Neil Smithline
+---
+#+END_HTML
+
+#+HTML: <em><p>
+This posting is an updated version of my [[http://wikipedia.org/][Wikipedia]] [[http://en.wikipedia.org/wiki/User:Neil_Smithline][user page]] that was authored on 6 Dec 2011.
+#+HTML: </p></em>
+
+A few months ago I experienced what is known as a [[http://en.wikipedia.org/wiki/Traumatic_event_(psychological)][traumatic event]].
+
+It was a day like many other days. I was talking to my two sons and we had a disagreement about some fact. (I have no recollection what the fact being discussed was.) So, we did what we always do. We each reached for one of the nearby smartphones, tablets, netbooks, and laptops that populate our lives and went right to the [[http://wikipedia.org/][Wikipedia]] to resolve the argument.
+
+But then it happened. 
+#+HTML: <!-- more --> 
+The Wikipedia was down. For a second or two, none of us knew what to do. Then we [[http://en.wikipedia.org/wiki/Googled][Googled]] to find the answer to our question (I still can't remember the subject but I'm sure I was right :-).
+
+
+I started thinking, what would happen if the Wikipedia were to go away? It is not that I think the Wikipedia is perfect. In fact, I think it is chock full of problems. But, what makes the Wikipedia special is that the Wikipedia's problems are ours, the users', problems. They aren't owned by [[http://www.antipixel.com/blog/archives/2002/10/22/steal_these_buttons.html#000526][big government]], [[http://www.antipixel.com/blog/archives/2002/10/22/steal_these_buttons.html#000526][big business]], [[http://www.antipixel.com/blog/archives/2002/10/22/steal_these_buttons.html#000526][lobbyists]], the [[http://www.antipixel.com/blog/archives/2002/10/22/steal_these_buttons.html#000526][PRC]], or anyone else.
+
+If there's a problem, you can edit the page and fix it. If you're uncertain what to do, you can add a comment about the problem on the discussion page with the hope that someone else will fix it or help you out.  Or you can simply ignore it. But, in all cases, *you* are making the decision.
+
+So I donated $5 to the Wikipedia. That's about the same amount I tip the driver who delivers my groceries. 
+
+Shortly after this traumatic event, the Wikipedia started posting these banner requests for donations. Personally, I find them increasingly annoying with every visit. But they are not nearly as annoying as the 10 minutes or so the Wikipedia was down. That downright spooked me.
+
+Being they've continued to post the banner requests, I'm assuming they continue to need more money. So I decided to start what I'm calling The Wikipedia: Just Give campaign.
+
+I'm not sure what the campaign will consist of, but I want to encourage everyone to give to the Wikipedia. I, who am totally untalented in the graphic arts, even made a few icons to help people join my campaign.
+
+So I ask each of you to just give. If you don't have a lot, don't give a lot. But more importantly, encourage everyone you know to just give.
+
+#+BEGIN_VERSE
+Neil Smithline, 6 December 2011
+/A proud sponsor of the Wikipedia and its free information./
+#+END_VERSE
+
+*Update 14 January 2012:* Just got this
+#+BEGIN_QUOTE
+  Sorry, the servers are overloaded at the moment.                            
+                                                                             
+  Too many users are trying to view this page. Please wait a while before you access this page again.
+
+  * Timeout waiting for the lock                                            
+#+END_QUOTE
+
+
+** Resources
+/Any artistic help on the badges would be deeply appreciated./
+
+*** HTML Code For Your Website
+Assuming I've gotten all my angle brackets matched and tags closed, depending on the system you use, you can add a graphic to your website or email signature by copy-and-pasting this:
+
+#+BEGIN_HTML
+<center>
+<a 
+  href="http://wikimediafoundation.org/w/index.php?title=WMFJA085/en/US" 
+  target="_blank" title="Wikimedia donation page">
+  <img src="http://upload.wikimedia.org/wikipedia/commons/3/34/Wikipedia_Just_Give-_Blue_Gray_Antipixel.png"
+    alt="Blue and gray 'Just Give' icon"/>
+</a>
+<br/>
+<span style="font-size: 75%;">
+  (<a href="http://bit.ly/just-give" 
+      target="_blank" 
+      title="'Just Give' Campaign">what's this?</a>)
+</span>
+</center>
+#+END_HTML
+
+or this HTML:
+#+BEGIN_SRC html
+<a 
+  href="http://wikimediafoundation.org/w/index.php?title=WMFJA085/en/US" 
+  target="_blank" title="Wikimedia donation page">
+  <img src="http://upload.wikimedia.org/wikipedia/commons/3/34/Wikipedia_Just_Give-_Blue_Gray_Antipixel.png"
+    alt="Blue and gray 'Just Give' icon"/>
+</a>
+<br/>
+<span style="font-size: 75%;">
+  (<a href="http://bit.ly/just-give" 
+      target="_blank" 
+      title="'Just Give' Campaign">what's this?</a>)
+</span>
+#+END_SRC

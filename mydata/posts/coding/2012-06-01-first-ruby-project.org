@@ -1,0 +1,111 @@
+#+BEGIN_HTML
+
+---
+layout:         post
+title1:         "My First Ruby Project"
+date:           2012-06-01 19:18
+comments:       true
+categories:     [projects, ruby, macosx, firefox, mozilla, python, programming-languages]
+published:      true
+---
+
+#+END_HTML
+
+#+MACRO: relative_link           @<a href="{{ root_url }}$1" title="$2">$3@</a>
+#+MACRO: absolute_link           @<a href="http:/$1" title="$2">$3@</a>
+
+* The Project
+Typically, even my pet projects have a specific goal in mind. I don't write a spec for my personal projects, there's just a, maybe slightly fuzzy, goal. Generally I want something that will be useful. I'll work on a project until:
+  - The project does everything I hoped for. Maybe even more!
+  - I run out of spare time to work on it. This doesn't happen as often as you may imagine. I really enjoy coding. So, after a tiring day of coding at the office, I come home to relax and work on one of my pet projects. If it was any different, then I have no right to call my blog [[http://bit.ly/yGGszW][My Geekdom]]. 
+  - I decide that I did a poor job picking a pet project as they're supposed to be fun and this projects isn't. So long!
+  - I get stuck such that proceeding will require more effort than I feel it's worth. That said, hopefully I learned something working on the project.
+
+But, unlike my typical pet projects, my goal with my new project is rather amorphous. I want to analyze some data. At time of writing this, I have just shy of 5K records totally 181MB of data. 
+
+Leaving the details for a later posting, each record is a snapshot of the state of my [[http://bit.ly/Kfv0n2][Mac OS X]] computer. I've been collecting, and am continuing to collect, samples every five minutes since the beginning of March. At least every five minutes that my computer isn't [[http://bit.ly/LUSEY8][sleeping]] or hanging.
+
+I decided to collect the samples because I was getting downright frustrated with the performance of [[http://bit.ly/LUT7tx][Mozilla]]'s [[http://bit.ly/HzqbTy][Firefox]] browser. For reasons that are off-topic for this posting, I feel a strong interest in making sure that Firefox continues to be successful. 
+
+For years I thought Firefox was the bomb. Starting about 9-12 months ago I started to notice that Firefox was routinely using all the resources on my computer. This concerned me because [[http://bit.ly/LUUGHN][Google]]'s [[http://bit.ly/LUUHLP][Chrome]] browser was starting to have enough functionality to be a primary browser.
+
+Being that I wanted Firefox to stay competitive, I decided to try to stay with it. As Mozilla changed their release model, I started to use [[http://bit.ly/LUV1u1][Aurora]] and [[http://bit.ly/LUV4Ga][Firefox Beta]] and provide lots of feedback. The newer versions also seemed to consume a more reasonable amount of my computer's resources. Being that the Firefox team was working hard at fixing performance problems, especially memory leaks, I stayed with Firefox. (See [[Reference: Articles About Firefox's Memory Leaks And Repair Efforts]] for information about FF's memory leaks.)
+#+HTML: <!-- more -->
+
+Around the beginning of this calendar year I started to think that Firefox wasn't getting faster and may have been getting slower. That said, I can be a pretty heavy user of my computer. Running FF with a couple of dozen add-ons is typical. Also, my experience with performance tuning has taught me that I don't know enough to make accurate guesses. Guessing can be used to lead your performance tuning investigations, but you always need hard data.
+
+After a bit of thought, I decided to collect some data and see if I can convince myself that Firefox is or is not the problem. There are, of course, simpler solutions to tracking a performance problem than sampling your entire process every five minutes for months. But this is a pet project. It wouldn't be any fun if I just switched from Firefox to Chrome to see if I notice a difference.
+
+Now that I have accumulated a few months of the data, I need to try to analyze the data and see what, if any, conclusions I can make from it. I have some ideas about where to start my data analysis and will just need to follow the path they outline. In short, I'm prepared to [[http://en.wikipedia.org/wiki/MacGyverism#MacGyverisms][MacGyver]] the analysis as I go along.
+
+My new pet project is the exploration of these data samples.
+
+* The Programming Language
+Forensic performance analysis is never simple. For this project I anticipate that the difficulties will be in determining what types of data analyses are required. I'm hoping the actual coding will be relatively simple as there is no need for network interaction, provide real time responses, or even have a [[http://bit.ly/n1i2v2][GUI]]. As long as I don't need to do very complex statistical analyses, the choice programming language won't likely matter to much.
+
+So I have chosen to implement this project in [[http://bit.ly/LUK5N0][Ruby]]. I'm certain I could implement it faster in any of a few dozen other programming languages but I chose Ruby for two reasons:
+1) This is a personal project. One of my main goals is to have fun. Being that I don't know Ruby, learning it will be more fun. Especially being that I haven't learned a new language in a year or so.
+2) Ruby is a new-ish language, growing in popularity, likely to be around for awhile, so it seems like something I should learn or at least be familiar with.
+
+Ruby isn't wholly unfamiliar to me. I've made a few small (very small) changes to the [[http://bit.ly/JBwXrU][org-ruby]] [[http://bit.ly/M5PRvb][gem]]. Based on that experience, I think that the syntax of Ruby is kind of strange but the functionality it provides seems comparable to other languages such as C and Java. I just have to learn the new syntax. Unlike C and Java, Ruby has [[http://bit.ly/M5T4ei][dynamic typing]]. But languages that I'm fluent in, such as Lisp, Python, Bash, and AWK have dynamic typing. Doesn't seem a problem.
+
+But the structure of a Ruby application, at least the structure of the org-ruby gem, feels different to me than the structure of programs I've seen in other languages. Sure Ruby has classes and modules and functions and inheritance as many other languages do. But the design of the org-ruby gem feels a bit unusual to me. 
+
+I think that part of the atypicality of the design of the org-ruby gem is that it is a parser that is written in a manner that is not familiar to me. I have a strong background in designing and implementing programming languages, their associated runtimes, IDE's, and such. In my world, there are only a few ways to implement a [[http://bit.ly/JBxKsI][parser]] and org-ruby doesn't use any of them. 
+
+That said, I don't think the feeling of unfamiliarity stems from org-ruby's parser not being a [[http://bit.ly/JBxTfU][recursive descent parser]] or implemented with a [[http://bit.ly/JBxXMI][parser generator]] from a [[http://bit.ly/JBxYAi][formal grammar]]. I've seem plenty of really terrible parser implementations that left queasy but didn't feel unfamiliar.
+
+Not only do I not think that org-ruby gem is terrible, I think it has a certain elegance to its design. 
+
+Having eliminated other possibilities, I'm left to think that the feeling of unfamiliarity must stem from Ruby itself.
+
+For example, C and Pascal have a similar feel when you use them. So too do [[http://bit.ly/JByk9Q][object oriented]] languages such as Java and C++. While not OO, C and Pascal are somewhat similar to Java and C++. But a Scheme application doesn't feel anything like a C application (at least not if you understand how to program in Scheme). While I don't have a word for it, I think that Ruby leads to a different way of writing applications than languages that I'm familiar with.. 
+
+While I'm not sure what that difference is, I hope to figure it out as I move through this project. In the end, I don't want to have a great "Java program" that happens to have been written using Ruby syntax. I want to have a great Ruby program -- period.
+
+* The Project's Current Progress
+"Not much" seems to sum up my current project. While I've been collecting data for months and easing myself into Ruby by working on the org-ruby gem, I just started coding for this project a few hours ago. All I've done so far is write a tiny class to hold a line of data output by the [[http://bit.ly/M5V9H3][ps(1)]] program:
+#+BEGIN_SRC ruby-mode -n -r 
+class PSDataLine
+  attr_accessor :pid
+  attr_accessor :stat
+  attr_accessor :time
+  attr_accessor :elapsed_time
+  attr_accessor :virtual_size
+  attr_accessor :rss
+  attr_accessor :percent_cpu
+  attr_accessor :percent_mem
+  attr_accessor :command
+
+  # Create the object
+  def initialize(line_string)
+    line = line_string.split(' ')
+    @pid = line[0]
+    @stat = line[1]
+    @time = line[2]
+    @elapsed_time = line[3]
+    @virtual_size = line[4]
+    @rss = line[5]
+    @percent_cpu = line[6]
+    @percent_mem = line[7]
+    @command = line[8]
+  end
+end
+#+END_SRC
+
+I know it isn't much but I still learned writing it. For example, when I was tinkering with the org-ruby gem, I just copied and pasted code, looked up some details in the Ruby library, etc... Being that I was modifying existing code, I never learned even the basic syntax. 
+
+For example, in order to write my =PSDataLine= class, I needed to learn how Ruby uses syntax to determine if an identifier is a local variable, an instance variable, a global variable, or a constant. (My thanks to the [[http://bit.ly/JBzTER][Rubyist]] for the good reference.)
+
+I'm pretty busy this week so I don't think I'll make much progress on it. I was only able to get this work done by staying up till midnight on a Friday night and squeezing in time for a proofreading today.
+
+* Process Data
+While I've only begun writing my program and haven't reached any conclusions about anything yet, I do have lots of data. If you have an interest in seeing what my computer's been up to you can view the process data, read about my sampling mechanism, and copy the data from my [[http://bit.ly/M1nUBf][process-data]] Github repository.
+
+* Reference: Articles About Firefox's Memory Leaks And Repair Efforts
+
+  - A [[http://bit.ly/LsNgcq][blog posting]] posting by Mozillian Nicholas Nethercote. A [[http://bit.ly/LsNhNi][second posting]] of Nicholas about weeks 49 & 50 of the Mozilla effort to reduce the memory footprint.
+  - A different engineer's [[http://bit.ly/LsNgZS][blog posting]] discussing the hunt for memory leaks in Firefox.
+  - Another posting from Nicholas regarding the great [[http://bit.ly/LsNjF0][performance improvements in Firefox V7.
+  - A September 26, 2011 [[http://bit.ly/LsNkJ8][article]] in [[http://bit.ly/LsPLeE][CRN]] discussing the lack of progress Mozilla has been making. Even if you ignore any opinions in the article, it has a lot of facts and links.
+  - A [[http://bit.ly/LsNkZB][Firefox Forum posting]] expressing user frustration.

@@ -1,0 +1,126 @@
+#+BEGIN_HTML
+---
+title:             "Doomsday Date Algorithm"
+description:       "A cool way to calculate the day of the week for any date."
+layout:            post
+date:              2012-05-05 Sat 21:45
+categories:        [misc]
+comments:          true        
+published:         false
+author:            Neil Smithline
+---
+#+END_HTML
+
+Most of this information is from the [[http://bit.ly/IxCM9j][Wikipedia]] on the [[http://bit.ly/IxCKhH][Doomsday Rule]]. I first heard about it in a [[http://bit.ly/IxCRto][Car Talk]] [[http://bit.ly/IxCVcQ][puzzler]].
+
+The Doomsday Rule algorithm is based around a group of (relatively) easy to remember days scattered throughout the year known as Doomsday days. Each year, every Doomsday day is the same day of the week as all other Doomsday days in that year. This means that if you know what day of the week one Doomsday day falls on then you know what day all of them fall on. As there is at least one Doomsday day in every month, it is relatively easy to calculate the weekday for any date in that year.
+
+** The Doomsday Days For A Year
+In order to use the Doomsday Rule, you need a reference date. That is, you need to know the weekday for one or more dates in that year. This is particularly easy for the current year as you probably what know that day's weekday and date. Once you have a reference date, you can quickly use that to determine what day of the week the nearest Doomsday day fell on. Then your set. 
+
+The next section, [[Calculating The Doomsday Day For A Given Year]], discusses how to calculate a reference date for a year if you don't happen to know one off the top of your head.
+
+*** Grouping The Months
+The Doomsday Rule categorizes the months into three groups. The first group, January (1)[1] through March (3), is the hardest to remember. I discuss those Doomsday dates last. The second group is the even-numbered months from April (4) through December (12). The final group is the odd numbered months from May (5) through October (11).
+
+*** Even Rule
+The Doomsday dates for the even months from April (4) through December (12) are  the easiest to 
+remember. The even rule says that the following dates fall on the same day of the week in a given year:
+|----------------+-------|
+| April 4^th     | 4/4   |
+| June 6^th      | 6/6   |
+| August 8^th    | 8/8   |
+| October 10^th  | 10/10 |
+| December 12^th | 12/12 |
+|----------------+-------|
+Just remember that April (4) is the first month for the even rule.
+
+*** Odd Rule
+The Doomsday dates for the odd months from May (5) through November (11) rely on using a phrase as a memory aid. I apologize to people of other nations. The phrase is definitely best suited for Americans. You can blame [[http://bit.ly/KzNsUY][James Conway]], the algorithm's inventor if you are unhappy about this.
+
+Remember that the odd rule will give us the Doomsday days in the months May (5), July (7), September (9), and November (11) by using an easily remembered phrase. The phrase is:
+: I work from 9 to 5 at the 7-11.
+It contains four numbers, =9=, =5=, =7=, and =11=. The tricky part is that the numbers have to be reordered to correspond to the odd months. The correct ordering of the numbers is =9=, =11=, =5=, and =7=. 
+
+You can think of this as using the numbers from the outside in as you use the first number, then the last number, then the second number, and then the second to last number. You can also just remember that the last number becomes the second number. Whatever works best for you.
+
+I have come up with my own memory aid for calculating the Doomsday days for the odd rule. [[http://bit.ly/K2YYYk][YMMV]] The first step is to list the numbers for the months that the odd rule applies to in order: =5= (May), =7= (July), =9= (September), and =11= (November). Then, to respect the tragedy of 9/11, move =9= and =11= to the front of the list. That gives us =9=, =11=, =5=, and =7=.
+
+Whatever your memory aid is, you get the following Doomsday days:
+|----------------+-----------------------------+--------------|
+| May 9^th       | I work *9* to 5 at the 7-11 | *9*/11, 5, 7 |
+| July 11^th     | I work 9 to 5 at the 7-*11* | 9/*11*, 5, 7 |
+| September 5^th | I work 9 to *5* at the 7-11 | 9/11, *5*, 7 |
+| November 7^th  | I work 9 to 5 at the 7-*11* | 9/11, 5, *7* |
+|----------------+-----------------------------+--------------|
+
+*** The First Three Months
+The first three months are a bit trickier. There are a few tricks for remembering the Doomsday days in these months but I'm not sure that the gimmicks are easier than just memorizing the days. 
+
+**** January (1)
+The Doomsday day for January (1) is the 3^rd on non-leap years and the 4^th on leap years. One of the tricks for memorizing this is using this sentence based on the fact that leap years come every four years:
+: The Doomsday day for January is the 3^rd 3 years in a row and the 4^th for the 4th year.
+
+Another trick is to remember that =For 1 out of four years 1/11 is a Doomsday day.=  The memory aid being the preponderance of the number =1= in the sentence. It talks about =1= out four years and the Doomsday day is on the day =11=. The Doomsday day is the day before, =1/10=, on the non-leap years. 
+|------------------------------+--------------------------------------------|
+| Jan 3^rd for non-leap years  | The third for *3* out of four years        |
+| Jan 4^th for leap years      | The fourth for the *4^th* of four years    |
+| Jan 11^th for leap years     | *1* out of four years it is *1-1-1* (1/11) |
+| Jan 10^th for non-leap years | The day before the 11^th                   |
+|------------------------------+--------------------------------------------|
+
+Keep in mind that while there are multiple memory aids for remembering the Doomsday day for January, all you need to do is remember one of them. The same holds true for February and March.
+
+**** February (2)
+Some people memorize that, for non-leap years, February 0^th[2] is a Doomsday day and for leap years, the 1^st is the Doomsday day. I prefer to just remember that the last day of February is a Doomsday day
+|-----------------------------+----------------------------------------|
+| Feb 0^th for non-leap years | Other years it is the day before       |
+| Feb 1^st for leap years     | On leap year, it's leap day, the 29^th |
+| Feb 28^th or 29^th          | The last day of February               |
+|-----------------------------+----------------------------------------|
+
+**** March (3)
+March is the oddest month. Some people suggest that you remember that the end of the first week, March 7^th, is a Doomsday day. Others suggest remembering that the 21^st is easier to remember because it is frequently the first day of Spring. Another trick for the 21^st is to remember that =The end of the 3^rd week of the 3^rd month is a Doomsday day.= For me, I just don't bother to remember anything for March and use the calculate using the last day of February as March 0^th[2].
+|-------------+-----------------------------------------------------------------|
+| March 0^th  | March 0^th is a Doomsday day.                                   |
+| March 21^st | Frequently the first day of Spring.                             |
+| March 21^st | For the 3^rd month the Doomsday day is the end of the 3rd week. |
+|-------------+-----------------------------------------------------------------|
+
+** DONE Calculating The Doomsday Day For A Given Year 
+CLOSED: [2012-05-12 Sat 00:27]
+If you don't have a reference date with which to calculate a Doomsday day for a year, then you have to do some extra calculation. I'm only going to describe the algorithm for the [[http://bit.ly/Jp0HKd][Gregorian Calendar]]. If you don't use the Gregorian Calendar, I apologize for the omission. 
+
+Note that I'll use the term "any year" as shorthand for "any year since the Gregorian Calendar was adopted."
+
+***** TODO 28-Year Cycle
+Let me begin by explaining what I mean by "cycle". A 
+Because there are =7= days in a week and a leap-year out of every =4=, the reference days repeat every =28= years. For example, if you know the day of the week for a date in the year 2056, then that date will be the same day of the week in the year 2028 (=28= years later) and 2084, =28= years earlier.
+
+You pretty much have to memorize the number =28=. If it helps, =28= is the typical number of days in the month of February (FYI: that doesn't help me at all). You can also think that, due to leap years, our calendar has a =4=-year cycle. If you multiply =4= by the number of days in a week, =7=, you get =28=. Whatever works.
+
+
+
+***** The Frequency Of Leap Years
+You need to know that leap years occur on years that are evenly divisible by 4 as long as they are not also evenly divisible by 400. (Hint: remember the number =400= for the next step.) So the year 2010 is not a leap year because it is not evenly divisible by 4. The years 2004, 2008, and 2012 are leap years as the are evenly divisible by 4. But, the year 2000 is not a leap year as 2000 is divisible by both 4 and 400.
+
+***** The 400 Year Cycle
+
+
+With just this information, all you need to do is remember the Doomsday day for one year and then you can use the 28-year cycle to calculate any year. For example, in the year 2000, the Doomsday day was Tuesday. 
+
+
+
+**** 
+
+
+
+
+# LocalWords:  th
+
+
+* Footnotes
+
+[1] As the Doomsday rule is based on the ordering of the months, I have included the number of the month in parenthesis after the month's name in most places in the text. For example: =June (6)= is just a reminder that June is the 6^th month of the year.
+
+[2] The 0^th day of a month is used to mean the last day of the month before it.

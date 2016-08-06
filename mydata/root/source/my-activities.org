@@ -1,0 +1,14 @@
+
+* 2012
+*** 2012-06 June
+***** 2012-06-08 Friday
+******* ps(1) Samples [2012-06-08 Fri 23:44]
+I almost forgot. I uploaded over [[http://bit.ly/M1nUBf][16K samples]] of my computer's process state as reported by ps(1). I've been taking a sample every 5 minutes for several months now. I'm going to be using Ruby to [[http://bit.ly/NnoU85][analyze the data]]. While I haven't gotten the numbers yet, I'm certain that my machine has been dying because I've been using Firefox. I'll miss you FF :-(
+******* Journalling [2012-06-08 Fri 22:51]
+Configured and started using my journal today. If I have it all set up correctly it should get be updated online whenever I deploy my website. I've not yet tried it but I'm pretty sure it will work as I have a robust infrastructure around publishing my website.
+
+******* Baffled By Github [2012-06-08 Fri 22:53]
+Suddenly I can't get ssh working with Github. It worked yesterday and I haven't changed anything. I'll figure it out in a day or two.
+
+******* Octopress [2012-06-08 Fri 22:55]
+Been [[http://bit.ly/Leebbh][blogging about Octopress]]'s wonders. It is integrating well with Emacs. Most of my Emacs integration is on top of Octopress but I've made just a few changes to the Octopress base code. I've added a few configuration settings. Sent a pull request to have them brought into the mainline Octopress as my changes are backwards compatible. That is, the configuration settings have default values that makes Octopress with my updates behave the same as Octopress without my updates. Maintaining my own =Rakefile= isn't hard but I'd rather not do it.
