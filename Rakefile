@@ -2,6 +2,9 @@ require "rubygems"
 require "bundler/setup"
 require "stringex"
 
+# Needed to print out description of rake tasks for rake >= 0.9.2.2
+Rake::TaskManager.record_task_metadata = true
+
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 ssh_user       = "user@domain.com"
@@ -401,6 +404,33 @@ end
 
 desc "list tasks"
 task :list do
-  puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
-  puts "(type rake -T for more detail)\n\n"
+  tasks_excl_list = Rake::Task.tasks.reject { |task| task.name == "list" or task.name == "list_long" }
+
+  puts "Tasks: #{tasks_excl_list.join(', ')}"
+  puts "(type 'rake -T <task>' to show descriptions on a single task)"
+  puts "(type 'rake list_long' to show a list of all tasks with their descriptions)"
+end
+
+desc "list tasks with descriptions"
+task :list_long do 
+  tasks_excl_list = Rake::Task.tasks.reject { |task| task.name == "list" or task.name == "list_long" }
+  
+  # The longest task name
+  maxlen = tasks_excl_list.map { |task| task.name.length }.max
+  # Limit of chars to print for description
+  desc_lim = 80 
+
+  # Create pairs of left-justified, tabbed task names and truncated comments
+  tasks_to_print = tasks_excl_list.map { |task| 
+      [
+          "  '#{task.name}'".ljust(maxlen + 4), 
+          if task.full_comment.length <= desc_lim then task.full_comment else task.full_comment[0..desc_lim-4] + "..." end
+      ]
+  }
+
+  puts "Tasks: " 
+  tasks_to_print.each do |name, desc|
+    puts "#{name} - #{desc}"
+  end
+  puts "(type 'rake -T <task>' to show full descriptions on a single task)"
 end
