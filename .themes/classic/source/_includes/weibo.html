@@ -1,0 +1,13 @@
+{% comment %}
+1. Add a variable * weibo_appkey * in your config.yml
+2. Add the namespace in the HTML tag, for example: <html xmlns:wb="http://open.weibo.com/wb">
+   (Modify _include/head.html of the theme)
+3. Include weibo.html 
+{% endcomment %}
+
+
+{% if site.weibo_appkey and page.comments != false %}
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey={{ site.weibo_appkey }}" type="text/javascript" charset="utf-8"></script>
+<wb:comments url="{{ site.url }}{{ page.url }}'" border="y" width="auto" appkey="{{ site.weibo_appkey }}" ></wb:comments>
+{% endif %}
+
