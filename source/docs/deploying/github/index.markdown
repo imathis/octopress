@@ -90,15 +90,20 @@ Now push your changes and you'll be all set.
 
 <h2 id="custom_domains">Custom Domains</h2>
 
-First you'll need to create a file named `CNAME` in the source containing your domain name.
+First you'll need to create a file named `CNAME` in your blog's source: 
 
 ``` sh
 echo 'your-domain.com' >> source/CNAME
+# OR 
+echo 'www.your-domain.com' >> source/CNAME
 ```
 
-From [Github's Pages guide](http://help.github.com/pages/#custom_domains):<br>
-Next, you’ll need to visit your domain registrar or DNS host and add a record for your domain name.
-For a sub-domain like `www.example.com` you would simply create a CNAME record pointing at `charlie.github.com`.
-If you are using a top-level domain like `example.com`, you must use an A record pointing to `207.97.227.245`.
-*Do not use a CNAME record with a top-level domain* it can have adverse side effects on other services like email.
+Next, you’ll need to visit your domain registrar or DNS host and add a record for your domain name.  
+
+* For a sub-domain like `www.example.com` you would simply create a CNAME record pointing at `charlie.github.com.`.  
+* If you are using a top-level domain like `example.com`, you must use an A record pointing to `204.232.175.78`.  
+
+**Do not use a CNAME record with a top-level domain!** It can have adverse side effects on other services like email.  
 Many DNS services will let you set a CNAME on a TLD, even though you shouldn’t. Remember that it may take up to a full day for DNS changes to propagate, so be patient.
+
+*Source*: [Github's Pages guide](http://help.github.com/pages/#custom_domains)
