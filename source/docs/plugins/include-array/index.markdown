@@ -6,7 +6,7 @@ footer: false
 sidebar: false
 ---
 
-This plugin was created for Octopress by [Jason Woodward](http://www.woodwardjd.com) to make it possible to manage order of the sidebar partials from the `_confgi.yml`.
+This plugin was created for Octopress by [Jason Woodward](http://www.woodwardjd.com) to make it possible to manage order of the sidebar partials from the `_config.yml`.
 This is mostly useful for those working on an Octopress theme.
 
 ### First, How Partials Work
