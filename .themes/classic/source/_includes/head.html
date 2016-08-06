@@ -9,7 +9,8 @@
 
   {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
-  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+  {% capture keywords %}{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}{% endcapture %}
+  <meta name="keywords" content="{{ keywords }}">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
