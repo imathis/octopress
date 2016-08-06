@@ -11,6 +11,12 @@ rsync_delete   = false
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
 
+# Use this if deploying to an S3 bucket
+# (must have s3cmd installed and deploy_default set to "s3")
+# See also: http://aws.typepad.com/aws/2011/02/host-your-static-website-on-amazon-s3.html
+s3_bucket = "bucket-name"
+s3_prefix = "" # In the form of "/path/" (note the leading and trailing slashes)
+
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
 
@@ -246,6 +252,12 @@ task :rsync do
   end
   puts "## Deploying website via Rsync"
   ok_failed system("rsync -avze 'ssh -p #{ssh_port}' #{exclude} #{rsync_args} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
+end
+
+desc "Deploy website via s3cmd"
+task :s3 do
+  puts "## Deploying website via s3cmd"
+  ok_failed system("s3cmd --acl-public sync #{public_dir}/ s3://#{s3_bucket}#{s3_prefix}")
 end
 
 desc "deploy public directory to github pages"
