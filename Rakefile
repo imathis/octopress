@@ -293,6 +293,7 @@ task :set_root_dir, :dir do |t, args|
       f.write compass_config
     end
     jekyll_config = IO.read('_config.yml')
+    jekyll_config.sub!(/^url:\s*(.+?)\/*$/, "url: \\1#{dir}")
     jekyll_config.sub!(/^destination:.+$/, "destination: public#{dir}")
     jekyll_config.sub!(/^subscribe_rss:\s*\/.+$/, "subscribe_rss: #{dir}/atom.xml")
     jekyll_config.sub!(/^root:.*$/, "root: /#{dir.sub(/^\//, '')}")
