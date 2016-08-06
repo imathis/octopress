@@ -52,7 +52,7 @@ end
 # Working with Jekyll #
 #######################
 
-desc "Generate jekyll site"
+desc "Generate jekyll site (default task)"
 task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
@@ -404,3 +404,5 @@ task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
 end
+
+task :default => :generate
