@@ -231,10 +231,15 @@ desc "Generate website and deploy"
 task :gen_deploy => [:integrate, :generate, :deploy] do
 end
 
+# Based on https://github.com/tangledhelix/octopress/commit/13f50c3603be193065935db1703a12f796474c19
+# The original wasn't working with dot files
 desc "copy dot files for deployment"
 task :copydot, :source, :dest do |t, args|
-  FileList["#{args.source}/**/.*"].exclude("**/.", "**/..", "**/.DS_Store", "**/._*").each do |file|
-    cp_r file, file.gsub(/#{args.source}/, "#{args.dest}") unless File.directory?(file)
+  exclusions = [".", "..", ".DS_Store"]
+  Dir["#{args.source}/**/.*"].each do |file|
+    if !File.directory?(file) && !exclusions.include?(File.basename(file))
+      cp(file, file.gsub(/#{args.source}/, "#{args.dest}"));
+    end
   end
 end
 
