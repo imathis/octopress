@@ -25,7 +25,7 @@ Octopress ships with the following plugins. Many have been written specially for
 
 The following filters are used by Octopress, and are documented as necessary in their source.
 
-- Octopress filters - *liquid filters built just for Octopress*
+- [Octopress filters](/docs/plugins/filters) - *liquid filters built just for Octopress*
 - Sitemap Generator - *generates an SEO friendly sitemap.xml*
 - Haml Converter - *allows .haml pages to be processed by Jekyll*
 - Pygments Code - *converts code snippets to highlighted code and caches to speed up Jekyll processing*
