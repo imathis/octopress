@@ -20,7 +20,7 @@ module OctopressFilters
 
   def post_filter(input)
     processed = unwrap(input)
-    RubyPants.new(processed).to_html
+    RubyPants.new(processed, :dashes => :none).to_html
   end
 
   def filterable?(document)
