@@ -1,15 +1,16 @@
-module Octopress
-  module Date
+require 'time'
 
-    # Returns a datetime if the input is a string
+module Octopress
+  module DateLogic
+    module_function
+
+    # Returns a datetime if the input is a string.
     def datetime(date)
-      if date.class == String
-        date = Time.parse(date)
-      end
-      date
+      return date unless date.is_a?(String)
+      Time.parse(date)
     end
 
-    # Returns an ordidinal date eg July 22 2007 -> July 22nd 2007
+    # Returns an ordinal date eg July 22 2007 -> July 22nd 2007.
     def ordinalize(date)
       date = datetime(date)
       "#{date.strftime('%b')} #{ordinal(date.strftime('%e').to_i)}, #{date.strftime('%Y')}"
@@ -17,82 +18,79 @@ module Octopress
 
     # Returns an ordinal number. 13 -> 13th, 21 -> 21st etc.
     def ordinal(number)
-      if (11..13).include?(number.to_i % 100)
-        "#{number}<span>th</span>"
-      else
-        case number.to_i % 10
-        when 1; "#{number}<span>st</span>"
-        when 2; "#{number}<span>nd</span>"
-        when 3; "#{number}<span>rd</span>"
-        else    "#{number}<span>th</span>"
-        end
+      return "#{number}<span>th</span>" if (11..13).include?(number.to_i % 100)
+
+      case number.to_i % 10
+      when 1 then "#{number}<span>st</span>"
+      when 2 then "#{number}<span>nd</span>"
+      when 3 then "#{number}<span>rd</span>"
+      else        "#{number}<span>th</span>"
       end
     end
 
-    # Formats date either as ordinal or by given date format
-    # Adds %o as ordinal representation of the day
+    # Formats date either as ordinal or by given date format.
+    # Adds %o as ordinal representation of the day.
     def format_date(date, format)
       date = datetime(date)
-      if format.nil? || format.empty? || format == "ordinal"
-        date_formatted = ordinalize(date)
+      if format.nil? || format.empty? || format == 'ordinal'
+        ordinalize(date)
       else
-        date_formatted = date.strftime(format)
-        date_formatted.gsub!(/%o/, ordinal(date.strftime('%e').to_i))
+        formatted = date.strftime(format)
+        formatted.gsub(/%o/, ordinal(date.strftime('%e').to_i))
       end
-      date_formatted
     end
 
+    # Populates formatted date fields for Liquid templates.
+    def attach_formatted_dates(document)
+      return unless document.respond_to?(:data) && document.respond_to?(:site)
+
+      data = document.data
+      site = document.site
+      return unless data.is_a?(Hash) && site
+
+      date_format = site.config['date_format']
+      date_value = data['date']
+      date_value = document.date if date_value.nil? && document.respond_to?(:date)
+
+      data['date_formatted'] = format_date(date_value, date_format) if date_value
+
+      if data.key?('updated') && data['updated']
+        data['updated_formatted'] = format_date(data['updated'], date_format)
+      else
+        data.delete('updated_formatted')
+      end
+    end
+  end
+
+  module Date
+    def datetime(date)
+      DateLogic.datetime(date)
+    end
+
+    def ordinalize(date)
+      DateLogic.ordinalize(date)
+    end
+
+    def ordinal(number)
+      DateLogic.ordinal(number)
+    end
+
+    def format_date(date, format)
+      DateLogic.format_date(date, format)
+    end
+  end
+
+  module DateFilters
+    include Date
   end
 end
 
+Liquid::Template.register_filter Octopress::DateFilters
 
-module Jekyll
+Jekyll::Hooks.register :posts, :pre_render do |post, _payload|
+  Octopress::DateLogic.attach_formatted_dates(post)
+end
 
-  class Post
-    include Octopress::Date
-
-    # Convert this post into a Hash for use in Liquid templates.
-    #
-    # Returns <Hash>
-    def to_liquid
-      date_format = self.site.config['date_format']
-      self.data.deep_merge({
-        "title"             => self.data['title'] || self.slug.split('-').select {|w| w.capitalize! || w }.join(' '),
-        "url"               => self.url,
-        "date"              => self.date,
-        # Monkey patch
-        "date_formatted"    => format_date(self.date, date_format),
-        "updated_formatted" => self.data.has_key?('updated') ? format_date(self.data['updated'], date_format) : nil,
-        "id"                => self.id,
-        "categories"        => self.categories,
-        "next"              => self.next,
-        "previous"          => self.previous,
-        "tags"              => self.tags,
-        "content"           => self.content })
-    end
-  end
-
-  class Page
-    include Octopress::Date
-
-    # Initialize a new Page.
-    #
-    # site - The Site object.
-    # base - The String path to the source.
-    # dir  - The String path between the source and the file.
-    # name - The String filename of the file.
-    def initialize(site, base, dir, name)
-      @site = site
-      @base = base
-      @dir  = dir
-      @name = name
-
-      self.process(name)
-      self.read_yaml(File.join(base, dir), name)
-      # Monkey patch
-      date_format = self.site.config['date_format']
-      self.data['date_formatted']    = format_date(self.data['date'], date_format) if self.data.has_key?('date')
-      self.data['updated_formatted'] = format_date(self.data['updated'], date_format) if self.data.has_key?('updated')
-    end
-  end
+Jekyll::Hooks.register :pages, :pre_render do |page, _payload|
+  Octopress::DateLogic.attach_formatted_dates(page)
 end

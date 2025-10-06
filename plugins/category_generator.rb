@@ -153,15 +153,16 @@ ERR
     # Returns string
     #
     def category_links(categories)
-      categories = categories.sort!.map { |c| category_link c }
+      categories_array = Array(categories).compact
+      linked_categories = categories_array.sort_by { |c| c.to_s }.map { |c| category_link(c) }
 
-      case categories.length
+      case linked_categories.length
       when 0
         ""
       when 1
-        categories[0].to_s
+        linked_categories[0].to_s
       else
-        "#{categories[0...-1].join(', ')}, #{categories[-1]}"
+        "#{linked_categories[0...-1].join(', ')}, #{linked_categories[-1]}"
       end
     end
 
@@ -174,6 +175,10 @@ ERR
     def category_link(category)
       dir = @context.registers[:site].config['category_dir']
       "<a class='category' href='/#{dir}/#{category.to_url}/'>#{category}</a>"
+    end
+
+    def category_slug(category)
+      category.to_url
     end
 
     # Outputs the post.date as formatted html, with hooks for CSS styling.
@@ -191,4 +196,3 @@ ERR
   end
 
 end
-

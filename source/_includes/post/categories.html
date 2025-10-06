@@ -1,10 +1,10 @@
-{% capture category %}{% if post %}{{ post.categories | category_links | size }}{% else %}{{ page.categories | category_links | size }}{% endif %}{% endcapture %}
-{% unless category == '0' %}
+{% assign categories_source = post.categories | default: page.categories %}
+{% assign categories_list = categories_source | compact %}
+{% assign categories_count = categories_list | size %}
+{% unless categories_count == 0 %}
 <span class="categories">
-  {% if post %}
-    {{ post.categories | category_links }}
-  {% else %}
-    {{ page.categories | category_links }}
-  {% endif %}
+  {% for category in categories_list %}
+    <a class="category" href="/{{ site.category_dir }}/{{ category | slugify: 'latin' }}/">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+  {% endfor %}
 </span>
 {% endunless %}
