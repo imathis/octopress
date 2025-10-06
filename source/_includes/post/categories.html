@@ -4,7 +4,7 @@
 {% unless categories_count == 0 %}
 <span class="categories">
   {% for category in categories_list %}
-    <a class="category" href="/{{ site.category_dir }}/{{ category | slugify: 'latin' }}/">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+    <a class="category" href="/{{ site.category_dir }}/{{ category | category_slug }}/">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
   {% endfor %}
 </span>
 {% endunless %}

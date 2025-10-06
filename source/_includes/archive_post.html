@@ -4,6 +4,6 @@
 {% if category != '0' %}
 {% assign archive_categories = post.categories | compact %}
 <footer>
-  <span class="categories">posted in {% for category in archive_categories %}<a class="category" href="/{{ site.category_dir }}/{{ category | slugify: 'latin' }}/">{{ category }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+  <span class="categories">posted in {% for category in archive_categories %}<a class="category" href="/{{ site.category_dir }}/{{ category | category_slug }}/">{{ category }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
 </footer>
 {% endif %}
